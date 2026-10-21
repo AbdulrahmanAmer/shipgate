@@ -2,7 +2,7 @@
 
 A requirement (rule, rule part, tool requirement, or a section that defines behaviour) is **concrete** when a builder who has only the spec can implement it, and a test author who has only the spec can write a known-good and a known-bad fixture for it, **without inventing anything**. Two builders reading it independently must produce implementations that agree on every fixture.
 
-Every rule is checked against all nine criteria. A failed criterion is a finding.
+Every rule is checked against all ten criteria. A failed criterion is a finding.
 
 | # | Criterion | The requirement states… | Typical defect |
 |---|---|---|---|
@@ -14,6 +14,7 @@ Every rule is checked against all nine criteria. A failed criterion is a finding
 | C6 | Failure class and evidence | which 04 § 9.1 failure class(es) it emits and what the finding shows (URL, selector, expected/actual) | class not inferable |
 | C7 | Boundaries | overlaps with neighbouring rules resolved by an explicit owner ("owned by X", `owns`) — no behaviour checked twice with different outcomes, none checked by nobody | two rules judging the same thing differently |
 | C8 | Gate and stage | channels map to gates (04 § 1.1); write/mutating probes marked (04 § 4.2 step 8); `remote: read|write|none` where remote services are possible; profile (`default|nightly`) when not default | a write probe not in the mutating stage |
+| C10 | No agent-written oracle | every expected value, exemption and applicability switch comes from an Operator-owned source (signed policy, `quality/data/*`, seed, contracts, baselines) or from shipgate's own observation — never from page markup, code or files the agent writes (JSON-LD, `data-*` attributes, class names, comments, agent-editable config) | an exemption keyed on `additionalType` the agent sets; comparing a stock count with `Offer.inventoryLevel` |
 | C9 | Testable | a one-line known-bad fixture and known-good fixture follow directly from the text | can't say what a failing page looks like |
 
 ## Severity of a finding

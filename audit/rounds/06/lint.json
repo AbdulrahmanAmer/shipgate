@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "requirements": 522,
+    "rules": 503,
+    "toolRequirements": 19,
+    "rulesWithParts": 69,
+    "errors": 0,
+    "warnings": 19
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/performance.md:57: \"ruleset maps the old id\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/privacy.md:13: \"ruleset required-legal-pages\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/privacy.md:57: \"ruleset gcd table\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/search-engines.md:3: \"ruleset-maintained feature table** (§ 4\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/search-engines.md:47: \"ruleset feature table (§ 4\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/search-engines.md:49: \"ruleset list (W\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/search-engines.md:64: \"ruleset stop-word and verb lists per locale\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/search-engines.md:77: \"ruleset feature table\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/search-engines.md:79: \"ruleset bumps (05 § 6\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/security.md:18: \"ruleset webhook-schemes\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/security.md:26: \"ruleset list\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/security.md:38: \"ruleset registries\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/security.md:142: \"ruleset maximums for the project's kinds\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/security.md:152: \"ruleset equivalents\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/web-delivery.md:138: \"ruleset stop words of the page locale (KW-002 l\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/web-delivery.md:158: \"ruleset per-locale filler lists\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/web-delivery.md:160: \"ruleset ranges, e\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/web-delivery.md:162: \"ruleset gives per host\" names no ruleset file"
+    },
+    {
+      "check": "ruleset-unnamed",
+      "msg": "spec/packs/web-delivery.md:169: \"ruleset stop words, and Snowball stemming (KW-0\" names no ruleset file"
+    }
+  ]
+}

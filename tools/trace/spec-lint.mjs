@@ -87,6 +87,27 @@ for (const [n, locs] of rulesetRefs) {
   if (!listed.has(n)) warn("ruleset-unsourced", `ruleset data "${n}" (${locs[0]}${locs.length > 1 ? ` +${locs.length - 1}` : ""}) is not listed in BUILD_MAP WP-102/WP-104`);
 }
 
+// 4b. "ruleset" mentions that name no file ("ruleset maximums", "from the ruleset"), and `x.json`
+// names inside packs that aren't sourced and aren't project/product files.
+const PRODUCT_FILES = /^(package|package-lock|tsconfig|composer|vercel|netlify|firebase|settings|manifest|business|ownership|redirects|routes|expected|report|review|refactor|dependencies|waiver-requests|counts|cycles|attempts|handoff|lock|debt|policy|shipgate|toolchain|baseline|inventory|flows|seed|approvals|_login|deno|bun|app|angular|nest-cli|turbo|nx|lerna|pnpm-lock|yarn|bower|project|launch|devcontainer|renovate|dependabot|sarif|junit|summary|verify|state|trust|keys|licence|license|feed|schema)$/;
+for (const f of specFiles) {
+  read(f).split(/\r?\n/).forEach((line, i) => {
+    for (const m of line.matchAll(/\b(?:the |a |its )?ruleset(?:'s)?\b(?!\s+(?:per-locale\s+)?`)(?!\s*\(`)([^.;:)]{0,40})/gi)) {
+      const tail = m[1] || "";
+      if (!f.startsWith("spec/packs/")) continue; // in 01-05 "ruleset" also means the versioned rule set itself
+      if (/`/.test(tail)) continue; // "ruleset dictionary `placeholders.json`"
+      if (/^\s*(version|release|data|files?|refresh|YYYY|pinned|snapshot|kill-switch|tables?|is |are |\(|,|$)/i.test(tail) && !/maxim|equivalent|list|pattern|phrases|labels|values|entries|table of/i.test(tail)) continue;
+      warn("ruleset-unnamed", `${f}:${i + 1}: "ruleset${tail.slice(0, 40)}" names no ruleset file`);
+    }
+    if (!f.startsWith("spec/packs/")) return;
+    for (const m of line.matchAll(/`([a-z0-9][a-z0-9-]*)\.json`/g)) {
+      const n = m[1].toLowerCase();
+      if (PRODUCT_FILES.test(n) || listed.has(n)) continue;
+      warn("ruleset-unsourced", `${f}:${i + 1}: \`${m[1]}.json\` is neither listed in BUILD_MAP WP-102/WP-104 nor a known project/product file`);
+    }
+  });
+}
+
 // 5. `<pack>.<key>` policy references must exist as a key in some jsonc policy block.
 const policyKeys = new Set();
 for (const f of specFiles) for (const m of read(f).matchAll(/"([A-Za-z0-9_-]+)"\s*:/g)) policyKeys.add(m[1]);

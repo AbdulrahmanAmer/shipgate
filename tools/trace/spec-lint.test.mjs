@@ -43,6 +43,7 @@ const cases = [
   ["channel-infra", (d) => edit(d, "trace/ownership.tsv", "RTE-001\tchannel:browser\tWP-608", "#moved"), (r) => r.warnings.some((w) => w.check === "channel-infra" && w.msg.startsWith("RTE-001 channel browser"))],
   ["wp-graph: cycle", (d) => edit(d, "BUILD_MAP.md", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000 |", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000, WP-202 |"), (r) => r.errors.some((e) => e.check === "wp-graph" && e.msg.includes("cycle"))],
   ["wp-graph: later phase", (d) => edit(d, "BUILD_MAP.md", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000 |", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000, WP-601 |"), (r) => r.errors.some((e) => e.check === "wp-graph" && e.msg.includes("later phase"))],
+  ["ruleset-unnamed", (d) => edit(d, "spec/packs/ux.md", "Pages matching `chromeVariants` are excluded.", "Pages matching `chromeVariants` are excluded. Limits come from the ruleset maximums for each kind."), (r) => r.warnings.some((w) => w.check === "ruleset-unnamed" && w.msg.includes("ux.md"))],
   ["section-unowned", (d) => edit(d, "BUILD_MAP.md", "| 05 § 4 MCP server | WP-804 |", "| MCP server | WP-804 |"), (r) => r.warnings.some((w) => w.check === "section-unowned" && w.msg.startsWith("05 § 4 "))],
 ];
 
