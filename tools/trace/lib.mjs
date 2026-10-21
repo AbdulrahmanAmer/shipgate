@@ -58,8 +58,18 @@ export function partChannels(body) {
   return out;
 }
 
+// 04 § 9.1 failure-class vocabulary (the backticked names in that section).
+export function readFailureClasses(root) {
+  const t = fs.readFileSync(path.join(root, "spec/04-algorithms.md"), "utf8");
+  const s = t.indexOf("### 9.1");
+  if (s < 0) return [];
+  const sec = t.slice(s, t.indexOf("\n### ", s + 5));
+  return [...new Set([...sec.matchAll(/`([a-z][a-z0-9-]+)`/g)].map((m) => m[1]))];
+}
+
 export function readRequirements(root) {
   const reqs = [];
+  const FC = new Set(readFailureClasses(root));
   for (const file of allSpecFiles(root)) {
     const lines = fs.readFileSync(path.join(root, file), "utf8").split(/\r?\n/);
     lines.forEach((line, i) => {
@@ -84,6 +94,7 @@ export function readRequirements(root) {
         channels: sev ? sev[2].split(",").map((s) => s.trim()) : [],
         parts: extractParts(id, body),
         partChannels: partChannels(body),
+        failureClasses: [...new Set([...body.matchAll(/`([a-z][a-z0-9-]+)`/g)].map((x) => x[1]).filter((x) => FC.has(x)))].sort(),
         textHash: sha(rest),
         title: body.split(/(?<=[.:])\s/)[0].slice(0, 140),
       });

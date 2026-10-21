@@ -37,6 +37,8 @@ AGT-009	channel:deps	WP-705	npm deprecation/licence snapshot
 AGT-011	*	WP-304	resolved
 AGT-011	channel:browser	WP-608	comparison pass 04 § 2 item 6
 AGT-011	channel:http	WP-608	resolved
+AGT-011	part:behaviour	WP-608	R08 part named (concreteness#23); comparison pass 04 § 2 item 6 — required by spec-lint
+AGT-011	part:ast	WP-304	R08 part named (concreteness#23); same WP as AGT-011 *
 AGT-010	*	WP-304	explicit
 BLD-001	*	WP-304	explicit
 BLD-002	*	WP-304	explicit
@@ -455,6 +457,7 @@ UX-009	*	WP-801	resolved
 UX-010	*	WP-609	explicit
 UX-012	*	WP-609	explicit
 UX-013	*	WP-609	explicit
+UX-013	part:regulated	WP-609	R08 new part (coverage-real-use#9); same WP as UX-013 *, listed for completeness
 UX-014	*	WP-609	explicit
 UX-015	*	WP-609	explicit
 UX-016	*	WP-609	explicit
@@ -507,6 +510,7 @@ MET-003	*	WP-410	family-default
 MET-004	*	WP-410	family-default
 MET-005	*	WP-410	resolved
 MET-005	part:fetchers	WP-414	resolved
+MET-005	part:fetchers-edge	WP-414	explicit (edge half of former `fetchers`; concreteness-web-delivery#12)
 MET-006	*	WP-410	family-default
 MET-007	*	WP-410	family-default
 MET-008	*	WP-410	family-default
@@ -611,3 +615,36 @@ RTE-017	*	WP-608	explicit (browser control activation; raw-text side uses WP-410
 URL-014	*	WP-410	explicit
 URL-014	channel:edge	WP-414	explicit (edge-pass probes of /)
 I18-010	*	WP-410	explicit (WP-410(c))
+UX-025	*	WP-609	R08 new: tracking IDs are the Operator's (coverage-real-use#1); ruleset WP-104
+UX-026	*	WP-609	R08 new: search and filter forms work (coverage-real-use#4); needs the UX-001 form identity (WP-602 control inventory)
+UX-027	*	WP-609	R08 new: incentivised reviews disclosed (coverage-visibility#8); business.json `incentive` field WP-205
+AEO-015	*	WP-608	R08 new: fragment deep-link probe (browser)
+OPS-015	*	WP-703	R08 new: end-of-life versions (eol-dates snapshot WP-401; eol-products ruleset WP-104)
+OPS-016	*	WP-703	R08 new: RDAP domain registration expiry
+OPS-016	channel:edge	WP-414	R08 new: RDAP lookups run in the edge pass
+PRV-038	*	WP-606	R08 new: third-country transfers and Art. 27 representatives (hosts[] country/transfer validation: WP-205)
+PRV-039	*	WP-606	R08 new: right-of-withdrawal information
+PRV-040	*	WP-606	R08 new: regulated-product disclosures (product-compliance.json loading/validation: WP-205)
+PRV-041	*	WP-606	R08 new: marketing e-mail consent capture (part confirm uses flows WP-602, journey "subscribe")
+PRV-042	*	WP-606	R08 new: user-content duties outside the EU (DMCA agent, TAKE IT DOWN, UK OSA)
+A11-031	*	WP-605	R08 new: label in name + positive tabindex (WP-605(b))
+A11-032	*	WP-605	R08 new: status messages (WP-605(b))
+A11-033	*	WP-605	R08 new: timing adjustable; runs in SEC-064 lifetime idle stage (WP-607): WP-605 Depends needs WP-607, or move this row to WP-607
+TPL-008	*	WP-504	explicit (R08: page equals oracle — facts/h1/robots/tokens; html)
+SE-010	*	WP-411	explicit (R08: auxiliary crawler tokens; ruleset engine-crawlers.json WP-104)
+SE-011	*	WP-411	explicit (R08: resource-host robots.txt, local half)
+SE-011	channel:edge	WP-414	explicit (R08: resource-host robots.txt in the edge pass)
+SE-115	*	WP-411	explicit (R08: Offer validity dates)
+SE-115	channel:edge	WP-414	explicit (R08: part `expired` on production)
+SE-129	*	WP-608	explicit (R08: back-button hijacking, browser parts)
+SE-129	part:source-hint	WP-411	explicit (R08: ast hint; adapter `historyApis`)
+SEC-076	*	WP-607	R08 new: CSWSH handshake Origin probe with session cookies (coverage-real-use#15)
+SEC-077	*	WP-607	R08 new: numeric boundaries on commerce fields, flow replays (coverage-real-use#16)
+SEC-078	*	WP-413	R08 new: postMessage handler/target-source ast parts (coverage-real-use#17)
+SEC-078	part:target	WP-608	R08 new: browser postMessage init-script hook
+SEC-079	*	WP-414	R08 new: anonymous object-storage listing, edge pass (coverage-real-use#18)
+MET-014	*	WP-410	explicit (WP-410(b); coverage-visibility#4)
+MET-014	channel:edge	WP-414	explicit (edge-pass media probes)
+I18-011	*	WP-410	explicit (WP-410(c); coverage-visibility#3)
+URL-015	*	WP-410	explicit (WP-410(a); coverage-real-use#5)
+URL-015	channel:edge	WP-414	explicit (edge-pass host-identity and alias-host repeats)

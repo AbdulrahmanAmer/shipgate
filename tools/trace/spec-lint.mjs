@@ -197,7 +197,7 @@ else {
   for (const line of buildMap.slice(0, buildMap.indexOf("### Section ownership")).split(/\r?\n/)) {
     const p = line.match(/^### Phase ([0-9]+)/);
     if (p) phase = Number(p[1]);
-    const w = line.match(/^\| (WP-[0-9]{3,4})/);
+    const w = line.match(/^\| (WP-[0-9]{3,4}[a-z]?)/);
     if (w && phase >= 0) phaseOf.set(w[1], phase);
   }
   for (const [wp, ds] of deps) {
@@ -219,8 +219,8 @@ else {
 
 function readWpDeps(text) {
   const m = new Map();
-  for (const row of text.matchAll(/^\| (WP-[0-9]{3,4})(?:\.\.[0-9]{3,4})?(?: \(L\))? \| .* \| (.*) \|$/gm)) {
-    m.set(row[1], [...row[2].matchAll(/WP-[0-9]{3,4}/g)].map((x) => x[0]));
+  for (const row of text.matchAll(/^\| (WP-[0-9]{3,4}[a-z]?)(?:\.\.[0-9]{3,4})?(?: \(L\))? \| .* \| (.*) \|$/gm)) {
+    m.set(row[1], [...row[2].matchAll(/WP-[0-9]{3,4}[a-z]?/g)].map((x) => x[0]));
   }
   return m;
 }
@@ -228,7 +228,7 @@ function readWpDeps(text) {
 // 6c. Every WP owns something the done-gate can check.
 if (own) {
   const table = buildMap.slice(buildMap.indexOf("### Section ownership"), buildMap.indexOf("### Launch-stable list"));
-  for (const row of buildMap.slice(0, buildMap.indexOf("### Section ownership")).matchAll(/^\| (WP-[0-9]{3,4})(?:\.\.([0-9]{3,4}))?(?: \(L\))? \| (.*) \| .* \|$/gm)) {
+  for (const row of buildMap.slice(0, buildMap.indexOf("### Section ownership")).matchAll(/^\| (WP-[0-9]{3,4}[a-z]?)(?:\.\.([0-9]{3,4}))?(?: \(L\))? \| (.*) \| .* \|$/gm)) {
     const ids = row[2] ? Array.from({ length: Number(row[2]) - Number(row[1].slice(3)) + 1 }, (_, k) => `WP-${Number(row[1].slice(3)) + k}`) : [row[1]];
     for (const wp of ids) {
       const hasSlice = own.some((o) => o.wp === wp);

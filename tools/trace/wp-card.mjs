@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { readRequirements, readOwnership } from "./lib.mjs";
+import { readRequirements, readOwnership, readAcceptanceTests } from "./lib.mjs";
 
 const root = path.resolve(fileURLToPath(new URL("../..", import.meta.url)));
 const [wp, ...rest] = process.argv.slice(2);
@@ -24,14 +24,20 @@ if (!row) {
   process.exit(2);
 }
 
-const mine = own.filter((o) => o.wp === wp || (o.wp === base && wp !== base ? false : o.wp === base));
+const named = own.filter((o) => o.wp === wp);
+const ownerWp = named.length || base === wp ? wp : base; // a sub-WP that ownership.tsv doesn't name yet inherits its base
+const mine = own.filter((o) => o.wp === ownerWp);
+const acc = readAcceptanceTests(root).get(ownerWp) || [];
+const goalSections = [...row[1].matchAll(/\b(0[1-5]) § ([0-9]+(?:\.[0-9]+)*)/g)].map((m) => `${m[1]} § ${m[2]}`);
+const testId = (req) => `wp_${ownerWp.slice(3).toLowerCase()}__${req}__<what>`;
 // Slices of my rules that other WPs own (so the builder knows what NOT to build here).
-const elsewhere = (id) => own.filter((o) => o.id === id && o.wp !== wp && o.wp !== base);
+const elsewhere = (id) => own.filter((o) => o.id === id && o.wp !== ownerWp);
 
 const sectionRows = [...buildMap.slice(buildMap.indexOf("### Section ownership")).matchAll(/^\| ([^|]*§[^|]*) \| ([^|]*) \|$/gm)]
-  .filter((m) => new RegExp(`\\b${base}\\b|every WP card`).test(m[2]))
+  .filter((m) => new RegExp(`\\b${ownerWp}\\b|every WP card`).test(m[2]))
   .map((m) => m[1].trim());
 
+const ownedRows = [...buildMap.slice(buildMap.indexOf("### Section ownership")).matchAll(/^\| ([^|]*§[^|]*) \| ([^|]*) \|$/gm)].filter((m) => new RegExp(`\\b${ownerWp}\\b`).test(m[2])).map((m) => m[1].trim());
 const lines = (file) => fs.readFileSync(path.join(root, file), "utf8").split(/\r?\n/);
 const cache = new Map();
 const text = (r) => {
@@ -45,12 +51,17 @@ const slices = mine
   .sort((a, b) => a.o.id.localeCompare(b.o.id) || a.o.part.localeCompare(b.o.part));
 
 const checklist = [
-  "| # | Requirement | Your slice | Severity | Channels | Parts to register | Known-bad fixture(s) | Known-good fixture(s) | Implementation (file:line) | Verdict |",
-  "|---|---|---|---|---|---|---|---|---|---|",
+  "| # | Requirement | Your slice | Severity | Channels | Parts to register | Failure classes (each needs a known-bad) | Known-bad fixture(s) | Known-good fixture(s) | Implementation (file:line) | Verdict |",
+  "|---|---|---|---|---|---|---|---|---|---|---|",
   ...slices.map(({ o, r }, i) => {
     const slice = o.part === "*" ? "whole rule (minus slices listed below it)" : o.part;
     const parts = o.part.startsWith("part:") ? o.part.slice(5) : ["main", ...r.parts.filter((p) => !elsewhere(r.id).some((e) => e.part === `part:${p}`))].join(", ");
-    return `| ${i + 1} | ${r.id} | ${slice} | ${r.severity ?? "—"} | ${r.channels.join(", ") || "—"} | ${parts} | | | | |`;
+    return `| ${i + 1} | ${r.id} | ${slice} | ${r.severity ?? "—"} | ${r.channels.join(", ") || "—"} | ${parts} | ${(r.failureClasses || []).join(", ") || "declare ≥ 1 (04 § 9.1)"} | | | | |`;
+  }),
+  ...goalSections.concat(sectionRows.filter((s) => ownedRows.includes(s)).flatMap((s) => [...s.matchAll(/\b(0[1-5]) § ([0-9]+(?:\.[0-9]+)*)/g)].map((m) => `${m[1]} § ${m[2]}`))).filter((s, i, a) => a.indexOf(s) === i).map((s, i) => `| S${i + 1} | ${s} | section | — | — | — | — | test \`${testId("sec_" + s.replace(/ § /, "_").replace(/\./g, "_"))}\` | | | |`),
+  ...acc.map((name, i) => `| A${i + 1} | acceptance | ${name} | — | — | — | — | test \`${name}\` | | | |`),
+  ...slices.filter(({ r }) => r.kind === "tool-requirement").map(({ r }, i) => `| T${i + 1} | ${r.id} | tool requirement | — | — | — | — | test \`${testId(r.id.toLowerCase().replace("-", "_"))}\` | | | |`),
+  ...[].map(() => {
   }),
 ];
 
@@ -66,9 +77,10 @@ if (rest.includes("--checklist")) {
     "",
     "## Contract",
     "Every row of the checklist is delivered, or the WP is not done. There is no partial completion:",
-    "a slice you can't deliver goes into `trace/deferred.tsv` with a reason and a proposed owner, and the",
+    "a slice you can't deliver goes into `trace/deferred.tsv` (`ID<TAB>scope<TAB>WP<TAB>reason`; name a proposed owner in the reason), and the",
     "WP stays open until the orchestrator re-assigns it in `trace/ownership.tsv`. `tools/trace/trace-check.mjs",
-    `--wp ${wp}` + "` must exit 0 before the WP is reported done.",
+    `--wp ${wp}` + "` must exit 0 before the WP is reported done. When its only missing lines are",
+    "`no locked holdout fixture`, report `WP-<id>: built` (not done); the reviewer's holdouts decide done.",
     "",
     "## Checklist (the reviewer fills the last four columns with evidence)",
     ...checklist,
