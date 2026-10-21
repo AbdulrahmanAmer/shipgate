@@ -17,4 +17,9 @@ Stage 0 (spec audit loop, `audit/README.md`). No build work until a round is GO.
 - Round 06: 404 findings → 313 fixed, 91 adapted, 0 open (`audit/rounds/06/resolution.md`). spec v7.5.0, commit 4affb1a. Gates: spec-lint 0/0, spec-lint.test 16/16, trace-check.test 11/11. Weekly usage 3%.
 - Round 07 dispatched: concreteness ×8 (Sonnet, high), consistency ×1 (Opus), coverage ×2 (Sonnet, high: search+AEO+pSEO; real-use+law). Outputs `audit/rounds/07/*.md`. Then verify models (`agent-models.mjs`), collect, fix (Opus, passes A/B), commit.
 - Round 07 results so far: concreteness 274 (10 Blocker) vs 404 in r06; coverage 5 Must + 22 Should (27 new rules). **At the 10% wall: give the Operator a data-based opinion on whether a different loop type works better** (e.g. fixture-first: agents try to write known-good/known-bad fixtures per rule; failure to write one = vague rule). Compare findings-per-round and findings-per-% usage across rounds.
+
+## 2026-10-21 ~23:20 — round 07 CLOSED, round 08 audits = measurement round at the wall
+- Round 07: 436 findings (concreteness 274, consistency 135, coverage 27) → 368 fixed, 65 adapted, 1 added, 2 rejected; 0 open. spec v7.6.0, commit 37abe6c. Gates: spec-lint 0/0, spec-lint.test 18/18, trace-check.test 20/20. Done-gate hardened (consistency #1–#10).
+- Weekly usage 8% before round 08. Round 08 audits (same 11 agents) are the last spend before the 10% wall; results are NOT fixed tonight — they're the data for the morning opinion on loop type.
+- **Operator (at the 10% wall, ~23:50): finish round 08 — apply its fixes (pass A/B) — then give the data-based opinion on loop type.** No round 09 audits without asking.
 - Also to do before build: rewrite `ORCHESTRATOR_PROMPT.md` + `CLAUDE.md` (stale: wrong repo path `D:\shipgate`, "paste in new session", API financial note) and add the build-completeness gates (anti-skip) to BUILD_MAP § 4.
