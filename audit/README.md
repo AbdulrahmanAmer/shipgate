@@ -1,6 +1,8 @@
-# The spec audit loop (Stage 0 — runs before any build work)
+# The spec audit loop (Stage 0 — closed)
 
-The build does not start until one full round of this loop finds **nothing**. Every round lives in `audit/rounds/NN/`.
+**Closed by the Operator on 2026-10-22** (DECISIONS D-006) after round 09, a single-writer consistency pass, without a GO round: reading audits stopped converging (concreteness 404 → 274 → 245; consistency 135 → 113), so remaining gaps are found by each WP's fixture author and fixed as recorded spec changes (ORCHESTRATOR_PROMPT non-negotiables 1 and 4). The loop below is kept as the record of how rounds 06–08 ran; it is not re-run without the Operator.
+
+Every round lives in `audit/rounds/NN/`.
 
 ## One round
 

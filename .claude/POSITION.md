@@ -28,3 +28,8 @@ Stage 0 (spec audit loop, `audit/README.md`). No build work until a round is GO.
 - Trend: concreteness 404 → 274 → 245; consistency 135 → 113 (Blockers 4 → 11); coverage ~27–29 new rules per round. ~4% weekly per full round.
 - Recommendation given: stop whole-spec audit rounds; switch to build-first, fixture-first per WP (the fixture author is the concreteness check for exactly what's being built); one Opus escape-path audit per phase; coverage gaps become owned spec changes. **Awaiting Operator decision.**
 - Also to do before build: rewrite `ORCHESTRATOR_PROMPT.md` + `CLAUDE.md` (stale: wrong repo path `D:\shipgate`, "paste in new session", API financial note) and add the build-completeness gates (anti-skip) to BUILD_MAP § 4.
+
+## 2026-10-22 — Operator decision: one solo consistency pass, then BUILD
+- **Operator (2026-10-22): "fix the current conflicts and contradictions yourself, one shot, then start building; you decide orchestration vs build yourself."** No more audit rounds. Stage 0 ends with this pass.
+- Pass = me (Opus) alone, single writer, reading SPEC.md → spec/01..05 → packs → BUILD_MAP; findings logged as I go in `audit/rounds/09-solo/findings.md` (survives compaction), then fixed, lint green, commit.
+- Then CLAUDE.md / ORCHESTRATOR_PROMPT.md switch from "no build until GO" to the build-first, fixture-first loop, and Stage 1 starts (WP-000).

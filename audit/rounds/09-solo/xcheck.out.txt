@@ -1,0 +1,27 @@
+[smtp] API-009 (spec/packs/data-api.md:64) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] PRV-012 (spec/packs/privacy.md:108) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] PRV-016 (spec/packs/privacy.md:112) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] PRV-021 (spec/packs/privacy.md:117) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] PRV-023 (spec/packs/privacy.md:124) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] PRV-037 (spec/packs/privacy.md:151) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] PRV-041 (spec/packs/privacy.md:166) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] PRV-042 (spec/packs/privacy.md:169) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] RES-008 (spec/packs/resilience.md:28) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] SEC-029 (spec/packs/security.md:116) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] TST-001 (spec/packs/testing.md:23) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[smtp] UX-001 (spec/packs/ux.md:35) reads the SMTP sink but 03 § 3.4 smtp row doesn't list it
+[required-facts] SEC-040 (spec/packs/security.md:146) is a 04 § 1.2 required-facts rule but its text names neither `missing-element` nor 04 § 1.2
+[required-facts] SEC-041 (spec/packs/security.md:147) is a 04 § 1.2 required-facts rule but its text names neither `missing-element` nor 04 § 1.2
+[required-facts] SEC-048 (spec/packs/security.md:152) is a 04 § 1.2 required-facts rule but its text names neither `missing-element` nor 04 § 1.2
+[required-facts] SEC-063 (spec/packs/security.md:154) is a 04 § 1.2 required-facts rule but its text names neither `missing-element` nor 04 § 1.2
+[required-facts] LOC-003 (spec/packs/search-engines.md:147) is a 04 § 1.2 required-facts rule but its text names neither `missing-element` nor 04 § 1.2
+[edge] PRF-008 (spec/packs/performance.md:41) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] SE-011 (spec/packs/search-engines.md:50) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] SE-115 (spec/packs/search-engines.md:70) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] SEC-010 (spec/packs/security.md:91) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] SEC-075 (spec/packs/security.md:92) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] SEC-016 (spec/packs/security.md:99) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] SEC-056 (spec/packs/security.md:100) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] UX-022 (spec/packs/ux.md:61) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[edge] URL-002 (spec/packs/web-delivery.md:158) has an edge channel but 04 § 2 step 5 doesn't budget its requests
+[reasons] blocked(budget) blocked(no-base) blocked(no-baseline) blocked(no-git) blocked(prerequisite) blocked(reason) blocked(root-container) blocked(seed-contract) blocked(stopped) skipped(closed-set) skipped(deferred) skipped(dns-verification) skipped(external-database) skipped(external-host) skipped(external-platform) skipped(host-unsupported) skipped(incomplete-crawl) skipped(live-mode) skipped(no-5xx) skipped(no-base) skipped(no-browser) skipped(no-catalogues) skipped(no-contract) skipped(no-crawl) skipped(no-edge) skipped(no-emulator) skipped(no-facet-urls) skipped(no-fetch-store) skipped(no-field-data) skipped(no-git) skipped(no-indexing-export) skipped(no-main) skipped(no-rdap) skipped(no-review) skipped(no-valid-sample) skipped(not-generatable) skipped(planned) skipped(platform) skipped(reason) skipped(reduced) skipped(remote) skipped(remote-read-only) skipped(robots-unavailable) skipped(sample-too-small) skipped(scope) skipped(slow-host) skipped(small-table)

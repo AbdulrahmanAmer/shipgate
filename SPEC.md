@@ -1,11 +1,11 @@
 # shipgate — System Specification (index)
 
 ```yaml
-spec_version: 7.7.0
+spec_version: 7.8.0
 status: source of truth for the tool build
 working_name: shipgate        # rename freely; nothing depends on the name
-date: 2026-10-21
-history: v3 (Gemini draft) → v4.x (merged reviews: Claude, GPT, DeepSeek, Grok) → v5 (single-file SEO spec) → v6 (any product, any stack; core + adapters + packs) → v7 (independent gap audit resolved: formats, algorithms, integrations, new packs) → v7.1 (verification audit resolved: verdict engine, enforcement chain, remote mode, missing schemas, decidability; answer-engines pack) → v7.2 (multi-engine search-engines pack, programmatic AI-text/rollout/crawl rules, readiness audit resolved; BUILD_MAP and orchestrator prompt added) → v7.3 (final readiness audits: GO; two-step verdict so narrow runs can't hide FAIL; reduced mode only via signed policy; handoff conditions; per-part severities in keys; section-aware skeleton identity; CI detection; operational-only precedence; test-keys signing; full WP ownership) → v7.4 (outcome coverage audits: launch and re-platforming checks, placeholder/business-fact oracles, ux pack, local and ecommerce search, trust pages, AI agents, OWASP 2025 probes, supply chain, Consent Mode v2 / CCPA 2026 / EAA / AI Act, WCAG 2.2 gaps, verifier-evasion detection, new-project lifecycle, host-calibrated budgets) → v7.5 (round-06 concreteness audit: 404 findings fixed; ownership ledger, spec-lint, completeness contract) → v7.6 (round-07: 436 findings fixed, done-gate hardened) → v7.7 (round-08: 387 findings fixed; gate produces its own evidence)
+date: 2026-10-22
+history: v3 (Gemini draft) → v4.x (merged reviews: Claude, GPT, DeepSeek, Grok) → v5 (single-file SEO spec) → v6 (any product, any stack; core + adapters + packs) → v7 (independent gap audit resolved: formats, algorithms, integrations, new packs) → v7.1 (verification audit resolved: verdict engine, enforcement chain, remote mode, missing schemas, decidability; answer-engines pack) → v7.2 (multi-engine search-engines pack, programmatic AI-text/rollout/crawl rules, readiness audit resolved; BUILD_MAP and orchestrator prompt added) → v7.3 (final readiness audits: GO; two-step verdict so narrow runs can't hide FAIL; reduced mode only via signed policy; handoff conditions; per-part severities in keys; section-aware skeleton identity; CI detection; operational-only precedence; test-keys signing; full WP ownership) → v7.4 (outcome coverage audits: launch and re-platforming checks, placeholder/business-fact oracles, ux pack, local and ecommerce search, trust pages, AI agents, OWASP 2025 probes, supply chain, Consent Mode v2 / CCPA 2026 / EAA / AI Act, WCAG 2.2 gaps, verifier-evasion detection, new-project lifecycle, host-calibrated budgets) → v7.5 (round-06 concreteness audit: 404 findings fixed; ownership ledger, spec-lint, completeness contract) → v7.6 (round-07: 436 findings fixed, done-gate hardened) → v7.7 (round-08: 387 findings fixed; gate produces its own evidence) → v7.8 (round-09 single-writer consistency pass; Stage 0 closed by the Operator, build starts)
 ```
 
 ## What shipgate is
@@ -142,9 +142,9 @@ A verification audit of v7 (288 rule IDs, 0 duplicates, 0 dangling references) f
 - Schemas and keys: 13 missing schemas (ownership, examples, released contracts, jobs, break-glass, trust store, hook events, failure classes, file roles, detector layout, baselines, finding status, toolchain); all missing policy keys added; examples corrected.
 - Decidability: SEC-005 secret classification; undecidable † parts downgraded; concrete detectors for flagged rules.
 
-The first two work packages of the build map are fixed:
-1. Verify each agent host's hook API against its current version.
-2. Assemble the conformance corpus (synthetic fixture apps per adapter and pack), since no rule becomes blocking without it.
+Two work packages of the build map carry the assumptions everything else rests on, so they come first in their phases:
+1. WP-101 (phase 1): verify each agent host's hook API against its current version.
+2. WP-209 (phase 2): the conformance corpus harness (synthetic fixture apps per adapter and pack), since no rule becomes blocking without it.
 
 Still open as engineering tasks for the build (not Operator decisions):
 1. Availability of PostgREST/Supabase Auth builds per OS (fallback is defined).
@@ -173,7 +173,7 @@ A readiness audit of v7.1 + the search-engines pack + the build map (354 rule ID
 - `BUILD_MAP.md`: Rust workspace, phases, work packages with dependencies and acceptance checks, Definition of Done, risks.
 - `ORCHESTRATOR_PROMPT.md`: the first message for the session that builds shipgate end to end.
 
-## Before the next session
-- Move this folder off OneDrive (e.g. `D:\shipgate`) before `cargo init`.
+## Build environment notes
+- The repo lives outside OneDrive. Its path is longer than 60 characters, so WP-000 sets a short Cargo target directory (BUILD_MAP WP-000) and enables Windows long paths.
 - On Windows, a Dev Drive speeds up Rust builds.
-- Run `agent-os init` in the folder so stage and decisions persist across sessions.
+- Position and decisions persist in `.claude/POSITION.md`, `BUILD_STATE.md` and `DECISIONS.md` (ORCHESTRATOR_PROMPT.md).
