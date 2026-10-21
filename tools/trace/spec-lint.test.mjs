@@ -41,11 +41,13 @@ const cases = [
   ["ownership: unknown WP", (d) => edit(d, "trace/ownership.tsv", "UX-012\t*\tWP-609", "UX-012\t*\tWP-999"), (r) => r.errors.some((e) => e.check === "ownership" && e.msg.includes("WP-999"))],
   ["ownership: bogus part", (d) => edit(d, "trace/ownership.tsv", "SEC-047\tpart:stored", "SEC-047\tpart:nonsense"), (r) => r.errors.some((e) => e.check === "ownership" && e.msg.includes("part:nonsense"))],
   ["ownership: data WP owns a rule", (d) => edit(d, "trace/ownership.tsv", "SE-103	*	WP-411", "SE-103	*	WP-104"), (r) => r.errors.some((e) => e.check === "ownership" && e.msg.includes("phase 0/1"))],
-  ["channel-infra", (d) => edit(d, "trace/ownership.tsv", "RTE-001\tchannel:browser\tWP-608", "#moved"), (r) => r.warnings.some((w) => w.check === "channel-infra" && w.msg.startsWith("RTE-001 channel browser"))],
+  ["channel-infra", (d) => edit(d, "trace/ownership.tsv", "AEO-009\tchannel:browser\tWP-608", "#moved"), (r) => r.errors.some((w) => w.check === "channel-infra")],
   ["wp-graph: cycle", (d) => edit(d, "BUILD_MAP.md", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000 |", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000, WP-202 |"), (r) => r.errors.some((e) => e.check === "wp-graph" && e.msg.includes("cycle"))],
   ["wp-graph: later phase", (d) => edit(d, "BUILD_MAP.md", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000 |", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000, WP-601 |"), (r) => r.errors.some((e) => e.check === "wp-graph" && e.msg.includes("later phase"))],
   ["ruleset-unnamed", (d) => edit(d, "spec/packs/ux.md", "Pages matching `chromeVariants` are excluded.", "Pages matching `chromeVariants` are excluded. Limits come from the ruleset maximums for each kind."), (r) => r.warnings.some((w) => w.check === "ruleset-unnamed" && w.msg.includes("ux.md"))],
-  ["section-unowned", (d) => edit(d, "BUILD_MAP.md", "| 05 § 4 MCP server | WP-804 |", "| MCP server | WP-804 |"), (r) => r.warnings.some((w) => w.check === "section-unowned" && w.msg.startsWith("05 § 4 "))],
+  ["wp-owns-nothing", (d) => edit(d, "BUILD_MAP.md", "| WP-404 | MySQL embedded lifecycle (04 § 4.2, 03 § 3.4; same template/reset contract as WP-403) |", "| WP-404 | MySQL embedded lifecycle |"), (r) => r.errors.some((e) => e.check === "wp-owns-nothing" && e.msg.startsWith("WP-404"))],
+  ["stranded browser-only part", (d) => edit(d, "trace/ownership.tsv", "MET-011\tpart:dead-anchor\tWP-608", "#moved"), (r) => r.errors.some((e) => e.check === "ownership" && e.msg.includes("MET-011 part dead-anchor"))],
+  ["section-unowned", (d) => edit(d, "BUILD_MAP.md", "| 05 § 4 MCP server | WP-804 |", "| MCP server | WP-804 |"), (r) => r.errors.some((w) => w.check === "section-unowned" && w.msg.startsWith("05 § 4 "))],
 ];
 
 let failed = 0;

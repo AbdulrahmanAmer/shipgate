@@ -14,20 +14,31 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { readRequirements, readOwnership, readWorkPackages } from "./lib.mjs";
+import { readRequirements, readOwnership, readWorkPackages, readAcceptanceTests } from "./lib.mjs";
 
 const args = process.argv.slice(2);
 const opt = (k) => (args.includes(k) ? args[args.indexOf(k) + 1] : null);
 const root = path.resolve(opt("--root") || fileURLToPath(new URL("../..", import.meta.url)));
 const p = (...x) => path.join(root, ...x);
-const target = process.env.CARGO_TARGET_DIR ? path.resolve(process.env.CARGO_TARGET_DIR) : p("target");
+const target = (() => {
+  if (process.env.CARGO_TARGET_DIR) return path.resolve(root, process.env.CARGO_TARGET_DIR);
+  const cfg = p(".cargo/config.toml");
+  if (fs.existsSync(cfg)) {
+    const m = fs.readFileSync(cfg, "utf8").match(/^\s*target-dir\s*=\s*["']([^"']+)["']/m);
+    if (m) return path.resolve(root, m[1]);
+  }
+  return p("target");
+})();
 const t = (...x) => path.join(target, ...x);
 const readJson = (f) => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : null);
 
 const reqs = new Map(readRequirements(root).map((r) => [r.id, r]));
 const own = readOwnership(root) || [];
 const allWps = readWorkPackages(root);
+const acceptance = readAcceptanceTests(root);
 const buildMap = fs.readFileSync(p("BUILD_MAP.md"), "utf8");
+
+const global = [];
 
 // ---- which WPs to check
 let targets = [];
@@ -47,7 +58,6 @@ const junit = fs.existsSync(t("nextest/ci/junit.xml")) ? fs.readFileSync(t("next
 const deferred = fs.existsSync(p("trace/deferred.tsv"))
   ? fs.readFileSync(p("trace/deferred.tsv"), "utf8").split(/\r?\n/).filter((l) => l.trim() && !l.startsWith("#")).map((l) => l.split("\t"))
   : [];
-const global = [];
 
 let tree = null;
 if (!args.includes("--no-tree-check")) {
@@ -58,6 +68,11 @@ if (!args.includes("--no-tree-check")) {
   } catch {
     global.push("not a git repository (or git missing): can't prove the evidence matches the code");
   }
+}
+if (junit && tree) {
+  const th = junit.match(/<property\s+name="treeHash"\s+value="([0-9a-f]+)"/);
+  if (!th) global.push("junit.xml carries no <property name=\"treeHash\"> — test evidence can't be tied to the tree");
+  else if (th[1] !== tree) global.push(`junit.xml is from tree ${th[1]}, HEAD is ${tree} — stale test evidence, re-run`);
 }
 for (const [name, ev] of [["registry.json", registry], ["corpus-results.json", corpus]]) {
   if (!ev) global.push(`target/trace/${name} missing — run the producing command (BUILD_MAP § 4.1)`);
@@ -79,13 +94,33 @@ for (const [rel, h] of locked) {
   else if (sha256(f) !== h) global.push(`locked fixture modified: corpus/${rel} (spec/holdout fixtures are not the builder's to change)`);
 }
 
+function walk(dir, out = []) {
+  if (!fs.existsSync(dir)) return out;
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, e.name);
+    if (e.isDirectory()) walk(full, out);
+    else out.push(full);
+  }
+  return out;
+}
+for (const file of walk(p("corpus"))) {
+  const rel = path.relative(p("corpus"), file).split(path.sep).join("/");
+  if (/(^|\/)(spec|holdout)\//.test(rel) && !locked.has(rel)) global.push(`unlocked file in a locked fixture directory: corpus/${rel}`);
+}
+
 // ---- per WP
 const report = [];
 for (const wp of targets.sort()) report.push(checkWp(wp));
 
 function checkWp(wp) {
   const missing = [];
-  const slices = own.filter((o) => o.wp === wp);
+  const base = wp.replace(/[a-z]$/, "");
+  const named = own.filter((o) => o.wp === wp);
+  const slices = named.length || base === wp ? named : own.filter((o) => o.wp === base);
+  const sections = sectionsOf(named.length || base === wp ? wp : base);
+  const accTests = acceptance.get(wp) || acceptance.get(base) || [];
+  for (const name of accTests) checkTest(name, missing);
+  if (!slices.length && !sections.length && !accTests.length) missing.push("owns no requirement slice and no spec section — add it to trace/ownership.tsv or the BUILD_MAP § 5 section table, or cite its sections in its goal");
   for (const d of deferred.filter((d) => d[2] === wp)) missing.push(`deferred: ${d[0]} ${d[1]} — ${d[3] || "no reason"} (resolve in ownership.tsv; deferred.tsv must be empty)`);
   for (const o of slices) {
     const r = reqs.get(o.id);
@@ -120,8 +155,8 @@ function checkWp(wp) {
       if (!(reg.failureClasses || []).length) missing.push(`${o.id}: registry lists no failure classes (04 § 9.1 requires them in metadata)`);
     }
   }
-  for (const s of sectionsOf(wp)) checkTest(s, missing);
-  return { wp, slices: slices.length, missing };
+  for (const s of sections) checkTest(s, missing);
+  return { wp, slices: slices.length + sections.length + accTests.length, missing };
 }
 
 function fixtures(id) {
@@ -130,16 +165,16 @@ function fixtures(id) {
 function need(id, part, kind, missing) {
   const fs_ = fixtures(id).filter((f) => f.kind === kind && (f.part || "main") === part);
   if (!fs_.length) missing.push(`${id}: no ${kind} fixture for part '${part}'`);
-  else if (!fs_.some((f) => f.pass)) missing.push(`${id}: ${kind} fixture(s) for part '${part}' not detected: ${fs_.map((f) => f.path).join(", ")}`);
-  else if (fs_.some((f) => f.path && f.kind !== "known-good" && !locked.has(f.path))) missing.push(`${id}: ${kind} fixture for part '${part}' is not in corpus/FIXTURES.lock`);
+  else if (fs_.some((f) => !f.pass)) missing.push(`${id}: ${kind} fixture(s) for part '${part}' not detected: ${fs_.filter((f) => !f.pass).map((f) => f.path).join(", ")}`);
+  else if (!fs_.some((f) => locked.has(f.path))) missing.push(`${id}: ${kind} fixture for part '${part}' is not in corpus/FIXTURES.lock`);
 }
-// TR-* and owned sections are proven by tests whose name carries the id, e.g. `tr_103_reports_are_byte_identical`
-// or `sec_03_17_report_schema` for "03 § 17".
+// TR-* and owned sections are proven by tests whose name carries the id followed by "__", e.g.
+// `tr_103__reports_are_byte_identical` or `sec_03_17__report_schema` for "03 § 17".
 function checkTest(id, missing) {
-  const slug = /§/.test(id) ? "sec_" + id.replace(/ § /, "_").replace(/\./g, "_") : id.toLowerCase().replace("-", "_");
+  const slug = /^wp_[0-9]+__/.test(id) ? id : /§/.test(id) ? "sec_" + id.replace(/ § /, "_").replace(/\./g, "_") : id.toLowerCase().replace("-", "_");
   if (!junit) { missing.push(`${id}: no test evidence (target/nextest/ci/junit.xml missing)`); return; }
-  const cases = [...junit.matchAll(/<testcase\b[^>]*\bname="([^"]*)"[^>]*?(\/>|>([\s\S]*?)<\/testcase>)/g)].filter((m) => m[1].includes(slug));
-  if (!cases.length) missing.push(`${id}: no test named *${slug}*`);
+  const cases = [...junit.matchAll(/<testcase\b[^>]*\bname="([^"]*)"[^>]*?(\/>|>([\s\S]*?)<\/testcase>)/g)].filter((m) => new RegExp(/^wp_[0-9]+__/.test(slug) ? `(^|[^0-9a-z_])${slug}$` : `(^|[^0-9a-z_])${slug}(__|$)`).test(m[1]));
+  if (!cases.length) missing.push(`${id}: no test named *${/^wp_[0-9]+__/.test(slug) ? slug : slug + "__"}*`);
   else if (cases.some((m) => /<(failure|error|skipped)\b/.test(m[3] || ""))) missing.push(`${id}: test(s) *${slug}* failed or were skipped`);
 }
 function sectionsOf(wp) {
@@ -149,12 +184,14 @@ function sectionsOf(wp) {
     if (!new RegExp(`\\b${wp}\\b`).test(m[2])) continue;
     for (const s of m[1].matchAll(/\b(0[1-5]) § ([0-9]+(?:\.[0-9]+)*)/g)) out.push(`${s[1]} § ${s[2]}`);
   }
-  return out;
+  const row = buildMap.match(new RegExp(`^\\| ${wp}(?: \\(L\\))? \\| (.*) \\| .* \\|$`, "m"));
+  if (row) for (const s of row[1].matchAll(/\b(0[1-5]) § ([0-9]+(?:\.[0-9]+)*)/g)) out.push(`${s[1]} § ${s[2]}`);
+  return [...new Set(out)];
 }
 function wpsOfPhase(n) {
   const out = [];
   let phase = -1;
-  for (const line of buildMap.split(/\r?\n/)) {
+  for (const line of buildMap.slice(0, buildMap.indexOf("### Section ownership")).split(/\r?\n/)) {
     const m = line.match(/^### Phase ([0-9]+)/);
     if (m) phase = Number(m[1]);
     const w = line.match(/^\| (WP-[0-9]{3,4})(?:\.\.([0-9]{3,4}))? /);
@@ -169,7 +206,13 @@ function wpsOfPhase(n) {
 function claimedDone(file) {
   if (!fs.existsSync(p(file))) return [];
   const t = fs.readFileSync(p(file), "utf8");
-  return [...new Set([...t.matchAll(/(WP-[0-9]{3,4}[a-z]?)\s*(?:\||:)\s*\**done\**/gi)].map((m) => m[1]))];
+  const claims = new Set();
+  for (const line of t.split(/\r?\n/)) {
+    const a = line.match(/^(WP-[0-9]{3,4}[a-z]?):\s*done\s*$/i) || line.match(/^\|\s*(WP-[0-9]{3,4}[a-z]?)\s*\|\s*done\s*\|/i);
+    if (a) claims.add(a[1]);
+    else if (/WP-[0-9]{3,4}/.test(line) && /\bdone\b/i.test(line) && !/\bnot\s+done\b/i.test(line)) global.push(`unrecognised done claim in ${file} (use "WP-<id>: done" or "| WP-<id> | done |"): ${line.trim().slice(0, 120)}`);
+  }
+  return [...claims];
 }
 function sha256(f) {
   return crypto.createHash("sha256").update(fs.readFileSync(f)).digest("hex");

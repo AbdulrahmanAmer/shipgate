@@ -41,7 +41,21 @@ export function extractParts(id, body) {
     if (other && other[1] !== id) continue;
     for (const p of m[1].matchAll(/`([a-z0-9][a-z0-9-]*)`/g)) parts.add(p[1]);
   }
+  // Sub-bullet part lists: "  - `lorem` — …", "  - `dead-anchor` (P1, browser) — …"
+  for (const s of body.matchAll(/^\s+- `([a-z0-9][a-z0-9-]*)`(?:\s*\([^)]*\))?\s*(?:—|:)/gm)) parts.add(s[1]);
   return [...parts].sort();
+}
+
+const CHANNELS = ["cfg", "lock", "ast", "graph", "diff", "deps", "cmd", "data", "db", "contract", "build", "http", "html", "site", "content", "browser", "baseline", "edge", "review", "hook"];
+// Channels a part declares in its parenthetical tag: "Part `x` (P1 · html; …)", "- `x` (P1, browser) —".
+export function partChannels(body) {
+  const out = {};
+  const re = /(?:[Pp]art\s+|^\s+- )`([a-z0-9][a-z0-9-]*)`\s*\(([^)]*)\)/gm;
+  for (const m of body.matchAll(re)) {
+    const chans = m[2].split(/[\s,;·]+/).filter((t) => CHANNELS.includes(t));
+    if (chans.length) out[m[1]] = [...new Set([...(out[m[1]] || []), ...chans])];
+  }
+  return out;
 }
 
 export function readRequirements(root) {
@@ -69,6 +83,7 @@ export function readRequirements(root) {
         severity: sev ? sev[1].trim() : null,
         channels: sev ? sev[2].split(",").map((s) => s.trim()) : [],
         parts: extractParts(id, body),
+        partChannels: partChannels(body),
         textHash: sha(rest),
         title: body.split(/(?<=[.:])\s/)[0].slice(0, 140),
       });
@@ -136,6 +151,17 @@ export function readOwnership(root) {
       const [id, part, wp, note = ""] = l.split("\t");
       return { id, part, wp, note, line };
     });
+}
+
+// BUILD_MAP § 5 "Acceptance tests for work packages without ledger slices": WP → [test names]
+export function readAcceptanceTests(root) {
+  const text = fs.readFileSync(path.join(root, "BUILD_MAP.md"), "utf8");
+  const start = text.indexOf("### Acceptance tests for work packages without ledger slices");
+  const out = new Map();
+  if (start < 0) return out;
+  const section = text.slice(start, text.indexOf("\n### ", start + 10));
+  for (const m of section.matchAll(/^\| (WP-[0-9]{3,4}) \| ([^|]*) \| [^|]* \|$/gm)) out.set(m[1], [...m[2].matchAll(/`([a-z0-9_]+)`/g)].map((x) => x[1]));
+  return out;
 }
 
 export function readWorkPackages(root) {

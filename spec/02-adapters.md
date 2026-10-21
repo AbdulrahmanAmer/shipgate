@@ -16,7 +16,7 @@ Behaviour checks (`http`, `html`, `site`, `browser`, `contract`, `db`, `baseline
 | **2 — Structural** | All behaviour checks + structural source rules via tree-sitter (`ast-grep`-style YAML rules), import graph, suppression patterns, framework traps for routing/404/metadata | Python, Ruby, PHP, Go, Java/Kotlin, C#, Rust web frameworks |
 | **3 — Behaviour only** | All behaviour checks; source rules are `noAdapterSupport` | Anything else that serves HTTP |
 
-Tiers map to coverage levels: Tier 1 = `full`, Tier 2 = `structural`, Tier 3 = `behaviour`. The report states each service's level and which rules could not be applied; `minCoverage` (policy) sets the minimum the Operator accepts. An adapter's tier is **earned** by passing its conformance suite (§ 7); the manifest only states `claimedTier`. A project-local adapter with no conformance result signed with the current lock, or with a failed one, has earned tier 3 (`behaviour`); its source rules are `noAdapterSupport`.
+Tiers map to coverage levels: Tier 1 = `full`, Tier 2 = `structural`, Tier 3 = `behaviour`. The report states each service's level and which rules could not be applied; `minCoverage` (policy) sets the minimum the Operator accepts. An adapter's tier is **earned** by passing its conformance suite (§ 7); the manifest only states `claimedTier`. A project-local adapter with no valid conformance result (03 § 6: Operator-signed, `passed: true`, and its `adapterSha256` and `fixturesSha256` equal to the current `quality/adapters/<id>/` and fixture files), or with a failed one, has earned tier 3 (`behaviour`); its source rules are `noAdapterSupport`.
 
 **Composition:** a service lists a primary adapter plus addons (`"adapters": ["next-app", "supabase"]`). Addons contribute rules, platform prep and codegen; the primary owns routing, commands and rendering semantics.
 
@@ -52,7 +52,7 @@ Full field list and schema: `03-formats.md` § 6. Example:
 }
 ```
 
-**Detection and selection.** `detect` matches when every key present matches: `files` — any glob matches a file under the service path; `dependency` — a direct dependency of the service manifest; `dirs` — every listed dir exists under the service path. Manifests declare `role: "primary" | "addon"` (03 § 6). `"adapters": ["auto"]` selects the highest-`priority` matching primary (ties fail CFG-002; no match → `generic-http`) plus every matching addon. An explicit list names its primary first (03 § 3.2); an addon in first position, or a second primary, fails CFG-002.
+**Detection and selection.** `detect` matches when every key present matches: `files` — any glob matches a file under the service path; `dependency` — a direct dependency, compared case-insensitively (Python names normalised per PEP 503), in the first of these manifests found in the service path: `package.json` (`dependencies`, `devDependencies`, `peerDependencies`, `optionalDependencies`), `pyproject.toml` (`[project] dependencies` and `optional-dependencies`, `[tool.poetry.dependencies]`), `requirements*.txt`, `Pipfile`, `Gemfile`, `composer.json` (`require`, `require-dev`), `go.mod` (`require`), `pom.xml`, `build.gradle*`, `*.csproj`, `Cargo.toml`; `dirs` — every listed dir exists under the service path. Manifests declare `role: "primary" | "addon"` (03 § 6). `"adapters": ["auto"]` selects the highest-`priority` matching primary (ties fail CFG-002; no match → `generic-http`) plus every matching addon. An explicit list names its primary first (03 § 3.2); an addon in first position, or a second primary, fails CFG-002.
 
 Adapter rules are written as ast-grep-compatible YAML structural patterns, so new rules and stacks don't require changing the Rust core. Built-in adapters ship with the binary; project-local adapters live in `quality/adapters/` (Operator-owned, locked).
 
@@ -91,7 +91,7 @@ Tier-1 trap details live in the adapter rule files; the table is the index. Each
 
 ## 6. Monorepos and platforms
 - Each service gets its own adapter, commands, port and surfaces.
-- Cross-service rules (SEC-012 CORS between services, API-002/API-004 producer–consumer contracts) run in G4 with every local service of the policy started.
+- Cross-service rules (SEC-012 CORS between services, API-002 producer–consumer contracts) run in G4 with every local service of the policy started; API-004 compares contract documents in G2.
 - Shared packages are analysed with the adapter of the language they're written in; their rules apply wherever they're imported.
 
 ## 7. Adding a stack
@@ -100,4 +100,4 @@ Tier-1 trap details live in the adapter rule files; the table is the index. Each
 3. Add a fixture project to shipgate's own test suite with known-good and known-bad cases for every rule the adapter claims.
 4. The adapter's tier is earned by passing that suite, not declared.
 5. Windows: every default command must run without Unix tools (`windows` overrides in the manifest); the suite runs on Windows, macOS and Linux.
-6. Project-local adapters earn their tier with `shipgate conformance --adapter <id>` against Operator-supplied fixtures; the result is signed with the lock.
+6. Project-local adapters earn their tier with `shipgate conformance --adapter <id>` against Operator-supplied fixtures; the result is written and signed with the Operator key as the conformance file of 03 § 6, and stays valid while the adapter and fixture hashes it records match (not tied to the lock).

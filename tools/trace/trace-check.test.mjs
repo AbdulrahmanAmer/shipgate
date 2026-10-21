@@ -60,7 +60,7 @@ function setup(mutate) {
 }
 function run(dir, extra = ["--no-tree-check"]) {
   try {
-    const out = execFileSync(process.execPath, [path.join(dir, "tools/trace/trace-check.mjs"), "--wp", WP, ...extra], { encoding: "utf8" });
+    const out = execFileSync(process.execPath, [path.join(dir, "tools/trace/trace-check.mjs"), ...(extra.includes("--wp") || extra.includes("--claimed") ? [] : ["--wp", WP]), ...extra], { encoding: "utf8" });
     return { code: 0, out };
   } catch (e) {
     return { code: e.status, out: String(e.stdout) };
@@ -79,6 +79,15 @@ const cases = [
   ["stale evidence", (c) => { c.after = (dir) => { const q = { stdio: "ignore" }; execFileSync("git", ["-C", dir, "init", "-q"], q); execFileSync("git", ["-C", dir, "add", "-A"], q); execFileSync("git", ["-C", dir, "-c", "user.email=t@t", "-c", "user.name=t", "commit", "-qm", "t"], q); }; }, (r) => r.code === 1 && r.out.includes("stale evidence"), []],
   ["fixture not in lock", (c) => (c.lockSkip = `${first}/known-bad-main/expected.json`), (r) => r.code === 1 && r.out.includes("not in corpus/FIXTURES.lock")],
   ["locked fixture edited by builder", (c) => (c.after = (dir) => fs.appendFileSync(path.join(dir, "corpus", `${first}/known-bad-main/expected.json`), " ")), (r) => r.code === 1 && r.out.includes("locked fixture modified")],
+  ["WP owning nothing is not done", null, (r) => r.code === 1 && r.out.includes("owns no requirement slice"), ["--no-tree-check", "--wp", "WP-399"]],
+  ["missed locked holdout not hidden by a passing one", (c) => c.ev.fixtures.push({ path: `${first}/holdout-main-2/expected.json`, kind: "holdout", rule: first, part: "main", failureClass: "missing-element", pass: false, actual: [] }), (r) => r.code === 1 && r.out.includes("holdout fixture(s) for part 'main' not detected")],
+  ["section not proven by a longer section id", (c) => (c.junit = '<testsuites><testsuite><testcase name="crate::mcp::sec_05_4_1__tools"/></testsuite></testsuites>'), (r) => r.code === 1 && r.out.includes("no test named *sec_05_4__*"), ["--no-tree-check", "--wp", "WP-804"]],
+  ["section proven by its own id", (c) => (c.junit = '<testsuites><testsuite><testcase name="crate::mcp::sec_05_4__server"/></testsuite></testsuites>'), (r) => r.code === 0, ["--no-tree-check", "--wp", "WP-804"]],
+  ["unlocked file in a locked fixture dir", (c) => (c.after = (dir) => { fs.mkdirSync(path.join(dir, "corpus/x/spec"), { recursive: true }); fs.writeFileSync(path.join(dir, "corpus/x/spec/policy.json"), "{}"); }), (r) => r.code === 1 && r.out.includes("unlocked file in a locked fixture directory")],
+  ["unrecognised done claim", (c) => (c.after = (dir) => fs.writeFileSync(path.join(dir, "BUILD_STATE.md"), "| WP-412 | answer engines | done |\n")), (r) => r.code === 1 && r.out.includes("unrecognised done claim"), ["--no-tree-check", "--claimed", "BUILD_STATE.md"]],
+  ["evidence found via .cargo/config.toml target-dir", (c) => (c.after = (dir) => { fs.renameSync(path.join(dir, "target"), path.join(dir, "tgt")); fs.mkdirSync(path.join(dir, ".cargo")); fs.writeFileSync(path.join(dir, ".cargo/config.toml"), '[build]\ntarget-dir = "tgt"\n'); }), (r) => r.code === 0],
+  ["acceptance-test WP done with its tests", (c) => (c.junit = '<testsuites><testsuite><testcase name="xtask::wp_000__workspace_builds_and_lints"/><testcase name="xtask::wp_000__ci_runs_trace_gates"/></testsuite></testsuites>'), (r) => r.code === 0, ["--no-tree-check", "--wp", "WP-000"]],
+  ["acceptance-test WP not done without one", (c) => (c.junit = '<testsuites><testsuite><testcase name="xtask::wp_000__workspace_builds_and_lints"/></testsuite></testsuites>'), (r) => r.code === 1 && r.out.includes("wp_000__ci_runs_trace_gates"), ["--no-tree-check", "--wp", "WP-000"]],
   ["deferred slice", (c) => (c.after = (dir) => fs.writeFileSync(path.join(dir, "trace/deferred.tsv"), `${first}\t*\t${WP}\tran out of time\n`)), (r) => r.code === 1 && r.out.includes("deferred:")],
 ];
 

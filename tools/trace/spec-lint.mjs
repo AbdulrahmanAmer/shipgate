@@ -10,6 +10,7 @@ import {
   readOwnership,
   readWorkPackages,
   readSections,
+  readAcceptanceTests,
 } from "./lib.mjs";
 
 const root = path.resolve(fileURLToPath(new URL("../..", import.meta.url)));
@@ -155,7 +156,7 @@ else {
     http: "WP-407", html: "WP-408", site: "WP-407", content: "WP-501", browser: "WP-601",
     baseline: "WP-801", edge: "WP-414", review: "WP-207", hook: "WP-306",
   };
-  const deps = readWpDeps(buildMap);
+  const deps = readWpDeps(buildMap.slice(0, buildMap.indexOf("### Section ownership")));
   const closure = (wp, seen = new Set()) => {
     for (const d of deps.get(wp) || []) if (!seen.has(d)) { seen.add(d); closure(d, seen); }
     return seen;
@@ -170,6 +171,11 @@ else {
       if (o.part.startsWith("channel:") && !r.channels.includes(o.part.slice(8))) err("ownership", `${r.id} ${o.part} (ownership.tsv:${o.line}) is not a channel of the rule [${r.channels.join(", ")}]`);
     }
     if (!star) continue;
+    for (const [part, chans] of Object.entries(r.partChannels || {})) {
+      if (rows.some((o) => o.part === `part:${part}`)) continue;
+      const movedTo = chans.map((c) => rows.find((o) => o.part === `channel:${c}`)?.wp);
+      if (movedTo.every((w) => w && w !== star.wp)) err("ownership", `${r.id} part ${part} runs only on [${chans.join(", ")}], owned by ${[...new Set(movedTo)].join("/")}, but stays with '*' owner ${star.wp}: add a part:${part} row`);
+    }
     if (star.note.startsWith("infra-ok")) continue;
     const split = new Set(rows.filter((o) => o.part.startsWith("channel:")).map((o) => o.part.slice(8)));
     const partWps = rows.filter((o) => o.part.startsWith("part:")).map((o) => o.wp);
@@ -178,17 +184,17 @@ else {
       const infra = INFRA[ch];
       if (!infra) continue;
       const ok = owners.some((w) => w === infra || /^WP-(9|10|11)/.test(w) || closure(w).has(infra));
-      if (!ok) warn("channel-infra", `${r.id} channel ${ch} → ${owners.join("/")}, which doesn't depend on ${infra} (${ch} machinery)`);
+      if (!ok) err("channel-infra", `${r.id} channel ${ch} → ${owners.join("/")}, which doesn't depend on ${infra} (${ch} machinery)`);
     }
   }
 }
 
 // 6b. Work-package graph: deps exist, no cycles, no dependency on a later phase.
 {
-  const deps = readWpDeps(buildMap);
+  const deps = readWpDeps(buildMap.slice(0, buildMap.indexOf("### Section ownership")));
   const phaseOf = new Map();
   let phase = -1;
-  for (const line of buildMap.split(/\r?\n/)) {
+  for (const line of buildMap.slice(0, buildMap.indexOf("### Section ownership")).split(/\r?\n/)) {
     const p = line.match(/^### Phase ([0-9]+)/);
     if (p) phase = Number(p[1]);
     const w = line.match(/^\| (WP-[0-9]{3,4})/);
@@ -219,6 +225,22 @@ function readWpDeps(text) {
   return m;
 }
 
+// 6c. Every WP owns something the done-gate can check.
+if (own) {
+  const table = buildMap.slice(buildMap.indexOf("### Section ownership"), buildMap.indexOf("### Launch-stable list"));
+  for (const row of buildMap.slice(0, buildMap.indexOf("### Section ownership")).matchAll(/^\| (WP-[0-9]{3,4})(?:\.\.([0-9]{3,4}))?(?: \(L\))? \| (.*) \| .* \|$/gm)) {
+    const ids = row[2] ? Array.from({ length: Number(row[2]) - Number(row[1].slice(3)) + 1 }, (_, k) => `WP-${Number(row[1].slice(3)) + k}`) : [row[1]];
+    for (const wp of ids) {
+      const hasSlice = own.some((o) => o.wp === wp);
+      const inTable = new RegExp(`\\b${wp}\\b|every WP card`).test(table) && [...table.matchAll(/^\| ([^|]*§[^|]*) \| ([^|]*) \|$/gm)].some((m) => new RegExp(`\\b${wp}\\b`).test(m[2]));
+      const cites = /\b0[1-5] § [0-9]/.test(row[3]);
+      const acc = readAcceptanceTests(root).get(wp) || [];
+      for (const name of acc) if (!name.startsWith(`wp_${wp.slice(3)}__`)) err("wp-owns-nothing", `${wp} acceptance test ${name} must be named wp_${wp.slice(3)}__<what>`);
+      if (!hasSlice && !inTable && !cites && !acc.length) err("wp-owns-nothing", `${wp} owns no requirement slice and no spec section: trace-check could never hold it to anything`);
+    }
+  }
+}
+
 // 7. Numbered sections of 01–05 that no work package references.
 const sections = readSections(root);
 const wpText = buildMap.slice(buildMap.indexOf("## 5. Phases"), buildMap.indexOf("## 6."));
@@ -230,7 +252,7 @@ for (const m of wpText.matchAll(/\b(0[1-5]) § ([0-9]+(?:\.[0-9]+)*)/g)) {
 }
 for (const s of sections) {
   const covered = [...sectionRefs].some((r) => r === s.ref || r.startsWith(s.ref + ".") || s.ref.startsWith(r + "."));
-  if (!covered) warn("section-unowned", `${s.ref} "${s.title}" (${s.file}:${s.line}) is not referenced by any work package`);
+  if (!covered) err("section-unowned", `${s.ref} "${s.title}" (${s.file}:${s.line}) is not referenced by any work package`);
 }
 
 const summary = {

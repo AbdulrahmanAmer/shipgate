@@ -100,6 +100,7 @@ AEO-012	*	WP-801	_main routes.jsonl comparison
 AEO-013	*	WP-412	family-default
 AEO-014	*	WP-412	resolved
 AEO-014	channel:browser	WP-608	resolved
+AEO-014	part:hidden-text	WP-608	R07: browser-only part
 ARC-001	*	WP-702	family-default
 ARC-002	*	WP-702	family-default
 ARC-003	*	WP-702	family-default
@@ -164,7 +165,7 @@ PRF-008	*	WP-604	resolved
 PRF-008	channel:edge	WP-414	resolved
 PRF-009	*	WP-604	explicit
 PRF-010	*	WP-604	explicit
-PRF-011	*	WP-604	explicit
+PRF-011	*	WP-701	R07: load stage uses contract request generation (WP-701); benchmarkIndex from WP-604
 PRF-012	*	WP-604	explicit
 PRF-013	*	WP-604	explicit
 PRF-014	*	WP-604	explicit
@@ -238,8 +239,8 @@ CNT-005	*	WP-501	explicit
 CNT-006	*	WP-504	family-default
 CNT-007	*	WP-504	family-default
 CNT-008	*	WP-504	family-default
-CNT-009	*	WP-504	resolved
-CNT-009	channel:browser	WP-608	resolved
+CNT-009	*	WP-608	R07: main part is computed-style (browser)
+CNT-009	part:raw	WP-504	R07: raw-HTML part
 CNT-010	*	WP-504	family-default
 DAT-013	*	WP-505	explicit
 DAT-014	*	WP-505	explicit
@@ -338,8 +339,7 @@ LOC-002	*	WP-411	explicit
 LOC-003	*	WP-411	explicit
 SEC-001	*	WP-413	explicit
 SEC-002	*	WP-413	explicit
-SEC-003	*	WP-413	family-default
-SEC-003	channel:browser	WP-607	R06: part login-replay needs flows
+SEC-003	*	WP-607	R07: login-replay needs flows; whole rule with WP-607
 SEC-004	*	WP-413	explicit
 SEC-005	*	WP-409	explicit
 SEC-006	*	WP-413	explicit
@@ -451,8 +451,7 @@ WCF-005	*	WP-410	family-default
 WCF-006	*	WP-410	family-default
 WCF-007	*	WP-410	family-default
 WCF-008	*	WP-410	explicit
-RTE-001	*	WP-410	resolved
-RTE-001	channel:browser	WP-608	resolved
+RTE-001	*	WP-608	R07: raw+rendered parity built together after the browser exists
 RTE-002	*	WP-410	family-default
 RTE-003	*	WP-410	family-default
 RTE-004	*	WP-410	family-default
@@ -475,6 +474,7 @@ URL-004	*	WP-410	family-default
 URL-005	*	WP-410	family-default
 URL-006	*	WP-410	family-default
 URL-006	channel:browser	WP-608	R06: part infinite-scroll
+URL-006	part:infinite-scroll	WP-608	R07: browser-only part
 URL-007	*	WP-410	explicit
 URL-008	*	WP-410	family-default
 URL-009	*	WP-410	family-default
@@ -494,6 +494,7 @@ MET-009	*	WP-410	family-default
 MET-010	*	WP-410	family-default
 MET-011	*	WP-410	resolved
 MET-011	channel:browser	WP-608	incl. dead-anchor; uses WP-602 control inventory
+MET-011	part:dead-anchor	WP-608	R07: browser-only part
 MET-012	*	WP-410	resolved
 MET-012	channel:browser	WP-608	resolved
 MET-013	*	WP-410	explicit
@@ -556,7 +557,7 @@ TRS-003	*	WP-410	explicit
 TRS-004	*	WP-410	explicit
 KW-001	*	WP-410	family-default
 KW-002	*	WP-410	R06: was WP-104 (stop words/stemmer sourced there)
-UX-022	*	WP-414	R06 new: edge-pass check of quality/approvals/launch-forms.json
+UX-022	*	WP-609	R07: needs the UX-001 form inventory (phase 6); WP-609 depends on WP-414
 REF-014	*	WP-801	R06 new: remote-baseline image URLs
 SEC-067	*	WP-607	R06 new: email ownership before trust
 CQ-010	*	WP-501	R06 new: copied third-party text; fetch recording WP-306/WP-803
