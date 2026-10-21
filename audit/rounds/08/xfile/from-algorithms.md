@@ -76,3 +76,10 @@ New: "| `baseBranch` | string — resolved as the local branch, else `origin/<ba
 
 ## Orchestrator's (round-07 passB-notes #5: BUILD_MAP / ownership.tsv). Not requested from a fixer
 - consistency#51 (BUILD_MAP WP-504 goal), #60 (WP-504 goal/Depends, ownership.tsv:221), #65 (ownership.tsv:417, WP-607/WP-414).
+
+## Pass B additions (algorithms fixer, round 08)
+
+### spec/01-core.md — TR-103 *Lock-digest PRNG* bullet, **Value streams** sentence (line ~253) — serves xfile-security#X4 (concreteness-security#15)
+04 § 15 *Lock-digest PRNG* *Values* (the only definition) now pads nonces; 01 restates the old text.
+Old: "a nonce is the lowercase hex of value k."
+New: "a nonce is the lowercase hex of value k, zero-padded to 16 digits (04 § 15 *Lock-digest PRNG*)."

@@ -262,7 +262,7 @@ ROL-002	*	WP-506	family-default
 ROL-003	*	WP-506	R06: was WP-104 (data source only)
 ROL-004	*	WP-506	family-default
 CRW-001	*	WP-506	slow-host skip supplied by WP-604 (TR-111 benchmarkIndex) through the run context
-CRW-001	channel:edge	WP-414	resolved
+CRW-001	channel:edge	WP-506	R08: edge TTFB on family/hub pages of the WP-414 edge sample
 CRW-002	*	WP-506	family-default
 CRW-003	*	WP-506	family-default
 PLK-001	*	WP-504	family-default
@@ -354,7 +354,7 @@ SEC-003	*	WP-607	R07: login-replay needs flows; whole rule with WP-607
 SEC-004	*	WP-413	explicit
 SEC-005	*	WP-409	explicit
 SEC-006	*	WP-413	explicit
-SEC-007	*	WP-413	family-default
+SEC-007	*	WP-706	R08: needs contract loading (WP-701) and flows/sessions (WP-602/603); consistency r08 #34/#35
 SEC-008	*	WP-413	family-default
 SEC-009	*	WP-413	family-default
 SEC-010	*	WP-413	resolved
@@ -385,17 +385,17 @@ SEC-026	*	WP-607	explicit
 SEC-027	*	WP-607	explicit
 SEC-028	*	WP-607	explicit
 SEC-029	*	WP-607	explicit
-SEC-030	*	WP-607	explicit
+SEC-030	*	WP-706	R08: needs contract loading (WP-701) and flows/sessions (WP-602/603); consistency r08 #34/#35
 SEC-031	*	WP-607	explicit
 SEC-032	*	WP-607	explicit
 SEC-033	*	WP-607	explicit
 SEC-037	*	WP-607	explicit
 SEC-057	*	WP-607	explicit
-SEC-036	*	WP-607	explicit
+SEC-036	*	WP-706	R08: needs contract loading (WP-701) and flows/sessions (WP-602/603); consistency r08 #34/#35
 SEC-038	*	WP-607	explicit
 SEC-039	*	WP-607	explicit
-SEC-045	*	WP-413	explicit
-SEC-046	*	WP-413	explicit
+SEC-045	*	WP-706	R08: needs contract loading (WP-701) and flows/sessions (WP-602/603); consistency r08 #34/#35
+SEC-046	*	WP-706	R08: needs contract loading (WP-701) and flows/sessions (WP-602/603); consistency r08 #34/#35
 SEC-047	*	WP-413	resolved
 SEC-047	part:stored	WP-607	resolved
 SEC-034	*	WP-413	resolved
@@ -416,7 +416,7 @@ SEC-048	*	WP-607	explicit
 SEC-049	*	WP-607	explicit
 SEC-063	*	WP-607	explicit
 SEC-064	*	WP-607	explicit
-SEC-065	*	WP-414	explicit
+SEC-065	*	WP-607	R08: needs journey checkout flows (G6); edge request made through WP-414's edge pass
 SEC-066	*	WP-414	explicit
 SEC-050	*	WP-304	provider patterns from WP-104
 SEC-051	*	WP-705	explicit
@@ -425,7 +425,7 @@ SEC-052	part:licence-unknown	WP-705	R07 split (consistency#84)
 SEC-052	part:deprecated-unknown	WP-705	R07 split (consistency#84)
 SEC-053	*	WP-705	registry snapshot sourced by WP-102
 SEC-053	part:age-unknown	WP-705	R07 split (consistency#84)
-SEC-060	*	WP-413	explicit
+SEC-060	*	WP-706	R08: needs contract loading (WP-701) and flows/sessions (WP-602/603); consistency r08 #34/#35
 SEC-061	*	WP-413	explicit
 SEC-062	*	WP-607	explicit
 SEC-070	*	WP-413	explicit
@@ -606,7 +606,7 @@ DAT-018	part:attribution	WP-505	R07: html attribution
 CRW-004	*	WP-506	crawler hook (record trap drops with discovery source, X9) in WP-407
 SE-128	*	WP-411	R07
 LOC-004	*	WP-411	review items
-SEC-074	*	WP-607	R07 new: property-level exposure (coverage-real-use#4); judges recorded responses, needs flows + accounts
+SEC-074	*	WP-706	R08: needs contract loading (WP-701) and flows/sessions (WP-602/603); consistency r08 #34/#35
 SEC-075	*	WP-413	R07 new: CSP strength (coverage-real-use#15)
 SEC-075	channel:edge	WP-414	R07 new: edge half on edge-pass responses (as SEC-010)
 RTE-016	*	WP-410	explicit (html side)

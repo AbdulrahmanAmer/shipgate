@@ -30,3 +30,10 @@ New text: `| Hosts | One `hosts[]` registry (`server`, `browser`, `essential` fl
 
 ## 7. spec/packs/data-api.md — DB-001 `drift` example (information only)
 Serves: concreteness-formats-integrations#16. 03 § 6 `schemaDriftCommand` now defines `{db.url}` (valid only in that command: the one database the service's `dbEnv` entry selects; `{db.<id>.url}` also accepted). The DB-001 example `prisma migrate diff --from-url {db.url} …` is therefore valid as written; no edit required unless the data-api fixer prefers to cite "03 § 6 `schemaDriftCommand`" after the example.
+
+## Pass B additions (round 08)
+
+## 8. spec/packs/programmatic.md — § 6 *live*, `commands.snapshot` sentence
+Serves: xfile-programmatic-search#X7 (consistency#21). 03 § 3.2 `commands` no longer has a `snapshot` key (it had no run semantics anywhere in the spec; an unknown `commands` key is now CFG-001 like any other unknown key).
+Old text: `a service `commands.snapshot` is never an oracle source (the Builder can write it).`
+New text: `services have no `snapshot` command (03 § 3.2); only `family.snapshot` produces the live oracle.`

@@ -39,7 +39,7 @@ Full field list and schema: `03-formats.md` § 6. Example:
   "portBinding": "env:PORT",
   "envInlinedAtBuild": true,
   "routes": { "discover": "fs-app-router", "fileMap": "app-router" },
-  "fileRoles": { "app/**/page.*": "route", "app/**/route.*": "api-handler", "app/**/layout.*": "layout" },
+  "fileRoles": [ { "glob": "app/**/page.*", "role": "route" }, { "glob": "app/**/route.*", "role": "api-handler" }, { "glob": "app/**/layout.*", "role": "layout" } ],
   "entryPoints": ["app/**/{page,layout,route,loading,error,not-found}.*", "middleware.*", "proxy.*", "next.config.*"],
   "config": { "trailingSlash": "next.config:trailingSlash", "basePath": "next.config:basePath", "i18n": "next.config:i18n" },
   "suppressions": ["@ts-ignore", "@ts-nocheck", "@ts-expect-error", "eslint-disable", "as any", "as unknown as"],
@@ -66,7 +66,7 @@ Adapter rules are written as ast-grep-compatible YAML structural patterns, so ne
 
 ## 5. Built-in adapters — v1 targets
 
-| Adapter | Tier | Route discovery | 404 / not-found mechanism | Metadata | Key traps: observable condition → guarded rule (`guards`, 03 § 5) |
+| Adapter | Tier | Route discovery (`routes.discover` id: 03 § 6 *Built-in ids*) | 404 / not-found mechanism | Metadata | Key traps: observable condition → guarded rule (`guards`, 03 § 5) |
 |---|---|---|---|---|---|
 | `static-html` (plain HTML/CSS/JS, static-site-generator output) | 1 | the files themselves | shipgate's built-in static server returns real 404s; host rules (`_redirects`, `vercel.json`, `netlify.toml`, `.htaccess`) are parsed and emulated | in the HTML files | a host rule rewriting `/*` or `/**` to an HTML file with status 200 → RTE-004; an HTML file without `<html lang>` → MET-007; two HTML files with the same `<title>` → MET-001 |
 | `next-app` (Next.js App Router 15/16) | 1 | `app/` file system | `notFound()` before any `<Suspense>`; no `loading.tsx` in segments that 404 | `generateMetadata`, `metadataBase` | `notFound()` reachable after a `<Suspense>` boundary or in a segment with `loading.tsx` (streaming commits 200) → RTE-005; a dynamic segment with neither `export const dynamicParams = false` nor a param check that calls `notFound()` → RTE-006; a segment config export (`revalidate`, `dynamic`, `fetchCache`) whose value isn't a literal, or, with `cacheComponents: true`, any such export → BLD-004; `params`/`searchParams` members read without `await` or `use()` → RTE-006; `'use client'` as the first statement of a `page.*` file → RTE-002. `middleware.*` and `proxy.*` both count as entry points |
