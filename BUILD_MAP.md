@@ -11,13 +11,13 @@ A signed, closed-source, single-binary tool (`shipgate`) for Windows, macOS and 
 ## 2. Development environment (Windows-first, no Docker)
 
 - Rust stable via `rustup` with the MSVC toolchain; Visual Studio Build Tools (C++ workload); `git`; Node.js LTS (only for developing the browser sidecar and corpus fixture apps; end users never need it); optional Windows Dev Drive for the repo.
-- Repo location: `D:\shipgate` (outside OneDrive). Git initialised on first session; default branch `main`.
+- Repo location: any local folder outside OneDrive (today: `D:\internal building pipeline for making sure that all websites we make real enterprise grade on search engines\shipgate`; moving it to a short path such as `D:\shipgate` is recommended, see WP-000). Git is initialised; default branch `main`.
 - CI: GitHub Actions matrix (windows-latest, macos-latest, ubuntu-latest). If the repo isn't on GitHub yet, CI configs are still written and run locally via the same `xtask` commands.
 
 ## 3. Repository layout
 
 ```
-D:\shipgate\
+<repo>\
   SPEC.md  BUILD_MAP.md  ORCHESTRATOR_PROMPT.md  spec\           # specification (source of truth)
   BUILD_STATE.md                                                  # live progress ledger (orchestrator-owned)
   DECISIONS.md                                                    # decisions taken during the build
@@ -75,6 +75,20 @@ D:\shipgate\
   - A non-test build never reads a passphrase from an env var or stdin.
 - Spec gaps found while building are recorded in `spec/CHANGES.md` (problem, decision, affected sections) and applied to the spec in the same change; nothing is silently invented.
 
+### 4.1 Completeness contract (nothing specified is skipped)
+Agents tend to report a work package done when the parts they found hard are missing. These mechanisms make that impossible to report without the gate going red. Each is enforced by a script in `tools/trace/`, and each script has a watched-fail self-test (`*.test.mjs`) that plants the defect it catches.
+
+1. **The ledger is the contract.** `trace/ownership.tsv` assigns every rule, rule part, channel slice and `TR-*` requirement to exactly one WP; the section table in § 5 does the same for sections without rule IDs. `spec-lint.mjs` fails on any unowned requirement or section, a WP dependency cycle, a dependency on a later phase, or a slice owned by a WP that doesn't depend on the machinery its channel needs. Ownership changes are edits to `ownership.tsv`, never to prose.
+2. **Builders get the generated card, not a summary.** `node tools/trace/wp-card.mjs WP-<id>` prints every slice the WP owns with the verbatim spec text and the checklist. The builder brief **is** that output plus § 4 and § 6. Nothing is paraphrased away.
+3. **Tests are written by someone other than the builder.** Before a builder starts, a separate fixture-author agent writes the WP's known-good and known-bad fixtures from the card alone (≥ 1 known-bad per part and per failure class, ≥ 1 known-good per rule) under `corpus/<pack>/<rule>/spec/`. The orchestrator records their sha256 in `corpus/FIXTURES.lock` and commits them. Builders may add fixtures but can't change or delete locked ones; `trace-check.mjs` fails on any edit.
+4. **Held-out fixtures catch overfitting.** After the build, the reviewer (fresh context) writes ≥ 1 new known-bad fixture per part from the spec text, under `corpus/<pack>/<rule>/holdout/`, without reading the implementation. They're locked the same way. A WP whose code misses its holdouts goes back to the builder.
+5. **Evidence comes from running things, on the committed tree.** `trace-check.mjs` reads only produced files: `target/trace/registry.json` (`shipgate rule --list --json` from the built binary: `{ treeHash, rules: [{ id, parts[], channels[], failureClasses[], lifecycle }] }`, and only rules with a registered implementation appear), `target/trace/corpus-results.json` (`cargo xtask corpus --json`: `{ treeHash, fixtures: [{ path (relative to corpus/), kind: known-good|known-bad|holdout, rule, part, failureClass, pass, actual: [{ rule, part, channel, failureClass }] }] }`) and `target/nextest/ci/junit.xml` (`cargo nextest run --profile ci`; `TR-*` and owned sections are proven by tests named `tr_103_…` or `sec_03_17_…`). Evidence whose `treeHash` isn't `HEAD^{tree}`, or a dirty tree under `crates/ sidecar/ rules/ adapters/ corpus/ xtask/`, fails.
+6. **Done means `trace-check.mjs --wp WP-<id>` exits 0.** For each slice: registered with every spec part and channel; every part detected by a passing known-bad **and** a passing holdout fixture, both locked; every failure class in the rule's metadata covered by a known-bad; known-good fixtures produce no findings; owned `TR-*` and sections have passing tests. A slice the builder can't deliver goes into `trace/deferred.tsv` (`ID<TAB>scope<TAB>WP<TAB>reason`), which keeps the WP NOT DONE until the orchestrator re-assigns it in `ownership.tsv`. Definition of Done item 1 requires `trace-check.mjs --all` to exit 0 and `deferred.tsv` to be empty.
+7. **No stubs.** Workspace lints deny `clippy::todo`, `clippy::unimplemented`, `clippy::dbg_macro` and (in `sg-packs`) `clippy::panic`. `xtask stub-scan` fails on `#[ignore]` without an `// ignore-reason:` comment, and on `TODO`, `FIXME`, `XXX`, `unimplemented`, `not yet implemented` or `stub` in `crates/`, `sidecar/src/`, `rules/` and `adapters/`.
+8. **Phase checkpoints add mutation testing.** At each phase end, `cargo mutants` runs on the phase's rule-decision modules (time-boxed, sampled). A surviving mutant in decision code means a missing fixture; the fixture is added (by the fixture author) before the next phase opens.
+9. **False "done" can't end a session.** The project Stop hook (`.claude/settings.json` → `tools/trace/stop-gate.mjs`) runs `trace-check.mjs --claimed BUILD_STATE.md` and blocks the stop while any WP marked `done` fails. The agent either delivers the slices or corrects the claim to NOT DONE and tells the Operator.
+10. **The reviewer fills the checklist.** The reviewer returns the card's checklist with every row's last four columns filled (fixture paths, `file:line` of the implementation, verdict). A row left empty is a review failure, whatever the summary says.
+
 ## 5. Phases and work packages
 
 Phases run in order; work packages inside a phase run in parallel when their dependencies allow (dependencies listed explicitly, including same-phase ones). Each work package is sized for one agent session (roughly 300–1,500 lines of code plus tests); packages marked (L) are large and must be split by the orchestrator into sub-packages (e.g. WP-410a, WP-410b) along the rule families shown. IDs are stable; the orchestrator may split a package but never merge two.
@@ -82,7 +96,7 @@ Phases run in order; work packages inside a phase run in parallel when their dep
 ### Phase 0 — Bootstrap
 | WP | Goal | Depends |
 |---|---|---|
-| WP-000 | Confirm repo at `D:\shipgate`, `git init`, workspace skeleton (all crates as empty libs, `sg-cli` binary), CI workflows, `cargo deny` config, `rust-toolchain.toml`, `BUILD_STATE.md`, `DECISIONS.md`, `spec/CHANGES.md` | — |
+| WP-000 | Repo outside OneDrive with git (already initialised); if the repo path is longer than 60 characters, set `CARGO_TARGET_DIR` to a short path (e.g. `D:\sgt`) in `.cargo/config.toml` and enable Windows long paths (MSVC/cmake build scripts break past 260 characters); workspace skeleton (all crates as empty libs, `sg-cli` binary), workspace lints of § 4.1 item 7, `xtask stub-scan`, nextest `ci` profile with JUnit output, CI workflows running `spec-lint`, the `tools/trace/*.test.mjs` self-tests and `trace-check --claimed BUILD_STATE.md`, `cargo deny` config, `rust-toolchain.toml`, `BUILD_STATE.md`, `DECISIONS.md`, `spec/CHANGES.md`, empty `corpus/FIXTURES.lock` and `trace/deferred.tsv` | — |
 
 ### Phase 1 — Verify assumptions and gather ruleset data (parallel; results feed the spec)
 | WP | Goal | Depends |
@@ -130,7 +144,7 @@ Phases run in order; work packages inside a phase run in parallel when their dep
 | WP-206 | `sg-rules`: rule metadata loader/validator (03 § 5, incl. `owns` waivability check, tombstones), embedded rulesets (current + 3 previous), launch-stable list mechanics, ruleset data loading (WP-104 outputs) | WP-202 |
 | WP-207 | `sg-engine` skeleton: gate model, channel→gate, prerequisites, rule outcomes, finding statuses, two-step verdict incl. BLD rule, scope downgrade and reduced runs (04 § 1.6), handoff conditions (04 § 1.9), review results from `quality/audit/review.json` (04 § 1.7), grouping/evidenceHash/ranking (04 § 9), attempts, report writers (JSON, SARIF, JUnit, summary.md), sealed verdict record (04 § 8.1) | WP-201, WP-205, WP-206, WP-204 |
 | WP-208 | `sg-cli` skeleton: command tree from spec 05 § 1, exit codes, `rule`, `version`, `doctor` (partial), CLI wiring for `keys` and `lock` | WP-207 |
-| WP-209 | **Corpus harness**: fixture project layout, `expected.json` format (expected findings by rule/failure class/groupKey, expected verdict), `xtask corpus` runner, golden-report comparison; every later WP uses it | WP-207 |
+| WP-209 | **Corpus harness**: fixture project layout, `expected.json` format (expected findings by rule/failure class/groupKey, expected verdict), `xtask corpus` runner with `--json` output in the § 4.1 item 5 shape, `shipgate rule --list --json` registry export, golden-report comparison, `FIXTURES.lock` maintenance command for the orchestrator; `trace-check --wp WP-209` must pass on the harness's own fixtures; every later WP uses it | WP-207 |
 
 ### Phase 3 — Static side and hooks
 | WP | Goal | Depends |
@@ -281,7 +295,7 @@ Report back: files changed, tests added, deviations (each with a spec/CHANGES.md
 
 ## 7. Definition of done (v1.0)
 
-1. Every rule in the spec is implemented; the launch-stable list (§ 5, "Launch-stable list") is `stable` with passing corpus; the rest are `experimental` with known-bad fixtures.
+1. Every rule in the spec is implemented: `node tools/trace/trace-check.mjs --all` exits 0 on the release tree and `trace/deferred.tsv` is empty; the launch-stable list (§ 5, "Launch-stable list") is `stable` with passing corpus; the rest are `experimental` with known-bad fixtures.
 2. Tier-1 adapters: static-html, next-app, next-pages, vite-spa, tanstack-start, react-router, astro, nuxt, sveltekit, supabase addon. Tier-2 adapters listed in Phase 9. Tier-3 generic-http and hosted-builder.
 3. All five agent hosts plus git hooks integrated; each row in spec 05 § 3.3 marked verified (or documented as reduced enforcement with reason).
 4. Runs on Windows, macOS and Linux without Docker or global installs; `fetch` enables offline use.
