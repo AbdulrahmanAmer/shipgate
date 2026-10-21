@@ -216,6 +216,11 @@ DAT-003	*	WP-502	explicit
 DAT-004	*	WP-502	explicit
 DAT-005	*	WP-502	explicit
 DAT-006	*	WP-502	explicit
+DAT-006	channel:site	WP-504	part `served` (crawl; WP-504 depends on WP-407)
+DAT-006	channel:http	WP-504	part `omitted` probes (404/noindex of omitted rows)
+DAT-006	part:fixtures	WP-504	fixture-file check; the fixture pass itself (04 § 2 item 7, X8) needs WP-415 stage scheduling and WP-508 inventory reader honouring SHIPGATE_INVENTORY_DIR
+DAT-006	part:served	WP-504	R07: crawl side
+DAT-006	part:omitted	WP-504	R07: omitted-row probes
 DAT-007	*	WP-502	resolved
 DAT-007	channel:html	WP-504	resolved
 DAT-008	*	WP-502	explicit
@@ -254,7 +259,7 @@ ROL-001	*	WP-506	family-default
 ROL-002	*	WP-506	family-default
 ROL-003	*	WP-506	R06: was WP-104 (data source only)
 ROL-004	*	WP-506	family-default
-CRW-001	*	WP-506	resolved
+CRW-001	*	WP-506	slow-host skip supplied by WP-604 (TR-111 benchmarkIndex) through the run context
 CRW-001	channel:edge	WP-414	resolved
 CRW-002	*	WP-506	family-default
 CRW-003	*	WP-506	family-default
@@ -282,6 +287,8 @@ RES-006	*	WP-703	family-default
 RES-007	*	WP-703	family-default
 SE-001	*	WP-411	family-default
 SE-002	*	WP-411	family-default
+SE-002	channel:browser	WP-608	part `rendered-resources`
+SE-002	part:rendered-resources	WP-608	R07: browser part
 SE-003	*	WP-411	family-default
 SE-004	*	WP-411	family-default
 SE-005	*	WP-506	explicit
@@ -328,6 +335,8 @@ SE-402	*	WP-411	family-default
 SE-403	*	WP-411	family-default
 SE-404	*	WP-411	family-default
 SE-501	*	WP-411	R06: was WP-104 (China-blocked host list sourced there)
+SE-501	channel:browser	WP-608	part `parity`
+SE-501	part:parity	WP-608	R07: browser part
 SE-502	*	WP-411	family-default
 SE-503	*	WP-411	family-default
 SE-504	*	WP-411	family-default
@@ -348,6 +357,7 @@ SEC-008	*	WP-413	family-default
 SEC-009	*	WP-413	family-default
 SEC-010	*	WP-413	resolved
 SEC-010	channel:edge	WP-414	resolved
+SEC-010	part:hsts	WP-413	R07 new part (G4 half; edge half follows existing SEC-010 channel:edge → WP-414)
 SEC-011	*	WP-607	explicit
 SEC-012	*	WP-413	family-default
 SEC-013	*	WP-607	explicit
@@ -368,6 +378,7 @@ SEC-022	*	WP-607	explicit
 SEC-023	*	WP-607	explicit
 SEC-024	*	WP-607	explicit
 SEC-025	*	WP-607	explicit
+SEC-025	part:rate-limit-edge	WP-607	R07 split (consistency#84)
 SEC-026	*	WP-607	explicit
 SEC-027	*	WP-607	explicit
 SEC-028	*	WP-607	explicit
@@ -389,6 +400,9 @@ SEC-034	*	WP-413	resolved
 SEC-034	channel:edge	WP-414	resolved
 SEC-035	*	WP-413	explicit
 SEC-054	*	WP-607	explicit
+SEC-054	part:requests	WP-607	R07 named part (consistency#84)
+SEC-054	part:requests-edge	WP-607	R07 split (consistency#84)
+SEC-054	part:mail	WP-607	R07 named part (consistency#72/84)
 SEC-055	*	WP-607	explicit
 SEC-059	*	WP-414	explicit
 SEC-040	*	WP-607	explicit
@@ -405,7 +419,10 @@ SEC-066	*	WP-414	explicit
 SEC-050	*	WP-304	provider patterns from WP-104
 SEC-051	*	WP-705	explicit
 SEC-052	*	WP-705	explicit
+SEC-052	part:licence-unknown	WP-705	R07 split (consistency#84)
+SEC-052	part:deprecated-unknown	WP-705	R07 split (consistency#84)
 SEC-053	*	WP-705	registry snapshot sourced by WP-102
+SEC-053	part:age-unknown	WP-705	R07 split (consistency#84)
 SEC-060	*	WP-413	explicit
 SEC-061	*	WP-413	explicit
 SEC-062	*	WP-607	explicit
@@ -413,6 +430,8 @@ SEC-070	*	WP-413	explicit
 SEC-071	*	WP-413	explicit
 SEC-072	*	WP-413	explicit
 SEC-073	*	WP-413	infra-ok: WordPress feed matching is self-contained; feed fetched by WP-401
+SEC-073	part:unrated	WP-413	R07 new part (concreteness#26)
+SEC-073	part:version-unknown	WP-413	R07 split (consistency#84)
 TST-001	*	WP-607	family-default
 TST-002	*	WP-607	family-default
 TST-003	*	WP-607	family-default
@@ -425,6 +444,7 @@ TST-009	*	WP-607	family-default
 TST-010	*	WP-607	explicit
 TST-011	*	WP-607	explicit
 UX-001	*	WP-609	explicit
+UX-001	part:mobile	WP-609	R07 new part (coverage-real-use#17); same WP as UX-001 *, listed for completeness
 UX-003	*	WP-609	explicit
 UX-004	*	WP-609	explicit
 UX-005	*	WP-609	explicit
@@ -453,7 +473,7 @@ WCF-007	*	WP-410	family-default
 WCF-008	*	WP-410	explicit
 RTE-001	*	WP-608	R07: raw+rendered parity built together after the browser exists
 RTE-002	*	WP-410	family-default
-RTE-003	*	WP-410	family-default
+RTE-003	*	WP-410	keep (tombstone; spec-lint requires an owner)
 RTE-004	*	WP-410	family-default
 RTE-005	*	WP-410	family-default
 RTE-006	*	WP-410	family-default
@@ -493,8 +513,7 @@ MET-008	*	WP-410	family-default
 MET-009	*	WP-410	family-default
 MET-010	*	WP-410	family-default
 MET-011	*	WP-410	resolved
-MET-011	channel:browser	WP-608	incl. dead-anchor; uses WP-602 control inventory
-MET-011	part:dead-anchor	WP-608	R07: browser-only part
+MET-011	part:dead-anchor	WP-608	replaces `MET-011 channel:browser WP-608` (consistency#9)
 MET-012	*	WP-410	resolved
 MET-012	channel:browser	WP-608	resolved
 MET-013	*	WP-410	explicit
@@ -504,10 +523,12 @@ SCH-003	*	WP-410	family-default
 SCH-004	*	WP-410	family-default
 SCH-005	*	WP-410	family-default
 SCH-006	*	WP-410	family-default
+SCH-006	channel:browser	WP-608	explicit (visible-text browser check, § 2)
 SCH-007	*	WP-410	family-default
 SCH-008	*	WP-410	family-default
 SCH-009	*	WP-410	family-default
 SCH-010	*	WP-410	family-default
+SCH-010	channel:browser	WP-608	explicit (visible-text browser check, § 2)
 SCH-011	*	WP-410	explicit
 LNK-001	*	WP-608	R06: now browser-only (control click probe)
 LNK-002	*	WP-410	family-default
@@ -553,6 +574,7 @@ CQ-008	*	WP-501	resolved
 CQ-009	*	WP-410	explicit
 TRS-001	*	WP-410	explicit
 TRS-002	*	WP-410	explicit
+TRS-002	channel:browser	WP-608	explicit (visible-text browser check, § 2)
 TRS-003	*	WP-410	explicit
 TRS-004	*	WP-410	explicit
 KW-001	*	WP-410	family-default
@@ -561,3 +583,31 @@ UX-022	*	WP-609	R07: needs the UX-001 form inventory (phase 6); WP-609 depends o
 REF-014	*	WP-801	R06 new: remote-baseline image URLs
 SEC-067	*	WP-607	R06 new: email ownership before trust
 CQ-010	*	WP-501	R06 new: copied third-party text; fetch recording WP-306/WP-803
+UX-023	*	WP-609	R07 new: commercial terms oracle (coverage-real-use#3), WP-609(a)
+UX-024	*	WP-609	R07 new: image rights register (coverage-real-use#18), WP-609(c)
+RES-008	*	WP-703	R07 new: delivery-fault replays of UX-001 form keys (UX-022 form key; flows WP-602, already a WP-703 dependency)
+PRV-029	*	WP-606	new rule (market signals vs declared jurisdictions; ruleset market-signals.json)
+PRV-030	*	WP-606	new rule (provider identification; WP-606(c))
+PRV-031	*	WP-606	new rule (privacy notice content)
+PRV-032	*	WP-606	new rule (TCPA SMS consent)
+PRV-033	*	WP-606	new rule (India)
+PRV-034	*	WP-606	new rule (Australia)
+PRV-035	*	WP-606	new rule (Brazil; part regret reuses PRV-021 flow machinery)
+PRV-036	*	WP-606	new rule (IAB TCF; WP-606(b))
+PRV-037	*	WP-606	new rule (EU DSA)
+A11-030	*	WP-605	new rule (3.3.7 redundant entry; WP-605(b))
+DAT-018	*	WP-502	cfg part `rights`
+DAT-018	channel:html	WP-505	part `attribution`
+DAT-018	part:attribution	WP-505	R07: html attribution
+CRW-004	*	WP-506	crawler hook (record trap drops with discovery source, X9) in WP-407
+SE-128	*	WP-411	R07
+LOC-004	*	WP-411	review items
+SEC-074	*	WP-607	R07 new: property-level exposure (coverage-real-use#4); judges recorded responses, needs flows + accounts
+SEC-075	*	WP-413	R07 new: CSP strength (coverage-real-use#15)
+SEC-075	channel:edge	WP-414	R07 new: edge half on edge-pass responses (as SEC-010)
+RTE-016	*	WP-410	explicit (html side)
+RTE-016	channel:browser	WP-608	explicit (body-signal rendered DOM)
+RTE-017	*	WP-608	explicit (browser control activation; raw-text side uses WP-410 raw HTML)
+URL-014	*	WP-410	explicit
+URL-014	channel:edge	WP-414	explicit (edge-pass probes of /)
+I18-010	*	WP-410	explicit (WP-410(c))

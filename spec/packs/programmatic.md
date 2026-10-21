@@ -129,7 +129,7 @@ Google treats pages that differ only by a swapped name as doorway pages / scaled
 
 Field attributes: `required`, `source`, `observedAtField` + `maxAgeDays`, `regional` (context figure, never local), `label`; `max` ≤ 500; `pattern` is a Rust `regex`-crate expression that must match the whole value.
 
-**Per-locale word lists:** `stop-words.json` is `{ "<BCP 47 tag>": [word…] }`, words NFKC and case-folded, compared by equality with the NFKC, case-folded word; lookup for a locale tries `ll-CC`, then `ll`, then `en` (04 § 14).
+**Per-locale word lists:** `stop-words.json` is `{ "<BCP 47 tag>": [word…] }`, words NFKC and case-folded, compared by equality with the NFKC, case-folded word. Lookup by locale (a family page's page locale is its row's locale) and the outcome for a locale with no entry: 04 § 15 *Page locale* (no silent `en` fallback; the check runs with `en` and raises the blocking `missing-element` finding owned by `operator`).
 
 ### 1.2 Validation — `PCF-*` (G0)
 - **PCF-001** · P0 · cfg — Template tokens reference only required fields of the family, whitelisted constants (`{brand}`, `{siteName}`), `{self}`, or `{page}` in paginated hub templates. Part `hub-constant` (P0 · data): hub template fields are constant within each group.
@@ -142,6 +142,7 @@ Field attributes: `required`, `source`, `observedAtField` + `maxAgeDays`, `regio
 
 ### 1.3 Family keys
 
+- `dataset` and `retired` paths (every per-locale dataset too) lie under `quality/data/`, so they are lock inputs and Operator-owned sources (03 § 8 *Operator-owned sources*); the policy JSON Schema enforces the prefix, and a path elsewhere is a CFG-001 finding.
 - `retired`: path of a JSONL file of `{ id, slug, successor? }` (`successor` = the `id` of a live row of the family). Each retired slug's pathname returns 410, or 301 in one hop to the successor's pathname (URL-008).
 - `indexation` (families and hubs): `"index"` | `"noindex"`; `noindex` serves every eligible page (hub page) with `noindex` and excludes it from sitemaps.
 - `contentParams`: same shape and meaning as web-delivery `contentParams`, scoped to the family's `routePattern`; on a conflict for the same `param`, the family entry wins.
@@ -166,7 +167,7 @@ Field attributes: `required`, `source`, `observedAtField` + `maxAgeDays`, `regio
 - **DAT-009** · P0 · data — Freshness via `observedAtField` vs `dataAsOf` (never the wall clock). Stale required → quarantine; stale optional → omitted. A missing `observedAtField` value counts as stale. A value is stale when `dataAsOf` − `observedAt` > `maxAgeDays` × 86,400 s; an `observedAt` later than `dataAsOf` is not stale. `observedAtField` and `maxAgeDays` are declared together (PCF-004).
 - **DAT-010** · P0 · data, html — Money is `{amountMinor, currency}`; one formatter produces the visible text and `Offer.price`.
 - **DAT-011** · P0 · data — Geo: both coordinates, finite, in range, not `(0, 0)`.
-- **DAT-012** · P0 · data — YMYL rows without `reviewedBy` and https `sourceUrl` are quarantined. Part `advice` (P0 · cfg; owner `operator`, the text is policy): in YMYL families, `staticFragments`, field `label`s, breadcrumb names and title/description/H1 templates contain no sentence matching ruleset `advice-patterns.json` for the family's locale (imperative or modal recommendation patterns, e.g. "you should", "we recommend", "consult … before"); each match is a finding naming the policy key and the pattern index. `advice-patterns.json`: `{ "<BCP 47 tag>": [regex…] }` (Rust `regex` syntax), each matched case-insensitively against each UAX #29 sentence of the NFKC text; locale lookup `ll-CC` → `ll` → `en` (04 § 14).
+- **DAT-012** · P0 · data — YMYL rows without `reviewedBy` and https `sourceUrl` are quarantined. Part `advice` (P0 · cfg; owner `operator`, the text is policy): in YMYL families, `staticFragments`, field `label`s, breadcrumb names and title/description/H1 templates contain no sentence matching ruleset `advice-patterns.json` for each locale of the family's `locales` (imperative or modal recommendation patterns, e.g. "you should", "we recommend", "consult … before"); each match is a finding naming the policy key and the pattern index. `advice-patterns.json`: `{ "<BCP 47 tag>": [regex…] }` (Rust `regex` syntax), each matched case-insensitively against each UAX #29 sentence of the NFKC text (the copy keyed by that locale, else the bare value); lookup and no-entry outcome: 04 § 15 *Page locale*, with that locale as the page locale.
 
 ## 3. Templates as data — `TPL-*`
 

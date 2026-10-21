@@ -49,3 +49,8 @@ X17. **LOC-001 Ownership sentence** — replace "LOC-001 `owns` `UX-003#phones` 
 ## To spec/packs/privacy.md
 
 X18. **PRV-026 part `total`** — where it cites ruleset `payment-amounts.json`, add "(shape and matching: ux § 3)". Serves concreteness-core-adapters-ux#19.
+
+## Pass B — withdrawals (passB-notes item 1 overrides the pass-A page-locale fallback)
+- **X2 withdrawn** (04 § 1.6 step 2 `en`-fallback partial cause): a locale with no ruleset entry is now the 04 § 15 *Page locale* no-entry outcome (blocking `missing-element` owned by `operator`), never a partial cause. Do not apply.
+- **X3, unsupported-locale clause withdrawn** (04 § 1.9 `reduced-environment` row): keep only the slow-host / `verifyEnv.reduced` condition (already in 04:116). Do not add "or run with an unsupported page locale".
+- **X11 withdrawn** (03 § 17 `coverage.unsupportedLocales`): no longer referenced; ux § 3 *Page locale and per-locale data* now only cites 04 § 15 page locale.

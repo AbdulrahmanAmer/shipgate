@@ -16,7 +16,7 @@ if (!round || !fs.existsSync(dir)) {
   process.exit(2);
 }
 const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
-const findingFiles = files.filter((f) => /^(concreteness|consistency|coverage)-.*\.md$/.test(f));
+const findingFiles = files.filter((f) => /^(concreteness|consistency|coverage)(-.*)?\.md$/.test(f));
 const resolutionFiles = files.filter((f) => /^resolution-.*-[AB]\.md$/.test(f)).sort();
 
 // findings: "<file-stem>#<n>" → row text
@@ -32,7 +32,7 @@ for (const f of findingFiles) {
 // outcomes: key → [{ outcome, file, line }]
 const outcomes = new Map();
 const sections = { "Ownership rows": [], "Ruleset data": [], "Policy keys added": [] };
-const OUTCOME = /\b(fixed|adapted|rejected|xfile)\b/i;
+const OUTCOME = /\b(fixed|adapted|added|rejected|xfile)\b/i;
 for (const f of resolutionFiles) {
   let section = null;
   for (const line of fs.readFileSync(path.join(dir, f), "utf8").split(/\r?\n/)) {
@@ -43,7 +43,7 @@ for (const f of resolutionFiles) {
     if (!m) continue;
     let stem = m[1].replace(/^audit\/rounds\/[0-9]+\//, "");
     // a bare "concreteness#3" means this fixer group's own findings file
-    if (/^(concreteness|consistency|coverage)$/.test(stem)) stem = `${stem}-${f.replace(/^resolution-(.*)-[AB]\.md$/, "$1")}`;
+    if (/^(concreteness|consistency|coverage)$/.test(stem) && !fs.existsSync(path.join(dir, `${stem}.md`))) stem = `${stem}-${f.replace(/^resolution-(.*)-[AB]\.md$/, "$1")}`;
     const key = `${stem}#${m[2]}`;
     const o = (m[3].match(OUTCOME) || [, "unknown"])[1].toLowerCase();
     if (!outcomes.has(key)) outcomes.set(key, []);
@@ -59,7 +59,8 @@ const xfileOnly = [...findings.keys()].filter((k) => outcomes.has(k) && !closed(
 const unknownKeys = [...outcomes.keys()].filter((k) => !findings.has(k));
 const counts = {};
 for (const k of findings.keys()) {
-  const best = (outcomes.get(k) || []).map((o) => o.outcome).find((o) => o !== "xfile") || (outcomes.has(k) ? "xfile" : "MISSING");
+  const seen = (outcomes.get(k) || []).map((o) => o.outcome);
+  const best = ["fixed", "adapted", "added", "rejected", "unknown", "xfile"].find((o) => seen.includes(o)) || "MISSING";
   counts[best] = (counts[best] || 0) + 1;
 }
 

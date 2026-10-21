@@ -104,7 +104,7 @@ If `quality/policy.json` exists, `init` (with or without `--new`) changes nothin
    | `pseo` | + `programmatic` |
    | `saas`, `api` | + `data-api` |
    | `docs` | web-delivery `llmsTxt: "required"` |
-   | `ecommerce` | search-engines `features` contains `product`, `merchant-listing`, `review-snippet`; privacy `jurisdictions` gains `eu-consumer` when the answers include `eu-gdpr`, `eu-eaa`, `de` or `at`, and `uk-consumer` when they include `uk-gdpr` (order-button wording, price indication, drip pricing: PRV-023, PRV-026) |
+   | `ecommerce` | search-engines `features` contains `product`, `merchant-listing`, `review-snippet`; privacy `jurisdictions` gains `eu-consumer` when the answers include `eu-gdpr`, `eu-eaa`, `de` or `at`, `uk-consumer` when they include `uk-gdpr` (order-button wording, price indication, drip pricing: PRV-023, PRV-026), `br-consumer` when they include `br-lgpd` (PRV-035), `au-consumer` when they include `au-privacy` (PRV-034, PRV-026) and `in-ecommerce` when they include `in-dpdp` (PRV-033) |
    | `local-business` | search-engines `features` contains `local-business`; the `business.json` template has one `locations[]` entry (LOC-*) |
    | replaces a site (step 4) | + `refactor` |
 

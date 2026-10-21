@@ -61,3 +61,10 @@ Each entry: target file · location · exact edit · finding served. Anchors are
 - consistency#82 — 04-algorithms.md § 1.1: "one that reads the migrated database before the first probe (DB-001, DB-004, DB-009, DB-011 `emulator`, SEC-04…".
 - consistency#83 — 04-algorithms.md § 4.4: "SEC-043/SEC-044 behaviour parts run only with `platform.supabase.mode: \"external\"` …".
 - consistency#90 — 04-algorithms.md § 2: "SEC-059: DNS lookups and two GETs (https and http root) per listed host".
+
+## Pass B additions (round 07)
+
+### XB1 — spec/04-algorithms.md § 1.2, required-facts paragraph
+- Old: "The same holds for the PRV-002/PRV-014, PRV-026 `total` and PRV-028 outcomes that their pack text says are owned by `operator`."
+- New: "The same holds for the PRV-002/PRV-014, PRV-026 `total` and PRV-028 outcomes, and the missing-flow outcomes of SEC-018, SEC-028 and SEC-067 (flows are Operator-owned, 01 § 5.2), that their pack text says are owned by `operator`."
+- Serves: passB-notes item 3 (SEC-028 no logout flow → operator handoff), xfile-formats-integrations#8; same reasoning applied to SEC-018 (no flow fills a password-set input) and SEC-067 (no signup flow; signup flow without `openEmailLink`).

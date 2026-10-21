@@ -27,7 +27,7 @@ Sampling follows 04 § 10 (≥ 3 pages per route group) plus every declared flow
 
 **Interactive element** (A11-004, A11-015, A11-017, A11-029): visible, not `disabled`, not inert, no negative `tabindex`, and `a[href]`, `button`, `input:not([type=hidden])`, `select`, `textarea`, `summary`, `[contenteditable]`, `[tabindex]` ≥ 0, or a control of the flows-engine control inventory. For the A11-004 Tab walk a radio group (`input[type=radio]` with the same `name` in the same form or root) counts as one element: its checked radio, else its first radio in document order; the others are reached by arrow keys and need not be focused.
 
-**Phrase match** (A11-022, A11-030): a text has a phrase match in a phrase list (the file the rule names) when, with both NFKC-normalised, case-folded and whitespace-collapsed, a phrase of the list for the page locale (primary subtag of `<html lang>`, fallback `en`) occurs in the text as a substring.
+**Phrase match** (A11-022, A11-030): a text has a phrase match in a phrase list (the file the rule names) when, with both NFKC-normalised, case-folded and whitespace-collapsed, a phrase of the list for the page locale (04 § 15 *Page locale*, including the per-locale lookup and the no-entry outcome) occurs in the text as a substring.
 
 **Axe findings** (A11-001, A11-003 labels, A11-006): each violating node is a `forbidden-value` finding showing the axe rule id, impact and selector.
 

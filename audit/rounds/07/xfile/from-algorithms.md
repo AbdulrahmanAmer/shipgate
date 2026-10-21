@@ -38,3 +38,15 @@ Insert a row after `requestSources`: `| `matcherWidening` | `[{ from, to }]`: te
 Serves: consistency #108 (WP-307 must produce the TR-112 required pages and `business.json` excerpts that 04 § 7 now lists); concreteness-algorithms #24 and #26 (ruleset data, see resolution file).
 
 WP-307 Goal: append "; TR-112 required-pages list and `business.json` excerpts (04 § 7)". WP-104: add `secret-patterns.json` to the "provider secret-key patterns (SEC-050)" item; WP-102 or WP-104 "Foundation recipes per adapter" bullet: name the files `recipes/<adapter id>.json` (04 § 7).
+
+---
+
+# Pass B additions (algorithms fixer, round 07 pass B)
+
+## X7 — spec/01-core.md TR-103 sub-bullet *Lock-digest PRNG* (one definition of value streams)
+Serves: xfile-core-adapters-ux#X1, concreteness-core-adapters-ux#4, consistency#107. 04 § 15 *Lock-digest PRNG* keeps both draws and value streams (it fixes the byte encoding: 32 raw lock-digest bytes, UTF-8 stream id, decimal ASCII k); 01 TR-103 currently restates the value-stream formula less precisely ("SHA-256(lock digest ‖ …)"), so two definitions would drift.
+Old: `**Value streams:** where a rule needs values rather than a choice (SEC-030 fuzzing, probe nonces), value k (k = 0, 1, …) of stream s is the first 8 bytes of SHA-256(lock digest ‖ `0x00` ‖ s ‖ `0x00` ‖ decimal k) read as a big-endian u64; a nonce is the lowercase hex of value k.`
+New: `**Value streams** (SEC-030 fuzzing, probe nonces): 04 § 15 *Lock-digest PRNG* *Values* (the only definition).`
+
+## X8 — spec/03-formats.md § 3.5 additional keys (policy key used by 04 § 12)
+Serves: xfile-web-delivery#3 (concreteness-web-delivery#27). 04 § 12 *Leak scan* now excludes elements only via `web-delivery.leakIgnore` (already in the web-delivery policy block, web-delivery.md:27). If 03 § 3.5 lists pack keys exhaustively, insert in the *Additional keys defined by v7.1+ text* paragraph: `; web-delivery `leakIgnore` (CSS selectors, default `[]`, MET-008 / 04 § 12)`.

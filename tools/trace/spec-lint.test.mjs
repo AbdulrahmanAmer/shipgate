@@ -46,7 +46,7 @@ const cases = [
   ["wp-graph: later phase", (d) => edit(d, "BUILD_MAP.md", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000 |", "| WP-201 | `sg-core`: shared types from spec 01 § 4 and 04 § 1 (incl. finding parts 04 § 1.8, failure classes 04 § 9.1) | WP-000, WP-601 |"), (r) => r.errors.some((e) => e.check === "wp-graph" && e.msg.includes("later phase"))],
   ["ruleset-unnamed", (d) => edit(d, "spec/packs/ux.md", "Pages matching `chromeVariants` are excluded.", "Pages matching `chromeVariants` are excluded. Limits come from the ruleset maximums for each kind."), (r) => r.warnings.some((w) => w.check === "ruleset-unnamed" && w.msg.includes("ux.md"))],
   ["wp-owns-nothing", (d) => edit(d, "BUILD_MAP.md", "| WP-404 | MySQL embedded lifecycle (04 § 4.2, 03 § 3.4; same template/reset contract as WP-403) |", "| WP-404 | MySQL embedded lifecycle |"), (r) => r.errors.some((e) => e.check === "wp-owns-nothing" && e.msg.startsWith("WP-404"))],
-  ["stranded browser-only part", (d) => edit(d, "trace/ownership.tsv", "MET-011\tpart:dead-anchor\tWP-608", "#moved"), (r) => r.errors.some((e) => e.check === "ownership" && e.msg.includes("MET-011 part dead-anchor"))],
+  ["stranded browser-only part", (d) => edit(d, "trace/ownership.tsv", "MET-011\tpart:dead-anchor\tWP-608", "#moved"), (r) => r.errors.some((e) => (e.check === "ownership" && e.msg.includes("MET-011 part dead-anchor")) || (e.check === "channel-infra" && e.msg.startsWith("MET-011 channel browser")))],
   ["section-unowned", (d) => edit(d, "BUILD_MAP.md", "| 05 § 4 MCP server | WP-804 |", "| MCP server | WP-804 |"), (r) => r.errors.some((w) => w.check === "section-unowned" && w.msg.startsWith("05 § 4 "))],
 ];
 

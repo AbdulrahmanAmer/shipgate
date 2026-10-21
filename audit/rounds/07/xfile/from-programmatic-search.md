@@ -98,3 +98,18 @@ New: `User agents come from the pinned ruleset \`search-agents.json\` (§ 2 shap
 - consistency#65 — answer-engines AEO-009 `pdf` already says it owns title equality; SE-006 `unpaired` now mirrors it.
 - consistency#133 — answer-engines AEO-001 already states SE-103 `preview` owns `AEO-001#large-preview`; SE-103 now mirrors it.
 - consistency#132 (04 § 6.3 part) — already reads "At the start of the first of G4 and G6 that runs".
+
+---
+
+## Pass B additions (programmatic-search, round 07)
+
+### X1 withdrawn — superseded by 04 § 15 *Page locale* (passB-notes #1)
+Do not apply X1 above. programmatic § 1.1 *Per-locale word lists*, DAT-012 `advice`, SE-103 `clickbait` and SE-121 now cite "04 § 15 *Page locale*" for lookup and the no-entry outcome; the `ll-CC` → `ll` → `en` text is gone from both packs.
+
+### X11 — spec/03-formats.md § 14 *Merchant feed* owner cite (serves consistency#49; xfile-formats-integrations#25)
+The reassignment of a finding whose fix lies outside the Builder's paths is 04 § 14 ("A finding whose fix lies outside the Builder's owned paths (`fixLocation`) is reassigned to owner `operator`."); 04 § 15 *Owners of BLOCKED gates* is about gate owners. SE-113/SE-114 keep "04 § 14".
+Old: `reassigned to `operator` only when the path lies outside the Builder's `writeScope` (04 § 15 *Owners*; SE-113)`
+New: `reassigned to `operator` only when the path lies outside the Builder's `writeScope` (04 § 14; SE-113)`
+
+### X12 — spec/03-formats.md § 14 *Business facts* `legal` shape (serves consistency#29; xfile-privacy-a11y-perf#X9)
+search-engines LOC-001 part `address` now also accepts `legal.registeredOffice` and `legal.host.address` and names the EU address `manufacturers[].euResponsible.address`. Those two `legal` keys must exist in the 03 § 14 shape (privacy-a11y-perf X4 requests them). In 03:454, old: `` `manufacturers[].address` and `euResponsible.address` are compared the same way (PRV-025). `` → new: `` `manufacturers[].address`, `manufacturers[].euResponsible.address`, `legal.registeredOffice` and `legal.host.address` are compared the same way (PRV-025, PRV-030). ``
