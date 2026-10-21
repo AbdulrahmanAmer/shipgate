@@ -22,4 +22,9 @@ Stage 0 (spec audit loop, `audit/README.md`). No build work until a round is GO.
 - Round 07: 436 findings (concreteness 274, consistency 135, coverage 27) → 368 fixed, 65 adapted, 1 added, 2 rejected; 0 open. spec v7.6.0, commit 37abe6c. Gates: spec-lint 0/0, spec-lint.test 18/18, trace-check.test 20/20. Done-gate hardened (consistency #1–#10).
 - Weekly usage 8% before round 08. Round 08 audits (same 11 agents) are the last spend before the 10% wall; results are NOT fixed tonight — they're the data for the morning opinion on loop type.
 - **Operator (at the 10% wall, ~23:50): finish round 08 — apply its fixes (pass A/B) — then give the data-based opinion on loop type.** No round 09 audits without asking.
+
+## 2026-10-22 ~01:00 — round 08 CLOSED; opinion given to the Operator
+- Round 08: 387 findings (concreteness 245, consistency 113, coverage 29) → 277 fixed, 109 adapted, 1 rejected; 0 open. spec v7.7.0. Gates: spec-lint 0/0; self-tests spec-lint 19/19, wp-card 7/7, merge-gate 8/8, stop-gate 11/11, trace-check 28/28. Done-gate redesigned (self-produced evidence + merge-gate). Weekly usage 13%.
+- Trend: concreteness 404 → 274 → 245; consistency 135 → 113 (Blockers 4 → 11); coverage ~27–29 new rules per round. ~4% weekly per full round.
+- Recommendation given: stop whole-spec audit rounds; switch to build-first, fixture-first per WP (the fixture author is the concreteness check for exactly what's being built); one Opus escape-path audit per phase; coverage gaps become owned spec changes. **Awaiting Operator decision.**
 - Also to do before build: rewrite `ORCHESTRATOR_PROMPT.md` + `CLAUDE.md` (stale: wrong repo path `D:\shipgate`, "paste in new session", API financial note) and add the build-completeness gates (anti-skip) to BUILD_MAP § 4.
