@@ -11,7 +11,7 @@
   "contracts": [
     { "service": "api", "type": "openapi", "path": "quality/contracts/api.openapi.yaml" },
     { "service": "web", "type": "openapi", "path": "quality/contracts/web-routes.openapi.yaml" }
-    // also: "graphql" (SDL), "trpc"/"rpc" (generated schema), "jsonschema"
+    // also: "graphql" (SDL; optional "endpoint": path served, default "/graphql", SEC-060), "trpc"/"rpc" (generated schema), "jsonschema"
     // optional per entry (no default): "clientTypes": { "command": "pnpm gen:api-types", "output": "packages/api-client/types.ts" } (API-008)
   ],
   "examples": "quality/contracts/examples/",        // request/expectation files (03 § 14), Operator-owned

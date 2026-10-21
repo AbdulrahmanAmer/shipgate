@@ -28,7 +28,6 @@ AGT-003	*	WP-304	explicit
 AGT-004	*	WP-304	explicit
 AGT-005	*	WP-801	needs _main routes.jsonl from baseline capture
 AGT-006	*	WP-304	resolved
-AGT-006	channel:html	WP-410	resolved
 AGT-007	*	WP-304	resolved
 AGT-007	channel:hook	WP-306	resolved
 AGT-008	*	WP-304	resolved
@@ -94,6 +93,7 @@ AEO-006	*	WP-412	family-default
 AEO-007	*	WP-412	family-default
 AEO-008	*	WP-412	family-default
 AEO-009	*	WP-412	family-default
+AEO-009	channel:browser	WP-608	R06: rendered-area check
 AEO-010	*	WP-412	family-default
 AEO-011	*	WP-412	family-default
 AEO-012	*	WP-801	_main routes.jsonl comparison
@@ -251,7 +251,7 @@ KW-003	*	WP-505	stop words/stemmer data from WP-104
 CNT-012	*	WP-505	explicit
 ROL-001	*	WP-506	family-default
 ROL-002	*	WP-506	family-default
-ROL-003	*	WP-104	explicit
+ROL-003	*	WP-506	R06: was WP-104 (data source only)
 ROL-004	*	WP-506	family-default
 CRW-001	*	WP-506	resolved
 CRW-001	channel:edge	WP-414	resolved
@@ -290,7 +290,7 @@ SE-008	*	WP-414	resolved
 SE-009	*	WP-411	explicit
 SE-101	*	WP-411	family-default
 SE-102	*	WP-411	family-default
-SE-103	*	WP-104	explicit
+SE-103	*	WP-411	R06: was WP-104 (clickbait patterns sourced there)
 SE-104	*	WP-411	family-default
 SE-105	*	WP-411	family-default
 SE-106	*	WP-411	resolved
@@ -298,13 +298,14 @@ SE-106	channel:browser	WP-608	resolved
 SE-107	*	WP-411	family-default
 SE-108	*	WP-411	family-default
 SE-109	*	WP-411	family-default
+SE-109	channel:browser	WP-608	R06: rendered anonymous Chrome
 SE-110	*	WP-411	family-default
 SE-111	*	WP-411	explicit
 SE-112	*	WP-411	explicit
 SE-113	*	WP-411	explicit
 SE-114	*	WP-411	explicit
 SE-120	*	WP-411	family-default
-SE-121	*	WP-104	explicit
+SE-121	*	WP-411	R06: was WP-104 (stop words sourced there)
 SE-122	*	WP-608	resolved
 SE-123	*	WP-608	resolved
 SE-124	*	WP-608	resolved
@@ -325,7 +326,7 @@ SE-401	*	WP-608	resolved
 SE-402	*	WP-411	family-default
 SE-403	*	WP-411	family-default
 SE-404	*	WP-411	family-default
-SE-501	*	WP-104	explicit
+SE-501	*	WP-411	R06: was WP-104 (China-blocked host list sourced there)
 SE-502	*	WP-411	family-default
 SE-503	*	WP-411	family-default
 SE-504	*	WP-411	family-default
@@ -338,6 +339,7 @@ LOC-003	*	WP-411	explicit
 SEC-001	*	WP-413	explicit
 SEC-002	*	WP-413	explicit
 SEC-003	*	WP-413	family-default
+SEC-003	channel:browser	WP-607	R06: part login-replay needs flows
 SEC-004	*	WP-413	explicit
 SEC-005	*	WP-409	explicit
 SEC-006	*	WP-413	explicit
@@ -472,6 +474,7 @@ URL-003	*	WP-410	family-default
 URL-004	*	WP-410	family-default
 URL-005	*	WP-410	family-default
 URL-006	*	WP-410	family-default
+URL-006	channel:browser	WP-608	R06: part infinite-scroll
 URL-007	*	WP-410	explicit
 URL-008	*	WP-410	family-default
 URL-009	*	WP-410	family-default
@@ -505,7 +508,7 @@ SCH-008	*	WP-410	family-default
 SCH-009	*	WP-410	family-default
 SCH-010	*	WP-410	family-default
 SCH-011	*	WP-410	explicit
-LNK-001	*	WP-410	family-default
+LNK-001	*	WP-608	R06: now browser-only (control click probe)
 LNK-002	*	WP-410	family-default
 LNK-003	*	WP-410	family-default
 LNK-004	*	WP-410	family-default
@@ -552,4 +555,8 @@ TRS-002	*	WP-410	explicit
 TRS-003	*	WP-410	explicit
 TRS-004	*	WP-410	explicit
 KW-001	*	WP-410	family-default
-KW-002	*	WP-104	explicit
+KW-002	*	WP-410	R06: was WP-104 (stop words/stemmer sourced there)
+UX-022	*	WP-414	R06 new: edge-pass check of quality/approvals/launch-forms.json
+REF-014	*	WP-801	R06 new: remote-baseline image URLs
+SEC-067	*	WP-607	R06 new: email ownership before trust
+CQ-010	*	WP-501	R06 new: copied third-party text; fetch recording WP-306/WP-803

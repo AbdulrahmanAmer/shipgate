@@ -1,11 +1,11 @@
 # shipgate — System Specification (index)
 
 ```yaml
-spec_version: 7.4.0
+spec_version: 7.5.0
 status: source of truth for the tool build
 working_name: shipgate        # rename freely; nothing depends on the name
 date: 2026-10-21
-history: v3 (Gemini draft) → v4.x (merged reviews: Claude, GPT, DeepSeek, Grok) → v5 (single-file SEO spec) → v6 (any product, any stack; core + adapters + packs) → v7 (independent gap audit resolved: formats, algorithms, integrations, new packs) → v7.1 (verification audit resolved: verdict engine, enforcement chain, remote mode, missing schemas, decidability; answer-engines pack) → v7.2 (multi-engine search-engines pack, programmatic AI-text/rollout/crawl rules, readiness audit resolved; BUILD_MAP and orchestrator prompt added) → v7.3 (final readiness audits: GO; two-step verdict so narrow runs can't hide FAIL; reduced mode only via signed policy; handoff conditions; per-part severities in keys; section-aware skeleton identity; CI detection; operational-only precedence; test-keys signing; full WP ownership) → v7.4 (outcome coverage audits: launch and re-platforming checks, placeholder/business-fact oracles, ux pack, local and ecommerce search, trust pages, AI agents, OWASP 2025 probes, supply chain, Consent Mode v2 / CCPA 2026 / EAA / AI Act, WCAG 2.2 gaps, verifier-evasion detection, new-project lifecycle, host-calibrated budgets)
+history: v3 (Gemini draft) → v4.x (merged reviews: Claude, GPT, DeepSeek, Grok) → v5 (single-file SEO spec) → v6 (any product, any stack; core + adapters + packs) → v7 (independent gap audit resolved: formats, algorithms, integrations, new packs) → v7.1 (verification audit resolved: verdict engine, enforcement chain, remote mode, missing schemas, decidability; answer-engines pack) → v7.2 (multi-engine search-engines pack, programmatic AI-text/rollout/crawl rules, readiness audit resolved; BUILD_MAP and orchestrator prompt added) → v7.3 (final readiness audits: GO; two-step verdict so narrow runs can't hide FAIL; reduced mode only via signed policy; handoff conditions; per-part severities in keys; section-aware skeleton identity; CI detection; operational-only precedence; test-keys signing; full WP ownership) → v7.4 (outcome coverage audits: launch and re-platforming checks, placeholder/business-fact oracles, ux pack, local and ecommerce search, trust pages, AI agents, OWASP 2025 probes, supply chain, Consent Mode v2 / CCPA 2026 / EAA / AI Act, WCAG 2.2 gaps, verifier-evasion detection, new-project lifecycle, host-calibrated budgets) → v7.5 (round-06 concreteness audit: 404 findings fixed; ownership ledger, spec-lint, completeness contract)
 ```
 
 ## What shipgate is

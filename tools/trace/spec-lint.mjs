@@ -89,7 +89,7 @@ for (const [n, locs] of rulesetRefs) {
 
 // 4b. "ruleset" mentions that name no file ("ruleset maximums", "from the ruleset"), and `x.json`
 // names inside packs that aren't sourced and aren't project/product files.
-const PRODUCT_FILES = /^(package|package-lock|tsconfig|composer|vercel|netlify|firebase|settings|manifest|business|ownership|redirects|routes|expected|report|review|refactor|dependencies|waiver-requests|counts|cycles|attempts|handoff|lock|debt|policy|shipgate|toolchain|baseline|inventory|flows|seed|approvals|_login|deno|bun|app|angular|nest-cli|turbo|nx|lerna|pnpm-lock|yarn|bower|project|launch|devcontainer|renovate|dependabot|sarif|junit|summary|verify|state|trust|keys|licence|license|feed|schema)$/;
+const PRODUCT_FILES = /^(budgets|a11y|security|package|package-lock|tsconfig|composer|vercel|netlify|firebase|settings|manifest|business|ownership|redirects|routes|expected|report|review|refactor|dependencies|waiver-requests|counts|cycles|attempts|handoff|lock|debt|policy|shipgate|toolchain|baseline|inventory|flows|seed|approvals|_login|deno|bun|app|angular|nest-cli|turbo|nx|lerna|pnpm-lock|yarn|bower|project|launch|devcontainer|renovate|dependabot|sarif|junit|summary|verify|state|trust|keys|licence|license|feed|schema)$/;
 for (const f of specFiles) {
   read(f).split(/\r?\n/).forEach((line, i) => {
     for (const m of line.matchAll(/\b(?:the |a |its )?ruleset(?:'s)?\b(?!\s+(?:per-locale\s+)?`)(?!\s*\(`)([^.;:)]{0,40})/gi)) {
@@ -141,6 +141,8 @@ else {
   for (const o of own) {
     if (!wps.has(o.wp)) err("ownership", `ownership.tsv:${o.line} ${o.id} → ${o.wp}: no such work package in BUILD_MAP`);
     if (!defined.has(o.id)) err("ownership", `ownership.tsv:${o.line} ${o.id} is not a defined requirement`);
+    // Phase 0/1 WPs bootstrap and gather data; they implement no rules.
+    if (/^WP-(000|10[0-9])$/.test(o.wp) && !o.id.startsWith("TR-")) err("ownership", `ownership.tsv:${o.line} ${o.id} → ${o.wp}: phase 0/1 work packages implement no rules`);
     const key = `${o.id}\t${o.part}`;
     if (byId.has(key)) err("ownership", `${o.id} part ${o.part} owned twice (ownership.tsv:${byId.get(key).line} and :${o.line})`);
     byId.set(key, o);

@@ -41,7 +41,10 @@ for (const f of resolutionFiles) {
     if (section && line.trim() && !/^\|\s*-/.test(line)) { sections[section].push(`${f}: ${line}`); continue; }
     const m = line.match(/^\|\s*`?([a-z0-9-]+?)(?:\.md)?`?\s*#\s*([0-9]+)\s*\|(.*)$/i);
     if (!m) continue;
-    const key = `${m[1].replace(/^audit\/rounds\/[0-9]+\//, "")}#${m[2]}`;
+    let stem = m[1].replace(/^audit\/rounds\/[0-9]+\//, "");
+    // a bare "concreteness#3" means this fixer group's own findings file
+    if (/^(concreteness|consistency|coverage)$/.test(stem)) stem = `${stem}-${f.replace(/^resolution-(.*)-[AB]\.md$/, "$1")}`;
+    const key = `${stem}#${m[2]}`;
     const o = (m[3].match(OUTCOME) || [, "unknown"])[1].toLowerCase();
     if (!outcomes.has(key)) outcomes.set(key, []);
     outcomes.get(key).push({ outcome: o, file: f });

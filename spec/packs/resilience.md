@@ -7,7 +7,7 @@
 ## 1. Policy section
 
 ```jsonc
-"resilience": {                                // HTTP dependencies = hosts[] entries with dependency: true; databases = verifyEnv.databases
+"resilience": {                                // HTTP dependencies = hosts[] entries whose purposes contain "dependency" (03 § 3.3); databases = verifyEnv.databases
   "timeouts": { "upstreamMs": 5000, "pageMs": 8000 },
   "degradable": [ { "dependency": "search.internal", "routes": "web:/blog/**" } ]   // pages that must still render without it
 }

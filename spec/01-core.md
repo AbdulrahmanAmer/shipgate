@@ -159,7 +159,7 @@ Policy shape, defaults and every key: `03-formats.md` § 3. Core validation:
 | `verify --changed` | during work | `PARTIAL` at best |
 | `verify` | before handoff; CI | `PASS` / `FAIL` / `BLOCKED` |
 | `baseline`, `verify --against` | refactors | as above |
-| Operator commands | `init`, `lock`, `debt record\|add`, `waiver add`, `override add`, `keys`, `hooks install`, `baseline`, `codegen`, `rollout release`, `break-glass`, `approve pages` (`inventory` is licence-free and may be run by anyone) | — |
+| Operator commands | exactly the commands denied by 05 § 3.2 "shipgate Operator verbs" (the single definition; incl. `debt rotate`, `conformance`, `migrate`). Its exceptions `init --draft`, `migrate --check`, `codegen --check` and `baseline --ci` (CI detection required, 04 § 15), and `keys show` and `inventory`, which are not Operator verbs, may be run by anyone | — |
 
 Full CLI: `05-integrations.md` § 1. Time budgets and what each mode runs: `04-algorithms.md` § 8.
 
