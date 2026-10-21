@@ -113,6 +113,7 @@ Phases run in order; work packages inside a phase run in parallel when their dep
   - `rating-widget-markers.json`, `generic-green-claims.json`, `testimonial-markers.json`, `payment-amounts.json`, `chrome-state-classes`, `password-reset-paths`, `user-tables`, `password-columns`, `default-emails`.
 - **Round-3 data:** `publishable-keys.json`, `trust-marks.json` (with perceptual hashes), `logo-wall-headings`, `safety-info-labels`, `digital-product-types`, `vat-phrases`, `renewal-terms-phrases`.
 - **Round-4 data:** `countdown-markers`, `stock-count-phrases`, `social-proof-widgets`, `affiliate-disclosure-phrases`, `payment-test-markers.json`, `consent-models.json`, required legal pages for `kr-pipa`/`cn-pipl`/`br-lgpd`/`ca-pipeda`/`jp-appi`, CI hardening checks per provider.
+- **Round-6 data:** `ai-addressed-phrases.json` per locale (AEO-014), `sct-labels` per locale (PRV-022 `jp-sct`), required legal pages for `jp-sct` (`commercialTransactions` with `ecommerce`).
 - **Public Suffix List snapshot** (SEC-059, alias-host resolution), refreshed by `fetch`.
 - **Round-2 toolchain (WP-102):** Firebase emulator suite (needs a JRE; `skipped(no-emulator)` where unavailable), a Firebase rules parser, an XMP/C2PA reader.
 - **Round-2 content data:** `social-hosts.json`, `placeholder-handles.json`, `scaffold-routes.json`, `evergreen-words.json`, `comparison-patterns.json`, `agentic-feeds.json`, `model-hosts.json`.
@@ -154,12 +155,12 @@ Phases run in order; work packages inside a phase run in parallel when their dep
 | WP-406 | Egress proxy + SMTP sink + fault injection (04 § 4.5–4.6) | WP-405, WP-403 |
 | WP-407 | `sg-http` crawler, sampling, route groups, site graph (04 § 10) | WP-405, WP-408 |
 | WP-408 | `sg-html`: DOM parsing, leak scan, soft-404, parse-back, error-leak patterns (04 § 11–12) | WP-201 |
-| WP-409 | G3 build + artifact scan; BLD-004/005; SEC-005 (all parts: build artifacts, plus the same classification and `provider-pattern` scan applied to HTML and API responses in G4) | WP-402, WP-304 |
+| WP-409 | G3 build + artifact scan; BLD-004/005; SEC-005 (all parts: build artifacts, plus the same classification and `provider-pattern` scan applied to HTML and API responses in G4) | WP-402, WP-304, WP-407, WP-408 |
 | WP-415 | **Runtime orchestration**: G4/G6 start order exactly as 04 § 4.2 (databases → platform prep → migrate → seed → SMTP/egress → front proxies → services → health → logins → snapshot), read-only stage, mutating-stage scheduler (G4 write-probe families → job runs → faults → G6 flows + keyboard replays → control click probe → load, with resets; 04 § 4.2 step 8), egress additions (exact-port `NO_PROXY`, SSRF canaries, `*.shipgate.test`, model-host stubs; 04 § 4.6), probe Host passthrough (04 § 2), missing-variable start probe and graceful stop (04 § 4.1), statement logging for DB-010, "no side effect" diff (04 § 15), JOB-002 execution stage, verdict scope (`SKIPPED(scope)`, 04 § 1.6) and handoffs (04 § 1.9), preview-pass restart/rebuild, `verify --changed` scoping (changed file → routes/flows via route→file map and import graph) | WP-403, WP-405, WP-406, WP-407, WP-409, WP-303 |
 | WP-410 (L) | Pack web-delivery, HTTP/HTML parts: (a) RTE + URL (incl. RTE-015 2 MB limit, URL-012 syndication); (b) MET + SCH (incl. MET-011 placeholders, MET-012/013, SCH-011); (c) LNK + IDX + I18 + KW + WCF + CQ-001, CQ-003..007, CQ-009 + TRS-001..004 + WCF-008 (incl. I18-009 translation completeness, IDX-015 feeds, URL-013 versioned docs, MET-011 `social`/`scaffold-route` parts, URL-007 `slug-quality`). CQ-002 and CQ-008 go to WP-501; IDX-011, URL-011, LNK-006, LNK-007 and the edge parts go to WP-414; IDX-016 and the browser parts of MET-011/MET-012 go to WP-608; RTE-001's rendered-parity part to WP-608 | WP-407, WP-408, WP-406, WP-409, WP-415 |
 | WP-411 (L) | Pack search-engines, HTTP/HTML parts: (a) SE-0xx + Bing/Yandex/Naver/Baidu/Seznam/Apple, (b) Google features SE-1xx incl. feature-table evaluation, facets, ecommerce SE-111..114, SE-126/127, SE-009; (c) local search LOC-001..003 against business facts. SE-122, SE-123, SE-124 and SE-106's viewport part move to WP-608; SE-008 to WP-414 | WP-410, WP-104 |
-| WP-412 | Pack answer-engines (AEO-*) | WP-410, WP-414 |
-| WP-413 (L) | Pack security, non-session parts (their edge parts, incl. SEC-015 and the edge parts of SEC-016/034, run through WP-414's edge pass): (a) SEC-001 (detector from WP-303), SEC-002, SEC-006, SEC-014, SEC-015, SEC-060, SEC-061, and the HTTP side (headers incl. the `isolation`/`trusted-types` parts, CORS, open redirect, error leakage, mixed content, source maps, SEC-004 egress); (b) exposure and injection: SEC-016, SEC-034, SEC-035, SEC-045, SEC-046 (SSRF canaries, 04 § 4.6), SEC-047 `reflected`; (c) WordPress SEC-070..073 | WP-407, WP-406, WP-303 |
+| WP-412 | Pack answer-engines (AEO-*; AEO-014 parts `ai-addressed` html side and `agent-parity`; its browser parts go to WP-608) | WP-410, WP-414 |
+| WP-413 (L) | Pack security, non-session parts (their edge parts, incl. SEC-015 and the edge parts of SEC-016/034, run through WP-414's edge pass): (a) SEC-001 (detector from WP-303), SEC-002, SEC-006, SEC-014, SEC-015, SEC-060, SEC-061, and the HTTP side (headers incl. the `isolation`/`trusted-types` parts, CORS, open redirect, error leakage, mixed content, source maps, SEC-004 egress); (b) exposure and injection: SEC-016, SEC-034, SEC-035, SEC-045, SEC-046 (SSRF canaries, 04 § 4.6), SEC-047 `reflected`; (c) WordPress SEC-070..073 | WP-407, WP-406, WP-303, WP-409 |
 | WP-414 | Preview pass and edge pass (G8): SE-008 and the edge parts of URL-002, SEC-010, PRF-008, MET-005 `fetchers` and IDX-005 `preview-edge`; production launch check IDX-011 (bounded GET), URL-011 alias hosts with wildcard resolution, SEC-056 TLS, LNK-006 (opt-in), LNK-007, SEC-058 edge part, SEC-059 subdomain takeover, SEC-065 production test-mode payments, the CFG-009 edge part (existing-site safety net; CFG-001..009 otherwise in WP-203); SEC-066 CI hardening review | WP-405, WP-409, WP-415 |
 
 ### Phase 5 — Content and programmatic
@@ -168,7 +169,7 @@ Phases run in order; work packages inside a phase run in parallel when their dep
 | WP-501 | `sg-content`: MinHash/LSH, exact duplicates (CNT-005, CQ-002), claims (04 § 11), swap similarity CQ-008 (04 § 15) | WP-408 |
 | WP-502 | `sg-programmatic` config and data: family config validation PCF-001..007 (03 § 3.5 required keys), field types, validation, quarantine, provenance, freshness, money/geo (DAT-001..012) | WP-203 |
 | WP-503 | Formatting (ICU4X, default formats 04 § 15), applyTemplate, inventory line schemas (03 § 13) + oracle, `inventory` command | WP-502 |
-| WP-504 | Eligibility, cardinality, tuples, relations, hubs/pagination, skeleton identity, long-text markup (TPL/CNT/PLK, TPL-007); "which rows each rule sees" (programmatic § 4-0). CNT-009's browser part moves to WP-608 | WP-503, WP-501 |
+| WP-504 | Eligibility, cardinality, tuples, relations, hubs/pagination, skeleton identity, long-text markup (TPL/CNT/PLK, TPL-007); "which rows each rule sees" (programmatic § 4-0). CNT-009's browser part moves to WP-608 | WP-503, WP-501, WP-303, WP-407 |
 | WP-505 | AI-text governance (DAT-013..016, aiText siblings, number detection), demand gating (DAT-017), KW-003, CNT-011/012 | WP-504 |
 | WP-506 | Rollout (ROL-*) + `rollout` command; crawl efficiency (CRW-*), SE-005 | WP-504, WP-205 |
 | WP-507 | Live mode snapshot + parse-back comparisons | WP-503, WP-408 |
@@ -185,21 +186,21 @@ Phases run in order; work packages inside a phase run in parallel when their dep
 | WP-606 (L) | Privacy pack: (a) PRV-001..010 + third-party interception policy (04 § 6.1); (b) PRV-011..020: Consent Mode v2, PII in URLs, CCPA/GPC, consent persistence, cookie policy, deletion/export, EAA statement, AI Act disclosure, session-replay leaks, children/age gate; (c) PRV-021..028: EU withdrawal function, required legal pages and imprint content, order-button wording, review/prior-price notices, GPSR product safety info, price transparency and drip pricing, auto-renewal disclosure, notice at collection; PRV-003 `server-side`; US state opt-outs | WP-601, WP-406, WP-602 |
 | WP-607 (L) | (a) Session security probes SEC-011 (session cookies incl. `host-prefix`), SEC-013, SEC-017..033 (incl. SEC-021 `override-headers`), SEC-036..039, SEC-047 `stored`, SEC-054/055, SEC-057 server functions, SEC-058 web cache deception, SEC-062, SEC-063 payment-page scripts, SEC-064 session lifetime and admin MFA; (b) payments/webhooks/realtime/storage SEC-040..044, SEC-048, SEC-049; (c) testing pack TST-* (incl. TST-010 with `cancel` part, TST-011), RTE-013 | WP-603, WP-415 |
 | WP-609 (L) | **ux pack** (spec/packs/ux.md): (a) UX-001 form outcomes with `expectEgress` (server and browser), UX-003/004 business facts; (b) UX-005/006 error pages and the control click probe, UX-012; (c) UX-007/008 cross-browser smoke and baseline features, UX-010 analytics and conversions; (d) UX-013..021: claims, testimonials and people, charged price, header/footer consistency, AI imagery, reset link, trust marks and logo walls, fake urgency/scarcity, affiliate disclosure. UX-009 visual collateral is in WP-801(b) | WP-602, WP-603, WP-406, WP-415 |
-| WP-608 | Browser-side parts of other packs: RTE-001 rendered parity, RTE-014 mobile check support, SE-106 viewport part, SE-122, SE-123, SE-124, SE-401, CNT-009 computed-style part, MET-011 `dead-anchor`, MET-012 lazy images, IDX-016; the AGT-011 comparison pass (04 § 2 item 6) | WP-601, WP-410, WP-411, WP-504, WP-414, WP-606, WP-607, WP-609 |
+| WP-608 | Browser-side parts of other packs: RTE-001 rendered parity, RTE-014 mobile check support, SE-106 viewport part, SE-122, SE-123, SE-124, SE-401, CNT-009 computed-style part, AEO-014 `hidden-text` and the hidden-element side of `ai-addressed`, MET-011 `dead-anchor`, MET-012 lazy images, IDX-016; the AGT-011 comparison pass (04 § 2 item 6) | WP-601, WP-410, WP-411, WP-504, WP-414, WP-606, WP-607, WP-609 |
 
 ### Phase 7 — Data, architecture, resilience, ops, platforms
 | WP | Goal | Depends |
 |---|---|---|
-| WP-701 (L) | (a) Contracts: OpenAPI/GraphQL loading, examples, released contracts, request generation and fuzzing (04 § 15), API-* (incl. API-009 races); (b) DB-* with SQL parser, DB-009 Supabase grants/functions, DB-010 query plans, DB-011 Firebase rules (+ emulator when available), DB-012 default credentials; (c) JOB-* | WP-403, WP-303, WP-415 |
-| WP-702 | Architecture pack (ARC-*, incl. ARC-013..015 design tokens, duplication, README) on the module graph, incl. strictness pointers | WP-303 |
-| WP-703 | Resilience (RES-*) and ops (OPS-*, incl. OPS-008..014 and PRF-020 field-data import: version pinning, env completeness and the missing-variable start probe, error-report PII, graceful stop) packs | WP-406, WP-415, WP-602 |
+| WP-701 (L) | (a) Contracts: OpenAPI/GraphQL loading, examples, released contracts, request generation and fuzzing (04 § 15), API-* (incl. API-009 races); (b) DB-* with SQL parser, DB-009 Supabase grants/functions, DB-010 query plans, DB-011 Firebase rules (+ emulator when available), DB-012 default credentials; (c) JOB-* | WP-403, WP-303, WP-415, WP-602 |
+| WP-702 | Architecture pack (ARC-*, incl. ARC-013..015 design tokens, duplication, README) on the module graph, incl. strictness pointers | WP-303, WP-409, WP-705, WP-207 |
+| WP-703 | Resilience (RES-*) and ops (OPS-*, incl. OPS-008..014 and PRF-020 field-data import: version pinning, env completeness and the missing-variable start probe, error-report PII, graceful stop) packs | WP-406, WP-415, WP-602, WP-414 |
 | WP-704 | Supabase addon: schema prep DDL, managed PostgREST/Auth, gateway, external fallback (04 § 4.4) | WP-403, WP-405, WP-102 |
 | WP-705 | Dependencies: OSV offline scan, licences, npm deprecation snapshot (SEC-051/052, ARC-007, AGT-009), SEC-053 supply chain (lockfile, registry, publish age from the registry snapshot, typosquats, install scripts) | WP-401, WP-303 |
 
 ### Phase 8 — Refactor, adoption, integrations
 | WP | Goal | Depends |
 |---|---|---|
-| WP-801 (L) | (a) `sg-baseline` capture/compare and normalisers; (b) visual diff and UX-009 visual collateral; (c) G7 + refactor pack incl. REF-011/012 and `redirects.jsonl`, implied `--against` from `refactor.json` (04 § 1.6); (d) `baseline --from-remote` (writes `refactor.json`), REF-010 re-platforming (legacy URLs, `depth` and `old-origin` parts; edge parts via WP-414) and REF-013 service worker (`sw-cache` uses WP-607's logout) | WP-602, WP-410, WP-414, WP-607 |
+| WP-801 (L) | (a) `sg-baseline` capture/compare and normalisers; (b) visual diff and UX-009 visual collateral; (c) G7 + refactor pack incl. REF-011/012 and `redirects.jsonl`, implied `--against` from `refactor.json` (04 § 1.6); (d) `baseline --from-remote` (writes `refactor.json`), REF-010 re-platforming (legacy URLs, `depth` and `old-origin` parts; edge parts via WP-414) and REF-013 service worker (`sw-cache` uses WP-607's logout) | WP-602, WP-410, WP-414, WP-607, WP-701, WP-412 |
 | WP-802 | `init` (05 § 2), `init --new` with kind presets and templates (05 § 2.1), `verify --adopt`, `debt record\|add\|rotate\|show` | WP-205, WP-410, WP-307, WP-801 |
 | WP-803 | Hosts: Codex, Cursor, OpenCode (generated plugin), Antigravity, git hooks; role-aware scopes | WP-306, WP-101 |
 | WP-804 | MCP server (`rmcp`) with async verify jobs | WP-308 |
@@ -227,6 +228,33 @@ Phases run in order; work packages inside a phase run in parallel when their dep
 |---|---|---|
 | WP-1101 | Run `init` + `verify --adopt` on **copies** of real projects. The passphrase steps (`keys init`, `lock`, `debt record`) are Operator actions: the orchestrator prepares them and asks for them all at once. (e.g. Aleef, GainLev OS, OmniSkipX, a Revenue Driven site, a plain HTML site); record false positives; fix or demote rules | Phase 10 |
 | WP-1102 | Close-out: every launch-stable rule passes its corpus; all hosts verified; release candidate built and signed (or signing blocked only on Operator-held certificates) | WP-1101 |
+
+### Section ownership (spec sections that no rule ID carries)
+Rule IDs are owned in `trace/ownership.tsv`. The sections below define behaviour without rule IDs; the listed WP builds it and its card cites the section. `tools/trace/spec-lint.mjs` fails a section that no WP cites.
+
+| Section | WP |
+|---|---|
+| 01 § 1 Principles, 01 § 2 Scope, 01 § 2.1 Surfaces, 01 § 3 Vocabulary | every WP card (preamble) |
+| 01 § 5.1 Precedence, 01 § 5.2 Ownership | WP-206 (`owns` metadata), WP-207 (precedence in the verdict) |
+| 01 § 5.3 Signed lock, 01 § 5.4 Waivers and overrides, 01 § 5.5 Debt | WP-205; commands in WP-805, WP-802 |
+| 01 § 6 Policy and environment, 01 § 6.1 Tool requirements | WP-203; TR-00x rows in `trace/ownership.tsv` |
+| 01 § 7 Modes, 01 § 8 Pipeline, 01 § 10 Repair loop and roles, 01 § 10.1 Repair loop | WP-207 (modes, gates, attempts), WP-308 (`check` modes) |
+| 01 § 10.2 Roles | WP-306, WP-803 (role-aware hooks) |
+| 01 § 9 Agent conduct, 01 § 9.1 Project commands, 01 § 11 Tool requirements for agent use | WP-304, WP-409; TR-1xx rows in `trace/ownership.tsv` |
+| 02 § 1 Why adapters, 02 § 2 Coverage tiers, 02 § 3 What an adapter declares, 02 § 5 Built-in adapters, 02 § 6 Monorepos and platforms | WP-302; each adapter in WP-901..919 |
+| 02 § 4 Source analysis engines | WP-303 |
+| 02 § 7 Adding a stack | WP-805 (`conformance --adapter`), WP-1003 (guide) |
+| 03 § 1 Conventions | WP-202 |
+| 03 § 4 Auth and test accounts | WP-403 (`header`/`command`), WP-603 (`flow`, TOTP) |
+| 03 § 9 Debt | WP-205 |
+| 03 § 11 Refactor declaration, 03 § 12 Baselines | WP-801 |
+| 03 § 15 Agent-side and state files, 03 § 17 Report | WP-207 |
+| 03 § 18 Rollout state and indexing exports | WP-506 |
+| 04 § 12 Parity, soft-404, leaks | WP-408 |
+| 05 § 4 MCP server | WP-804 |
+| 05 § 6 Versioning | WP-206 (embedded rulesets), WP-805 (`migrate`) |
+| 05 § 7 Distribution and releases | WP-1002 |
+| 05 § 8 Licensing, 05 § 9 Telemetry and privacy | WP-1001 |
 
 ### Launch-stable list
 The launch-stable list (spec 04 § 14) is decided at the end of the build, not guessed up front. It is every rule that:
