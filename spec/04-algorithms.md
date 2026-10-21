@@ -18,12 +18,14 @@
 | `content` | G5 |
 | `browser`, `db` (checks run after a G6 flow, e.g. PRV-016) | G6 |
 | `baseline` (against `--against`, refactor or remote baselines) | G7 |
-| `baseline` (against `_main`, e.g. AGT-005, AEO-012, CQ-006) | G5 when `_main` exists; otherwise `skipped(no-main)` with a warning |
+| Comparisons against `quality/baselines/_main/` (AGT-005, AEO-012, CQ-006, ARC-003, PRF-010, UX-009) | `baseline`-channel comparisons in G5; the others in the gate of the rule's own channel (ARC-003 G1, PRF-010 G3/G6, UX-009 G6). Only when `_main/` exists with a valid `ci` signature (03 § 12); otherwise that comparison is `skipped(no-main)` with a warning |
 | `edge` | G8 |
 | `review` | consumed in G9 |
 | `hook` | `check` modes only |
 
 A rule spanning several channels is evaluated in each corresponding gate; each finding carries the gate of the channel that produced it.
+
+**`db` and `contract` gates are fixed per detector:** a detector that reads only files (migrations, SQL, contract documents) runs in G2; one that reads a live response or database state after a G4 probe runs in G4; one that runs after a G6 flow runs in G6. A rule with a `db` or `contract` channel lists the gates its detectors use in metadata `gates` (03 § 5, e.g. `gates: [G2, G6]`); metadata validation rejects a `db` or `contract` rule without `gates`, and a detector that runs in a gate its rule doesn't list.
 
 ### 1.2 Per-rule outcome
 For each rule × service: `applied` | `notApplicable` (surfaces/packs/kinds exclude it) | `noAdapterSupport` | `skipped(reason)` (mode, profile, remote mode, missing optional input explicitly allowed by the rule's metadata) | `notConfigured(input)` (an input the rule requires is missing) | `blocked(reason)`. Recorded per rule in `report.coverage.rules`.
@@ -36,11 +38,14 @@ For each rule × service: `applied` | `notApplicable` (surfaces/packs/kinds excl
 `blocking` (stable, P0–P2, not debt, not waived, not overridden) | `debt` | `waived` | `experimental` (lifecycle experimental, or override `warn`) | `warning` (severity W) | `exhausted` (repair budget used up; still blocking for the verdict, but allows a handoff).
 
 ### 1.4 Gate status
-- `BLOCKED` — the gate could not run (tool error, toolchain missing, port/engine failure, licence, budget exhausted) or a prerequisite gate is `BLOCKED`.
-- `NOT_CONFIGURED` — a `†` rule in the gate is `notConfigured` (non-† `notConfigured` rules become warnings).
+The statuses are tested in the order listed; the first that holds is the gate's status. A gate's `blocking` and `exhausted` findings are reported, and count in § 1.6 step 3 and § 1.9, whatever its status.
+- `BLOCKED` — the gate could not run (tool error, toolchain missing, port/engine failure, licence, budget exhausted), a prerequisite gate is `BLOCKED`, a check in it is `blocked(prerequisite: …)` (§ 1.5), or a `†` rule in it is `blocked(reason)` (non-† `blocked` rules become warnings). Its owner is set by § 15 "Owners of BLOCKED gates".
+- `NOT_CONFIGURED` — a `†` rule in the gate is `notConfigured` (non-† `notConfigured` rules become warnings). Its owner is set by § 15 "Owners of BLOCKED gates".
 - `SKIPPED` — no applicable rules for this run (e.g. G7 without `--against`, G5 with no families, G3 for remote-only services, G8 without `previewUrl` and without `edge.production`).
 - `FAIL` — at least one `blocking` or `exhausted` finding.
 - `PASS` — otherwise.
+
+`noAdapterSupport` never changes a gate status; it lowers the service's earned coverage level (§ 1.6 "Coverage levels", CFG-007).
 
 ### 1.5 Prerequisites and stopping
 | Gate | Needs (not BLOCKED) |
@@ -55,13 +60,15 @@ For each rule × service: `applied` | `notApplicable` (surfaces/packs/kinds excl
 | G8 | G0 |
 | G9 | all others finished |
 
-A gate whose prerequisite is `FAIL` still runs; only `BLOCKED` stops dependents. The whole run stops early only on: CFG-001, CFG-008, licence, invalid lock signature. Build or start failures are findings (BLD-004/005), not run-stoppers; gates depending on a failed build are `BLOCKED(prerequisite)`.
+A gate whose prerequisite is `FAIL` still runs; only `BLOCKED` stops dependents. The whole run stops early only on: CFG-001, CFG-008, licence, invalid lock signature. Build or start failures are findings (BLD-004/005), not run-stoppers. Exception, per service: when service s has a BLD-004 finding, every G4–G7 check of s is `blocked(prerequisite: BLD-004)`; when s has a BLD-005 finding, its remaining G4 checks and its G5–G7 checks are `blocked(prerequisite: BLD-005)`. Other services' checks run. A gate with any such check is `BLOCKED(prerequisite)`, owner `builder`.
+
+**After an early stop**, every gate not finished is `BLOCKED(stopped: <cause>)` with owner `operator` (CFG-001, CFG-008, the licence and the lock signature are Operator inputs). The base verdict is `BLOCKED` (§ 1.6 step 2) and the handoff reason is `operator-owned`, subject to the builder-findings condition of § 1.9.
 
 ### 1.6 Verdict
 The verdict is computed in two steps, so a narrow run can never hide a failure.
 
 **Step 1: base verdict** over the gates that ran. Gates excluded by the run's scope (subset flags, `--changed` scoping, reduced mode) are `SKIPPED(scope)` and count neither as BLOCKED nor as PASS.
-1. If at least one gate is `BLOCKED` and every `BLOCKED` gate traces back (through prerequisites) to a builder-owned BLD-001..005 failure → `FAIL`. Breaking the build or startup never yields `BLOCKED` or a handoff.
+1. If at least one gate is `BLOCKED` and every `BLOCKED` gate has owner `builder` (§ 15: it traces back through prerequisites to a BLD-004/BLD-005 failure, or it is builder-owned `BLOCKED(budget)`, § 8) → `FAIL`. Breaking the build or startup, or making the app slower, never yields `BLOCKED` or a handoff.
 2. Otherwise → `BLOCKED` if any gate that ran is `BLOCKED`/`NOT_CONFIGURED`, any service is below `minCoverage`, or the lock is invalid.
 3. Otherwise → `FAIL` if any finding is `blocking` or `exhausted`.
 4. Otherwise → `PASS`.
@@ -75,7 +82,9 @@ The verdict is computed in two steps, so a narrow run can never hide a failure.
 - `verify --adopt`;
 - a reduced run;
 - a run with any timing rule `skipped(slow-host)` (TR-111);
-- a run where planned services are skipped (CFG-009, `project.stage: "new"`).
+- a run where planned services are skipped (CFG-009, `project.stage: "new"`);
+- a run with any P0 or P1 rule `skipped(incomplete-crawl)` (§ 10);
+- a run with any check `skipped(host-unsupported)` whose G8 is `SKIPPED` (§ 3).
 
 For a partial run, a base `PASS` becomes `PARTIAL`; a base `FAIL` or `BLOCKED` is reported unchanged. A `PARTIAL` verdict never produces a sealed PASS.
 
@@ -101,10 +110,14 @@ The Verifier writes a handoff (03 § 15, inside the sealed record) **only** in t
 | `exhausted` / `operator-owned` | Base verdict `FAIL`, and every blocking finding is `exhausted` or owned by `operator` |
 | `operator-owned` / `budget` | Base verdict `BLOCKED`, and every BLOCKED/NOT_CONFIGURED gate has owner `operator` (missing input, no baseline, licence, budget, coverage) |
 | `tool-error` | Base verdict `BLOCKED` caused by a shipgate tool error (exit 3) |
-| `reduced-environment` | Reduced run, or run with `skipped(slow-host)` timing rules, whose base verdict is `PASS` |
-| `planned` | New-project run (CFG-009) whose base verdict is `PASS` and whose only skipped scope is planned services; lets an agent stop between milestones of a project that isn't fully built yet |
+| `reduced-environment` | Reduced run, or run with `skipped(slow-host)` timing rules, whose base verdict is `PASS` and whose only partial causes (§ 1.6 step 2) are these two: not `check`, `--changed`, `--gate`, `--pack`, `--service` or `--adopt`, no planned services skipped, nothing `skipped(incomplete-crawl)` or `skipped(host-unsupported)` |
+| `planned` | New-project run (CFG-009) whose base verdict is `PASS` and whose only partial cause (§ 1.6 step 2) is skipped planned services; lets an agent stop between milestones of a project that isn't fully built yet |
 | `break-glass` | A valid Operator-signed break-glass for the tree hash (04 § 8.1) |
 | `unverified-stop` | Loop guard (04 § 8.1) |
+
+**Builder findings first.** A handoff of reason `operator-owned`, `budget`, `tool-error`, `reduced-environment` or `planned` is written only when no finding in a gate that ran is `blocking` with owner `builder` (`exhausted` findings don't count). Otherwise there is no handoff, and the stop message lists those findings.
+
+**`reason` value** (`handoff.json`, 03 § 15) for rows with two reasons: `exhausted` when at least one blocking finding is `exhausted`, else `operator-owned`; `budget` when any `BLOCKED` gate's reason is `budget`, else `operator-owned`.
 
 ---
 
@@ -113,7 +126,7 @@ The Verifier writes a handoff (03 § 15, inside the sealed record) **only** in t
 1. Each local service starts with `SITE_URL` (or the adapter's equivalent) = its origin, `DEPLOY_ENV=production`, `SHIPGATE_VERIFY=1`, `PORT={port}`.
 2. **One front proxy per origin host.** Services on the same host are mounted by path prefix (`services[].mount`, longest prefix wins; default `/`). The proxy terminates TLS with a per-run certificate for the host, issued by a per-run CA; forwards with `Host`, `X-Forwarded-Host`, `X-Forwarded-Proto: https`, `X-Forwarded-For: 203.0.113.10` (a TEST-NET address, so apps that trust loopback forwarding aren't fooled and SEC-021's `127.0.0.1` bypass probe stays meaningful). The exception is probe requests that shipgate itself marks with an internal header, which the proxy strips; for those it passes the probe's own `Host`, `X-Forwarded-Host` and the SEC-021 `override-headers` (including `X-Forwarded-For`/`X-Real-IP`) through unchanged (SEC-038 host-header poisoning, SEC-021 header-based bypass); applies host emulation (§ 3) and, for Supabase-style platforms, the gateway routes (§ 4.4).
 3. HTTP probes go to the proxies directly. **Browsers** reach origins through Playwright's `proxy` option pointing at shipgate's forward proxy, which routes origin hosts to their front proxies and everything else per the third-party policy (§ 6.1). TLS trust: Chromium with `--ignore-certificate-errors-spki-list=<CA SPKI>`; Firefox with a per-run profile importing the CA; WebKit with `ignoreHTTPSErrors`.
-4. **Preview pass:** a second **build and start** of each local service with `DEPLOY_ENV=preview` and `SHIPGATE_VERIFY` unset (adapters declare `envInlinedAtBuild`; when false, a restart without rebuild is enough). Probes a 20-URL sample per surface for IDX-005, the RTE-004 preview row and SEC-033. `static-html` services: host emulation only. Remote services: `SKIPPED`.
+4. **Preview pass:** a second **build and start** of each local service with `DEPLOY_ENV=preview` and `SHIPGATE_VERIFY` unset (adapters declare `envInlinedAtBuild`; when false, a restart without rebuild is enough). Probes the 20-URL sample per surface `preview-20` (§ 10 "Fixed-size samples") for IDX-005, the RTE-004 preview row and SEC-033. It runs as an extra stage on a database freshly restored from the template (§ 4.2 step 8), after the read-only G4 stage and before the first mutating stage; the next stage restarts the services in the main-pass environment. `static-html` services: host emulation only. Remote services: `SKIPPED`.
 5. **Edge pass (G8):** read-only GET/HEAD checks of rules that list the `edge` channel, against `previewUrl` (with `edge.bypassHeaderVar` for deployment protection), and, when `edge.production: true`, read-only checks against `production.origins`:
    - HEAD for host identity (apex↔www, http→https, HSTS, TLS, caching headers), for each `aliasHosts` entry (URL-011), and for the social preview fetcher user agents on the homepage (MET-005 `fetchers` part);
    - when `project.stage: "live"`, a **bounded GET launch check**: `robots.txt`, the sitemap index plus at most 10 child sitemaps, the homepage and 20 sitemap `<loc>` URLs sampled with the lock-digest PRNG (IDX-011). That is at most 33 requests per origin at 1 request per second, without cookies, using shipgate's own user agent; robots.txt is evaluated for the Googlebot and Bingbot groups.
@@ -125,8 +138,10 @@ The Verifier writes a handoff (03 § 15, inside the sealed record) **only** in t
    - SEC-059: DNS lookups and one GET per listed host;
    - REF-010 (and `old-origin`): the IDX-011 sample plus recorded `url-move` sources, at most 200 URLs per origin;
    - SEC-034 exposed-path probes: the ruleset path list only, no backup-copy variants against production;
-   - SE-008 and AEO-008 user-agent checks: homepage + 5 sampled URLs per listed agent;
-   - CRW-001 TTFB: the 20-URL sample;
+   - SE-008 and AEO-008 user-agent checks: homepage + the first 5 URLs of the edge sample per listed agent;
+   - CRW-001 TTFB: the edge sample (20 URLs);
+
+   The **edge sample** is the IDX-011 sample against `production.origins` and the `preview-20` sample (paths mapped onto `previewUrl`) against `previewUrl`; "first" means lowest position (§ 10 "Fixed-size samples"; for the IDX-011 sample, PRNG rank). When `project.stage` isn't `live`, the production edge sample is the `preview-20` sample's paths mapped onto each `production.origins` entry.
    - AEO-002 `sameAs` HEAD, OPS-006 DNS lookups and SEC-015 `security.txt`: one request each;
    - SEC-065: each recorded checkout route plus its same-origin scripts, at most 30 requests per origin;
    - CFG-009 safety net (stage `new`): `/` and the sitemap index, 2 requests.
@@ -134,7 +149,7 @@ The Verifier writes a handoff (03 § 15, inside the sealed record) **only** in t
    **Limits for every edge request:** 1 request per second per origin, GET/HEAD only, no cookies, and shipgate's user agent unless a rule tests a specific one.
 
    Without either: `SKIPPED` with the list of edge rules.
-6. **Comparison pass (AGT-011):** after G6, each local service restarts with exactly the main-pass environment except that `SHIPGATE_VERIFY` is unset, with no rebuild unless `envInlinedAtBuild`. PRV-001 (browser), SEC-010, RTE-013 and MET-011 (all parts except `dead-anchor`) re-run on a 10-URL sample per surface. A rule that passed in the main pass and fails here is an AGT-011 finding. Remote services: `SKIPPED`.
+6. **Comparison pass (AGT-011):** after G6, each local service restarts with exactly the main-pass environment except that `SHIPGATE_VERIFY` is unset, with no rebuild unless `envInlinedAtBuild`. PRV-001 (browser), SEC-010, RTE-013 and MET-011 (all parts except `dead-anchor`) re-run on the 10-URL sample per surface `comparison-10` (§ 10 "Fixed-size samples"). It runs as an extra stage on a database freshly restored from the template (§ 4.2 step 8), after the last G6 mutating-flow stage (including REF-013 `sw-cache`) and before the control click probe. A rule that passed in the main pass and fails here is an AGT-011 finding. Remote services: `SKIPPED`.
 
 ---
 
@@ -149,20 +164,20 @@ The Verifier writes a handoff (03 § 15, inside the sealed record) **only** in t
 | apache | `.htaccess` | `Redirect`, `RedirectMatch`, `RewriteRule` `[R=301\|302,L]`, `Header set` |
 | none | — | pass-through |
 
-Unsupported directives are listed; rules depending on them run only in G8.
+Each unsupported directive is a W finding (`host-directive-unsupported`, file:line). For every URL matched by its source pattern (every URL of the service when the pattern can't be evaluated), the G4 `http` checks of status, redirects and response headers (URL-\*, IDX-\*, RTE-004, and security-pack rules with failure class `missing-header` or `header-value`) are `skipped(host-unsupported)` and run in G8 against the same paths instead. When G8 is `SKIPPED`, any `skipped(host-unsupported)` makes the run partial (§ 1.6 step 2).
 
 ---
 
 ## 4. Processes, databases, platforms, fault injection
 
 ### 4.1 Process supervisor
-Windows Job Objects / Unix process groups; `shell` per command (`none` = direct exec, default); environment = user environment + policy `env` + shipgate variables; logs to `quality/out/logs/<service>.log`; readiness via `verifyEnv.health` with exponential backoff to `timeoutSec`; whole tree killed on exit; Windows long paths and `.cmd` shims handled.
+Windows Job Objects / Unix process groups; `shell` per command (`none` = direct exec, default); environment = user environment + policy `env` + shipgate variables; logs to `quality/out/logs/<service>.log`; readiness: poll `verifyEnv.health.<service>.url` every `intervalMs` until a 2xx/3xx response or `timeoutSec` (03 § 3.4); whole tree killed on exit; Windows long paths and `.cmd` shims handled.
 - **Graceful stop (OPS-012):** on Unix, SIGTERM, then wait up to `ops.shutdownSec`, then kill. On Windows, the tree is killed directly, so OPS-012 is `skipped(platform)`.
 - **Missing-variable start probe (OPS-010):** after G3, each service is started once more with one required env-module variable removed (chosen by the lock-digest PRNG). Expected outcome: a non-zero exit within `verifyEnv.health.timeoutSec`, with the variable's name in the output.
 
 ### 4.2 Database lifecycle
 1. Start each `embedded` database (PostgreSQL, MySQL, SQLite file) from the managed toolchain on a free port, temp data dir, current user (root containers: drop to an unprivileged user or require `external`).
-2. Detect required extensions from migrations; missing in the pinned build → `BLOCKED` listing them.
+2. Detect required extensions from migrations; missing in the pinned build → `BLOCKED` listing them (owner per § 15 "Owners of BLOCKED gates").
 3. Platform prep (addon adapters) before migrations (§ 4.4).
 4. Migrate: `data-api.db.migrations` (format + dir; overrides the adapter default) applied natively for `sql-dir`, otherwise the service's `migrate` command.
 5. Seed once.
@@ -170,7 +185,7 @@ Windows Job Objects / Unix process groups; `shell` per command (`none` = direct 
 7. Snapshot all databases as templates (Postgres `CREATE DATABASE … TEMPLATE`; MySQL dump/restore; SQLite file copy) — sessions stored in the database are part of the snapshot.
 8. **Mutating stages run one after another** in a fixed order. Every rule or part whose text says "(mutating stage, 04 § 4.2 step 8)" runs in one, and anything that writes, logs out or locks out an account must be marked that way. Probes in the read-only stage never change state.
 
-   The order: G4 write probes, one stage per probe family:
+   The order: G4 write probes; each rule or listed part below is its own stage, in the listed order (the bullets only group them):
    - SEC-007 non-GET probes, SEC-017, SEC-018, the SEC-023 write part, SEC-024, SEC-025, SEC-026, SEC-028, SEC-029, SEC-030, SEC-032;
    - SEC-036, SEC-038, SEC-039, SEC-041, SEC-045 `traversal` (non-GET) and `ssti`, SEC-046 replays, SEC-047 `stored`, SEC-048, SEC-049;
    - SEC-054, SEC-055, SEC-057 `behaviour`, SEC-062 `access`, SEC-064 `lifetime`, SEC-072;
@@ -178,7 +193,7 @@ Windows Job Objects / Unix process groups; `shell` per command (`none` = direct 
 
    Probes that replay requests recorded during flows (SEC-024, SEC-036, SEC-041, SEC-046, SEC-047 `stored`, SEC-057 `behaviour`) first run their source flow on the fresh instance to record its requests, then replay them in the same stage.
 
-   → job runs (JOB-002, one stage per job; OPS-013 overlapping runs) → fault injection → G6 mutating flows (each; then their keyboard replays for A11-019; PRV-016 deletion/export; PRV-021 withdrawal flows; A11-028 `on-input`; then REF-013 `sw-cache`, which revisits pages the flows saw) → the control click probe (UX-006: every inventoried control clicked once, with a reset after each page) → load.
+   → job runs (JOB-002, one stage per job; OPS-013 overlapping runs) → fault injection (§ 4.5, one stage per dependency × fault) → G6 mutating flows (each; then their keyboard replays for A11-019; PRV-016 deletion/export; PRV-021 withdrawal flows; A11-028 `on-input`; then REF-013 `sw-cache`, which revisits pages the flows saw) → the comparison pass (§ 2 step 6) → the control click probe (UX-006: every inventoried control clicked once, with a reset after each page) → load (PRF-011). The preview pass (§ 2 step 4) is a stage between the read-only stage and the first G4 write probe.
    Embedded databases log statements during G6 (`log_min_duration_statement = 0` on PostgreSQL, the general log on MySQL) so DB-010 can `EXPLAIN` the observed queries afterwards. Before each: stop services and platform processes → drop and recreate the fixed-name database from the template → start → health. Read-only stages run against the untouched instance before the first mutating stage. Sessions stay valid because they were captured before the snapshot (step 6); flows that log in again use their own login steps.
 9. Teardown deletes everything.
 
@@ -187,15 +202,15 @@ After step 6 every account in `auth.accounts` must have a working session; other
 
 ### 4.4 Supabase-style platforms (addon `supabase`)
 - **Schema prep, independent of binaries:** roles `anon`, `authenticated`, `service_role`, `authenticator`, `supabase_admin`; schemas `auth`, `storage`, `extensions`, `realtime`; the `auth` tables migrations commonly reference (`auth.users`, `auth.identities`, `auth.sessions`, `auth.refresh_tokens`), `storage.buckets`, `storage.objects`; functions `auth.uid()`, `auth.role()`, `auth.jwt()`, `auth.email()` reading `request.jwt.claims`; publication `supabase_realtime`; default grants. Shipped as versioned DDL in the toolchain.
-- **Runtime:** PostgREST (managed binary) always where available; Supabase Auth (managed binary) where builds exist for the OS. The front proxy provides the gateway: `/rest/v1/*` → PostgREST, `/auth/v1/*` → Auth, `apikey` header checked against generated anon/service keys; `SUPABASE_URL` = the gateway origin.
+- **Runtime:** PostgREST (managed binary) always where available; Supabase Auth (managed binary) where builds exist for the OS. The front proxy provides the gateway: `/rest/v1/*` → PostgREST, `/auth/v1/*` → Auth, `apikey` header checked against generated anon/service keys; `SUPABASE_URL` = the gateway origin. Where no Supabase Auth build exists for the OS, `/auth/v1/*` isn't emulated: the service needs `external` (CFG-004) to log in; without it, rules that need a logged-in session on that service are `notConfigured(supabase-auth)` (owner `operator`, § 15), and the report names the OS.
 - **Fallback (`external`):** a dedicated non-production project (CFG-004). Rules needing clones or writes against it (SEC-023 writes, SEC-024, SEC-028/029, fault injection, mutating flows) are `skipped(external-platform)` and listed; read probes still run.
 - Storage and Realtime runtimes are not emulated: SEC-043/044 behaviour parts need `external`, else `notConfigured`.
 
 ### 4.5 Fault injection (core G4 facility)
-Used by RTE-007 (owner of dependency-failure behaviour), RES-* and OPS-002. Dependencies come from the `hosts` registry (`purpose: "dependency"`) and databases. Faults: database stopped; HTTP dependency refused, delayed beyond `resilience.timeouts.upstreamMs`, or answering 5xx (egress proxy). Each fault runs on a fresh database instance (§ 4.2 step 8) against a 20-route sample per surface.
+Used by RTE-007 (owner of dependency-failure behaviour), RES-* and OPS-002. Dependencies come from the `hosts` registry (`purpose: "dependency"`) and databases. Faults: database stopped; HTTP dependency refused, delayed (the egress proxy holds the response for `resilience.timeouts.upstreamMs` + 5,000 ms), or answering 503 (egress proxy). Each dependency is faulted alone: one stage per dependency × fault, each on a fresh database instance (§ 4.2 step 8), against the 20-route sample per surface `fault-20` (§ 10 "Fixed-size samples").
 
 ### 4.6 SMTP sink and egress proxy
-Local SMTP on `{smtp.port}` captures all mail for flows and OPS checks. Server egress: services get `HTTP_PROXY`/`HTTPS_PROXY`/`NO_PROXY` and `NODE_USE_ENV_PROXY=1`. `NO_PROXY` lists only the exact `host:port` pairs of the verify environment's own databases, platform processes, SMTP sink and sibling services, never whole loopback or private ranges, so requests to other internal addresses stay observable. For SSRF probes (SEC-046), shipgate also runs canary listeners on loopback and on a private-range alias address. A probe counts as successful SSRF if a canary or the egress proxy receives a request carrying the probe's nonce, or if the response contains canary content.
+Local SMTP on `{smtp.port}` captures all mail for flows and OPS checks. Server egress: services get `HTTP_PROXY`/`HTTPS_PROXY`/`NO_PROXY` and `NODE_USE_ENV_PROXY=1`. `NO_PROXY` lists only the exact `host:port` pairs of the verify environment's own databases, platform processes, SMTP sink and sibling services, never whole loopback or private ranges, so requests to other internal addresses stay observable. For SSRF probes (SEC-046), shipgate also runs canary listeners on `127.0.0.1` and `[::1]` and on the loopback alias `10.255.255.1` (same `{canary}` port). When shipgate can't bind the alias (e.g. Windows without admin rights), only the egress-proxy and loopback canaries are used and the report says so. A probe counts as successful SSRF if a canary or the egress proxy receives a request carrying the probe's nonce, or if the response contains canary content.
 - The proxy itself serves `ssrf-redirect.shipgate.test`, which answers with a 302 to the loopback canary (the redirect-to-internal probe).
 - `*.shipgate.test` names never resolve outside the verify environment.
 - The proxy records every connection to a loopback, private or link-local address.
@@ -206,7 +221,7 @@ Local SMTP on `{smtp.port}` captures all mail for flows and OPS checks. Server e
 
 ## 5. Diff base and sensitive paths
 
-- **Hook sessions:** at the first `check` of an agent session, shipgate snapshots tracked files, untracked non-ignored files, and a fixed list of **ignored but sensitive paths** (`quality/verify.env`, `.claude/settings.local.json`, local variants of host hook configs, `.env*`) into the state dir. Diff rules compare against it. A changed hash on a sensitive path is a P0 AGT-001 finding; a changed `verify.env` additionally requires the Operator to re-lock (the lock stores `verifyEnvSha256`).
+- **Hook sessions:** at the first `check` of an agent session, shipgate snapshots tracked files, untracked non-ignored files, and a fixed list of **ignored but sensitive paths** (`quality/verify.env`, `.env*`, and the git-ignored files matching the agent-host config patterns of 05 § 3: `.claude/**` (incl. `.claude/settings.local.json`), `.codex/**`, `.cursor/**`, `.opencode/**`, `.agents/**`, `.gemini/**`, `.windsurf/**`) into the state dir. Diff rules compare against it. A changed hash on a sensitive path is a P0 AGT-001 finding; a changed `verify.env` additionally requires the Operator to re-lock (the lock stores `verifyEnvSha256`).
 - **Verifier outputs** (`quality/out/**`) are not part of the snapshot: they change on every run. Instead shipgate records the SHA-256 of every file it writes there (reports, `handoff.json`, `break-glass.sig` it accepted) in the state dir; any content in `quality/out/` that doesn't match a recorded digest is ignored by every shipgate reader and reported as W (`foreign-output`).
 - **CI / `verify`:** merge-base of `HEAD` with `baseBranch` plus uncommitted changes.
 - **No git:** `†` diff rules are `blocked(no-git)` (the run is `BLOCKED`); non-† diff rules `skipped(no-git)`. Remote-only projects have no diff rules applicable.
@@ -227,7 +242,7 @@ Local SMTP on `{smtp.port}` captures all mail for flows and OPS checks. Server e
 **Third-party requests in the browser:** every request to a host other than the project's origins is intercepted (Playwright `route`): recorded (for PRV-*, PRF third-party budgets), then fulfilled by the real host only if it is in `hosts` with `browser: true` and isn't an outcome-stub host (§ 4.6, answered with its stub); otherwise answered with `204` (scripts: empty body, `application/javascript`). Errors thrown by scripts from non-origin hosts are excluded from RTE-013/TST-009. Lighthouse runs with the same policy; third-party costs are reported separately (PRF-006).
 
 ### 6.2 Aggregation
-Lighthouse runs `runs` times per sampled URL; median per URL; maximum across URLs of a route group vs the most specific budget.
+Lighthouse runs `performance.lighthouse.runs` times per sampled URL; median per URL; maximum across URLs of a route group, compared per metric with the budget of the most specific `performance.routes` key matching the route group's pattern (most literal path segments; ties → longest literal prefix, then lexicographic). Metrics that key doesn't set come from `performance.defaults`.
 
 ### 6.3 Host calibration (TR-111)
 At the start of G4, before any timing measurement, shipgate runs Lighthouse's benchmark 3 times and records the median `benchmarkIndex` in the report. Timing rules compare against it (TR-111).
@@ -240,14 +255,14 @@ Deterministic; free text is never interpreted.
 **Inputs:** `--paths`, `--routes`, `--service`, `--surface`, `--family`, `--kind feature|fix|refactor|migration|content|dependency`, `--tags`.
 **Resolution:** path → service → file role (§ 7.1) → routes/surfaces → enabled packs → rules whose `appliesTo` matches (+ kind rules: refactor → REF-*, migration → DB-*, dependency → SEC-051/052, ARC-007, AGT-009).
 **Output:** ≤ 40 rules ranked severity → gate → id, each with title and fix hint; policy excerpts ≤ 60 lines.
-**Delivery:** session start (repo summary ≤ 40 lines), first touch of each file (`brief --paths`), prompt submit (rules whose `tags` match prompt words exactly, ≤ 10).
+**Delivery:** session start (repo summary ≤ 40 lines), first touch of each file (`brief --paths`), prompt submit (rules with a `tag` equal to a prompt word — UAX #29 words, NFKC + lowercase — ranked as in Output, first 10).
 **Start of a project (`brief --stage start`, also injected at session start while `project.stage: "new"`):**
 - the **launch definition of done** for the declared `project.kinds`: the P0/P1 rules that will apply at launch, grouped by pack, ≤ 60 lines;
 - the **Operator inputs still missing**: business facts, legacy URLs (when replacing a site), flows per `journey`, contracts, analytics processor, legal pages and jurisdictions;
 - the **foundation recipes** for the detected adapter: fix-hint snippets for security headers, the consent loader, error pages, the health endpoint, robots/sitemap and the form handler. These are hints the agent applies; shipgate never writes them (TR-104).
 
 ### 7.1 File roles
-Adapter `fileRoles` patterns first (e.g. Next: `app/**/page.*` → route, `app/**/route.*` → api-handler, `app/**/layout.*` → layout), then generic defaults: `**/*.{test,spec}.*`, `**/__tests__/**`, `tests/**`, `test/**` → test; migrations dir → migration; `**/*.{css,scss,sass,less}` → style; `quality/data/**` → data; config files (`*.config.*`, `tsconfig*.json`, `package.json`, `pyproject.toml`, …) → config; image/font extensions → asset; remaining source files under route trees → component; else `source`.
+Adapter `fileRoles` patterns first (e.g. Next: `app/**/page.*` → route, `app/**/route.*` → api-handler, `app/**/layout.*` → layout), then generic defaults: `**/*.{test,spec}.*`, `**/__tests__/**`, `tests/**`, `test/**` → test; migrations dir → migration; `**/*.{css,scss,sass,less}` → style; `quality/data/**` → data; config → `*.config.*`, `tsconfig*.json`, `jsconfig*.json`, `package.json`, `pyproject.toml`, `Cargo.toml`, `go.mod`, `composer.json`, `Gemfile`, `requirements*.txt`, `vercel.json`, `netlify.toml`, `wrangler.toml`, `Dockerfile`; asset → extensions `png jpg jpeg gif webp avif svg ico bmp woff woff2 ttf otf eot`; component → remaining source files under a *route root* (the literal prefix, before the first glob character, of each adapter `fileRoles` pattern with role `route`); else `source`. The first matching pattern in this order wins.
 
 ---
 
@@ -258,15 +273,15 @@ Adapter `fileRoles` patterns first (e.g. Next: `app/**/page.*` → route, `app/*
 | `pre` | ≤ 300 ms, no toolchain/network | protected paths/keys, sensitive paths, role write scopes, command policy (§ 8.2), Operator-command gating |
 | `post` | ≤ `timeBudgets.check` (10 s) | lock (mtime+size cache), diff rules, `ast` rules on changed files, `graph` rules on the reverse-import closure (≤ 2,000 files; else deferred), data validation if data changed, brief injection |
 | `stop` | ≤ min(`timeBudgets.stop`, host timeout − 5 s); in practice < 2 s | reads the **sealed verdict record** (§ 8.1) |
-| `verify --changed` | ≤ `timeBudgets.verify` | G0–G2; G3 for affected services; G4/G6 on routes affected by changed files and flows touching them → at most `PARTIAL` (FAIL/BLOCKED reported as is) |
+| `verify --changed` | ≤ `timeBudgets.verify` | G0–G2; G3 for affected services; G4/G6 on *affected routes* and flows touching them → at most `PARTIAL` (FAIL/BLOCKED reported as is). Affected routes: routes whose route file changed or lies in the reverse-import closure of a changed file (the `post` graph); a changed `style`, `data` or `config` file (§ 7.1) affects every route of its service. A flow touches them when one of its step URLs is on an affected route. An affected service is one owning a changed file |
 | `verify` | ≤ `timeBudgets.verify`; rules with `profile: nightly` only under `--profile nightly` | everything |
 
-**Budget exhaustion:** gates not finished when the budget runs out are `BLOCKED(budget)`, owner `operator` (raise the budget or move rules to the nightly profile).
+**Budget exhaustion** (DECISIONS D-001): gates not finished when the budget runs out are `BLOCKED(budget)`. Owner is `operator` (raise the budget or move rules to the nightly profile) only when the state dir holds no earlier `verify` on the same lock digest that finished those gates, or the last such run used ≥ 90 % of `timeBudgets.verify`. Otherwise the tree change made the run slower: owner is `builder`, § 1.6 step 1 treats the gate like a BLD failure (base `FAIL`), and there is no handoff. The report lists each unfinished gate's duration in both runs.
 
 **Detached runs:** `verify --detach` starts a background job and returns its id immediately; `status --wait [--timeout <s>]` blocks until done or timeout and prints the summary. Agents use these so long runs never exceed shell-tool timeouts.
 
 ### 8.1 Sealed verdict record and stop rules
-- The tree hash is computed **before G1**. Files generated by builds that are not git-ignored (e.g. `next-env.d.ts`, `*.tsbuildinfo`) are reported as W (`generated-file-not-ignored`) and excluded from later tree-hash comparisons.
+- The tree hash is computed **before G1**. Untracked, non-ignored files that G3 builds create or change (e.g. `next-env.d.ts`, `*.tsbuildinfo`) are reported as W (`generated-file-not-ignored`) and recorded in `<state dir>/shipgate/<repo-id>/generated.json`; treeHash (§ 15) excludes every path in that list, everywhere it is computed (sealing, stop hook, attempts). When G3 adds a path, the run's treeHash is recomputed without it before sealing. Tracked files are never added to the list: a tracked file that G3 changes is reported as W (`build-modified-tracked-file`) and stays in the hash.
 - At the end of every `verify`, shipgate writes `<state dir>/shipgate/<repo-id>/verdicts/<treeHash>.json`: `{ treeHash, verdict, reportDigest, handoff, createdAt }` plus an HMAC-SHA256 with the per-install secret (03 § 7.1). Report files in `quality/out/` are for humans and tools; **the stop hook trusts only the sealed record**.
 - **Stop is allowed when** the sealed record matches the current tree hash and either the verdict is `PASS` (from a full, non-PARTIAL run), or a Verifier-written handoff exists (reasons and conditions: 04 § 1.9).
 - Otherwise stop is blocked with: "Run `shipgate verify --detach`, then `shipgate status --wait`, and fix the findings."
@@ -320,6 +335,7 @@ Adapter `fileRoles` patterns first (e.g. Next: `app/**/page.*` → route, `app/*
 | contract, baseline | endpoint + diff path |
 | cfg, diff, build, lock | rule + path |
 | cmd | rule + service + command; `occurrences` = diagnostics counted with the adapter's `diagnosticPatterns` (default 1) |
+| hook, review | not debt-eligible (metadata validation rejects debt entries for them) |
 | diff (SEC-050 `history`) | path + `@` + first commit containing it + `#` + pattern id + `#` + first 12 hex of the value's SHA-256 |
 | edge | as `http` |
 
@@ -332,20 +348,21 @@ Each debt item records `occurrences`; a higher count for the same key is a new f
 - Ranking: severity → owner (`builder` first) → gate → rule id → groupKey.
 
 ### 9.5 Repair attempts
-An **attempt** = a `verify` run on a tree hash different from the previous run in which the finding was reported. A finding becomes `exhausted` when its evidenceHash survives 2 attempts, or its groupKey survives 3 attempts (P2 budget findings use groupKey only, since bucketed values drift). Attempts are stored in the user state dir.
+An **attempt** for a finding = a `verify` run on a tree whose diff from the previous run that reported the finding touches the finding's `fixLocation`, or, when it has none, changes a file that affects the finding's route group or file under the § 8 `verify --changed` mapping (the file itself, a file it imports transitively, or a `style`/`data`/`config` file of its service). Other tree changes don't count. A finding becomes `exhausted` when its evidenceHash survives 2 attempts, or its groupKey survives 3 attempts (P2 budget findings use groupKey only, since bucketed values drift). Attempts are stored in the user state dir.
 
 ---
 
 ## 10. Crawl, discovery, sampling, route groups
 
 - **Seeds:** `/`, sitemaps (robots `Sitemap:` + `/sitemap.xml`), declared static paths, adapter routes (params from inventory rows, fixtures, then probe values), inventory pages.
-- **Normalisation:** service case/trailing-slash policy, drop fragments and tracking params, sort remaining query params.
+- **Normalisation:** service case/trailing-slash policy, drop fragments and the query params matching `web-delivery.trackingParams`, sort remaining query params.
 - **Extraction:** `a[href]`, `area[href]`, `link[rel=canonical|alternate|next|prev]`, sitemap `<loc>`, redirect `Location`; same-origin after mapping.
 - **Traps:** ≤ 3 query params per URL, ≤ 50 values per param per path pattern, depth ≤ 20, ≤ `crawl.maxUrls` (default 200,000) local, ≤ `crawl.remoteMaxUrls` (default 3,000) remote.
 - **Order:** BFS, frontier sorted lexicographically per depth. Concurrency 16 local; remote 2 req/s (or lower `Crawl-delay`), GET/HEAD only.
-- **Route groups:** adapter route patterns; else path clustering (> 20 distinct values at a position → `{param}`), then split by `<main>` skeleton hash.
-- **Sampling** (above 50,000 indexable pages, remote mode, and browser gates): PRNG seeded with the lock digest; strata service × surface × family/route group × locale; ≥ 1,000 per family for HTTP (remote: proportional within the cap), ≥ 3 per route group for browser; always hubs, declared paths, fixtures, flow pages.
-- **Graph rules:** inventory families use the oracle graph and verify a sample; crawl-only sites need a complete crawl, else graph rules are `skipped(incomplete-crawl)` with a warning.
+- **Route groups:** adapter route patterns; else path clustering (> 20 distinct values at a position → `{param}`), then split by the *route-group skeleton*: the generic `<main>` skeleton hash (§ 11) of the tree cut off below depth 3 under `<main>`, with each run of adjacent siblings whose serialisations are equal collapsed into one.
+- **Sampling** (above 50,000 indexable pages, remote mode, and browser gates): lock-digest PRNG (§ 15); strata service × surface × family/route group × locale; exactly min(1,000, family size) per family for HTTP (remote: the same per-family share of `crawl.remoteMaxUrls` as the family's share of discovered URLs, rounded down, at least 1); exactly min(3, group size) per route group for browser; plus always every `programmatic.hubs` page, declared path, fixture page and flow page. Within a family or route group, picks are spread round-robin over its strata in lexicographic order, as for fixed-size samples.
+- **Fixed-size samples.** An *N-URL sample per surface* (named, e.g. `preview-20`, `comparison-10`) is drawn from the surface's crawled URLs answering 200 `text/html`, indexable ones first. Route groups are visited in lexicographic order of their pattern, round-robin, taking per round from each group its lowest-ranked unpicked URL (lock-digest PRNG, stream id = sample name), until N URLs are picked or the pool is empty; indexable URLs are exhausted before non-indexable ones are taken. An *N-route sample* (e.g. `fault-20`) is drawn the same way but takes at most one URL per route group. A URL's *position* in the sample is the order in which it was picked. Every rule naming the same sample uses the same URLs in a run; fewer eligible URLs than N → the whole pool, and the report states the size.
+- **Graph rules:** inventory families use the oracle graph and verify a sample; crawl-only sites need a complete crawl, else graph rules are `skipped(incomplete-crawl)` with a warning; for P0 and P1 rules that makes the run partial (§ 1.6 step 2).
 - **Discovered routes:** CFG-003 is also evaluated in G4 on crawl-discovered routes.
 
 ---
@@ -365,7 +382,9 @@ An **attempt** = a `verify` run on a tree hash different from the previous run i
 6. **Main hash:** canonical serialisation of what remains (sorted attributes, collapsed whitespace, NFC) → SHA-256. All pages of a family/locale share one main hash.
 6a. **Section presence and order:** on each page, the detached sections are exactly the present fields, none missing and none extra. They appear in template order: the order of the family's sections in the field declaration.
 7. **Section hashes:** each detached section is hashed with steps 2–4 and 6 applied to its own subtree. Every instance of a section name across the family/locale must have the same hash.
-8. The report shows the first differing node path (main or section).
+8. The expected main hash is the one shared by the most pages of the family/locale (ties → the hash of the lowest-slug page among the tied hashes). Every page with another hash is a `skeleton-mismatch` finding, diffed against the lowest-slug page with the expected hash; the report shows the first differing node path. Section hashes follow the same rule per section name.
+
+**Generic `<main>` skeleton hash** (§ 10 route groups, RTE-010, AEO-014 `agent-parity`): step 1; step 3; every text node replaced by `⟦t⟧` (adjacent text nodes merged first); `data-section` and `data-list` subtrees stay in place (steps 2, 4 and 5 are not applied); then the step 6 serialisation and SHA-256. TPL-004's main and section hashes (steps 1–8) are used only by TPL-004.
 
 **Similarity (CNT-006):** row-specific text only; UAX #29 words, NFKC + lowercase, 5-shingles, MinHash 128 (fixed seeds), LSH 32×4, exact Jaccard on candidates; `omit` drops the lower `priorityField` row (ties → later slug).
 
@@ -377,23 +396,24 @@ An **attempt** = a `verify` run on a tree hash different from the previous run i
 
 - **Raw vs rendered (RTE-001):** token overlap of `<main>` text raw vs rendered ≥ `parity.minOverlap` on browser-sampled pages.
 - **Mobile vs desktop (RTE-014):** raw `<main>` text and links under smartphone vs desktop Googlebot UAs, overlap ≥ `parity.mobileMinOverlap`; head metadata (title, description, robots, canonical, hreflang pairs, JSON-LD `@type` set) compared for equality.
-- **Soft-404:** title, H1 and the first 200 characters of `<main>` vs per-locale `soft404Phrases` (the ruleset ships complete lists for 20 major locales); or near-empty `<main>` (< 50 words and no fact slots).
+- **Overlap** (RTE-001, RTE-014) = |multiset intersection of UAX #29 word tokens (NFKC, lowercase)| ÷ |tokens of the reference text|. The reference is the rendered `<main>` for RTE-001 and the desktop `<main>` for RTE-014. Link overlap = |raw ∩ reference| ÷ |reference| over the sets of absolute `href`s normalised as in § 10. Empty reference → 1.0.
+- **Soft-404:** title, H1 and the first 200 characters of `<main>` vs per-locale `soft404Phrases` (the ruleset ships complete lists for 20 major locales); or near-empty `<main>` (< 50 words and no fact slots). A match = the phrase occurs whole-word (UAX #29 word boundaries) after NFKC and case folding of both sides.
 - **Leak scan (MET-008):** template markers (`{{…}}`, `{field}`, `${`, `<%=`, `%s`/`%d`, `[INSERT`, `[object Object]`) everywhere except `<code>`, `<pre>`, `<kbd>`, `<samp>`, `<script>`, `<style>`, `<template>`. The words `undefined`, `NaN`, `null`, `TODO`, `FIXME`, `TBD` only where they make up the **entire** value of: `<title>`, meta description, `og:*`, `<h1>`, an attribute value, a `data-fact`/`data-token` element, or a table cell — never in ordinary prose (filler text such as lorem ipsum is owned by MET-011 everywhere). `data-shipgate-ignore="leaks"` excludes an element and is reported as W.
-- **Error leakage (SEC-007):** response bodies of error probes are scanned for stack-trace patterns (`at <fn> (<path>:<line>`, `Traceback (most recent call last)`, `Exception in`, `.php on line`, `stack:`), SQL error signatures (`SQLSTATE`, `syntax error at or near`, `You have an error in your SQL syntax`, `ORA-\d+`), absolute file paths (`/home/`, `/var/www/`, `C:\`), framework debug-page markers, and internal hostnames (`localhost`, RFC 1918 addresses).
+- **Error leakage (SEC-007):** response bodies of error probes are scanned for stack-trace patterns (`at <fn> (<path>:<line>`, `Traceback (most recent call last)`, `Exception in`, `.php on line`, `stack:`), SQL error signatures (`SQLSTATE`, `syntax error at or near`, `You have an error in your SQL syntax`, `ORA-\d+`), absolute file paths (`/home/`, `/var/www/`, `C:\`), debug-page markers (`Werkzeug Debugger`, `You're seeing this error because you have <code>DEBUG = True</code>`, `Whoops! There was an error`, `Ignition`, `Action Controller: Exception caught`, `nextjs-original-stack-frame`, `Server Error in '/' Application`, `sf-toolbar`), and internal hostnames (`localhost`, RFC 1918 addresses).
 
 ---
 
 ## 13. Static analysis precision
 
 - **AGT-003:** non-null assertions/unwraps on values whose data-flow origin (same function) is an adapter-declared source (HTTP client responses, JSON parse, request params/body, DB results, env reads).
-- **AGT-004:** transforms between base and head of a test: deleted assert/expect calls, fewer assertions in a kept test, matcher widening (`toEqual`→`toBeTruthy`/`toBeDefined`, `assertEqual`→`assertTrue`), removed test cases/files, added skip markers, assertions whose two sides are the identical expression (part `transform`). Expectations that merely look derived from the implementation → part `derived-expectation` (W).
+- **AGT-004:** transforms between base and head of a test: deleted assert/expect calls, fewer assertions in a kept test, matcher widening (`toEqual`→`toBeTruthy`/`toBeDefined`, `assertEqual`→`assertTrue`), removed test cases/files, added skip markers, assertions whose two sides are the identical expression (part `transform`). An assertion whose expected side calls the function under test (the callee on the actual side) or any function exported from the same module → part `derived-expectation` (W).
 - **SEC-001:** a raw-HTML sink's argument must be (a) a direct call to `safeJsonLd(...)` or to the configured sanitizer, or (b) a variable assigned exactly once, in the same function, from such a call. Anything else in scope is a finding.
 - **SEC-050 secret scan (diff):** provider key patterns from the ruleset (AWS, Stripe, GitHub, Google, Supabase JWTs, Slack, OpenAI/Anthropic, private-key PEM headers) (part `provider-pattern`) and literal values of non-public env vars from `verify.env` (part `env-value`) are P0†; generic high-entropy strings are part `entropy` (W); lockfiles, `*.svg`, source maps and binary files are excluded.
 - **AGT-010 (`swallow` part, P0†):** empty catch/except/rescue blocks; catch blocks that return an HTTP success status, render a page, or call not-found/404 without rethrowing or logging (adapter `loggerApis`). Catch blocks that return a fallback value while logging or rethrowing are allowed; catch blocks returning a fallback **without** logging → part `fallback-unlogged` (W).
 - **URL-003:** URL construction whose result flows into an emitted sink (HTML attributes, canonical/meta, sitemap writer, JSON-LD) and whose origin includes request URL/headers/query.
 - **ARC-006:** calls to adapter-declared API families (HTTP client, formatter, URL builder, auth guard, DB client) outside the declared singleton module.
 - **ARC-008:** files, exports and dependencies added in the diff that nothing imports, excluding adapter-declared framework entry points (route files, config files, exported route handlers, `generateMetadata`-style exports) and files listed in `architecture.entryPoints`.
-- **ARC-009:** string literals shaped like URLs/hosts, API keys or UUID ids outside the env/config module and tests, excluding `schema.org`, `w3.org` namespaces and hosts in the `hosts` registry.
+- **ARC-009:** string literals matching `^[a-z][a-z0-9+.-]*://`, or `^([a-z0-9-]+\.)+<tld>(:\d+)?(/.*)?$` with `<tld>` in the toolchain's Public Suffix List (file names excluded: literals whose last label is a § 7.1 asset or style extension or one of `js mjs cjs ts mts cts tsx jsx json md mdx html htm py rb php rs go java kt swift yml yaml toml txt xml csv sql sh`), or the SEC-050 `provider-pattern` patterns, or a UUID (`[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}`, case-insensitive), outside the env/config module and tests, excluding `schema.org`, `w3.org` namespaces and hosts in the `hosts` registry.
 - **TPL-001:** string literals > 80 characters **rendered as text nodes** in family route files; attribute values (`class`, `className`, `style`, `d`) excluded.
 - **RTE-010 (source hint, W):** reads of user-agent/IP inside render paths that select different content; `security.analyticsModules` excluded.
 - **RTE-011:** allowed: year-only formatting, CSP nonce generators, request ids not rendered into indexable content.
@@ -415,7 +435,8 @@ An **attempt** = a `verify` run on a tree hash different from the previous run i
 
 ## 15. Supplementary definitions
 
-- **treeHash:** SHA-256 over sorted lines `path\0sha256\n` for all tracked files plus untracked non-ignored files of the working tree (computed before G1).
+- **treeHash:** SHA-256 over sorted lines `path\0sha256\n` for all tracked files plus untracked non-ignored files of the working tree (computed before G1), excluding the paths in `generated.json` (§ 8.1).
+- **Lock-digest PRNG:** to choose from a set of candidates, each candidate is ranked by SHA-256(lock digest ‖ `0x00` ‖ stream id ‖ `0x00` ‖ candidate key) ascending, bytes compared as unsigned; a draw takes candidates in rank order. The candidate key is the normalised URL (§ 10) for URLs and the identifier otherwise (variable name, target id, sitemap `<loc>`). The stream id is the sample or rule name (`preview-20`, `IDX-011`, `OPS-010`); omitted means the rule id.
 - **repo-id:** first 16 hex characters of SHA-256 of the canonical absolute path of the worktree root (each git worktree is its own repo-id).
 - **Reference time:** rules that depend on "now" (SE-104 news recency, SE-108 expiry, freshness warnings) use the HEAD commit time (or `dataAsOf` for data rules), never the wall clock, so reports stay deterministic. Exceptions: every observation made in the edge pass (G8), plus LNK-006/007, depends on live systems. Those that are time-based (SEC-056 certificate validity, SEC-059, IDX-011) use the wall clock. All of these results are marked non-deterministic in the report and are excluded from the determinism tests.
 - **E.164 normalisation:** libphonenumber metadata from the toolchain. The default region is the country of the business-facts location the page belongs to (`pagePath`), else the region of `defaultLocale`, else none (the number must be in international format).
@@ -435,7 +456,7 @@ An **attempt** = a `verify` run on a tree hash different from the previous run i
   - a change of `aria-expanded`, `aria-pressed` or `aria-selected`.
 
   Controls with native activation behaviour (`<summary>`, `<label>`, submit and reset buttons, `popovertarget`/`commandfor` buttons) are judged by their native effect. On public pages every `<a>` whose `href` is absent, empty, `#` or `javascript:` belongs to MET-011 `dead-anchor`, whatever its role.
-- **Copyright holder (MET-011 `copyright`):** the text after `©`/`(c)`/`Copyright` and an optional year range, up to the end of the sentence or element, compared with `brand`, `siteName`, `business.json` `name`/`legalName` and `placeholderAllow`.
+- **Copyright holder (MET-011 `copyright`):** the text after `©`/`(c)`/`Copyright` and an optional year range, up to the end of the sentence or element, compared with `brand`, `siteName`, `business.json` `name`/`legalName` and `placeholderAllow`. It passes when the holder text, normalised (NFKC, case-folded, whitespace collapsed, trailing punctuation and `All rights reserved` removed), equals or starts with one of the comparison values normalised the same way.
 - **Visible dates (AEO-006, AEO-012, mainTextHash):** `<time datetime>` elements, plus text matched by the locale's CLDR date patterns within 200 characters after the `<h1>` or inside elements whose class or id contains `date`, `updated`, `published` or `byline`.
 - **Alias-host wildcards (URL-011):** an adapter's `defaultAliasHosts` entry with a wildcard is resolved from platform config: the Vercel project name in `.vercel/project.json` or `vercel.json`, the Netlify site name in `netlify.toml` or `.netlify/state.json`, the Pages project name in `wrangler.toml`. If no concrete host can be resolved, that entry is `notConfigured` (W) and the report asks the Operator to list it in `aliasHosts`.
 - **Fallback body (SEC-034):** the response to a random non-existent path `/sg-{n}<ext>`, normalised (nonce, dates and request ids removed) and hashed. A probe response with the same masked hash is a fallback, not an exposed file.
@@ -448,14 +469,38 @@ An **attempt** = a `verify` run on a tree hash different from the previous run i
 - **Contract request generation (API-002):** for every operation and every documented response status, one request built from the operation's examples, else from a minimal valid instance of the request schema (required fields only, first enum value, minimum lengths); statuses that need special state (401, 403, 404) are produced with the anonymous account, the other tenant's account, and a probe id.
 - **Fuzzing (SEC-030):** per operation, seeded by the lock digest: each required field removed in turn, each field with a wrong JSON type, one 10 KB string field, one unknown extra field; expected 400/422 with the error shape.
 - **Facet probes (SE-130/131):** for each `facets.params` entry, a request with the value `shipgate-none` (expected 404), a request with parameters in reversed order and one with a default value from `facets.defaults` (both expected to redirect once to the normalised URL).
-- **Same-colour text (CNT-009, SE-123):** contrast ratio between text colour and computed background < 1.1.
+- **Hidden content** (CNT-009, SE-123, AEO-014 and any rule that says "hidden"; packs reference this item and don't list their own). Judged in the browser after load (Playwright, computed styles). An element with non-whitespace text, or a link, is *hidden* when any of these holds:
+  1. it or an ancestor has the `hidden` attribute, or `aria-hidden="true"`;
+  2. computed `display: none` on it or an ancestor; computed `visibility: hidden` or `collapse` on it;
+  3. computed `opacity: 0` on it or an ancestor;
+  4. computed `font-size` < 2 px;
+  5. **clipped to ≤ 1 × 1 px:** its visible box — the bounding client rect intersected with every ancestor that clips (`overflow` other than `visible`, `clip`, `clip-path`) and with its own `clip`/`clip-path` — is at most 1 px wide and 1 px high;
+  6. **wholly outside the page box:** its bounding rect lies entirely left of x = 0, above y = 0, right of the document's `scrollWidth` or below its `scrollHeight`;
+  7. **same colour:** the contrast ratio (WCAG 2.2 relative luminance) between its computed text colour, alpha-composited, and its background < 1.1. The background is the median pixel colour of the element's text box in a screenshot taken with the element's text colour set to `transparent` (so background images, gradients and overlapping elements count).
+
+  Text inside an element that meets the **disclosure exemption** below is not hidden. Each rule states which elements it checks (e.g. CNT-009 required facts and main text, SE-123 links).
+- **Disclosure exemption** (CNT-009, AEO-014, and any rule exempting user-revealable content; packs reference this item and don't list their own). Content is exempt when it is:
+  1. inside a closed `<details>`, other than its `<summary>`;
+  2. an element referenced by `aria-controls` of a non-hidden control with `aria-expanded="false"` (disclosures, accordions, menus);
+  3. a `role="tabpanel"` referenced by `aria-controls` of a non-hidden `role="tab"` with `aria-selected="false"`;
+  4. a closed `<dialog>`, or a `[popover]` element not showing, that a non-hidden control opens (`commandfor`, `popovertarget`, or `aria-controls` with `aria-haspopup`);
+  5. an inactive slide of a carousel (a region matching `[aria-roledescription=carousel]` or a `carousel-markers.json` pattern) that has a non-hidden control whose accessible name matches `carousel-controls.json`;
+  6. inside `<template>` or `<noscript>` (never rendered).
+
+  **Verified, not trusted:** for items 1–5 shipgate activates the control once (click; for a carousel, the next-slide control up to slide-count − 1 times) and the exemption holds only when, within 1 s, the content is no longer hidden by any item of the hidden-content list. Content that stays hidden is judged as hidden. Every exemption applied is listed in the finding evidence or the report.
 - **Production project refs (CFG-004):** values of `production.keyPrefixes` and Supabase project refs extracted from `production.origins`/`hosts` entries ending in `.supabase.co`.
 - **CI detection:** true when shipgate's own process environment has any of these set: `CI=true`, `GITHUB_ACTIONS`, `GITLAB_CI`, `BITBUCKET_BUILD_NUMBER`, `TF_BUILD`, `CIRCLECI`, `BUILDKITE`. It decides the trust-store source (`SHIPGATE_TRUSTED_KEYS`, 03 § 7.2), `verifyEnv.reduced.where: "ci"` and `baseline --ci`. It can be spoofed on a local machine, so setting these variables is on the agent deny list (05 § 3.2) and CI itself stays authoritative.
 - **Owners of BLOCKED gates:**
   - A missing toolchain, port exhaustion, a database engine failure or another environment fault has owner `operator`. The reason is `tool-error` if shipgate itself crashed, otherwise `operator-owned`, and the gate gets a handoff (§ 1.9).
-  - A gate blocked by a prerequisite takes the owner of the gate that blocked it.
-- **`verify --resume`:** reuses cached results of gates that finished in the previous run for the same tree hash and lock; never used for the definition-of-done run.
+  - A gate blocked by a prerequisite takes the owner of the gate that blocked it; a check `blocked(prerequisite: BLD-004|BLD-005)` (§ 1.5) has owner `builder`.
+  - A `NOT_CONFIGURED` gate is owned by `operator` only when every missing input lies outside the Builder's `writeScope` (01 § 5; e.g. the signed policy, baselines, `verify.env`); otherwise it is owned by `builder`. A gate holding both kinds is owned by `builder`.
+  - `BLOCKED(budget)`: § 8 "Budget exhaustion".
+  - `BLOCKED(seed-contract)`: § 4.3. Missing database extensions (§ 4.2 step 2): `builder` when a migration that requires a missing extension is changed or added in the diff, otherwise `operator`. `blocked(no-git)` (§ 5): `operator`. `BLOCKED(stopped: …)` (§ 1.5): `operator`.
+- **`verify --resume`:** reuses cached results of gates that finished in the previous run for the same tree hash, lock and environment hash; never used for the definition-of-done run (§ 16).
 
 ## 16. Caching
 
 Key = SHA-256 of (lock digest, ruleset, verifier version, toolchain manifest hash, environment hash, tree hash for G1+ / input-file hashes for G0). Stored in `quality/out/cache/<gate>/`. Never reused across lock changes. `--no-cache` for the definition-of-done run and base-branch CI.
+
+- **Environment hash** (DECISIONS D-002) = SHA-256 of JCS `{ os, arch, verifyEnvSha256, env: resolved environment of every service (secret values replaced by their SHA-256), browserVersions, databaseEngineVersions, ci: CI detection (§ 15) }`.
+- **Definition-of-done run** = any `verify` with no partial cause (§ 1.6 step 2). It implies `--no-cache` and ignores `--resume`, and only it can seal a `PASS` (§ 8.1). A sealed `PASS` is never built from cached gate results, so never from results of a different environment hash.

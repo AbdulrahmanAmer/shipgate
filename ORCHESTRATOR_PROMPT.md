@@ -76,6 +76,8 @@ A WP is eligible when its dependencies are `DONE` by `trace-check`, it isn't blo
 - Builders: Sonnet-class at medium/high effort.
 - Mechanical sweeps: a script, else Haiku-class.
 - 3–6 agents per wave; each brief names its role, files it may write, the verification command and the report shape. Check usage before big waves.
+- **Set `model` and `effort` explicitly on every Agent call** (an omitted `model` silently inherits yours — round 06 ran all 16 agents on Opus that way). Then prove it: `node tools/trace/agent-models.mjs` lists the model each sub-agent actually ran on; a mismatch is relaunched, not accepted.
+- **Work must land on disk.** Every agent writes its result to a named file in the repo and returns only a short summary. After each wave: confirm each file exists and its row count matches the agent's summary, then commit before the next wave — an agent's work that isn't in a committed file is lost usage.
 
 ## Decision policy
 - **Decide yourself:** naming, crate-internal structure, library choices within the spec's constraints (permissive licences only), test design, WP splitting, ordering inside a phase. Record anything non-obvious in `DECISIONS.md`.
