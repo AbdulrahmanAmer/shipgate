@@ -1,0 +1,11 @@
+{
+  "headers": [
+    "cf-ipcountry",
+    "cloudfront-viewer-country",
+    "x-vercel-ip-country",
+    "x-appengine-country",
+    "x-country-code"
+  ],
+  "countries": ["US", "GB", "DE", "FR", "JP", "IN", "BR", "AU"],
+  "packages": ["geoip-lite", "maxmind", "@maxmind/geoip2-node", "ip-api", "ipinfo"]
+}

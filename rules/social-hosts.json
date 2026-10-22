@@ -1,0 +1,140 @@
+[
+  {
+    "host": "facebook.com",
+    "aliases": [
+      "fb.com",
+      "fb.me"
+    ],
+    "handleSegment": 0,
+    "sharePaths": [
+      "/dialog/share"
+    ]
+  },
+  {
+    "host": "x.com",
+    "aliases": [
+      "twitter.com",
+      "mobile.twitter.com"
+    ],
+    "handleSegment": 0,
+    "sharePaths": [
+      "/intent",
+      "/share"
+    ]
+  },
+  {
+    "host": "instagram.com",
+    "aliases": [],
+    "handleSegment": 0,
+    "sharePaths": []
+  },
+  {
+    "host": "linkedin.com",
+    "aliases": [
+      "lnkd.in"
+    ],
+    "handleSegment": 1,
+    "sharePaths": [
+      "/sharing",
+      "/shareArticle"
+    ]
+  },
+  {
+    "host": "youtube.com",
+    "aliases": [
+      "youtu.be"
+    ],
+    "handleSegment": 0,
+    "sharePaths": []
+  },
+  {
+    "host": "tiktok.com",
+    "aliases": [
+      "vm.tiktok.com"
+    ],
+    "handleSegment": 0,
+    "sharePaths": []
+  },
+  {
+    "host": "pinterest.com",
+    "aliases": [
+      "pin.it"
+    ],
+    "handleSegment": 0,
+    "sharePaths": [
+      "/pin/create"
+    ]
+  },
+  {
+    "host": "github.com",
+    "aliases": [],
+    "handleSegment": 0,
+    "sharePaths": []
+  },
+  {
+    "host": "threads.com",
+    "aliases": [
+      "threads.net"
+    ],
+    "handleSegment": 0,
+    "sharePaths": []
+  },
+  {
+    "host": "bsky.app",
+    "aliases": [],
+    "handleSegment": 1,
+    "sharePaths": [
+      "/intent"
+    ]
+  },
+  {
+    "host": "snapchat.com",
+    "aliases": [],
+    "handleSegment": 0,
+    "sharePaths": []
+  },
+  {
+    "host": "reddit.com",
+    "aliases": [
+      "redd.it",
+      "old.reddit.com"
+    ],
+    "handleSegment": 1,
+    "sharePaths": [
+      "/submit"
+    ]
+  },
+  {
+    "host": "t.me",
+    "aliases": [
+      "telegram.me",
+      "telegram.dog"
+    ],
+    "handleSegment": 0,
+    "sharePaths": [
+      "/share",
+      "/msg"
+    ]
+  },
+  {
+    "host": "twitch.tv",
+    "aliases": [],
+    "handleSegment": 0,
+    "sharePaths": []
+  },
+  {
+    "host": "tumblr.com",
+    "aliases": [],
+    "handleSegment": 0,
+    "sharePaths": [
+      "/widgets/share",
+      "/share"
+    ]
+  },
+  {
+    "host": "vimeo.com",
+    "aliases": [],
+    "handleSegment": 0,
+    "sharePaths": []
+  }
+]

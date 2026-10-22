@@ -1,0 +1,14 @@
+[
+  {
+    "host": "claude-code",
+    "tool": "^mcp__.*playwright.*__browser_navigate$",
+    "url": "/url",
+    "text": "/0/text"
+  },
+  {
+    "host": "claude-code",
+    "tool": "^mcp__fetch__fetch$",
+    "url": "/url",
+    "text": "/0/text"
+  }
+]

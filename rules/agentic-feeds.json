@@ -1,0 +1,34 @@
+{
+  "openai-product-feed": {
+    "items": null,
+    "fields": {
+      "link": "url",
+      "price": "price",
+      "availability": "availability",
+      "item_group_id": "group_id"
+    },
+    "price": "amount-space-currency",
+    "availability": {
+      "in_stock": "InStock",
+      "out_of_stock": "OutOfStock",
+      "pre_order": "PreOrder",
+      "backorder": "BackOrder"
+    }
+  },
+  "google-ucp": {
+    "items": "/rss/channel/item",
+    "fields": {
+      "link": "*[local-name()='link']",
+      "price": "*[local-name()='price']",
+      "availability": "*[local-name()='availability']",
+      "item_group_id": "*[local-name()='item_group_id']"
+    },
+    "price": "amount-space-currency",
+    "availability": {
+      "in_stock": "InStock",
+      "out_of_stock": "OutOfStock",
+      "preorder": "PreOrder",
+      "backorder": "BackOrder"
+    }
+  }
+}
