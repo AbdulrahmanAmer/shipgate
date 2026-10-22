@@ -276,7 +276,7 @@ function realEvidence() {
   const jf = path.join(target, "nextest", "ci", "junit.xml");
   if (fs.existsSync(jf)) junit = fs.readFileSync(jf, "utf8");
   else global.push("cargo nextest produced no junit.xml (profile ci must set junit.path)");
-  return { registry, junit, bin: { cmd: exe, args: [] }, tree };
+  return { registry, junit, bin: { cmd: exe, args: [] }, tree, wt };
 }
 function fakeEvidence() {
   const bin = { cmd: process.execPath, args: [path.resolve(fake)] };
@@ -323,4 +323,6 @@ if (!fake && ev.tree) {
     fs.writeFileSync(f, JSON.stringify({ tree: ev.tree, done: [...new Set([...prev.done.filter((w) => !notNow.has(w)), ...doneNow])].sort() }, null, 2) + "\n");
   }
 }
+// The clean worktree holds a full release build; remove it so repeated checks don't fill the disk (the record above is kept).
+if (ev.wt) { try { run("git", ["-C", root, "worktree", "remove", "--force", ev.wt]); } catch { console.log(`note: could not remove ${ev.wt}`); } }
 process.exit(bad ? 1 : 0);
