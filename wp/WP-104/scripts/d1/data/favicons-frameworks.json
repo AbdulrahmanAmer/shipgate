@@ -1,0 +1,1291 @@
+[
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app-tw/js/app/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app-tw/js/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app-tw/js/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app-tw/ts/app/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app-tw/ts/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app-tw/ts/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app/js/app/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "4f0d76c40bd6483ff46843de4dce2e0c91444c83",
+    "date": "2023-02-23T23:40:06Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app/js/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app/js/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 5,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "d464ef8f1852ce4af4af03b1e265d9ab7ed737d5",
+    "date": "2022-12-03T06:01:04Z"
+   },
+   {
+    "sha256": "c0fbce0cd5cd0d3c7b88981acd068d13b961460bb94d3c4ba4a0ec5c28051fd1",
+    "bytes": 1101,
+    "commit": "389c77f205c134d6f92d104876e77a0a6b20336b",
+    "date": "2022-10-31T05:43:39Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app/ts/app/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "4f0d76c40bd6483ff46843de4dce2e0c91444c83",
+    "date": "2023-02-23T23:40:06Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app/ts/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/app/ts/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 5,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "d464ef8f1852ce4af4af03b1e265d9ab7ed737d5",
+    "date": "2022-12-03T06:01:04Z"
+   },
+   {
+    "sha256": "c0fbce0cd5cd0d3c7b88981acd068d13b961460bb94d3c4ba4a0ec5c28051fd1",
+    "bytes": 1101,
+    "commit": "389c77f205c134d6f92d104876e77a0a6b20336b",
+    "date": "2022-10-31T05:43:39Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default-tw/js/public/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default-tw/js/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default-tw/js/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default-tw/ts/public/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default-tw/ts/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default-tw/ts/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "8c98a207f224f5514e5ca2760b2ece886ec65d53",
+    "date": "2023-03-16T15:06:27Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default/js/public/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "389c77f205c134d6f92d104876e77a0a6b20336b",
+    "date": "2022-10-31T05:43:39Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default/js/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default/js/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 5,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "d464ef8f1852ce4af4af03b1e265d9ab7ed737d5",
+    "date": "2022-12-03T06:01:04Z"
+   },
+   {
+    "sha256": "c0fbce0cd5cd0d3c7b88981acd068d13b961460bb94d3c4ba4a0ec5c28051fd1",
+    "bytes": 1101,
+    "commit": "389c77f205c134d6f92d104876e77a0a6b20336b",
+    "date": "2022-10-31T05:43:39Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default/ts/public/favicon.ico",
+  "currentBlob": "af98450595e8b8efd9e505cddc5ed705b665a4d8",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4",
+    "bytes": 15086,
+    "commit": "981dd276acccf22f2a7097a6f10468c8b0bc1903",
+    "date": "2026-08-25T16:45:02Z"
+   },
+   {
+    "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "bytes": 25931,
+    "commit": "389c77f205c134d6f92d104876e77a0a6b20336b",
+    "date": "2022-10-31T05:43:39Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default/ts/public/next.svg",
+  "currentBlob": "5174b28c565c285e3e312ec5178be64fbeca8398",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   }
+  ]
+ },
+ {
+  "label": "Create Next App",
+  "repo": "vercel/next.js",
+  "branch": "canary",
+  "path": "packages/create-next-app/templates/default/ts/public/vercel.svg",
+  "currentBlob": "77053960334e2e34dc584dea8019925c3b4ccca9",
+  "historyScanned": 5,
+  "versions": [
+   {
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "commit": "2b9f1bcb6142d1daf6dc59a02bf829ee4cbb914b",
+    "date": "2024-09-09T22:48:46Z"
+   },
+   {
+    "sha256": "90364018e584568db238b777e87790249cc58a55c1e921ae56ed4915662be582",
+    "bytes": 367,
+    "commit": "c0b3f430edb0d2e54f14d6298ea2d1f4104f661f",
+    "date": "2024-05-18T05:33:19Z"
+   },
+   {
+    "sha256": "3fa5cd757b418e18afc68ddebad55f443206e410327921ddb2bf1be731658880",
+    "bytes": 629,
+    "commit": "d464ef8f1852ce4af4af03b1e265d9ab7ed737d5",
+    "date": "2022-12-03T06:01:04Z"
+   },
+   {
+    "sha256": "c0fbce0cd5cd0d3c7b88981acd068d13b961460bb94d3c4ba4a0ec5c28051fd1",
+    "bytes": 1101,
+    "commit": "389c77f205c134d6f92d104876e77a0a6b20336b",
+    "date": "2022-10-31T05:43:39Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/basics/public/favicon.ico",
+  "currentBlob": "7f48a94d16071d6c8d06478c7458ab12e675019c",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "09d2ac08d8cca9b6e1f90221f345a8c4dd0371c64a0dc52b6f96fc589b1e3d67",
+    "bytes": 655,
+    "commit": "93099166de677157f55240960dcf27e4e92608f5",
+    "date": "2026-01-21T19:52:04Z"
+   },
+   {
+    "sha256": "5af608ecd60d93abd453f78896e95a7c8c0a2c632a92a10e57f19423f333bc46",
+    "bytes": 4286,
+    "commit": "8f2f4de5dc9a882030ca01e50cec66ed0f3dfc80",
+    "date": "2022-04-27T00:37:58Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/basics/public/favicon.svg",
+  "currentBlob": "f157bd1c5e287c70a508a98a13f538491aa4dafc",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f",
+    "bytes": 749,
+    "commit": "7d1dd510fbc450b471074f165ea28ca2160e26dc",
+    "date": "2023-03-09T17:23:47Z"
+   },
+   {
+    "sha256": "dddac3870e66889496da35eed0f2ae5c3393efb45edf6ac349c8e08a4f617918",
+    "bytes": 873,
+    "commit": "41b81d0d7eab192a0999f9f4601ce27840834875",
+    "date": "2022-08-17T20:19:04Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/blog/public/favicon.ico",
+  "currentBlob": "7f48a94d16071d6c8d06478c7458ab12e675019c",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "09d2ac08d8cca9b6e1f90221f345a8c4dd0371c64a0dc52b6f96fc589b1e3d67",
+    "bytes": 655,
+    "commit": "93099166de677157f55240960dcf27e4e92608f5",
+    "date": "2026-01-21T19:52:04Z"
+   },
+   {
+    "sha256": "5af608ecd60d93abd453f78896e95a7c8c0a2c632a92a10e57f19423f333bc46",
+    "bytes": 4286,
+    "commit": "1aa2f92bbc65d65a2d7961926d34333cdcdf6afe",
+    "date": "2021-08-18T05:33:42Z"
+   },
+   {
+    "sha256": "3c2f400dc6c92debdb3b2b0ea50d5c2816b4a606f4bdc6976a92de4b12cf10ac",
+    "bytes": 15406,
+    "commit": "b03f1f71b7bfc1b3e76bd349ba88862509c63bc6",
+    "date": "2021-08-16T21:28:38Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/blog/public/favicon.svg",
+  "currentBlob": "f157bd1c5e287c70a508a98a13f538491aa4dafc",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f",
+    "bytes": 749,
+    "commit": "7d1dd510fbc450b471074f165ea28ca2160e26dc",
+    "date": "2023-03-09T17:23:47Z"
+   },
+   {
+    "sha256": "dddac3870e66889496da35eed0f2ae5c3393efb45edf6ac349c8e08a4f617918",
+    "bytes": 873,
+    "commit": "41b81d0d7eab192a0999f9f4601ce27840834875",
+    "date": "2022-08-17T20:19:04Z"
+   },
+   {
+    "sha256": "cd971626275d7651bc79618934535e87bc3919a442865da61bd7e085821a5065",
+    "bytes": 1199,
+    "commit": "6bca7c83a7e2d62015f45f873b0f69f11b4d902b",
+    "date": "2021-06-08T15:10:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/minimal/public/favicon.ico",
+  "currentBlob": "7f48a94d16071d6c8d06478c7458ab12e675019c",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "09d2ac08d8cca9b6e1f90221f345a8c4dd0371c64a0dc52b6f96fc589b1e3d67",
+    "bytes": 655,
+    "commit": "93099166de677157f55240960dcf27e4e92608f5",
+    "date": "2026-01-21T19:52:04Z"
+   },
+   {
+    "sha256": "5af608ecd60d93abd453f78896e95a7c8c0a2c632a92a10e57f19423f333bc46",
+    "bytes": 4286,
+    "commit": "1aa2f92bbc65d65a2d7961926d34333cdcdf6afe",
+    "date": "2021-08-18T05:33:42Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/minimal/public/favicon.svg",
+  "currentBlob": "f157bd1c5e287c70a508a98a13f538491aa4dafc",
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f",
+    "bytes": 749,
+    "commit": "7d1dd510fbc450b471074f165ea28ca2160e26dc",
+    "date": "2023-03-09T17:23:47Z"
+   },
+   {
+    "sha256": "dddac3870e66889496da35eed0f2ae5c3393efb45edf6ac349c8e08a4f617918",
+    "bytes": 873,
+    "commit": "41b81d0d7eab192a0999f9f4601ce27840834875",
+    "date": "2022-08-17T20:19:04Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/portfolio/public/favicon.ico",
+  "currentBlob": "7f48a94d16071d6c8d06478c7458ab12e675019c",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "09d2ac08d8cca9b6e1f90221f345a8c4dd0371c64a0dc52b6f96fc589b1e3d67",
+    "bytes": 655,
+    "commit": "93099166de677157f55240960dcf27e4e92608f5",
+    "date": "2026-01-21T19:52:04Z"
+   },
+   {
+    "sha256": "5af608ecd60d93abd453f78896e95a7c8c0a2c632a92a10e57f19423f333bc46",
+    "bytes": 4286,
+    "commit": "1aa2f92bbc65d65a2d7961926d34333cdcdf6afe",
+    "date": "2021-08-18T05:33:42Z"
+   },
+   {
+    "sha256": "3c2f400dc6c92debdb3b2b0ea50d5c2816b4a606f4bdc6976a92de4b12cf10ac",
+    "bytes": 15406,
+    "commit": "b03f1f71b7bfc1b3e76bd349ba88862509c63bc6",
+    "date": "2021-08-16T21:28:38Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/portfolio/public/favicon.svg",
+  "currentBlob": "f157bd1c5e287c70a508a98a13f538491aa4dafc",
+  "historyScanned": 4,
+  "versions": [
+   {
+    "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f",
+    "bytes": 749,
+    "commit": "7d1dd510fbc450b471074f165ea28ca2160e26dc",
+    "date": "2023-03-09T17:23:47Z"
+   },
+   {
+    "sha256": "dddac3870e66889496da35eed0f2ae5c3393efb45edf6ac349c8e08a4f617918",
+    "bytes": 873,
+    "commit": "41b81d0d7eab192a0999f9f4601ce27840834875",
+    "date": "2022-08-17T20:19:04Z"
+   },
+   {
+    "sha256": "cd971626275d7651bc79618934535e87bc3919a442865da61bd7e085821a5065",
+    "bytes": 1199,
+    "commit": "b03f1f71b7bfc1b3e76bd349ba88862509c63bc6",
+    "date": "2021-08-16T21:28:38Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/starlog/public/favicon.ico",
+  "currentBlob": "7f48a94d16071d6c8d06478c7458ab12e675019c",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "09d2ac08d8cca9b6e1f90221f345a8c4dd0371c64a0dc52b6f96fc589b1e3d67",
+    "bytes": 655,
+    "commit": "93099166de677157f55240960dcf27e4e92608f5",
+    "date": "2026-01-21T19:52:04Z"
+   }
+  ]
+ },
+ {
+  "label": "Astro examples",
+  "repo": "withastro/astro",
+  "branch": "main",
+  "path": "examples/starlog/public/favicon.svg",
+  "currentBlob": "f157bd1c5e287c70a508a98a13f538491aa4dafc",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f",
+    "bytes": 749,
+    "commit": "d25813f2cc0baabcda2f504f3da3c040caf37d9a",
+    "date": "2023-12-28T21:08:51Z"
+   }
+  ]
+ },
+ {
+  "label": "Nuxt starter (v3 branch)",
+  "repo": "nuxt/starter",
+  "branch": "v3",
+  "path": "public/favicon.ico",
+  "currentBlob": "18993ad91cfd43e03b074dd0b5cc3f37ab38e49c",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "1057b17aec08a7191d134000203947f195a8aa7c84c39f1164cee8d01279762a",
+    "bytes": 4286,
+    "commit": "21dde161cfc19fcf4d1c344a2801fd429460022a",
+    "date": "2023-01-31T13:57:47Z"
+   }
+  ]
+ },
+ {
+  "label": "SvelteKit sv create",
+  "repo": "sveltejs/cli",
+  "branch": "main",
+  "path": "packages/sv/src/create/templates/demo/static/favicon.svg",
+  "currentBlob": "cc5dc66a3a524f4167cc097452cbe3c3883a684c",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "d7d9227f0fe5bfb4189fb6ba4dd9e2d524f6a1dfd02bd901c65330987675c0b3",
+    "bytes": 1569,
+    "commit": "cf1232017d8f5f89fa1c6fe9f05707b6b932c85b",
+    "date": "2026-02-19T22:49:22Z"
+   }
+  ]
+ },
+ {
+  "label": "SvelteKit sv create",
+  "repo": "sveltejs/cli",
+  "branch": "main",
+  "path": "packages/sv/src/create/templates/library/static/favicon.svg",
+  "currentBlob": "cc5dc66a3a524f4167cc097452cbe3c3883a684c",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "d7d9227f0fe5bfb4189fb6ba4dd9e2d524f6a1dfd02bd901c65330987675c0b3",
+    "bytes": 1569,
+    "commit": "cf1232017d8f5f89fa1c6fe9f05707b6b932c85b",
+    "date": "2026-02-19T22:49:22Z"
+   }
+  ]
+ },
+ {
+  "label": "SvelteKit sv create",
+  "repo": "sveltejs/cli",
+  "branch": "main",
+  "path": "packages/sv/src/create/templates/minimal/src/lib/assets/favicon.svg",
+  "currentBlob": "cc5dc66a3a524f4167cc097452cbe3c3883a684c",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "d7d9227f0fe5bfb4189fb6ba4dd9e2d524f6a1dfd02bd901c65330987675c0b3",
+    "bytes": 1569,
+    "commit": "cf1232017d8f5f89fa1c6fe9f05707b6b932c85b",
+    "date": "2026-02-19T22:49:22Z"
+   }
+  ]
+ },
+ {
+  "label": "create-svelte (legacy)",
+  "repo": "sveltejs/kit",
+  "branch": "main",
+  "path": "packages/create-svelte/templates/default/static/favicon.png",
+  "currentBlob": null,
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "5146ed79b486cb9e1cdcdd7814cd22ae78e70ceb30fa06b4cd9a16cf121bc9e6",
+    "bytes": 1571,
+    "commit": "6aa4988491ba9080535ec19c2be244b6772d8c89",
+    "date": "2021-05-29T20:47:14Z"
+   }
+  ]
+ },
+ {
+  "label": "create-svelte (legacy)",
+  "repo": "sveltejs/kit",
+  "branch": "main",
+  "path": "packages/create-svelte/templates/skeleton/static/favicon.png",
+  "currentBlob": null,
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "5146ed79b486cb9e1cdcdd7814cd22ae78e70ceb30fa06b4cd9a16cf121bc9e6",
+    "bytes": 1571,
+    "commit": "6aa4988491ba9080535ec19c2be244b6772d8c89",
+    "date": "2021-05-29T20:47:14Z"
+   }
+  ]
+ },
+ {
+  "label": "create-svelte (legacy)",
+  "repo": "sveltejs/kit",
+  "branch": "main",
+  "path": "packages/create-svelte/templates/skeletonlib/static/favicon.png",
+  "currentBlob": null,
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "5146ed79b486cb9e1cdcdd7814cd22ae78e70ceb30fa06b4cd9a16cf121bc9e6",
+    "bytes": 1571,
+    "commit": "7c705e2fdff55a8c6f913d934ba57218a03f3444",
+    "date": "2022-08-31T17:12:17Z"
+   }
+  ]
+ },
+ {
+  "label": "Create React App",
+  "repo": "facebook/create-react-app",
+  "branch": "main",
+  "path": "packages/cra-template-typescript/template/public/favicon.ico",
+  "currentBlob": "a11777cc471a4344702741ab1c8a588998b1311a",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd",
+    "bytes": 3870,
+    "commit": "37712374bcaa6ccb168eeaf4fe8bd52d120dbc58",
+    "date": "2020-04-28T21:02:25Z"
+   },
+   {
+    "sha256": "ffc65885a2121141440d345ef5927c4c2917d95b5b2913b7fa8467c95e15120b",
+    "bytes": 3150,
+    "commit": "c03bb366e0e901b33acd9783db3003cb49eddf80",
+    "date": "2019-12-30T19:53:00Z"
+   }
+  ]
+ },
+ {
+  "label": "Create React App",
+  "repo": "facebook/create-react-app",
+  "branch": "main",
+  "path": "packages/cra-template-typescript/template/public/logo192.png",
+  "currentBlob": "fc44b0a3796c0e0a64c3d858ca038bd4570465d9",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00",
+    "bytes": 5347,
+    "commit": "4c0c81953d090dbf122e126f2b6b8c803d4a0569",
+    "date": "2019-10-24T22:17:41Z"
+   }
+  ]
+ },
+ {
+  "label": "Create React App",
+  "repo": "facebook/create-react-app",
+  "branch": "main",
+  "path": "packages/cra-template-typescript/template/public/logo512.png",
+  "currentBlob": "a4e47a6545bc15971f8f63fba70e4013df88a664",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461",
+    "bytes": 9664,
+    "commit": "4c0c81953d090dbf122e126f2b6b8c803d4a0569",
+    "date": "2019-10-24T22:17:41Z"
+   }
+  ]
+ },
+ {
+  "label": "Create React App",
+  "repo": "facebook/create-react-app",
+  "branch": "main",
+  "path": "packages/cra-template/template/public/favicon.ico",
+  "currentBlob": "a11777cc471a4344702741ab1c8a588998b1311a",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "3d10f7da6c603178340081668c4ac5b3ae9743ca9a262ab0fcd312fbb9f48bdd",
+    "bytes": 3870,
+    "commit": "37712374bcaa6ccb168eeaf4fe8bd52d120dbc58",
+    "date": "2020-04-28T21:02:25Z"
+   },
+   {
+    "sha256": "ffc65885a2121141440d345ef5927c4c2917d95b5b2913b7fa8467c95e15120b",
+    "bytes": 3150,
+    "commit": "c03bb366e0e901b33acd9783db3003cb49eddf80",
+    "date": "2019-12-30T19:53:00Z"
+   }
+  ]
+ },
+ {
+  "label": "Create React App",
+  "repo": "facebook/create-react-app",
+  "branch": "main",
+  "path": "packages/cra-template/template/public/logo192.png",
+  "currentBlob": "fc44b0a3796c0e0a64c3d858ca038bd4570465d9",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00",
+    "bytes": 5347,
+    "commit": "4c0c81953d090dbf122e126f2b6b8c803d4a0569",
+    "date": "2019-10-24T22:17:41Z"
+   }
+  ]
+ },
+ {
+  "label": "Create React App",
+  "repo": "facebook/create-react-app",
+  "branch": "main",
+  "path": "packages/cra-template/template/public/logo512.png",
+  "currentBlob": "a4e47a6545bc15971f8f63fba70e4013df88a664",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461",
+    "bytes": 9664,
+    "commit": "4c0c81953d090dbf122e126f2b6b8c803d4a0569",
+    "date": "2019-10-24T22:17:41Z"
+   }
+  ]
+ },
+ {
+  "label": "create-vue",
+  "repo": "vuejs/create-vue",
+  "branch": "main",
+  "path": "template/base/public/favicon.ico",
+  "currentBlob": "df36fcfb72584e00488330b560ebcf34a41c64c2",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445",
+    "bytes": 4286,
+    "commit": "0ba90b1a9257cb2f5518aca7a51c293d8b3a1313",
+    "date": "2021-08-10T13:19:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Angular CLI",
+  "repo": "angular/angular-cli",
+  "branch": "main",
+  "path": "packages/schematics/angular/application/files/common-files/public/favicon.ico.template",
+  "currentBlob": "57614f9c967596fad0a3989bec2b1deff33034f6",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "f9102be80297c0529207607be5277b4f90bca89d65988fa1771b91c7894e815f",
+    "bytes": 15086,
+    "commit": "6530aa11bed5ef67d611e8aed268bd20345cf0e6",
+    "date": "2024-03-25T16:10:29Z"
+   }
+  ]
+ },
+ {
+  "label": "Angular CLI",
+  "repo": "angular/angular-cli",
+  "branch": "main",
+  "path": "packages/schematics/angular/application/files/src/favicon.ico",
+  "currentBlob": null,
+  "historyScanned": 2,
+  "versions": [
+   {
+    "sha256": "b9ccbb7100e13ae95ac18a3a9ed00857f321b63b498f1fb7abab506fc1c40e99",
+    "bytes": 5430,
+    "commit": "44086c60ff1d6c26d30850bef125120f6c498ac1",
+    "date": "2018-06-06T01:50:06Z"
+   }
+  ]
+ },
+ {
+  "label": "Angular CLI",
+  "repo": "angular/angular-cli",
+  "branch": "main",
+  "path": "packages/schematics/angular/application/files/src/favicon.ico.template",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "2d0a4f5a77c788b084919b1b8cad5713d9dfc3388ef29969c4cb66c28092e683",
+    "bytes": 948,
+    "commit": "40601c46e789615a7c200959619eebed7f613e8c",
+    "date": "2019-08-12T20:54:09Z"
+   },
+   {
+    "sha256": "b9ccbb7100e13ae95ac18a3a9ed00857f321b63b498f1fb7abab506fc1c40e99",
+    "bytes": 5430,
+    "commit": "36eba0c9fcf17305a7ef99096c860ad271c5aaf7",
+    "date": "2019-01-16T18:29:56Z"
+   }
+  ]
+ },
+ {
+  "label": "React Router template",
+  "repo": "remix-run/react-router-templates",
+  "branch": "main",
+  "path": "default/public/favicon.ico",
+  "currentBlob": "5dbdfcddcb14182535f6d32d1c900681321b1aa3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "c10d2b470d85e242fe26871931b22cd2caf3dfb69299e938d80fac0ca042feea",
+    "bytes": 15086,
+    "commit": "1e6778308d4cb6294e232e8bd2c2e221cdad3fa7",
+    "date": "2024-11-21T19:29:58Z"
+   }
+  ]
+ },
+ {
+  "label": "TanStack Start basic",
+  "repo": "TanStack/router",
+  "branch": "main",
+  "path": "examples/react/start-basic/public/apple-touch-icon.png",
+  "currentBlob": "5a9423cc02c40ea066d2a061cdcdf621c0718cb1",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "b792c67603bbb081d855ee5fd7441a155cd3ed01c4117da0a67e5446deb40bf7",
+    "bytes": 27246,
+    "commit": "782caa4977e5ef856e499448e5235799b8247843",
+    "date": "2024-05-18T07:24:47Z"
+   }
+  ]
+ },
+ {
+  "label": "TanStack Start basic",
+  "repo": "TanStack/router",
+  "branch": "main",
+  "path": "examples/react/start-basic/public/favicon-16x16.png",
+  "currentBlob": "e3389b00443d602a249b48ae0e21e333971c9c1e",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "bab38a79ced94cfea01a320fdcfe44333516f77770b24de1e12e3054313472ac",
+    "bytes": 832,
+    "commit": "782caa4977e5ef856e499448e5235799b8247843",
+    "date": "2024-05-18T07:24:47Z"
+   }
+  ]
+ },
+ {
+  "label": "TanStack Start basic",
+  "repo": "TanStack/router",
+  "branch": "main",
+  "path": "examples/react/start-basic/public/favicon-32x32.png",
+  "currentBlob": "900c77d444c9b31e6144b6ac0bb1ab7bb7ca767f",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "340aad7ef0dcd643bb891b52ef64507d79821ef402e2d2d8003a130eda5ddba2",
+    "bytes": 2115,
+    "commit": "782caa4977e5ef856e499448e5235799b8247843",
+    "date": "2024-05-18T07:24:47Z"
+   }
+  ]
+ },
+ {
+  "label": "TanStack Start basic",
+  "repo": "TanStack/router",
+  "branch": "main",
+  "path": "examples/react/start-basic/public/favicon.ico",
+  "currentBlob": "1a1751676f7e22811b1070572093996c93c87617",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "b95b47c986d7cdf2c35316905e54abb6ba4d61929f30e0df7738ef22de5b891b",
+    "bytes": 15406,
+    "commit": "782caa4977e5ef856e499448e5235799b8247843",
+    "date": "2024-05-18T07:24:47Z"
+   }
+  ]
+ },
+ {
+  "label": "Gatsby default starter",
+  "repo": "gatsbyjs/gatsby-starter-default",
+  "branch": "master",
+  "path": "src/images/gatsby-icon.png",
+  "currentBlob": "908bc78a7f5596fab5a638d6ac07e331dc4c74d4",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "3046660f71962450db77df27f0cc7b5ffa4a1c4bb5090a6f73f4315eb8e1926f",
+    "bytes": 21212,
+    "commit": "95c60e33b00d20396076b3f5574b9e47645fdc5a",
+    "date": "2018-08-03T22:45:26Z"
+   }
+  ]
+ },
+ {
+  "label": "Docusaurus classic",
+  "repo": "facebook/docusaurus",
+  "branch": "main",
+  "path": "packages/create-docusaurus/templates/shared/static/img/docusaurus.png",
+  "currentBlob": "f458149e3c8f53335f28fbc162ae67f55575c881",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "9204212d3905bc1b8d1d882825d1eceb5ad942329222277d7257831a7d47d827",
+    "bytes": 5142,
+    "commit": "f6ec757aa0119eea53dc193a680e7282de68f419",
+    "date": "2021-10-07T14:06:42Z"
+   }
+  ]
+ },
+ {
+  "label": "Docusaurus classic",
+  "repo": "facebook/docusaurus",
+  "branch": "main",
+  "path": "packages/create-docusaurus/templates/shared/static/img/favicon.ico",
+  "currentBlob": "c01d54bcd39a5f853428f3cd5aa0f383d963c484",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "7fe55819f14792d942d86092f519b6d425e995337b482a8743e363cf5ac0ae30",
+    "bytes": 3626,
+    "commit": "f6ec757aa0119eea53dc193a680e7282de68f419",
+    "date": "2021-10-07T14:06:42Z"
+   }
+  ]
+ },
+ {
+  "label": "Docusaurus classic",
+  "repo": "facebook/docusaurus",
+  "branch": "main",
+  "path": "packages/create-docusaurus/templates/classic/static/img/favicon.ico",
+  "currentBlob": null,
+  "historyScanned": 0,
+  "versions": []
+ },
+ {
+  "label": "Rails new app",
+  "repo": "rails/rails",
+  "branch": "main",
+  "path": "railties/lib/rails/generators/rails/app/templates/public/icon.png",
+  "currentBlob": "c4c9dbfbbd2f7c1421ffd5727188146213abbcef",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "2e29c62b03e514c5a15f289f8fdc0abca6e22d0e91970503c9e2b7e0552c911c",
+    "bytes": 4166,
+    "commit": "de89ed4a304613326bff62555ca0b25555d9b2be",
+    "date": "2024-09-15T14:48:47Z"
+   },
+   {
+    "sha256": "e91a1d8980a2fa7651a415460386771530ca2e126fb4344603f119d2ee568299",
+    "bytes": 1425,
+    "commit": "a5ffec5291442b38188e987e32844a6a8d260e4c",
+    "date": "2024-08-02T17:19:27Z"
+   },
+   {
+    "sha256": "5fdd7ebb8440a5cafd9fb6a069fd1fdb35c4e670114582fea00eb7894fff0c2a",
+    "bytes": 5599,
+    "commit": "66615ac5141775e52bb12a4b80d7475adbf6ac63",
+    "date": "2024-01-02T11:36:18Z"
+   }
+  ]
+ },
+ {
+  "label": "Rails new app",
+  "repo": "rails/rails",
+  "branch": "main",
+  "path": "railties/lib/rails/generators/rails/app/templates/public/icon.svg",
+  "currentBlob": "04b34bf83f34441a1f7ae93a6f7f6ac0d27bef16",
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "601dfb4db252852f3880ffc355bce0d4507b01afca6879189d10a65470ae6e3a",
+    "bytes": 122,
+    "commit": "de89ed4a304613326bff62555ca0b25555d9b2be",
+    "date": "2024-09-15T14:48:47Z"
+   },
+   {
+    "sha256": "391288507f88d4f0dbe753162f6434159da139a93fcd27fb52a44b9ba331b096",
+    "bytes": 119,
+    "commit": "a5ffec5291442b38188e987e32844a6a8d260e4c",
+    "date": "2024-08-02T17:19:27Z"
+   },
+   {
+    "sha256": "b9cccb4225f6fa9028dc48bdcb3dfce88d8182924d425c7d598f4263effc52d2",
+    "bytes": 121,
+    "commit": "0ecbb1693991fd61841647d2395ce5a8b195227f",
+    "date": "2024-01-07T17:32:43Z"
+   }
+  ]
+ },
+ {
+  "label": "Laravel",
+  "repo": "laravel/laravel",
+  "branch": "13.x",
+  "path": "public/favicon.ico",
+  "currentBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+  "historyScanned": 5,
+  "versions": [
+   {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "commit": "26730cd5b3ceae03ffc5549e85b67d9c94e861ef",
+    "date": "2012-04-26T18:51:48Z"
+   },
+   {
+    "sha256": "1b8a202e0e4965bf8fd5740b95d4678d8183eba32b8f203acc4ec3be9016245e",
+    "bytes": 13270,
+    "commit": "a188d62105532fcf2a2839309fb71b862d904612",
+    "date": "2011-06-09T04:45:08Z"
+   }
+  ]
+ }
+]

@@ -1,0 +1,441 @@
+{
+  "ar": {
+    "updated": [
+      "تحديث",
+      "تم التحديث",
+      "آخر تحديث",
+      "تاريخ التحديث",
+      "حُدّث",
+      "آخر تعديل",
+      "تعديل",
+      "عُدّل",
+      "عدل في"
+    ],
+    "published": [
+      "نُشر",
+      "نشر في",
+      "نشر بتاريخ",
+      "نشرت",
+      "تاريخ النشر",
+      "تاريخ الإضافة",
+      "أضيف",
+      "كُتب",
+      "كتب في"
+    ]
+  },
+  "cs": {
+    "updated": [
+      "aktualizováno",
+      "aktualizace",
+      "naposledy aktualizováno",
+      "poslední aktualizace",
+      "upraveno",
+      "naposledy upraveno",
+      "změněno",
+      "revidováno"
+    ],
+    "published": [
+      "publikováno",
+      "zveřejněno",
+      "vydáno",
+      "napsáno",
+      "vytvořeno",
+      "přidáno",
+      "datum publikace",
+      "datum zveřejnění"
+    ]
+  },
+  "da": {
+    "updated": [
+      "opdateret",
+      "senest opdateret",
+      "sidst opdateret",
+      "ændret",
+      "sidst ændret",
+      "revideret",
+      "redigeret"
+    ],
+    "published": [
+      "udgivet",
+      "publiceret",
+      "postet",
+      "skrevet",
+      "oprettet",
+      "offentliggjort",
+      "dato for udgivelse"
+    ]
+  },
+  "de": {
+    "updated": [
+      "aktualisiert",
+      "zuletzt aktualisiert",
+      "letzte aktualisierung",
+      "aktualisierung",
+      "überarbeitet",
+      "zuletzt geändert",
+      "geändert",
+      "bearbeitet",
+      "zuletzt bearbeitet",
+      "letzte änderung",
+      "änderungsdatum",
+      "stand:"
+    ],
+    "published": [
+      "veröffentlicht",
+      "veröffentlichungsdatum",
+      "erschienen",
+      "publiziert",
+      "verfasst",
+      "geschrieben",
+      "erstellt",
+      "eingestellt",
+      "gepostet",
+      "online seit"
+    ]
+  },
+  "en": {
+    "updated": [
+      "updated",
+      "last update",
+      "modified",
+      "last modified",
+      "revised",
+      "last revised",
+      "edited",
+      "last edited"
+    ],
+    "published": [
+      "published",
+      "posted",
+      "date published",
+      "publication date",
+      "first published",
+      "originally published",
+      "written",
+      "created"
+    ]
+  },
+  "es": {
+    "updated": [
+      "actualizado",
+      "actualizada",
+      "última actualización",
+      "ultima actualización",
+      "modificado",
+      "última modificación",
+      "revisado",
+      "editado"
+    ],
+    "published": [
+      "publicado",
+      "publicada",
+      "fecha de publicación",
+      "publicación",
+      "escrito",
+      "creado",
+      "posteado"
+    ]
+  },
+  "fi": {
+    "updated": [
+      "päivitetty",
+      "viimeksi päivitetty",
+      "päivitys",
+      "muokattu",
+      "viimeksi muokattu",
+      "muutettu",
+      "tarkistettu"
+    ],
+    "published": [
+      "julkaistu",
+      "julkaisupäivä",
+      "julkaisuaika",
+      "kirjoitettu",
+      "luotu",
+      "lisätty"
+    ]
+  },
+  "fr": {
+    "updated": [
+      "mis à jour",
+      "mise à jour",
+      "dernière mise à jour",
+      "modifié",
+      "dernière modification",
+      "actualisé",
+      "actualisée",
+      "révisé"
+    ],
+    "published": [
+      "publié",
+      "publiée",
+      "publication",
+      "date de publication",
+      "paru",
+      "posté",
+      "écrit le",
+      "créé",
+      "mis en ligne"
+    ]
+  },
+  "it": {
+    "updated": [
+      "aggiornato",
+      "aggiornata",
+      "aggiornamento",
+      "ultimo aggiornamento",
+      "modificato",
+      "ultima modifica",
+      "ultima revisione",
+      "revisionato"
+    ],
+    "published": [
+      "pubblicato",
+      "pubblicata",
+      "pubblicazione",
+      "data di pubblicazione",
+      "scritto",
+      "creato",
+      "postato"
+    ]
+  },
+  "ja": {
+    "updated": [
+      "更新",
+      "最終更新",
+      "改訂",
+      "修正日",
+      "最終編集",
+      "編集日"
+    ],
+    "published": [
+      "公開",
+      "投稿",
+      "掲載",
+      "発行",
+      "作成日",
+      "初回公開"
+    ]
+  },
+  "ko": {
+    "updated": [
+      "업데이트",
+      "수정",
+      "최종 수정",
+      "마지막 수정",
+      "갱신",
+      "최종 업데이트",
+      "개정"
+    ],
+    "published": [
+      "게시",
+      "발행",
+      "작성",
+      "등록",
+      "발간",
+      "공개일",
+      "입력"
+    ]
+  },
+  "nb": {
+    "updated": [
+      "oppdatert",
+      "sist oppdatert",
+      "endret",
+      "sist endret",
+      "revidert",
+      "redigert"
+    ],
+    "published": [
+      "publisert",
+      "utgitt",
+      "postet",
+      "skrevet",
+      "opprettet",
+      "dato for publisering"
+    ]
+  },
+  "nl": {
+    "updated": [
+      "bijgewerkt",
+      "laatst bijgewerkt",
+      "geüpdatet",
+      "update",
+      "gewijzigd",
+      "laatst gewijzigd",
+      "aangepast",
+      "herzien"
+    ],
+    "published": [
+      "gepubliceerd",
+      "geplaatst",
+      "gepost",
+      "geschreven",
+      "aangemaakt",
+      "publicatiedatum",
+      "verschenen"
+    ]
+  },
+  "pl": {
+    "updated": [
+      "zaktualizowano",
+      "zaktualizowany",
+      "zaktualizowane",
+      "aktualizacja",
+      "ostatnia aktualizacja",
+      "zmodyfikowano",
+      "ostatnia modyfikacja",
+      "edytowano",
+      "zmieniono",
+      "poprawiono"
+    ],
+    "published": [
+      "opublikowano",
+      "opublikowany",
+      "opublikowane",
+      "data publikacji",
+      "napisano",
+      "utworzono",
+      "dodano"
+    ]
+  },
+  "pt": {
+    "updated": [
+      "atualizado",
+      "atualizada",
+      "actualizado",
+      "última atualização",
+      "última actualização",
+      "modificado",
+      "alterado",
+      "revisado",
+      "editado"
+    ],
+    "published": [
+      "publicado",
+      "publicada",
+      "publicação",
+      "data de publicação",
+      "escrito",
+      "criado",
+      "postado"
+    ]
+  },
+  "ro": {
+    "updated": [
+      "actualizat",
+      "actualizată",
+      "ultima actualizare",
+      "modificat",
+      "ultima modificare",
+      "revizuit",
+      "editat"
+    ],
+    "published": [
+      "publicat",
+      "publicată",
+      "data publicării",
+      "scris",
+      "creat",
+      "postat",
+      "adăugat"
+    ]
+  },
+  "ru": {
+    "updated": [
+      "обновлено",
+      "обновлён",
+      "обновлен",
+      "обновление",
+      "дата обновления",
+      "последнее обновление",
+      "изменено",
+      "дата изменения",
+      "отредактировано",
+      "актуально на"
+    ],
+    "published": [
+      "опубликовано",
+      "опубликован",
+      "дата публикации",
+      "написано",
+      "создано",
+      "добавлено",
+      "размещено",
+      "дата выхода"
+    ]
+  },
+  "sv": {
+    "updated": [
+      "uppdaterad",
+      "uppdaterat",
+      "senast uppdaterad",
+      "senast ändrad",
+      "ändrad",
+      "reviderad",
+      "redigerad"
+    ],
+    "published": [
+      "publicerad",
+      "publicerat",
+      "postad",
+      "skriven",
+      "skapad",
+      "publiceringsdatum"
+    ]
+  },
+  "tr": {
+    "updated": [
+      "güncellendi",
+      "güncelleme",
+      "son güncelleme",
+      "güncellenme",
+      "düzenlendi",
+      "son düzenleme",
+      "değiştirilme"
+    ],
+    "published": [
+      "yayınlandı",
+      "yayinlandi",
+      "yayınlanma",
+      "yayinlanma",
+      "yayın tarihi",
+      "yayin tarihi",
+      "yayımlandı",
+      "yayimlandi",
+      "yayımlanma",
+      "yayimlanma",
+      "yazıldı",
+      "yazildi",
+      "oluşturuldu",
+      "eklendi",
+      "paylaşıldı",
+      "paylaşildi"
+    ]
+  },
+  "zh": {
+    "updated": [
+      "更新",
+      "最后更新",
+      "最後更新",
+      "修改",
+      "最后修改",
+      "最後修改",
+      "修订",
+      "修訂",
+      "编辑于",
+      "編輯於"
+    ],
+    "published": [
+      "发布",
+      "發布",
+      "發佈",
+      "发表",
+      "發表",
+      "创建",
+      "創建",
+      "撰写",
+      "撰寫"
+    ]
+  }
+}
