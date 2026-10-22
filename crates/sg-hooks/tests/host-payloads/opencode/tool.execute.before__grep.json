@@ -1,0 +1,21 @@
+{
+  "event": "tool.execute.before",
+  "tool": "grep",
+  "args": {
+    "pattern": "second"
+  },
+  "output": null,
+  "sessionID": "ses_e9ea5ff1affejOEyxJ18DJFd5y",
+  "raw": {
+    "input": {
+      "tool": "grep",
+      "sessionID": "ses_e9ea5ff1affejOEyxJ18DJFd5y",
+      "callID": "call_00_jbumpgc7tl0a9l4gj7sefots"
+    },
+    "output": {
+      "args": {
+        "pattern": "second"
+      }
+    }
+  }
+}

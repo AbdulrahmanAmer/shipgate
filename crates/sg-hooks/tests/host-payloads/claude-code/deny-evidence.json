@@ -1,0 +1,10 @@
+{
+  "kind": "deny",
+  "attempted": "echo created > denied.txt",
+  "preToolPayload": "deny-PreToolUse__Bash.json",
+  "hookStdout": "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"shipgate WP-101 deny test\"}}",
+  "hookExit": 0,
+  "forbiddenFileExistsAfterRun": false,
+  "hostResultText": "The Bash call was refused. A PreToolUse hook returned this error: `shipgate WP-101 deny test`. So `denied.txt` was not created. As you asked, I did not try another way to create it.",
+  "toolCallsAfterDeny": 0
+}

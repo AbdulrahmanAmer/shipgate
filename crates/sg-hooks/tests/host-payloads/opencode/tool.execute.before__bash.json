@@ -1,0 +1,21 @@
+{
+  "event": "tool.execute.before",
+  "tool": "bash",
+  "args": {
+    "command": "echo shipgate-probe"
+  },
+  "output": null,
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "bash",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_5xwm9qkgvqbtsxxmo228vtxt"
+    },
+    "output": {
+      "args": {
+        "command": "echo shipgate-probe"
+      }
+    }
+  }
+}

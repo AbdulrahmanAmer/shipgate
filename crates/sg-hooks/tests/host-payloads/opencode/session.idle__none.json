@@ -1,0 +1,14 @@
+{
+  "event": "session.idle",
+  "tool": null,
+  "args": null,
+  "output": null,
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "id": "evt_1615051dd0017uFgc0b7vOOSrZ",
+    "type": "session.idle",
+    "properties": {
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB"
+    }
+  }
+}

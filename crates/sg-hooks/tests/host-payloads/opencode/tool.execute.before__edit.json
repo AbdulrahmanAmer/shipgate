@@ -1,0 +1,25 @@
+{
+  "event": "tool.execute.before",
+  "tool": "edit",
+  "args": {
+    "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt",
+    "oldString": "alpha",
+    "newString": "beta"
+  },
+  "output": null,
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "edit",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_9wix0r7tulmqzvt46thevpao"
+    },
+    "output": {
+      "args": {
+        "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt",
+        "oldString": "alpha",
+        "newString": "beta"
+      }
+    }
+  }
+}

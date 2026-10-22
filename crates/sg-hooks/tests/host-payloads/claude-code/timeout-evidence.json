@@ -1,0 +1,10 @@
+{
+  "hookConfig": "PreToolUse matcher Bash, timeout 2 (s), hook sleeps 8 s then would deny",
+  "sleepLog": [
+    "start 2026-10-22T00:36:18.243Z",
+    "start 2026-10-22T00:36:24.982Z"
+  ],
+  "hookFinished": false,
+  "commandRanDespiteTimeout": true,
+  "conclusion": "hook killed at its timeout; the tool call proceeded (fail-open)"
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "deny",
+  "attempted": "echo created > denied.txt",
+  "preToolPayload": "deny-PreToolUse__Bash.json",
+  "hookStdout": "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"shipgate WP-101 deny test\"}}",
+  "hookExit": 0,
+  "forbiddenFileExistsAfterRun": false,
+  "hostResultText": "Refused by the PreToolUse hook: “shipgate WP-101 deny test.”",
+  "commandExecutionItems": 0
+}

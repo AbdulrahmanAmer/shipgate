@@ -1,0 +1,21 @@
+{
+  "event": "tool.execute.before",
+  "tool": "read",
+  "args": {
+    "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt"
+  },
+  "output": null,
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "read",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_yv6hi5kmqajloy6yvyfs0q7g"
+    },
+    "output": {
+      "args": {
+        "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt"
+      }
+    }
+  }
+}

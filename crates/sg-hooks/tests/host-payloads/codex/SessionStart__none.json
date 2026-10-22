@@ -1,0 +1,9 @@
+{
+  "session_id": "01a1610c-a52c-7012-ba8d-0ca6b82b0b17",
+  "transcript_path": "C:\\Users\\DELL\\.codex\\sessions\\2026\\10\\22\\rollout-2026-10-22T03-39-41-01a1610c-a52c-7012-ba8d-0ca6b82b0b17.jsonl",
+  "cwd": "C:\\Users\\DELL\\AppData\\Local\\Temp\\claude\\D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate\\c8b35d6c-3ff9-4834-b145-88b68feb46d7\\scratchpad\\wp101\\codex",
+  "hook_event_name": "SessionStart",
+  "model": "gpt-5.6-luna",
+  "permission_mode": "bypassPermissions",
+  "source": "startup"
+}

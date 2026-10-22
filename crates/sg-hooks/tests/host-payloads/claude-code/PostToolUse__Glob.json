@@ -1,0 +1,33 @@
+{
+  "session_id": "b504b8e2-736c-437f-a0e9-cab130e6410b",
+  "transcript_path": "C:\\Users\\DELL\\.claude\\projects\\C--Users-DELL-AppData-Local-Temp-claude-D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate-c8b35d6c-3ff9-4834-b145-88b68feb46d7-sc-xl5gvd\\b504b8e2-736c-437f-a0e9-cab130e6410b.jsonl",
+  "cwd": "C:\\Users\\DELL\\AppData\\Local\\Temp\\claude\\D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate\\c8b35d6c-3ff9-4834-b145-88b68feb46d7\\scratchpad\\wp101\\cc",
+  "prompt_id": "00bd77fc-2582-40ec-9c2d-52c1a90cd05f",
+  "permission_mode": "bypassPermissions",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Glob",
+  "tool_input": {
+    "pattern": "*.txt",
+    "path": "C:/Users/DELL/AppData/Local/Temp/claude/D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate/c8b35d6c-3ff9-4834-b145-88b68feb46d7/scratchpad/wp101/cc"
+  },
+  "tool_response": {
+    "filenames": [
+      "prompt1.txt",
+      "notes.txt",
+      "sample.txt",
+      "prompt2.txt",
+      "prompt3.txt",
+      "prompt4.txt"
+    ],
+    "durationMs": 612,
+    "numFiles": 6,
+    "truncated": false,
+    "totalMatches": 6,
+    "countIsComplete": true
+  },
+  "tool_use_id": "toolu_01LtFQ4pYFWBkwevjr5haTEv",
+  "duration_ms": 613
+}

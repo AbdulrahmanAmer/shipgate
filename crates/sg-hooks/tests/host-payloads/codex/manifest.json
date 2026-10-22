@@ -1,0 +1,109 @@
+{
+  "host": "codex",
+  "hostVersion": "codex-cli 0.162.1",
+  "observedOn": "2026-10-22",
+  "os": "windows-x64",
+  "docs": [
+    "https://developers.openai.com/codex/hooks",
+    "https://learn.chatgpt.com/docs/hooks"
+  ],
+  "events": [
+    {
+      "event": "SessionStart",
+      "tool": null,
+      "file": "SessionStart__none.json",
+      "fields": [
+        "hook_event_name",
+        "session_id"
+      ]
+    },
+    {
+      "event": "UserPromptSubmit",
+      "tool": null,
+      "file": "UserPromptSubmit__none.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "prompt"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "apply_patch",
+      "file": "PreToolUse__apply_patch.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Bash",
+      "file": "PreToolUse__Bash.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "apply_patch",
+      "file": "PostToolUse__apply_patch.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Bash",
+      "file": "PostToolUse__Bash.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "Stop",
+      "tool": null,
+      "file": "Stop__none.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "stop_hook_active"
+      ]
+    }
+  ],
+  "blockChecks": [
+    {
+      "kind": "deny",
+      "effect": "took-effect",
+      "output": "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"shipgate WP-101 deny test\"}}",
+      "outputKeys": [
+        "hookSpecificOutput",
+        "hookEventName",
+        "permissionDecision",
+        "permissionDecisionReason"
+      ],
+      "file": "deny-evidence.json"
+    },
+    {
+      "kind": "block",
+      "effect": "took-effect",
+      "output": "{\"decision\":\"block\",\"reason\":\"shipgate WP-101 block test: also create the file after-block.txt containing ok\"}",
+      "outputKeys": [
+        "decision",
+        "reason"
+      ],
+      "file": "block-evidence.json"
+    }
+  ]
+}

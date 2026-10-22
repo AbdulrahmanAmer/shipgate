@@ -1,0 +1,197 @@
+{
+  "host": "opencode",
+  "hostVersion": "1.19.3",
+  "observedOn": "2026-10-22",
+  "os": "windows-x64",
+  "docs": [
+    "https://opencode.ai/docs/plugins/"
+  ],
+  "events": [
+    {
+      "event": "tool.execute.before",
+      "tool": "bash",
+      "file": "tool.execute.before__bash.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.command"
+      ]
+    },
+    {
+      "event": "tool.execute.before",
+      "tool": "edit",
+      "file": "tool.execute.before__edit.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.filePath"
+      ]
+    },
+    {
+      "event": "tool.execute.before",
+      "tool": "glob",
+      "file": "tool.execute.before__glob.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool"
+      ]
+    },
+    {
+      "event": "tool.execute.before",
+      "tool": "grep",
+      "file": "tool.execute.before__grep.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool"
+      ]
+    },
+    {
+      "event": "tool.execute.before",
+      "tool": "read",
+      "file": "tool.execute.before__read.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.filePath"
+      ]
+    },
+    {
+      "event": "tool.execute.before",
+      "tool": "webfetch",
+      "file": "tool.execute.before__webfetch.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.url"
+      ]
+    },
+    {
+      "event": "tool.execute.before",
+      "tool": "write",
+      "file": "tool.execute.before__write.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.filePath"
+      ]
+    },
+    {
+      "event": "tool.execute.after",
+      "tool": "bash",
+      "file": "tool.execute.after__bash.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.command",
+        "output"
+      ]
+    },
+    {
+      "event": "tool.execute.after",
+      "tool": "edit",
+      "file": "tool.execute.after__edit.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.filePath",
+        "output"
+      ]
+    },
+    {
+      "event": "tool.execute.after",
+      "tool": "glob",
+      "file": "tool.execute.after__glob.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "output"
+      ]
+    },
+    {
+      "event": "tool.execute.after",
+      "tool": "grep",
+      "file": "tool.execute.after__grep.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "output"
+      ]
+    },
+    {
+      "event": "tool.execute.after",
+      "tool": "read",
+      "file": "tool.execute.after__read.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.filePath",
+        "output"
+      ]
+    },
+    {
+      "event": "tool.execute.after",
+      "tool": "webfetch",
+      "file": "tool.execute.after__webfetch.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.url",
+        "output"
+      ]
+    },
+    {
+      "event": "tool.execute.after",
+      "tool": "write",
+      "file": "tool.execute.after__write.json",
+      "fields": [
+        "event",
+        "sessionID",
+        "tool",
+        "args.filePath",
+        "output"
+      ]
+    },
+    {
+      "event": "session.idle",
+      "tool": null,
+      "file": "session.idle__none.json",
+      "fields": [
+        "event",
+        "sessionID"
+      ]
+    }
+  ],
+  "blockChecks": [
+    {
+      "kind": "deny",
+      "effect": "took-effect",
+      "output": "throw new Error(\"shipgate WP-101 deny test\")",
+      "outputKeys": [
+        "Error"
+      ],
+      "file": "deny-evidence.json"
+    },
+    {
+      "kind": "block",
+      "effect": "took-effect",
+      "output": "client.session.promptAsync({ path: { id: sessionID }, body: { parts: [{ type: \"text\", text: \"shipgate WP-101 block test: also create the file after-block.txt containing ok\" }] } })",
+      "outputKeys": [
+        "promptAsync"
+      ],
+      "file": "block-evidence.json"
+    }
+  ]
+}

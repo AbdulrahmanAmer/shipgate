@@ -1,0 +1,38 @@
+{
+  "event": "tool.execute.after",
+  "tool": "edit",
+  "args": {
+    "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt",
+    "oldString": "alpha",
+    "newString": "beta"
+  },
+  "output": "Edit applied successfully.",
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "edit",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_9wix0r7tulmqzvt46thevpao",
+      "args": {
+        "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt",
+        "oldString": "alpha",
+        "newString": "beta"
+      }
+    },
+    "output": {
+      "metadata": {
+        "diagnostics": {},
+        "diff": "Index: C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\n===================================================================\n--- C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\n+++ C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\n@@ -1,2 +1,2 @@\n-alpha line\n+beta line\n second line\n",
+        "filediff": {
+          "file": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt",
+          "patch": "Index: C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\n===================================================================\n--- C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\n+++ C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\n@@ -1,2 +1,2 @@\n-alpha line\n+beta line\n second line\n",
+          "additions": 1,
+          "deletions": 1
+        },
+        "truncated": false
+      },
+      "title": "Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt",
+      "output": "Edit applied successfully."
+    }
+  }
+}

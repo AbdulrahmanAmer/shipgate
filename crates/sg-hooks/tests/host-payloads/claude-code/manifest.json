@@ -1,0 +1,264 @@
+{
+  "host": "claude-code",
+  "hostVersion": "2.1.296 (Claude Code)",
+  "observedOn": "2026-10-22",
+  "os": "windows-x64",
+  "docs": [
+    "https://code.claude.com/docs/en/hooks"
+  ],
+  "events": [
+    {
+      "event": "SessionStart",
+      "tool": null,
+      "file": "SessionStart__none.json",
+      "fields": [
+        "hook_event_name",
+        "session_id"
+      ]
+    },
+    {
+      "event": "UserPromptSubmit",
+      "tool": null,
+      "file": "UserPromptSubmit__none.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "prompt"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Bash",
+      "file": "PreToolUse__Bash.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Edit",
+      "file": "PreToolUse__Edit.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.file_path"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Glob",
+      "file": "PreToolUse__Glob.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.path"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Grep",
+      "file": "PreToolUse__Grep.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.path"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "PowerShell",
+      "file": "PreToolUse__PowerShell.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Read",
+      "file": "PreToolUse__Read.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.file_path"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "WebFetch",
+      "file": "PreToolUse__WebFetch.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.url"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "WebSearch",
+      "file": "PreToolUse__WebSearch.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.query"
+      ]
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Write",
+      "file": "PreToolUse__Write.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.file_path"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Bash",
+      "file": "PostToolUse__Bash.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Edit",
+      "file": "PostToolUse__Edit.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.file_path"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Glob",
+      "file": "PostToolUse__Glob.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.path"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Grep",
+      "file": "PostToolUse__Grep.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.path"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "PowerShell",
+      "file": "PostToolUse__PowerShell.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.command"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Read",
+      "file": "PostToolUse__Read.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.file_path"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "WebFetch",
+      "file": "PostToolUse__WebFetch.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.url",
+        "tool_response.result"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "WebSearch",
+      "file": "PostToolUse__WebSearch.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.query",
+        "tool_response.results"
+      ]
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Write",
+      "file": "PostToolUse__Write.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "tool_name",
+        "tool_input.file_path"
+      ]
+    },
+    {
+      "event": "Stop",
+      "tool": null,
+      "file": "Stop__none.json",
+      "fields": [
+        "hook_event_name",
+        "session_id",
+        "stop_hook_active"
+      ]
+    }
+  ],
+  "blockChecks": [
+    {
+      "kind": "deny",
+      "effect": "took-effect",
+      "output": "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"shipgate WP-101 deny test\"}}",
+      "outputKeys": [
+        "hookSpecificOutput",
+        "hookEventName",
+        "permissionDecision",
+        "permissionDecisionReason"
+      ],
+      "file": "deny-evidence.json"
+    },
+    {
+      "kind": "block",
+      "effect": "took-effect",
+      "output": "{\"decision\":\"block\",\"reason\":\"shipgate WP-101 block test: also create the file after-block.txt containing ok\"}",
+      "outputKeys": [
+        "decision",
+        "reason"
+      ],
+      "file": "block-evidence.json"
+    }
+  ]
+}

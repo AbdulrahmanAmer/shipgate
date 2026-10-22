@@ -1,0 +1,32 @@
+{
+  "kind": "context + allow",
+  "hookOutputs": [
+    {
+      "event": "SessionStart",
+      "tool": null,
+      "stdout": "{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"The session codeword is PELICAN7-S.\"}}"
+    },
+    {
+      "event": "UserPromptSubmit",
+      "tool": null,
+      "stdout": "{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"The secret codeword is PELICAN7.\"}}"
+    },
+    {
+      "event": "PreToolUse",
+      "tool": "Bash",
+      "stdout": "{}"
+    },
+    {
+      "event": "PostToolUse",
+      "tool": "Bash",
+      "stdout": "{\"hookSpecificOutput\":{\"hookEventName\":\"PostToolUse\",\"additionalContext\":\"The tool codeword is PELICAN7-T.\"}}"
+    },
+    {
+      "event": "Stop",
+      "tool": null,
+      "stdout": "{}"
+    }
+  ],
+  "agentAnswerWhenAskedForCodewords": "The command printed `ctx-probe`.\n\nCodewords from hooks/system context: session codeword PELICAN7-S, secret codeword PELICAN7, tool codeword PELICAN7-T.",
+  "conclusion": "additionalContext from SessionStart, UserPromptSubmit and PostToolUse reached the model; allow output `{}` on PreToolUse and Stop was accepted"
+}

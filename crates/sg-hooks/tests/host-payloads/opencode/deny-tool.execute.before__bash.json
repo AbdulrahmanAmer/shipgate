@@ -1,0 +1,21 @@
+{
+  "event": "tool.execute.before",
+  "tool": "bash",
+  "args": {
+    "command": "echo created > denied.txt"
+  },
+  "output": null,
+  "sessionID": "ses_e9eaef7ddffeBOks7jO7mdZXN8",
+  "raw": {
+    "input": {
+      "tool": "bash",
+      "sessionID": "ses_e9eaef7ddffeBOks7jO7mdZXN8",
+      "callID": "call_00_kzpt9eaaeoftwqv32zwvnctg"
+    },
+    "output": {
+      "args": {
+        "command": "echo created > denied.txt"
+      }
+    }
+  }
+}

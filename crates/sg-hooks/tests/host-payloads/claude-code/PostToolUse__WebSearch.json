@@ -1,0 +1,71 @@
+{
+  "session_id": "b504b8e2-736c-437f-a0e9-cab130e6410b",
+  "transcript_path": "C:\\Users\\DELL\\.claude\\projects\\C--Users-DELL-AppData-Local-Temp-claude-D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate-c8b35d6c-3ff9-4834-b145-88b68feb46d7-sc-xl5gvd\\b504b8e2-736c-437f-a0e9-cab130e6410b.jsonl",
+  "cwd": "C:\\Users\\DELL\\AppData\\Local\\Temp\\claude\\D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate\\c8b35d6c-3ff9-4834-b145-88b68feb46d7\\scratchpad\\wp101\\cc",
+  "prompt_id": "00bd77fc-2582-40ec-9c2d-52c1a90cd05f",
+  "permission_mode": "bypassPermissions",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "WebSearch",
+  "tool_input": {
+    "query": "example domain iana",
+    "mode": "standard"
+  },
+  "tool_response": {
+    "query": "example domain iana",
+    "results": [
+      {
+        "tool_use_id": "srvtoolu_01Ejt6xQMdYvh9sWoCZTaFxc",
+        "content": [
+          {
+            "title": "Example Domains",
+            "url": "https://iana.org/domains/example"
+          },
+          {
+            "title": "0% found this document useful (0 votes)",
+            "url": "https://www.scribd.com/document/873956284/Example-Domains"
+          },
+          {
+            "title": ".example",
+            "url": "https://en.wikipedia.org/wiki/.example"
+          },
+          {
+            "title": "Example.com",
+            "url": "https://en.wikipedia.org/wiki/Example.com"
+          },
+          {
+            "title": "Example Domains",
+            "url": "https://www.netify.ai/documentation/agent/concepts/features/applications/catalog/example-domains"
+          },
+          {
+            "title": "internet.watch.impress.co.jp",
+            "url": "https://internet.watch.impress.co.jp/docs/yajiuma/2145539.html"
+          },
+          {
+            "title": "IANA-managed Reserved Domains",
+            "url": "https://res-dom.iana.org"
+          },
+          {
+            "title": "kiroku.today",
+            "url": "https://kiroku.today/en/url/www.iana.org/domains/example"
+          },
+          {
+            "title": "example domains",
+            "url": "https://www.netify.ai/documentation/netify-agent/v4/integration_resources/applications/catalog/example-domains"
+          },
+          {
+            "title": "Archive readyExternal timestamp ready",
+            "url": "https://kiroku.today/en/a/0fefee89dcmmb4gt"
+          }
+        ]
+      },
+      "The IANA Example Domains page says a number of domains such as example.com and example.org are maintained for documentation purposes under RFC 2606 and RFC 6761. Those domains may be used as illustrative examples in documents without prior coordination with us, and they are not available for registration or transfer.\n\nIANA also runs a basic web service on these hosts, but these web services are provided as best effort, but are not designed to support production applications. The page asks developers not to build applications that depend on HTTP service from these domains.\n\nRelated results cover the same ground. Wikipedia's entry on example.com describes it as a reserved domain that IANA owns, and it notes that the Internet Corporation for Assigned Names and Numbers (ICANN) operates websites for these domains with content that reflects their purpose. One result is an archived copy of the IANA page from April 2026, which matches the current text."
+    ],
+    "durationSeconds": 5.086199399999997,
+    "searchCount": 1
+  },
+  "tool_use_id": "toolu_012vTToSuqcsa4d1FYd2qHgW",
+  "duration_ms": 5087
+}

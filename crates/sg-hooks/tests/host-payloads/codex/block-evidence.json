@@ -1,0 +1,12 @@
+{
+  "kind": "block",
+  "firstStopPayload": "block-Stop__1.json",
+  "secondStopPayload": "block-Stop__2.json",
+  "firstStopHookStdout": "{\"decision\":\"block\",\"reason\":\"shipgate WP-101 block test: also create the file after-block.txt containing ok\"}",
+  "stopHookActiveOnFirst": false,
+  "stopHookActiveOnSecond": true,
+  "agentContinued": true,
+  "toolCallsAfterBlock": [
+    "apply_patch"
+  ]
+}
