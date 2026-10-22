@@ -36,6 +36,7 @@ const cases = [
   ["patched trace-check → refused", ["tools/trace/trace-check.mjs"], "refused"],
   ["edited the spec → refused", ["spec/packs/ux.md"], "refused"],
   ["weakened a WP acceptance test → refused", ["crates/sg-analysis/tests/wp_103.rs"], "refused"],
+  ["changed an acceptance test's sample data → refused", ["crates/sg-cli/tests/wp_103/vue.vue"], "refused"],
   ["added an ordinary test file → ok", ["crates/sg-analysis/tests/grammar_cases.rs"], "ok"],
 ];
 let failed = 0;

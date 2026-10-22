@@ -30,7 +30,8 @@ export const PROTECTED = [
   /^\.claude\//,
   /^CLAUDE\.md$/,
   // WP acceptance tests are written by the orchestrator before the builder starts (BUILD_MAP § 4.1 item 3).
-  /(^|\/)tests\/wp_[0-9]{3,4}[a-z]?(_[a-z0-9_]+)?\.rs$/,
+  /(^|\/)tests\/wp_[0-9]{3,4}[a-z]?(_[a-z0-9_]+)?(\.rs$|\/)/, // the test file, and its data directory tests/wp_<id>/
+
 ];
 const changed = execFileSync("git", ["-C", root, "diff", "--name-only", `${base}...${branch}`], { encoding: "utf8" })
   .split(/\r?\n/)

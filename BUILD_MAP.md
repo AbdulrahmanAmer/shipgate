@@ -52,7 +52,9 @@ A signed, closed-source, single-binary tool (`shipgate`) for Windows, macOS and 
     sg-licence       licence verification, seats, CI tokens
     sg-cli           clap CLI, every command in spec/05 § 1, exit codes
   sidecar\           TypeScript package executed by the managed Node: Playwright runner, axe, web-vitals, Lighthouse
-  rules\             rule metadata YAML, detectors, feature tables, ruleset data (phrase lists, stop words, patterns)
+  rules\             rule metadata YAML, detectors, feature tables, ruleset data (phrase lists, stop words, patterns), provenance.json, grammar-tiers.json
+  toolchain\         draft toolchain manifest (03 § 19) and unavailable.json (WP-102)
+  wp\WP-<id>\        per-WP evidence, spec-gaps and reports (orchestrator-owned)
   adapters\          built-in adapter manifests and trap rules
   schemas\           generated JSON Schemas (checked in)
   corpus\            conformance fixture projects (known-good / known-bad) per adapter and pack
@@ -149,7 +151,7 @@ Agents tend to report a work package done when the parts they found hard are mis
 | WP-203 | `sg-policy`: policy loading, defaults (03 § 3.5), unknown-key rejection, CFG-001..009 (incl. `project.stage` and planned services), Operator data files (business facts, legacy URLs, approvals, merchant feed, webhook fixtures; 03 § 14), URL-pattern grammar (03 § 2.1) with specificity, globs | WP-202 |
 | WP-204 | `sg-keys`: Ed25519, Argon2id passphrase encryption, keychain backends (Windows Credential Manager, macOS Keychain, Linux Secret Service + encrypted-file fallback), trust store with roles, install secret, fingerprints (03 § 7) | WP-201 |
 | WP-205 | `sg-lock`: lock inputs/digest/sign/verify (03 § 8), waivers and overrides with expiry, debt file + fingerprints (04 § 9.3); treeHash/repo-id helpers (04 § 15, used by WP-207 and WP-301) | WP-203, WP-204 |
-| WP-206 | `sg-rules`: rule metadata loader/validator (03 § 5, incl. `owns` waivability check, tombstones), embedded rulesets (current + 3 previous), launch-stable list mechanics, ruleset data loading (WP-104 outputs) | WP-202 |
+| WP-206 | `sg-rules`: rule metadata loader/validator (03 § 5, incl. `owns` waivability check, tombstones), embedded rulesets (current + 3 previous), launch-stable list mechanics, ruleset data loading (WP-104 outputs): one typed loader per ruleset file, in the shape the citing rule defines, with a test that loads every shipped file | WP-202 |
 | WP-207 | `sg-engine` skeleton: gate model, channel→gate, prerequisites, rule outcomes, finding statuses, two-step verdict incl. BLD rule, scope downgrade and reduced runs (04 § 1.6), handoff conditions (04 § 1.9), review results from `quality/audit/review.json` (04 § 1.7), grouping/evidenceHash/ranking (04 § 9), attempts, report writers (JSON, SARIF, JUnit, summary.md), sealed verdict record (04 § 8.1) | WP-201, WP-205, WP-206, WP-204 |
 | WP-208 | `sg-cli` skeleton: command tree from spec 05 § 1, exit codes, `rule`, `version`, `doctor` (partial), CLI wiring for `keys` and `lock` | WP-207 |
 | WP-209 | **Corpus harness**: fixture project layout (`corpus/<pack>/<RULE-ID>/{spec,holdout}/<name>/`), the `expected.json` format of § 4.1 item 3 (`{ rule, part?, kind, expect: [{ rule, part, failureClass }] }`; optional extra keys such as `groupKey` or an expected verdict may be added and are ignored by trace-check), `shipgate dev fixture <dir> --json` (05 § 1, the output trace-check reads), `xtask corpus --json` (runs every locked fixture through `dev fixture`, for the § 4 determinism check), `shipgate rule --list --json` registry export, golden-report comparison, `FIXTURES.lock` maintenance command for the orchestrator; `trace-check --wp WP-209` must pass on the harness's own fixtures; every later WP uses it | WP-207, WP-208 |

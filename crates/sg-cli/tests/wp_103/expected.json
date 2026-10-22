@@ -1,0 +1,100 @@
+{
+  "vue": {
+    "file": "sample.vue",
+    "sinkLines": [
+      3
+    ]
+  },
+  "svelte": {
+    "file": "sample.svelte",
+    "sinkLines": [
+      6
+    ]
+  },
+  "astro": {
+    "file": "sample.astro",
+    "sinkLines": [
+      5
+    ]
+  },
+  "embedded-template": {
+    "file": "sample.html.erb",
+    "sinkLines": [
+      2,
+      3
+    ]
+  },
+  "twig": {
+    "file": "sample.html.twig",
+    "sinkLines": [
+      2
+    ]
+  },
+  "blade": {
+    "file": "sample.blade.php",
+    "sinkLines": [
+      2
+    ]
+  },
+  "jinja2": {
+    "file": "sample.html.j2",
+    "sinkLines": [
+      2,
+      3
+    ]
+  },
+  "typescript": {
+    "file": "sample.ts",
+    "sinkLines": []
+  },
+  "tsx": {
+    "file": "sample.tsx",
+    "sinkLines": [
+      2
+    ]
+  },
+  "javascript": {
+    "file": "sample.js",
+    "sinkLines": []
+  },
+  "python": {
+    "file": "sample.py",
+    "sinkLines": []
+  },
+  "ruby": {
+    "file": "sample.rb",
+    "sinkLines": []
+  },
+  "php": {
+    "file": "sample.php",
+    "sinkLines": []
+  },
+  "go": {
+    "file": "sample.go",
+    "sinkLines": []
+  },
+  "java": {
+    "file": "Sample.java",
+    "sinkLines": []
+  },
+  "kotlin": {
+    "file": "sample.kt",
+    "sinkLines": []
+  },
+  "csharp": {
+    "file": "Sample.cs",
+    "sinkLines": []
+  },
+  "rust": {
+    "file": "sample.rs",
+    "sinkLines": []
+  },
+  "html": {
+    "file": "sample.html",
+    "sinkLines": []
+  },
+  "css": {
+    "file": "sample.css",
+    "sinkLines": []
+  }
+}
