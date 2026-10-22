@@ -59,8 +59,10 @@ jobs:
         run: cargo clippy --workspace --all-targets -- -D warnings
       - name: stub-scan
         run: cargo xtask stub-scan
+      # WP acceptance tests (tests/wp_*.rs) fail until their WP is built; the trace-gates job
+      # judges them for every claimed WP, so this job runs everything else.
       - name: tests
-        run: cargo nextest run --profile ci --workspace
+        run: cargo nextest run --profile ci --workspace -E "not test(/^wp_/)"
       - name: deny
         if: matrix.os == 'ubuntu-latest'
         run: cargo deny check
