@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "macros.html" import field %}
+{% block content %}
+  {# a comment #}
+  {% for user in users if user.active %}
+    <li class="{{ 'odd' if loop.index is odd else 'even' }}">{{ user.name|e|upper }}</li>
+    {% include "card.html" with context %}
+  {% else %}
+    <p>none</p>
+  {% endfor %}
+  {% set x = {'a': 1, 'b': [1, 2]} %}
+  {% if a and not b or c == 'x' %}ok{% elif d %}d{% endif %}
+  {{ 'x' ~ y }}
+  {% macro input(name, value='') -%}<input name="{{ name }}" value="{{ value|e }}">{%- endmacro %}
+  <div>{{ body|safe }}</div>
+  <p>{{ intro | default('') | safe }}</p>
+  {% autoescape false %}{{ more }}{% endautoescape %}
+  {{ Markup(x) }}
+{% endblock %}

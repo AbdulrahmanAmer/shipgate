@@ -1,0 +1,13 @@
+<h1><%= @title %></h1>
+<%# a comment %>
+<% @items.each do |item| %>
+  <li class="<%= item.css %>"><%= item.name %></li>
+<% end %>
+<%- if @ok -%>
+  <p>yes</p>
+<%- end -%>
+<div><%== @body %></div>
+<p><%= raw(@intro) %></p>
+<p><%= @more.html_safe %></p>
+<p><%= sanitize(@clean) %></p>
+<%= render partial: "card", locals: { a: 1 } %>

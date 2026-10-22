@@ -1,0 +1,17 @@
+[package]
+name = "tree-sitter-blade"
+description = "Blade (Laravel) grammar for tree-sitter (EmranMR/tree-sitter-blade, vendored verbatim; see VENDORED.md)"
+version = "0.12.0"
+edition = "2021"
+license = "MIT"
+publish = false
+build = "build.rs"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+tree-sitter-language = "0.1"
+
+[build-dependencies]
+cc = "1"

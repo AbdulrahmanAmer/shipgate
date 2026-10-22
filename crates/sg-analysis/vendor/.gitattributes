@@ -1,0 +1,5 @@
+# Generated third-party parsers: keep bytes exactly as upstream (no line-ending conversion), skip diffs.
+*.c -text -diff linguist-vendored
+*.h -text -diff linguist-vendored
+node-types.json -text -diff linguist-vendored
+LICENSE -text
