@@ -21,3 +21,14 @@ Applied to the spec in one batch when WP-104 closes (one `spec/CHANGES.md` entry
 
 Part b UNPROVEN items (authored without a fetched source: EqualWeb/Max Access hosts, three debug-path signatures, Braintree/Adyen sandbox markers, Wix host and IndexNow endpoints in `write-apis.json`): accepted as experimental data — every rule ships `experimental` until its corpus passes (04 § 14), so a wrong entry surfaces as a corpus or dogfood false positive, not a release blocker. Listed in `rules/provenance.json` as `LicenseRef-shipgate-authored`.
 `wp-lockout-signatures.json`: the strings are short factual messages, not copyrightable expression; no plugin code is copied. Accepted.
+
+## Part a (`spec-changes-a.md`)
+All "state the shape / rule in the spec" proposals are accepted as written by the part (items 1, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13): the spec text is amended to the shape the data uses, in the batch. Specific decisions:
+- 2 `schemaorg.json` (CC-BY-SA-3.0): kept as a separate data file under its own licence with attribution (names and relations only, no descriptions); distributed as a fetched data snapshot (03 § 19 `purpose: "data"`, `refresh: "fetch"`) rather than compiled into the binary, so the closed binary isn't an adaptation of it. WP-102's manifest gets a `schemaorg` data item (I add it if WP-102 doesn't).
+- 8 `geo-headers.json`: `ip-api` is not an npm package → removed from the shipped `packages` list (the spec example is corrected); `x-country-code` stays as a header some apps read, described as "custom header set by reverse proxies".
+- 9 SE-107: reworded — `shippingDetails` and `hasMerchantReturnPolicy` are recommended (SE-101 `recommended`); SE-107 owns only the organisation-level return-policy fallback. SE-101 `recommended` skips entries covered by a satisfied `anyOf`.
+- 11 `engine-crawlers.json`: add `honoursRobots` (default true); SE-010 `decision` skips rows with `false`.
+- 13 `placeholder-handles.json`: one leading `@` is stripped before comparison (MET-011 `social`); the `@` duplicates are removed from the file.
+- `gsc-indexed-states.json`: `da`, `ko`, `nb`, `ro` are empty because no source exists; an empty list is the 04 § 15 *No entry* outcome for that locale (ROL-003 then reports `notConfigured(indexing-export-locale)` unless another locale matches), never a silent pass. Recorded, not hidden.
+- SE-501 example "Google Fonts": GreatFire reports both Fonts hosts reachable → the example list in SE-501 is changed to hosts the shipped `china-blocked-hosts.json` actually lists.
+- UNPROVEN rows (special-announcement, vehicle-listing, Bing property lists, Bytespider `honoursRobots`, social-host handle segments, local-listing regions) ship as experimental data (04 § 14), listed in provenance as authored/inferred.
