@@ -1,0 +1,445 @@
+{
+  "a11y-overlays.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md § A11-018",
+      "https://accessibe.com",
+      "https://userway.org/docs",
+      "https://wsmcdn.audioeye.com/aem.js",
+      "https://cdn.equalweb.com/",
+      "https://raw.githubusercontent.com/plugins.svn.wordpress.org/max-access/trunk/index.php"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "UNPROVEN hosts: EqualWeb (cdn.equalweb.com exists, answers 403 to scripts) and Max Access (maxaccess.io is the vendor site; onlineada.com is the API host its WordPress plugin calls, and redirects to audioeye.com). accessiBe (acsbapp.com), UserWay (cdn.userway.org) and AudioEye (wsmcdn.audioeye.com) serve their widget script."
+  },
+  "auth-bypass-headers.json": {
+    "source": [
+      "spec:spec/packs/security.md § 4 SEC-021"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "breached-passwords.txt": {
+    "source": [
+      "spec:spec/packs/security.md § 4 SEC-018",
+      "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/xato-net-10-million-passwords-1000000.txt",
+      "https://raw.githubusercontent.com/danielmiessler/SecLists/master/LICENSE"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "MIT",
+    "attribution": "First 300 entries of 15 to 64 printable ASCII characters, in rank order, from SecLists Passwords/Common-Credentials/xato-net-10-million-passwords-1000000.txt (SecLists, Copyright (c) 2018 Daniel Miessler, MIT). Entries containing profanity were skipped."
+  },
+  "cache-hit-headers.json": {
+    "source": [
+      "spec:spec/packs/security.md § 3 SEC-058"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "challenge-fields.json": {
+    "source": [
+      "spec:spec/packs/security.md § 6 SEC-055",
+      "https://developers.cloudflare.com/turnstile/get-started/server-side-validation/",
+      "https://docs.hcaptcha.com/",
+      "https://developers.google.com/recaptcha/docs/verify",
+      "https://raw.githubusercontent.com/altcha-org/altcha/main/README.md"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "ci-hardening.json": {
+    "source": [
+      "spec:spec/packs/security.md § 7 SEC-066",
+      "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/ci/yaml/includes.md",
+      "https://gitlab.com/gitlab-org/gitlab/-/raw/master/doc/ci/variables/predefined_variables.md",
+      "https://circleci.com/docs/orbs-faq/",
+      "https://support.atlassian.com/bitbucket-cloud/docs/use-pipes-in-bitbucket-pipelines/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "No Azure Pipelines or Jenkins entries: no source fetched."
+  },
+  "classNameFunctions.json": {
+    "source": [
+      "spec:spec/packs/architecture.md § ARC-013",
+      "https://registry.npmjs.org/clsx",
+      "https://registry.npmjs.org/classnames",
+      "https://registry.npmjs.org/tailwind-variants"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "csp-bypass-hosts.json": {
+    "source": [
+      "spec:spec/packs/security.md § 3 SEC-075",
+      "https://raw.githubusercontent.com/google/csp-evaluator/master/allowlist_bypasses/json/jsonp.json",
+      "https://raw.githubusercontent.com/google/csp-evaluator/master/allowlist_bypasses/json/angular.json",
+      "https://raw.githubusercontent.com/google/csp-evaluator/master/LICENSE",
+      "https://github.com/google/csp-evaluator"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "Apache-2.0",
+    "attribution": "Hosts taken from google/csp-evaluator allowlist_bypasses (Apache License 2.0, Copyright Google LLC; commit ad530f3ae5473f9e03c8bf500ee0ada8d9e9b822 of master, retrieved 2026-10-22), which implements the findings of Weichselbaum, Spagnuolo, Lekies, Janc: \"CSP Is Dead, Long Live CSP! On the Insecurity of Whitelists and the Future of Content Security Policy\", ACM CCS 2016. Per-tenant hosts (cloudfront.net, amazonaws.com, blogspot.com, appspot.com, github.io, ...) are left out. unpkg.com is authored (serves any npm file including AngularJS)."
+  },
+  "csrf-token-names.json": {
+    "source": [
+      "spec:spec/packs/security.md § 4 SEC-024",
+      "https://raw.githubusercontent.com/django/django/main/docs/ref/csrf.txt",
+      "https://raw.githubusercontent.com/django/django/main/docs/howto/csrf.txt",
+      "https://raw.githubusercontent.com/spring-projects/spring-security/main/docs/modules/ROOT/pages/features/exploits/csrf.adoc",
+      "https://raw.githubusercontent.com/laravel/docs/master/csrf.md",
+      "https://raw.githubusercontent.com/symfony/symfony-docs/7.4/security/csrf.rst",
+      "https://raw.githubusercontent.com/pallets-eco/flask-wtf/main/docs/csrf.rst"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "debug-paths.json": {
+    "source": [
+      "spec:spec/packs/security.md § 6 SEC-035",
+      "https://raw.githubusercontent.com/pallets/werkzeug/main/src/werkzeug/debug/tbtools.py",
+      "https://raw.githubusercontent.com/django-commons/django-debug-toolbar/main/debug_toolbar/templates/debug_toolbar/base.html",
+      "https://raw.githubusercontent.com/fruitcake/laravel-debugbar/master/config/debugbar.php",
+      "https://raw.githubusercontent.com/rails/rails/main/railties/lib/rails/templates/rails/welcome/index.html.erb"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Signatures not given by the spec (/actuator `\"_links\"`, /api-docs, /_debugbar) are authored and not verified against a live instance: UNPROVEN."
+  },
+  "default-emails.json": {
+    "source": [
+      "spec:spec/packs/data-api.md § DB-012",
+      "https://www.rfc-editor.org/rfc/rfc2606.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "drag-libraries.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md § A11-025",
+      "https://registry.npmjs.org/sortablejs",
+      "https://registry.npmjs.org/@dnd-kit%2fcore",
+      "https://registry.npmjs.org/muuri",
+      "https://registry.npmjs.org/@angular%2fcdk"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "eol-products.json": {
+    "source": [
+      "spec:spec/packs/ops.md § OPS-015",
+      "https://endoflife.date/api/v1/products",
+      "https://raw.githubusercontent.com/endoflife-date/endoflife.date/master/LICENSE"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "MIT",
+    "attribution": "Product ids from the endoflife.date product list (endoflife.date contributors, MIT)."
+  },
+  "error-reporting-providers.json": {
+    "source": [
+      "spec:spec/packs/ops.md § 1 errorReporting",
+      "https://raw.githubusercontent.com/getsentry/sentry-javascript/develop/packages/core/test/lib/utils/dsn.test.ts",
+      "https://raw.githubusercontent.com/bugsnag/bugsnag-js/next/packages/core/config.js",
+      "https://raw.githubusercontent.com/rollbar/rollbar.js/master/src/defaults.js",
+      "https://raw.githubusercontent.com/honeybadger-io/honeybadger-js/master/packages/js/README.md",
+      "https://js-agent.newrelic.com/nr-loader-spa-current.min.js",
+      "https://browser-intake-datadoghq.com/",
+      "https://us.i.posthog.com/",
+      "https://registry.npmjs.org/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Datadog, New Relic, PostHog, Honeybadger API and Sentry us-region hosts were confirmed live on 2026-10-22 (any HTTP answer) but not read from vendor docs. SDK package names were confirmed to exist on npm, PyPI, RubyGems and Packagist."
+  },
+  "exposed-paths.json": {
+    "source": [
+      "spec:spec/packs/security.md § 1 Ruleset files and their shapes",
+      "spec:spec/packs/security.md § 6 SEC-034",
+      "https://raw.githubusercontent.com/git/git/master/Documentation/gitformat-index.adoc",
+      "https://www.sqlite.org/fileformat.html",
+      "https://raw.githubusercontent.com/apache/httpd/trunk/modules/generators/mod_info.c",
+      "https://raw.githubusercontent.com/apache/httpd/trunk/modules/generators/mod_status.c",
+      "https://raw.githubusercontent.com/aws/aws-cli/develop/awscli/examples/configure/_description.rst",
+      "https://raw.githubusercontent.com/npm/cli/latest/docs/lib/content/configuring-npm/npmrc.md",
+      "https://www.rfc-editor.org/rfc/rfc7468.txt",
+      "https://raw.githubusercontent.com/vercel/next.js/canary/docs/01-app/02-guides/environment-variables.mdx"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Spec-named paths verbatim; additions (.git/index DIRC, .svn/wc.db SQLite header, /server-info, .aws/credentials, .npmrc, private-key files, extra .env.* names from Next.js conventions) authored from the cited format documentation."
+  },
+  "file-params.json": {
+    "source": [
+      "spec:spec/packs/security.md § 5 SEC-045"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "install-script-flags.json": {
+    "source": [
+      "spec:spec/packs/security.md § 8 SEC-053",
+      "https://raw.githubusercontent.com/npm/cli/latest/docs/lib/content/configuring-npm/package-lock-json.md",
+      "https://raw.githubusercontent.com/pnpm/pnpm/v8.15.9/lockfile/lockfile-types/src/index.ts",
+      "https://raw.githubusercontent.com/pnpm/pnpm/v9.15.9/lockfile/fs/src/sortLockfileKeys.ts"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "pnpm: requiresBuild is a package key in lockfile v8 types and in the v9 key order; whether v9 puts it under packages or snapshots is UNPROVEN, so both paths are listed."
+  },
+  "live-key-prefixes.json": {
+    "source": [
+      "spec:spec/01-core.md § CFG-004",
+      "spec:spec/packs/security.md § 7 SEC-042",
+      "https://docs.stripe.com/keys",
+      "https://developer.paddle.com/api-reference/about/authentication.md"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "mass-assignment-fields.json": {
+    "source": [
+      "spec:spec/packs/security.md § 5 SEC-036",
+      "https://raw.githubusercontent.com/django/django/main/django/contrib/auth/models.py"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "object-storage-hosts.json": {
+    "source": [
+      "spec:spec/packs/security.md § 6 SEC-079"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "password-columns.json": {
+    "source": [
+      "spec:spec/packs/data-api.md § DB-012",
+      "spec:spec/packs/security.md § 4 SEC-027"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "password-hash-patterns.json": {
+    "source": [
+      "spec:spec/packs/data-api.md § DB-012",
+      "https://raw.githubusercontent.com/django/django/main/django/contrib/auth/hashers.py"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "payment-id-shapes.json": {
+    "source": [
+      "spec:spec/packs/security.md § 7 SEC-048",
+      "https://developer.paddle.com/api-reference/about/paddle-ids.md"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "payment-test-markers.json": {
+    "source": [
+      "spec:spec/packs/security.md § 7 SEC-065",
+      "https://docs.stripe.com/keys",
+      "https://developer.paddle.com/api-reference/about/authentication.md",
+      "https://raw.githubusercontent.com/square/web-payments-quickstart/main/public/index.html",
+      "https://sandbox-cdn.paddle.com/paddle/v2/paddle.js",
+      "https://assets.braintreegateway.com/web/3.97.0/js/client.min.js",
+      "https://checkoutshopper-test.adyen.com/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Braintree sandbox host (sandbox.braintreegateway.com redirected to its login on 2026-10-22) and Adyen checkoutshopper-test host were confirmed to exist but not found in vendor documentation I could read: UNPROVEN as markers."
+  },
+  "publishable-keys.json": {
+    "source": [
+      "spec:spec/packs/security.md § 1 Ruleset files and their shapes",
+      "https://docs.stripe.com/keys",
+      "https://supabase.com/docs/guides/api/api-keys"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "quantity-fields.json": {
+    "source": [
+      "spec:spec/packs/security.md § 5 SEC-077"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "registries.json": {
+    "source": [
+      "spec:spec/packs/security.md § 8 SEC-053",
+      "https://yarnpkg.com/configuration/yarnrc",
+      "https://docs.npmjs.com/cli/v10/using-npm/config",
+      "https://pip.pypa.io/en/stable/cli/pip_install/",
+      "https://doc.rust-lang.org/cargo/reference/registry-index.html",
+      "https://getcomposer.org/doc/05-repositories.md",
+      "https://docs.gradle.org/current/userguide/declaring_repositories_basics.html",
+      "https://learn.microsoft.com/en-us/nuget/api/overview",
+      "https://docs.pypi.org/api/index-api/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Each host was also requested on 2026-10-22 and served registry content (registry.npmjs.org, registry.yarnpkg.com, pypi.org, index.crates.io, static.crates.io, proxy.golang.org, sum.golang.org, index.golang.org, repo.packagist.org, rubygems.org, index.rubygems.org, api.rubygems.org, repo.maven.apache.org, repo1.maven.org, maven.google.com, plugins.gradle.org, api.nuget.org). Cargo.lock names crates.io by its git index URL (github.com), see spec-changes-b.md."
+  },
+  "runtime-pins.json": {
+    "source": [
+      "spec:spec/packs/ops.md § OPS-009",
+      "https://raw.githubusercontent.com/actions/setup-node/main/action.yml",
+      "https://raw.githubusercontent.com/actions/setup-python/main/action.yml",
+      "https://raw.githubusercontent.com/actions/setup-go/main/action.yml",
+      "https://raw.githubusercontent.com/ruby/setup-ruby/master/action.yml",
+      "https://raw.githubusercontent.com/shivammathur/setup-php/main/action.yml",
+      "https://docs.netlify.com/build/configure-builds/manage-dependencies/",
+      "https://raw.githubusercontent.com/asdf-vm/asdf/master/docs/manage/configuration.md",
+      "https://raw.githubusercontent.com/jdx/mise/main/docs/configuration.md",
+      "https://developers.cloudflare.com/pages/configuration/build-image/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Package-manager versions (packageManager field, lockfile versions) are not covered by these sources: see spec-changes-b.md. Registry-free regexes compiled with the Rust regex crate."
+  },
+  "safe-type-changes.json": {
+    "source": [
+      "spec:spec/packs/data-api.md § DB-003",
+      "https://raw.githubusercontent.com/postgres/postgres/master/doc/src/sgml/ref/alter_table.sgml",
+      "https://raw.githubusercontent.com/postgres/postgres/master/src/include/catalog/pg_cast.dat"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "PostgreSQL",
+    "attribution": "Pairs are the binary-coercible casts of PostgreSQL pg_cast.dat (castmethod b) that carry no length or precision: PostgreSQL Global Development Group."
+  },
+  "secret-patterns.json": {
+    "source": [
+      "spec:spec/packs/security.md § 8 SEC-050",
+      "spec:spec/04-algorithms.md § 13 SEC-050 secret scan (diff)",
+      "https://github.com/gitleaks/gitleaks/blob/v8.30.1/config/gitleaks.toml",
+      "https://raw.githubusercontent.com/gitleaks/gitleaks/master/LICENSE",
+      "https://docs.stripe.com/keys",
+      "https://supabase.com/docs/guides/api/api-keys",
+      "https://www.rfc-editor.org/rfc/rfc7468.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "MIT",
+    "attribution": "Portions derived from the default gitleaks rules (gitleaks v8.30.1, config/gitleaks.toml), Copyright (c) 2019 Zachary Rice, MIT License (https://github.com/gitleaks/gitleaks). Patterns prefixed (?-u) to keep Go RE2 ASCII \\w \\d \\s \\b semantics under Rust regex. private-key (header only, RFC 7468 labels), supabase-jwt (payload prefix is base64url of {\"iss\":\"supabase\") and supabase-secret-key (sb_secret_ prefix) are authored."
+  },
+  "sensitive-properties.json": {
+    "source": [
+      "spec:spec/packs/security.md § 6 SEC-074"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "session-lifetimes.json": {
+    "source": [
+      "spec:spec/packs/security.md § 7 SEC-064",
+      "spec:DECISIONS.md D-004",
+      "https://pages.nist.gov/800-63-4/sp800-63b/aal/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Values: NIST SP 800-63B-4 reauthentication limits AAL1 30 days overall; AAL2 24 hours overall and 1 hour inactivity (US Government work)."
+  },
+  "sri-hosts.json": {
+    "source": [
+      "spec:spec/packs/security.md § 3 SEC-014",
+      "https://raw.githubusercontent.com/jsdelivr/jsdelivr/master/README.md",
+      "https://raw.githubusercontent.com/mjackson/unpkg/main/README.md",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+      "https://code.jquery.com/jquery-3.7.1.min.js",
+      "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+      "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "URL shapes confirmed by requesting a versioned sample on each host on 2026-10-22 (HTTP 200)."
+  },
+  "ssrf-params.json": {
+    "source": [
+      "spec:spec/packs/security.md § 5 SEC-046"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "takeover-fingerprints.json": {
+    "source": [
+      "spec:spec/packs/security.md § 6 SEC-059",
+      "https://raw.githubusercontent.com/EdOverflow/can-i-take-over-xyz/master/fingerprints.json",
+      "https://raw.githubusercontent.com/EdOverflow/can-i-take-over-xyz/master/LICENSE",
+      "https://github.com/EdOverflow/can-i-take-over-xyz"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "Derived from can-i-take-over-xyz by EdOverflow and contributors (https://github.com/EdOverflow/can-i-take-over-xyz, last push 2025-02-08), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Only entries with status Vulnerable or Edge case and a body fingerprint are used; generic 404 strings and NXDOMAIN or HTTP-status fingerprints are left out; regex-bearing fingerprints are reduced to the literal text every match contains; NoSuchBucket and herokucdn.com/error-pages/no-such-app (named by SEC-059) were confirmed against live unclaimed S3, GCS and Heroku responses on 2026-10-22."
+  },
+  "traversal-payloads.json": {
+    "source": [
+      "spec:spec/packs/security.md § 5 SEC-045"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "user-tables.json": {
+    "source": [
+      "spec:spec/packs/data-api.md § DB-012"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "weak-hash-apis.json": {
+    "source": [
+      "spec:spec/packs/security.md § 4 SEC-027",
+      "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored list of call names per ecosystem id (03 § 15 dependencies.json ecosystems); not machine-verified per language."
+  },
+  "webhook-schemes.json": {
+    "source": [
+      "spec:spec/packs/security.md § 7 SEC-049",
+      "https://docs.stripe.com/webhooks#verify-manually",
+      "https://github.com/standard-webhooks/standard-webhooks/blob/main/spec/standard-webhooks.md",
+      "https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries",
+      "https://docs.github.com/en/webhooks/webhook-events-and-payloads",
+      "https://shopify.dev/docs/apps/build/webhooks/subscribe/https",
+      "https://developer.paddle.com/webhooks/signature-verification",
+      "https://developer.paddle.com/webhooks/about/how-webhooks-work",
+      "https://docs.lemonsqueezy.com/help/webhooks/signing-requests",
+      "https://docs.lemonsqueezy.com/help/webhooks/webhook-requests"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "wp-lockout-signatures.json": {
+    "source": [
+      "spec:spec/packs/security.md § 10 SEC-072",
+      "https://plugins.svn.wordpress.org/limit-login-attempts-reloaded/trunk/core/LoginErrorPresenter.php",
+      "https://plugins.svn.wordpress.org/loginizer/trunk/init.php",
+      "https://plugins.svn.wordpress.org/wordfence/trunk/lib/wfLockedOut.php",
+      "https://plugins.svn.wordpress.org/wordfence/trunk/lib/wf503.php"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Short user-visible lockout messages observed in three GPL plugins, recorded as detection signatures (no plugin code copied)."
+  },
+  "write-apis.json": {
+    "source": [
+      "spec:spec/05-integrations.md § 3.2 Predicates writeApi",
+      "https://developer.duda.co/reference/introduction",
+      "https://developers.webflow.com/data/reference/rest-introduction",
+      "https://developers.squarespace.com/commerce-apis/overview",
+      "https://shopify.dev/docs/api/admin-graphql",
+      "https://www.indexnow.org/documentation"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "api.webflow.com, api.duda.co and api.squarespace.com answered 401 and www.wixapis.com redirected to Wix sign-in on 2026-10-22. The Wix host and the IndexNow endpoint list come from the spec text; I did not find them in vendor docs: UNPROVEN."
+  },
+  "xss-payloads.json": {
+    "source": [
+      "spec:spec/packs/security.md § 5 SEC-047"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  }
+}
