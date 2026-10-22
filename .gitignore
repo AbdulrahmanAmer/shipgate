@@ -3,3 +3,5 @@
 /quality/verify.env
 node_modules/
 /.claude/worktrees/
+/RESUME-SESSION.txt
+/.checks/
