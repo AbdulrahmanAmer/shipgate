@@ -1,0 +1,22 @@
+{
+  "ar": ["الانسحاب من العقد", "العدول عن العقد", "العدول عن الشراء", "ممارسة حق العدول"],
+  "cs": ["zde odstoupit od smlouvy", "odstoupit od smlouvy", "odstoupení od smlouvy zde"],
+  "da": ["fortryd aftale", "fortryd aftalen", "fortryd købet"],
+  "de": ["Vertrag widerrufen", "Verträge hier widerrufen", "Verträge widerrufen", "Bestellung widerrufen"],
+  "en": ["withdraw from contract here", "withdraw from contract", "withdraw from this contract", "withdraw from your order"],
+  "es": ["desistir del contrato aquí", "desistir del contrato", "ejercer el derecho de desistimiento", "desistir del pedido"],
+  "fi": ["peruuta sopimus tästä", "peruuta sopimus", "peruuta tilaus tästä"],
+  "fr": ["renoncer au contrat ici", "renoncer au contrat", "se rétracter du contrat", "exercer mon droit de rétractation", "exercer le droit de rétractation"],
+  "it": ["recedere dal contratto qui", "recedere dal contratto", "esercitare il diritto di recesso", "recedi dal contratto"],
+  "ja": ["契約を撤回", "契約の撤回", "申込みの撤回", "注文を撤回"],
+  "ko": ["계약 철회", "청약철회", "청약 철회"],
+  "nb": ["angre avtalen her", "angre avtalen", "angre kjøpet", "benytt angreretten"],
+  "nl": ["hier de overeenkomst herroepen", "overeenkomst herroepen", "bestelling herroepen", "aankoop herroepen"],
+  "pl": ["odstąp od umowy tutaj", "odstąp od umowy", "odstąpić od umowy", "odstąp od zamówienia"],
+  "pt": ["retrate-se do contrato aqui", "retrate-se do contrato", "retratar-se do contrato", "arrependimento", "cancelar compra", "cancelar contrato"],
+  "ro": ["retrageți-vă din contract aici", "retrageți-vă din contract", "retrage-te din contract", "retragere din contract"],
+  "ru": ["отказаться от договора", "отказ от договора", "отказаться от заказа", "отказаться от покупки"],
+  "sv": ["ångra avtalet här", "ångra avtalet", "ångra köpet", "frånträd avtalet"],
+  "tr": ["sözleşmeden cay", "cayma hakkını kullan", "cayma hakkını kullanın", "siparişten cay"],
+  "zh": ["撤销合同", "撤回合同", "无理由退货", "七天无理由退货", "撤销订单"]
+}

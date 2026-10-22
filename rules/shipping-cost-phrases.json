@@ -1,0 +1,22 @@
+{
+  "ar": ["رسوم الشحن", "تكلفة الشحن", "تكاليف الشحن", "مصاريف الشحن", "شحن مجاني", "الشحن مجاني", "رسوم التوصيل", "التوصيل مجاني"],
+  "cs": ["poštovné", "doprava zdarma", "cena dopravy", "náklady na dopravu", "dopravné", "plus poštovné"],
+  "da": ["forsendelse", "fragt", "gratis fragt", "fragtomkostninger", "leveringsomkostninger", "gratis levering", "plus fragt", "ekskl. fragt", "inkl. fragt"],
+  "de": ["zzgl. Versandkosten", "zzgl. Versand", "exkl. Versandkosten", "inkl. Versandkosten", "inkl. Versand", "Versandkosten", "versandkostenfrei", "kostenloser Versand", "kostenfreier Versand", "kostenlose Lieferung", "Lieferkosten", "portofrei"],
+  "en": ["plus shipping", "excl. shipping", "excluding shipping", "shipping excluded", "incl. shipping", "shipping included", "shipping costs", "shipping cost", "shipping calculated at checkout", "shipping calculated", "free shipping", "free delivery", "delivery costs", "delivery charges", "plus delivery", "excl. delivery", "postage", "free postage"],
+  "es": ["gastos de envío", "costes de envío", "costos de envío", "más gastos de envío", "envío gratis", "envío gratuito", "envío incluido", "portes gratis"],
+  "fi": ["toimituskulut", "postikulut", "rahtikulut", "ilmainen toimitus", "toimitus ilmaiseksi", "ilmainen lähetys", "lisäksi toimituskulut"],
+  "fr": ["frais de livraison", "frais de port", "frais d'expédition", "frais d’expédition", "hors frais de livraison", "livraison gratuite", "livraison offerte", "port offert", "livraison incluse"],
+  "it": ["spese di spedizione", "costi di spedizione", "spese di consegna", "più spese di spedizione", "spedizione gratuita", "spedizione gratis", "spedizione inclusa", "spedizione esclusa"],
+  "ja": ["送料", "送料無料", "送料別", "送料込", "配送料", "配送料無料", "別途送料"],
+  "ko": ["배송비", "배송료", "택배비", "무료배송", "무료 배송", "배송비 별도", "배송비 무료", "배송비 포함"],
+  "nb": ["frakt", "fraktkostnad", "frakt tilkommer", "fri frakt", "gratis frakt", "leveringskostnad", "porto", "pluss frakt", "ekskl. frakt", "frakt inkludert"],
+  "nl": ["verzendkosten", "excl. verzendkosten", "exclusief verzendkosten", "inclusief verzendkosten", "gratis verzending", "gratis levering", "bezorgkosten"],
+  "pl": ["koszty dostawy", "koszt dostawy", "koszty wysyłki", "koszt wysyłki", "darmowa dostawa", "bezpłatna dostawa", "darmowa wysyłka", "plus koszty dostawy", "dostawa gratis"],
+  "pt": ["portes de envio", "custos de envio", "despesas de envio", "custos de entrega", "taxa de entrega", "envio grátis", "envio gratuito", "portes grátis", "frete grátis", "frete", "mais portes"],
+  "ro": ["cost de livrare", "costuri de livrare", "taxe de livrare", "livrare gratuită", "transport gratuit", "costuri de transport", "taxe de transport", "plus transport"],
+  "ru": ["стоимость доставки", "бесплатная доставка", "доставка бесплатно", "расходы на доставку", "доставка включена", "плюс доставка", "доставка"],
+  "sv": ["frakt", "fraktkostnad", "fri frakt", "gratis frakt", "fraktfritt", "leveranskostnad", "plus frakt", "exkl. frakt", "inkl. frakt"],
+  "tr": ["kargo ücreti", "ücretsiz kargo", "kargo bedava", "kargo hariç", "kargo dahil", "teslimat ücreti", "nakliye ücreti", "kargo"],
+  "zh": ["运费", "包邮", "免运费", "邮费", "运费另计", "不含运费", "含运费", "快递费", "配送费", "免邮"]
+}

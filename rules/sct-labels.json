@@ -1,0 +1,142 @@
+{
+  "ar": {
+    "price": ["سعر البيع", "سعر المنتج", "أسعار المنتجات", "الثمن"],
+    "shippingCost": ["رسوم الشحن", "تكلفة الشحن", "مصاريف الشحن", "رسوم التوصيل"],
+    "payment": ["طريقة الدفع", "طرق الدفع", "وسائل الدفع", "موعد الدفع", "وقت الدفع"],
+    "delivery": ["مدة التوصيل", "موعد التسليم", "وقت التسليم", "مدة التسليم", "موعد التوصيل"],
+    "returns": ["سياسة الإرجاع", "الإرجاع والاستبدال", "سياسة الاسترداد", "الاسترجاع", "الإرجاع"]
+  },
+  "cs": {
+    "price": ["prodejní cena", "cena zboží", "cena produktu", "ceny produktů"],
+    "shippingCost": ["poštovné", "cena dopravy", "náklady na dopravu", "dopravné"],
+    "payment": ["způsob platby", "způsoby platby", "platební metody", "splatnost"],
+    "delivery": ["dodací lhůta", "doba dodání", "termín dodání", "dodací doba"],
+    "returns": ["vrácení zboží", "vrácení a výměna", "odstoupení od smlouvy", "reklamace a vrácení", "storno"]
+  },
+  "da": {
+    "price": ["salgspris", "produktpris", "priser på varer", "varens pris"],
+    "shippingCost": ["fragtomkostninger", "forsendelsesomkostninger", "leveringsomkostninger", "fragt"],
+    "payment": ["betalingsmetode", "betalingsmetoder", "betalingsform", "betalingstidspunkt"],
+    "delivery": ["leveringstid", "leveringsfrist", "leveringsdato", "forventet levering"],
+    "returns": ["returnering", "returret", "fortrydelsesret", "retur og ombytning", "returpolitik"]
+  },
+  "de": {
+    "price": ["verkaufspreis", "kaufpreis", "warenpreis", "produktpreis", "preise der waren"],
+    "shippingCost": ["versandkosten", "lieferkosten", "kosten für den versand", "portokosten"],
+    "payment": ["zahlungsart", "zahlungsarten", "zahlungsweise", "zahlungsmethode", "zahlungszeitpunkt", "zahlungsbedingungen"],
+    "delivery": ["lieferzeit", "lieferfrist", "lieferzeitpunkt", "versandzeit", "liefertermin"],
+    "returns": ["rückgabe", "rücksendung", "retoure", "widerrufsrecht", "rückgaberecht", "umtausch"]
+  },
+  "en": {
+    "price": ["selling price", "sales price", "product price", "price of goods", "prices of products"],
+    "shippingCost": ["shipping fee", "shipping fees", "shipping cost", "shipping costs", "shipping charge", "shipping charges", "delivery fee", "delivery charge", "delivery cost", "postage"],
+    "payment": ["payment method", "payment methods", "method of payment", "methods of payment", "payment timing", "time of payment", "payment terms", "payment due"],
+    "delivery": ["delivery time", "delivery date", "delivery period", "delivery timing", "shipping time", "time of delivery", "lead time", "estimated delivery"],
+    "returns": ["return policy", "returns policy", "returns and exchanges", "returns and refunds", "returns", "refund policy", "cancellation policy"]
+  },
+  "es": {
+    "price": ["precio de venta", "precio del producto", "precios de los productos", "precio de los bienes"],
+    "shippingCost": ["gastos de envío", "costes de envío", "costos de envío", "gastos de transporte"],
+    "payment": ["forma de pago", "formas de pago", "métodos de pago", "método de pago", "momento del pago", "condiciones de pago"],
+    "delivery": ["plazo de entrega", "tiempo de entrega", "fecha de entrega", "plazo de envío", "plazos de entrega"],
+    "returns": ["devoluciones", "política de devolución", "derecho de desistimiento", "devolución y reembolso", "cambios y devoluciones"]
+  },
+  "fi": {
+    "price": ["myyntihinta", "tuotteen hinta", "tuotteiden hinnat", "hinnat"],
+    "shippingCost": ["toimituskulut", "postikulut", "rahtikulut", "toimituskustannukset"],
+    "payment": ["maksutapa", "maksutavat", "maksuehdot", "maksuaika", "maksuajankohta"],
+    "delivery": ["toimitusaika", "toimitusajat", "toimituspäivä", "arvioitu toimitus"],
+    "returns": ["palautusehdot", "palautukset", "palautus ja vaihto", "peruuttamisoikeus", "palautuskäytäntö"]
+  },
+  "fr": {
+    "price": ["prix de vente", "prix du produit", "prix des produits", "prix des articles"],
+    "shippingCost": ["frais de livraison", "frais de port", "frais d'expédition", "frais d’expédition"],
+    "payment": ["mode de paiement", "modes de paiement", "moyens de paiement", "moment du paiement", "conditions de paiement"],
+    "delivery": ["délai de livraison", "délais de livraison", "date de livraison", "délai d'expédition", "délai d’expédition"],
+    "returns": ["politique de retour", "retours et échanges", "droit de rétractation", "retours et remboursements", "conditions de retour"]
+  },
+  "it": {
+    "price": ["prezzo di vendita", "prezzo del prodotto", "prezzi dei prodotti", "prezzo dei beni"],
+    "shippingCost": ["spese di spedizione", "costi di spedizione", "spese di consegna", "costo della spedizione"],
+    "payment": ["modalità di pagamento", "metodi di pagamento", "metodo di pagamento", "momento del pagamento", "condizioni di pagamento"],
+    "delivery": ["tempi di consegna", "tempi di spedizione", "data di consegna", "termine di consegna"],
+    "returns": ["politica di reso", "resi e rimborsi", "diritto di recesso", "resi e cambi", "condizioni di reso"]
+  },
+  "ja": {
+    "price": ["販売価格", "商品代金", "販売金額", "商品の価格", "商品価格"],
+    "shippingCost": ["送料", "配送料", "配送費", "送料について"],
+    "payment": ["支払時期", "支払い時期", "支払方法", "支払い方法", "お支払い方法", "代金の支払", "決済方法"],
+    "delivery": ["引渡時期", "引き渡し時期", "引渡し時期", "お届け時期", "商品の引渡", "発送時期", "納期", "お届け日", "配送時期"],
+    "returns": ["返品", "返品特約", "返品・交換", "返品について", "返品・キャンセル", "返金"]
+  },
+  "ko": {
+    "price": ["판매가격", "판매 가격", "상품 가격", "상품가격"],
+    "shippingCost": ["배송비", "배송료", "택배비"],
+    "payment": ["결제 방법", "결제방법", "결제 수단", "결제수단", "결제 시기", "대금 결제", "대금 지급"],
+    "delivery": ["배송 기간", "배송기간", "배송 시기", "배송시기", "납기", "배송일", "인도 시기"],
+    "returns": ["반품", "교환 및 환불", "환불", "반품/교환", "청약철회"]
+  },
+  "nb": {
+    "price": ["salgspris", "produktpris", "priser på varer", "varens pris"],
+    "shippingCost": ["fraktkostnad", "fraktkostnader", "leveringskostnad", "fraktpris"],
+    "payment": ["betalingsmåte", "betalingsmetode", "betalingsmetoder", "betalingstidspunkt", "betalingsvilkår"],
+    "delivery": ["leveringstid", "leveringsfrist", "leveringsdato", "forventet levering"],
+    "returns": ["returrett", "angrerett", "retur og bytte", "returpolitikk", "returnering"]
+  },
+  "nl": {
+    "price": ["verkoopprijs", "productprijs", "prijs van de producten", "prijzen van de goederen"],
+    "shippingCost": ["verzendkosten", "bezorgkosten", "kosten voor verzending", "leveringskosten"],
+    "payment": ["betaalmethode", "betaalmethoden", "betalingswijze", "betaalwijze", "betaalmoment", "betalingsvoorwaarden"],
+    "delivery": ["levertijd", "leveringstermijn", "bezorgtijd", "leverdatum", "verwachte levering"],
+    "returns": ["retourbeleid", "retourneren", "herroepingsrecht", "retour en ruil", "retourvoorwaarden"]
+  },
+  "pl": {
+    "price": ["cena sprzedaży", "cena produktu", "ceny towarów", "cena towaru"],
+    "shippingCost": ["koszty dostawy", "koszt dostawy", "koszty wysyłki", "koszt wysyłki"],
+    "payment": ["sposób płatności", "sposoby płatności", "metody płatności", "forma płatności", "termin płatności"],
+    "delivery": ["czas dostawy", "termin dostawy", "czas realizacji", "termin realizacji", "przewidywana dostawa"],
+    "returns": ["polityka zwrotów", "zwroty i wymiany", "odstąpienie od umowy", "zwrot towaru", "warunki zwrotu"]
+  },
+  "pt": {
+    "price": ["preço de venda", "preço do produto", "preços dos produtos", "preço dos bens"],
+    "shippingCost": ["custos de envio", "portes de envio", "despesas de envio", "taxa de entrega", "valor do frete"],
+    "payment": ["forma de pagamento", "formas de pagamento", "métodos de pagamento", "método de pagamento", "momento do pagamento", "condições de pagamento"],
+    "delivery": ["prazo de entrega", "prazos de entrega", "tempo de entrega", "data de entrega", "prazo de envio"],
+    "returns": ["política de devolução", "devoluções e trocas", "direito de arrependimento", "direito de retratação", "devoluções"]
+  },
+  "ro": {
+    "price": ["preț de vânzare", "prețul produsului", "prețurile produselor", "prețul bunurilor"],
+    "shippingCost": ["costuri de livrare", "cost de livrare", "taxe de livrare", "costuri de transport"],
+    "payment": ["modalitate de plată", "modalități de plată", "metode de plată", "metodă de plată", "momentul plății", "condiții de plată"],
+    "delivery": ["termen de livrare", "timp de livrare", "data livrării", "termenul de livrare"],
+    "returns": ["politica de retur", "retur și schimb", "dreptul de retragere", "returnarea produselor", "condiții de retur"]
+  },
+  "ru": {
+    "price": ["цена товара", "стоимость товара", "цены на товары", "продажная цена"],
+    "shippingCost": ["стоимость доставки", "расходы на доставку", "цена доставки"],
+    "payment": ["способ оплаты", "способы оплаты", "порядок оплаты", "срок оплаты", "условия оплаты"],
+    "delivery": ["срок доставки", "сроки доставки", "срок поставки", "дата доставки"],
+    "returns": ["возврат товара", "условия возврата", "возврат и обмен", "политика возврата", "возврат средств"]
+  },
+  "sv": {
+    "price": ["försäljningspris", "produktpris", "priser på varor", "varans pris"],
+    "shippingCost": ["fraktkostnad", "fraktkostnader", "leveranskostnad", "fraktavgift"],
+    "payment": ["betalningssätt", "betalningsmetod", "betalningsmetoder", "betalningstidpunkt", "betalningsvillkor"],
+    "delivery": ["leveranstid", "leveransvillkor", "leveransdatum", "beräknad leverans"],
+    "returns": ["returpolicy", "ångerrätt", "retur och byte", "returer", "returvillkor"]
+  },
+  "tr": {
+    "price": ["satış fiyatı", "ürün fiyatı", "ürün fiyatları", "mal bedeli"],
+    "shippingCost": ["kargo ücreti", "kargo bedeli", "teslimat ücreti", "nakliye ücreti"],
+    "payment": ["ödeme yöntemi", "ödeme yöntemleri", "ödeme şekli", "ödeme seçenekleri", "ödeme zamanı", "ödeme koşulları"],
+    "delivery": ["teslimat süresi", "teslim süresi", "teslimat zamanı", "kargo süresi", "teslim tarihi"],
+    "returns": ["iade koşulları", "iade politikası", "iade ve değişim", "cayma hakkı", "iade şartları"]
+  },
+  "zh": {
+    "price": ["销售价格", "商品价格", "商品价款", "售价", "商品售价"],
+    "shippingCost": ["运费", "邮费", "配送费", "快递费"],
+    "payment": ["支付方式", "付款方式", "支付时间", "付款时间", "支付方法", "付款方法"],
+    "delivery": ["发货时间", "送货时间", "配送时间", "交货时间", "发货时效", "交付时间"],
+    "returns": ["退货政策", "退换货", "退货规则", "退款政策", "退货说明", "退货"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ar": ["اطلب مع الالتزام بالدفع", "طلب مع التزام بالدفع", "اشترِ الآن", "اشتري الآن", "ادفع الآن", "تأكيد الشراء"],
+  "cs": ["objednávka zavazující k platbě", "kupte nyní", "zaplaťte nyní", "potvrďte nákup", "objednat s povinností platby", "závazně objednat"],
+  "da": ["ordre med betalingsforpligtelse", "køb nu", "betal nu", "bekræft køb", "bestil med betalingsforpligtelse"],
+  "de": ["zahlungspflichtig bestellen", "kostenpflichtig bestellen", "jetzt kaufen", "jetzt zahlen", "kauf bestätigen", "zahlungspflichtigen vertrag abschließen"],
+  "en": ["order with obligation to pay", "buy now", "pay now", "confirm purchase", "place order and pay", "order and pay"],
+  "es": ["pedido con obligación de pago", "comprar ahora", "pagar ahora", "confirmar compra", "confirmar la compra"],
+  "fi": ["tilaukseen liittyy maksuvelvollisuus", "osta nyt", "maksa nyt", "vahvista ostos", "tilaa ja maksa", "tilaa maksuvelvollisuudella"],
+  "fr": ["commande avec obligation de paiement", "commander avec obligation de paiement", "acheter maintenant", "payer maintenant", "confirmer l'achat", "confirmer l’achat"],
+  "it": ["ordine con obbligo di pagare", "ordina con obbligo di pagamento", "acquista ora", "paga ora", "conferma l'acquisto", "conferma l’acquisto"],
+  "ja": ["支払い義務のある注文", "注文を確定する", "購入を確定する", "今すぐ購入", "今すぐ支払う", "購入する"],
+  "ko": ["결제 의무가 있는 주문", "지금 구매", "지금 결제", "구매하기", "결제하기", "주문 및 결제"],
+  "nb": ["bestilling med forpliktelse til å betale", "bestill med betalingsplikt", "kjøp nå", "betal nå", "bekreft kjøp"],
+  "nl": ["bestelling met betalingsverplichting", "bestel met betalingsverplichting", "koop nu", "betaal nu", "bevestig aankoop", "bestellen en betalen"],
+  "pl": ["zamówienie z obowiązkiem zapłaty", "zamawiam z obowiązkiem zapłaty", "zamawiam i płacę", "kupuję i płacę", "kup teraz", "zapłać teraz", "potwierdź zakup"],
+  "pt": ["encomenda com obrigação de pagar", "pedido com obrigação de pagar", "comprar agora", "pagar agora", "confirmar a compra", "confirmar compra"],
+  "ro": ["comandă ce implică o obligație de plată", "comandă cu obligație de plată", "cumpără acum", "plătește acum", "confirmă cumpărarea"],
+  "ru": ["заказ с обязательством оплатить", "купить сейчас", "оплатить сейчас", "подтвердить покупку", "оплатить заказ"],
+  "sv": ["beställning förenad med betalningsskyldighet", "beställ med betalningsskyldighet", "köp nu", "betala nu", "bekräfta köp"],
+  "tr": ["ödeme yükümlülüğü ile sipariş ver", "ödeme yükümlülüğü altında sipariş", "satın al", "şimdi öde", "siparişi onayla ve öde"],
+  "zh": ["立即购买", "立即支付", "确认购买", "提交订单并支付", "去支付", "确认并支付"]
+}

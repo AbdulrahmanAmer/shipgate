@@ -1,0 +1,602 @@
+{
+  "ar": {
+    "gdpr": {
+      "rights": ["حقوقك", "حقوق أصحاب البيانات", "الحق في الوصول", "الحق في المحو", "الحق في التصحيح", "الحق في الاعتراض", "نقل البيانات"],
+      "legalBasis": ["الأساس القانوني", "الأساس القانوني للمعالجة", "المصلحة المشروعة", "المصالح المشروعة"],
+      "retention": ["مدة الاحتفاظ", "فترة الاحتفاظ", "مدة تخزين البيانات", "نحتفظ ببياناتك"],
+      "complaint": ["سلطة الإشراف", "تقديم شكوى", "الحق في تقديم شكوى", "هيئة حماية البيانات"],
+      "contact": ["مسؤول حماية البيانات", "مراقب البيانات", "المتحكم في البيانات", "بيانات الاتصال"],
+      "transfers": ["النقل إلى دول ثالثة", "نقل البيانات خارج", "خارج المنطقة الاقتصادية الأوروبية", "البنود التعاقدية القياسية", "قرار الملاءمة", "دولة ثالثة"]
+    },
+    "ccpa": {
+      "categories": ["فئات المعلومات الشخصية", "فئات البيانات الشخصية", "المعلومات الشخصية التي نجمعها"],
+      "sellShare": ["بيع أو مشاركة", "لا نبيع", "بيع المعلومات الشخصية", "بيع بياناتك الشخصية", "مشاركة معلوماتك الشخصية"],
+      "rights": ["الحق في المعرفة", "الحق في الحذف", "الحق في التصحيح", "الحق في الانسحاب", "حقوق الخصوصية في كاليفورنيا", "سكان كاليفورنيا"],
+      "limit": ["الحد من استخدام", "المعلومات الشخصية الحساسة", "الحق في الحد"]
+    },
+    "dpdp": {
+      "itemisedData": ["وصف مفصل للبيانات الشخصية", "البيانات الشخصية التي نجمعها", "قائمة البيانات الشخصية", "فئات البيانات الشخصية"],
+      "purpose": ["الغرض من المعالجة", "أغراض المعالجة", "الغرض المحدد"],
+      "rights": ["الحق في الوصول", "الحق في التصحيح", "الحق في المحو", "الحق في تسوية التظلمات", "حقوقك"],
+      "grievance": ["تسوية التظلمات", "مسؤول التظلمات", "ضابط التظلمات", "تقديم تظلم"],
+      "board": ["مجلس حماية البيانات في الهند", "مجلس حماية البيانات", "Data Protection Board of India"]
+    },
+    "app": {
+      "kinds": ["أنواع المعلومات الشخصية", "نوع المعلومات الشخصية التي نجمعها", "المعلومات الشخصية التي نجمعها ونحتفظ بها"],
+      "purposes": ["أغراض جمع", "الأغراض التي نجمع", "لماذا نجمع", "كيف نستخدم معلوماتك الشخصية"],
+      "accessCorrect": ["الوصول إلى معلوماتك الشخصية", "تصحيح معلوماتك الشخصية", "طلب الوصول", "الوصول والتصحيح"],
+      "complaints": ["تقديم شكوى", "كيفية تقديم شكوى", "شكوى بشأن الخصوصية", "OAIC", "مفوض المعلومات الأسترالي"],
+      "overseas": ["المستلمين في الخارج", "الإفصاح في الخارج", "خارج أستراليا", "المستلمين الأجانب", "الإفصاح للخارج"]
+    }
+  },
+  "cs": {
+    "gdpr": {
+      "rights": ["vaše práva", "práva subjektů údajů", "právo na přístup", "právo na výmaz", "právo na opravu", "právo vznést námitku", "přenositelnost údajů"],
+      "legalBasis": ["právní základ", "právním základem", "právní důvod zpracování", "oprávněný zájem", "oprávněné zájmy"],
+      "retention": ["doba, po kterou budou osobní údaje uloženy", "doba uložení", "doba uchovávání", "po jakou dobu uchováváme", "uchováváme vaše údaje", "doba zpracování"],
+      "complaint": ["dozorový úřad", "podat stížnost", "právo podat stížnost", "Úřad pro ochranu osobních údajů"],
+      "contact": ["pověřenec pro ochranu osobních údajů", "správce osobních údajů", "správce údajů", "kontaktní údaje správce"],
+      "transfers": ["předání do třetích zemí", "předávání do třetích zemí", "mimo evropský hospodářský prostor", "standardní smluvní doložky", "rozhodnutí o odpovídající ochraně", "třetí země"]
+    },
+    "ccpa": {
+      "categories": ["kategorie osobních údajů", "kategorie osobních informací", "osobní údaje, které shromažďujeme"],
+      "sellShare": ["prodej nebo sdílení", "neprodáváme", "prodej osobních údajů", "prodáváme vaše osobní údaje", "sdílíme vaše osobní údaje"],
+      "rights": ["právo vědět", "právo na výmaz", "právo na opravu", "právo odhlásit se", "vaše práva v Kalifornii", "obyvatelé Kalifornie"],
+      "limit": ["omezit použití", "citlivé osobní údaje", "právo omezit"]
+    },
+    "dpdp": {
+      "itemisedData": ["podrobný popis osobních údajů", "osobní údaje, které shromažďujeme", "seznam osobních údajů", "kategorie osobních údajů"],
+      "purpose": ["účel zpracování", "účely zpracování", "konkrétní účel"],
+      "rights": ["právo na přístup", "právo na opravu", "právo na výmaz", "právo na vyřízení stížností", "vaše práva"],
+      "grievance": ["vyřízení stížností", "pověřenec pro stížnosti", "grievance officer", "podání stížnosti"],
+      "board": ["Rada pro ochranu údajů Indie", "Data Protection Board of India", "Rada pro ochranu údajů"]
+    },
+    "app": {
+      "kinds": ["druhy osobních informací", "typy osobních informací", "osobní informace, které shromažďujeme a uchováváme"],
+      "purposes": ["účely shromažďování", "účely, pro které shromažďujeme", "proč shromažďujeme", "jak používáme vaše osobní informace"],
+      "accessCorrect": ["přístup k vašim osobním informacím", "oprava vašich osobních informací", "žádost o přístup", "přístup a oprava"],
+      "complaints": ["podání stížnosti", "jak podat stížnost", "stížnost na ochranu soukromí", "OAIC", "australský komisař pro informace"],
+      "overseas": ["příjemci v zahraničí", "zpřístupnění v zahraničí", "mimo Austrálii", "zahraniční příjemci", "zpřístupnění do zahraničí"]
+    }
+  },
+  "da": {
+    "gdpr": {
+      "rights": ["dine rettigheder", "den registreredes rettigheder", "ret til indsigt", "ret til sletning", "ret til berigtigelse", "ret til indsigelse", "dataportabilitet"],
+      "legalBasis": ["retsgrundlag", "retligt grundlag", "behandlingsgrundlag", "legitim interesse", "legitime interesser"],
+      "retention": ["opbevaringsperiode", "opbevaringsperioden", "hvor længe opbevarer vi", "vi opbevarer dine", "slettefrist", "opbevares i"],
+      "complaint": ["tilsynsmyndighed", "indgive en klage", "ret til at klage", "Datatilsynet"],
+      "contact": ["databeskyttelsesrådgiver", "dataansvarlig", "kontaktoplysninger på den dataansvarlige", "dpo"],
+      "transfers": ["overførsel til tredjelande", "overførsler til tredjelande", "uden for eøs", "standardkontraktbestemmelser", "afgørelse om tilstrækkeligt beskyttelsesniveau", "tredjeland"]
+    },
+    "ccpa": {
+      "categories": ["kategorier af personoplysninger", "kategorier af personlige oplysninger", "personoplysninger, vi indsamler"],
+      "sellShare": ["sælge eller dele", "vi sælger ikke", "salg af personoplysninger", "sælger dine personoplysninger", "deler dine personoplysninger"],
+      "rights": ["ret til at vide", "ret til sletning", "ret til berigtigelse", "ret til at fravælge", "dine rettigheder i Californien", "beboere i Californien"],
+      "limit": ["begrænse brugen", "følsomme personoplysninger", "ret til at begrænse"]
+    },
+    "dpdp": {
+      "itemisedData": ["specificeret beskrivelse af personoplysninger", "personoplysninger, vi indsamler", "liste over personoplysninger", "kategorier af personoplysninger"],
+      "purpose": ["formålet med behandlingen", "formål med behandlingen", "specifikt formål"],
+      "rights": ["ret til indsigt", "ret til berigtigelse", "ret til sletning", "ret til afhjælpning af klager", "dine rettigheder"],
+      "grievance": ["afhjælpning af klager", "klageansvarlig", "grievance officer", "indgive en klage"],
+      "board": ["Data Protection Board of India", "Indiens databeskyttelsesråd", "databeskyttelsesrådet"]
+    },
+    "app": {
+      "kinds": ["typer af personoplysninger", "arter af personoplysninger", "personoplysninger, vi indsamler og opbevarer"],
+      "purposes": ["formål med indsamlingen", "formålene med indsamling", "hvorfor vi indsamler", "hvordan vi bruger dine personoplysninger"],
+      "accessCorrect": ["adgang til dine personoplysninger", "rettelse af dine personoplysninger", "anmodning om adgang", "adgang og rettelse"],
+      "complaints": ["indgive en klage", "sådan klager du", "klage over privatlivets fred", "OAIC", "australske informationskommissær"],
+      "overseas": ["modtagere i udlandet", "videregivelse til udlandet", "uden for Australien", "oversøiske modtagere", "udenlandske modtagere"]
+    }
+  },
+  "de": {
+    "gdpr": {
+      "rights": ["ihre rechte", "betroffenenrechte", "recht auf auskunft", "recht auf löschung", "recht auf berichtigung", "widerspruchsrecht", "recht auf widerspruch", "datenübertragbarkeit"],
+      "legalBasis": ["rechtsgrundlage", "rechtsgrundlagen", "berechtigtes interesse", "berechtigten interessen", "art. 6"],
+      "retention": ["speicherdauer", "dauer der speicherung", "aufbewahrungsdauer", "wie lange speichern wir", "speicherfrist", "löschfristen"],
+      "complaint": ["aufsichtsbehörde", "beschwerderecht", "beschwerde einlegen", "recht auf beschwerde"],
+      "contact": ["datenschutzbeauftragte", "verantwortlicher", "verantwortliche stelle", "kontaktdaten des verantwortlichen"],
+      "transfers": ["übermittlung in drittländer", "übermittlung an drittländer", "drittland", "drittländer", "außerhalb der eu", "außerhalb des europäischen wirtschaftsraums", "standardvertragsklauseln", "angemessenheitsbeschluss"]
+    },
+    "ccpa": {
+      "categories": ["kategorien personenbezogener daten", "kategorien von personenbezogenen informationen", "personenbezogene daten, die wir erheben"],
+      "sellShare": ["verkauf oder weitergabe", "wir verkaufen keine", "verkauf personenbezogener daten", "verkaufen ihre personenbezogenen daten", "weitergabe ihrer personenbezogenen daten"],
+      "rights": ["recht auf auskunft", "recht auf löschung", "recht auf berichtigung", "recht auf widerspruch", "ihre datenschutzrechte in kalifornien", "einwohner kaliforniens"],
+      "limit": ["nutzung einschränken", "sensible personenbezogene daten", "recht auf einschränkung"]
+    },
+    "dpdp": {
+      "itemisedData": ["detaillierte beschreibung der personenbezogenen daten", "personenbezogene daten, die wir erheben", "liste der personenbezogenen daten", "kategorien personenbezogener daten"],
+      "purpose": ["zweck der verarbeitung", "zwecke der verarbeitung", "bestimmter zweck"],
+      "rights": ["recht auf auskunft", "recht auf berichtigung", "recht auf löschung", "recht auf beschwerdeabhilfe", "ihre rechte"],
+      "grievance": ["beschwerdeabhilfe", "beschwerdebeauftragter", "grievance officer", "beschwerde einreichen"],
+      "board": ["Data Protection Board of India", "indische datenschutzbehörde", "indischen datenschutzrat"]
+    },
+    "app": {
+      "kinds": ["arten personenbezogener informationen", "arten von personenbezogenen daten", "personenbezogene informationen, die wir erheben und speichern"],
+      "purposes": ["zwecke der erhebung", "zwecke, für die wir erheben", "warum wir erheben", "wie wir ihre personenbezogenen informationen verwenden"],
+      "accessCorrect": ["zugang zu ihren personenbezogenen informationen", "berichtigung ihrer personenbezogenen informationen", "zugangsantrag", "zugang und berichtigung"],
+      "complaints": ["beschwerde einreichen", "wie sie sich beschweren", "datenschutzbeschwerde", "OAIC", "australische informationsbeauftragte"],
+      "overseas": ["empfänger im ausland", "offenlegung im ausland", "außerhalb australiens", "ausländische empfänger", "offenlegung ins ausland"]
+    }
+  },
+  "en": {
+    "gdpr": {
+      "rights": ["your rights", "data subject rights", "right of access", "right to access", "right to erasure", "right to rectification", "right to object", "data portability"],
+      "legalBasis": ["legal basis", "lawful basis", "legal bases", "legitimate interest", "legitimate interests", "article 6"],
+      "retention": ["retention period", "how long we keep", "how long we retain", "storage period", "we retain your", "we keep your", "stored for"],
+      "complaint": ["supervisory authority", "lodge a complaint", "right to complain", "data protection authority", "file a complaint"],
+      "contact": ["data protection officer", "dpo", "data controller", "controller", "contact details"],
+      "transfers": ["transfer to third countries", "transfers to third countries", "international transfer", "transfers outside", "outside the eea", "outside the european economic area", "standard contractual clauses", "adequacy decision", "third country"]
+    },
+    "ccpa": {
+      "categories": ["categories of personal information", "categories of personal data", "personal information we collect", "personal information collected"],
+      "sellShare": ["sell or share", "sold or shared", "do not sell", "we do not sell", "sale of personal information", "sell your personal information", "share your personal information"],
+      "rights": ["right to know", "right to delete", "right to correct", "right to opt-out", "right to opt out", "your california privacy rights", "california residents"],
+      "limit": ["limit the use", "limit use", "sensitive personal information", "right to limit"]
+    },
+    "dpdp": {
+      "itemisedData": ["itemised description", "itemized description", "personal data we collect", "personal data collected", "list of personal data", "categories of personal data"],
+      "purpose": ["purpose of processing", "purposes of processing", "specified purpose", "why we process"],
+      "rights": ["right to access", "right to correction", "right to erasure", "right to grievance redressal", "right to nominate", "your rights"],
+      "grievance": ["grievance redressal", "grievance officer", "file a grievance", "raise a grievance"],
+      "board": ["data protection board of india", "data protection board", "the board"]
+    },
+    "app": {
+      "kinds": ["kinds of personal information", "types of personal information", "personal information we collect and hold", "personal information we collect"],
+      "purposes": ["purposes for which we collect", "purposes of collection", "why we collect", "how we use your personal information"],
+      "accessCorrect": ["access to your personal information", "access your personal information", "correct your personal information", "request access", "access and correction", "seek correction"],
+      "complaints": ["make a complaint", "how to complain", "privacy complaint", "oaic", "office of the australian information commissioner"],
+      "overseas": ["overseas recipients", "disclose to overseas", "disclosed overseas", "overseas disclosure", "outside australia", "located overseas"]
+    }
+  },
+  "es": {
+    "gdpr": {
+      "rights": ["sus derechos", "derechos de los interesados", "derecho de acceso", "derecho de supresión", "derecho de rectificación", "derecho de oposición", "portabilidad de los datos"],
+      "legalBasis": ["base jurídica", "base legal", "bases jurídicas", "interés legítimo", "intereses legítimos"],
+      "retention": ["plazo de conservación", "periodo de conservación", "período de conservación", "cuánto tiempo conservamos", "conservaremos sus datos", "plazo durante el cual se conservarán"],
+      "complaint": ["autoridad de control", "presentar una reclamación", "derecho a presentar una reclamación", "agencia española de protección de datos"],
+      "contact": ["delegado de protección de datos", "responsable del tratamiento", "datos de contacto del responsable"],
+      "transfers": ["transferencias a terceros países", "transferencia a terceros países", "fuera del espacio económico europeo", "cláusulas contractuales tipo", "decisión de adecuación", "tercer país"]
+    },
+    "ccpa": {
+      "categories": ["categorías de información personal", "categorías de datos personales", "información personal que recopilamos"],
+      "sellShare": ["vender o compartir", "no vendemos", "venta de información personal", "vendemos su información personal", "compartimos su información personal"],
+      "rights": ["derecho a saber", "derecho a eliminar", "derecho a corregir", "derecho a optar por no participar", "sus derechos de privacidad en california", "residentes de california"],
+      "limit": ["limitar el uso", "información personal confidencial", "información personal sensible", "derecho a limitar"]
+    },
+    "dpdp": {
+      "itemisedData": ["descripción detallada de los datos personales", "datos personales que recopilamos", "lista de datos personales", "categorías de datos personales"],
+      "purpose": ["finalidad del tratamiento", "finalidades del tratamiento", "finalidad específica"],
+      "rights": ["derecho de acceso", "derecho de rectificación", "derecho de supresión", "derecho a la reparación de quejas", "sus derechos"],
+      "grievance": ["reparación de quejas", "oficial de quejas", "grievance officer", "presentar una queja"],
+      "board": ["Data Protection Board of India", "junta de protección de datos de la india", "junta de protección de datos"]
+    },
+    "app": {
+      "kinds": ["tipos de información personal", "clases de información personal", "información personal que recopilamos y conservamos"],
+      "purposes": ["finalidades de la recopilación", "finalidades para las que recopilamos", "por qué recopilamos", "cómo utilizamos su información personal"],
+      "accessCorrect": ["acceso a su información personal", "corrección de su información personal", "solicitar acceso", "acceso y corrección"],
+      "complaints": ["presentar una queja", "cómo presentar una queja", "queja de privacidad", "OAIC", "comisionado de información de australia"],
+      "overseas": ["destinatarios en el extranjero", "divulgación en el extranjero", "fuera de australia", "destinatarios extranjeros", "divulgación al extranjero"]
+    }
+  },
+  "fi": {
+    "gdpr": {
+      "rights": ["oikeutesi", "rekisteröidyn oikeudet", "oikeus tutustua tietoihin", "oikeus tulla unohdetuksi", "oikeus tietojen poistamiseen", "oikeus oikaista", "oikeus vastustaa", "siirrettävyys"],
+      "legalBasis": ["käsittelyn oikeusperuste", "oikeusperuste", "oikeusperusteet", "oikeutettu etu", "oikeutetut edut"],
+      "retention": ["säilytysaika", "säilytysajat", "kuinka kauan säilytämme", "säilytämme tietojasi", "tietojen säilytysaika"],
+      "complaint": ["valvontaviranomainen", "tehdä valitus", "oikeus tehdä valitus", "tietosuojavaltuutettu"],
+      "contact": ["tietosuojavastaava", "rekisterinpitäjä", "rekisterinpitäjän yhteystiedot"],
+      "transfers": ["siirto kolmansiin maihin", "siirrot kolmansiin maihin", "eta-alueen ulkopuolelle", "vakiolausekkeet", "tietosuojan riittävyyttä koskeva päätös", "kolmas maa"]
+    },
+    "ccpa": {
+      "categories": ["henkilötietojen luokat", "henkilötietoryhmät", "keräämämme henkilötiedot"],
+      "sellShare": ["myydä tai jakaa", "emme myy", "henkilötietojen myynti", "myymme henkilötietojasi", "jaamme henkilötietojasi"],
+      "rights": ["oikeus tietää", "oikeus poistaa", "oikeus oikaista", "oikeus kieltäytyä", "kalifornian yksityisyysoikeutesi", "kalifornian asukkaat"],
+      "limit": ["rajoittaa käyttöä", "arkaluonteiset henkilötiedot", "oikeus rajoittaa"]
+    },
+    "dpdp": {
+      "itemisedData": ["yksityiskohtainen kuvaus henkilötiedoista", "keräämämme henkilötiedot", "luettelo henkilötiedoista", "henkilötietojen luokat"],
+      "purpose": ["käsittelyn tarkoitus", "käsittelyn tarkoitukset", "määritelty tarkoitus"],
+      "rights": ["oikeus tutustua tietoihin", "oikeus oikaista", "oikeus poistaa", "oikeus valitusten käsittelyyn", "oikeutesi"],
+      "grievance": ["valitusten käsittely", "valitusvastaava", "grievance officer", "tehdä valitus"],
+      "board": ["Data Protection Board of India", "intian tietosuojalautakunta", "tietosuojalautakunta"]
+    },
+    "app": {
+      "kinds": ["henkilötietojen lajit", "henkilötietotyypit", "keräämämme ja säilyttämämme henkilötiedot"],
+      "purposes": ["keräämisen tarkoitukset", "tarkoitukset joihin keräämme", "miksi keräämme", "miten käytämme henkilötietojasi"],
+      "accessCorrect": ["pääsy henkilötietoihisi", "henkilötietojesi oikaisu", "pyyntö tutustua tietoihin", "pääsy ja oikaisu"],
+      "complaints": ["tehdä valitus", "miten valitetaan", "tietosuojavalitus", "OAIC", "australian tietosuojavaltuutettu"],
+      "overseas": ["ulkomailla olevat vastaanottajat", "luovutus ulkomaille", "australian ulkopuolelle", "ulkomaiset vastaanottajat", "luovuttaminen ulkomaille"]
+    }
+  },
+  "fr": {
+    "gdpr": {
+      "rights": ["vos droits", "droits des personnes concernées", "droit d'accès", "droit d’accès", "droit à l'effacement", "droit à l’effacement", "droit de rectification", "droit d'opposition", "droit d’opposition", "portabilité des données"],
+      "legalBasis": ["base juridique", "base légale", "bases juridiques", "intérêt légitime", "intérêts légitimes"],
+      "retention": ["durée de conservation", "durées de conservation", "combien de temps nous conservons", "nous conservons vos données", "période de conservation"],
+      "complaint": ["autorité de contrôle", "introduire une réclamation", "droit d'introduire une réclamation", "droit d’introduire une réclamation", "cnil", "déposer une plainte"],
+      "contact": ["délégué à la protection des données", "responsable du traitement", "coordonnées du responsable", "dpo"],
+      "transfers": ["transfert vers des pays tiers", "transferts vers des pays tiers", "en dehors de l'espace économique européen", "en dehors de l’espace économique européen", "clauses contractuelles types", "décision d'adéquation", "décision d’adéquation", "pays tiers"]
+    },
+    "ccpa": {
+      "categories": ["catégories d'informations personnelles", "catégories d’informations personnelles", "catégories de données personnelles", "informations personnelles que nous collectons"],
+      "sellShare": ["vendre ou partager", "nous ne vendons pas", "vente d'informations personnelles", "vente d’informations personnelles", "vendons vos informations personnelles", "partageons vos informations personnelles"],
+      "rights": ["droit de savoir", "droit de supprimer", "droit de corriger", "droit de refuser", "vos droits en matière de confidentialité en californie", "résidents de californie"],
+      "limit": ["limiter l'utilisation", "limiter l’utilisation", "informations personnelles sensibles", "droit de limiter"]
+    },
+    "dpdp": {
+      "itemisedData": ["description détaillée des données personnelles", "données personnelles que nous collectons", "liste des données personnelles", "catégories de données personnelles"],
+      "purpose": ["finalité du traitement", "finalités du traitement", "finalité spécifique"],
+      "rights": ["droit d'accès", "droit d’accès", "droit de rectification", "droit à l'effacement", "droit à l’effacement", "droit de recours", "vos droits"],
+      "grievance": ["traitement des réclamations", "responsable des réclamations", "grievance officer", "déposer une réclamation"],
+      "board": ["Data Protection Board of India", "conseil indien de protection des données", "conseil de protection des données"]
+    },
+    "app": {
+      "kinds": ["types d'informations personnelles", "types d’informations personnelles", "catégories d'informations personnelles", "informations personnelles que nous collectons et détenons"],
+      "purposes": ["finalités de la collecte", "finalités pour lesquelles nous collectons", "pourquoi nous collectons", "comment nous utilisons vos informations personnelles"],
+      "accessCorrect": ["accès à vos informations personnelles", "correction de vos informations personnelles", "demande d'accès", "demande d’accès", "accès et correction"],
+      "complaints": ["déposer une plainte", "comment déposer une plainte", "plainte en matière de confidentialité", "OAIC", "commissaire australien à l'information", "commissaire australien à l’information"],
+      "overseas": ["destinataires à l'étranger", "destinataires à l’étranger", "divulgation à l'étranger", "divulgation à l’étranger", "en dehors de l'australie", "en dehors de l’australie", "destinataires étrangers"]
+    }
+  },
+  "it": {
+    "gdpr": {
+      "rights": ["i tuoi diritti", "i suoi diritti", "diritti degli interessati", "diritto di accesso", "diritto alla cancellazione", "diritto di rettifica", "diritto di opposizione", "portabilità dei dati"],
+      "legalBasis": ["base giuridica", "base legale", "basi giuridiche", "legittimo interesse", "legittimi interessi"],
+      "retention": ["periodo di conservazione", "tempi di conservazione", "per quanto tempo conserviamo", "conserviamo i tuoi dati", "conserviamo i suoi dati"],
+      "complaint": ["autorità di controllo", "proporre reclamo", "diritto di proporre reclamo", "garante per la protezione dei dati personali", "presentare un reclamo"],
+      "contact": ["responsabile della protezione dei dati", "titolare del trattamento", "dati di contatto del titolare", "dpo"],
+      "transfers": ["trasferimento verso paesi terzi", "trasferimenti verso paesi terzi", "al di fuori dello spazio economico europeo", "clausole contrattuali tipo", "decisione di adeguatezza", "paese terzo"]
+    },
+    "ccpa": {
+      "categories": ["categorie di informazioni personali", "categorie di dati personali", "informazioni personali che raccogliamo"],
+      "sellShare": ["vendere o condividere", "non vendiamo", "vendita di informazioni personali", "vendiamo le tue informazioni personali", "condividiamo le tue informazioni personali"],
+      "rights": ["diritto di sapere", "diritto di cancellare", "diritto di correggere", "diritto di rinunciare", "i tuoi diritti sulla privacy in california", "residenti della california"],
+      "limit": ["limitare l'uso", "limitare l’uso", "informazioni personali sensibili", "diritto di limitare"]
+    },
+    "dpdp": {
+      "itemisedData": ["descrizione dettagliata dei dati personali", "dati personali che raccogliamo", "elenco dei dati personali", "categorie di dati personali"],
+      "purpose": ["finalità del trattamento", "finalità specifica", "finalità dei trattamenti"],
+      "rights": ["diritto di accesso", "diritto di rettifica", "diritto alla cancellazione", "diritto di ricorso", "i tuoi diritti"],
+      "grievance": ["gestione dei reclami", "responsabile dei reclami", "grievance officer", "presentare un reclamo"],
+      "board": ["Data Protection Board of India", "consiglio indiano per la protezione dei dati", "consiglio per la protezione dei dati"]
+    },
+    "app": {
+      "kinds": ["tipi di informazioni personali", "categorie di informazioni personali", "informazioni personali che raccogliamo e conserviamo"],
+      "purposes": ["finalità della raccolta", "finalità per cui raccogliamo", "perché raccogliamo", "come utilizziamo le tue informazioni personali"],
+      "accessCorrect": ["accesso alle tue informazioni personali", "correzione delle tue informazioni personali", "richiesta di accesso", "accesso e correzione"],
+      "complaints": ["presentare un reclamo", "come presentare un reclamo", "reclamo sulla privacy", "OAIC", "commissario australiano per l'informazione", "commissario australiano per l’informazione"],
+      "overseas": ["destinatari all'estero", "destinatari all’estero", "comunicazione all'estero", "comunicazione all’estero", "al di fuori dell'australia", "al di fuori dell’australia", "destinatari stranieri"]
+    }
+  },
+  "ja": {
+    "gdpr": {
+      "rights": ["お客様の権利", "データ主体の権利", "アクセス権", "削除権", "消去権", "訂正権", "異議を述べる権利", "データポータビリティ"],
+      "legalBasis": ["法的根拠", "法的基盤", "処理の根拠", "正当な利益", "適法性の根拠"],
+      "retention": ["保存期間", "保持期間", "保管期間", "保有期間", "データの保存"],
+      "complaint": ["監督機関", "監督当局", "苦情を申し立てる", "不服を申し立てる", "苦情申立権"],
+      "contact": ["データ保護責任者", "データ管理者", "管理者の連絡先", "DPO", "個人情報管理者"],
+      "transfers": ["第三国への移転", "第三国への提供", "欧州経済領域外", "標準契約条項", "十分性認定", "第三国"]
+    },
+    "ccpa": {
+      "categories": ["個人情報のカテゴリー", "個人情報のカテゴリ", "収集する個人情報", "収集した個人情報のカテゴリー"],
+      "sellShare": ["販売または共有", "販売しません", "個人情報の販売", "個人情報を販売", "個人情報を共有"],
+      "rights": ["知る権利", "削除する権利", "訂正する権利", "オプトアウトする権利", "カリフォルニア州のプライバシー権", "カリフォルニア州の居住者"],
+      "limit": ["利用を制限", "機微な個人情報", "センシティブな個人情報", "制限する権利"]
+    },
+    "dpdp": {
+      "itemisedData": ["個人データの詳細な説明", "収集する個人データ", "個人データの一覧", "個人データのカテゴリー"],
+      "purpose": ["処理の目的", "利用目的", "特定の目的"],
+      "rights": ["アクセスの権利", "訂正の権利", "消去の権利", "苦情救済を受ける権利", "お客様の権利"],
+      "grievance": ["苦情処理", "苦情対応責任者", "グリーバンスオフィサー", "grievance officer", "苦情の申し立て"],
+      "board": ["インドデータ保護委員会", "Data Protection Board of India", "データ保護委員会"]
+    },
+    "app": {
+      "kinds": ["個人情報の種類", "収集し保有する個人情報", "取得する個人情報の種類"],
+      "purposes": ["収集の目的", "収集する目的", "なぜ収集するか", "個人情報の利用方法"],
+      "accessCorrect": ["個人情報へのアクセス", "個人情報の訂正", "アクセスの請求", "開示および訂正"],
+      "complaints": ["苦情の申し立て", "苦情の申立方法", "プライバシーに関する苦情", "OAIC", "オーストラリア情報コミッショナー"],
+      "overseas": ["海外の受領者", "海外への開示", "オーストラリア国外", "海外の第三者", "外国にある第三者"]
+    }
+  },
+  "ko": {
+    "gdpr": {
+      "rights": ["정보주체의 권리", "귀하의 권리", "열람권", "삭제권", "정정권", "처리 정지", "반대할 권리", "데이터 이동권"],
+      "legalBasis": ["법적 근거", "처리의 법적 근거", "적법한 이익", "정당한 이익", "법적 기반"],
+      "retention": ["보유 기간", "보존 기간", "저장 기간", "보관 기간", "보유 및 이용 기간"],
+      "complaint": ["감독 당국", "감독기관", "불만을 제기", "민원을 제기", "이의를 제기할 권리"],
+      "contact": ["개인정보 보호책임자", "정보 보호 책임자", "DPO", "개인정보처리자", "컨트롤러의 연락처"],
+      "transfers": ["제3국으로의 이전", "제3국 이전", "유럽경제지역 외", "표준계약조항", "적정성 결정", "제3국"]
+    },
+    "ccpa": {
+      "categories": ["개인정보의 범주", "개인정보 카테고리", "수집하는 개인정보", "수집한 개인정보의 범주"],
+      "sellShare": ["판매 또는 공유", "판매하지 않습니다", "개인정보의 판매", "개인정보를 판매", "개인정보를 공유"],
+      "rights": ["알 권리", "삭제할 권리", "정정할 권리", "거부할 권리", "캘리포니아 개인정보 보호 권리", "캘리포니아 주민"],
+      "limit": ["사용 제한", "민감한 개인정보", "제한할 권리"]
+    },
+    "dpdp": {
+      "itemisedData": ["개인 데이터의 상세 설명", "수집하는 개인 데이터", "개인 데이터 목록", "개인 데이터의 범주"],
+      "purpose": ["처리 목적", "처리의 목적", "특정 목적"],
+      "rights": ["열람할 권리", "정정할 권리", "삭제할 권리", "고충 처리를 받을 권리", "귀하의 권리"],
+      "grievance": ["고충 처리", "고충처리 담당자", "grievance officer", "고충 제기"],
+      "board": ["인도 데이터 보호 위원회", "Data Protection Board of India", "데이터 보호 위원회"]
+    },
+    "app": {
+      "kinds": ["개인정보의 종류", "수집 및 보유하는 개인정보", "수집하는 개인정보의 유형"],
+      "purposes": ["수집 목적", "수집하는 목적", "수집 이유", "개인정보 이용 방법"],
+      "accessCorrect": ["개인정보 열람", "개인정보 정정", "열람 요청", "열람 및 정정"],
+      "complaints": ["불만 제기", "불만 제기 방법", "개인정보 관련 불만", "OAIC", "호주 정보 위원"],
+      "overseas": ["해외 수령인", "해외 제공", "호주 외부", "해외 제3자", "국외 제공"]
+    }
+  },
+  "nb": {
+    "gdpr": {
+      "rights": ["dine rettigheter", "den registrertes rettigheter", "rett til innsyn", "rett til sletting", "rett til retting", "rett til å protestere", "dataportabilitet"],
+      "legalBasis": ["behandlingsgrunnlag", "rettslig grunnlag", "rettsgrunnlag", "berettiget interesse", "berettigede interesser"],
+      "retention": ["lagringstid", "lagringsperiode", "oppbevaringstid", "hvor lenge vi lagrer", "vi lagrer dine", "slettefrister"],
+      "complaint": ["tilsynsmyndighet", "klage til", "rett til å klage", "datatilsynet", "levere en klage"],
+      "contact": ["personvernombud", "behandlingsansvarlig", "kontaktopplysninger til den behandlingsansvarlige", "dpo"],
+      "transfers": ["overføring til tredjeland", "overføringer til tredjeland", "utenfor eøs", "standard personvernbestemmelser", "avgjørelse om tilstrekkelig beskyttelsesnivå", "tredjeland"]
+    },
+    "ccpa": {
+      "categories": ["kategorier av personopplysninger", "kategorier av personlige opplysninger", "personopplysninger vi samler inn"],
+      "sellShare": ["selge eller dele", "vi selger ikke", "salg av personopplysninger", "selger dine personopplysninger", "deler dine personopplysninger"],
+      "rights": ["rett til å vite", "rett til å slette", "rett til å korrigere", "rett til å reservere seg", "dine personvernrettigheter i california", "innbyggere i california"],
+      "limit": ["begrense bruken", "sensitive personopplysninger", "rett til å begrense"]
+    },
+    "dpdp": {
+      "itemisedData": ["detaljert beskrivelse av personopplysninger", "personopplysninger vi samler inn", "liste over personopplysninger", "kategorier av personopplysninger"],
+      "purpose": ["formålet med behandlingen", "formål med behandlingen", "spesifikt formål"],
+      "rights": ["rett til innsyn", "rett til retting", "rett til sletting", "rett til klagebehandling", "dine rettigheter"],
+      "grievance": ["klagebehandling", "klageansvarlig", "grievance officer", "levere en klage"],
+      "board": ["Data Protection Board of India", "indias datatilsynsstyre", "datatilsynsstyret"]
+    },
+    "app": {
+      "kinds": ["typer personopplysninger", "arter av personopplysninger", "personopplysninger vi samler inn og oppbevarer"],
+      "purposes": ["formål med innsamlingen", "formålene med innsamling", "hvorfor vi samler inn", "hvordan vi bruker dine personopplysninger"],
+      "accessCorrect": ["tilgang til dine personopplysninger", "retting av dine personopplysninger", "anmodning om innsyn", "innsyn og retting"],
+      "complaints": ["levere en klage", "slik klager du", "personvernklage", "OAIC", "australske informasjonskommissær"],
+      "overseas": ["mottakere i utlandet", "utlevering til utlandet", "utenfor australia", "utenlandske mottakere", "overføring til utlandet"]
+    }
+  },
+  "nl": {
+    "gdpr": {
+      "rights": ["uw rechten", "rechten van betrokkenen", "recht op inzage", "recht op wissing", "recht op rectificatie", "recht van bezwaar", "recht op gegevensoverdraagbaarheid", "gegevensoverdraagbaarheid"],
+      "legalBasis": ["rechtsgrond", "rechtsgrondslag", "wettelijke grondslag", "gerechtvaardigd belang", "gerechtvaardigde belangen"],
+      "retention": ["bewaartermijn", "bewaartermijnen", "hoe lang bewaren wij", "wij bewaren uw gegevens", "bewaarperiode", "opslagperiode"],
+      "complaint": ["toezichthoudende autoriteit", "klacht indienen", "recht om een klacht in te dienen", "autoriteit persoonsgegevens"],
+      "contact": ["functionaris voor gegevensbescherming", "verwerkingsverantwoordelijke", "contactgegevens van de verwerkingsverantwoordelijke"],
+      "transfers": ["doorgifte aan derde landen", "doorgiften naar derde landen", "buiten de europese economische ruimte", "standaardcontractbepalingen", "adequaatheidsbesluit", "derde land"]
+    },
+    "ccpa": {
+      "categories": ["categorieën persoonsgegevens", "categorieën van persoonlijke gegevens", "persoonsgegevens die wij verzamelen"],
+      "sellShare": ["verkopen of delen", "wij verkopen geen", "verkoop van persoonsgegevens", "verkopen uw persoonsgegevens", "delen uw persoonsgegevens"],
+      "rights": ["recht om te weten", "recht om te verwijderen", "recht om te corrigeren", "recht om u af te melden", "uw privacyrechten in californië", "inwoners van californië"],
+      "limit": ["gebruik beperken", "gevoelige persoonsgegevens", "recht om te beperken"]
+    },
+    "dpdp": {
+      "itemisedData": ["gespecificeerde beschrijving van persoonsgegevens", "persoonsgegevens die wij verzamelen", "lijst van persoonsgegevens", "categorieën persoonsgegevens"],
+      "purpose": ["doel van de verwerking", "doeleinden van de verwerking", "specifiek doel"],
+      "rights": ["recht op inzage", "recht op rectificatie", "recht op wissing", "recht op afhandeling van klachten", "uw rechten"],
+      "grievance": ["klachtenafhandeling", "klachtenfunctionaris", "grievance officer", "klacht indienen"],
+      "board": ["Data Protection Board of India", "indiase raad voor gegevensbescherming", "raad voor gegevensbescherming"]
+    },
+    "app": {
+      "kinds": ["soorten persoonlijke informatie", "soorten persoonsgegevens", "persoonlijke informatie die wij verzamelen en bewaren"],
+      "purposes": ["doeleinden van de verzameling", "doeleinden waarvoor wij verzamelen", "waarom wij verzamelen", "hoe wij uw persoonlijke informatie gebruiken"],
+      "accessCorrect": ["toegang tot uw persoonlijke informatie", "correctie van uw persoonlijke informatie", "verzoek om toegang", "toegang en correctie"],
+      "complaints": ["klacht indienen", "hoe klacht indienen", "privacyklacht", "OAIC", "australische informatiecommissaris"],
+      "overseas": ["ontvangers in het buitenland", "openbaarmaking in het buitenland", "buiten australië", "buitenlandse ontvangers", "verstrekking aan het buitenland"]
+    }
+  },
+  "pl": {
+    "gdpr": {
+      "rights": ["twoje prawa", "prawa osób, których dane dotyczą", "prawo dostępu", "prawo do usunięcia", "prawo do sprostowania", "prawo do sprzeciwu", "prawo do przenoszenia danych"],
+      "legalBasis": ["podstawa prawna", "podstawy prawne", "podstawa przetwarzania", "prawnie uzasadniony interes", "prawnie uzasadnione interesy"],
+      "retention": ["okres przechowywania", "okresy przechowywania", "jak długo przechowujemy", "przechowujemy twoje dane", "czas przechowywania"],
+      "complaint": ["organ nadzorczy", "wnieść skargę", "prawo do wniesienia skargi", "prezes urzędu ochrony danych osobowych", "uodo"],
+      "contact": ["inspektor ochrony danych", "administrator danych", "dane kontaktowe administratora"],
+      "transfers": ["przekazywanie do państw trzecich", "przekazanie do państw trzecich", "poza europejski obszar gospodarczy", "standardowe klauzule umowne", "decyzja stwierdzająca odpowiedni stopień ochrony", "państwo trzecie", "kraj trzeci"]
+    },
+    "ccpa": {
+      "categories": ["kategorie danych osobowych", "kategorie informacji osobistych", "dane osobowe, które zbieramy"],
+      "sellShare": ["sprzedaż lub udostępnianie", "nie sprzedajemy", "sprzedaż danych osobowych", "sprzedajemy twoje dane osobowe", "udostępniamy twoje dane osobowe"],
+      "rights": ["prawo do informacji", "prawo do usunięcia", "prawo do sprostowania", "prawo do rezygnacji", "twoje prawa w kalifornii", "mieszkańcy kalifornii"],
+      "limit": ["ograniczyć wykorzystanie", "wrażliwe dane osobowe", "prawo do ograniczenia"]
+    },
+    "dpdp": {
+      "itemisedData": ["szczegółowy opis danych osobowych", "dane osobowe, które zbieramy", "lista danych osobowych", "kategorie danych osobowych"],
+      "purpose": ["cel przetwarzania", "cele przetwarzania", "określony cel"],
+      "rights": ["prawo dostępu", "prawo do sprostowania", "prawo do usunięcia", "prawo do rozpatrzenia skarg", "twoje prawa"],
+      "grievance": ["rozpatrywanie skarg", "rzecznik ds. skarg", "grievance officer", "złożyć skargę"],
+      "board": ["Data Protection Board of India", "indyjska rada ochrony danych", "rada ochrony danych"]
+    },
+    "app": {
+      "kinds": ["rodzaje informacji osobistych", "rodzaje danych osobowych", "informacje osobiste, które zbieramy i przechowujemy"],
+      "purposes": ["cele gromadzenia", "cele, w jakich zbieramy", "dlaczego zbieramy", "jak wykorzystujemy twoje informacje osobiste"],
+      "accessCorrect": ["dostęp do twoich informacji osobistych", "sprostowanie twoich informacji osobistych", "wniosek o dostęp", "dostęp i sprostowanie"],
+      "complaints": ["złożyć skargę", "jak złożyć skargę", "skarga dotycząca prywatności", "OAIC", "australijski komisarz ds. informacji"],
+      "overseas": ["odbiorcy za granicą", "ujawnienie za granicą", "poza australią", "odbiorcy zagraniczni", "ujawnianie za granicę"]
+    }
+  },
+  "pt": {
+    "gdpr": {
+      "rights": ["os seus direitos", "os teus direitos", "seus direitos", "direitos dos titulares", "direito de acesso", "direito ao apagamento", "direito de retificação", "direito de oposição", "portabilidade dos dados"],
+      "legalBasis": ["base jurídica", "base legal", "fundamento jurídico", "bases legais", "interesse legítimo", "interesses legítimos"],
+      "retention": ["prazo de conservação", "período de conservação", "prazo de retenção", "período de retenção", "durante quanto tempo conservamos", "por quanto tempo armazenamos", "conservamos os seus dados"],
+      "complaint": ["autoridade de controlo", "autoridade de controle", "apresentar reclamação", "direito de apresentar reclamação", "cnpd", "anpd"],
+      "contact": ["encarregado da proteção de dados", "encarregado de proteção de dados", "responsável pelo tratamento", "controlador", "dados de contacto do responsável", "dpo"],
+      "transfers": ["transferência para países terceiros", "transferências para países terceiros", "fora do espaço económico europeu", "fora do espaço econômico europeu", "cláusulas contratuais-tipo", "cláusulas contratuais padrão", "decisão de adequação", "país terceiro"]
+    },
+    "ccpa": {
+      "categories": ["categorias de informações pessoais", "categorias de dados pessoais", "informações pessoais que recolhemos", "informações pessoais que coletamos"],
+      "sellShare": ["vender ou partilhar", "vender ou compartilhar", "não vendemos", "venda de informações pessoais", "vendemos as suas informações pessoais", "partilhamos as suas informações pessoais"],
+      "rights": ["direito de saber", "direito de eliminar", "direito de corrigir", "direito de recusar", "os seus direitos de privacidade na califórnia", "residentes da califórnia"],
+      "limit": ["limitar a utilização", "limitar o uso", "informações pessoais sensíveis", "direito de limitar"]
+    },
+    "dpdp": {
+      "itemisedData": ["descrição detalhada dos dados pessoais", "dados pessoais que recolhemos", "lista de dados pessoais", "categorias de dados pessoais"],
+      "purpose": ["finalidade do tratamento", "finalidades do tratamento", "finalidade específica"],
+      "rights": ["direito de acesso", "direito de retificação", "direito ao apagamento", "direito à resolução de reclamações", "os seus direitos"],
+      "grievance": ["resolução de reclamações", "responsável por reclamações", "grievance officer", "apresentar uma reclamação"],
+      "board": ["Data Protection Board of India", "conselho de proteção de dados da índia", "conselho de proteção de dados"]
+    },
+    "app": {
+      "kinds": ["tipos de informações pessoais", "categorias de informações pessoais", "informações pessoais que recolhemos e mantemos"],
+      "purposes": ["finalidades da recolha", "finalidades para as quais recolhemos", "porque recolhemos", "como utilizamos as suas informações pessoais"],
+      "accessCorrect": ["acesso às suas informações pessoais", "correção das suas informações pessoais", "pedido de acesso", "acesso e correção"],
+      "complaints": ["apresentar uma reclamação", "como apresentar uma reclamação", "reclamação de privacidade", "OAIC", "comissário australiano de informação"],
+      "overseas": ["destinatários no estrangeiro", "divulgação no estrangeiro", "fora da austrália", "destinatários estrangeiros", "divulgação para o estrangeiro"]
+    }
+  },
+  "ro": {
+    "gdpr": {
+      "rights": ["drepturile dumneavoastră", "drepturile tale", "drepturile persoanelor vizate", "dreptul de acces", "dreptul la ștergere", "dreptul la rectificare", "dreptul la opoziție", "portabilitatea datelor"],
+      "legalBasis": ["temeiul juridic", "temei juridic", "temeiul legal", "interes legitim", "interese legitime"],
+      "retention": ["perioada pentru care vor fi stocate datele", "perioada de stocare", "perioada de păstrare", "durata de stocare", "cât timp păstrăm", "vă păstrăm datele", "perioada de retenție"],
+      "complaint": ["autoritate de supraveghere", "depune o plângere", "dreptul de a depune o plângere", "anspdcp", "plângere"],
+      "contact": ["responsabilul cu protecția datelor", "responsabil cu protecția datelor", "operatorul de date", "operator", "datele de contact ale operatorului", "dpo"],
+      "transfers": ["transfer către țări terțe", "transferuri către țări terțe", "în afara spațiului economic european", "clauze contractuale standard", "decizie privind caracterul adecvat", "țară terță"]
+    },
+    "ccpa": {
+      "categories": ["categorii de informații personale", "categorii de date cu caracter personal", "informațiile personale pe care le colectăm"],
+      "sellShare": ["vinde sau partaja", "nu vindem", "vânzarea informațiilor personale", "vindem informațiile dumneavoastră personale", "partajăm informațiile dumneavoastră personale"],
+      "rights": ["dreptul de a ști", "dreptul de a șterge", "dreptul de a corecta", "dreptul de a refuza", "drepturile dumneavoastră privind confidențialitatea în california", "rezidenții din california"],
+      "limit": ["limitarea utilizării", "informații personale sensibile", "dreptul de a limita"]
+    },
+    "dpdp": {
+      "itemisedData": ["descriere detaliată a datelor personale", "datele personale pe care le colectăm", "lista datelor personale", "categorii de date personale"],
+      "purpose": ["scopul prelucrării", "scopurile prelucrării", "scop specific"],
+      "rights": ["dreptul de acces", "dreptul la rectificare", "dreptul la ștergere", "dreptul la soluționarea reclamațiilor", "drepturile dumneavoastră"],
+      "grievance": ["soluționarea reclamațiilor", "responsabil cu reclamațiile", "grievance officer", "depune o reclamație"],
+      "board": ["Data Protection Board of India", "consiliul indian pentru protecția datelor", "consiliul pentru protecția datelor"]
+    },
+    "app": {
+      "kinds": ["tipuri de informații personale", "categorii de informații personale", "informațiile personale pe care le colectăm și le deținem"],
+      "purposes": ["scopurile colectării", "scopurile pentru care colectăm", "de ce colectăm", "cum folosim informațiile dumneavoastră personale"],
+      "accessCorrect": ["accesul la informațiile dumneavoastră personale", "corectarea informațiilor dumneavoastră personale", "cerere de acces", "acces și corectare"],
+      "complaints": ["depune o plângere", "cum să depuneți o plângere", "plângere privind confidențialitatea", "OAIC", "comisarul australian pentru informații"],
+      "overseas": ["destinatari din străinătate", "divulgare în străinătate", "în afara australiei", "destinatari străini", "divulgare către străinătate"]
+    }
+  },
+  "ru": {
+    "gdpr": {
+      "rights": ["ваши права", "права субъектов данных", "право на доступ", "право на удаление", "право на исправление", "право на возражение", "переносимость данных"],
+      "legalBasis": ["правовое основание", "правовые основания", "основание для обработки", "законный интерес", "законные интересы"],
+      "retention": ["срок хранения", "сроки хранения", "как долго мы храним", "мы храним ваши данные", "период хранения"],
+      "complaint": ["надзорный орган", "подать жалобу", "право подать жалобу", "роскомнадзор", "уполномоченный орган по защите"],
+      "contact": ["сотрудник по защите данных", "ответственный за защиту данных", "оператор данных", "контролер", "контактные данные оператора", "dpo"],
+      "transfers": ["передача в третьи страны", "трансграничная передача", "за пределы европейской экономической зоны", "стандартные договорные положения", "решение об адекватности", "третья страна"]
+    },
+    "ccpa": {
+      "categories": ["категории персональных данных", "категории персональной информации", "персональная информация, которую мы собираем"],
+      "sellShare": ["продавать или передавать", "мы не продаем", "мы не продаём", "продажа персональных данных", "продаем ваши персональные данные", "передаем ваши персональные данные"],
+      "rights": ["право знать", "право на удаление", "право на исправление", "право отказаться", "ваши права на конфиденциальность в калифорнии", "жители калифорнии"],
+      "limit": ["ограничить использование", "конфиденциальные персональные данные", "чувствительные персональные данные", "право ограничить"]
+    },
+    "dpdp": {
+      "itemisedData": ["подробное описание персональных данных", "персональные данные, которые мы собираем", "перечень персональных данных", "категории персональных данных"],
+      "purpose": ["цель обработки", "цели обработки", "конкретная цель"],
+      "rights": ["право на доступ", "право на исправление", "право на удаление", "право на рассмотрение жалоб", "ваши права"],
+      "grievance": ["рассмотрение жалоб", "ответственный за жалобы", "grievance officer", "подать жалобу"],
+      "board": ["Data Protection Board of India", "индийский совет по защите данных", "совет по защите данных"]
+    },
+    "app": {
+      "kinds": ["виды персональной информации", "типы персональной информации", "персональная информация, которую мы собираем и храним"],
+      "purposes": ["цели сбора", "цели, для которых мы собираем", "почему мы собираем", "как мы используем вашу персональную информацию"],
+      "accessCorrect": ["доступ к вашей персональной информации", "исправление вашей персональной информации", "запрос на доступ", "доступ и исправление"],
+      "complaints": ["подать жалобу", "как подать жалобу", "жалоба на конфиденциальность", "OAIC", "австралийский комиссар по информации"],
+      "overseas": ["получатели за рубежом", "раскрытие за рубежом", "за пределами австралии", "иностранные получатели", "раскрытие за границу"]
+    }
+  },
+  "sv": {
+    "gdpr": {
+      "rights": ["dina rättigheter", "den registrerades rättigheter", "rätt till tillgång", "rätt till radering", "rätt till rättelse", "rätt att invända", "dataportabilitet"],
+      "legalBasis": ["rättslig grund", "rättsliga grunder", "laglig grund", "berättigat intresse", "berättigade intressen"],
+      "retention": ["lagringstid", "lagringsperiod", "hur länge vi sparar", "vi sparar dina", "gallringstid", "bevarandetid"],
+      "complaint": ["tillsynsmyndighet", "lämna in klagomål", "rätt att lämna klagomål", "integritetsskyddsmyndigheten", "imy"],
+      "contact": ["dataskyddsombud", "personuppgiftsansvarig", "kontaktuppgifter till den personuppgiftsansvarige", "dpo"],
+      "transfers": ["överföring till tredjeland", "överföringar till tredjeland", "utanför ees", "standardavtalsklausuler", "beslut om adekvat skyddsnivå", "tredjeland"]
+    },
+    "ccpa": {
+      "categories": ["kategorier av personuppgifter", "kategorier av personlig information", "personuppgifter som vi samlar in"],
+      "sellShare": ["sälja eller dela", "vi säljer inte", "försäljning av personuppgifter", "säljer dina personuppgifter", "delar dina personuppgifter"],
+      "rights": ["rätt att veta", "rätt att radera", "rätt att rätta", "rätt att välja bort", "dina integritetsrättigheter i kalifornien", "invånare i kalifornien"],
+      "limit": ["begränsa användningen", "känsliga personuppgifter", "rätt att begränsa"]
+    },
+    "dpdp": {
+      "itemisedData": ["detaljerad beskrivning av personuppgifter", "personuppgifter som vi samlar in", "förteckning över personuppgifter", "kategorier av personuppgifter"],
+      "purpose": ["ändamålet med behandlingen", "ändamål med behandlingen", "specifikt ändamål"],
+      "rights": ["rätt till tillgång", "rätt till rättelse", "rätt till radering", "rätt till klagomålshantering", "dina rättigheter"],
+      "grievance": ["klagomålshantering", "klagomålsansvarig", "grievance officer", "lämna in klagomål"],
+      "board": ["Data Protection Board of India", "indiens dataskyddsråd", "dataskyddsrådet"]
+    },
+    "app": {
+      "kinds": ["typer av personlig information", "slags personuppgifter", "personlig information som vi samlar in och lagrar"],
+      "purposes": ["ändamålen med insamlingen", "ändamål för vilka vi samlar in", "varför vi samlar in", "hur vi använder din personliga information"],
+      "accessCorrect": ["tillgång till din personliga information", "rättelse av din personliga information", "begäran om tillgång", "tillgång och rättelse"],
+      "complaints": ["lämna in klagomål", "hur du klagar", "integritetsklagomål", "OAIC", "australiens informationskommissionär"],
+      "overseas": ["mottagare utomlands", "utlämnande utomlands", "utanför australien", "utländska mottagare", "utlämnande till utlandet"]
+    }
+  },
+  "tr": {
+    "gdpr": {
+      "rights": ["haklarınız", "ilgili kişinin hakları", "erişim hakkı", "silme hakkı", "unutulma hakkı", "düzeltme hakkı", "itiraz hakkı", "veri taşınabilirliği"],
+      "legalBasis": ["hukuki dayanak", "hukuki sebep", "hukuki sebepleri", "yasal dayanak", "meşru menfaat", "meşru menfaatler"],
+      "retention": ["saklama süresi", "saklama süreleri", "muhafaza süresi", "ne kadar süre saklıyoruz", "verilerinizi saklarız", "saklanma süresi"],
+      "complaint": ["denetim otoritesi", "şikayette bulunma hakkı", "şikayet hakkı", "şikayet etme", "kişisel verileri koruma kurumu", "kvkk"],
+      "contact": ["veri koruma görevlisi", "veri sorumlusu", "veri sorumlusunun iletişim bilgileri", "dpo"],
+      "transfers": ["üçüncü ülkelere aktarım", "üçüncü ülkelere aktarılması", "yurt dışına aktarım", "avrupa ekonomik alanı dışına", "standart sözleşme hükümleri", "yeterlilik kararı", "üçüncü ülke"]
+    },
+    "ccpa": {
+      "categories": ["kişisel bilgi kategorileri", "kişisel veri kategorileri", "topladığımız kişisel bilgiler"],
+      "sellShare": ["satmak veya paylaşmak", "satmıyoruz", "kişisel bilgilerin satışı", "kişisel bilgilerinizi satıyoruz", "kişisel bilgilerinizi paylaşıyoruz"],
+      "rights": ["bilme hakkı", "silme hakkı", "düzeltme hakkı", "vazgeçme hakkı", "kaliforniya gizlilik haklarınız", "kaliforniya sakinleri"],
+      "limit": ["kullanımı sınırlama", "hassas kişisel bilgiler", "sınırlama hakkı"]
+    },
+    "dpdp": {
+      "itemisedData": ["kişisel verilerin ayrıntılı açıklaması", "topladığımız kişisel veriler", "kişisel veri listesi", "kişisel veri kategorileri"],
+      "purpose": ["işleme amacı", "işleme amaçları", "belirli amaç"],
+      "rights": ["erişim hakkı", "düzeltme hakkı", "silme hakkı", "şikayetlerin giderilmesi hakkı", "haklarınız"],
+      "grievance": ["şikayetlerin giderilmesi", "şikayet görevlisi", "grievance officer", "şikayette bulunmak"],
+      "board": ["Data Protection Board of India", "hindistan veri koruma kurulu", "veri koruma kurulu"]
+    },
+    "app": {
+      "kinds": ["kişisel bilgi türleri", "kişisel bilgi çeşitleri", "topladığımız ve tuttuğumuz kişisel bilgiler"],
+      "purposes": ["toplama amaçları", "topladığımız amaçlar", "neden topluyoruz", "kişisel bilgilerinizi nasıl kullanıyoruz"],
+      "accessCorrect": ["kişisel bilgilerinize erişim", "kişisel bilgilerinizin düzeltilmesi", "erişim talebi", "erişim ve düzeltme"],
+      "complaints": ["şikayette bulunmak", "nasıl şikayet edilir", "gizlilik şikayeti", "OAIC", "avustralya bilgi komiseri"],
+      "overseas": ["yurt dışındaki alıcılar", "yurt dışına ifşa", "avustralya dışında", "yabancı alıcılar", "yurt dışına aktarım"]
+    }
+  },
+  "zh": {
+    "gdpr": {
+      "rights": ["您的权利", "数据主体的权利", "访问权", "删除权", "被遗忘权", "更正权", "反对权", "数据可携带权"],
+      "legalBasis": ["法律依据", "法律基础", "处理的法律依据", "合法利益", "正当利益"],
+      "retention": ["保留期限", "存储期限", "保存期限", "我们保留您的", "数据保留"],
+      "complaint": ["监管机构", "监督机构", "提出投诉", "投诉权", "向监管机构投诉"],
+      "contact": ["数据保护官", "数据控制者", "控制者的联系方式", "DPO", "联系方式"],
+      "transfers": ["向第三国传输", "向第三国转移", "跨境传输", "欧洲经济区以外", "标准合同条款", "充分性认定", "第三国"]
+    },
+    "ccpa": {
+      "categories": ["个人信息类别", "个人信息的类别", "我们收集的个人信息", "收集的个人信息类别"],
+      "sellShare": ["出售或共享", "不会出售", "出售个人信息", "出售您的个人信息", "共享您的个人信息"],
+      "rights": ["知情权", "删除权", "更正权", "选择退出的权利", "加州隐私权", "加州居民"],
+      "limit": ["限制使用", "敏感个人信息", "限制权"]
+    },
+    "dpdp": {
+      "itemisedData": ["个人数据的详细说明", "我们收集的个人数据", "个人数据清单", "个人数据类别"],
+      "purpose": ["处理目的", "处理的目的", "特定目的"],
+      "rights": ["访问权", "更正权", "删除权", "申诉救济权", "您的权利"],
+      "grievance": ["申诉处理", "申诉官", "grievance officer", "提出申诉"],
+      "board": ["印度数据保护委员会", "Data Protection Board of India", "数据保护委员会"]
+    },
+    "app": {
+      "kinds": ["个人信息的种类", "个人信息类型", "我们收集和持有的个人信息"],
+      "purposes": ["收集目的", "我们收集的目的", "为什么收集", "我们如何使用您的个人信息"],
+      "accessCorrect": ["访问您的个人信息", "更正您的个人信息", "访问请求", "访问和更正"],
+      "complaints": ["提出投诉", "如何投诉", "隐私投诉", "OAIC", "澳大利亚信息专员"],
+      "overseas": ["海外接收方", "向海外披露", "澳大利亚境外", "境外接收方", "向境外披露"]
+    }
+  }
+}

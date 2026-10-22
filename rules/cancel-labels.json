@@ -1,0 +1,22 @@
+{
+  "ar": ["إلغاء العقد", "إلغاء الاشتراك", "إنهاء العقد", "إنهاء الاشتراك", "إلغاء العقود هنا"],
+  "cs": ["Vypovědět smlouvu", "Vypovědět smlouvy zde", "Zrušit předplatné", "Zrušit členství", "Ukončit smlouvu"],
+  "da": ["Opsig aftale", "Opsig aftaler her", "Opsig abonnement", "Opsig medlemskab", "Annuller abonnement"],
+  "de": ["Verträge hier kündigen", "Vertrag hier kündigen", "Verträge kündigen", "Vertrag kündigen", "Hier kündigen", "Abo kündigen", "Abonnement kündigen", "Mitgliedschaft kündigen"],
+  "en": ["Cancel contracts here", "Cancel contract", "Cancel subscription", "Cancel my subscription", "Cancel membership"],
+  "es": ["Cancelar contrato", "Cancelar contratos aquí", "Cancelar suscripción", "Cancelar mi suscripción", "Dar de baja", "Darse de baja"],
+  "fi": ["Irtisano sopimus", "Irtisano sopimukset tästä", "Irtisano tilaus", "Peruuta tilaus", "Peruuta jäsenyys"],
+  "fr": ["Résilier le contrat", "Résilier les contrats ici", "Résilier mon abonnement", "Résilier l'abonnement", "Résilier l’abonnement", "Résilier ici", "Annuler l'abonnement", "Annuler l’abonnement"],
+  "it": ["Disdici contratto", "Disdire il contratto", "Disdici i contratti qui", "Disdici abbonamento", "Annulla abbonamento"],
+  "ja": ["契約を解約", "契約解除", "解約", "解約する", "退会する", "定期購入を解約", "定期購入の解約", "サブスクリプションを解約"],
+  "ko": ["계약 해지", "구독 해지", "구독 취소", "해지하기", "멤버십 해지", "정기결제 해지"],
+  "nb": ["Si opp avtalen", "Si opp avtale", "Si opp avtaler her", "Si opp abonnement", "Avslutt abonnement"],
+  "nl": ["Contract opzeggen", "Contracten hier opzeggen", "Abonnement opzeggen", "Lidmaatschap opzeggen", "Opzeggen", "Abonnement annuleren"],
+  "pl": ["Wypowiedz umowę", "Wypowiedz umowy tutaj", "Rozwiąż umowę", "Anuluj subskrypcję", "Anuluj abonament", "Zrezygnuj z subskrypcji"],
+  "pt": ["Cancelar contrato", "Cancelar contratos aqui", "Cancelar assinatura", "Cancelar subscrição", "Cancelar a minha subscrição", "Rescindir contrato"],
+  "ro": ["Reziliază contractul", "Rezilierea contractelor aici", "Reziliere contract", "Anulează abonamentul", "Anulează contractul"],
+  "ru": ["Расторгнуть договор", "Расторжение договора", "Отменить подписку", "Отказаться от подписки"],
+  "sv": ["Säg upp avtal", "Säg upp avtalet", "Säg upp avtal här", "Säg upp prenumeration", "Avsluta prenumeration", "Säg upp medlemskap"],
+  "tr": ["Sözleşmeyi feshet", "Sözleşmeyi iptal et", "Aboneliği iptal et", "Üyeliği iptal et", "Abonelikten çık"],
+  "zh": ["取消订阅", "终止合同", "取消合同", "取消会员", "取消自动续费", "解约", "退订"]
+}

@@ -1,0 +1,22 @@
+{
+  "ar": ["بلد المنشأ", "بلد الصنع", "صنع في", "المنشأ:", "تم التصنيع في", "made in"],
+  "cs": ["země původu", "vyrobeno v", "původ:", "made in"],
+  "da": ["oprindelsesland", "fremstillet i", "produceret i", "oprindelse:", "made in"],
+  "de": ["herkunftsland", "ursprungsland", "hergestellt in", "produziert in", "herkunft:", "made in"],
+  "en": ["country of origin", "country of manufacture", "made in", "manufactured in", "produced in", "product of", "origin:"],
+  "es": ["país de origen", "fabricado en", "hecho en", "producido en", "origen:", "made in"],
+  "fi": ["alkuperämaa", "valmistusmaa", "valmistettu", "alkuperä:", "made in"],
+  "fr": ["pays d'origine", "pays d’origine", "fabriqué en", "fabriqué au", "produit en", "origine :", "origine:", "made in"],
+  "it": ["paese di origine", "paese d'origine", "paese d’origine", "fabbricato in", "prodotto in", "origine:", "made in"],
+  "ja": ["原産国", "製造国", "生産国", "原産地", "製造元", "made in"],
+  "ko": ["원산지", "제조국", "원산국", "생산국", "made in"],
+  "nb": ["opprinnelsesland", "produsert i", "laget i", "opprinnelse:", "made in"],
+  "nl": ["land van herkomst", "herkomstland", "geproduceerd in", "gemaakt in", "vervaardigd in", "oorsprong:", "made in"],
+  "pl": ["kraj pochodzenia", "kraj produkcji", "wyprodukowano w", "wyprodukowane w", "pochodzenie:", "made in"],
+  "pt": ["país de origem", "fabricado em", "feito em", "produzido em", "origem:", "made in"],
+  "ro": ["țara de origine", "tara de origine", "fabricat în", "produs în", "origine:", "made in"],
+  "ru": ["страна происхождения", "страна-изготовитель", "страна производитель", "страна производства", "сделано в", "произведено в", "made in"],
+  "sv": ["ursprungsland", "tillverkad i", "tillverkningsland", "ursprung:", "made in"],
+  "tr": ["menşei", "menşe ülke", "üretim yeri", "üretildiği ülke", "made in"],
+  "zh": ["原产国", "原产地", "生产国", "产地", "制造国", "made in"]
+}

@@ -1,0 +1,2212 @@
+{
+  "ar": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "كجم",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "كغ",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "جم",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "غ",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "لتر",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "مل",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "متر",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "سم",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:[.,٫]\\d+)?)\\s*(?P<unit>cm²|cm2|كجم|لتر|متر|kg|mg|ml|cl|dl|cm|mm|m²|m2|كغ|جم|مل|سم|g|l|m|غ)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:[.,٫]\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|لكل)\\s*(?:(?P<n>\\d+(?:[.,٫]\\d+)?)\\s*)?(?P<unit>cm²|cm2|كجم|لتر|متر|kg|mg|ml|cl|dl|cm|mm|m²|m2|كغ|جم|مل|سم|g|l|m|غ)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "cs": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litr",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "mililitr",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metr",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimetr",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>centimetr|kilogram|mililitr|gram|litr|metr|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|za|na)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>centimetr|kilogram|mililitr|gram|litr|metr|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "da": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "liter",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "milliliter",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "meter",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimeter",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|pr\\.|pr|per)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "de": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogramm",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gramm",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "liter",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "milliliter",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "meter",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "zentimeter",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "quadratmeter",
+        "dimension": "area",
+        "factor": 1
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>quadratmeter|milliliter|zentimeter|kilogramm|gramm|liter|meter|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|pro|je)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>quadratmeter|milliliter|zentimeter|kilogramm|gramm|liter|meter|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "en": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litre",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "millilitre",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metre",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimetre",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "liter",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "milliliter",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "meter",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "lb",
+        "dimension": "mass",
+        "factor": 0.45359237
+      },
+      {
+        "symbol": "oz",
+        "dimension": "mass",
+        "factor": 0.028349523125
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:\\.\\d+)?)\\s*(?P<unit>millilitre|centimetre|milliliter|kilogram|litre|metre|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|lb|oz|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:\\.\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|per)\\s*(?:(?P<n>\\d+(?:\\.\\d+)?)\\s*)?(?P<unit>millilitre|centimetre|milliliter|kilogram|litre|metre|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|lb|oz|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "es": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogramo",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gramo",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litro",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "mililitro",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metro",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centímetro",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:[.,]\\d+)?)\\s*(?P<unit>centímetro|kilogramo|mililitro|gramo|litro|metro|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:[.,]\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|por|el|al)\\s*(?:(?P<n>\\d+(?:[.,]\\d+)?)\\s*)?(?P<unit>centímetro|kilogramo|mililitro|gramo|litro|metro|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "fi": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogramma",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gramma",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litra",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "millilitra",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metri",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "senttimetri",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>senttimetri|kilogramma|millilitra|gramma|litra|metri|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|per)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>senttimetri|kilogramma|millilitra|gramma|litra|metri|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "fr": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogramme",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gramme",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litre",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "millilitre",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mètre",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimètre",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>kilogramme|millilitre|centimètre|gramme|litre|mètre|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|par|le|au)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>kilogramme|millilitre|centimètre|gramme|litre|mètre|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "it": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "chilogrammo",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "grammo",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litro",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "millilitro",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metro",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimetro",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>chilogrammo|millilitro|centimetro|grammo|litro|metro|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|al|per|ogni)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>chilogrammo|millilitro|centimetro|grammo|litro|metro|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "ja": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "キログラム",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "グラム",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "リットル",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ミリリットル",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "メートル",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "センチメートル",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:\\.\\d+)?)\\s*(?P<unit>センチメートル|ミリリットル|キログラム|リットル|メートル|cm²|cm2|グラム|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:\\.\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|あたり|当たり)\\s*(?:(?P<n>\\d+(?:\\.\\d+)?)\\s*)?(?P<unit>センチメートル|ミリリットル|キログラム|リットル|メートル|cm²|cm2|グラム|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "ko": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "킬로그램",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "그램",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "리터",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "밀리리터",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "미터",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "센티미터",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:\\.\\d+)?)\\s*(?P<unit>킬로그램|밀리리터|센티미터|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|그램|리터|미터|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:\\.\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|당)\\s*(?:(?P<n>\\d+(?:\\.\\d+)?)\\s*)?(?P<unit>킬로그램|밀리리터|센티미터|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|그램|리터|미터|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "nb": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "liter",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "milliliter",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "meter",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimeter",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|per|pr\\.?)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "nl": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "liter",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "milliliter",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "meter",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimeter",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|per|p\\.)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "pl": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litr",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "mililitr",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metr",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centymetr",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>centymetr|kilogram|mililitr|gram|litr|metr|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|za|na)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>centymetr|kilogram|mililitr|gram|litr|metr|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "pt": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "quilograma",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "grama",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litro",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "mililitro",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metro",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centímetro",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:[.,]\\d+)?)\\s*(?P<unit>quilograma|centímetro|mililitro|grama|litro|metro|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:[.,]\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|por|o|ao)\\s*(?:(?P<n>\\d+(?:[.,]\\d+)?)\\s*)?(?P<unit>quilograma|centímetro|mililitro|grama|litro|metro|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "ro": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litru",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "mililitru",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metru",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimetru",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>centimetru|mililitru|kilogram|litru|metru|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|pe|la)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>centimetru|mililitru|kilogram|litru|metru|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "ru": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "кг",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "г",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "л",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "мл",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "м",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "см",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "мм",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "килограмм",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "грамм",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "литр",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "миллилитр",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "метр",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "сантиметр",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>килограмм|миллилитр|сантиметр|грамм|литр|метр|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|кг|мл|см|мм|g|l|m|г|л|м)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|за|на)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>килограмм|миллилитр|сантиметр|грамм|литр|метр|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|кг|мл|см|мм|g|l|m|г|л|м)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "sv": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "liter",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "milliliter",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "meter",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "centimeter",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|per|för)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>milliliter|centimeter|kilogram|liter|meter|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "tr": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "lt",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "kilogram",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "gram",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "litre",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "mililitre",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "metre",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "santimetre",
+        "dimension": "length",
+        "factor": 0.01
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:,\\d+)?)\\s*(?P<unit>santimetre|mililitre|kilogram|litre|metre|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|lt|g|l|m)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:,\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|başına)\\s*(?:(?P<n>\\d+(?:,\\d+)?)\\s*)?(?P<unit>santimetre|mililitre|kilogram|litre|metre|gram|cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|lt|g|l|m)(?:$|[^\\p{L}\\p{N}])"
+  },
+  "zh": {
+    "units": [
+      {
+        "symbol": "kg",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "g",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "mg",
+        "dimension": "mass",
+        "factor": 0.000001
+      },
+      {
+        "symbol": "l",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "ml",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "cl",
+        "dimension": "volume",
+        "factor": 0.01
+      },
+      {
+        "symbol": "dl",
+        "dimension": "volume",
+        "factor": 0.1
+      },
+      {
+        "symbol": "m",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "cm",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "mm",
+        "dimension": "length",
+        "factor": 0.001
+      },
+      {
+        "symbol": "m²",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "m2",
+        "dimension": "area",
+        "factor": 1
+      },
+      {
+        "symbol": "cm²",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "cm2",
+        "dimension": "area",
+        "factor": 0.0001
+      },
+      {
+        "symbol": "公斤",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "千克",
+        "dimension": "mass",
+        "factor": 1
+      },
+      {
+        "symbol": "克",
+        "dimension": "mass",
+        "factor": 0.001
+      },
+      {
+        "symbol": "升",
+        "dimension": "volume",
+        "factor": 1
+      },
+      {
+        "symbol": "毫升",
+        "dimension": "volume",
+        "factor": 0.001
+      },
+      {
+        "symbol": "米",
+        "dimension": "length",
+        "factor": 1
+      },
+      {
+        "symbol": "厘米",
+        "dimension": "length",
+        "factor": 0.01
+      },
+      {
+        "symbol": "毫米",
+        "dimension": "length",
+        "factor": 0.001
+      }
+    ],
+    "quantityRegex": "(?i)(?P<n>\\d+(?:\\.\\d+)?)\\s*(?P<unit>cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|公斤|千克|毫升|厘米|毫米|g|l|m|克|升|米)(?:$|[^\\p{L}\\p{N}])",
+    "perRegex": "(?i)(?P<price>(?:(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ)\\s?)?\\d+(?:\\.\\d{1,2})?(?:\\s?(?:€|EUR|£|GBP|CHF|\\$|USD|R\\$|BRL|¥|JPY|円|CNY|元|₩|KRW|원|₺|TL|TRY|₽|RUB|руб\\.?|zł|PLN|Kč|CZK|kr\\.?|DKK|NOK|SEK|lei|RON|AED|SAR|ر\\.س|د\\.إ))?)\\s*(?:/|每)\\s*(?:(?P<n>\\d+(?:\\.\\d+)?)\\s*)?(?P<unit>cm²|cm2|kg|mg|ml|cl|dl|cm|mm|m²|m2|公斤|千克|毫升|厘米|毫米|g|l|m|克|升|米)(?:$|[^\\p{L}\\p{N}])"
+  }
+}

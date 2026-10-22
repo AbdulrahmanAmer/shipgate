@@ -1,0 +1,142 @@
+{
+  "ar": {
+    "adequacy": ["قرار الملاءمة", "قرار كفاية", "مستوى حماية كاف", "مستوى كافٍ من الحماية"],
+    "dpf": ["إطار خصوصية البيانات", "data privacy framework", "dpf"],
+    "scc": ["البنود التعاقدية القياسية", "البنود التعاقدية النموذجية", "شروط تعاقدية قياسية", "sccs"],
+    "bcr": ["القواعد المؤسسية الملزمة", "binding corporate rules", "bcr"],
+    "derogation": ["الاستثناءات", "استثناءات", "المادة 49", "موافقة صريحة"]
+  },
+  "cs": {
+    "adequacy": ["rozhodnutí o odpovídající ochraně", "rozhodnutí o adekvátnosti", "odpovídající úroveň ochrany"],
+    "dpf": ["rámec ochrany osobních údajů", "rámec ochrany soukromí", "data privacy framework", "dpf"],
+    "scc": ["standardní smluvní doložky", "standardní doložky o ochraně údajů", "sccs"],
+    "bcr": ["závazná podniková pravidla", "binding corporate rules", "bcr"],
+    "derogation": ["odchylky pro specifické situace", "odchylka", "výjimky", "článek 49", "čl. 49", "výslovný souhlas"]
+  },
+  "da": {
+    "adequacy": ["afgørelse om tilstrækkeligt beskyttelsesniveau", "tilstrækkelighedsafgørelse", "tilstrækkeligt beskyttelsesniveau"],
+    "dpf": ["databeskyttelsesrammen", "privatlivsrammen", "data privacy framework", "dpf"],
+    "scc": ["standardkontraktbestemmelser", "standarddatabeskyttelsesbestemmelser", "sccs"],
+    "bcr": ["bindende virksomhedsregler", "binding corporate rules", "bcr"],
+    "derogation": ["undtagelser i særlige situationer", "undtagelse", "artikel 49", "art. 49", "udtrykkeligt samtykke"]
+  },
+  "de": {
+    "adequacy": ["angemessenheitsbeschluss", "angemessenes schutzniveau", "angemessenheit"],
+    "dpf": ["datenschutzrahmen", "eu-us-datenschutzrahmen", "data privacy framework", "dpf"],
+    "scc": ["standardvertragsklauseln", "standarddatenschutzklauseln", "eu-standardvertragsklauseln", "sccs"],
+    "bcr": ["verbindliche interne datenschutzvorschriften", "binding corporate rules", "bcr"],
+    "derogation": ["ausnahmen für bestimmte fälle", "ausnahme", "artikel 49", "art. 49", "ausdrückliche einwilligung"]
+  },
+  "en": {
+    "adequacy": ["adequacy decision", "adequacy", "adequate level of protection"],
+    "dpf": ["data privacy framework", "eu-us data privacy framework", "eu-u.s. data privacy framework", "dpf"],
+    "scc": ["standard contractual clauses", "standard data protection clauses", "model clauses", "sccs"],
+    "bcr": ["binding corporate rules", "bcr"],
+    "derogation": ["derogation", "derogations", "article 49", "art. 49", "explicit consent to the transfer"]
+  },
+  "es": {
+    "adequacy": ["decisión de adecuación", "nivel de protección adecuado"],
+    "dpf": ["marco de privacidad de datos", "marco de protección de datos", "data privacy framework", "dpf"],
+    "scc": ["cláusulas contractuales tipo", "cláusulas tipo de protección de datos", "cláusulas contractuales estándar", "sccs"],
+    "bcr": ["normas corporativas vinculantes", "binding corporate rules", "bcr"],
+    "derogation": ["excepciones para situaciones específicas", "excepción", "derogación", "artículo 49", "art. 49", "consentimiento explícito"]
+  },
+  "fi": {
+    "adequacy": ["tietosuojan riittävyyttä koskeva päätös", "riittävyyspäätös", "riittävä tietosuojan taso"],
+    "dpf": ["tietosuojakehys", "data privacy framework", "dpf"],
+    "scc": ["vakiolausekkeet", "tietosuojan vakiolausekkeet", "vakiosopimuslausekkeet", "sccs"],
+    "bcr": ["yritystä koskevat sitovat säännöt", "yrityksiä koskevat sitovat säännöt", "sitovat yritysnormit", "binding corporate rules", "bcr"],
+    "derogation": ["poikkeukset erityistilanteissa", "poikkeus", "49 artikla", "artikla 49", "nimenomainen suostumus"]
+  },
+  "fr": {
+    "adequacy": ["décision d'adéquation", "décision d’adéquation", "niveau de protection adéquat"],
+    "dpf": ["cadre de protection des données", "data privacy framework", "dpf"],
+    "scc": ["clauses contractuelles types", "clauses types de protection des données", "ccts", "sccs"],
+    "bcr": ["règles d'entreprise contraignantes", "règles d’entreprise contraignantes", "binding corporate rules", "bcr"],
+    "derogation": ["dérogations pour des situations particulières", "dérogation", "article 49", "art. 49", "consentement explicite"]
+  },
+  "it": {
+    "adequacy": ["decisione di adeguatezza", "livello di protezione adeguato"],
+    "dpf": ["quadro sulla protezione dei dati", "quadro per la protezione dei dati", "data privacy framework", "dpf"],
+    "scc": ["clausole contrattuali tipo", "clausole tipo di protezione dei dati", "clausole contrattuali standard", "sccs"],
+    "bcr": ["norme vincolanti d'impresa", "norme vincolanti d’impresa", "binding corporate rules", "bcr"],
+    "derogation": ["deroghe in specifiche situazioni", "deroga", "deroghe", "articolo 49", "art. 49", "consenso esplicito"]
+  },
+  "ja": {
+    "adequacy": ["十分性認定", "十分性決定", "十分なレベルの保護"],
+    "dpf": ["データプライバシーフレームワーク", "data privacy framework", "dpf"],
+    "scc": ["標準契約条項", "標準契約約款", "scc"],
+    "bcr": ["拘束的企業準則", "binding corporate rules", "bcr"],
+    "derogation": ["特定の状況における例外", "例外", "第49条", "明示的な同意"]
+  },
+  "ko": {
+    "adequacy": ["적정성 결정", "적정성 인정", "적정 수준의 보호"],
+    "dpf": ["데이터 프라이버시 프레임워크", "data privacy framework", "dpf"],
+    "scc": ["표준계약조항", "표준 계약 조항", "scc"],
+    "bcr": ["구속력 있는 기업 규칙", "binding corporate rules", "bcr"],
+    "derogation": ["특정 상황에 대한 예외", "예외", "제49조", "명시적 동의"]
+  },
+  "nb": {
+    "adequacy": ["avgjørelse om tilstrekkelig beskyttelsesnivå", "tilstrekkelighetsvedtak", "tilstrekkelig beskyttelsesnivå"],
+    "dpf": ["data privacy framework", "personvernrammeverk", "dpf"],
+    "scc": ["standard personvernbestemmelser", "standard avtalevilkår", "standardkontraktsklausuler", "sccs"],
+    "bcr": ["bindende virksomhetsregler", "binding corporate rules", "bcr"],
+    "derogation": ["unntak i særlige tilfeller", "unntak", "artikkel 49", "art. 49", "uttrykkelig samtykke"]
+  },
+  "nl": {
+    "adequacy": ["adequaatheidsbesluit", "adequaat beschermingsniveau", "passend beschermingsniveau"],
+    "dpf": ["gegevensprivacykader", "data privacy framework", "dpf"],
+    "scc": ["standaardcontractbepalingen", "modelcontractbepalingen", "standaardbepalingen inzake gegevensbescherming", "sccs"],
+    "bcr": ["bindende bedrijfsvoorschriften", "binding corporate rules", "bcr"],
+    "derogation": ["afwijkingen voor specifieke situaties", "afwijking", "artikel 49", "art. 49", "uitdrukkelijke toestemming"]
+  },
+  "pl": {
+    "adequacy": ["decyzja stwierdzająca odpowiedni stopień ochrony", "odpowiedni stopień ochrony", "decyzja o adekwatności"],
+    "dpf": ["ramy ochrony danych", "ramy prywatności danych", "data privacy framework", "dpf"],
+    "scc": ["standardowe klauzule umowne", "standardowe klauzule ochrony danych", "sccs"],
+    "bcr": ["wiążące reguły korporacyjne", "binding corporate rules", "bcr"],
+    "derogation": ["wyjątki w szczególnych sytuacjach", "odstępstwa w szczególnych sytuacjach", "odstępstwo", "art. 49", "artykuł 49", "wyraźna zgoda"]
+  },
+  "pt": {
+    "adequacy": ["decisão de adequação", "nível de proteção adequado", "nível de protecção adequado"],
+    "dpf": ["quadro de proteção de dados", "quadro de privacidade de dados", "data privacy framework", "dpf"],
+    "scc": ["cláusulas contratuais-tipo", "cláusulas contratuais tipo", "cláusulas contratuais padrão", "cláusulas-tipo de proteção de dados", "sccs"],
+    "bcr": ["regras vinculativas aplicáveis às empresas", "normas corporativas globais", "binding corporate rules", "bcr"],
+    "derogation": ["derrogações para situações específicas", "derrogação", "derrogações", "artigo 49", "art. 49", "consentimento explícito"]
+  },
+  "ro": {
+    "adequacy": ["decizie privind caracterul adecvat", "decizie de adecvare", "nivel adecvat de protecție"],
+    "dpf": ["cadrul de confidențialitate a datelor", "cadrul pentru protecția datelor", "data privacy framework", "dpf"],
+    "scc": ["clauze contractuale standard", "clauze standard de protecție a datelor", "clauzele contractuale tip", "sccs"],
+    "bcr": ["reguli corporatiste obligatorii", "binding corporate rules", "bcr"],
+    "derogation": ["derogări pentru situații specifice", "derogare", "derogări", "articolul 49", "art. 49", "consimțământ explicit"]
+  },
+  "ru": {
+    "adequacy": ["решение об адекватности", "решение о достаточности защиты", "адекватный уровень защиты"],
+    "dpf": ["механизм защиты данных", "рамочная программа защиты данных", "data privacy framework", "dpf"],
+    "scc": ["стандартные договорные положения", "стандартные договорные условия", "sccs"],
+    "bcr": ["обязательные корпоративные правила", "binding corporate rules", "bcr"],
+    "derogation": ["исключения для особых ситуаций", "исключение", "отступления", "статья 49", "явное согласие"]
+  },
+  "sv": {
+    "adequacy": ["beslut om adekvat skyddsnivå", "adekvansbeslut", "adekvat skyddsnivå"],
+    "dpf": ["ramverket för dataskydd", "dataintegritetsramverket", "data privacy framework", "dpf"],
+    "scc": ["standardavtalsklausuler", "standardiserade dataskyddsbestämmelser", "sccs"],
+    "bcr": ["bindande företagsbestämmelser", "binding corporate rules", "bcr"],
+    "derogation": ["undantag i särskilda situationer", "undantag", "artikel 49", "art. 49", "uttryckligt samtycke"]
+  },
+  "tr": {
+    "adequacy": ["yeterlilik kararı", "yeterli koruma düzeyi", "yeterlilik"],
+    "dpf": ["veri gizliliği çerçevesi", "data privacy framework", "dpf"],
+    "scc": ["standart sözleşme hükümleri", "standart sözleşme maddeleri", "sccs"],
+    "bcr": ["bağlayıcı şirket kuralları", "binding corporate rules", "bcr"],
+    "derogation": ["belirli durumlar için istisnalar", "istisna", "madde 49", "açık rıza"]
+  },
+  "zh": {
+    "adequacy": ["充分性认定", "充分性决定", "适当保护水平"],
+    "dpf": ["数据隐私框架", "data privacy framework", "dpf"],
+    "scc": ["标准合同条款", "sccs"],
+    "bcr": ["具有约束力的公司规则", "约束性公司规则", "binding corporate rules", "bcr"],
+    "derogation": ["特定情形下的例外", "例外情形", "减损", "第49条", "明确同意"]
+  }
+}

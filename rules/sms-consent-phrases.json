@@ -1,0 +1,142 @@
+{
+  "ar": {
+    "autodial": ["رسائل تسويقية آلية", "رسائل تسويقية تلقائية", "الاتصال الآلي", "رسائل آلية"],
+    "frequency": ["عدد الرسائل", "تكرار الرسائل", "رسائل شهريا", "رسائل في الشهر"],
+    "rates": ["قد تطبق رسوم الرسائل والبيانات", "رسوم الرسائل والبيانات", "قد تُطبق رسوم"],
+    "optout": ["أرسل stop", "رد بكلمة stop", "للإلغاء أرسل stop", "stop لإلغاء الاشتراك"],
+    "notCondition": ["ليست شرطا للشراء", "ليست شرطًا للشراء", "الموافقة ليست شرطا", "ليس شرطا لأي عملية شراء"]
+  },
+  "cs": {
+    "autodial": ["automatizované marketingové zprávy", "automatické zprávy", "automatizovaný vytáčecí systém", "marketingové zprávy"],
+    "frequency": ["četnost zpráv", "frekvence zpráv", "zpráv měsíčně", "zpráv za měsíc"],
+    "rates": ["mohou být účtovány poplatky za zprávy a data", "poplatky za zprávy a data", "poplatky za sms"],
+    "optout": ["odpovězte stop", "napište stop", "stop pro odhlášení", "odpověď stop"],
+    "notCondition": ["není podmínkou nákupu", "souhlas není podmínkou", "není podmínkou žádného nákupu"]
+  },
+  "da": {
+    "autodial": ["automatiserede marketingbeskeder", "automatiske beskeder", "automatisk opkaldssystem", "marketingbeskeder"],
+    "frequency": ["beskedfrekvens", "antal beskeder", "beskeder om måneden", "beskeder pr. måned"],
+    "rates": ["der kan opkræves gebyrer for beskeder og data", "gebyrer for beskeder og data", "beskeder og data"],
+    "optout": ["svar stop", "skriv stop", "stop for at afmelde", "svar med stop"],
+    "notCondition": ["er ikke en betingelse for køb", "samtykke er ikke en betingelse", "ikke en betingelse for noget køb"]
+  },
+  "de": {
+    "autodial": ["automatisierte werbenachrichten", "automatisierte marketing", "automatische wählsysteme", "automatisierte nachrichten", "werbenachrichten"],
+    "frequency": ["nachrichtenhäufigkeit", "häufigkeit der nachrichten", "nachrichten pro monat", "anzahl der nachrichten"],
+    "rates": ["nachrichten- und datengebühren", "datengebühren", "es können gebühren anfallen", "kosten für nachrichten und daten"],
+    "optout": ["antworten sie mit stop", "mit stop antworten", "senden sie stop", "stop zum abbestellen", "stop zum abmelden"],
+    "notCondition": ["keine voraussetzung für", "keine bedingung für einen kauf", "ist keine kaufbedingung", "nicht bedingung eines kaufs"]
+  },
+  "en": {
+    "autodial": ["automated marketing", "automated text", "automated messages", "autodialed", "autodialer", "automatic telephone dialing", "artificial or prerecorded voice", "recurring automated", "marketing messages", "marketing text"],
+    "frequency": ["message frequency", "msg frequency", "messages per month", "msgs/month", "messages/month", "frequency varies", "up to 4 msgs"],
+    "rates": ["msg & data rates", "message and data rates", "msg and data rates", "message & data rates", "data rates may apply"],
+    "optout": ["reply stop", "text stop", "stop to opt out", "stop to unsubscribe", "reply 'stop'", "reply “stop”", "reply ‘stop’"],
+    "notCondition": ["not a condition of purchase", "not a condition of any purchase", "as a condition of purchasing", "consent is not required", "isn't a condition", "isn’t a condition", "is not a condition"]
+  },
+  "es": {
+    "autodial": ["mensajes de marketing automatizados", "mensajes automatizados", "marcación telefónica automática", "marcador automático", "mensajes de marketing"],
+    "frequency": ["frecuencia de mensajes", "frecuencia de los mensajes", "mensajes al mes", "mensajes por mes"],
+    "rates": ["pueden aplicarse tarifas de mensajes y datos", "tarifas de mensajes y datos", "pueden aplicar tarifas", "tarifas de mensajes"],
+    "optout": ["responda stop", "responde stop", "envíe stop", "stop para cancelar", "stop para darse de baja"],
+    "notCondition": ["no es una condición de compra", "el consentimiento no es una condición", "no es condición para la compra", "no es una condición para ninguna compra"]
+  },
+  "fi": {
+    "autodial": ["automaattiset markkinointiviestit", "automaattiset viestit", "automaattinen soittojärjestelmä", "markkinointiviestit"],
+    "frequency": ["viestien määrä", "viestien tiheys", "viestiä kuukaudessa", "viestiä kuukausittain"],
+    "rates": ["viesti- ja datamaksut", "viestien ja datan hinnat", "maksut voivat tulla"],
+    "optout": ["vastaa stop", "lähetä stop", "stop peruuttaaksesi", "vastaa viestillä stop"],
+    "notCondition": ["ei ole oston ehto", "suostumus ei ole ehto", "ei ole minkään oston ehto"]
+  },
+  "fr": {
+    "autodial": ["messages marketing automatisés", "messages automatisés", "système de composition automatique", "composeur automatique", "messages marketing"],
+    "frequency": ["fréquence des messages", "nombre de messages", "messages par mois", "messages/mois"],
+    "rates": ["des frais de messages et de données peuvent s'appliquer", "des frais de messages et de données peuvent s’appliquer", "frais de messages et de données", "tarifs des messages et des données"],
+    "optout": ["répondez stop", "répondre stop", "envoyez stop", "stop pour vous désabonner", "stop pour arrêter"],
+    "notCondition": ["n'est pas une condition d'achat", "n’est pas une condition d’achat", "le consentement n'est pas une condition", "le consentement n’est pas une condition", "pas une condition de tout achat"]
+  },
+  "it": {
+    "autodial": ["messaggi di marketing automatizzati", "messaggi automatizzati", "sistema di chiamata automatica", "composizione automatica", "messaggi di marketing"],
+    "frequency": ["frequenza dei messaggi", "numero di messaggi", "messaggi al mese", "messaggi/mese"],
+    "rates": ["possono essere applicate tariffe per messaggi e dati", "tariffe per messaggi e dati", "costi di messaggi e dati", "possono applicarsi tariffe"],
+    "optout": ["rispondi stop", "rispondere stop", "invia stop", "stop per annullare l'iscrizione", "stop per annullare l’iscrizione", "stop per disiscriverti"],
+    "notCondition": ["non è una condizione di acquisto", "il consenso non è una condizione", "non è condizione per alcun acquisto"]
+  },
+  "ja": {
+    "autodial": ["自動送信", "自動配信", "自動発信", "マーケティングメッセージ", "宣伝メッセージ", "自動音声"],
+    "frequency": ["配信頻度", "メッセージ頻度", "月に数回", "月間配信数", "メッセージ数"],
+    "rates": ["通信料", "メッセージ料金", "データ通信料", "通信料がかかる場合があります", "料金が発生する場合があります"],
+    "optout": ["stopと返信", "stopを送信", "配信停止はstop", "「stop」と返信", "stopで配信停止"],
+    "notCondition": ["購入の条件ではありません", "同意は購入の条件ではありません", "購入条件ではありません", "条件ではありません"]
+  },
+  "ko": {
+    "autodial": ["자동화된 마케팅 메시지", "자동 발송", "자동 전화 걸기", "마케팅 메시지", "광고성 메시지"],
+    "frequency": ["메시지 빈도", "발송 빈도", "월 메시지 수", "한 달에 최대"],
+    "rates": ["메시지 및 데이터 요금", "데이터 요금이 부과될 수 있습니다", "통신 요금", "요금이 부과될 수 있습니다"],
+    "optout": ["stop을 회신", "stop 답장", "stop을 보내", "수신 거부는 stop", "stop으로 수신 거부"],
+    "notCondition": ["구매 조건이 아닙니다", "동의는 구매 조건이 아닙니다", "구매의 조건이 아닙니다"]
+  },
+  "nb": {
+    "autodial": ["automatiserte markedsføringsmeldinger", "automatiserte meldinger", "automatisk oppringingssystem", "markedsføringsmeldinger"],
+    "frequency": ["meldingsfrekvens", "antall meldinger", "meldinger per måned", "meldinger i måneden"],
+    "rates": ["meldings- og datakostnader kan påløpe", "kostnader for meldinger og data", "avgifter kan påløpe", "meldings- og datapriser"],
+    "optout": ["svar stop", "send stop", "stop for å avslutte", "svar med stop"],
+    "notCondition": ["er ikke en betingelse for kjøp", "samtykket er ikke en betingelse", "ikke en betingelse for noe kjøp"]
+  },
+  "nl": {
+    "autodial": ["geautomatiseerde marketingberichten", "geautomatiseerde berichten", "automatisch kiessysteem", "marketingberichten"],
+    "frequency": ["berichtfrequentie", "aantal berichten", "berichten per maand", "berichten/maand"],
+    "rates": ["bericht- en datatarieven kunnen van toepassing zijn", "kosten voor berichten en data", "tarieven voor berichten en data", "kosten kunnen van toepassing zijn"],
+    "optout": ["antwoord stop", "stuur stop", "stop om u af te melden", "antwoord met stop"],
+    "notCondition": ["is geen voorwaarde voor aankoop", "toestemming is geen voorwaarde", "geen voorwaarde voor een aankoop"]
+  },
+  "pl": {
+    "autodial": ["zautomatyzowane wiadomości marketingowe", "automatyczne wiadomości", "automatyczny system wybierania", "wiadomości marketingowe"],
+    "frequency": ["częstotliwość wiadomości", "liczba wiadomości", "wiadomości miesięcznie", "wiadomości w miesiącu"],
+    "rates": ["mogą obowiązywać opłaty za wiadomości i transmisję danych", "opłaty za wiadomości i dane", "opłaty za sms"],
+    "optout": ["odpowiedz stop", "wyślij stop", "stop aby zrezygnować", "odpowiedz wiadomością stop"],
+    "notCondition": ["nie jest warunkiem zakupu", "zgoda nie jest warunkiem", "nie jest warunkiem żadnego zakupu"]
+  },
+  "pt": {
+    "autodial": ["mensagens de marketing automatizadas", "mensagens automatizadas", "sistema de discagem automática", "marcação automática", "mensagens de marketing"],
+    "frequency": ["frequência das mensagens", "frequência de mensagens", "mensagens por mês", "mensagens/mês"],
+    "rates": ["podem aplicar-se tarifas de mensagens e dados", "podem ser aplicadas tarifas de mensagens e dados", "tarifas de mensagens e dados", "custos de mensagens e dados"],
+    "optout": ["responda stop", "responda parar", "envie stop", "stop para cancelar", "stop para sair"],
+    "notCondition": ["não é uma condição de compra", "o consentimento não é uma condição", "não é condição para qualquer compra"]
+  },
+  "ro": {
+    "autodial": ["mesaje de marketing automatizate", "mesaje automatizate", "sistem de apelare automată", "mesaje de marketing"],
+    "frequency": ["frecvența mesajelor", "numărul de mesaje", "mesaje pe lună", "mesaje/lună"],
+    "rates": ["se pot aplica tarife pentru mesaje și date", "tarife pentru mesaje și date", "costuri pentru mesaje și date", "se pot aplica tarife"],
+    "optout": ["răspunde stop", "răspundeți stop", "trimite stop", "stop pentru dezabonare", "stop pentru a renunța"],
+    "notCondition": ["nu este o condiție de achiziție", "consimțământul nu este o condiție", "nu este condiție pentru nicio achiziție"]
+  },
+  "ru": {
+    "autodial": ["автоматизированные маркетинговые сообщения", "автоматические сообщения", "автодозвон", "система автоматического набора", "маркетинговые сообщения"],
+    "frequency": ["частота сообщений", "количество сообщений", "сообщений в месяц", "сообщений/месяц"],
+    "rates": ["могут взиматься плата за сообщения и данные", "плата за сообщения и данные", "тарифы на сообщения и данные", "может взиматься плата"],
+    "optout": ["ответьте stop", "отправьте stop", "stop для отписки", "ответьте стоп", "ответьте сообщением stop"],
+    "notCondition": ["не является условием покупки", "согласие не является условием", "не является условием любой покупки"]
+  },
+  "sv": {
+    "autodial": ["automatiserade marknadsföringsmeddelanden", "automatiska meddelanden", "automatiskt uppringningssystem", "marknadsföringsmeddelanden"],
+    "frequency": ["meddelandefrekvens", "antal meddelanden", "meddelanden per månad", "meddelanden/månad"],
+    "rates": ["meddelande- och dataavgifter kan tillkomma", "avgifter för meddelanden och data", "kostnader för meddelanden och data", "avgifter kan tillkomma"],
+    "optout": ["svara stop", "skicka stop", "stop för att avsluta", "svara med stop"],
+    "notCondition": ["är inte ett villkor för köp", "samtycket är inte ett villkor", "inte ett villkor för något köp"]
+  },
+  "tr": {
+    "autodial": ["otomatik pazarlama mesajları", "otomatik mesajlar", "otomatik arama sistemi", "pazarlama mesajları", "otomatik aranma"],
+    "frequency": ["mesaj sıklığı", "mesaj sayısı", "ayda mesaj", "aylık mesaj"],
+    "rates": ["mesaj ve veri ücretleri uygulanabilir", "mesaj ve veri ücretleri", "ücret uygulanabilir", "operatör ücretleri"],
+    "optout": ["stop yazıp gönderin", "stop yanıtlayın", "stop gönderin", "stop ile iptal", "stop yazarak iptal"],
+    "notCondition": ["satın alma koşulu değildir", "onay bir satın alma koşulu değildir", "herhangi bir satın alma koşulu değildir"]
+  },
+  "zh": {
+    "autodial": ["自动营销信息", "自动发送", "自动拨号", "营销短信", "自动化营销"],
+    "frequency": ["信息频率", "短信频率", "每月最多", "每月条数", "消息频率"],
+    "rates": ["可能产生短信和数据费用", "短信和数据费用", "可能收取短信费用", "资费可能适用"],
+    "optout": ["回复stop", "回复 stop", "回复td退订", "发送stop", "回复stop退订"],
+    "notCondition": ["不是购买的条件", "同意不是购买条件", "并非任何购买的条件", "不作为购买条件"]
+  }
+}

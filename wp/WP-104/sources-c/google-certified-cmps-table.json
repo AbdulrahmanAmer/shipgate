@@ -1,0 +1,717 @@
+[
+ {
+  "name": "1&1 Mail & Media GmbH CMP (Private)",
+  "id": 167,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Adlane LTD CMP",
+  "id": 396,
+  "platform": "Web and CTV"
+ },
+ {
+  "name": "AdMetricsPro CMP",
+  "id": 77,
+  "platform": "Web"
+ },
+ {
+  "name": "Admiral CMP",
+  "id": 9,
+  "platform": "Web"
+ },
+ {
+  "name": "AdOcean CMP",
+  "id": 104,
+  "platform": "Web"
+ },
+ {
+  "name": "AdOpt",
+  "id": 430,
+  "platform": "Web"
+ },
+ {
+  "name": "Aiara Privacy Suite",
+  "id": 507,
+  "platform": "Web"
+ },
+ {
+  "name": "Allegro Sp. z o.o. CMP (Private)",
+  "id": 220,
+  "platform": "Web and app"
+ },
+ {
+  "name": "ALPRED SL CMP (Private)",
+  "id": 237,
+  "platform": "Web and app"
+ },
+ {
+  "name": "AppConsent by SFBX®",
+  "id": 2,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Appodeal Inc CMP",
+  "id": 432,
+  "platform": "App"
+ },
+ {
+  "name": "Associated Newspapers Ltd CMP",
+  "id": 27,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Atolls Germany GmbH CMP (Private)",
+  "id": 438,
+  "platform": "Web"
+ },
+ {
+  "name": "Automattic, Inc. CMP (Private)",
+  "id": 258,
+  "platform": "Web and app"
+ },
+ {
+  "name": "AutoScout24 GmbH CMP (Private)",
+  "id": 397,
+  "platform": "Web"
+ },
+ {
+  "name": "AVACY CMP",
+  "id": 297,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "AVADA GROUP COMPANY LIMITED CMP",
+  "id": 454,
+  "platform": "Web"
+ },
+ {
+  "name": "Axel Springer Deutschland GmbH CMP (Private)",
+  "id": 345,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Axeptio",
+  "id": 260,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Big Crunch, Inc.",
+  "id": 501,
+  "platform": "Web"
+ },
+ {
+  "name": "BigID Inc.",
+  "id": 452,
+  "platform": "Web"
+ },
+ {
+  "name": "Blasting SA CMP (Private)",
+  "id": 292,
+  "platform": "Web"
+ },
+ {
+  "name": "Borlabs Cookie CMP",
+  "id": 323,
+  "platform": "Web"
+ },
+ {
+  "name": "BurdaForward GmbH CMP (Private)",
+  "id": 35,
+  "platform": "Web and app"
+ },
+ {
+  "name": "CCM19 CMP",
+  "id": 343,
+  "platform": "Web"
+ },
+ {
+  "name": "Ceneo.pl sp. z o.o. (Private)",
+  "id": 434,
+  "platform": "Web"
+ },
+ {
+  "name": "Ciao people s.r.l. CMP (Private)",
+  "id": 58,
+  "platform": "Web"
+ },
+ {
+  "name": "CIVIC COMPUTING LTD CMP",
+  "id": 259,
+  "platform": "Web"
+ },
+ {
+  "name": "Clickio CMP",
+  "id": 63,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Clym Inc.",
+  "id": 213,
+  "platform": "Web"
+ },
+ {
+  "name": "Commanders Act CMP",
+  "id": 90,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Complianz CMP",
+  "id": 332,
+  "platform": "Web"
+ },
+ {
+  "name": "ConsentBit",
+  "id": 502,
+  "platform": "Web"
+ },
+ {
+  "name": "Consentik.com CMP",
+  "id": 451,
+  "platform": "Web"
+ },
+ {
+  "name": "Consentmanager CMP",
+  "id": 31,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Consentmo",
+  "id": 435,
+  "platform": "Web"
+ },
+ {
+  "name": "Conzent ApS",
+  "id": 446,
+  "platform": "Web"
+ },
+ {
+  "name": "Cookie Script CMP",
+  "id": 374,
+  "platform": "Web"
+ },
+ {
+  "name": "Cookiebot CMP",
+  "id": 134,
+  "platform": "Web"
+ },
+ {
+  "name": "CookieFirst CMP",
+  "id": 382,
+  "platform": "Web"
+ },
+ {
+  "name": "CookieHub CMP",
+  "id": 354,
+  "platform": "Web"
+ },
+ {
+  "name": "CookieMan",
+  "id": 429,
+  "platform": "Web"
+ },
+ {
+  "name": "CookieYes CMP",
+  "id": 401,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Crownpeak Technology Inc. CMP",
+  "id": 18,
+  "platform": "Web"
+ },
+ {
+  "name": "Dailymotion CMP (Private)",
+  "id": 105,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "DataReporter GmbH CMP",
+  "id": 426,
+  "platform": "Web"
+ },
+ {
+  "name": "Deezer CMP (Private)",
+  "id": 59,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Didomi CMP",
+  "id": 7,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Dorik, Inc.",
+  "id": 472,
+  "platform": "Web"
+ },
+ {
+  "name": "DPG Media CMP (Private)",
+  "id": 411,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Easybrain CMP (Private)",
+  "id": 350,
+  "platform": "App"
+ },
+ {
+  "name": "Ebay CMP (Private)",
+  "id": 125,
+  "platform": "Web and app"
+ },
+ {
+  "name": "eBay Kleinanzeigen GmbH CMP (Private)",
+  "id": 309,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Enzuzo, Inc.",
+  "id": 418,
+  "platform": "Web"
+ },
+ {
+  "name": "Ethyca Inc CMP",
+  "id": 407,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Ezoic CMP",
+  "id": 299,
+  "platform": "Web"
+ },
+ {
+  "name": "FastCMP",
+  "id": 388,
+  "platform": "Web"
+ },
+ {
+  "name": "FFALCON OVERSEAS MARKETING LIMITED CMP (Private)",
+  "id": 493,
+  "platform": "CTV"
+ },
+ {
+  "name": "Flexy Consent",
+  "id": 317,
+  "platform": "Web"
+ },
+ {
+  "name": "freenet.de GmbH CMP (Private)",
+  "id": 385,
+  "platform": "App"
+ },
+ {
+  "name": "Gaijin Network CMP (Private)",
+  "id": 492,
+  "platform": "App"
+ },
+ {
+  "name": "Geek Software GmbH CMP (Private)",
+  "id": 423,
+  "platform": "Web"
+ },
+ {
+  "name": "Google LLC CMP",
+  "id": 300,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Gravito CMP",
+  "id": 302,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Grupa RMF CMP (Private)",
+  "id": 330,
+  "platform": "Web"
+ },
+ {
+  "name": "Guardian News and Media CMP (Private)",
+  "id": 112,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Guitar Tabs LLC CMP (Private)",
+  "id": 384,
+  "platform": "Web"
+ },
+ {
+  "name": "HB Digital INC CMP",
+  "id": 449,
+  "platform": "Web"
+ },
+ {
+  "name": "ILOVEPDF SL CMP (Private)",
+  "id": 417,
+  "platform": "Web"
+ },
+ {
+  "name": "Impala CMP (Private)",
+  "id": 303,
+  "platform": "App"
+ },
+ {
+  "name": "Infor Biznes Sp. Z o.o. CMP (Private)",
+  "id": 294,
+  "platform": "Web"
+ },
+ {
+  "name": "InMobi Choice CMP",
+  "id": 10,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Interia CMP (Private)",
+  "id": 231,
+  "platform": "Web"
+ },
+ {
+  "name": "Internetowy Dom Mediowy net S.A. CMP (Private)",
+  "id": 225,
+  "platform": "Web"
+ },
+ {
+  "name": "Iubenda CMP",
+  "id": 123,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Kayak Software Corporation CMP (Private)",
+  "id": 413,
+  "platform": "Web"
+ },
+ {
+  "name": "Ketch CMP",
+  "id": 340,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Kixell Tag",
+  "id": 443,
+  "platform": "Web"
+ },
+ {
+  "name": "Lawwwing CMP",
+  "id": 405,
+  "platform": "Web"
+ },
+ {
+  "name": "Learnings CMP",
+  "id": 387,
+  "platform": "App"
+ },
+ {
+  "name": "legal web GmbH",
+  "id": 410,
+  "platform": "Web"
+ },
+ {
+  "name": "LegalBlink",
+  "id": 428,
+  "platform": "Web"
+ },
+ {
+  "name": "Legally ok CMP",
+  "id": 420,
+  "platform": "Web"
+ },
+ {
+  "name": "Match Group LLC CMP (Private)",
+  "id": 415,
+  "platform": "App"
+ },
+ {
+  "name": "MBEX LTD CMP (Private)",
+  "id": 414,
+  "platform": "App"
+ },
+ {
+  "name": "Meru Data CMP",
+  "id": 437,
+  "platform": "Web"
+ },
+ {
+  "name": "Microsoft CMP (Private)",
+  "id": 483,
+  "platform": "Web"
+ },
+ {
+  "name": "Microsoft Corporation CMP (Private)",
+  "id": 198,
+  "platform": "App"
+ },
+ {
+  "name": "mobile.de CMP (Private)",
+  "id": 306,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Moonee Publishing LTD CMP (Private)",
+  "id": 421,
+  "platform": "App"
+ },
+ {
+  "name": "My Agile Privacy CMP",
+  "id": 403,
+  "platform": "Web"
+ },
+ {
+  "name": "NextRoll, Inc CMP",
+  "id": 54,
+  "platform": "Web"
+ },
+ {
+  "name": "NitroPay CMP",
+  "id": 242,
+  "platform": "Web"
+ },
+ {
+  "name": "One AM SRL (Private)",
+  "id": 453,
+  "platform": "Web"
+ },
+ {
+  "name": "One Consent CMP",
+  "id": 273,
+  "platform": "App"
+ },
+ {
+  "name": "Onesecondbefore B.V. CMP",
+  "id": 355,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Onetrust / Cookiepro CMP",
+  "id": 28,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Osano CMP",
+  "id": 279,
+  "platform": "Web"
+ },
+ {
+  "name": "Outfit7 CMP (Private)",
+  "id": 348,
+  "platform": "App"
+ },
+ {
+  "name": "Overwolf Ltd. CMP (Private)",
+  "id": 246,
+  "platform": "Web"
+ },
+ {
+  "name": "Pandectes CMP",
+  "id": 445,
+  "platform": "Web"
+ },
+ {
+  "name": "Paruvendu CMP (Private)",
+  "id": 222,
+  "platform": "Web"
+ },
+ {
+  "name": "Podravka d.d. CMP (Private)",
+  "id": 441,
+  "platform": "Web"
+ },
+ {
+  "name": "PrivacyHub",
+  "id": 480,
+  "platform": "Web"
+ },
+ {
+  "name": "PrivacyPillar CMP",
+  "id": 335,
+  "platform": "Web"
+ },
+ {
+  "name": "Proximus SA CMP (Private)",
+  "id": 488,
+  "platform": "App and CTV"
+ },
+ {
+  "name": "Pubtech CMP",
+  "id": 352,
+  "platform": "Web and app"
+ },
+ {
+  "name": "RCS CMP",
+  "id": 218,
+  "platform": "Web"
+ },
+ {
+  "name": "Real Cookie Banner CMP",
+  "id": 367,
+  "platform": "Web"
+ },
+ {
+  "name": "RevIQ Inc. CMP",
+  "id": 511,
+  "platform": "Web"
+ },
+ {
+  "name": "Ringier Axel Springer Polska (Private)",
+  "id": 280,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Secure Privacy CMP",
+  "id": 264,
+  "platform": "Web"
+ },
+ {
+  "name": "Securiti, Inc. CMP",
+  "id": 312,
+  "platform": "Web"
+ },
+ {
+  "name": "Setupad CMP",
+  "id": 379,
+  "platform": "Web"
+ },
+ {
+  "name": "Seven.One Entertainment Group GmbH CMP (Private)",
+  "id": 318,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Seznam.cz CMP",
+  "id": 247,
+  "platform": "Web"
+ },
+ {
+  "name": "SFR CMP (Private)",
+  "id": 79,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Singlespot",
+  "id": 212,
+  "platform": "App"
+ },
+ {
+  "name": "Sirdata CMP",
+  "id": 92,
+  "platform": "Web"
+ },
+ {
+  "name": "Skyscanner UK Limited CMP (Private)",
+  "id": 419,
+  "platform": "Web"
+ },
+ {
+  "name": "Snigel Adconsent CMP",
+  "id": 229,
+  "platform": "Web"
+ },
+ {
+  "name": "Société Éditrice du Monde (Private)",
+  "id": 371,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Sourcepoint Dialogue CMP",
+  "id": 6,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Springer Nature AG & Co. KGAA CMP (Private)",
+  "id": 416,
+  "platform": "Web"
+ },
+ {
+  "name": "Syrenis Limited CMP",
+  "id": 200,
+  "platform": "Web"
+ },
+ {
+  "name": "Termly CMP",
+  "id": 412,
+  "platform": "Web"
+ },
+ {
+  "name": "Traffective (ShowHeroes SE)",
+  "id": 21,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Transcend CMP",
+  "id": 399,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Tri-table Sp. z o.o. CMP",
+  "id": 61,
+  "platform": "Web"
+ },
+ {
+  "name": "TRUENDO CMP",
+  "id": 304,
+  "platform": "Web"
+ },
+ {
+  "name": "Trustarc CMP",
+  "id": 47,
+  "platform": "Web and app"
+ },
+ {
+  "name": "Truyo CMP",
+  "id": 462,
+  "platform": "Web"
+ },
+ {
+  "name": "TVP S.A. CMP (Private)",
+  "id": 351,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Uber CMP (Private)",
+  "id": 459,
+  "platform": "App"
+ },
+ {
+  "name": "Uniconsent CMP",
+  "id": 68,
+  "platform": "Web and app"
+ },
+ {
+  "name": "UserCentrics CMP",
+  "id": 5,
+  "platform": "Web, app, and CTV"
+ },
+ {
+  "name": "Viber Media CMP (Private)",
+  "id": 171,
+  "platform": "App"
+ },
+ {
+  "name": "WebAds CMP",
+  "id": 236,
+  "platform": "Web"
+ },
+ {
+  "name": "WebToffee GDPR Cookie Consent",
+  "id": 404,
+  "platform": "Web"
+ },
+ {
+  "name": "wetter.com GmbH CMP (Private)",
+  "id": 329,
+  "platform": "App"
+ },
+ {
+  "name": "Wirtualna Polska Media S.A. CMP",
+  "id": 72,
+  "platform": "Web and app"
+ },
+ {
+  "name": "X-FLOW LTD CMP (Private)",
+  "id": 436,
+  "platform": "App"
+ },
+ {
+  "name": "Yahoo EMEA CMP (Private)",
+  "id": 14,
+  "platform": "Web and app"
+ }
+]

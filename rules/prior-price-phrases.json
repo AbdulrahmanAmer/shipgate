@@ -1,0 +1,22 @@
+{
+  "ar": ["أقل سعر خلال آخر 30 يومًا", "أقل سعر خلال آخر 30 يوما", "أقل سعر في آخر 30 يوما", "أدنى سعر خلال 30 يومًا", "أدنى سعر خلال 30 يوما", "السعر السابق"],
+  "cs": ["nejnižší cena za posledních 30 dní", "nejnižší cena za posledních třicet dní", "nejnižší cena v posledních 30 dnech", "nejnižší cena za 30 dní před slevou", "nejnižší cena za 30 dní"],
+  "da": ["laveste pris de seneste 30 dage", "laveste pris i de seneste 30 dage", "laveste pris inden for de seneste 30 dage", "laveste pris de sidste 30 dage", "laveste pris i de sidste 30 dage", "tidligere pris"],
+  "de": ["niedrigster preis der letzten 30 tage", "niedrigster preis in den letzten 30 tagen", "niedrigster gesamtpreis der letzten 30 tage", "niedrigster preis innerhalb der letzten 30 tage", "günstigster preis der letzten 30 tage", "bestpreis der letzten 30 tage", "30-tage-bestpreis"],
+  "en": ["lowest price in the last 30 days", "lowest price in the past 30 days", "lowest price in the previous 30 days", "lowest price within the last 30 days", "lowest price over the last 30 days", "lowest price during the last 30 days", "lowest price in 30 days", "30-day lowest price", "prior price"],
+  "es": ["precio más bajo de los últimos 30 días", "precio más bajo en los últimos 30 días", "precio más bajo aplicado en los últimos 30 días", "menor precio de los últimos 30 días", "precio mínimo de los últimos 30 días", "precio anterior"],
+  "fi": ["alhaisin hinta viimeisen 30 päivän aikana", "alhaisin hinta 30 päivän aikana", "alhaisin hinta edeltäneiden 30 päivän aikana", "alin hinta viimeisen 30 päivän aikana", "alhaisin hinta 30 viime päivän aikana", "edellinen hinta"],
+  "fr": ["prix le plus bas des 30 derniers jours", "prix le plus bas pratiqué au cours des 30 derniers jours", "prix le plus bas au cours des 30 derniers jours", "prix le plus bas sur les 30 derniers jours", "prix le plus bas des 30 jours précédents", "prix antérieur"],
+  "it": ["prezzo più basso degli ultimi 30 giorni", "prezzo più basso negli ultimi 30 giorni", "prezzo più basso applicato negli ultimi 30 giorni", "prezzo minimo degli ultimi 30 giorni", "prezzo più basso dei 30 giorni precedenti", "prezzo precedente"],
+  "ja": ["過去30日間の最低価格", "直近30日間の最低価格", "過去30日間で最も安い価格", "30日以内の最低価格", "過去30日間の最安値"],
+  "ko": ["최근 30일 최저가", "최근 30일간 최저가", "지난 30일 최저가", "30일 최저가", "최근 30일 최저 판매가"],
+  "nb": ["laveste pris siste 30 dager", "laveste pris de siste 30 dagene", "laveste pris i løpet av de siste 30 dagene", "laveste pris de siste 30 dager", "tidligere pris"],
+  "nl": ["laagste prijs van de afgelopen 30 dagen", "laagste prijs in de afgelopen 30 dagen", "laagste prijs in de laatste 30 dagen", "laagste prijs van de laatste 30 dagen", "laagste prijs van de afgelopen dertig dagen", "voorgaande prijs"],
+  "pl": ["najniższa cena z 30 dni", "najniższa cena z ostatnich 30 dni", "najniższa cena w okresie 30 dni", "najniższa cena z okresu 30 dni", "najniższa cena z 30 dni przed obniżką"],
+  "pt": ["preço mais baixo dos últimos 30 dias", "preço mais baixo nos últimos 30 dias", "preço mais baixo praticado nos últimos 30 dias", "menor preço dos últimos 30 dias", "preço anterior"],
+  "ro": ["cel mai mic preț din ultimele 30 de zile", "cel mai mic preț în ultimele 30 de zile", "cel mai mic preț practicat în ultimele 30 de zile", "cel mai scăzut preț din ultimele 30 de zile", "preț minim în ultimele 30 de zile", "prețul anterior"],
+  "ru": ["самая низкая цена за последние 30 дней", "минимальная цена за последние 30 дней", "наименьшая цена за последние 30 дней", "самая низкая цена за 30 дней", "предыдущая цена"],
+  "sv": ["lägsta pris de senaste 30 dagarna", "lägsta pris under de senaste 30 dagarna", "lägsta priset de senaste 30 dagarna", "lägsta priset under de senaste 30 dagarna", "lägsta pris senaste 30 dagarna", "tidigare pris"],
+  "tr": ["son 30 günün en düşük fiyatı", "son 30 gündeki en düşük fiyat", "son 30 gün içindeki en düşük fiyat", "son 30 gün içinde uygulanan en düşük fiyat", "önceki fiyat"],
+  "zh": ["近30天最低价", "近30天内最低价", "30天内最低价", "过去30天最低价", "最近30天最低价", "前30天最低价"]
+}

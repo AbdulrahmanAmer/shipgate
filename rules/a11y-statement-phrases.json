@@ -1,0 +1,122 @@
+{
+  "ar": {
+    "conformance": ["متوافق تماما", "متوافق جزئيا", "غير متوافق", "حالة الامتثال", "مطابق تماما", "مطابق جزئيا", "غير مطابق"],
+    "inaccessible": ["محتوى غير متاح", "المحتوى غير القابل للوصول", "غير قابل للوصول", "عبء غير متناسب", "لا يوجد محتوى غير متاح"],
+    "feedback": ["الملاحظات ومعلومات الاتصال", "ملاحظات", "تواصل معنا", "الإبلاغ عن مشكلات إمكانية الوصول", "معلومات الاتصال"],
+    "enforcement": ["إجراءات الإنفاذ", "تقديم شكوى", "جهة الإنفاذ", "إذا لم تكن راضيا", "التظلم"]
+  },
+  "cs": {
+    "conformance": ["plně v souladu", "částečně v souladu", "není v souladu", "nejsou v souladu", "stav souladu"],
+    "inaccessible": ["nepřístupný obsah", "nepřístupný", "nepřiměřená zátěž", "nepřiměřené zatížení"],
+    "feedback": ["zpětná vazba a kontaktní údaje", "zpětná vazba", "kontaktní údaje", "kontaktujte nás"],
+    "enforcement": ["postupy pro prosazování práva", "prosazování práva", "podat stížnost", "orgán pro prosazování"]
+  },
+  "da": {
+    "conformance": ["overholder delvis", "overholder ikke", "overholder fuldt", "overholdelsesstatus", "delvist i overensstemmelse", "fuldt ud i overensstemmelse"],
+    "inaccessible": ["ikke-tilgængeligt indhold", "ikke tilgængeligt indhold", "ikke-tilgængelig", "uforholdsmæssig stor byrde", "uforholdsmæssigt stor byrde"],
+    "feedback": ["feedback og kontaktoplysninger", "feedback", "kontaktoplysninger", "kontakt os"],
+    "enforcement": ["håndhævelsesprocedure", "håndhævende organ", "klage", "klageprocedure"]
+  },
+  "de": {
+    "conformance": ["vollständig vereinbar", "teilweise vereinbar", "nicht vereinbar", "vollständig konform", "teilweise konform", "nicht konform", "stand der vereinbarkeit"],
+    "inaccessible": ["nicht barrierefreie inhalte", "nicht barrierefrei", "unverhältnismäßige belastung", "unverhältnismäßiger aufwand"],
+    "feedback": ["feedback und kontaktangaben", "feedback", "kontaktangaben", "barrieren melden", "rückmeldung"],
+    "enforcement": ["durchsetzungsverfahren", "schlichtungsstelle", "beschwerdeverfahren", "durchsetzungsstelle", "schlichtung"]
+  },
+  "en": {
+    "conformance": ["fully compliant", "partially compliant", "not compliant", "fully conformant", "partially conformant", "not conformant", "compliance status", "conformance status"],
+    "inaccessible": ["non-accessible content", "inaccessible content", "not accessible", "disproportionate burden", "not within the scope", "no known inaccessible"],
+    "feedback": ["feedback and contact information", "feedback", "contact information", "contact us", "report accessibility"],
+    "enforcement": ["enforcement procedure", "enforcement body", "not satisfied with the response", "file a complaint", "make a complaint"]
+  },
+  "es": {
+    "conformance": ["plenamente conforme", "parcialmente conforme", "aún no es conforme", "aún no son conformes", "situación de cumplimiento", "totalmente conforme", "plenamente conformes", "parcialmente conformes"],
+    "inaccessible": ["contenido no accesible", "no accesible", "carga desproporcionada"],
+    "feedback": ["observaciones y datos de contacto", "observaciones", "datos de contacto", "contáctenos", "comentarios"],
+    "enforcement": ["procedimiento de aplicación", "organismo de ejecución", "presentar una reclamación", "reclamación"]
+  },
+  "fi": {
+    "conformance": ["täyttää osittain", "ei täytä", "vaatimustenmukaisuuden tila", "osittain vaatimusten mukainen", "täysin vaatimusten mukainen"],
+    "inaccessible": ["ei-saavutettava sisältö", "ei saavutettava", "suhteeton rasite", "suhteeton taakka"],
+    "feedback": ["palaute ja yhteystiedot", "palaute", "yhteystiedot", "ota yhteyttä"],
+    "enforcement": ["täytäntöönpanomenettely", "täytäntöönpanoelin", "tee valitus", "valitus"]
+  },
+  "fr": {
+    "conformance": ["en totale conformité", "en conformité partielle", "pas en conformité", "état de conformité", "totalement conforme", "partiellement conforme", "non conforme"],
+    "inaccessible": ["contenu non accessible", "non accessible", "charge disproportionnée"],
+    "feedback": ["retour d'information et coordonnées de contact", "retour d’information et coordonnées de contact", "retour d'information", "retour d’information", "coordonnées de contact", "contactez-nous", "signaler"],
+    "enforcement": ["procédure permettant d'assurer le respect des dispositions", "procédure permettant d’assurer le respect des dispositions", "organisme de contrôle", "défenseur des droits", "déposer une plainte", "saisir"]
+  },
+  "it": {
+    "conformance": ["pienamente conforme", "parzialmente conforme", "non è conforme", "non sono conformi", "stato di conformità", "totalmente conforme"],
+    "inaccessible": ["contenuti non accessibili", "non accessibili", "onere sproporzionato"],
+    "feedback": ["feedback e recapiti", "feedback", "recapiti", "contattaci", "segnalazioni"],
+    "enforcement": ["procedura di attuazione", "organismo di attuazione", "presentare un reclamo", "reclamo"]
+  },
+  "ja": {
+    "conformance": ["完全に準拠", "部分的に準拠", "準拠していません", "適合状況", "完全に適合", "一部適合", "適合していません"],
+    "inaccessible": ["アクセシブルでないコンテンツ", "アクセスできないコンテンツ", "利用できないコンテンツ", "過度の負担", "対応していないコンテンツ"],
+    "feedback": ["フィードバックと連絡先", "フィードバック", "連絡先", "お問い合わせ", "ご意見"],
+    "enforcement": ["是正手続", "執行手続", "苦情の申し立て", "申立て", "苦情"]
+  },
+  "ko": {
+    "conformance": ["완전히 준수", "부분적으로 준수", "준수하지 않", "준수 상태", "적합성 상태", "부분 준수", "완전 준수"],
+    "inaccessible": ["접근할 수 없는 콘텐츠", "접근 불가능한 콘텐츠", "접근성이 없는 콘텐츠", "과도한 부담", "접근 불가"],
+    "feedback": ["피드백 및 연락처", "피드백", "연락처", "문의"],
+    "enforcement": ["시행 절차", "이행 절차", "불만 제기", "이의 제기", "민원"]
+  },
+  "nb": {
+    "conformance": ["fullt ut i samsvar", "delvis i samsvar", "ikke i samsvar", "samsvarsstatus", "delvis samsvar", "fullt samsvar"],
+    "inaccessible": ["innhold som ikke er tilgjengelig", "ikke tilgjengelig innhold", "ikke tilgjengelig", "uforholdsmessig byrde", "uforholdsmessig stor byrde"],
+    "feedback": ["tilbakemelding og kontaktinformasjon", "tilbakemelding", "kontaktinformasjon", "kontakt oss"],
+    "enforcement": ["håndhevingsprosedyre", "tilsynsmyndighet", "klageprosedyre", "klage"]
+  },
+  "nl": {
+    "conformance": ["voldoet volledig", "voldoet gedeeltelijk", "voldoet niet", "nalevingsstatus", "volledig in overeenstemming", "gedeeltelijk in overeenstemming"],
+    "inaccessible": ["niet-toegankelijke inhoud", "niet toegankelijk", "onevenredige last"],
+    "feedback": ["feedback en contactgegevens", "feedback", "contactgegevens", "neem contact"],
+    "enforcement": ["handhavingsprocedure", "handhavingsinstantie", "klacht indienen", "klacht"]
+  },
+  "pl": {
+    "conformance": ["w pełni zgodna", "w pełni zgodne", "częściowo zgodna", "częściowo zgodne", "niezgodna", "niezgodne", "status pod względem zgodności"],
+    "inaccessible": ["treści niedostępne", "niedostępne treści", "niedostępny", "nieproporcjonalne obciążenie", "niewspółmierne obciążenie"],
+    "feedback": ["informacje zwrotne i dane kontaktowe", "informacje zwrotne", "dane kontaktowe", "skontaktuj się"],
+    "enforcement": ["postępowanie odwoławcze", "organ odpowiedzialny za postępowanie odwoławcze", "złożyć skargę", "skarga"]
+  },
+  "pt": {
+    "conformance": ["plenamente conforme", "parcialmente conforme", "não é conforme", "não são conformes", "estado de conformidade", "totalmente conforme"],
+    "inaccessible": ["conteúdo não acessível", "não acessível", "ónus desproporcionado", "encargo desproporcionado"],
+    "feedback": ["recolha de informações", "dados de contacto", "retroação", "feedback", "contacte-nos", "dados de contato"],
+    "enforcement": ["procedimento de execução", "organismo de execução", "apresentar uma reclamação", "reclamação"]
+  },
+  "ro": {
+    "conformance": ["pe deplin conform", "parțial conform", "nu este conform", "nu sunt conforme", "situația conformității", "pe deplin conforme"],
+    "inaccessible": ["conținut inaccesibil", "inaccesibil", "sarcină disproporționată", "povară disproporționată"],
+    "feedback": ["feedback și date de contact", "feedback", "date de contact", "contactați-ne"],
+    "enforcement": ["procedura de asigurare a aplicării", "organismul de asigurare a aplicării", "depune o plângere", "plângere"]
+  },
+  "ru": {
+    "conformance": ["полностью соответствует", "частично соответствует", "не соответствует", "статус соответствия", "полное соответствие", "частичное соответствие"],
+    "inaccessible": ["недоступный контент", "недоступное содержимое", "недоступный", "несоразмерная нагрузка", "непропорциональное бремя"],
+    "feedback": ["обратная связь и контактная информация", "обратная связь", "контактная информация", "свяжитесь с нами"],
+    "enforcement": ["процедура обеспечения соблюдения", "орган по обеспечению соблюдения", "подать жалобу", "жалоба"]
+  },
+  "sv": {
+    "conformance": ["helt förenlig", "delvis förenlig", "inte förenlig", "fullgörandestatus", "helt förenliga", "delvis förenliga"],
+    "inaccessible": ["innehåll som inte är tillgängligt", "ej tillgängligt innehåll", "inte tillgängligt", "oproportionerlig börda", "oproportionell börda"],
+    "feedback": ["återkoppling och kontaktuppgifter", "återkoppling", "kontaktuppgifter", "kontakta oss"],
+    "enforcement": ["uppföljningsförfarande", "uppföljningsorgan", "lämna klagomål", "klagomål"]
+  },
+  "tr": {
+    "conformance": ["tamamen uyumlu", "kısmen uyumlu", "uyumlu değil", "uyumluluk durumu", "tam uyumlu", "kısmi uyumlu"],
+    "inaccessible": ["erişilebilir olmayan içerik", "erişilemeyen içerik", "erişilebilir değil", "orantısız yük", "orantısız külfet"],
+    "feedback": ["geri bildirim ve iletişim bilgileri", "geri bildirim", "iletişim bilgileri", "bizimle iletişime geçin"],
+    "enforcement": ["uygulama prosedürü", "yaptırım prosedürü", "şikayet", "şikayette bulunun"]
+  },
+  "zh": {
+    "conformance": ["完全符合", "部分符合", "不符合", "合规状态", "符合性状态", "完全合规", "部分合规"],
+    "inaccessible": ["无法访问的内容", "不可访问的内容", "无障碍内容不足", "不可访问", "不成比例的负担", "过度负担"],
+    "feedback": ["反馈和联系信息", "反馈", "联系信息", "联系我们", "联系方式"],
+    "enforcement": ["执行程序", "强制执行程序", "投诉", "申诉", "执法机构"]
+  }
+}

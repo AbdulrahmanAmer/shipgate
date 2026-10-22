@@ -1,0 +1,22 @@
+{
+  "ar": ["تحذير", "المقترح 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "cs": ["varování", "návrh 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "da": ["advarsel", "forslag 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "de": ["warnung", "proposition 65", "prop 65", "p65warnings", "warning"],
+  "en": ["warning", "proposition 65", "prop 65", "prop. 65", "p65warnings", "california prop 65"],
+  "es": ["advertencia", "proposición 65", "proposicion 65", "proposition 65", "prop 65", "p65warnings", "warning"],
+  "fi": ["varoitus", "ehdotus 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "fr": ["avertissement", "proposition 65", "prop 65", "p65warnings", "warning"],
+  "it": ["avvertenza", "avviso", "proposizione 65", "proposition 65", "prop 65", "p65warnings", "warning"],
+  "ja": ["警告", "提案65", "proposition 65", "prop 65", "p65warnings", "warning"],
+  "ko": ["경고", "발의안 65", "proposition 65", "prop 65", "p65warnings", "warning"],
+  "nb": ["advarsel", "forslag 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "nl": ["waarschuwing", "voorstel 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "pl": ["ostrzeżenie", "propozycja 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "pt": ["aviso", "advertência", "proposição 65", "proposition 65", "prop 65", "p65warnings", "warning"],
+  "ro": ["avertisment", "propunerea 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "ru": ["предупреждение", "предложение 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "sv": ["varning", "förslag 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "tr": ["uyarı", "önerme 65", "prop 65", "proposition 65", "p65warnings", "warning"],
+  "zh": ["警告", "65号提案", "proposition 65", "prop 65", "p65warnings", "warning"]
+}

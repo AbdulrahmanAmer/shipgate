@@ -1,0 +1,22 @@
+{
+  "ar": ["أضف إلى السلة", "أضف إلى العربة", "إضافة إلى السلة", "أضف إلى الحقيبة", "إضافة للسلة"],
+  "cs": ["přidat do košíku", "do košíku", "vložit do košíku", "přidat do tašky"],
+  "da": ["læg i kurv", "tilføj til kurv", "læg i indkøbskurv", "tilføj til indkøbskurv", "læg i kurven"],
+  "de": ["in den warenkorb", "zum warenkorb hinzufügen", "in den einkaufswagen", "in die tasche", "zum einkaufswagen hinzufügen", "in den warenkorb legen"],
+  "en": ["add to cart", "add to basket", "add to bag", "add to trolley", "add to order"],
+  "es": ["añadir al carrito", "agregar al carrito", "añadir a la cesta", "añadir a la bolsa", "agregar a la bolsa", "añadir al carro"],
+  "fi": ["lisää ostoskoriin", "lisää koriin", "ostoskoriin", "lisää ostoskärryyn"],
+  "fr": ["ajouter au panier", "ajouter au sac", "ajouter à mon panier", "ajouter à la commande", "mettre au panier"],
+  "it": ["aggiungi al carrello", "aggiungi alla borsa", "aggiungi al cestino", "metti nel carrello"],
+  "ja": ["カートに入れる", "カートに追加", "買い物かごに入れる", "バッグに追加", "かごに入れる", "ショッピングカートに追加"],
+  "ko": ["장바구니 담기", "장바구니에 담기", "장바구니에 추가", "카트에 담기", "카트에 추가"],
+  "nb": ["legg i handlekurv", "legg i handlekurven", "legg til i handlekurv", "legg i kurv"],
+  "nl": ["in winkelwagen", "toevoegen aan winkelwagen", "voeg toe aan winkelwagen", "in winkelmandje", "toevoegen aan winkelmandje", "in mijn winkelwagen"],
+  "pl": ["dodaj do koszyka", "do koszyka", "dodaj do torby", "włóż do koszyka"],
+  "pt": ["adicionar ao carrinho", "adicionar ao cesto", "adicionar à sacola", "colocar no carrinho", "adicionar à cesta"],
+  "ro": ["adaugă în coș", "adaugă în cos", "adauga in cos", "adaugă la coș", "pune în coș"],
+  "ru": ["добавить в корзину", "в корзину", "положить в корзину", "добавить в сумку"],
+  "sv": ["lägg i varukorg", "lägg i varukorgen", "lägg till i varukorg", "lägg i kundvagn", "lägg till i kundvagnen"],
+  "tr": ["sepete ekle", "sepete at", "sepetime ekle", "çantaya ekle"],
+  "zh": ["加入购物车", "添加到购物车", "加入购物袋", "加入购物篮", "放入购物车"]
+}

@@ -1,0 +1,22 @@
+{
+  "ar": ["بإنشاء حساب", "بالتسجيل", "بالمتابعة", "بالنقر", "بإتمام الطلب", "فإنك توافق", "أوافق على", "أقبل", "توافق على"],
+  "cs": ["vytvořením účtu", "registrací", "pokračováním", "kliknutím", "odesláním objednávky", "souhlasíte", "souhlasím", "přijímáte"],
+  "da": ["ved at oprette en konto", "ved at tilmelde dig", "ved at fortsætte", "ved at klikke", "ved at afgive din ordre", "accepterer du", "du accepterer", "jeg accepterer", "du samtykker"],
+  "de": ["mit der registrierung", "indem sie ein konto erstellen", "mit dem erstellen eines kontos", "mit ihrer anmeldung", "durch klicken", "stimmen sie zu", "akzeptieren sie", "erkläre ich mich einverstanden", "ich akzeptiere", "ich stimme zu", "sie erklären sich einverstanden", "mit dem absenden", "mit ihrer bestellung"],
+  "en": ["by creating an account", "by signing up", "by continuing", "by registering", "by clicking", "by placing", "you agree to", "i agree to", "i accept", "you accept", "agree to the terms", "accept the terms"],
+  "es": ["al crear una cuenta", "al registrarte", "al registrarse", "al continuar", "al hacer clic", "al realizar el pedido", "aceptas", "aceptan", "estás de acuerdo", "acepto", "al confirmar"],
+  "fi": ["luomalla tilin", "rekisteröitymällä", "jatkamalla", "klikkaamalla", "tekemällä tilauksen", "hyväksyt", "hyväksyn", "hyväksymällä"],
+  "fr": ["en créant un compte", "en vous inscrivant", "en continuant", "en cliquant", "en passant votre commande", "vous acceptez", "vous êtes d'accord", "vous êtes d’accord", "j'accepte", "j’accepte", "en validant"],
+  "it": ["creando un account", "registrandoti", "registrandosi", "continuando", "cliccando", "effettuando l'ordine", "effettuando l’ordine", "accetti", "accetto", "sei d'accordo", "sei d’accordo"],
+  "ja": ["アカウントを作成することで", "登録することで", "続行することで", "クリックすることで", "注文を確定することで", "同意したものとみなされ", "同意します", "に同意", "承諾"],
+  "ko": ["계정을 만들면", "가입하면", "계속하면", "클릭하면", "주문하면", "동의합니다", "동의하는 것으로", "에 동의", "수락"],
+  "nb": ["ved å opprette en konto", "ved å registrere deg", "ved å fortsette", "ved å klikke", "ved å bestille", "godtar du", "du godtar", "jeg godtar", "aksepterer du"],
+  "nl": ["door een account aan te maken", "door je te registreren", "door u te registreren", "door verder te gaan", "door te klikken", "door te bestellen", "ga je akkoord", "gaat u akkoord", "ik ga akkoord", "accepteer"],
+  "pl": ["tworząc konto", "rejestrując się", "kontynuując", "klikając", "składając zamówienie", "akceptujesz", "zgadzasz się", "akceptuję", "oświadczasz"],
+  "pt": ["ao criar uma conta", "ao registar-se", "ao registrar-se", "ao continuar", "ao clicar", "ao finalizar", "concorda com", "aceita", "aceito", "você concorda", "ao se cadastrar"],
+  "ro": ["prin crearea unui cont", "prin înregistrare", "continuând", "făcând clic", "prin plasarea comenzii", "ești de acord", "sunteți de acord", "accept", "acceptați"],
+  "ru": ["создавая учетную запись", "создавая аккаунт", "регистрируясь", "продолжая", "нажимая", "оформляя заказ", "вы соглашаетесь", "соглашаюсь", "принимаю", "вы принимаете"],
+  "sv": ["genom att skapa ett konto", "genom att registrera dig", "genom att fortsätta", "genom att klicka", "genom att lägga din beställning", "godkänner du", "du godkänner", "jag godkänner", "accepterar du"],
+  "tr": ["hesap oluşturarak", "kayıt olarak", "devam ederek", "tıklayarak", "sipariş vererek", "kabul etmiş", "kabul ediyorum", "kabul edersiniz", "onaylıyorum"],
+  "zh": ["创建账户即表示", "注册即表示", "继续即表示", "点击即表示", "提交订单即表示", "您同意", "我同意", "同意并接受", "即表示您同意", "即视为同意"]
+}
