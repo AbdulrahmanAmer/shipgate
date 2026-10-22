@@ -1,2 +1,3 @@
 # gitleaks false positives: browser API feature keys in the web-features dataset (UX-008), not secrets.
 6458dbea8adb95a4f42cf91cecb0398cedd8d130:rules/web-features.json:generic-api-key:1
+0b7a429a3915b8817a98cb2d7ae5e0da409240b7:rules/gazetteer/ru.json:sumologic-access-id:24564
