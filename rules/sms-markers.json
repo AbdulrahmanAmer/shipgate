@@ -1,0 +1,22 @@
+{
+  "ar": ["رسالة نصية", "رسائل نصية", "sms", "واتساب", "اتصل بي", "اتصلوا بي"],
+  "cs": ["sms", "textová zpráva", "textové zprávy", "whatsapp", "zavolejte mi", "zavolat zpět"],
+  "da": ["sms", "tekstbesked", "tekstbeskeder", "whatsapp", "ring til mig", "ring mig op"],
+  "de": ["sms", "textnachricht", "textnachrichten", "kurznachricht", "whatsapp", "rufen sie mich an", "rückruf"],
+  "en": ["text me", "sms", "text message", "text messages", "whatsapp", "call me", "text alerts", "text updates", "mobile alerts", "send me a text", "receive texts"],
+  "es": ["sms", "mensaje de texto", "mensajes de texto", "whatsapp", "llámame", "llamarme", "llámenme"],
+  "fi": ["tekstiviesti", "tekstiviestit", "sms", "whatsapp", "soita minulle", "soittopyyntö"],
+  "fr": ["sms", "texto", "message texte", "whatsapp", "appelez-moi", "me rappeler"],
+  "it": ["sms", "messaggio di testo", "messaggi di testo", "whatsapp", "chiamami", "richiamami"],
+  "ja": ["sms", "ショートメッセージ", "ショートメール", "テキストメッセージ", "whatsapp", "電話をください", "折り返し電話"],
+  "ko": ["sms", "문자 메시지", "문자메시지", "문자", "whatsapp", "전화 주세요", "전화 상담"],
+  "nb": ["sms", "tekstmelding", "tekstmeldinger", "whatsapp", "ring meg", "ring meg opp"],
+  "nl": ["sms", "sms'en", "tekstbericht", "whatsapp", "bel mij", "bel me terug", "terugbellen"],
+  "pl": ["sms", "wiadomość tekstowa", "wiadomości tekstowe", "whatsapp", "zadzwońcie do mnie", "zadzwoń do mnie", "oddzwonienie"],
+  "pt": ["sms", "mensagem de texto", "mensagens de texto", "whatsapp", "ligue para mim", "ligar para mim", "me ligue"],
+  "ro": ["sms", "mesaj text", "mesaje text", "whatsapp", "sunați-mă", "sună-mă"],
+  "ru": ["смс", "sms", "текстовое сообщение", "текстовые сообщения", "whatsapp", "позвоните мне", "перезвоните мне", "обратный звонок"],
+  "sv": ["sms", "textmeddelande", "textmeddelanden", "whatsapp", "ring mig", "ring upp mig"],
+  "tr": ["sms", "kısa mesaj", "metin mesajı", "whatsapp", "beni arayın", "geri arama"],
+  "zh": ["短信", "sms", "文字消息", "whatsapp", "致电我", "给我打电话", "回电"]
+}

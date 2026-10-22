@@ -1,0 +1,82 @@
+{
+  "ar": {
+    "purpose": ["النشرة البريدية", "نشرة إخبارية", "عروض", "أخبار", "ترويجية", "تسويقية"],
+    "withdraw": ["إلغاء الاشتراك", "سحب موافقتك", "سحب الموافقة", "في أي وقت", "إلغاء الموافقة"]
+  },
+  "cs": {
+    "purpose": ["newsletter", "nabídky", "novinky", "akce", "obchodní sdělení", "marketing"],
+    "withdraw": ["odhlásit", "odhlášení", "odvolat souhlas", "odvolání souhlasu", "kdykoli", "kdykoliv", "zrušit odběr"]
+  },
+  "da": {
+    "purpose": ["nyhedsbrev", "newsletter", "tilbud", "nyheder", "kampagner", "markedsføring", "kommercielle"],
+    "withdraw": ["afmelde", "framelde", "trække dit samtykke tilbage", "trække samtykket tilbage", "når som helst", "tilbagekalde"]
+  },
+  "de": {
+    "purpose": ["newsletter", "werbliche", "werbung", "angebote", "neuigkeiten", "produktneuheiten", "informationen über", "marketing"],
+    "withdraw": ["abmelden", "abbestellen", "jederzeit widerrufen", "einwilligung widerrufen", "widerruf", "austragen", "abmeldelink", "kündigen"]
+  },
+  "en": {
+    "purpose": ["newsletter", "marketing", "promotional", "offers", "news about", "updates about", "product news", "deals", "emails about", "communications about"],
+    "withdraw": ["unsubscribe", "withdraw your consent", "withdraw consent", "opt out", "opt-out", "revoke", "at any time", "anytime"]
+  },
+  "es": {
+    "purpose": ["newsletter", "boletín", "ofertas", "novedades", "promociones", "comunicaciones comerciales", "marketing", "información sobre"],
+    "withdraw": ["darse de baja", "cancelar la suscripción", "retirar su consentimiento", "retirar tu consentimiento", "revocar", "en cualquier momento", "anular la suscripción"]
+  },
+  "fi": {
+    "purpose": ["uutiskirje", "newsletter", "tarjoukset", "uutiset", "kampanjat", "markkinointi", "kaupalliset"],
+    "withdraw": ["peruuta tilaus", "perua tilaus", "peruuttaa suostumus", "peruuttaa suostumuksesi", "milloin tahansa", "lopeta tilaus", "poistua postituslistalta"]
+  },
+  "fr": {
+    "purpose": ["newsletter", "infolettre", "offres", "actualités", "nouveautés", "promotions", "informations commerciales", "marketing"],
+    "withdraw": ["se désabonner", "désinscrire", "désinscription", "désabonnement", "retirer votre consentement", "retirer mon consentement", "à tout moment", "révoquer"]
+  },
+  "it": {
+    "purpose": ["newsletter", "offerte", "novità", "promozioni", "comunicazioni commerciali", "marketing", "informazioni su"],
+    "withdraw": ["annullare l'iscrizione", "annullare l’iscrizione", "disiscriverti", "disiscrizione", "revocare il consenso", "revocare il tuo consenso", "in qualsiasi momento", "cancellarti"]
+  },
+  "ja": {
+    "purpose": ["ニュースレター", "メルマガ", "メールマガジン", "お得な情報", "キャンペーン情報", "新商品", "最新情報", "広告メール"],
+    "withdraw": ["配信停止", "購読解除", "登録解除", "同意を撤回", "同意の撤回", "いつでも", "解除できます"]
+  },
+  "ko": {
+    "purpose": ["뉴스레터", "이벤트", "혜택", "프로모션", "광고성 정보", "마케팅", "신제품 소식"],
+    "withdraw": ["수신 거부", "수신거부", "구독 취소", "구독 해지", "동의 철회", "동의를 철회", "언제든지"]
+  },
+  "nb": {
+    "purpose": ["nyhetsbrev", "newsletter", "tilbud", "nyheter", "kampanjer", "markedsføring", "kommersielle"],
+    "withdraw": ["melde deg av", "avmelde", "trekke tilbake samtykket", "trekke samtykket tilbake", "når som helst", "tilbakekalle"]
+  },
+  "nl": {
+    "purpose": ["nieuwsbrief", "newsletter", "aanbiedingen", "nieuws", "promoties", "commerciële berichten", "marketing"],
+    "withdraw": ["uitschrijven", "afmelden", "toestemming intrekken", "uw toestemming intrekken", "op elk moment", "te allen tijde", "intrekken"]
+  },
+  "pl": {
+    "purpose": ["newsletter", "oferty", "nowości", "promocje", "informacje handlowe", "marketing"],
+    "withdraw": ["wypisać się", "zrezygnować z subskrypcji", "wycofać zgodę", "cofnąć zgodę", "w dowolnym momencie", "odwołać zgodę", "anulować subskrypcję"]
+  },
+  "pt": {
+    "purpose": ["newsletter", "boletim", "ofertas", "novidades", "promoções", "comunicações comerciais", "marketing", "informações sobre"],
+    "withdraw": ["cancelar a subscrição", "cancelar subscrição", "cancelar a inscrição", "anular a subscrição", "retirar o consentimento", "retirar o seu consentimento", "revogar", "a qualquer momento", "descadastrar"]
+  },
+  "ro": {
+    "purpose": ["newsletter", "buletin informativ", "oferte", "noutăți", "promoții", "comunicări comerciale", "marketing"],
+    "withdraw": ["dezabona", "dezabonare", "retrage consimțământul", "retrage-ți consimțământul", "oricând", "în orice moment", "revoca"]
+  },
+  "ru": {
+    "purpose": ["рассылк", "новости", "акции", "специальные предложения", "рекламные", "маркетингов", "новинки"],
+    "withdraw": ["отписаться", "отписка", "отказаться от рассылки", "отозвать согласие", "отзыв согласия", "в любое время", "отмена подписки"]
+  },
+  "sv": {
+    "purpose": ["nyhetsbrev", "newsletter", "erbjudanden", "nyheter", "kampanjer", "marknadsföring", "kommersiella"],
+    "withdraw": ["avsluta prenumerationen", "avsluta prenumeration", "avregistrera", "återkalla ditt samtycke", "återkalla samtycket", "när som helst", "avanmäla"]
+  },
+  "tr": {
+    "purpose": ["bülten", "kampanya", "fırsat", "yenilik", "pazarlama", "reklam", "tanıtım"],
+    "withdraw": ["abonelikten çık", "aboneliğinizi iptal", "aboneliği iptal", "onayınızı geri", "rızanızı geri", "istediğiniz zaman", "listeden çık"]
+  },
+  "zh": {
+    "purpose": ["电子报", "新闻通讯", "优惠", "促销", "最新资讯", "营销信息", "广告信息", "新品"],
+    "withdraw": ["退订", "取消订阅", "撤回同意", "撤销同意", "随时", "取消接收", "退出订阅"]
+  }
+}

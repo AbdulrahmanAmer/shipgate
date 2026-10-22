@@ -1,0 +1,82 @@
+{
+  "ar": {
+    "process": ["صور حميمة دون موافقة", "محتوى حميم دون موافقة", "طلب إزالة", "طلب الإزالة", "take it down act"],
+    "timeline": ["48 ساعة", "٤٨ ساعة", "خلال 48 ساعة"]
+  },
+  "cs": {
+    "process": ["intimní snímky bez souhlasu", "intimní obsah bez souhlasu", "žádost o odstranění", "požádat o odstranění", "take it down act"],
+    "timeline": ["48 hodin", "do 48 hodin"]
+  },
+  "da": {
+    "process": ["intime billeder uden samtykke", "intimt indhold uden samtykke", "anmode om fjernelse", "anmodning om fjernelse", "take it down act"],
+    "timeline": ["48 timer", "inden for 48 timer"]
+  },
+  "de": {
+    "process": ["intime bilder ohne einwilligung", "intime aufnahmen ohne einwilligung", "nicht einvernehmliche intime", "entfernung intimer", "löschung intimer", "take it down act"],
+    "timeline": ["48 stunden", "innerhalb von 48 stunden"]
+  },
+  "en": {
+    "process": ["take it down act", "non-consensual intimate", "nonconsensual intimate", "intimate image", "intimate visual depiction", "request removal", "request the removal", "report intimate", "notice and removal"],
+    "timeline": ["within 48 hours", "48 hours", "48-hour", "forty-eight hours"]
+  },
+  "es": {
+    "process": ["imágenes íntimas sin consentimiento", "imágenes íntimas no consentidas", "contenido íntimo sin consentimiento", "solicitar la eliminación", "retirada de imágenes íntimas", "take it down act"],
+    "timeline": ["48 horas", "en un plazo de 48 horas", "dentro de las 48 horas"]
+  },
+  "fi": {
+    "process": ["intiimejä kuvia ilman suostumusta", "intiimi sisältö ilman suostumusta", "poistopyyntö", "pyytää poistamaan", "take it down act"],
+    "timeline": ["48 tunnin", "48 tunnissa"]
+  },
+  "fr": {
+    "process": ["images intimes sans consentement", "images intimes non consenties", "contenu intime non consenti", "suppression d'images intimes", "suppression d’images intimes", "demander le retrait", "take it down act"],
+    "timeline": ["48 heures", "dans les 48 heures", "sous 48 heures"]
+  },
+  "it": {
+    "process": ["immagini intime senza consenso", "immagini intime non consensuali", "contenuti intimi senza consenso", "richiedere la rimozione", "rimozione di immagini intime", "take it down act"],
+    "timeline": ["48 ore", "entro 48 ore"]
+  },
+  "ja": {
+    "process": ["同意のない親密な画像", "同意なく公開された私的画像", "性的な画像の削除", "削除を依頼", "削除請求", "take it down act", "リベンジポルノ"],
+    "timeline": ["48時間", "48時間以内"]
+  },
+  "ko": {
+    "process": ["동의 없는 사적 이미지", "동의 없이 촬영된", "비동의 촬영물", "삭제 요청", "삭제 신청", "take it down act"],
+    "timeline": ["48시간", "48시간 이내"]
+  },
+  "nb": {
+    "process": ["intime bilder uten samtykke", "intimt innhold uten samtykke", "be om fjerning", "anmodning om fjerning", "take it down act"],
+    "timeline": ["48 timer", "innen 48 timer"]
+  },
+  "nl": {
+    "process": ["intieme beelden zonder toestemming", "intieme beelden zonder instemming", "niet-consensuele intieme", "verwijdering aanvragen", "verzoek tot verwijdering", "take it down act"],
+    "timeline": ["48 uur", "binnen 48 uur"]
+  },
+  "pl": {
+    "process": ["intymne zdjęcia bez zgody", "intymne materiały bez zgody", "wniosek o usunięcie", "zgłoszenie usunięcia", "take it down act"],
+    "timeline": ["48 godzin", "w ciągu 48 godzin"]
+  },
+  "pt": {
+    "process": ["imagens íntimas sem consentimento", "imagens íntimas não consensuais", "conteúdo íntimo sem consentimento", "solicitar a remoção", "pedir a remoção", "take it down act"],
+    "timeline": ["48 horas", "no prazo de 48 horas", "em até 48 horas"]
+  },
+  "ro": {
+    "process": ["imagini intime fără consimțământ", "conținut intim fără consimțământ", "solicitare de eliminare", "solicita eliminarea", "take it down act"],
+    "timeline": ["48 de ore", "în termen de 48 de ore"]
+  },
+  "ru": {
+    "process": ["интимные изображения без согласия", "интимные материалы без согласия", "запрос на удаление", "запросить удаление", "take it down act"],
+    "timeline": ["48 часов", "в течение 48 часов"]
+  },
+  "sv": {
+    "process": ["intima bilder utan samtycke", "intimt innehåll utan samtycke", "begära borttagning", "begäran om borttagning", "take it down act"],
+    "timeline": ["48 timmar", "inom 48 timmar"]
+  },
+  "tr": {
+    "process": ["rızasız mahrem görüntü", "rıza dışı mahrem", "rıza olmadan paylaşılan mahrem", "kaldırma talebi", "kaldırılmasını talep", "take it down act"],
+    "timeline": ["48 saat", "48 saat içinde"]
+  },
+  "zh": {
+    "process": ["未经同意的私密图像", "未经同意的私密影像", "未经同意发布的亲密图像", "请求删除", "申请删除", "take it down act"],
+    "timeline": ["48小时", "48 小时", "48小时内"]
+  }
+}

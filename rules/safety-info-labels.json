@@ -1,0 +1,22 @@
+{
+  "ar": ["سلامة المنتج", "معلومات السلامة", "تعليمات السلامة", "معلومات الشركة المصنعة", "gpsr"],
+  "cs": ["bezpečnost výrobku", "bezpečnost produktu", "obecná bezpečnost výrobků", "bezpečnostní informace", "bezpečnostní pokyny", "informace o výrobci", "gpsr"],
+  "da": ["produktsikkerhed", "generel produktsikkerhed", "sikkerhedsoplysninger", "sikkerhedsinformation", "sikkerhedsinstruktioner", "producentoplysninger", "gpsr"],
+  "de": ["produktsicherheit", "allgemeine produktsicherheit", "sicherheitsinformationen", "sicherheitshinweise", "produktsicherheitsverordnung", "herstellerinformationen", "informationen zur produktsicherheit", "gpsr"],
+  "en": ["product safety", "general product safety", "safety information", "safety and compliance", "product safety information", "safety instructions", "warnings and safety", "manufacturer information", "gpsr"],
+  "es": ["seguridad del producto", "seguridad general de los productos", "información de seguridad", "información sobre seguridad", "instrucciones de seguridad", "información del fabricante", "gpsr", "rgsp"],
+  "fi": ["tuoteturvallisuus", "yleinen tuoteturvallisuus", "turvallisuustiedot", "turvallisuusohjeet", "valmistajan tiedot", "gpsr"],
+  "fr": ["sécurité des produits", "sécurité du produit", "sécurité générale des produits", "informations de sécurité", "informations sur la sécurité", "consignes de sécurité", "informations sur le fabricant", "gpsr", "rgsp"],
+  "it": ["sicurezza del prodotto", "sicurezza generale dei prodotti", "informazioni sulla sicurezza", "istruzioni di sicurezza", "informazioni sul produttore", "sicurezza e conformità", "gpsr"],
+  "ja": ["製品安全", "安全情報", "安全上のご注意", "製造者情報", "製品の安全性", "gpsr"],
+  "ko": ["제품 안전", "제품 안전 정보", "안전 정보", "안전 수칙", "제조사 정보", "gpsr"],
+  "nb": ["produktsikkerhet", "sikkerhetsinformasjon", "sikkerhetsinstruksjoner", "produsentinformasjon", "gpsr"],
+  "nl": ["productveiligheid", "algemene productveiligheid", "veiligheidsinformatie", "veiligheidsinstructies", "fabrikantinformatie", "informatie over productveiligheid", "gpsr"],
+  "pl": ["bezpieczeństwo produktu", "bezpieczeństwo produktów", "ogólne bezpieczeństwo produktów", "informacje o bezpieczeństwie", "instrukcje bezpieczeństwa", "informacje o producencie", "gpsr"],
+  "pt": ["segurança do produto", "segurança geral dos produtos", "informações de segurança", "informação de segurança", "instruções de segurança", "informações do fabricante", "gpsr"],
+  "ro": ["siguranța produsului", "siguranța generală a produselor", "informații privind siguranța", "informații de siguranță", "instrucțiuni de siguranță", "informații despre producător", "gpsr"],
+  "ru": ["безопасность продукции", "безопасность товара", "информация о безопасности", "инструкции по безопасности", "информация о производителе", "gpsr"],
+  "sv": ["produktsäkerhet", "allmän produktsäkerhet", "säkerhetsinformation", "säkerhetsanvisningar", "tillverkarinformation", "information om tillverkaren", "gpsr"],
+  "tr": ["ürün güvenliği", "güvenlik bilgileri", "güvenlik talimatları", "üretici bilgileri", "gpsr"],
+  "zh": ["产品安全", "产品安全信息", "安全信息", "安全须知", "制造商信息", "gpsr"]
+}

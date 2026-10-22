@@ -1,0 +1,22 @@
+{
+  "ar": ["النشرة البريدية", "نشرة إخبارية", "اشترك", "القائمة البريدية", "عروض حصرية", "ابق على اطلاع"],
+  "cs": ["newsletter", "odebírat novinky", "přihlásit se k odběru", "odběr novinek", "zpravodaj", "exkluzivní nabídky", "buďte v obraze"],
+  "da": ["nyhedsbrev", "newsletter", "tilmeld", "abonner", "mailingliste", "eksklusive tilbud", "hold dig opdateret"],
+  "de": ["newsletter", "abonnieren", "mailingliste", "e-mail-verteiler", "angebote per e-mail", "informiert bleiben", "keine angebote mehr verpassen", "exklusive angebote"],
+  "en": ["newsletter", "subscribe", "mailing list", "join our list", "sign up for updates", "email updates", "get updates", "stay updated", "stay in the loop", "exclusive offers", "promotional emails", "marketing emails", "email list", "deals straight to your inbox"],
+  "es": ["newsletter", "boletín", "suscríbete", "suscribirse", "suscríbase", "lista de correo", "ofertas exclusivas", "mantente informado", "recibe novedades"],
+  "fi": ["uutiskirje", "newsletter", "tilaa", "liity postituslistalle", "postituslista", "ainutlaatuiset tarjoukset", "pysy ajan tasalla"],
+  "fr": ["newsletter", "infolettre", "lettre d'information", "lettre d’information", "s'abonner", "s’abonner", "abonnez-vous", "offres exclusives", "restez informé", "liste de diffusion"],
+  "it": ["newsletter", "iscriviti", "iscrizione", "mailing list", "offerte esclusive", "rimani aggiornato", "resta aggiornato"],
+  "ja": ["ニュースレター", "メルマガ", "メールマガジン", "購読", "メール配信", "お得な情報", "最新情報をお届け"],
+  "ko": ["뉴스레터", "구독", "메일링 리스트", "이메일 수신", "소식 받기", "혜택 소식"],
+  "nb": ["nyhetsbrev", "newsletter", "abonner", "meld deg på", "e-postliste", "eksklusive tilbud", "hold deg oppdatert"],
+  "nl": ["nieuwsbrief", "newsletter", "inschrijven", "abonneren", "mailinglijst", "exclusieve aanbiedingen", "blijf op de hoogte"],
+  "pl": ["newsletter", "biuletyn", "zapisz się", "subskrybuj", "lista mailingowa", "ekskluzywne oferty", "bądź na bieżąco"],
+  "pt": ["newsletter", "boletim", "subscreva", "subscrever", "inscreva-se", "lista de e-mails", "ofertas exclusivas", "fique por dentro", "receba novidades"],
+  "ro": ["newsletter", "buletin informativ", "abonează-te", "abonați-vă", "lista de e-mail", "oferte exclusive", "rămâi la curent"],
+  "ru": ["рассылка", "подписаться", "подписка на рассылку", "новостная рассылка", "эксклюзивные предложения", "будьте в курсе", "newsletter"],
+  "sv": ["nyhetsbrev", "newsletter", "prenumerera", "anmäl dig", "mailinglista", "exklusiva erbjudanden", "håll dig uppdaterad"],
+  "tr": ["bülten", "e-bülten", "abone ol", "abonelik", "e-posta listesi", "özel fırsatlar", "haberdar ol", "newsletter"],
+  "zh": ["订阅", "电子报", "新闻通讯", "邮件列表", "邮件订阅", "获取最新优惠", "newsletter", "资讯订阅"]
+}

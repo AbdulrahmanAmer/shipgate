@@ -1,0 +1,22 @@
+{
+  "ar": ["النشرة البريدية", "نشرة إخبارية", "تسويقية", "عروض", "رسائل ترويجية", "أبقني على اطلاع", "اشتراك"],
+  "cs": ["newsletter", "marketing", "nabídky", "akce", "obchodní sdělení", "informovat", "přihlásit"],
+  "da": ["nyhedsbrev", "newsletter", "markedsføring", "tilbud", "kommercielle henvendelser", "holde mig opdateret", "tilmelde mig"],
+  "de": ["newsletter", "werbung", "werbliche", "marketing", "angebote", "informiert halten", "benachrichtigen", "e-mail-werbung", "abonnieren", "informationen zu produkten"],
+  "en": ["newsletter", "marketing", "promotional", "promotions", "special offers", "send me offers", "keep me updated", "keep me posted", "email me", "receive updates", "receive news", "sign me up", "subscribe", "commercial communications"],
+  "es": ["newsletter", "boletín", "marketing", "promociones", "ofertas", "comunicaciones comerciales", "mantenerme informado", "suscribirme", "recibir novedades"],
+  "fi": ["uutiskirje", "newsletter", "markkinointi", "tarjoukset", "kaupalliset viestit", "pitää minut ajan tasalla", "liittää minut"],
+  "fr": ["newsletter", "infolettre", "offres commerciales", "marketing", "promotions", "offres promotionnelles", "recevoir des offres", "me tenir informé", "m'abonner", "m’abonner", "communications commerciales"],
+  "it": ["newsletter", "marketing", "promozioni", "offerte", "comunicazioni commerciali", "tenermi aggiornato", "iscrivermi", "ricevere novità"],
+  "ja": ["ニュースレター", "メルマガ", "メールマガジン", "広告メール", "お得な情報", "キャンペーン情報", "最新情報", "プロモーション", "マーケティング"],
+  "ko": ["뉴스레터", "마케팅", "광고성", "프로모션", "이벤트 소식", "혜택 정보", "수신 동의"],
+  "nb": ["nyhetsbrev", "newsletter", "markedsføring", "tilbud", "kommersielle henvendelser", "holde meg oppdatert", "melde meg på"],
+  "nl": ["nieuwsbrief", "newsletter", "marketing", "aanbiedingen", "promoties", "commerciële berichten", "op de hoogte houden", "inschrijven"],
+  "pl": ["newsletter", "marketing", "oferty", "promocje", "informacje handlowe", "komunikaty marketingowe", "informowanie mnie", "zapisać mnie"],
+  "pt": ["newsletter", "boletim", "marketing", "promoções", "ofertas", "comunicações comerciais", "manter-me informado", "subscrever", "receber novidades"],
+  "ro": ["newsletter", "buletin informativ", "marketing", "oferte", "comunicări comerciale", "să fiu ținut la curent", "abonează-mă"],
+  "ru": ["рассылка", "новостн", "маркетингов", "рекламн", "акции", "специальные предложения", "хочу получать"],
+  "sv": ["nyhetsbrev", "newsletter", "marknadsföring", "erbjudanden", "kommersiella meddelanden", "hålla mig uppdaterad", "anmäla mig"],
+  "tr": ["bülten", "pazarlama", "kampanya", "reklam", "ticari elektronik ileti", "fırsatlar", "haberdar", "e-posta almak istiyorum"],
+  "zh": ["订阅", "营销", "促销", "优惠信息", "广告邮件", "接收", "电子报", "新闻通讯"]
+}

@@ -1,0 +1,22 @@
+{
+  "ar": ["شامل ضريبة القيمة المضافة", "شاملة ضريبة القيمة المضافة", "شامل القيمة المضافة", "شامل الضريبة", "السعر شامل الضريبة"],
+  "cs": ["včetně DPH", "vč. DPH", "s DPH", "cena s DPH", "DPH v ceně"],
+  "da": ["inkl. moms", "inklusive moms", "incl. moms", "moms inkluderet", "med moms", "inkl. 25% moms"],
+  "de": ["inkl. MwSt", "inkl. USt", "inkl. Mehrwertsteuer", "inklusive Mehrwertsteuer", "inklusive MwSt", "MwSt. enthalten", "Mehrwertsteuer enthalten", "inkl. gesetzl. MwSt", "inkl. gesetzlicher MwSt", "inkl. 19% MwSt", "inkl. 19 % MwSt", "inkl. 7% MwSt", "inkl. 7 % MwSt", "inkl. 20% MwSt", "inkl. 20 % MwSt", "inkl. 8,1% MwSt", "inkl. 8.1% MwSt"],
+  "en": ["incl. VAT", "inc. VAT", "inc VAT", "including VAT", "VAT included", "inclusive of VAT", "incl. GST", "including GST", "GST included", "incl. tax", "including tax", "tax included"],
+  "es": ["IVA incluido", "IVA incluído", "IVA incl.", "impuestos incluidos", "incluye IVA", "con IVA"],
+  "fi": ["sis. alv", "sisältää alv", "alv sisältyy", "sis. arvonlisäveron", "sisältää arvonlisäveron", "alv:n kanssa"],
+  "fr": ["TTC", "toutes taxes comprises", "TVA incluse", "TVA comprise", "incl. TVA", "dont TVA"],
+  "it": ["IVA inclusa", "IVA compresa", "IVA incl.", "incl. IVA", "tasse incluse", "imposte incluse"],
+  "ja": ["税込", "税込み", "消費税込", "内税", "税込価格"],
+  "ko": ["부가세 포함", "부가세포함", "부가가치세 포함", "VAT 포함", "세금 포함"],
+  "nb": ["inkl. mva", "inkl mva", "inklusive mva", "inkludert mva", "mva inkludert", "inkl. merverdiavgift", "inkl. moms"],
+  "nl": ["incl. btw", "incl. b.t.w.", "inclusief btw", "btw inbegrepen", "btw inclusief", "inclusief belastingen"],
+  "pl": ["z VAT", "zawiera VAT", "w tym VAT", "cena brutto", "brutto", "z podatkiem VAT", "cena zawiera podatek VAT"],
+  "pt": ["IVA incluído", "IVA incluido", "iva incl.", "inclui IVA", "com IVA", "impostos incluídos", "impostos inclusos"],
+  "ro": ["TVA inclus", "inclusiv TVA", "cu TVA", "preț cu TVA", "TVA inclus în preț"],
+  "ru": ["включая НДС", "с НДС", "НДС включён", "НДС включен", "в том числе НДС", "вкл. НДС"],
+  "sv": ["inkl. moms", "inkl moms", "inklusive moms", "moms ingår", "inkl. mervärdesskatt", "inklusive mervärdesskatt"],
+  "tr": ["KDV dahil", "KDV dahildir", "KDV'si dahil", "KDV’si dahil", "KDV'ye dahil", "vergiler dahil"],
+  "zh": ["含税", "含增值税", "含VAT", "含GST", "已含税", "价格含税", "含税价"]
+}

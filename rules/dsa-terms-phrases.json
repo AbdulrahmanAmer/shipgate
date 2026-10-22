@@ -1,0 +1,102 @@
+{
+  "ar": {
+    "restrictions": ["القيود", "المحتوى المحظور", "قواعد المحتوى", "قواعد المجتمع", "الاستخدام المقبول"],
+    "moderation": ["إدارة المحتوى", "الإشراف على المحتوى", "مراجعة المحتوى", "المراجعة البشرية", "الخوارزمية", "أدوات آلية"],
+    "complaints": ["نظام معالجة الشكاوى الداخلي", "معالجة الشكاوى", "شكوى", "استئناف", "الطعن في قرار", "إجراءات الشكاوى"]
+  },
+  "cs": {
+    "restrictions": ["omezení", "zakázaný obsah", "pravidla obsahu", "pravidla komunity", "přijatelné použití"],
+    "moderation": ["moderování obsahu", "moderace", "moderovat", "lidské posouzení", "algoritmické", "automatizované nástroje"],
+    "complaints": ["interní systém vyřizování stížností", "vyřizování stížností", "stížnost", "odvolání", "napadnout rozhodnutí", "postup pro stížnosti"]
+  },
+  "da": {
+    "restrictions": ["begrænsninger", "forbudt indhold", "indholdsregler", "retningslinjer for fællesskabet", "acceptabel brug"],
+    "moderation": ["indholdsmoderering", "moderering", "modererer", "menneskelig gennemgang", "algoritmisk", "automatiserede værktøjer"],
+    "complaints": ["internt klagehåndteringssystem", "klagehåndtering", "klage", "appel", "anfægte en afgørelse", "klageprocedure"]
+  },
+  "de": {
+    "restrictions": ["beschränkungen", "nutzungsbeschränkungen", "verbotene inhalte", "unzulässige inhalte", "richtlinien zu inhalten", "community-richtlinien", "verhaltensregeln"],
+    "moderation": ["moderation von inhalten", "inhaltsmoderation", "moderation", "moderiert", "menschliche überprüfung", "algorithmische", "automatisierte"],
+    "complaints": ["beschwerdemanagementsystem", "internes beschwerde", "beschwerdeverfahren", "beschwerde", "einspruch", "entscheidung anfechten"]
+  },
+  "en": {
+    "restrictions": ["restrictions", "prohibited content", "acceptable use", "content rules", "content policy", "content guidelines", "community guidelines"],
+    "moderation": ["content moderation", "moderation", "moderate", "human review", "algorithmic", "automated tools", "automated decision"],
+    "complaints": ["complaint handling", "internal complaint", "complaints system", "appeal", "appeals", "complaint procedure", "how to complain", "contest a decision"]
+  },
+  "es": {
+    "restrictions": ["restricciones", "contenido prohibido", "contenidos prohibidos", "normas de contenido", "normas de la comunidad", "uso aceptable"],
+    "moderation": ["moderación de contenidos", "moderación", "moderar", "revisión humana", "algorítmica", "herramientas automatizadas"],
+    "complaints": ["sistema interno de gestión de reclamaciones", "gestión de reclamaciones", "reclamación", "apelar", "impugnar una decisión", "procedimiento de reclamación"]
+  },
+  "fi": {
+    "restrictions": ["rajoitukset", "rajoituksista", "kielletty sisältö", "sisältösäännöt", "yhteisön säännöt", "hyväksyttävä käyttö"],
+    "moderation": ["sisällön moderointi", "moderointi", "moderoi", "ihmisen tekemä tarkistus", "algoritminen", "automaattiset työkalut"],
+    "complaints": ["sisäinen valitustenkäsittelyjärjestelmä", "valitustenkäsittely", "valitus", "muutoksenhaku", "riitauttaa päätös", "valitusmenettely"]
+  },
+  "fr": {
+    "restrictions": ["restrictions", "contenus interdits", "contenu interdit", "règles relatives aux contenus", "charte de la communauté", "règles de la communauté"],
+    "moderation": ["modération des contenus", "modération", "modérer", "examen humain", "intervention humaine", "algorithmique", "outils automatisés"],
+    "complaints": ["système interne de traitement des réclamations", "traitement des réclamations", "réclamation", "contester une décision", "recours interne", "faire appel", "procédure de réclamation"]
+  },
+  "it": {
+    "restrictions": ["restrizioni", "contenuti vietati", "contenuto vietato", "regole sui contenuti", "linee guida della community", "uso accettabile"],
+    "moderation": ["moderazione dei contenuti", "moderazione", "moderare", "verifica umana", "revisione umana", "algoritmico", "strumenti automatizzati"],
+    "complaints": ["sistema interno di gestione dei reclami", "gestione dei reclami", "reclamo", "contestare una decisione", "procedura di reclamo", "ricorso"]
+  },
+  "ja": {
+    "restrictions": ["制限", "禁止事項", "禁止コンテンツ", "コンテンツポリシー", "コミュニティガイドライン", "利用制限"],
+    "moderation": ["コンテンツモデレーション", "モデレーション", "コンテンツの審査", "人による審査", "アルゴリズム", "自動化されたツール"],
+    "complaints": ["苦情処理", "内部苦情", "異議申立", "異議申し立て", "不服申立", "苦情の申し立て"]
+  },
+  "ko": {
+    "restrictions": ["제한", "금지 콘텐츠", "콘텐츠 정책", "커뮤니티 가이드라인", "허용되는 사용"],
+    "moderation": ["콘텐츠 조정", "콘텐츠 검토", "모더레이션", "사람의 검토", "알고리즘", "자동화 도구"],
+    "complaints": ["내부 불만 처리", "불만 처리", "이의 제기", "이의신청", "불복", "결정에 대한 이의"]
+  },
+  "nb": {
+    "restrictions": ["begrensninger", "forbudt innhold", "regler for innhold", "retningslinjer for fellesskapet", "akseptabel bruk"],
+    "moderation": ["innholdsmoderering", "moderering", "modererer", "menneskelig gjennomgang", "algoritmisk", "automatiserte verktøy"],
+    "complaints": ["internt klagebehandlingssystem", "klagebehandling", "klage", "anke", "bestride en avgjørelse", "klageprosedyre"]
+  },
+  "nl": {
+    "restrictions": ["beperkingen", "verboden inhoud", "verboden content", "inhoudsregels", "communityrichtlijnen", "acceptabel gebruik"],
+    "moderation": ["inhoudsmoderatie", "contentmoderatie", "moderatie", "modereren", "menselijke controle", "algoritmische", "geautomatiseerde"],
+    "complaints": ["interne klachtenafhandelingssysteem", "klachtenafhandeling", "klacht", "beroep aantekenen", "besluit aanvechten", "klachtenprocedure"]
+  },
+  "pl": {
+    "restrictions": ["ograniczenia", "treści zabronione", "zakazane treści", "zasady dotyczące treści", "zasady społeczności", "dopuszczalne użycie"],
+    "moderation": ["moderowanie treści", "moderacja", "moderowanie", "weryfikacja przez człowieka", "algorytmiczne", "zautomatyzowane"],
+    "complaints": ["wewnętrznego systemu rozpatrywania skarg", "rozpatrywanie skarg", "skarga", "odwołanie", "zakwestionować decyzję", "procedura składania skarg"]
+  },
+  "pt": {
+    "restrictions": ["restrições", "conteúdos proibidos", "conteúdo proibido", "regras de conteúdo", "regras da comunidade", "utilização aceitável"],
+    "moderation": ["moderação de conteúdos", "moderação de conteúdo", "moderação", "moderar", "revisão humana", "algorítmica", "ferramentas automatizadas"],
+    "complaints": ["sistema interno de gestão de reclamações", "gestão de reclamações", "reclamação", "contestar uma decisão", "recurso", "procedimento de reclamação"]
+  },
+  "ro": {
+    "restrictions": ["restricții", "conținut interzis", "reguli privind conținutul", "reguli ale comunității", "utilizare acceptabilă"],
+    "moderation": ["moderarea conținutului", "moderare", "modera", "revizuire umană", "algoritmică", "instrumente automatizate"],
+    "complaints": ["sistemului intern de gestionare a reclamațiilor", "gestionarea reclamațiilor", "reclamație", "contestare", "contestați o decizie", "procedura de reclamații"]
+  },
+  "ru": {
+    "restrictions": ["ограничения", "запрещённый контент", "запрещенный контент", "правила контента", "правила сообщества", "допустимое использование"],
+    "moderation": ["модерация контента", "модерация", "модерировать", "проверка человеком", "алгоритмическ", "автоматизированные инструменты"],
+    "complaints": ["внутренняя система рассмотрения жалоб", "рассмотрение жалоб", "жалоба", "апелляция", "оспорить решение", "порядок подачи жалоб"]
+  },
+  "sv": {
+    "restrictions": ["begränsningar", "förbjudet innehåll", "regler för innehåll", "gemenskapsregler", "godtagbar användning"],
+    "moderation": ["modereringen av innehåll", "moderering av innehåll", "moderering", "modererar", "mänsklig granskning", "algoritmisk", "automatiserade verktyg"],
+    "complaints": ["internt klagomålshanteringssystem", "klagomålshantering", "klagomål", "överklaga", "ifrågasätta ett beslut", "klagomålsförfarande"]
+  },
+  "tr": {
+    "restrictions": ["kısıtlamalar", "yasaklı içerik", "içerik kuralları", "topluluk kuralları", "kabul edilebilir kullanım"],
+    "moderation": ["içerik moderasyonu", "moderasyon", "insan incelemesi", "algoritmik", "otomatik araçlar"],
+    "complaints": ["dahili şikayet işleme sistemi", "şikayet yönetimi", "şikayet", "itiraz", "karara itiraz", "şikayet prosedürü"]
+  },
+  "zh": {
+    "restrictions": ["限制", "禁止内容", "内容规则", "社区准则", "可接受的使用"],
+    "moderation": ["内容审核", "审核", "内容管理", "人工审核", "算法", "自动化工具"],
+    "complaints": ["内部投诉处理系统", "投诉处理", "投诉", "申诉", "对决定提出异议", "投诉程序"]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "ar": {
+    "right": ["حق العدول", "حق الانسحاب", "الحق في الانسحاب من العقد", "دون إبداء أي سبب", "حق الإرجاع"],
+    "period": ["14 يوما", "14 يومًا", "أربعة عشر يوما", "مدة العدول"],
+    "howTo": ["بيان واضح", "لممارسة حق العدول", "لممارسة حقك في الانسحاب", "إبلاغنا بقرارك"],
+    "effects": ["آثار الانسحاب", "سنقوم برد", "رد المبلغ", "استرداد المبلغ", "تكلفة إعادة البضائع", "إعادة البضاعة"],
+    "modelForm": ["نموذج الانسحاب", "نموذج العدول", "نموذج الإلغاء"]
+  },
+  "cs": {
+    "right": ["právo odstoupit od smlouvy", "odstoupit od této smlouvy", "bez udání důvodu"],
+    "period": ["14 dnů", "čtrnácti dnů", "lhůta pro odstoupení"],
+    "howTo": ["jednoznačného prohlášení", "uplatnění práva odstoupit", "informovat o svém rozhodnutí"],
+    "effects": ["důsledky odstoupení od smlouvy", "vrátíme vám", "vrácení plateb", "náklady na vrácení", "vrátit zboží"],
+    "modelForm": ["vzorový formulář pro odstoupení od smlouvy", "formulář pro odstoupení od smlouvy", "formulář pro odstoupení"]
+  },
+  "da": {
+    "right": ["fortrydelsesret", "træde tilbage fra denne aftale", "uden begrundelse"],
+    "period": ["14 dage", "fortrydelsesfristen"],
+    "howTo": ["utvetydig erklæring", "for at udøve fortrydelsesretten", "udøve fortrydelsesretten", "meddele os"],
+    "effects": ["følger af fortrydelse", "refunderer vi dem", "tilbagebetaling", "udgifter til returnering", "direkte omkostninger ved returnering", "returnere varerne"],
+    "modelForm": ["standardfortrydelsesformular", "fortrydelsesformular"]
+  },
+  "de": {
+    "right": ["widerrufsrecht", "recht, binnen vierzehn tagen", "recht, binnen 14 tagen", "ohne angabe von gründen", "diesen vertrag zu widerrufen"],
+    "period": ["vierzehn tage", "14 tage", "14 tagen", "widerrufsfrist beträgt"],
+    "howTo": ["eindeutigen erklärung", "eindeutige erklärung", "um ihr widerrufsrecht auszuüben", "widerrufsrecht auszuüben", "entschluss, diesen vertrag zu widerrufen"],
+    "effects": ["folgen des widerrufs", "erstatten wir ihnen", "rückzahlung", "rücksendekosten", "kosten der rücksendung", "unmittelbaren kosten der rücksendung", "zurückzusenden"],
+    "modelForm": ["muster-widerrufsformular", "musterwiderrufsformular", "widerrufsformular", "formular für den widerruf"]
+  },
+  "en": {
+    "right": ["right to withdraw", "right of withdrawal", "withdraw from this contract", "withdraw from the contract", "without giving any reason"],
+    "period": ["14 days", "fourteen days", "14-day", "14 calendar days"],
+    "howTo": ["unequivocal statement", "clear statement", "inform us of your decision", "exercise the right of withdrawal", "to exercise your right to withdraw", "to exercise the right to withdraw"],
+    "effects": ["effects of withdrawal", "reimburse you", "refund you", "we will reimburse", "we will refund", "cost of returning", "costs of returning", "return the goods", "send back the goods"],
+    "modelForm": ["model withdrawal form", "withdrawal form", "cancellation form", "model cancellation form"]
+  },
+  "es": {
+    "right": ["derecho de desistimiento", "derecho a desistir", "desistir del presente contrato", "sin necesidad de justificación"],
+    "period": ["14 días", "catorce días", "plazo de desistimiento"],
+    "howTo": ["declaración inequívoca", "para ejercer el derecho de desistimiento", "ejercer el derecho de desistimiento", "notificarnos su decisión"],
+    "effects": ["consecuencias del desistimiento", "le devolveremos", "reembolso", "gastos de devolución", "coste directo de devolución", "devolver los bienes"],
+    "modelForm": ["modelo de formulario de desistimiento", "formulario de desistimiento"]
+  },
+  "fi": {
+    "right": ["peruuttamisoikeus", "oikeus peruuttaa tämä sopimus", "syytä ilmoittamatta"],
+    "period": ["14 päivän", "14 päivää", "peruuttamisen määräaika"],
+    "howTo": ["yksiselitteisellä ilmoituksella", "peruuttamisoikeuden käyttämiseksi", "ilmoitettava meille"],
+    "effects": ["peruuttamisen vaikutukset", "palautamme teille", "palautuskustannukset", "palauttamisen kustannukset", "palauttaa tavarat"],
+    "modelForm": ["malliperuuttamislomake", "peruuttamislomake", "peruutuslomake"]
+  },
+  "fr": {
+    "right": ["droit de rétractation", "droit de se rétracter", "vous rétracter du présent contrat", "sans donner de motif"],
+    "period": ["quatorze jours", "14 jours", "délai de rétractation"],
+    "howTo": ["déclaration dénuée d'ambiguïté", "déclaration dénuée d’ambiguïté", "pour exercer le droit de rétractation", "exercer votre droit de rétractation", "décision de rétractation"],
+    "effects": ["effets de la rétractation", "nous vous rembourserons", "remboursement", "frais de retour", "renvoyer le bien", "frais directs de renvoi"],
+    "modelForm": ["modèle de formulaire de rétractation", "formulaire de rétractation"]
+  },
+  "it": {
+    "right": ["diritto di recesso", "diritto di recedere", "recedere dal contratto", "senza indicarne le ragioni"],
+    "period": ["14 giorni", "quattordici giorni", "periodo di recesso"],
+    "howTo": ["dichiarazione esplicita", "per esercitare il diritto di recesso", "esercitare il diritto di recesso", "informarci della sua decisione"],
+    "effects": ["effetti del recesso", "saranno rimborsati", "rimborso", "costi di restituzione", "spese di restituzione", "restituire i beni"],
+    "modelForm": ["modulo tipo di recesso", "modulo di recesso"]
+  },
+  "ja": {
+    "right": ["撤回権", "撤回する権利", "契約を撤回", "契約の撤回", "理由を示すことなく"],
+    "period": ["14日", "14日間", "撤回期間"],
+    "howTo": ["明確な意思表示", "撤回の意思", "撤回権を行使する", "撤回権を行使するには"],
+    "effects": ["撤回の効果", "返金いたします", "払い戻し", "返送費用", "返送にかかる費用", "商品を返送"],
+    "modelForm": ["撤回フォーム", "撤回書式", "撤回用紙", "モデル撤回フォーム"]
+  },
+  "ko": {
+    "right": ["청약철회", "청약 철회", "철회할 권리", "사유 없이"],
+    "period": ["14일", "철회 기간", "청약철회 기간"],
+    "howTo": ["명확한 의사 표시", "철회 방법", "청약철회 방법", "철회하려면", "철회 의사"],
+    "effects": ["철회의 효과", "환불", "환급", "반품 비용", "반송 비용", "상품을 반송"],
+    "modelForm": ["철회 양식", "철회 신청서", "청약철회 신청서", "철회 서식"]
+  },
+  "nb": {
+    "right": ["angrerett", "angre avtalen", "uten å oppgi noen grunn", "rett til å tre tilbake fra avtalen"],
+    "period": ["14 dager", "angrefrist", "angrefristen"],
+    "howTo": ["utøve angreretten", "tydelig erklæring", "entydig erklæring", "informere oss om din beslutning"],
+    "effects": ["virkninger av å angre", "vi refunderer", "refusjon", "kostnadene ved retur", "returnere varene", "direkte kostnader ved retur"],
+    "modelForm": ["angreskjema", "standardisert angreskjema", "skjema for bruk av angrerett"]
+  },
+  "nl": {
+    "right": ["herroepingsrecht", "recht om de overeenkomst te herroepen", "zonder opgave van redenen"],
+    "period": ["14 dagen", "veertien dagen", "herroepingstermijn"],
+    "howTo": ["ondubbelzinnige verklaring", "om het herroepingsrecht uit te oefenen", "herroepingsrecht uit te oefenen", "op de hoogte stellen van uw beslissing"],
+    "effects": ["gevolgen van de herroeping", "terugbetalen", "terugbetaling", "kosten van het terugzenden", "kosten voor het terugzenden", "goederen terugsturen"],
+    "modelForm": ["modelformulier voor herroeping", "herroepingsformulier"]
+  },
+  "pl": {
+    "right": ["prawo do odstąpienia od umowy", "prawo odstąpienia od umowy", "odstąpić od niniejszej umowy", "bez podania jakiejkolwiek przyczyny", "bez podania przyczyny"],
+    "period": ["14 dni", "czternastu dni", "termin na odstąpienie", "okres na odstąpienie"],
+    "howTo": ["jednoznacznego oświadczenia", "skorzystać z prawa do odstąpienia", "poinformować nas o swojej decyzji"],
+    "effects": ["skutki odstąpienia od umowy", "zwracamy państwu", "zwrot płatności", "koszty zwrotu", "koszty odesłania", "odesłać towar"],
+    "modelForm": ["wzór formularza odstąpienia od umowy", "formularz odstąpienia od umowy", "formularz odstąpienia"]
+  },
+  "pt": {
+    "right": ["direito de retratação", "direito de retractação", "direito de livre resolução", "direito de arrependimento", "retratação do presente contrato", "sem necessidade de indicar qualquer motivo"],
+    "period": ["14 dias", "catorze dias", "prazo de retratação", "prazo de retractação", "prazo de livre resolução"],
+    "howTo": ["declaração inequívoca", "para exercer o direito de retratação", "exercer o direito de retratação", "a fim de exercer o seu direito"],
+    "effects": ["efeitos da retratação", "efeitos da retractação", "ser-lhe-ão reembolsados", "reembolso", "custos de devolução", "devolver os bens"],
+    "modelForm": ["modelo de formulário de retratação", "modelo de formulário de retractação", "formulário de retratação", "formulário de arrependimento"]
+  },
+  "ro": {
+    "right": ["dreptul de retragere", "dreptul de a vă retrage", "fără a preciza motivele"],
+    "period": ["14 zile", "patrusprezece zile", "perioada de retragere", "termenul de retragere"],
+    "howTo": ["declarație neechivocă", "pentru a vă exercita dreptul de retragere", "exercita dreptul de retragere", "ne informați"],
+    "effects": ["consecințele retragerii", "vom rambursa", "rambursare", "costurile returnării", "returnați bunurile", "costul direct al returnării"],
+    "modelForm": ["model de formular de retragere", "formular de retragere"]
+  },
+  "ru": {
+    "right": ["право на отказ", "право отказаться от договора", "отказаться от настоящего договора", "без объяснения причин", "право на отзыв"],
+    "period": ["14 дней", "четырнадцать дней", "срок отказа", "14 календарных дней"],
+    "howTo": ["недвусмысленного заявления", "чтобы воспользоваться правом", "воспользоваться правом на отказ", "уведомить нас о вашем решении"],
+    "effects": ["последствия отказа", "мы вернем", "мы вернём", "возврат средств", "расходы на возврат", "вернуть товар"],
+    "modelForm": ["типовая форма отказа", "форма отказа от договора", "бланк отказа", "типовой бланк"]
+  },
+  "sv": {
+    "right": ["ångerrätt", "frånträda detta avtal", "utan att ange något skäl"],
+    "period": ["14 dagar", "ångerfristen"],
+    "howTo": ["klart och tydligt meddelande", "vill du utöva ångerrätten", "utöva ångerrätten"],
+    "effects": ["verkan av utövad ångerrätt", "betala tillbaka", "återbetalning", "kostnader för returen", "direkta kostnaden för att returnera", "returnera varorna"],
+    "modelForm": ["mall för ångerblankett", "ångerblankett", "ångerformulär", "standardformulär för ångerrätt"]
+  },
+  "tr": {
+    "right": ["cayma hakkı", "sözleşmeden cayma", "herhangi bir gerekçe göstermeksizin", "gerekçe göstermeden"],
+    "period": ["14 gün", "on dört gün", "cayma süresi"],
+    "howTo": ["açık bir beyan", "cayma hakkını kullanmak için", "cayma hakkınızı kullanmak için", "kararınızı bildirmeniz"],
+    "effects": ["cayma hakkının sonuçları", "cayma halinde", "iade edeceğiz", "geri ödeme", "iade masrafları", "malı geri gönder"],
+    "modelForm": ["cayma formu", "örnek cayma formu", "cayma hakkı formu"]
+  },
+  "zh": {
+    "right": ["撤回权", "退货权", "无理由退货", "七天无理由", "无需说明理由", "有权撤销合同"],
+    "period": ["14天", "14日", "七天", "7天", "撤回期限", "退货期限"],
+    "howTo": ["明确声明", "行使撤回权", "行使退货权", "通知我们您的决定", "撤销合同的决定"],
+    "effects": ["撤回的后果", "撤销的效果", "退还", "退款", "返还费用", "退货费用", "退回商品"],
+    "modelForm": ["撤回表格", "撤回表", "退货表格", "撤销表格", "标准撤回表"]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "ar": {
+    "control": ["الإبلاغ عن محتوى غير قانوني", "الإبلاغ عن محتوى", "الإبلاغ عن هذا المحتوى", "الإبلاغ عن إساءة", "الإبلاغ عن تعليق", "الإبلاغ عن مراجعة"],
+    "goodFaith": ["بحسن نية", "دقيقة وكاملة", "صحيحة وكاملة"]
+  },
+  "cs": {
+    "control": ["nahlásit nezákonný obsah", "oznámit nezákonný obsah", "nahlásit obsah", "nahlásit tento obsah", "nahlásit zneužití", "nahlásit komentář", "nahlásit recenzi"],
+    "goodFaith": ["v dobré víře", "přesné a úplné"]
+  },
+  "da": {
+    "control": ["anmeld ulovligt indhold", "indberet ulovligt indhold", "anmeld indhold", "anmeld dette indhold", "rapporter misbrug", "anmeld kommentar", "anmeld anmeldelse"],
+    "goodFaith": ["i god tro", "nøjagtige og fuldstændige"]
+  },
+  "de": {
+    "control": ["rechtswidrigen inhalt melden", "illegalen inhalt melden", "inhalt melden", "diesen inhalt melden", "beitrag melden", "kommentar melden", "bewertung melden", "missbrauch melden"],
+    "goodFaith": ["in gutem glauben", "richtig und vollständig"]
+  },
+  "en": {
+    "control": ["report illegal content", "notify illegal content", "report content", "report this content", "report abuse", "report this post", "report comment", "report review", "flag content", "flag as inappropriate"],
+    "goodFaith": ["bona fide belief", "good faith belief", "good faith", "accurate and complete"]
+  },
+  "es": {
+    "control": ["denunciar contenido ilegal", "notificar contenido ilícito", "denunciar contenido", "denunciar este contenido", "reportar contenido", "reportar este comentario", "denunciar comentario", "denunciar reseña"],
+    "goodFaith": ["de buena fe", "precisas y completas"]
+  },
+  "fi": {
+    "control": ["ilmoita laiton sisältö", "ilmoita sisältö", "ilmoita tämä sisältö", "ilmoita väärinkäytös", "ilmoita kommentti", "ilmoita arvostelu", "raportoi sisältö"],
+    "goodFaith": ["vilpitön mieli", "vilpittömästi", "paikkansapitäviä ja täydellisiä"]
+  },
+  "fr": {
+    "control": ["signaler un contenu illicite", "signaler un contenu", "signaler ce contenu", "signaler un abus", "signaler ce commentaire", "signaler cet avis"],
+    "goodFaith": ["de bonne foi", "exactes et complètes"]
+  },
+  "it": {
+    "control": ["segnala contenuto illecito", "segnala contenuto", "segnala questo contenuto", "segnala abuso", "segnala commento", "segnala recensione", "segnalare contenuto"],
+    "goodFaith": ["in buona fede", "esattezza e la completezza", "esatte e complete"]
+  },
+  "ja": {
+    "control": ["違法コンテンツを報告", "違法コンテンツの報告", "コンテンツを報告", "このコンテンツを報告", "不適切な投稿を報告", "違反を報告", "コメントを報告", "レビューを報告", "通報する"],
+    "goodFaith": ["誠実に信じ", "善意", "正確かつ完全", "正確で完全"]
+  },
+  "ko": {
+    "control": ["불법 콘텐츠 신고", "콘텐츠 신고", "이 콘텐츠 신고", "신고하기", "댓글 신고", "리뷰 신고", "부적절한 콘텐츠 신고"],
+    "goodFaith": ["성실하게 믿", "선의로", "정확하고 완전"]
+  },
+  "nb": {
+    "control": ["rapporter ulovlig innhold", "meld ulovlig innhold", "rapporter innhold", "meld dette innholdet", "rapporter misbruk", "rapporter kommentar", "rapporter anmeldelse"],
+    "goodFaith": ["i god tro", "nøyaktige og fullstendige"]
+  },
+  "nl": {
+    "control": ["illegale inhoud melden", "inhoud melden", "deze inhoud melden", "misbruik melden", "reactie melden", "review melden", "melden als ongepast"],
+    "goodFaith": ["te goeder trouw", "nauwkeurig en volledig"]
+  },
+  "pl": {
+    "control": ["zgłoś nielegalne treści", "zgłoś treść", "zgłoś tę treść", "zgłoś nadużycie", "zgłoś komentarz", "zgłoś opinię", "zgłoś naruszenie"],
+    "goodFaith": ["w dobrej wierze", "prawidłowe i kompletne"]
+  },
+  "pt": {
+    "control": ["denunciar conteúdo ilegal", "notificar conteúdo ilegal", "denunciar conteúdo", "denunciar este conteúdo", "reportar conteúdo", "denunciar comentário", "denunciar avaliação", "denunciar abuso"],
+    "goodFaith": ["de boa-fé", "de boa fé", "exatas e completas", "precisas e completas"]
+  },
+  "ro": {
+    "control": ["raportează conținut ilegal", "raportați conținut ilegal", "raportează conținutul", "raportează acest conținut", "semnalează conținut", "raportează abuz", "raportează comentariul", "raportează recenzia"],
+    "goodFaith": ["cu bună-credință", "cu bună credință", "exacte și complete"]
+  },
+  "ru": {
+    "control": ["сообщить о незаконном контенте", "пожаловаться на контент", "пожаловаться на это", "сообщить о нарушении", "пожаловаться на комментарий", "пожаловаться на отзыв", "сообщить о контенте"],
+    "goodFaith": ["добросовестно", "точными и полными", "добросовестное убеждение"]
+  },
+  "sv": {
+    "control": ["anmäl olagligt innehåll", "anmäl innehåll", "anmäl det här innehållet", "rapportera innehåll", "rapportera missbruk", "anmäl kommentar", "anmäl recension"],
+    "goodFaith": ["i ärligt uppsåt", "i god tro", "korrekta och fullständiga"]
+  },
+  "tr": {
+    "control": ["yasa dışı içeriği bildir", "içeriği bildir", "bu içeriği bildir", "kötüye kullanımı bildir", "yorumu bildir", "yorumu şikayet et", "içeriği şikayet et"],
+    "goodFaith": ["iyi niyetle", "iyi niyet", "doğru ve eksiksiz"]
+  },
+  "zh": {
+    "control": ["举报违法内容", "举报内容", "举报此内容", "举报违规", "举报评论", "举报评价"],
+    "goodFaith": ["善意", "真诚地相信", "准确和完整", "准确且完整"]
+  }
+}

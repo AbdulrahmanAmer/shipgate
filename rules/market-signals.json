@@ -1,0 +1,238 @@
+{
+  "regions": {
+    "AT": [
+      "eu-gdpr"
+    ],
+    "BE": [
+      "eu-gdpr"
+    ],
+    "BG": [
+      "eu-gdpr"
+    ],
+    "CY": [
+      "eu-gdpr"
+    ],
+    "CZ": [
+      "eu-gdpr"
+    ],
+    "DE": [
+      "eu-gdpr"
+    ],
+    "DK": [
+      "eu-gdpr"
+    ],
+    "EE": [
+      "eu-gdpr"
+    ],
+    "ES": [
+      "eu-gdpr"
+    ],
+    "FI": [
+      "eu-gdpr"
+    ],
+    "FR": [
+      "eu-gdpr"
+    ],
+    "GR": [
+      "eu-gdpr"
+    ],
+    "HR": [
+      "eu-gdpr"
+    ],
+    "HU": [
+      "eu-gdpr"
+    ],
+    "IE": [
+      "eu-gdpr"
+    ],
+    "IS": [
+      "eu-gdpr"
+    ],
+    "IT": [
+      "eu-gdpr"
+    ],
+    "LI": [
+      "eu-gdpr"
+    ],
+    "LT": [
+      "eu-gdpr"
+    ],
+    "LU": [
+      "eu-gdpr"
+    ],
+    "LV": [
+      "eu-gdpr"
+    ],
+    "MT": [
+      "eu-gdpr"
+    ],
+    "NL": [
+      "eu-gdpr"
+    ],
+    "NO": [
+      "eu-gdpr"
+    ],
+    "PL": [
+      "eu-gdpr"
+    ],
+    "PT": [
+      "eu-gdpr"
+    ],
+    "RO": [
+      "eu-gdpr"
+    ],
+    "SE": [
+      "eu-gdpr"
+    ],
+    "SI": [
+      "eu-gdpr"
+    ],
+    "SK": [
+      "eu-gdpr"
+    ],
+    "EU": [
+      "eu-gdpr"
+    ],
+    "GB": [
+      "uk-gdpr"
+    ],
+    "BR": [
+      "br-lgpd"
+    ],
+    "CA": [
+      "ca-pipeda"
+    ],
+    "JP": [
+      "jp-appi"
+    ],
+    "KR": [
+      "kr-pipa"
+    ],
+    "CN": [
+      "cn-pipl"
+    ],
+    "IN": [
+      "in-dpdp"
+    ],
+    "AU": [
+      "au-privacy"
+    ]
+  },
+  "currencies": {
+    "EUR": [
+      "eu-gdpr"
+    ],
+    "BGN": [
+      "eu-gdpr"
+    ],
+    "CZK": [
+      "eu-gdpr"
+    ],
+    "DKK": [
+      "eu-gdpr"
+    ],
+    "HUF": [
+      "eu-gdpr"
+    ],
+    "PLN": [
+      "eu-gdpr"
+    ],
+    "RON": [
+      "eu-gdpr"
+    ],
+    "SEK": [
+      "eu-gdpr"
+    ],
+    "ISK": [
+      "eu-gdpr"
+    ],
+    "NOK": [
+      "eu-gdpr"
+    ],
+    "GBP": [
+      "uk-gdpr"
+    ],
+    "BRL": [
+      "br-lgpd"
+    ],
+    "CAD": [
+      "ca-pipeda"
+    ],
+    "JPY": [
+      "jp-appi"
+    ],
+    "KRW": [
+      "kr-pipa"
+    ],
+    "CNY": [
+      "cn-pipl"
+    ],
+    "INR": [
+      "in-dpdp"
+    ],
+    "AUD": [
+      "au-privacy"
+    ]
+  },
+  "tlds": {
+    "at": "AT",
+    "be": "BE",
+    "bg": "BG",
+    "cy": "CY",
+    "cz": "CZ",
+    "de": "DE",
+    "dk": "DK",
+    "ee": "EE",
+    "es": "ES",
+    "fi": "FI",
+    "fr": "FR",
+    "gr": "GR",
+    "hr": "HR",
+    "hu": "HU",
+    "ie": "IE",
+    "is": "IS",
+    "it": "IT",
+    "li": "LI",
+    "lt": "LT",
+    "lu": "LU",
+    "lv": "LV",
+    "mt": "MT",
+    "nl": "NL",
+    "no": "NO",
+    "pl": "PL",
+    "pt": "PT",
+    "ro": "RO",
+    "se": "SE",
+    "si": "SI",
+    "sk": "SK",
+    "eu": "EU",
+    "uk": "GB",
+    "br": "BR",
+    "ca": "CA",
+    "jp": "JP",
+    "kr": "KR",
+    "cn": "CN",
+    "in": "IN",
+    "au": "AU"
+  },
+  "commerce": {
+    "eu-gdpr": [
+      "eu-consumer"
+    ],
+    "uk-gdpr": [
+      "uk-consumer"
+    ],
+    "br-lgpd": [
+      "br-consumer"
+    ],
+    "au-privacy": [
+      "au-consumer"
+    ],
+    "in-dpdp": [
+      "in-ecommerce"
+    ],
+    "ca-pipeda": [
+      "ca-consumer"
+    ]
+  }
+}

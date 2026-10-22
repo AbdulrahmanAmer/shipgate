@@ -1,0 +1,102 @@
+{
+  "ar": {
+    "frequency": ["شهريا", "شهريًا", "كل شهر", "في الشهر", "سنويا", "سنويًا", "كل سنة", "في السنة", "أسبوعيا", "كل أسبوع"],
+    "cancellation": ["يمكنك الإلغاء في أي وقت", "الإلغاء في أي وقت", "إلغاء الاشتراك", "كيفية الإلغاء", "كيفية إلغاء"],
+    "consent": ["تجديد تلقائي", "التجديد التلقائي", "يتجدد تلقائيا", "يتجدد تلقائيًا", "مدفوعات متكررة", "دفعات متكررة"]
+  },
+  "cs": {
+    "frequency": ["měsíčně", "za měsíc", "ročně", "za rok", "/měsíc", "/rok", "každý měsíc", "každý rok", "týdně"],
+    "cancellation": ["kdykoli zrušit", "zrušit kdykoli", "kdykoliv zrušit", "zrušení předplatného", "vypovědět", "jak zrušit", "výpověď"],
+    "consent": ["automatické prodloužení", "automaticky se obnovuje", "automatická obnova", "opakované platby", "opakovaná platba", "pravidelné platby"]
+  },
+  "da": {
+    "frequency": ["om måneden", "pr. måned", "per måned", "månedligt", "om året", "pr. år", "årligt", "/md", "/måned", "/år", "hver måned", "hvert år", "ugentligt"],
+    "cancellation": ["opsig når som helst", "kan opsiges når som helst", "annuller når som helst", "opsigelse", "sådan opsiger du", "opsig abonnement"],
+    "consent": ["automatisk fornyelse", "fornyes automatisk", "automatisk forlængelse", "tilbagevendende betalinger", "tilbagevendende betaling", "løbende betaling"]
+  },
+  "de": {
+    "frequency": ["pro monat", "monatlich", "pro jahr", "jährlich", "/monat", "/jahr", "im monat", "im jahr", "alle 12 monate", "wöchentlich", "pro woche"],
+    "cancellation": ["jederzeit kündbar", "jederzeit kündigen", "kündigungsfrist", "kündigung", "so kündigen sie", "abo kündigen"],
+    "consent": ["automatische verlängerung", "verlängert sich automatisch", "automatisch verlängern", "wiederkehrende zahlung", "wiederkehrende zahlungen", "regelmäßige zahlung"]
+  },
+  "en": {
+    "frequency": ["per month", "a month", "monthly", "/month", "/mo", "per year", "a year", "annually", "yearly", "/year", "/yr", "billed monthly", "billed annually", "billed yearly", "every month", "every year", "each month", "each year", "per week", "weekly"],
+    "cancellation": ["cancel anytime", "cancel at any time", "you can cancel", "cancel your subscription", "how to cancel", "cancellation", "cancel before", "cancel from your account"],
+    "consent": ["automatically renew", "auto-renew", "auto renew", "automatic renewal", "recurring payment", "recurring payments", "recurring billing", "recurring charges"]
+  },
+  "es": {
+    "frequency": ["al mes", "mensual", "mensualmente", "al año", "anual", "anualmente", "/mes", "/año", "cada mes", "cada año", "por semana", "semanal"],
+    "cancellation": ["cancela en cualquier momento", "cancelar en cualquier momento", "cancelación", "cancelar la suscripción", "cómo cancelar", "darse de baja"],
+    "consent": ["renovación automática", "se renueva automáticamente", "renovar automáticamente", "pagos recurrentes", "pago recurrente"]
+  },
+  "fi": {
+    "frequency": ["kuukaudessa", "kuukausittain", "kuukaudelta", "vuodessa", "vuosittain", "/kk", "/vuosi", "joka kuukausi", "joka vuosi", "viikoittain"],
+    "cancellation": ["peruuta milloin tahansa", "voit peruuttaa milloin tahansa", "irtisano milloin tahansa", "peruutus", "irtisanominen", "miten peruutat"],
+    "consent": ["automaattinen uusiutuminen", "uusiutuu automaattisesti", "automaattinen jatkuminen", "toistuvat maksut", "toistuva maksu", "jatkuva maksu"]
+  },
+  "fr": {
+    "frequency": ["par mois", "mensuel", "mensuellement", "par an", "annuel", "annuellement", "/mois", "/an", "chaque mois", "chaque année", "par semaine", "hebdomadaire"],
+    "cancellation": ["résiliable à tout moment", "résilier à tout moment", "annuler à tout moment", "résiliation", "sans engagement", "comment résilier", "comment annuler"],
+    "consent": ["renouvellement automatique", "se renouvelle automatiquement", "reconduction tacite", "paiements récurrents", "paiement récurrent"]
+  },
+  "it": {
+    "frequency": ["al mese", "mensile", "mensilmente", "all'anno", "all’anno", "annuale", "annualmente", "/mese", "/anno", "ogni mese", "ogni anno", "a settimana", "settimanale"],
+    "cancellation": ["disdici in qualsiasi momento", "disdire in qualsiasi momento", "cancella in qualsiasi momento", "annullare in qualsiasi momento", "disdetta", "come disdire"],
+    "consent": ["rinnovo automatico", "si rinnova automaticamente", "rinnova automaticamente", "pagamenti ricorrenti", "pagamento ricorrente"]
+  },
+  "ja": {
+    "frequency": ["毎月", "月額", "月々", "毎年", "年額", "年間", "毎週", "週ごと", "/月", "/年", "1か月ごと", "1ヶ月ごと"],
+    "cancellation": ["いつでも解約", "いつでもキャンセル", "解約方法", "解約はいつでも", "解約手続き", "キャンセル方法", "退会方法"],
+    "consent": ["自動更新", "自動的に更新", "自動継続", "定期購入", "定期課金", "継続課金", "自動課金"]
+  },
+  "ko": {
+    "frequency": ["매월", "월간", "/월", "매년", "연간", "/년", "매주", "주간", "한 달마다", "한달마다", "1년마다", "1개월마다", "월 결제"],
+    "cancellation": ["언제든지 해지", "언제든 해지", "언제든지 취소", "해지 방법", "구독 취소 방법", "해지 안내", "취소 방법"],
+    "consent": ["자동 갱신", "자동갱신", "정기결제", "정기 결제", "자동 결제", "자동결제", "반복 결제"]
+  },
+  "nb": {
+    "frequency": ["per måned", "i måneden", "månedlig", "hver måned", "per år", "årlig", "i året", "/mnd", "/måned", "/år", "hvert år", "ukentlig", "per uke"],
+    "cancellation": ["si opp når som helst", "avslutt når som helst", "kan sies opp når som helst", "oppsigelse", "slik sier du opp", "avbestille"],
+    "consent": ["automatisk fornyelse", "fornyes automatisk", "automatisk forlengelse", "gjentakende betalinger", "gjentakende betaling", "løpende betaling"]
+  },
+  "nl": {
+    "frequency": ["per maand", "maandelijks", "per jaar", "jaarlijks", "/maand", "/jaar", "elke maand", "elk jaar", "per week", "wekelijks"],
+    "cancellation": ["op elk moment opzeggen", "maandelijks opzegbaar", "altijd opzegbaar", "opzegtermijn", "opzegging", "hoe opzeggen"],
+    "consent": ["automatische verlenging", "wordt automatisch verlengd", "automatisch verlengen", "terugkerende betalingen", "terugkerende betaling", "periodieke betaling"]
+  },
+  "pl": {
+    "frequency": ["miesięcznie", "co miesiąc", "rocznie", "co rok", "/miesiąc", "/rok", "tygodniowo", "co tydzień", "za miesiąc", "za rok", "na miesiąc"],
+    "cancellation": ["możesz zrezygnować w dowolnym momencie", "zrezygnować w dowolnym momencie", "rezygnacja", "jak zrezygnować", "wypowiedzenie", "anulować subskrypcję"],
+    "consent": ["automatyczne odnowienie", "odnawia się automatycznie", "automatyczne przedłużenie", "płatności cykliczne", "płatność cykliczna", "cykliczne płatności"]
+  },
+  "pt": {
+    "frequency": ["por mês", "mensal", "mensalmente", "por ano", "anual", "anualmente", "/mês", "/ano", "todo mês", "todos os meses", "cada mês", "por semana", "semanal"],
+    "cancellation": ["cancele a qualquer momento", "cancelar a qualquer momento", "cancelamento", "cancelar a assinatura", "cancelar subscrição", "como cancelar"],
+    "consent": ["renovação automática", "renova automaticamente", "renovar automaticamente", "pagamentos recorrentes", "pagamento recorrente", "cobrança recorrente"]
+  },
+  "ro": {
+    "frequency": ["pe lună", "lunar", "lunară", "pe an", "anual", "anuală", "/lună", "/an", "în fiecare lună", "în fiecare an", "săptămânal", "pe săptămână"],
+    "cancellation": ["poți anula oricând", "anulează oricând", "poți renunța oricând", "anulare", "reziliere", "cum anulezi"],
+    "consent": ["reînnoire automată", "se reînnoiește automat", "prelungire automată", "plăți recurente", "plată recurentă"]
+  },
+  "ru": {
+    "frequency": ["в месяц", "ежемесячно", "в год", "ежегодно", "/мес", "/месяц", "/год", "каждый месяц", "каждый год", "еженедельно", "в неделю"],
+    "cancellation": ["отменить в любое время", "можно отменить в любое время", "отмена подписки", "как отменить", "отказаться в любое время", "отписаться в любое время"],
+    "consent": ["автоматическое продление", "продлевается автоматически", "автопродление", "регулярные платежи", "рекуррентные платежи", "рекуррентный платёж", "автоматическое списание"]
+  },
+  "sv": {
+    "frequency": ["per månad", "i månaden", "månadsvis", "varje månad", "per år", "årligen", "/mån", "/månad", "/år", "varje år", "per vecka", "veckovis"],
+    "cancellation": ["säg upp när som helst", "avsluta när som helst", "avbryt när som helst", "uppsägning", "säga upp", "hur du säger upp"],
+    "consent": ["automatisk förnyelse", "förnyas automatiskt", "automatisk förlängning", "återkommande betalningar", "återkommande betalning", "löpande betalning"]
+  },
+  "tr": {
+    "frequency": ["aylık", "her ay", "ayda", "yıllık", "her yıl", "yılda", "/ay", "/yıl", "haftalık", "her hafta"],
+    "cancellation": ["istediğiniz zaman iptal", "dilediğiniz zaman iptal", "istediğin zaman iptal", "iptal edebilirsiniz", "nasıl iptal", "aboneliği iptal"],
+    "consent": ["otomatik yenileme", "otomatik olarak yenilenir", "otomatik yenilenir", "yinelenen ödeme", "düzenli ödeme", "tekrarlayan ödeme", "otomatik ödeme"]
+  },
+  "zh": {
+    "frequency": ["每月", "每年", "每周", "/月", "/年", "月付", "年付", "按月", "按年", "每个月", "每一年"],
+    "cancellation": ["随时取消", "可随时取消", "随时退订", "如何取消", "取消方式", "取消订阅", "随时解约"],
+    "consent": ["自动续费", "自动续订", "自动扣款", "连续包月", "连续订阅", "周期性扣款", "自动续期"]
+  }
+}

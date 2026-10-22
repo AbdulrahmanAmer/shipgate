@@ -1,0 +1,22 @@
+{
+  "ar": ["عملية شراء موثقة", "مشتري موثق", "تقييم موثق", "مراجعات موثقة", "كيف نجمع التقييمات", "التقييمات غير موثقة", "تقييمات من عملاء اشتروا"],
+  "cs": ["ověřený nákup", "ověřená recenze", "ověřené recenze", "ověřený zákazník", "jak sbíráme recenze", "recenze nejsou ověřovány", "recenze pocházejí od zákazníků"],
+  "da": ["bekræftet køb", "verificeret køb", "verificeret anmeldelse", "verificerede anmeldelser", "sådan indsamler vi anmeldelser", "anmeldelser verificeres ikke", "anmeldelser stammer fra kunder", "verificeret kunde"],
+  "de": ["verifizierter kauf", "verifizierte bewertung", "geprüfte bewertung", "bewertungen werden geprüft", "bewertungen stammen von kunden", "wie wir bewertungen", "bewertungen werden nicht überprüft", "bewertungsrichtlinien", "verifizierter käufer"],
+  "en": ["verified purchase", "verified buyer", "verified review", "verified customer", "reviews are verified", "how we collect reviews", "reviews are collected", "we do not verify", "reviews are not verified", "review policy", "reviews from customers who"],
+  "es": ["compra verificada", "opinión verificada", "reseñas verificadas", "opiniones verificadas", "cliente verificado", "cómo recopilamos las opiniones", "las opiniones no se verifican", "reseñas de clientes que han comprado"],
+  "fi": ["varmennettu osto", "vahvistettu osto", "varmennettu arvostelu", "vahvistettu arvostelu", "varmennettu asiakas", "miten keräämme arvostelut", "arvosteluja ei varmenneta", "arvostelut ovat asiakkailta"],
+  "fr": ["achat vérifié", "avis vérifié", "avis vérifiés", "client vérifié", "comment nous collectons les avis", "avis non vérifiés", "les avis sont collectés", "avis de clients ayant acheté"],
+  "it": ["acquisto verificato", "recensione verificata", "recensioni verificate", "cliente verificato", "come raccogliamo le recensioni", "le recensioni non sono verificate", "recensioni di clienti che hanno acquistato"],
+  "ja": ["購入者レビュー", "購入確認済み", "認証済みレビュー", "レビューの収集方法", "レビューは確認されていません", "実際に購入したお客様の", "購入者による"],
+  "ko": ["구매 인증", "구매 확인", "인증된 리뷰", "구매자 리뷰", "리뷰 수집 방법", "리뷰는 검증되지 않", "실제 구매 고객", "구매 고객의 리뷰"],
+  "nb": ["verifisert kjøp", "verifisert anmeldelse", "verifiserte anmeldelser", "verifisert kunde", "slik samler vi inn anmeldelser", "anmeldelsene verifiseres ikke", "anmeldelser fra kunder som har kjøpt"],
+  "nl": ["geverifieerde aankoop", "geverifieerde beoordeling", "geverifieerde klant", "geverifieerde reviews", "hoe wij reviews", "reviews worden niet geverifieerd", "beoordelingen zijn afkomstig van klanten"],
+  "pl": ["zweryfikowany zakup", "zweryfikowana opinia", "opinie zweryfikowane", "zweryfikowany klient", "potwierdzony zakup", "opinia potwierdzona zakupem", "jak zbieramy opinie", "opinie nie są weryfikowane", "opinie pochodzą od klientów"],
+  "pt": ["compra verificada", "compra confirmada", "avaliação verificada", "avaliações verificadas", "cliente verificado", "como recolhemos as avaliações", "como coletamos as avaliações", "as avaliações não são verificadas"],
+  "ro": ["achiziție verificată", "recenzie verificată", "recenzii verificate", "client verificat", "cum colectăm recenziile", "recenziile nu sunt verificate", "recenzii de la clienți"],
+  "ru": ["подтверждённая покупка", "подтвержденная покупка", "проверенный покупатель", "проверенный отзыв", "отзывы проверяются", "как мы собираем отзывы", "отзывы не проверяются", "отзывы от покупателей", "отзывы реальных покупателей"],
+  "sv": ["verifierat köp", "verifierad recension", "verifierade recensioner", "verifierad kund", "så samlar vi in recensioner", "recensioner verifieras inte", "recensioner kommer från kunder"],
+  "tr": ["doğrulanmış alıcı", "doğrulanmış satın alma", "doğrulanmış yorum", "onaylı satın alma", "yorumlar nasıl toplanır", "yorumlar doğrulanmamıştır", "satın alan müşterilerin yorumları", "gerçek müşteri"],
+  "zh": ["已验证购买", "认证购买", "已购买用户", "买家评价", "评价来自", "评论经过审核", "评价未经验证", "如何收集评价", "真实买家"]
+}

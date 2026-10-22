@@ -1,0 +1,54 @@
+{
+  "GB": {
+    "requires": [
+      "registerNumber",
+      "registeredOffice",
+      "registerCountry"
+    ],
+    "placeNames": {
+      "GB": [
+        "England and Wales",
+        "Scotland",
+        "Northern Ireland",
+        "Wales"
+      ],
+      "GB-ENG": [
+        "England and Wales"
+      ],
+      "GB-WLS": [
+        "Wales",
+        "England and Wales"
+      ],
+      "GB-SCT": [
+        "Scotland"
+      ],
+      "GB-NIR": [
+        "Northern Ireland"
+      ]
+    }
+  },
+  "FR": {
+    "requires": [
+      "registerNumber",
+      "host",
+      "publicationDirector"
+    ]
+  },
+  "IT": {
+    "requires": [
+      "registerNumber",
+      "vatId"
+    ]
+  },
+  "ES": {
+    "requires": [
+      "vatId"
+    ]
+  },
+  "NL": {
+    "requires": [
+      "registerNumber",
+      "vatId"
+    ]
+  }
+}

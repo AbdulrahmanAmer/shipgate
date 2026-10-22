@@ -1,0 +1,22 @@
+{
+  "ar": ["dmca", "قانون الألفية للملكية الرقمية", "وكيل معين", "انتهاك حقوق النشر", "انتهاك حقوق الطبع والنشر", "إشعار مضاد"],
+  "cs": ["dmca", "digital millennium copyright act", "určený zástupce", "porušení autorských práv", "protioznámení"],
+  "da": ["dmca", "digital millennium copyright act", "udpeget agent", "krænkelse af ophavsret", "ophavsretskrænkelse", "modanmeldelse"],
+  "de": ["dmca", "digital millennium copyright act", "benannter vertreter", "benannter agent", "urheberrechtsverletzung", "urheberrechtsverstoß"],
+  "en": ["dmca", "digital millennium copyright act", "designated agent", "designated copyright agent", "copyright agent", "copyright infringement", "notice of infringement", "counter-notice", "17 u.s.c. § 512", "17 u.s.c. 512"],
+  "es": ["dmca", "digital millennium copyright act", "agente designado", "infracción de derechos de autor", "violación de derechos de autor", "contranotificación"],
+  "fi": ["dmca", "digital millennium copyright act", "nimetty edustaja", "tekijänoikeusloukkaus", "tekijänoikeuden loukkaus", "vastailmoitus"],
+  "fr": ["dmca", "digital millennium copyright act", "agent désigné", "atteinte au droit d'auteur", "atteinte au droit d’auteur", "atteinte aux droits d'auteur", "atteinte aux droits d’auteur", "violation du droit d'auteur", "violation du droit d’auteur", "contre-notification"],
+  "it": ["dmca", "digital millennium copyright act", "agente designato", "violazione del diritto d'autore", "violazione del diritto d’autore", "violazione del copyright", "violazione dei diritti d'autore", "violazione dei diritti d’autore", "contronotifica"],
+  "ja": ["dmca", "デジタルミレニアム著作権法", "指定代理人", "著作権侵害", "著作権の侵害", "反対通知"],
+  "ko": ["dmca", "디지털 밀레니엄 저작권법", "지정 대리인", "저작권 침해", "저작권 위반", "반대 통지"],
+  "nb": ["dmca", "digital millennium copyright act", "utpekt agent", "brudd på opphavsrett", "opphavsrettsbrudd", "motmelding"],
+  "nl": ["dmca", "digital millennium copyright act", "aangewezen agent", "inbreuk op auteursrechten", "auteursrechtinbreuk", "tegenmelding"],
+  "pl": ["dmca", "digital millennium copyright act", "wyznaczony agent", "naruszenie praw autorskich", "naruszenia praw autorskich", "kontrpowiadomienie"],
+  "pt": ["dmca", "digital millennium copyright act", "agente designado", "violação de direitos de autor", "violação de direitos autorais", "violação de direito de autor", "contranotificação"],
+  "ro": ["dmca", "digital millennium copyright act", "agent desemnat", "încălcarea drepturilor de autor", "încălcare a drepturilor de autor", "contranotificare"],
+  "ru": ["dmca", "закон об авторском праве в цифровую эпоху", "назначенный агент", "нарушение авторских прав", "нарушении авторских прав", "встречное уведомление"],
+  "sv": ["dmca", "digital millennium copyright act", "utsedd agent", "upphovsrättsintrång", "intrång i upphovsrätten", "motanmälan"],
+  "tr": ["dmca", "dijital binyıl telif hakkı yasası", "atanmış temsilci", "telif hakkı ihlali", "telif hakkı ihlal", "karşı bildirim"],
+  "zh": ["dmca", "数字千年版权法", "指定代理人", "侵犯版权", "版权侵权", "著作权侵权", "反通知"]
+}

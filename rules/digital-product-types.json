@@ -1,0 +1,22 @@
+[
+  "https://schema.org/softwareapplication",
+  "http://schema.org/softwareapplication",
+  "https://schema.org/webapplication",
+  "http://schema.org/webapplication",
+  "https://schema.org/mobileapplication",
+  "http://schema.org/mobileapplication",
+  "https://schema.org/videogame",
+  "http://schema.org/videogame",
+  "https://schema.org/digitaldocument",
+  "http://schema.org/digitaldocument",
+  "https://schema.org/ebook",
+  "http://schema.org/ebook",
+  "http://www.productontology.org/id/software",
+  "http://www.productontology.org/id/application_software",
+  "http://www.productontology.org/id/mobile_app",
+  "http://www.productontology.org/id/web_application",
+  "http://www.productontology.org/id/software_as_a_service",
+  "http://www.productontology.org/id/video_game",
+  "http://www.productontology.org/id/e-book",
+  "http://www.productontology.org/id/music_download"
+]

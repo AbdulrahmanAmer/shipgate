@@ -1,0 +1,29 @@
+{
+  "byJurisdiction": {
+    "eu-gdpr": { "always": ["privacy"] },
+    "uk-gdpr": { "always": ["privacy"] },
+    "us-ca-ccpa": { "always": ["privacy"] },
+    "us-state-privacy": { "always": ["privacy"] },
+    "kr-pipa": { "always": ["privacy"] },
+    "cn-pipl": { "always": ["privacy"] },
+    "br-lgpd": { "always": ["privacy"] },
+    "ca-pipeda": { "always": ["privacy"] },
+    "jp-appi": { "always": ["privacy"] },
+    "au-privacy": { "always": ["privacy"] },
+    "in-dpdp": { "always": ["privacy"] },
+    "us-tcpa": { "always": ["privacy", "terms"] },
+    "de": { "always": ["imprint"] },
+    "at": { "always": ["imprint"] },
+    "eu-eaa": { "always": ["accessibility"] },
+    "eu-dsa": { "always": ["terms"] },
+    "us-ugc": { "always": ["terms"] },
+    "uk-osa": { "always": ["terms"] },
+    "jp-sct": { "ecommerce": ["commercialTransactions"] }
+  },
+  "byKind": {
+    "ecommerce": ["terms", "returns", "shipping"]
+  },
+  "byHosts": {
+    "browserNonEssential": ["cookies"]
+  }
+}

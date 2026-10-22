@@ -1,0 +1,82 @@
+{
+  "ar": {
+    "complaints": ["إجراءات الشكاوى", "تقديم شكوى", "الشكاوى", "شكوى"],
+    "illegal": ["محتوى غير قانوني", "المحتوى غير القانوني", "محتوى غير مشروع"]
+  },
+  "cs": {
+    "complaints": ["postup pro stížnosti", "podat stížnost", "stížnosti", "stížnost"],
+    "illegal": ["nezákonný obsah", "nezákonného obsahu", "protiprávní obsah"]
+  },
+  "da": {
+    "complaints": ["klageprocedure", "indgive en klage", "klager", "klage"],
+    "illegal": ["ulovligt indhold", "ulovligt materiale"]
+  },
+  "de": {
+    "complaints": ["beschwerdeverfahren", "beschwerde einreichen", "beschwerden", "beschwerde"],
+    "illegal": ["illegale inhalte", "rechtswidrige inhalte", "unzulässige inhalte", "illegalen inhalten"]
+  },
+  "en": {
+    "complaints": ["complaints procedure", "complaint procedure", "make a complaint", "how to complain", "complaints", "report a problem"],
+    "illegal": ["illegal content", "illegal harms", "priority illegal content", "content that is illegal"]
+  },
+  "es": {
+    "complaints": ["procedimiento de reclamaciones", "presentar una queja", "presentar una reclamación", "quejas", "reclamaciones"],
+    "illegal": ["contenido ilegal", "contenido ilícito", "contenidos ilícitos", "contenidos ilegales"]
+  },
+  "fi": {
+    "complaints": ["valitusmenettely", "tehdä valitus", "valitukset", "valitus"],
+    "illegal": ["laiton sisältö", "laittoman sisällön", "laitonta sisältöä"]
+  },
+  "fr": {
+    "complaints": ["procédure de réclamation", "procédure de plainte", "déposer une plainte", "réclamations", "plaintes"],
+    "illegal": ["contenu illicite", "contenus illicites", "contenu illégal", "contenus illégaux"]
+  },
+  "it": {
+    "complaints": ["procedura di reclamo", "presentare un reclamo", "reclami", "reclamo"],
+    "illegal": ["contenuti illegali", "contenuto illegale", "contenuti illeciti", "contenuto illecito"]
+  },
+  "ja": {
+    "complaints": ["苦情処理", "苦情の申し立て", "苦情申立", "苦情"],
+    "illegal": ["違法コンテンツ", "違法なコンテンツ", "違法な内容", "違法情報"]
+  },
+  "ko": {
+    "complaints": ["불만 처리", "민원 처리", "불만 제기", "불만 접수", "이의 제기"],
+    "illegal": ["불법 콘텐츠", "불법 정보", "불법 게시물"]
+  },
+  "nb": {
+    "complaints": ["klageprosedyre", "levere en klage", "klager", "klage"],
+    "illegal": ["ulovlig innhold", "ulovlig materiale"]
+  },
+  "nl": {
+    "complaints": ["klachtenprocedure", "klacht indienen", "klachten", "een klacht"],
+    "illegal": ["illegale inhoud", "illegale content", "onrechtmatige inhoud"]
+  },
+  "pl": {
+    "complaints": ["procedura składania skarg", "złożyć skargę", "skargi", "zgłaszanie skarg"],
+    "illegal": ["nielegalne treści", "treści nielegalne", "nielegalnych treści", "bezprawne treści"]
+  },
+  "pt": {
+    "complaints": ["procedimento de reclamação", "apresentar uma reclamação", "reclamações", "queixas", "apresentar queixa"],
+    "illegal": ["conteúdo ilegal", "conteúdos ilegais", "conteúdo ilícito", "conteúdos ilícitos"]
+  },
+  "ro": {
+    "complaints": ["procedura de reclamații", "depune o reclamație", "reclamații", "plângeri"],
+    "illegal": ["conținut ilegal", "conținutul ilegal", "conținut ilicit"]
+  },
+  "ru": {
+    "complaints": ["порядок рассмотрения жалоб", "подать жалобу", "жалобы", "жалоба"],
+    "illegal": ["незаконный контент", "незаконного контента", "незаконная информация", "противоправный контент"]
+  },
+  "sv": {
+    "complaints": ["klagomålsförfarande", "lämna klagomål", "klagomål"],
+    "illegal": ["olagligt innehåll", "olagligt material"]
+  },
+  "tr": {
+    "complaints": ["şikayet prosedürü", "şikayet usulü", "şikayette bulunmak", "şikayetler", "şikayet"],
+    "illegal": ["yasa dışı içerik", "yasadışı içerik", "hukuka aykırı içerik"]
+  },
+  "zh": {
+    "complaints": ["投诉程序", "投诉流程", "提出投诉", "投诉处理", "投诉"],
+    "illegal": ["违法内容", "非法内容", "违法信息", "非法信息"]
+  }
+}

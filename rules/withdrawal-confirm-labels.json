@@ -1,0 +1,22 @@
+{
+  "ar": ["تأكيد الانسحاب", "تأكيد العدول", "تأكيد الإلغاء"],
+  "cs": ["potvrdit odstoupení od smlouvy", "potvrdit odstoupení", "potvrzuji odstoupení"],
+  "da": ["bekræft fortrydelse", "bekræft fortrydelsen", "bekræft annullering"],
+  "de": ["Widerruf bestätigen", "Widerruf jetzt bestätigen", "Widerruf absenden", "Widerruf verbindlich bestätigen"],
+  "en": ["confirm withdrawal", "confirm your withdrawal", "confirm cancellation of order"],
+  "es": ["confirmar desistimiento", "confirmar el desistimiento", "confirmar la devolución"],
+  "fi": ["vahvista peruuttaminen", "vahvista peruutus", "vahvista sopimuksen peruuttaminen"],
+  "fr": ["confirmer la rétractation", "confirmer ma rétractation", "confirmer le retrait"],
+  "it": ["conferma recesso", "conferma il recesso", "confermare il recesso"],
+  "ja": ["撤回を確定", "撤回を確認", "撤回を実行", "撤回を送信"],
+  "ko": ["철회 확인", "청약철회 확인", "철회 신청 확정", "철회 확정"],
+  "nb": ["bekreft angre", "bekreft angring", "bekreft angrerett", "bekreft tilbaketrekking"],
+  "nl": ["herroeping bevestigen", "bevestig herroeping", "annulering bevestigen"],
+  "pl": ["potwierdź odstąpienie od umowy", "potwierdź odstąpienie", "potwierdzam odstąpienie"],
+  "pt": ["confirmar retratação", "confirmar retractação", "confirmar arrependimento", "confirmar cancelamento"],
+  "ro": ["confirmați retragerea", "confirmă retragerea", "confirmare retragere"],
+  "ru": ["подтвердить отказ", "подтвердить отказ от договора", "подтвердить отмену"],
+  "sv": ["bekräfta frånträde", "bekräfta ånger", "bekräfta ångerrätt"],
+  "tr": ["cayma hakkını onayla", "cayma talebini onayla", "cayma işlemini onayla", "cayma onayı"],
+  "zh": ["确认撤销", "确认撤回", "确认退货", "确认取消订单"]
+}
