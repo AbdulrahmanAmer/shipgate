@@ -1,0 +1,566 @@
+[
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-lit-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-lit/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-preact-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-preact/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-qwik-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-qwik/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-react-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-react/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-solid-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-solid/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-svelte-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-svelte/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vanilla-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "7453556f5cbacad2ea4d216f4d0c92826b49f466",
+    "date": "2026-01-27T07:00:40Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vanilla/public/favicon.svg",
+  "currentBlob": "0906f9ca5ea46fa7481d645fa1fd380cba0428ad",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "ceeac38434be7a3b4d0f68b8cd8aa2b9ae78c260d6343087c6e095f8031ce4ff",
+    "bytes": 9523,
+    "commit": "7453556f5cbacad2ea4d216f4d0c92826b49f466",
+    "date": "2026-01-27T07:00:40Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vue-ts/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vue/public/favicon.svg",
+  "currentBlob": "6893eb13237060adc0c968a690149a49faa2d7d3",
+  "historyScanned": 1,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "520d13bfb14c4cf4fd8d3620e1fc5e6e815c9606",
+    "date": "2026-01-27T07:08:49Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-react/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-react-ts/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vue/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vue-ts/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vanilla/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-vanilla-ts/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-svelte/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-svelte-ts/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-preact/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-preact-ts/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-lit/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-lit-ts/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "d72b3ddacd7fee209234dc1dd4081ce90f10d091",
+    "date": "2022-06-08T07:36:56Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-solid/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "277e844c1a0cc729c387d9a16ef838835eb06f49",
+    "date": "2023-07-03T09:22:51Z"
+   }
+  ]
+ },
+ {
+  "label": "Vite create-vite",
+  "repo": "vitejs/vite",
+  "branch": "main",
+  "path": "packages/create-vite/template-solid-ts/public/vite.svg",
+  "currentBlob": null,
+  "historyScanned": 3,
+  "versions": [
+   {
+    "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66",
+    "bytes": 9522,
+    "commit": "80840d37d88f3f4344d6317a087dde3469273917",
+    "date": "2026-01-16T05:17:13Z"
+   },
+   {
+    "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb",
+    "bytes": 1497,
+    "commit": "277e844c1a0cc729c387d9a16ef838835eb06f49",
+    "date": "2023-07-03T09:22:51Z"
+   }
+  ]
+ }
+]

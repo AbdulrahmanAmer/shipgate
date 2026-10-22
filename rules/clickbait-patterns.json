@@ -1,0 +1,211 @@
+{
+  "ar": [
+    "لن تصدق",
+    "لن تصدقوا",
+    "لن تتوقع",
+    "ما حدث بعد ذلك",
+    "ما حدث بعدها",
+    "ستصدم",
+    "سوف تصدم",
+    "الأطباء يكرهون",
+    "لن تخمن أبدا"
+  ],
+  "cs": [
+    "\\bnebudete věřit\\b",
+    "\\bnebudeš věřit\\b",
+    "\\bneuvěříte\\b",
+    "\\bco se stalo potom\\b",
+    "\\bco se stalo dál\\b",
+    "\\btohle vás (šokuje|překvapí|ohromí)\\b",
+    "\\blékaři nenávidí\\b",
+    "\\bnikdy (neuhodnete|neuhodneš)\\b",
+    "\\bdoslova šokující\\b"
+  ],
+  "da": [
+    "\\bdu vil ikke tro\\b",
+    "\\bdu kommer ikke til at tro\\b",
+    "\\bhvad der skete bagefter\\b",
+    "\\bhvad der skete derefter\\b",
+    "\\bdet vil chokere dig\\b",
+    "\\blæger hader\\b",
+    "\\bdu gætter aldrig\\b",
+    "\\bdu bliver målløs\\b"
+  ],
+  "de": [
+    "\\bsie werden (es )?nicht glauben\\b",
+    "\\bdu wirst (es )?nicht glauben\\b",
+    "\\bdas (hätten|hättest) (sie|du) nicht gedacht\\b",
+    "\\bwas (dann|danach) passiert(e)?\\b",
+    "\\bdas wird (sie|dich) (schockieren|umhauen|sprachlos machen)\\b",
+    "\\bärzte hassen\\b",
+    "\\bdiese(r)? (einfache(r)? )?trick\\b",
+    "\\bsie werden nie (erraten|raten)\\b",
+    "\\bdu wirst nie (erraten|raten)\\b",
+    "\\bwas (er|sie) dann tat\\b",
+    "\\bschockierende wahrheit\\b"
+  ],
+  "en": [
+    "\\byou (won['’]?t|will not|wouldn['’]?t|would never|never) believe\\b",
+    "\\bwhat happen(s|ed) next\\b",
+    "\\b(will|won['’]?t) (blow your mind|shock you|amaze you|make you (cry|laugh|gasp))\\b",
+    "\\bdoctors (hate|don['’]?t want you to know)\\b",
+    "\\b(one|1) (weird|simple|crazy|secret|little) trick\\b",
+    "\\b(you['’]?ll|you will) (never|not) guess\\b",
+    "\\b(jaw[- ]dropping|mind[- ]blowing|heart[- ]stopping)\\b",
+    "\\bwait (until|till) you see\\b",
+    "\\bcan['’]?t stop (watching|laughing|crying)\\b",
+    "\\bthe shocking truth\\b",
+    "\\bnumber \\d+ will (shock|surprise|blow)\\b"
+  ],
+  "es": [
+    "\\bno (te )?lo vas a creer\\b",
+    "\\bno vas a creer\\b",
+    "\\blo que (pasó|ocurrió|sucedió) (después|luego|a continuación)\\b",
+    "\\bte (va a|vas a) (sorprender|impactar|dejar sin palabras)\\b",
+    "\\blos médicos odian\\b",
+    "\\bnunca (vas a )?adivinar(ás|as)\\b",
+    "\\bmira lo que (pasó|hizo)\\b",
+    "\\bte dejará sin palabras\\b"
+  ],
+  "fi": [
+    "\\bet (tule )?(usko|uskomaan)\\b",
+    "\\bet voi uskoa\\b",
+    "\\bmitä tapahtui sitten\\b",
+    "\\bmitä tapahtui seuraavaksi\\b",
+    "\\bsaa sinut (ällistymään|järkyttymään|sanattomaksi)\\b",
+    "\\blääkärit vihaavat\\b",
+    "\\bet arvaa koskaan\\b"
+  ],
+  "fr": [
+    "\\bvous n['’]en croirez pas vos yeux\\b",
+    "\\bvous ne (le )?croirez pas\\b",
+    "\\bce qui (s['’]est passé|se passe|arrive|est arrivé) ensuite\\b",
+    "\\bla suite (va|vous va) (vous )?(choquer|surprendre|étonner)\\b",
+    "\\bles médecins détestent\\b",
+    "\\bvous ne devinerez jamais\\b",
+    "\\bça va vous (choquer|bluffer|étonner|surprendre)\\b",
+    "\\bla vérité choquante\\b",
+    "\\bcette astuce (simple )?que\\b"
+  ],
+  "it": [
+    "\\bnon (ci )?crederai\\b",
+    "\\bnon crederete\\b",
+    "\\bquello che (è )?(successo|accaduto) (dopo|poi)\\b",
+    "\\bti (sconvolgerà|lascerà senza parole|stupirà)\\b",
+    "\\bi medici (la )?odiano\\b",
+    "\\bnon indovinerai mai\\b",
+    "\\bla verità shock\\b"
+  ],
+  "ja": [
+    "信じられない",
+    "衝撃の(結末|事実|真実|光景)",
+    "驚愕の",
+    "その後(どうなった|まさかの)",
+    "医者(が|も)(教えない|嫌がる|隠す)",
+    "知らないと損",
+    "絶対に(見ないで|やってはいけない|知らないと)",
+    "涙が止まらない",
+    "まさかの結末",
+    "たった(1|１|一)つの(方法|コツ|習慣)で"
+  ],
+  "ko": [
+    "믿을 수 없",
+    "충격적인 (결말|사실|진실|반전)",
+    "그 후 (벌어진|일어난) 일",
+    "의사(들)?(이|가) (싫어|숨기|말하지)",
+    "절대 (모를|알 수 없|상상)",
+    "소름 ?돋",
+    "경악",
+    "이것만 알면"
+  ],
+  "nb": [
+    "\\bdu kommer ikke til å tro\\b",
+    "\\bdu vil ikke tro\\b",
+    "\\bhva som skjedde (videre|deretter|etterpå)\\b",
+    "\\bdette vil sjokkere deg\\b",
+    "\\blegene hater\\b",
+    "\\bdu vil aldri gjette\\b",
+    "\\bdu blir målløs\\b"
+  ],
+  "nl": [
+    "\\bje gelooft je ogen niet\\b",
+    "\\bu gelooft uw ogen niet\\b",
+    "\\bje gaat (het )?niet geloven\\b",
+    "\\bwat er daarna gebeurde\\b",
+    "\\bdit gaat je (verbazen|schokken|versteld doen staan)\\b",
+    "\\bartsen haten\\b",
+    "\\bje raadt nooit\\b",
+    "\\bdeze (ene )?(simpele )?truc\\b"
+  ],
+  "pl": [
+    "\\bnie uwierzysz\\b",
+    "\\bnie uwierzycie\\b",
+    "\\bco (się )?stało (się )?potem\\b",
+    "\\bto cię (zszokuje|zaskoczy|zadziwi)\\b",
+    "\\blekarze nienawidzą\\b",
+    "\\bnigdy nie zgadniesz\\b",
+    "\\bten (prosty )?trik\\b",
+    "\\bzobacz,? co się stało\\b",
+    "\\bzostaniesz bez słów\\b"
+  ],
+  "pt": [
+    "\\bvocê não vai acreditar\\b",
+    "\\bvoce nao vai acreditar\\b",
+    "\\bnão vai acreditar\\b",
+    "\\bo que aconteceu (depois|em seguida|a seguir)\\b",
+    "\\bvai (te )?(chocar|surpreender|deixar sem palavras)\\b",
+    "\\bmédicos odeiam\\b",
+    "\\bnunca vai adivinhar\\b",
+    "\\bvocê nunca vai (imaginar|adivinhar)\\b"
+  ],
+  "ro": [
+    "\\bnu (o să|vei) crede\\b",
+    "\\bnu o să crezi\\b",
+    "\\bce s-a întâmplat (apoi|după aceea)\\b",
+    "\\bte va ([șş]oca|uimi|lăsa fără cuvinte)\\b",
+    "\\bmedicii urăsc\\b",
+    "\\bnu vei ghici niciodată\\b"
+  ],
+  "ru": [
+    "\\bвы не поверите\\b",
+    "\\bты не поверишь\\b",
+    "\\bчто (случилось|произошло) дальше\\b",
+    "\\bэто (вас|тебя) (шокирует|удивит|потрясёт|потрясет)\\b",
+    "\\bврачи (в шоке|ненавидят)\\b",
+    "\\bникогда не (угадаете|угадаешь)\\b",
+    "\\bне могли поверить\\b",
+    "\\bшокирующая правда\\b"
+  ],
+  "sv": [
+    "\\bdu kommer inte (att )?tro\\b",
+    "\\bvad som hände sedan\\b",
+    "\\bdet här kommer (att )?chocka dig\\b",
+    "\\bläkare hatar\\b",
+    "\\bdu kommer aldrig (att )?gissa\\b",
+    "\\bdu blir mållös\\b"
+  ],
+  "tr": [
+    "\\binanamayacaks[ıiIİ]n[ıiIİ]z\\b",
+    "\\binanamayacaks[ıiIİ]n\\b",
+    "\\bgözlerinize inanamayacaks[ıiIİ]n[ıiIİ]z\\b",
+    "\\bsonras[ıiIİ]nda ne oldu\\b",
+    "\\bşok olacaks[ıiIİ]n[ıiIİ]z\\b",
+    "\\bdoktorlar nefret ediyor\\b",
+    "\\basla tahmin edemezsiniz\\b",
+    "\\bne olduğuna inanamayacaks[ıiIİ]n[ıiIİ]z\\b"
+  ],
+  "zh": [
+    "你绝对(想不到|猜不到|不会相信)",
+    "你絕對(想不到|猜不到|不會相信)",
+    "不看(会|會)?后悔",
+    "不看(會)?後悔",
+    "看完.{0,6}(震惊|惊呆)",
+    "看完.{0,6}(震驚|驚呆)",
+    "医生(不会告诉你|都不想让你知道)",
+    "醫生(不會告訴你|都不想讓你知道)",
+    "结果让人(大吃一惊|意想不到|惊呆)",
+    "結果讓人(大吃一驚|意想不到|驚呆)",
+    "震惊[！!]",
+    "震驚[！!]"
+  ]
+}

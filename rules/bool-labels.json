@@ -1,0 +1,82 @@
+{
+  "ar": {
+    "true": "نعم",
+    "false": "لا"
+  },
+  "cs": {
+    "true": "Ano",
+    "false": "Ne"
+  },
+  "da": {
+    "true": "Ja",
+    "false": "Nej"
+  },
+  "de": {
+    "true": "Ja",
+    "false": "Nein"
+  },
+  "en": {
+    "true": "Yes",
+    "false": "No"
+  },
+  "es": {
+    "true": "Sí",
+    "false": "No"
+  },
+  "fi": {
+    "true": "Kyllä",
+    "false": "Ei"
+  },
+  "fr": {
+    "true": "Oui",
+    "false": "Non"
+  },
+  "it": {
+    "true": "Sì",
+    "false": "No"
+  },
+  "ja": {
+    "true": "はい",
+    "false": "いいえ"
+  },
+  "ko": {
+    "true": "예",
+    "false": "아니요"
+  },
+  "nb": {
+    "true": "Ja",
+    "false": "Nei"
+  },
+  "nl": {
+    "true": "Ja",
+    "false": "Nee"
+  },
+  "pl": {
+    "true": "Tak",
+    "false": "Nie"
+  },
+  "pt": {
+    "true": "Sim",
+    "false": "Não"
+  },
+  "ro": {
+    "true": "Da",
+    "false": "Nu"
+  },
+  "ru": {
+    "true": "Да",
+    "false": "Нет"
+  },
+  "sv": {
+    "true": "Ja",
+    "false": "Nej"
+  },
+  "tr": {
+    "true": "Evet",
+    "false": "Hayır"
+  },
+  "zh": {
+    "true": "是",
+    "false": "否"
+  }
+}
