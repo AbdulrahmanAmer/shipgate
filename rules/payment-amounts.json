@@ -1,0 +1,138 @@
+[
+  {
+    "id": "stripe",
+    "hosts": ["api.stripe.com"],
+    "requests": [
+      {
+        "pathMatches": "^/v1/checkout/sessions$",
+        "format": "form",
+        "items": "line_items",
+        "amount": "price_data[unit_amount]",
+        "currency": "price_data[currency]",
+        "priceId": "price",
+        "unit": "minor"
+      },
+      {
+        "pathMatches": "^/v1/payment_intents(/[A-Za-z0-9_]+)?$",
+        "format": "form",
+        "amount": "amount",
+        "currency": "currency",
+        "unit": "minor"
+      }
+    ]
+  },
+  {
+    "id": "paypal",
+    "hosts": ["api-m.paypal.com", "api-m.sandbox.paypal.com"],
+    "requests": [
+      {
+        "pathMatches": "^/v2/checkout/orders$",
+        "format": "json",
+        "items": "$.purchase_units[*].items[*]",
+        "amount": "$.unit_amount.value",
+        "currency": "$.unit_amount.currency_code",
+        "total": "$.purchase_units[0].amount.value",
+        "unit": "major"
+      }
+    ]
+  },
+  {
+    "id": "adyen",
+    "hosts": ["checkout-test.adyen.com", "*.adyenpayments.com"],
+    "requests": [
+      {
+        "pathMatches": "^(/checkout)?/v[0-9]+/(payments|sessions)$",
+        "format": "json",
+        "amount": "$.amount.value",
+        "currency": "$.amount.currency",
+        "unit": "minor"
+      }
+    ]
+  },
+  {
+    "id": "braintree",
+    "hosts": ["payments.braintree-api.com", "payments.sandbox.braintree-api.com"],
+    "requests": [
+      {
+        "pathMatches": "^/graphql$",
+        "format": "json",
+        "amount": "$.variables.input.transaction.amount",
+        "unit": "major"
+      }
+    ]
+  },
+  {
+    "id": "square",
+    "hosts": ["connect.squareup.com", "connect.squareupsandbox.com"],
+    "requests": [
+      {
+        "pathMatches": "^/v2/payments$",
+        "format": "json",
+        "amount": "$.amount_money.amount",
+        "currency": "$.amount_money.currency",
+        "unit": "minor"
+      },
+      {
+        "pathMatches": "^/v2/online-checkout/payment-links$",
+        "format": "json",
+        "amount": "$.quick_pay.price_money.amount",
+        "currency": "$.quick_pay.price_money.currency",
+        "unit": "minor"
+      }
+    ]
+  },
+  {
+    "id": "mollie",
+    "hosts": ["api.mollie.com"],
+    "requests": [
+      {
+        "pathMatches": "^/v2/payments$",
+        "format": "json",
+        "amount": "$.amount.value",
+        "currency": "$.amount.currency",
+        "unit": "major"
+      }
+    ]
+  },
+  {
+    "id": "paddle",
+    "hosts": ["api.paddle.com", "sandbox-api.paddle.com"],
+    "requests": [
+      {
+        "pathMatches": "^/transactions$",
+        "format": "json",
+        "items": "$.items[*]",
+        "amount": "$.price.unit_price.amount",
+        "currency": "$.price.unit_price.currency_code",
+        "priceId": "$.price_id",
+        "unit": "minor"
+      }
+    ]
+  },
+  {
+    "id": "lemon-squeezy",
+    "hosts": ["api.lemonsqueezy.com"],
+    "requests": [
+      {
+        "pathMatches": "^/v1/checkouts$",
+        "format": "json",
+        "amount": "$.data.attributes.custom_price",
+        "priceId": "$.data.relationships.variant.data.id",
+        "unit": "minor"
+      }
+    ]
+  },
+  {
+    "id": "shopify-cart",
+    "hosts": ["*.myshopify.com"],
+    "requests": [
+      {
+        "pathMatches": "/cart/add(\\.js)?$",
+        "format": "json",
+        "items": "$.items[*]",
+        "priceId": "$.id",
+        "unit": "minor"
+      }
+    ]
+  }
+]

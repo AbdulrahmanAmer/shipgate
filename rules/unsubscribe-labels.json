@@ -1,0 +1,22 @@
+{
+  "ar": ["إلغاء الاشتراك", "لإلغاء الاشتراك", "إلغاء الإشتراك", "إلغاء اشتراكك", "لإلغاء اشتراكك", "إيقاف الاشتراك", "لا أرغب في تلقي"],
+  "cs": ["odhlásit", "odhlásit odběr", "odhlásit se z odběru", "odhlášení odběru", "odhlášení", "zrušit odběr", "zrušit odebírání", "odhlaste se", "přestat odebírat", "nechci dostávat"],
+  "da": ["afmeld", "afmeld dig", "afmelde dig", "afmeld mig", "afmelde mig", "afmeld nyhedsbrev", "afmeld nyhedsbrevet", "afmelding", "afbestil", "afbestil nyhedsbrev", "afbestil nyhedsbrevet", "meld dig af", "meld mig af", "ikke længere modtage", "ikke modtage flere"],
+  "de": ["abmelden", "abbestellen", "austragen", "newsletter abbestellen", "vom newsletter abmelden", "newsletter kündigen", "abmeldung", "vom verteiler abmelden", "keine weiteren e-mails erhalten"],
+  "en": ["unsubscribe", "opt out", "opt-out", "stop receiving these emails", "stop receiving emails", "no longer wish to receive", "no longer want to receive", "remove me from this list", "remove me from the mailing list"],
+  "es": ["darse de baja", "darme de baja", "dar de baja", "date de baja", "cancelar suscripción", "cancelar la suscripción", "cancelar tu suscripción", "cancela tu suscripción", "anular suscripción", "anular la suscripción", "desuscribirse", "desuscríbete", "dejar de recibir", "no recibir más correos"],
+  "fi": ["peruuta tilaus", "peruuta tilauksesi", "peruuta uutiskirjeen tilaus", "lopeta tilaus", "lopeta uutiskirjeen tilaus", "poistu postituslistalta", "poistu tilaajalistalta", "poista minut postituslistalta", "irtisanoudu", "irtisano tilaus", "irtisano uutiskirje"],
+  "fr": ["désabonner", "désabonnement", "désabonnez", "désinscrire", "désinscription", "désinscrivez", "ne plus recevoir", "ne plus recevoir ces e-mails", "ne plus recevoir d'e-mails", "cliquez ici pour vous désabonner"],
+  "it": ["annulla l'iscrizione", "annulla l’iscrizione", "annulla iscrizione", "annullare l'iscrizione", "annulla la sottoscrizione", "annulla sottoscrizione", "cancella l'iscrizione", "cancella iscrizione", "disiscriviti", "disiscrizione", "rimuovi la tua iscrizione", "non desideri più ricevere", "smetti di ricevere"],
+  "ja": ["配信停止", "配信を停止", "配信解除", "配信を解除", "購読解除", "購読を解除", "メルマガ解除", "登録解除", "登録を解除", "受信を停止"],
+  "ko": ["수신 거부", "수신거부", "수신 거부하기", "수신거부하기", "수신 거절", "수신거절", "수신 해제", "수신해제", "구독 취소", "구독취소", "구독 취소하기", "구독 해지", "구독해지", "구독 해지하기", "더 이상 수신"],
+  "nb": ["avslutt abonnement", "avslutt abonnementet", "avslutt abonnementet ditt", "meld deg av", "meld meg av", "melde deg av", "avmelding", "avmeld", "avmeld deg", "avbestill", "avbestill nyhetsbrev", "avbestill nyhetsbrevet", "ikke motta flere", "slutte å motta"],
+  "nl": ["uitschrijven", "uitschrijving", "je uitschrijven", "u uitschrijven", "afmelden", "afmelding", "meld je af", "meld u af", "af te melden", "uit te schrijven", "nieuwsbrief opzeggen", "geen e-mails meer ontvangen", "niet meer ontvangen"],
+  "pl": ["wypisz się", "wypisz mnie", "wypisanie się", "zrezygnuj z subskrypcji", "zrezygnuj z newslettera", "rezygnacja z subskrypcji", "rezygnacja z newslettera", "anuluj subskrypcję", "nie chcę otrzymywać", "nie chcesz otrzymywać", "przestań otrzymywać"],
+  "pt": ["cancelar inscrição", "cancelar a inscrição", "cancelar subscrição", "cancelar a subscrição", "anular subscrição", "anular a subscrição", "descadastrar", "descadastre-se", "sair da lista", "remover da lista", "deixar de receber", "não quero mais receber"],
+  "ro": ["dezabonare", "dezabonează-te", "dezabonați-vă", "dezabonaţi-vă", "te dezabonezi", "anulează abonarea", "anulați abonarea", "anulare abonare", "renunță la abonare", "renunțați la abonare", "nu mai doresc să primesc", "nu mai vreau să primesc"],
+  "ru": ["отписаться", "отписка", "отписаться от рассылки", "отказаться от подписки", "отказаться от рассылки", "отменить подписку", "отмена подписки", "больше не получать"],
+  "sv": ["avsluta prenumeration", "avsluta prenumerationen", "avsluta din prenumeration", "avregistrera", "avregistrera dig", "avregistrera mig", "avanmäl", "avanmäl dig", "avanmälan", "avprenumerera", "sluta ta emot"],
+  "tr": ["abonelikten çık", "abonelikten çıkın", "abonelikten çıkmak", "abonelikten çıkma", "aboneliği iptal et", "aboneliğinizi iptal edin", "aboneliği sonlandır", "listeden çık", "listeden çıkın", "bültenden çık", "bültenden çıkın", "bültenden çıkmak için"],
+  "zh": ["退订", "退訂", "取消订阅", "取消訂閱", "取消邮件订阅", "取消郵件訂閱", "取消電子報", "不再接收", "不想再收到"]
+}

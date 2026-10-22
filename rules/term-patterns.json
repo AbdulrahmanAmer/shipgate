@@ -1,0 +1,3658 @@
+{
+  "ar": [
+    {
+      "id": "rw-yawm-irjaa",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)\\s+(?:لل|ل)?(?:إرجاع|ارجاع|استرجاع|استبدال)\\p{L}*",
+      "unit": "day"
+    },
+    {
+      "id": "rw-irjaa-khilal",
+      "kind": "returnWindow",
+      "regex": "(?i)(?:الإرجاع|الارجاع|الاسترجاع|الاستبدال|(?:إرجاع|ارجاع|استرجاع|استبدال))[^.\\n]{0,40}?(?:خلال|في\\s+غضون|حتى)\\s+(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)",
+      "unit": "day"
+    },
+    {
+      "id": "rf-istirdad-khilal",
+      "kind": "refundDays",
+      "regex": "(?i)(?:استرداد|رد\\s+المبلغ|استرجاع\\s+المبلغ|إعادة\\s+المبلغ)[^.\\n]{0,40}?(?:خلال|في\\s+غضون)\\s+(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)(?:\\s+عمل)?",
+      "unit": "day"
+    },
+    {
+      "id": "w-shahr-damaan",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:شهر|أشهر|شهراً|شهرا|شهرًا)\\s+ضمان",
+      "unit": "month"
+    },
+    {
+      "id": "w-damaan-shahr",
+      "kind": "warrantyMonths",
+      "regex": "(?i)ضمان(?:\\s+لمدة)?\\s*(?<n>\\p{Nd}+)\\s*(?:شهر|أشهر|شهراً|شهرا|شهرًا)",
+      "unit": "month"
+    },
+    {
+      "id": "w-sana-damaan",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:سنة|سنوات|عام|أعوام|عاماً|عاما|عامًا)\\s+ضمان",
+      "unit": "year"
+    },
+    {
+      "id": "w-damaan-sana",
+      "kind": "warrantyMonths",
+      "regex": "(?i)ضمان(?:\\s+لمدة)?\\s*(?<n>\\p{Nd}+)\\s*(?:سنة|سنوات|عام|أعوام|عاماً|عاما|عامًا)",
+      "unit": "year"
+    },
+    {
+      "id": "g-damaan-istirdad",
+      "kind": "guaranteeDays",
+      "regex": "(?i)ضمان\\s+(?:استرداد\\s+الأموال|استرجاع\\s+المال|الرضا)\\s+(?:لمدة|خلال)\\s+(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)",
+      "unit": "day"
+    },
+    {
+      "id": "g-yawm-damaan",
+      "kind": "guaranteeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)\\s+ضمان\\s+(?:استرداد\\s+الأموال|استرجاع\\s+المال|الرضا)",
+      "unit": "day"
+    },
+    {
+      "id": "sd-tawsil-khilal",
+      "kind": "shippingDays",
+      "regex": "(?i)(?:التوصيل|الشحن|التسليم|يصل|توصيل)[^.\\n]{0,30}?(?:خلال|في\\s+غضون|من|في)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|إلى|الى|حتى)\\s*(?<m>\\p{Nd}+))?\\s*(?:أيام|يوم|يوماً|يوما)(?:\\s+عمل)?",
+      "unit": "day"
+    },
+    {
+      "id": "sd-muddat-altawsil",
+      "kind": "shippingDays",
+      "regex": "(?i)مدة\\s+(?:التوصيل|الشحن|التسليم)\\s*[:：]?\\s*(?:حوالي\\s+|نحو\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|إلى|الى)\\s*(?<m>\\p{Nd}+))?\\s*(?:أيام|يوم)",
+      "unit": "day"
+    },
+    {
+      "id": "fso-shahn-majjani-fawq",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?:شحن|توصيل)\\s+(?:مجاني|مجانا|مجاناً)\\s+(?:للطلبات|عند\\s+الشراء|على\\s+الطلبات|للمشتريات)?\\s*(?:التي\\s+تزيد\\s+عن|أكثر\\s+من|فوق|بقيمة|تزيد\\s+عن|من)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|ريال|ر\\.س|درهم|د\\.إ|جنيه|دينار|sar|aed)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|ريال|ر\\.س|درهم|د\\.إ|جنيه|دينار|sar|aed)))"
+    },
+    {
+      "id": "fso-lilatalabat-shahn-majjani",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?:للطلبات|عند\\s+الشراء)\\s+(?:بقيمة|فوق|أكثر\\s+من|تزيد\\s+عن)\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|ريال|ر\\.س|درهم|د\\.إ|جنيه|دينار|sar|aed)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|ريال|ر\\.س|درهم|د\\.إ|جنيه|دينار|sar|aed)))\\s+(?:شحن|توصيل)\\s+(?:مجاني|مجانا)"
+    },
+    {
+      "id": "t-yawm-tajriba",
+      "kind": "trialDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)\\s+(?:تجربة\\s+مجانية|مجانا|مجاناً|تجربة|فترة\\s+تجريبية|نسخة\\s+تجريبية)",
+      "unit": "day"
+    },
+    {
+      "id": "t-fatra-tajribiyya-limudda",
+      "kind": "trialDays",
+      "regex": "(?i)(?:تجربة\\s+مجانية|فترة\\s+تجريبية(?:\\s+مجانية)?)\\s+(?:لمدة|مدة)\\s+(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)",
+      "unit": "day"
+    },
+    {
+      "id": "n-ishaar-musbaq",
+      "kind": "noticeDays",
+      "regex": "(?i)(?:فترة\\s+الإشعار|مدة\\s+الإشعار|إشعار\\s+مسبق)\\s*(?:هي|:|مدة|لمدة|قبل)?\\s*(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)",
+      "unit": "day"
+    },
+    {
+      "id": "n-yawm-ishaar-musbaq",
+      "kind": "noticeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:يوم|أيام|يوماً|يوما|يومًا)\\s+(?:إشعار\\s+مسبق|قبل\\s+الإلغاء)",
+      "unit": "day"
+    },
+    {
+      "id": "rh-narud-khilal-saat",
+      "kind": "responseHours",
+      "regex": "(?i)(?:الرد|نرد|سنرد|الاستجابة|نستجيب|التواصل|سنتواصل)[^.\\n]{0,40}?(?:خلال|في\\s+غضون|بحد\\s+أقصى)\\s+(?<n>\\p{Nd}+)\\s*(?:ساعة|ساعات)",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-saat-dama",
+      "kind": "responseHours",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*ساعة\\s+(?:دعم|استجابة|رد|خدمة)",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-narud-khilal-ayyam",
+      "kind": "responseHours",
+      "regex": "(?i)(?:الرد|نرد|سنرد|الاستجابة)[^.\\n]{0,40}?(?:خلال|في\\s+غضون)\\s+(?<n>\\p{Nd}+)\\s*(?:أيام|يوم)(?:\\s+عمل)?",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-wakt-altashgheel",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%٪]\\s*(?:وقت\\s+التشغيل|توفر|جاهزية|أبتايم|uptime|التوافر)",
+      "unit": "percent"
+    },
+    {
+      "id": "up-wakt-altashgheel-bnisba",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?:وقت\\s+التشغيل|التوفر|الجاهزية|أبتايم|SLA)\\s*(?:بنسبة|:|هو|تبلغ|يبلغ)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%٪]",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-irjaa-majjani",
+      "kind": "freeReturns",
+      "regex": "(?i)(?:إرجاع|ارجاع|استرجاع|الإرجاع|الاسترجاع|الإرجاع\\s+والاستبدال)\\s+(?:مجاني|مجانا|مجاناً)"
+    },
+    {
+      "id": "fr-murtajaat-majjaniyya",
+      "kind": "freeReturns",
+      "regex": "(?i)مرتجعات\\s+(?:مجانية|مجانا)"
+    },
+    {
+      "id": "fs-shahn-majjani",
+      "kind": "freeShipping",
+      "regex": "(?i)(?:شحن|توصيل)\\s+(?:مجاني|مجانا|مجاناً)(?:\\s*[.!,;:|)،]|\\s*$|\\s+لجميع\\s+الطلبات|\\s+لكل\\s+الطلبات|\\s+على\\s+جميع\\s+الطلبات|\\s+لجميع\\s+المناطق)"
+    },
+    {
+      "id": "nc-bidoon-bitaqa",
+      "kind": "noCardRequired",
+      "regex": "(?i)(?:بدون|دون)\\s*(?:إدخال\\s+|ادخال\\s+)?(?:بطاقة|كارت)(?:\\s+(?:ائتمان|الائتمان|ائتمانية|مصرفية|بنكية|الدفع))?"
+    },
+    {
+      "id": "nc-la-yalzam-bitaqa",
+      "kind": "noCardRequired",
+      "regex": "(?i)لا\\s+(?:يلزم|تحتاج|يتطلب|نطلب|تحتاج\\s+إلى)\\s+(?:إدخال\\s+)?(?:بطاقة|كارت)(?:\\s+(?:ائتمان|الائتمان|ائتمانية|مصرفية|بنكية|الدفع))?"
+    },
+    {
+      "id": "ca-ilgha-fi-ayyi-waqt",
+      "kind": "cancelAnytime",
+      "regex": "(?i)(?:إلغاء|الإلغاء|ألغ\\p{L}*|إلغاء\\s+الاشتراك)[^.\\n]{0,25}?(?:في\\s+أي\\s+وقت|بأي\\s+وقت|متى\\s+شئت|متى\\s+أردت)"
+    },
+    {
+      "id": "ca-fi-ayyi-waqt-ilgha",
+      "kind": "cancelAnytime",
+      "regex": "(?i)(?:في\\s+أي\\s+وقت|بأي\\s+وقت)\\s+(?:يمكنك\\s+)?(?:الإلغاء|إلغاء)"
+    }
+  ],
+  "cs": [
+    {
+      "id": "rw-dni-na-vraceni",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dn[íůy]\\s+na\\s+(?:vrácení|vratku|odstoupení|výměnu)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-vraceni-do",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:vrácení|vrátit|vratk\\p{L}+|odstoupit|odstoupení)\\b[^.\\n]{0,40}?\\b(?:do|během|v\\s+průběhu|ve\\s+lhůtě)\\s+(?<n>\\p{Nd}+)\\s+dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-lhuta-pro-vraceni",
+      "kind": "returnWindow",
+      "regex": "(?i)\\blhůta\\s+(?:pro\\s+)?(?:vrácení|odstoupení)\\b[^.\\n]{0,15}?\\b(?<n>\\p{Nd}+)\\s+dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-vraceni-tydny",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:vrácení|vrátit)\\b[^.\\n]{0,40}?\\b(?:do|během)\\s+(?<n>\\p{Nd}+)\\s+týdn[ůy]\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-vratime-penize-do",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:vrátíme\\s+peníze|vrácení\\s+peněz|refundac\\p{L}+|peníze\\s+zpět|vrácení\\s+platby)\\b[^.\\n]{0,40}?\\b(?:do|během|ve\\s+lhůtě)\\s+(?<n>\\p{Nd}+)\\s+(?:pracovních\\s+)?dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-zaruka-mesicu",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bzáruka\\s+(?:na\\s+)?(?<n>\\p{Nd}+)\\s+měsíc(?:ů|e|i)\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-mesicni-zaruka",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?měsíční\\s+záruka\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-zaruka-let",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bzáruka\\s+(?:na\\s+)?(?<n>\\p{Nd}+)\\s+(?:let|roky|rok)\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-leta-zaruka",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?letá\\s+záruka\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-denni-zaruka",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?denní\\s+(?:záruka\\s+vrácení\\s+peněz|záruka\\s+spokojenosti|záruka)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-zaruka-vraceni-penez-na",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bzáruka\\s+(?:vrácení\\s+peněz|spokojenosti)\\s+(?:na|po\\s+dobu)\\s+(?<n>\\p{Nd}+)\\s+dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-doruceni-do",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:doručení|doručíme|dodání|dodáme|odeslání|odesíláme|zásilka)\\b[^.\\n]{0,30}?\\b(?:do|během|za|v\\s+průběhu)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|až|a)\\s*(?<m>\\p{Nd}+))?\\s+(?:pracovních\\s+)?dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dodaci-lhuta",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:dodací\\s+lhůta|doba\\s+doručení|doba\\s+dodání)\\b\\s*:?\\s*(?:přibližně\\s+|cca\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|až)\\s*(?<m>\\p{Nd}+))?\\s+(?:pracovních\\s+)?dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dny-na-doruceni",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|až)\\s*(?<m>\\p{Nd}+))?\\s+(?:pracovních\\s+)?dn[íůy]\\s+(?:na\\s+)?(?:doručení|dodání)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-doprava-zdarma-od",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:doprava|poštovné|dopravné)\\s+(?:zdarma|zadarmo)\\s+(?:od|nad|při\\s+objednávce\\s+(?:od|nad)|při\\s+nákupu\\s+(?:od|nad)|u\\s+objednávek\\s+(?:od|nad))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|Kč|czk|korun)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|Kč|czk|korun)))"
+    },
+    {
+      "id": "fso-nakup-nad-doprava-zdarma",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bnákup\\s+nad\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|Kč|czk|korun)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|Kč|czk|korun)))\\s*[,:]?\\s*(?:doprava|poštovné)\\s+zdarma"
+    },
+    {
+      "id": "t-dni-zdarma",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dn[íůy]\\s+(?:zdarma|na\\s+zkoušku|zkušební\\s+doba|testování)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-denni-zkusebni-verze",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?denní\\s+(?:bezplatná\\s+)?(?:zkušební\\s+(?:verze|doba|lhůta)|zkouška|trial)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-zkuste-zdarma-na",
+      "kind": "trialDays",
+      "regex": "(?i)\\bzkuste\\s+(?:zdarma\\s+)?(?:na|po\\s+dobu)\\s+(?<n>\\p{Nd}+)\\s+dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-vypovedni-lhuta",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bvýpovědní\\s+(?:lhůta|doba)\\s+(?:je\\s+|činí\\s+)?(?<n>\\p{Nd}+)\\s+dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-denni-vypovedni-lhuta",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?denní\\s+výpovědní\\s+(?:lhůta|doba)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-odpovime-do-hodin",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:odpovíme|odpověď|odpovídáme|ozveme\\s+se|podpora)\\b[^.\\n]{0,40}?\\b(?:do|během|v\\s+průběhu|za)\\s+(?<n>\\p{Nd}+)\\s+hodin\\p{L}*\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-hodinova-podpora",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?hodinov\\p{L}+\\s+(?:podpora|odezva|odpověď|servis)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-odpovime-do-dnu",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:odpovíme|odpověď|odpovídáme|ozveme\\s+se)\\b[^.\\n]{0,40}?\\b(?:do|během|v\\s+průběhu|za)\\s+(?<n>\\p{Nd}+)\\s+(?:pracovních\\s+)?dn[íůy]\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-dostupnost",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:dostupnost|dostupnosti|uptime)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-dostupnost-je",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:dostupnost|uptime|SLA)\\b\\s*(?:je|:|garantovaná\\s+na)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-vraceni-zdarma",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:vrácení|vratky|vracení)\\s+(?:zboží\\s+)?(?:zdarma|zadarmo)\\b"
+    },
+    {
+      "id": "fr-bezplatne-vraceni",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:bezplatné|bezplatná)\\s+(?:vrácení|vratky)\\b"
+    },
+    {
+      "id": "fs-doprava-zdarma",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:doprava|poštovné|dopravné)\\s+(?:je\\s+)?(?:zdarma|zadarmo)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:a|&)\\b|\\s+na\\s+všechny\\s+objednávky\\b|\\s+do\\s+celého\\s+světa\\b|\\s+v\\s+ceně\\b)"
+    },
+    {
+      "id": "fs-bezplatne-doruceni",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:bezplatná|bezplatné)\\s+(?:doprava|doručení|poštovné)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:a|&)\\b|\\s+na\\s+všechny\\s+objednávky\\b|\\s+do\\s+celého\\s+světa\\b|\\s+v\\s+ceně\\b)"
+    },
+    {
+      "id": "nc-bez-karty",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bbez\\s+(?:zadání\\s+)?(?:platební|kreditní)\\s+kart[yu]\\b"
+    },
+    {
+      "id": "nc-neni-potreba-karta",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:není\\s+(?:potřeba|nutná|vyžadována)|nevyžadujeme)\\s+(?:platební|kreditní)\\s+kart[au]\\b"
+    },
+    {
+      "id": "ca-zrusit-kdykoli",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:zrušit|zrušení|zrušte|vypovědět|ukončit|ukončení)\\b[^.\\n]{0,25}?\\b(?:kdykoli|kdykoliv|kdy\\s+chcete)\\b"
+    }
+  ],
+  "da": [
+    {
+      "id": "rw-dages-returret",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dages?\\s+(?:fuld\\s+)?(?:returret|fortrydelsesret|åbent\\s+køb|retur|bytteret)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retur-inden",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retur\\p{L}*|fortrydelsesret\\p{L}*|returnere|sende\\s+tilbage)\\b[^.\\n]{0,40}?\\binden(?:\\s+for)?\\s+(?<n>\\p{Nd}+)\\s+dage\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-ugers-returret",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?ugers?\\s+(?:returret|fortrydelsesret|åbent\\s+køb)\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-refusion-inden",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:refunder\\p{L}*|tilbagebetal\\p{L}*|pengene\\s+tilbage|refusion)\\b[^.\\n]{0,40}?\\binden(?:\\s+for)?\\s+(?<n>\\p{Nd}+)\\s+(?:hverdage|arbejdsdage|dage|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-maaneders-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?måneders?\\s+(?:producent)?garanti\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-ars-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?års\\s+(?:producent)?garanti\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garanti-pa-maaneder",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+på\\s+(?<n>\\p{Nd}+)\\s+måneder\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garanti-pa-ar",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+på\\s+(?<n>\\p{Nd}+)\\s+år\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dages-garanti",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dages?\\s+(?:pengene\\s+tilbage[- ]?garanti|tilfredshedsgaranti|garanti)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garanti-pa-dage",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:pengene\\s+tilbage[- ]?garanti|garanti)\\s+(?:på|i|inden)\\s+(?<n>\\p{Nd}+)\\s+dage\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-levering-inden",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:levering|leveres|sendes|fragt|leveret|ankommer)\\b[^.\\n]{0,30}?\\b(?:inden(?:\\s+for)?|på|om)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|til|og)\\s*(?<m>\\p{Nd}+))?\\s+(?:hverdage|arbejdsdage|dage|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-leveringstid",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bleveringstid\\b\\s*(?::|er)?\\s*(?:cirka\\s+|ca\\.?\\s*)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|til)\\s*(?<m>\\p{Nd}+))?\\s+(?:hverdage|arbejdsdage|dage|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dages-levering",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|til)\\s*(?<m>\\p{Nd}+))?\\s+(?:hverdages|arbejdsdages|dages)\\s+levering(?:stid)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-gratis-fragt-over",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:gratis|fri)\\s+(?:fragt|levering)\\s+(?:ved\\s+køb\\s+(?:over|fra)|ved\\s+ordrer\\s+(?:over|fra)|ved\\s+bestillinger\\s+(?:over|fra)|for\\s+ordrer\\s+(?:over|fra)|over|fra)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|dkk)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|dkk)))"
+    },
+    {
+      "id": "fso-kob-over-gratis-fragt",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bkøb\\s+over\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|dkk)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|dkk)))\\s*[,:]?\\s*(?:får\\s+du\\s+)?(?:gratis|fri)\\s+(?:fragt|levering)"
+    },
+    {
+      "id": "t-dages-prove",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dages?\\s+(?:gratis\\s+)?(?:prøve\\p{L}*|test\\p{L}*)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-prov-gratis-i",
+      "kind": "trialDays",
+      "regex": "(?i)\\bprøv\\s+(?:gratis\\s+)?(?:i\\s+)?(?<n>\\p{Nd}+)\\s+dage\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-opsigelsesvarsel",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bopsigelsesvarsel\\s+(?:på\\s+)?(?<n>\\p{Nd}+)\\s+dage\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-dages-opsigelse",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dages\\s+opsigelse(?:svarsel)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-svar-inden-timer",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:svar\\p{L}*|svarer|kontakt\\p{L}*|support)\\b[^.\\n]{0,40}?\\binden(?:\\s+for)?\\s+(?<n>\\p{Nd}+)\\s+timer\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-timers-svar",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?timers\\s+(?:svar|support|responstid|service)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-svar-inden-dage",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:svar\\p{L}*|svarer)\\b[^.\\n]{0,40}?\\binden(?:\\s+for)?\\s+(?<n>\\p{Nd}+)\\s+(?:hverdage|arbejdsdage|dage)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-oppetid",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:oppetid|driftstid|tilgængelighed|uptime)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-oppetid-pa",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:oppetid|driftstid|tilgængelighed|uptime|SLA)\\b\\s*(?:på|:|garanteret\\s+på)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-gratis-retur",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:gratis|fri)\\s+(?:retur|returnering|returfragt)\\b"
+    },
+    {
+      "id": "fr-retur-er-gratis",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:retur|returnering)\\s+(?:er\\s+)?(?:gratis|fri|omkostningsfri)\\b"
+    },
+    {
+      "id": "fs-gratis-fragt",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:gratis|fri)\\s+(?:fragt|levering)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:og|&)\\b|\\s+på\\s+alle\\s+ordrer\\b|\\s+i\\s+hele\\s+verden\\b|\\s+inkluderet\\b)"
+    },
+    {
+      "id": "fs-fragten-er-gratis",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:fragten|leveringen)\\s+er\\s+(?:gratis|fri)\\b"
+    },
+    {
+      "id": "nc-intet-kort-pakraevet",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:intet|ingen)\\s+(?:kredit|bank|betalings)?kort(?:oplysninger)?\\s+(?:påkrævet|nødvendigt|nødvendig|kræves)\\b"
+    },
+    {
+      "id": "nc-uden-kort",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\buden\\s+(?:kredit|bank|betalings)?kort\\b"
+    },
+    {
+      "id": "ca-opsig-nar-som-helst",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:opsig\\p{L}*|annuller\\p{L}*|afmeld\\p{L}*)\\b[^.\\n]{0,25}?\\b(?:når\\s+som\\s+helst|hvornår\\s+du\\s+vil)\\b"
+    }
+  ],
+  "de": [
+    {
+      "id": "rw-tage-rueckgabe",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?Tage?[- ]?(?:Rückgabe|Widerruf|Umtausch|Rücksende)\\p{L}*",
+      "unit": "day"
+    },
+    {
+      "id": "rw-rueckgabe-innerhalb",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:Rückgabe|Rücksendung|Retoure|Widerruf)\\b[^.\\n]{0,40}?\\binnerhalb\\s+(?:von\\s+)?(?<n>\\p{Nd}+)\\s+(?:Werk|Arbeits|Bank|Kalender)?[Tt]agen?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-innerhalb-zurueck",
+      "kind": "returnWindow",
+      "regex": "(?i)\\binnerhalb\\s+von\\s+(?<n>\\p{Nd}+)\\s+Tagen\\b[^.\\n]{0,30}?\\b(?:zurückgeben|zurücksenden|retournieren|zurückschicken)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-frist-tage",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:Rückgabefrist|Widerrufsfrist)\\s+(?:von\\s+|beträgt\\s+|:\\s*)?(?<n>\\p{Nd}+)\\s+Tage",
+      "unit": "day"
+    },
+    {
+      "id": "rw-wochen-rueckgabe",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?Wochen?[- ]?(?:Rückgabe|Widerruf|Umtausch)\\p{L}*",
+      "unit": "week"
+    },
+    {
+      "id": "rf-erstattung-innerhalb",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:Erstattung|Rückerstattung|Rückzahlung|Kaufpreiserstattung|erstatten)\\b[^.\\n]{0,40}?\\binnerhalb\\s+(?:von\\s+)?(?<n>\\p{Nd}+)\\s+(?:Werk|Arbeits|Bank|Kalender)?[Tt]agen?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-monate-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?Monate?[- ]?(?:Hersteller|Produkt)?(?:garantie|gewährleistung)\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-jahre-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?Jahre?[- ]?(?:Hersteller|Produkt)?(?:garantie|gewährleistung)\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garantie-von-monaten",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?:Garantie|Gewährleistung)\\s+(?:von|über|beträgt)\\s+(?<n>\\p{Nd}+)\\s+Monate",
+      "unit": "month"
+    },
+    {
+      "id": "w-garantie-von-jahren",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?:Garantie|Gewährleistung)\\s+(?:von|über|beträgt)\\s+(?<n>\\p{Nd}+)\\s+Jahre",
+      "unit": "year"
+    },
+    {
+      "id": "g-tage-garantie",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?Tage?[- ]?(?:Geld[- ]zurück[- ]Garantie|Zufriedenheitsgarantie|Money[- ]back[- ]Garantie|Garantie)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garantie-von-tagen",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:Geld[- ]zurück[- ]Garantie|Garantie)\\s+(?:von|über|für)\\s+(?<n>\\p{Nd}+)\\s+Tage",
+      "unit": "day"
+    },
+    {
+      "id": "sd-lieferzeit",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:Lieferzeit|Lieferfrist|Versanddauer|Lieferdauer)\\b\\s*(?:beträgt|:)?\\s*(?:ca\\.?\\s*|circa\\s+|etwa\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|bis)\\s*(?<m>\\p{Nd}+))?\\s+(?:Werk|Arbeits|Bank|Kalender)?[Tt]agen?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-innerhalb",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:Lieferung|geliefert|Versand|versandt|verschickt|zugestellt)\\b[^.\\n]{0,30}?\\binnerhalb\\s+(?:von\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|bis)\\s*(?<m>\\p{Nd}+))?\\s+(?:Werk|Arbeits|Bank|Kalender)?[Tt]agen?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-tage-lieferung",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|bis)\\s*(?<m>\\p{Nd}+))?\\s+(?:Werk|Arbeits|Bank|Kalender)?[Tt]agen?\\s+(?:Lieferzeit|Lieferung|Versand)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-kostenlos-ab",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:kostenlos(?:e[rn]?)?\\s+(?:Versand|Lieferung)|Gratis[- ]?(?:Versand|Lieferung)|versandkostenfrei(?:e[rn]?)?(?:\\s+(?:Lieferung|Versand))?|kostenfreie[rn]?\\s+(?:Lieferung|Versand))\\s+(?:bei\\s+Bestellungen\\s+|bei\\s+einem\\s+Bestellwert\\s+|für\\s+Bestellungen\\s+)?(?:ab|über)\\s+(?:einem\\s+(?:Bestell|Einkaufs)wert\\s+von\\s+)?(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)))"
+    },
+    {
+      "id": "fso-ab-versandkostenfrei",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bab\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)))\\s+(?:Bestellwert\\s+)?(?:versandkostenfrei|kostenlose[rn]?\\s+(?:Lieferung|Versand)|liefern\\s+wir\\s+kostenlos)"
+    },
+    {
+      "id": "t-tage-testen",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+Tage\\s+(?:kostenlos\\s+)?(?:testen|ausprobieren)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-tage-testphase",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?Tage?[- ]?(?:kostenlose[rn]?\\s+)?(?:Testphase|Testzeitraum|Probezeit|Testversion|Probeabo|Probemitgliedschaft|Testzugang)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-kostenlos-testen-fuer",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?:kostenlos|gratis)\\s+(?:testen|ausprobieren)\\s*(?:für|:)\\s*(?<n>\\p{Nd}+)\\s+Tage",
+      "unit": "day"
+    },
+    {
+      "id": "n-kuendigungsfrist",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bKündigungsfrist\\b\\s*(?:von|beträgt|:)?\\s*(?<n>\\p{Nd}+)\\s+Tagen?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-kuendigung-tage-vorher",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?:Kündigung|kündigen)\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s+Tagen?\\s+(?:zum|vor|im\\s+Voraus)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-antwort-innerhalb-stunden",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:Antwort|Rückmeldung|Reaktion|antworten|melden\\s+uns|Support)\\b[^.\\n]{0,40}?\\binnerhalb\\s+(?:von\\s+)?(?<n>\\p{Nd}+)\\s+Stunden\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-stunden-support",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?(?:Stunden|Std|h)[- ]?(?:Support|Antwortzeit|Reaktionszeit|Service)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-antwort-innerhalb-tage",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:Antwort|antworten|Rückmeldung)\\b[^.\\n]{0,40}?\\binnerhalb\\s+(?:von\\s+)?(?<n>\\p{Nd}+)\\s+(?:Werk|Arbeits|Bank|Kalender)?[Tt]agen?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-verfuegbarkeit-prozent",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:Verfügbarkeit|Uptime|Erreichbarkeit)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-verfuegbarkeit-von",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:Verfügbarkeit|Uptime|SLA)\\b\\s*(?:von|:|garantiert)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-kostenlose-retoure",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:kostenlos(?:e[rn]?)?|gratis|versandkostenfrei(?:e[rn]?)?)\\s+(?:Rückversand|Retouren?|Rücksendung(?:en)?|Rückgabe)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:und|&)\\b|\\s+(?:für|bei)\\s+alle\\b|\\s+weltweit\\b|\\s+inklusive\\b)"
+    },
+    {
+      "id": "fr-retoure-kostenlos",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:Rückgabe|Rücksendung|Retoure|Rückversand)\\s+(?:ist\\s+|sind\\s+)?(?:immer\\s+)?(?:kostenlos|gratis|kostenfrei)\\b"
+    },
+    {
+      "id": "fs-kostenloser-versand",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:kostenlose[rn]?\\s+(?:Versand|Lieferung)|Gratis[- ]?(?:Versand|Lieferung)|versandkostenfreie[rn]?\\s+(?:Lieferung|Versand)?|versandkostenfrei)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:und|&)\\b|\\s+(?:für|bei)\\s+alle\\b|\\s+weltweit\\b|\\s+inklusive\\b)"
+    },
+    {
+      "id": "nc-keine-kreditkarte",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:keine|ohne)\\s+(?:Kredit|Debit|Zahlungs|Bank|EC-)?karte(?:ndaten)?\\s+(?:erforderlich|nötig|notwendig|benötigt)\\b"
+    },
+    {
+      "id": "ca-jederzeit-kuendbar",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\bjederzeit\\s+(?:kündbar|kündigen|kündigungsfähig|stornierbar)\\b"
+    },
+    {
+      "id": "ca-kuendigen-jederzeit",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:kündbar|kündigen|stornieren)\\s+(?:Sie\\s+)?jederzeit\\b"
+    }
+  ],
+  "en": [
+    {
+      "id": "rw-day-returns",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]days?\\s+(?:free\\s+|easy\\s+|hassle[- ]free\\s+)?(?:returns?|return\\s+(?:policy|window|period))\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-within-days",
+      "kind": "returnWindow",
+      "regex": "(?i)\\breturns?\\s+(?:are\\s+)?(?:accepted\\s+|possible\\s+|allowed\\s+)?(?:within|in|up\\s+to)\\s+(?<n>\\p{Nd}+)\\s+days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-week-returns",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]weeks?\\s+(?:free\\s+)?returns?\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rw-returns-within-weeks",
+      "kind": "returnWindow",
+      "regex": "(?i)\\breturns?\\s+(?:accepted\\s+)?within\\s+(?<n>\\p{Nd}+)\\s+weeks?\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-within-days",
+      "kind": "refundDays",
+      "regex": "(?i)\\brefund(?:s|ed)?\\b[^.\\n]{0,40}?\\bwithin\\s+(?<n>\\p{Nd}+)\\s+(?:business\\s+|working\\s+)?days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-month-warranty",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]months?\\s+(?:limited\\s+)?(?:manufacturer'?s?\\s+)?warranty\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-year-warranty",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]years?\\s+(?:limited\\s+)?(?:manufacturer'?s?\\s+)?warranty\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-warranty-of-months",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bwarranty\\s+(?:of|for|period\\s+of)\\s+(?<n>\\p{Nd}+)\\s+months\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-warranty-of-years",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bwarranty\\s+(?:of|for|period\\s+of)\\s+(?<n>\\p{Nd}+)\\s+years\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-day-guarantee",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]days?\\s+(?:money[- ]back\\s+|satisfaction\\s+)?guarantee\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-guarantee-of-days",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:money[- ]back\\s+)?guarantee\\s+(?:of|for|within|valid\\s+for)\\s+(?<n>\\p{Nd}+)\\s+days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-delivery-within",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:deliver(?:y|ed)|ships?|shipping|shipped|arrives?|dispatch(?:ed)?)\\b[^.\\n]{0,30}?\\bwithin\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|to)\\s*(?<m>\\p{Nd}+))?\\s+(?:business\\s+|working\\s+)?days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-days-delivery",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|to)\\s*(?<m>\\p{Nd}+))?\\s+(?:business\\s+|working\\s+)?days?\\s+(?:delivery|shipping)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-delivery-takes",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:delivery|shipping)(?:\\s+(?:takes?|times?(?:\\s+is)?|in))?\\s*:?\\s*(?:approx(?:imately)?\\.?\\s+|about\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|to)\\s*(?<m>\\p{Nd}+))?\\s+(?:business\\s+|working\\s+)?days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-free-shipping-over",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bfree\\s+(?:standard\\s+|economy\\s+)?(?:shipping|delivery)\\s+(?:on\\s+(?:all\\s+)?orders?\\s+)?(?:over|above|of|from|for\\s+orders\\s+(?:over|above))\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3}))\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3}))))"
+    },
+    {
+      "id": "fso-orders-over-ship-free",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\borders?\\s+(?:over|above)\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3}))\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3}))))\\s+(?:ship|get|qualify\\s+for|are\\s+delivered)\\s+(?:for\\s+)?free\\b"
+    },
+    {
+      "id": "t-day-trial",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]days?\\s+(?:free\\s+)?(?:trial|test)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-free-day-trial",
+      "kind": "trialDays",
+      "regex": "(?i)\\bfree\\s+(?<n>\\p{Nd}+)[- ]days?\\s+trial\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-try-free-for",
+      "kind": "trialDays",
+      "regex": "(?i)\\btry\\s+(?:it\\s+|us\\s+)?(?:for\\s+)?free\\s+for\\s+(?<n>\\p{Nd}+)\\s+days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-trial-of-days",
+      "kind": "trialDays",
+      "regex": "(?i)\\bfree\\s+trial\\s+(?:for|of)\\s+(?<n>\\p{Nd}+)\\s+days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-days-notice",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]days?['’]?\\s+(?:written\\s+|prior\\s+|advance\\s+)?notice\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-notice-of-days",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bnotice\\s+(?:period\\s+)?of\\s+(?<n>\\p{Nd}+)\\s+days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-respond-within-hours",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:respon(?:d|se|ses)|repl(?:y|ies)|answer|get\\s+back|support)\\b[^.\\n]{0,40}?\\bwithin\\s+(?<n>\\p{Nd}+)\\s+(?:business\\s+)?hours?\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-hour-response",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]hours?\\s+(?:response|support|reply)(?:\\s+time)?\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-respond-within-days",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:respon(?:d|se)|repl(?:y|ies)|get\\s+back)\\b[^.\\n]{0,40}?\\bwithin\\s+(?<n>\\p{Nd}+)\\s+(?:business\\s+)?days?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-percent-uptime",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:uptime|availability|sla)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-uptime-of",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\buptime(?:\\s+sla)?(?:\\s+guarantee)?\\s*(?:of|:)\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-free-returns",
+      "kind": "freeReturns",
+      "regex": "(?i)\\bfree\\s+(?:and\\s+easy\\s+)?(?:returns?|return\\s+shipping)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:and|&)\\b|\\s+on\\s+(?:all|every|any)\\b|\\s+worldwide\\b|\\s+everywhere\\b|\\s+included\\b)"
+    },
+    {
+      "id": "fr-returns-free",
+      "kind": "freeReturns",
+      "regex": "(?i)\\breturns?\\s+(?:are\\s+)?(?:always\\s+)?free\\b(?:\\s+of\\s+charge)?"
+    },
+    {
+      "id": "fs-free-shipping",
+      "kind": "freeShipping",
+      "regex": "(?i)\\bfree\\s+(?:standard\\s+|express\\s+|worldwide\\s+|international\\s+)?(?:shipping|delivery)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:and|&)\\b|\\s+on\\s+(?:all|every|any)\\b|\\s+worldwide\\b|\\s+everywhere\\b|\\s+included\\b)"
+    },
+    {
+      "id": "fs-ships-free",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:ships?|shipping|deliver(?:y|s))\\s+(?:is\\s+)?free\\b(?:\\s+of\\s+charge)?"
+    },
+    {
+      "id": "nc-no-card-required",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bno\\s+(?:credit\\s+|debit\\s+|payment\\s+)?card(?:\\s+details)?\\s+(?:required|needed|necessary)\\b"
+    },
+    {
+      "id": "nc-without-card",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:without|no\\s+need\\s+for)\\s+(?:a\\s+|your\\s+)?(?:credit\\s+)?card\\b"
+    },
+    {
+      "id": "ca-cancel-anytime",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\bcancel(?:l?ation|l?ed)?\\b[^.\\n]{0,25}?\\bany\\s?time\\b"
+    }
+  ],
+  "es": [
+    {
+      "id": "rw-dias-devolucion",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+días?\\s+(?:de\\s+|para\\s+)?(?:devoluci\\p{L}+|devolver|desistimiento)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-devolucion-plazo",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:devoluci\\p{L}+|devolver|desistimiento)\\b[^.\\n]{0,40}?\\b(?:en\\s+un\\s+plazo\\s+de|dentro\\s+de|hasta|durante|en)\\s+(?<n>\\p{Nd}+)\\s+días?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-semanas-devolucion",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+semanas?\\s+(?:de\\s+|para\\s+)?(?:devoluci\\p{L}+|devolver)\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-reembolso-plazo",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:reembolso|reembolsamos|reembolsad\\p{L}+|devolución\\s+del\\s+dinero|devolveremos)\\b[^.\\n]{0,40}?\\b(?:en\\s+un\\s+plazo\\s+de|dentro\\s+de|en|antes\\s+de)\\s+(?<n>\\p{Nd}+)\\s+días?(?:\\s+(?:hábiles|laborables))?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-meses-de-garantia",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+meses\\s+de\\s+garant[ií]a\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garantia-de-meses",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarant[ií]a\\s+de\\s+(?<n>\\p{Nd}+)\\s+meses\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-anos-de-garantia",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+años?\\s+de\\s+garant[ií]a\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garantia-de-anos",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarant[ií]a\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+años?\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dias-de-garantia",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+días?\\s+de\\s+garant[ií]a\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garantia-de-dias",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bgarant[ií]a\\s+(?:de\\s+)?(?:satisfacción\\s+|devolución\\s+del\\s+dinero\\s+)?(?:de\\s+)?(?<n>\\p{Nd}+)\\s+días?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-entrega-en",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:envío|entrega|enviamos|entregamos|recibe\\p{L}*|llega|llegará|enviado)\\b[^.\\n]{0,30}?\\b(?:en|entre|de|dentro\\s+de|en\\s+un\\s+plazo\\s+de|hasta)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|y)\\s*(?<m>\\p{Nd}+))?\\s+días?(?:\\s+(?:hábiles|laborables))?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-plazo-entrega",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bplazo\\s+de\\s+(?:entrega|envío)\\b\\s*:?\\s*(?:aproximadamente\\s+|de\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|y)\\s*(?<m>\\p{Nd}+))?\\s+días?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dias-entrega",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|y)\\s*(?<m>\\p{Nd}+))?\\s+días?(?:\\s+(?:hábiles|laborables))?\\s+de\\s+(?:entrega|envío)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-envio-gratis-desde",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:envío|portes|gastos\\s+de\\s+envío|entrega)\\s+(?:gratis|gratuit[oa]s?)\\s+(?:a\\s+partir\\s+de|desde|para\\s+pedidos\\s+(?:superiores\\s+a|de\\s+más\\s+de|desde|a\\s+partir\\s+de)|en\\s+pedidos\\s+(?:superiores\\s+a|de\\s+más\\s+de|desde)|por\\s+compras\\s+(?:superiores\\s+a|mayores\\s+a|de\\s+más\\s+de)|con\\s+compras\\s+(?:superiores\\s+a|mayores\\s+a|desde))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)))"
+    },
+    {
+      "id": "fso-pedidos-superiores",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bpedidos\\s+(?:superiores\\s+a|de\\s+más\\s+de)\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)))\\s*[,:]?\\s*(?:envío|portes)\\s+gratis"
+    },
+    {
+      "id": "t-dias-prueba",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+días?\\s+(?:de\\s+prueba|gratis)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-prueba-gratuita-de",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?:prueba(?:\\s+gratu\\p{L}+)?|pru[eé]balo(?:\\s+gratis)?)\\s+(?:de|durante)\\s+(?<n>\\p{Nd}+)\\s+días?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-preaviso-de-dias",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bpreaviso\\s+de\\s+(?<n>\\p{Nd}+)\\s+días?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-dias-de-preaviso",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+días?\\s+de\\s+preaviso\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-respondemos-en-horas",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:respond\\p{L}*|respuesta|contest\\p{L}*|atend\\p{L}*|soporte)\\b[^.\\n]{0,40}?\\b(?:en|dentro\\s+de|en\\s+menos\\s+de|en\\s+un\\s+plazo\\s+de)\\s+(?<n>\\p{Nd}+)\\s*(?:horas?|h)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-horas-de-respuesta",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*(?:horas?|h)\\s+(?:de\\s+)?(?:respuesta|soporte|atención)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-respuesta-en-dias",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:respond\\p{L}*|respuesta|contest\\p{L}*)\\b[^.\\n]{0,40}?\\b(?:en|dentro\\s+de|en\\s+un\\s+plazo\\s+de)\\s+(?<n>\\p{Nd}+)\\s+días?(?:\\s+(?:hábiles|laborables))?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-disponibilidad",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:de\\s+)?(?:disponibilidad|uptime|tiempo\\s+de\\s+actividad)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-disponibilidad-de",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:disponibilidad|uptime|SLA|tiempo\\s+de\\s+actividad)\\b\\s*(?:de|:|garantizad[ao]\\s+de)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-devoluciones-gratis",
+      "kind": "freeReturns",
+      "regex": "(?i)\\bdevoluci(?:ón|ones)\\s+(?:gratis|gratuit[oa]s?)\\b"
+    },
+    {
+      "id": "fr-devoluciones-sin-coste",
+      "kind": "freeReturns",
+      "regex": "(?i)\\bdevoluci(?:ón|ones)\\s+sin\\s+(?:coste|costo|cargo|gastos)\\b"
+    },
+    {
+      "id": "fs-envio-gratis",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:env[ií]os?|portes|gastos\\s+de\\s+env[ií]o|entrega)\\s+(?:es\\s+|son\\s+)?(?:gratis|gratuit[oa]s?)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:y|e|&)\\b|\\s+en\\s+todos\\s+(?:los\\s+)?(?:pedidos|productos)\\b|\\s+a\\s+todo\\s+el\\s+mundo\\b|\\s+incluid[oa]\\b)"
+    },
+    {
+      "id": "nc-sin-tarjeta",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bsin\\s+(?:necesidad\\s+de\\s+)?tarjeta(?:\\s+de\\s+cr[eé]dito|\\s+bancaria)?\\b"
+    },
+    {
+      "id": "nc-no-se-requiere",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bno\\s+(?:se\\s+)?(?:requiere|necesita|necesitas|pide|pedimos|exige)\\s+(?:ninguna\\s+)?tarjeta(?:\\s+de\\s+cr[eé]dito)?\\b"
+    },
+    {
+      "id": "ca-cancela-en-cualquier-momento",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\bcancel\\p{L}*\\b[^.\\n]{0,25}?\\b(?:en\\s+cualquier\\s+momento|cuando\\s+quieras|cuando\\s+quiera)\\b"
+    }
+  ],
+  "fi": [
+    {
+      "id": "rw-paivan-palautusoikeus",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*(?:päivän|vuorokauden)\\s+(?:palautusoikeus|palautusaika|palautus\\p{L}*|vaihto-oikeus|peruutusoikeus)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-palautus-kuluessa",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:palaut\\p{L}*|peruuta\\p{L}*|peruut\\p{L}*|vaihto\\p{L}*)\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s+päivän\\s+(?:kuluessa|sisällä)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-viikon-palautusoikeus",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+viikon\\s+(?:palautusoikeus|palautusaika)\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-hyvitys-kuluessa",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:hyvit\\p{L}*|palautamme|rahat\\s+takaisin|rahat\\s+palautetaan|maksu\\s+palautetaan)\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s+(?:arki)?päivän\\s+(?:kuluessa|sisällä)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-kuukauden-takuu",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+kuukauden\\s+takuu\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-kk-takuu",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*kk\\s+takuu\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-vuoden-takuu",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+vuoden\\s+takuu\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-takuu-kuukautta",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\btakuu(?:aika)?\\s+on\\s+(?<n>\\p{Nd}+)\\s+kuukautta\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-takuu-vuotta",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\btakuu(?:aika)?\\s+on\\s+(?<n>\\p{Nd}+)\\s+vuotta\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-paivan-takuu",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+päivän\\s+(?:rahat\\s+takaisin\\s*-?\\s*takuu|tyytyväisyystakuu|takuu)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-takuu-paivaa",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:rahat\\s+takaisin\\s*-?\\s*takuu|takuu)\\s+(?<n>\\p{Nd}+)\\s+päivää\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-toimitus-paivassa",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:toimitus\\p{L}*|toimitamme|lähetämme|lähetys\\p{L}*|saapuu|perillä)\\b[^.\\n]{0,30}?\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|tai)\\s*(?<m>\\p{Nd}+))?\\s+(?:arki)?(?:päivässä|päivän\\s+kuluessa|päivää|päivän)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-toimitusaika",
+      "kind": "shippingDays",
+      "regex": "(?i)\\btoimitusaika\\b\\s*(?::|on)?\\s*(?:noin\\s+|n\\.\\s*)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|tai)\\s*(?<m>\\p{Nd}+))?\\s+(?:arki)?(?:päivää|päivä|pv)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-ilmainen-toimitus-yli",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:ilmainen|ilmaiset|maksuton)\\s+(?:toimitus|postitus|lähetys|toimituskulut)\\s+(?:yli|alkaen|vähintään|kun\\s+tilaat\\s+yli|tilauksille\\s+(?:yli|alkaen)|ostoksille\\s+(?:yli|alkaen))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euroa|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euroa|eur)))"
+    },
+    {
+      "id": "fso-tilaa-yli-toimitus-ilmainen",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\btilaa\\s+yli\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euroa|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euroa|eur)))\\s+(?:ja\\s+)?(?:toimitus|postitus)\\s+(?:on\\s+)?(?:ilmainen|maksuton)"
+    },
+    {
+      "id": "t-paivan-kokeilu",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+päivän\\s+(?:ilmainen\\s+)?(?:kokeilu\\p{L}*|koeaika|kokeilujakso)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-kokeile-paivaa",
+      "kind": "trialDays",
+      "regex": "(?i)\\bkokeile\\s+(?:ilmaiseksi\\s+)?(?<n>\\p{Nd}+)\\s+päivää\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-irtisanomisaika",
+      "kind": "noticeDays",
+      "regex": "(?i)\\birtisanomisaika\\s+(?:on\\s+)?(?<n>\\p{Nd}+)\\s+(?:päivää|vuorokautta)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-paivan-irtisanomisaika",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+päivän\\s+irtisanomisaika\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-vastaamme-tunnin-sisalla",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:vastaam\\p{L}*|vastaus|vastaamme|otamme\\s+yhteyttä|tuki)\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s+tunnin\\s+(?:sisällä|kuluessa)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-tunnin-tuki",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*(?:tunnin|h)\\s+(?:vastausaika|tuki|asiakastuki|palvelu)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-vastaamme-paivan-sisalla",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:vastaam\\p{L}*|vastaus|vastaamme)\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s+(?:arki)?päivän\\s+(?:sisällä|kuluessa)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-kaytettavyys",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:käytettävyys|käyttöaste|uptime|saatavuus)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-kaytettavyys-on",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:käytettävyys|saatavuus|uptime|SLA)\\b\\s*(?:on|:|takaa)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-ilmaiset-palautukset",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:ilmaiset|ilmainen|maksuton|maksuttomat)\\s+palautu\\p{L}*"
+    },
+    {
+      "id": "fr-palautus-on-ilmainen",
+      "kind": "freeReturns",
+      "regex": "(?i)\\bpalautu\\p{L}*\\s+(?:on\\s+|ovat\\s+)?(?:ilmainen|ilmaiset|maksuton|maksuttomat|ilmaisia)\\b"
+    },
+    {
+      "id": "fs-ilmainen-toimitus",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:ilmainen|ilmaiset|maksuton)\\s+(?:toimitus|postitus|lähetys|toimituskulut)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:ja|&)\\b|\\s+kaikkiin\\s+tilauksiin\\b|\\s+kaikille\\s+tilauksille\\b|\\s+maailmanlaajuisesti\\b|\\s+sisältyy\\b)"
+    },
+    {
+      "id": "fs-toimitus-on-ilmainen",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:toimitus|postitus|lähetys)\\s+on\\s+(?:ilmainen|maksuton)\\b"
+    },
+    {
+      "id": "nc-ei-vaadi-korttia",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bei\\s+(?:vaadi|tarvitse)\\s+(?:luotto|pankki|maksu)?kort(?:tia|tiä)\\b"
+    },
+    {
+      "id": "nc-korttia-ei-tarvita",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:luotto|pankki|maksu)?kort(?:tia|tiä)\\s+ei\\s+(?:tarvita|vaadita)\\b"
+    },
+    {
+      "id": "nc-ilman-korttia",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bilman\\s+(?:luotto|pankki|maksu)?kort(?:tia|tiä)\\b"
+    },
+    {
+      "id": "ca-peruuta-milloin-tahansa",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:peru\\p{L}*|irtisano\\p{L}*|lopeta\\p{L}*)\\b[^.\\n]{0,25}?\\b(?:milloin\\s+tahansa|koska\\s+tahansa|milloin\\s+haluat)\\b"
+    },
+    {
+      "id": "ca-milloin-tahansa-peruttavissa",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\bmilloin\\s+tahansa\\s+(?:peruttavissa|irtisanottavissa|peruutettavissa)\\b"
+    }
+  ],
+  "fr": [
+    {
+      "id": "rw-retour-sous-jours",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retours?|retourner|rétractation|échange|échanger)\\b[^.\\n]{0,40}?\\b(?:sous|dans\\s+un\\s+délai\\s+de|dans\\s+les|jusqu['’]à|pendant)\\s+(?<n>\\p{Nd}+)\\s+jours?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-delai-retractation",
+      "kind": "returnWindow",
+      "regex": "(?i)\\bdélai\\s+de\\s+(?:rétractation|retour)\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+jours?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-jours-retour",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+jours?\\s+(?:de\\s+|pour\\s+)?(?:retour|retourner|rétractation|échange|échanger)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retour-semaines",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retours?|retourner)\\b[^.\\n]{0,40}?\\b(?:sous|dans\\s+un\\s+délai\\s+de|pendant)\\s+(?<n>\\p{Nd}+)\\s+semaines?\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-remboursement-sous-jours",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:remboursé\\p{L}*|remboursement|rembourser|remboursons)\\b[^.\\n]{0,40}?\\b(?:sous|dans\\s+un\\s+délai\\s+de|dans\\s+les|en)\\s+(?<n>\\p{Nd}+)\\s+jours?(?:\\s+(?:ouvrés|ouvrables))?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-mois-de-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+mois\\s+de\\s+garantie\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garantie-de-mois",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarantie\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+mois\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-ans-de-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+ans?\\s+de\\s+garantie\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garantie-de-ans",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarantie\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+ans?\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-jours-de-garantie",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+jours?\\s+(?:de\\s+garantie|garantie)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-satisfait-rembourse",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+jours?\\s+satisfait\\s+ou\\s+remboursé\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-satisfait-rembourse-pendant",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bsatisfait\\s+ou\\s+remboursé\\s+(?:pendant|sous|jusqu['’]à)\\s+(?<n>\\p{Nd}+)\\s+jours?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-livraison-sous",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:livraison|livré\\p{L}*|expédi\\p{L}*|expédition|reçu\\p{L}*|reçoit)\\b[^.\\n]{0,30}?\\b(?:sous|en|dans\\s+un\\s+délai\\s+de|d['’]ici|dans)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|à|et)\\s*(?<m>\\p{Nd}+))?\\s+jours?(?:\\s+(?:ouvrés|ouvrables))?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-jours-livraison",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|à)\\s*(?<m>\\p{Nd}+))?\\s+jours?(?:\\s+(?:ouvrés|ouvrables))?\\s+(?:de\\s+)?(?:livraison|d['’]expédition)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-delai-livraison",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bdélai\\s+de\\s+(?:livraison|expédition)\\b\\s*:?\\s*(?:de\\s+|environ\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|à)\\s*(?<m>\\p{Nd}+))?\\s+jours?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-livraison-gratuite-des",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:livraison|frais\\s+de\\s+port|port)\\s+(?:gratuite?s?|offerte?s?)\\s+(?:dès|à\\s+partir\\s+de|pour\\s+toute\\s+commande\\s+(?:de\\s+plus\\s+de|supérieure\\s+à|dès|à\\s+partir\\s+de)|pour\\s+tout\\s+achat\\s+(?:de\\s+plus\\s+de|supérieur\\s+à|dès)|au-delà\\s+de|à\\s+partir\\s+d['’]un\\s+achat\\s+de|à\\s+partir\\s+d['’]un\\s+montant\\s+de)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)))"
+    },
+    {
+      "id": "fso-des-achat-livraison",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bdès\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)))\\s+d['’]achat\\s*,?\\s+(?:la\\s+)?(?:livraison|port)\\s+(?:est\\s+)?(?:gratuite|offerte)"
+    },
+    {
+      "id": "t-jours-essai",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+jours?\\s+(?:d['’]essai|essai|gratuits?)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-essai-gratuit-de",
+      "kind": "trialDays",
+      "regex": "(?i)\\bessai\\s+gratuit\\s+(?:de\\s+|pendant\\s+)(?<n>\\p{Nd}+)\\s+jours?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-essayez-pendant",
+      "kind": "trialDays",
+      "regex": "(?i)\\bessayez\\s+(?:gratuitement\\s+)?(?:pendant|durant)\\s+(?<n>\\p{Nd}+)\\s+jours?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-preavis-de-jours",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bpréavis\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+jours?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-jours-de-preavis",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+jours?\\s+de\\s+préavis\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-repondons-sous-heures",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:répon\\p{L}*|réponse|contact\\p{L}*|recontact\\p{L}*|revenons)\\b[^.\\n]{0,40}?\\b(?:sous|en|dans\\s+un\\s+délai\\s+de|dans\\s+les|moins\\s+de)\\s+(?<n>\\p{Nd}+)\\s*(?:heures?|h)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-heures-reponse",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*(?:heures?|h)\\s+(?:de\\s+)?(?:réponse|délai\\s+de\\s+réponse|support)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-reponse-sous-jours",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:répon\\p{L}*|réponse)\\b[^.\\n]{0,40}?\\b(?:sous|en|dans\\s+un\\s+délai\\s+de)\\s+(?<n>\\p{Nd}+)\\s+jours?(?:\\s+ouvrés)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-disponibilite",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:de\\s+)?(?:disponibilité|uptime)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-disponibilite-de",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:disponibilité|uptime|SLA)\\b\\s*(?:de|:|garantie\\s+de)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-retours-gratuits",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:retours?|échanges?)\\s+(?:et\\s+(?:retours?|échanges?)\\s+)?(?:gratuits?|offerts?)\\b"
+    },
+    {
+      "id": "fr-retour-sans-frais",
+      "kind": "freeReturns",
+      "regex": "(?i)\\bretours?\\s+sans\\s+frais\\b"
+    },
+    {
+      "id": "fs-livraison-gratuite",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:livraison|expédition|frais\\s+de\\s+port|port)\\s+(?:est\\s+|sont\\s+)?(?:gratuite?s?|offerte?s?)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:et|&)\\b|\\s+sur\\s+(?:tous|toutes|l['’]ensemble|tout)\\b|\\s+partout\\b|\\s+dans\\s+le\\s+monde\\b|\\s+incluse?\\b)"
+    },
+    {
+      "id": "nc-sans-carte",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:sans|aucune|pas\\s+de)\\s+(?:carte\\s+(?:bancaire|de\\s+crédit|bleue)|CB)(?:\\s+(?:requise|nécessaire|obligatoire|demandée))?\\b"
+    },
+    {
+      "id": "nc-pas-besoin-carte",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bpas\\s+besoin\\s+de\\s+carte\\s+(?:bancaire|de\\s+crédit)\\b"
+    },
+    {
+      "id": "ca-annulation-tout-moment",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:annul|résili|resili)\\p{L}*\\b[^.\\n]{0,25}?\\b(?:à\\s+tout\\s+moment|n['’]importe\\s+quand)\\b"
+    }
+  ],
+  "it": [
+    {
+      "id": "rw-giorni-reso",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+giorni\\s+(?:per\\s+il\\s+|per\\s+|di\\s+)?(?:reso|recesso|restituzione|resi)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-reso-entro",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:res[oi]|restituzion\\p{L}+|recesso|restituire)\\b[^.\\n]{0,40}?\\b(?:entro|fino\\s+a|nei\\s+primi|entro\\s+i)\\s+(?<n>\\p{Nd}+)\\s+giorni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-reso-settimane",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:res[oi]|restituzion\\p{L}+)\\b[^.\\n]{0,40}?\\b(?:entro|fino\\s+a)\\s+(?<n>\\p{Nd}+)\\s+settimane\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-rimborso-entro",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:rimbors\\p{L}+|rimborseremo)\\b[^.\\n]{0,40}?\\b(?:entro|in)\\s+(?<n>\\p{Nd}+)\\s+giorni(?:\\s+lavorativi)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-mesi-di-garanzia",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+mesi\\s+di\\s+garanzia\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garanzia-di-mesi",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranzia\\s+(?:di|per)\\s+(?<n>\\p{Nd}+)\\s+mesi\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-anni-di-garanzia",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+ann[oi]\\s+di\\s+garanzia\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garanzia-di-anni",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranzia\\s+(?:di|per)\\s+(?<n>\\p{Nd}+)\\s+ann[oi]\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-giorni-garanzia",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+giorni\\s+(?:di\\s+garanzia|soddisfatti\\s+o\\s+rimborsati)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-soddisfatti-per-giorni",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bsoddisfatti\\s+o\\s+rimborsati\\b[^.\\n]{0,20}?\\b(?<n>\\p{Nd}+)\\s+giorni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-consegna-entro",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:consegn\\p{L}+|spediz\\p{L}+|spedit\\p{L}+|arriv\\p{L}+)\\b[^.\\n]{0,30}?\\b(?:entro|in)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|e)\\s*(?<m>\\p{Nd}+))?\\s+giorni(?:\\s+lavorativi)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-tempi-di-consegna",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:tempi|tempo)\\s+di\\s+(?:consegna|spedizione)\\b\\s*:?\\s*(?:circa\\s+|di\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|e)\\s*(?<m>\\p{Nd}+))?\\s+giorni(?:\\s+lavorativi)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-giorni-di-consegna",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|e)\\s*(?<m>\\p{Nd}+))?\\s+giorni(?:\\s+lavorativi)?\\s+(?:di\\s+)?(?:consegna|spedizione)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-spedizione-gratuita-oltre",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:spedizione|consegna)\\s+(?:gratuita|gratis|omaggio)\\s+(?:da|oltre|sopra|per\\s+ordini\\s+(?:superiori\\s+a|oltre|da|di\\s+importo\\s+superiore\\s+a)|a\\s+partire\\s+da|per\\s+acquisti\\s+(?:superiori\\s+a|oltre|da))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euros?|eur)))"
+    },
+    {
+      "id": "t-giorni-di-prova",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+giorni\\s+(?:di\\s+prova(?:\\s+gratuita)?|gratis|gratuiti)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-prova-gratuita-per",
+      "kind": "trialDays",
+      "regex": "(?i)\\bprova(?:\\s+gratuita|\\s+gratis)?\\s+(?:di|per)\\s+(?<n>\\p{Nd}+)\\s+giorni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-preavviso-di-giorni",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bpreavviso\\s+di\\s+(?<n>\\p{Nd}+)\\s+giorni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-giorni-di-preavviso",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+giorni\\s+di\\s+preavviso\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-risponderemo-entro-ore",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:risponder\\p{L}*|risposta|rispondiamo|contatt\\p{L}+|assistenza)\\b[^.\\n]{0,40}?\\b(?:entro|in|in\\s+meno\\s+di)\\s+(?<n>\\p{Nd}+)\\s+ore\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-ore-di-risposta",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*ore\\s+(?:di\\s+)?(?:risposta|assistenza|supporto)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-risposta-entro-giorni",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:risponder\\p{L}*|risposta|rispondiamo)\\b[^.\\n]{0,40}?\\bentro\\s+(?<n>\\p{Nd}+)\\s+giorni(?:\\s+lavorativi)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-uptime",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:di\\s+)?(?:uptime|disponibilità)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-uptime-di",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:uptime|disponibilità|SLA)\\b\\s*(?:di|:|garantit[ao]\\s+(?:del|al))?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-resi-gratuiti",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:res[oi]|restituzion[ei])\\s+(?:gratuit[oi]|gratis|gratuita|gratuite)\\b"
+    },
+    {
+      "id": "fr-reso-senza-costi",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:res[oi]|restituzion[ei])\\s+senza\\s+(?:costi|spese)\\b"
+    },
+    {
+      "id": "fs-spedizione-gratuita",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:spese\\s+di\\s+)?(?:spedizion[ei]|consegna)\\s+(?:è\\s+|sono\\s+)?(?:gratuit[ae]|gratis|in\\s+omaggio)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:e|ed|&)\\b|\\s+su\\s+tutti\\s+gli\\s+ordini\\b|\\s+in\\s+tutto\\s+il\\s+mondo\\b|\\s+inclus[aoe]\\b)"
+    },
+    {
+      "id": "nc-senza-carta",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bsenza\\s+(?:bisogno\\s+di\\s+)?carta\\s+(?:di\\s+credito|di\\s+debito)\\b"
+    },
+    {
+      "id": "nc-nessuna-carta",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bnessuna\\s+carta\\s+(?:di\\s+credito\\s+)?(?:richiesta|necessaria)\\b"
+    },
+    {
+      "id": "ca-disdici-in-qualsiasi-momento",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:annull\\p{L}+|disdetta|disdire|disdic\\p{L}*|recedere|cancell\\p{L}+)\\b[^.\\n]{0,25}?\\b(?:in\\s+qualsiasi\\s+momento|quando\\s+vuoi|quando\\s+vuole|in\\s+ogni\\s+momento)\\b"
+    }
+  ],
+  "ja": [
+    {
+      "id": "rw-nichikan-henpin",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*日間(?:の)?(?:無料)?(?:返品|交換|返品保証)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-nichi-inai-henpin",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*日以内(?:に|であれば|なら)?[^。\\n]{0,10}?(?:返品|交換)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-henpin-nichi-inai",
+      "kind": "returnWindow",
+      "regex": "(?i)(?:返品|交換|返却)[^。\\n]{0,20}?(?<n>\\p{Nd}+)\\s*日以内",
+      "unit": "day"
+    },
+    {
+      "id": "rw-shukan-henpin",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*週間(?:以内)?(?:の)?(?:無料)?(?:返品|交換)",
+      "unit": "week"
+    },
+    {
+      "id": "rf-henkin-nichi-inai",
+      "kind": "refundDays",
+      "regex": "(?i)(?:返金|払い戻し|払戻し|払戻)[^。\\n]{0,30}?(?<n>\\p{Nd}+)\\s*(?:営業)?日以内",
+      "unit": "day"
+    },
+    {
+      "id": "w-kagetsu-hosho",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:か月|ヶ月|カ月|ヵ月|ケ月)(?:間)?(?:の)?(?:メーカー)?(?:保証|無料保証)",
+      "unit": "month"
+    },
+    {
+      "id": "w-nen-hosho",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*年(?:間)?(?:の)?(?:メーカー)?(?:保証|無料保証)",
+      "unit": "year"
+    },
+    {
+      "id": "w-hosho-kikan-kagetsu",
+      "kind": "warrantyMonths",
+      "regex": "(?i)保証期間\\s*[:：は]?\\s*(?<n>\\p{Nd}+)\\s*(?:か月|ヶ月|カ月|ヵ月|ケ月)",
+      "unit": "month"
+    },
+    {
+      "id": "w-hosho-kikan-nen",
+      "kind": "warrantyMonths",
+      "regex": "(?i)保証期間\\s*[:：は]?\\s*(?<n>\\p{Nd}+)\\s*年",
+      "unit": "year"
+    },
+    {
+      "id": "g-nichikan-henkin-hosho",
+      "kind": "guaranteeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*日間(?:の)?(?:全額)?返金保証",
+      "unit": "day"
+    },
+    {
+      "id": "g-nichikan-manzoku-hosho",
+      "kind": "guaranteeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*日間(?:の)?(?:満足保証|満足度保証|お試し保証)",
+      "unit": "day"
+    },
+    {
+      "id": "sd-otodoke-nichi",
+      "kind": "shippingDays",
+      "regex": "(?i)(?:お届け|配送|発送|出荷|納期|到着)[^。\\n]{0,20}?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|~|〜|から)\\s*(?<m>\\p{Nd}+))?\\s*(?:営業)?日(?:以内|程度|ほど|前後|間)",
+      "unit": "day"
+    },
+    {
+      "id": "sd-nichi-de-todoku",
+      "kind": "shippingDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)(?:\\s*(?:-|–|~|〜|から)\\s*(?<m>\\p{Nd}+))?\\s*(?:営業)?日(?:以内|程度|ほど|前後|間)?(?:で|に|後に)?(?:お届け|発送|出荷|配送|到着)",
+      "unit": "day"
+    },
+    {
+      "id": "fso-ijou-souryou-muryou",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|円|yen)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|円|yen)))\\s*(?:以上|超)(?:の)?(?:ご注文|お買い上げ|ご購入|お買い物|購入|注文)?(?:で|は|なら|の場合)?\\s*送料無料"
+    },
+    {
+      "id": "fso-souryou-muryou-ijou",
+      "kind": "freeShippingOver",
+      "regex": "(?i)送料無料\\s*[（(]?\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|円|yen)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|円|yen)))\\s*以上"
+    },
+    {
+      "id": "t-nichikan-trial",
+      "kind": "trialDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*日間(?:の)?(?:無料)?(?:お試し|トライアル|体験|試用|無料体験|無料トライアル)",
+      "unit": "day"
+    },
+    {
+      "id": "t-trial-kikan-nichikan",
+      "kind": "trialDays",
+      "regex": "(?i)(?:無料)?(?:お試し|トライアル|体験)(?:期間)?\\s*[:：]?\\s*(?<n>\\p{Nd}+)\\s*日間",
+      "unit": "day"
+    },
+    {
+      "id": "t-nichikan-muryou-de",
+      "kind": "trialDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*日間無料(?:で|の)?(?:お試し|ご利用|体験|使え|試せ)",
+      "unit": "day"
+    },
+    {
+      "id": "n-kaiyaku-nichi-mae",
+      "kind": "noticeDays",
+      "regex": "(?i)(?:解約|退会|キャンセル)[^。\\n]{0,20}?(?<n>\\p{Nd}+)\\s*日前(?:まで)?",
+      "unit": "day"
+    },
+    {
+      "id": "n-nichi-mae-ni-kaiyaku",
+      "kind": "noticeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*日前(?:まで)?に(?:解約|退会|ご連絡)",
+      "unit": "day"
+    },
+    {
+      "id": "rh-henshin-jikan-inai",
+      "kind": "responseHours",
+      "regex": "(?i)(?:返信|回答|ご連絡|対応|返答)[^。\\n]{0,20}?(?<n>\\p{Nd}+)\\s*時間以内",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-jikan-inai-ni-henshin",
+      "kind": "responseHours",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*時間以内(?:に)?(?:ご)?(?:返信|回答|連絡|対応|返答)",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-nichi-inai-ni-henshin",
+      "kind": "responseHours",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:営業)?日以内(?:に)?(?:ご)?(?:返信|回答|連絡|返答)",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-kadouritsu",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%％]\\s*(?:の)?(?:稼働率|可用性|アップタイム)",
+      "unit": "percent"
+    },
+    {
+      "id": "up-kadouritsu-ha",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?:稼働率|可用性|アップタイム|SLA)\\s*(?:は|:|：|が)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%％]",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-muryou-henpin",
+      "kind": "freeReturns",
+      "regex": "(?i)無料返品|返品(?:・交換)?(?:は|も)?無料|返品送料無料|返品(?:に)?かかる送料(?:は)?無料"
+    },
+    {
+      "id": "fs-zenkoku-souryou-muryou",
+      "kind": "freeShipping",
+      "regex": "(?i)(?:全国|全品|全商品|すべての(?:商品|ご注文)|常に|いつでも|どなたでも)\\s*(?:一律)?送料無料"
+    },
+    {
+      "id": "nc-card-fuyou",
+      "kind": "noCardRequired",
+      "regex": "(?i)(?:クレジット)?カード(?:の)?(?:登録|情報)?(?:の)?(?:入力)?(?:は)?(?:不要|必要ありません|必要なし)"
+    },
+    {
+      "id": "nc-card-nashi-de",
+      "kind": "noCardRequired",
+      "regex": "(?i)(?:クレジット)?カード(?:なし|無し)で(?:始め|試|利用|登録)"
+    },
+    {
+      "id": "ca-itsudemo-kaiyaku",
+      "kind": "cancelAnytime",
+      "regex": "(?i)いつでも(?:解約|退会|キャンセル|停止|中止)"
+    },
+    {
+      "id": "ca-kaiyaku-itsudemo",
+      "kind": "cancelAnytime",
+      "regex": "(?i)(?:解約|退会|キャンセル)(?:は|も)?いつでも"
+    }
+  ],
+  "ko": [
+    {
+      "id": "rw-il-banpum",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*일\\s*(?:이내|내)?\\s*(?:무료\\s*)?(?:반품|교환)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-banpum-il-ie",
+      "kind": "returnWindow",
+      "regex": "(?i)(?:반품|교환|청약철회)[^.\\n]{0,20}?(?<n>\\p{Nd}+)\\s*일\\s*(?:이내|내|동안|간)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-ju-banpum",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*주\\s*(?:이내|내)\\s*(?:무료\\s*)?(?:반품|교환)",
+      "unit": "week"
+    },
+    {
+      "id": "rf-hwanbul-il-ie",
+      "kind": "refundDays",
+      "regex": "(?i)(?:환불|환급|결제\\s*취소)[^.\\n]{0,25}?(?<n>\\p{Nd}+)\\s*일\\s*(?:이내|내)",
+      "unit": "day"
+    },
+    {
+      "id": "w-gaewol-boseung",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*개월\\s*(?:무상\\s*)?(?:품질\\s*)?(?:보증|AS|A/S|워런티)",
+      "unit": "month"
+    },
+    {
+      "id": "w-nyeon-boseung",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*년\\s*(?:무상\\s*)?(?:품질\\s*)?(?:보증|워런티|AS|A/S)",
+      "unit": "year"
+    },
+    {
+      "id": "w-boseung-gigan-gaewol",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?:보증\\s*기간|무상\\s*수리\\s*기간)\\s*[:：은는]?\\s*(?<n>\\p{Nd}+)\\s*개월",
+      "unit": "month"
+    },
+    {
+      "id": "w-boseung-gigan-nyeon",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?:보증\\s*기간|무상\\s*수리\\s*기간)\\s*[:：은는]?\\s*(?<n>\\p{Nd}+)\\s*년",
+      "unit": "year"
+    },
+    {
+      "id": "g-il-hwanbul-boja",
+      "kind": "guaranteeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*일\\s*(?:이내\\s*)?(?:환불\\s*보장|환불\\s*보증|만족\\s*보장|만족\\s*보증|머니백\\s*보증|전액\\s*환불\\s*보장|전액\\s*환불\\s*보증)",
+      "unit": "day"
+    },
+    {
+      "id": "g-hwanbul-bojang-il",
+      "kind": "guaranteeDays",
+      "regex": "(?i)(?:환불\\s*보장|만족\\s*보장|전액\\s*환불)\\s*(?:기간)?\\s*[:：]?\\s*(?<n>\\p{Nd}+)\\s*일",
+      "unit": "day"
+    },
+    {
+      "id": "sd-baesong-il-soyo",
+      "kind": "shippingDays",
+      "regex": "(?i)(?:배송|발송|출고|도착|납기)[^.\\n]{0,20}?(?<n>\\p{Nd}+)(?:\\s*(?:-|~|〜|에서)\\s*(?<m>\\p{Nd}+))?\\s*(?:영업)?일\\s*(?:이내|내|정도|소요|걸립니다)",
+      "unit": "day"
+    },
+    {
+      "id": "sd-il-ie-baesong",
+      "kind": "shippingDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)(?:\\s*(?:-|~|〜|에서)\\s*(?<m>\\p{Nd}+))?\\s*(?:영업)?일\\s*(?:이내|내|정도)\\s*(?:에\\s*)?(?:배송|발송|출고|도착)",
+      "unit": "day"
+    },
+    {
+      "id": "fso-isang-mulyo-baesong",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|원|krw)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|원|krw)))\\s*(?:이상|초과)\\s*(?:구매|주문|결제)?\\s*(?:시|하시면|하면)?\\s*(?:무료\\s*배송|배송비\\s*무료|배송\\s*무료|무료\\s*택배)"
+    },
+    {
+      "id": "fso-mulyo-baesong-isang",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?:무료\\s*배송|배송비\\s*무료)\\s*[:：(（]?\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|원|krw)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|원|krw)))\\s*이상"
+    },
+    {
+      "id": "t-il-cheheom",
+      "kind": "trialDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*일\\s*간?\\s*(?:무료\\s*)?(?:체험|트라이얼|평가판|테스트)",
+      "unit": "day"
+    },
+    {
+      "id": "t-cheheom-gigan-il",
+      "kind": "trialDays",
+      "regex": "(?i)(?:무료\\s*)?(?:체험|트라이얼)\\s*(?:기간)?\\s*[:：]?\\s*(?<n>\\p{Nd}+)\\s*일",
+      "unit": "day"
+    },
+    {
+      "id": "n-haeji-il-jeon",
+      "kind": "noticeDays",
+      "regex": "(?i)(?:해지|탈퇴|취소)[^.\\n]{0,20}?(?<n>\\p{Nd}+)\\s*일\\s*전",
+      "unit": "day"
+    },
+    {
+      "id": "n-il-jeon-haeji",
+      "kind": "noticeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*일\\s*전(?:까지)?\\s*(?:에\\s*)?(?:해지|통보|서면)",
+      "unit": "day"
+    },
+    {
+      "id": "rh-dapbyeon-sigan-ine",
+      "kind": "responseHours",
+      "regex": "(?i)(?:답변|회신|응답|연락|문의)[^.\\n]{0,20}?(?<n>\\p{Nd}+)\\s*시간\\s*(?:이내|내)",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-sigan-ine-dapbyeon",
+      "kind": "responseHours",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*시간\\s*(?:이내|내)\\s*(?:에\\s*)?(?:답변|회신|응답|연락)",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-il-ine-dapbyeon",
+      "kind": "responseHours",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:영업)?일\\s*(?:이내|내)\\s*(?:에\\s*)?(?:답변|회신|응답)",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-gadongnyul",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%％]\\s*(?:의\\s*)?(?:가동률|가용성|업타임|uptime)",
+      "unit": "percent"
+    },
+    {
+      "id": "up-gadongnyul-eun",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?:가동률|가용성|업타임|SLA)\\s*(?:은|는|:|：|이)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%％]",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-muryo-banpum",
+      "kind": "freeReturns",
+      "regex": "(?i)무료\\s*(?:반품|교환|반송)"
+    },
+    {
+      "id": "fr-banpum-muryo",
+      "kind": "freeReturns",
+      "regex": "(?i)반품(?:\\s*(?:비|배송비|비용))?\\s*(?:은|는)?\\s*무료"
+    },
+    {
+      "id": "fs-jeon-sangpum-muryo-baesong",
+      "kind": "freeShipping",
+      "regex": "(?i)(?:전\\s*상품|전국|전\\s*제품|모든\\s*(?:상품|주문|제품)|항상|언제나)\\s*(?:무료\\s*배송|배송비\\s*무료)"
+    },
+    {
+      "id": "nc-card-deungrok-eopsi",
+      "kind": "noCardRequired",
+      "regex": "(?i)(?:신용\\s*카드|카드|결제\\s*정보)\\s*(?:등록\\s*|정보\\s*|입력\\s*)?(?:없이|불필요|필요\\s*없음|필요\\s*없습니다|필요\\s*없어요)"
+    },
+    {
+      "id": "nc-card-pilyo-haji-anh",
+      "kind": "noCardRequired",
+      "regex": "(?i)카드\\s*(?:등록|정보)?\\s*(?:입력)?\\s*(?:은\\s*)?필요하지\\s*않"
+    },
+    {
+      "id": "ca-eonjedeun-haeji",
+      "kind": "cancelAnytime",
+      "regex": "(?i)(?:언제든(?:지)?|언제나)\\s*(?:해지|취소|탈퇴|중단)"
+    },
+    {
+      "id": "ca-haeji-eonjedeun",
+      "kind": "cancelAnytime",
+      "regex": "(?i)(?:해지|취소|탈퇴)(?:는|가)?\\s*(?:언제든(?:지)?|언제나)"
+    }
+  ],
+  "nb": [
+    {
+      "id": "rw-dagers-returrett",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dagers?\\s+(?:full\\s+)?(?:returrett|angrerett|åpent\\s+kjøp|retur|bytterett)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retur-innen",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retur\\p{L}*|angrerett\\p{L}*|returnere|sende\\s+tilbake)\\b[^.\\n]{0,40}?\\binnen\\s+(?<n>\\p{Nd}+)\\s+dager\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-ukers-returrett",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?ukers?\\s+(?:returrett|angrerett|åpent\\s+kjøp)\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-refusjon-innen",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:refunder\\p{L}*|tilbakebetal\\p{L}*|pengene\\s+tilbake|refusjon)\\b[^.\\n]{0,40}?\\binnen\\s+(?<n>\\p{Nd}+)\\s+(?:virkedager|arbeidsdager|dager|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-maneders-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?måneders?\\s+(?:produsent)?garanti\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-ars-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?års\\s+(?:produsent)?garanti\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garanti-pa-maneder",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+på\\s+(?<n>\\p{Nd}+)\\s+måneder\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garanti-pa-ar",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+på\\s+(?<n>\\p{Nd}+)\\s+år\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dagers-garanti",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dagers?\\s+(?:pengene\\s+tilbake[- ]?garanti|fornøyd[- ]kunde[- ]garanti|garanti)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garanti-pa-dager",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:pengene\\s+tilbake[- ]?garanti|garanti)\\s+(?:på|i|innen)\\s+(?<n>\\p{Nd}+)\\s+dager\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-levering-innen",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:levering|leveres|sendes|frakt|levert|ankommer)\\b[^.\\n]{0,30}?\\b(?:innen|på|om)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|til|og)\\s*(?<m>\\p{Nd}+))?\\s+(?:virkedager|arbeidsdager|dager|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-leveringstid",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bleveringstid\\b\\s*(?::|er)?\\s*(?:cirka\\s+|ca\\.?\\s*)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|til)\\s*(?<m>\\p{Nd}+))?\\s+(?:virkedager|arbeidsdager|dager|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dagers-levering",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|til)\\s*(?<m>\\p{Nd}+))?\\s+(?:virkedagers|dagers)\\s+levering(?:stid)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-gratis-frakt-over",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:gratis|fri)\\s+(?:frakt|levering)\\s+(?:ved\\s+kjøp\\s+(?:over|fra)|for\\s+bestillinger\\s+(?:over|fra)|ved\\s+bestilling\\s+(?:over|fra)|på\\s+bestillinger\\s+(?:over|fra)|over|fra)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|nok)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|nok)))"
+    },
+    {
+      "id": "fso-kjop-over-gratis-frakt",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bkjøp\\s+over\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|nok)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kroner|nok)))\\s*[,:]?\\s*(?:får\\s+du\\s+)?(?:gratis|fri)\\s+(?:frakt|levering)"
+    },
+    {
+      "id": "t-dagers-prove",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dagers?\\s+(?:gratis\\s+)?(?:prøve\\p{L}*|test\\p{L}*)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-prov-gratis-i",
+      "kind": "trialDays",
+      "regex": "(?i)\\bprøv\\s+(?:gratis\\s+)?(?:i\\s+)?(?<n>\\p{Nd}+)\\s+dager\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-oppsigelsestid",
+      "kind": "noticeDays",
+      "regex": "(?i)\\boppsigelsestid\\s+(?:på\\s+)?(?<n>\\p{Nd}+)\\s+dager\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-dagers-oppsigelsestid",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dagers\\s+oppsigelsestid\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-svar-innen-timer",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:svar\\p{L}*|svarer|kontakt\\p{L}*|support)\\b[^.\\n]{0,40}?\\binnen\\s+(?<n>\\p{Nd}+)\\s+timer\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-timers-svar",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?timers\\s+(?:svar|support|responstid|service)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-svar-innen-dager",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:svar\\p{L}*|svarer)\\b[^.\\n]{0,40}?\\binnen\\s+(?<n>\\p{Nd}+)\\s+(?:virkedager|arbeidsdager|dager)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-oppetid",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:oppetid|tilgjengelighet|uptime)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-oppetid-pa",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:oppetid|tilgjengelighet|uptime|SLA)\\b\\s*(?:på|:|garantert\\s+på)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-gratis-retur",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:gratis|fri|fritt)\\s+(?:retur|returer|returfrakt)\\b"
+    },
+    {
+      "id": "fr-retur-er-gratis",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:retur|returer)\\s+(?:er\\s+)?(?:gratis|kostnadsfri|fri)\\b"
+    },
+    {
+      "id": "fs-gratis-frakt",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:gratis|fri)\\s+(?:frakt|levering)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:og|&)\\b|\\s+på\\s+alle\\s+bestillinger\\b|\\s+over\\s+hele\\s+verden\\b|\\s+inkludert\\b)"
+    },
+    {
+      "id": "fs-frakten-er-gratis",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:frakten|leveringen)\\s+er\\s+(?:gratis|fri)\\b"
+    },
+    {
+      "id": "nc-ingen-kort-kreves",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bingen\\s+(?:kreditt|bank)?kort\\s+(?:kreves|nødvendig|trengs)\\b"
+    },
+    {
+      "id": "nc-uten-kort",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\buten\\s+(?:kreditt|bank)?kort\\b"
+    },
+    {
+      "id": "ca-avslutt-nar-som-helst",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:avslutt|kanseller|si\\s+opp|oppsigelse|avbestill)\\p{L}*\\b[^.\\n]{0,25}?\\b(?:når\\s+som\\s+helst|når\\s+du\\s+vil)\\b"
+    }
+  ],
+  "nl": [
+    {
+      "id": "rw-dagen-retour",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]dagen[- ]?(?:bedenktijd|retour\\p{L}*|herroepingsrecht|ruilen)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retourneren-binnen",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retour\\p{L}*|retourneren|terugsturen|herroepen)\\b[^.\\n]{0,40}?\\bbinnen\\s+(?<n>\\p{Nd}+)\\s+dagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retourneren-weken",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retour\\p{L}*|retourneren|terugsturen)\\b[^.\\n]{0,40}?\\bbinnen\\s+(?<n>\\p{Nd}+)\\s+weken\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-terugbetaling-binnen",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:terugbetal\\p{L}+|terugbetaling|restitutie|geld\\s+terug)\\b[^.\\n]{0,40}?\\bbinnen\\s+(?<n>\\p{Nd}+)\\s+(?:werk)?dagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-maanden-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]maanden[- ]?(?:fabrieks)?garantie\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garantie-van-maanden",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarantie\\s+(?:van|op)\\s+(?<n>\\p{Nd}+)\\s+maanden\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-jaar-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]jaar[- ]?(?:fabrieks)?garantie\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garantie-van-jaar",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarantie\\s+(?:van|op)\\s+(?<n>\\p{Nd}+)\\s+jaar\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dagen-garantie",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]dagen[- ]?(?:geld[- ]terug[- ]?garantie|tevredenheidsgarantie|garantie)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garantie-binnen-dagen",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:geld[- ]terug[- ]?garantie|garantie)\\s+(?:van|binnen)\\s+(?<n>\\p{Nd}+)\\s+dagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-levering-binnen",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:levering|bezorging|verzending|geleverd|bezorgd|verzonden|ontvang\\p{L}*)\\b[^.\\n]{0,30}?\\b(?:binnen|in|na)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|tot|à)\\s*(?<m>\\p{Nd}+))?\\s+(?:werk)?dagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-levertijd",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:levertijd|bezorgtijd|verzendtijd)\\b\\s*(?::|is|bedraagt)?\\s*(?:circa\\s+|ongeveer\\s+|ca\\.?\\s*)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|tot)\\s*(?<m>\\p{Nd}+))?\\s+(?:werk)?dagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dagen-levering",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|tot)\\s*(?<m>\\p{Nd}+))?\\s+(?:werk)?dagen\\s+(?:levertijd|levering|bezorging)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-gratis-verzending-vanaf",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:gratis|kosteloze)\\s+(?:verzending|bezorging|levering)\\s+(?:vanaf|boven|bij\\s+bestellingen\\s+(?:vanaf|boven|van\\s+meer\\s+dan)|bij\\s+een\\s+bestelbedrag\\s+van|bij\\s+aankopen\\s+(?:vanaf|boven))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)))"
+    },
+    {
+      "id": "fso-vanaf-gratis",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bvanaf\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|euro|eur)))\\s+(?:wordt\\s+)?(?:gratis|kosteloos)\\s+(?:verzonden|bezorgd|geleverd|verzending|bezorging)"
+    },
+    {
+      "id": "t-dagen-proef",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]dagen\\s+(?:gratis\\s+)?(?:proef\\p{L}*|proberen|testen)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-probeer-gratis",
+      "kind": "trialDays",
+      "regex": "(?i)\\bprobeer\\s+(?:het\\s+)?(?:gratis\\s+)?(?:voor|gedurende)\\s+(?<n>\\p{Nd}+)\\s+dagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-opzegtermijn-dagen",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bopzegtermijn\\s+(?:van\\s+)?(?<n>\\p{Nd}+)\\s+dagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-dagen-opzegtermijn",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dagen\\s+opzegtermijn\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-reageren-binnen-uur",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:reageren|reactie|antwoord|antwoorden|reageer\\p{L}*|beantwoorden|reactietijd|support)\\b[^.\\n]{0,40}?\\bbinnen\\s+(?<n>\\p{Nd}+)\\s+(?:werk)?uur\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-uurs-support",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?(?:uurs|uur)[- ]?(?:support|service|reactietijd|reactie)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-reageren-binnen-werkdagen",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:reageren|reactie|antwoord\\p{L}*)\\b[^.\\n]{0,40}?\\bbinnen\\s+(?<n>\\p{Nd}+)\\s+werkdagen\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-uptime",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:uptime|beschikbaarheid)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-uptime-van",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:uptime|beschikbaarheid|SLA)\\b\\s*(?:van|:|garantie\\s+van)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-gratis-retourneren",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:gratis|kosteloos|kosteloze)\\s+(?:retour\\p{L}*|retourneren|terugsturen)\\b"
+    },
+    {
+      "id": "fr-retour-is-gratis",
+      "kind": "freeReturns",
+      "regex": "(?i)\\bretour\\p{L}*\\s+(?:is\\s+|zijn\\s+)?(?:gratis|kosteloos)\\b"
+    },
+    {
+      "id": "fs-gratis-verzending",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:gratis|kosteloze)\\s+(?:verzending|bezorging|levering)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:en|&)\\b|\\s+op\\s+alle\\s+bestellingen\\b|\\s+wereldwijd\\b|\\s+inbegrepen\\b)"
+    },
+    {
+      "id": "fs-verzending-is-gratis",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:verzending|bezorging|levering)\\s+(?:is\\s+)?gratis\\b"
+    },
+    {
+      "id": "nc-geen-creditcard",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bgeen\\s+(?:creditcard|betaalkaart|bankpas)(?:gegevens)?\\s+(?:nodig|vereist|benodigd)\\b"
+    },
+    {
+      "id": "nc-zonder-creditcard",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bzonder\\s+(?:creditcard|betaalkaart)\\b"
+    },
+    {
+      "id": "ca-opzeggen-op-elk-moment",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:opzeg\\p{L}*|annuleer\\p{L}*|annuleren|stopzet\\p{L}*)\\b[^.\\n]{0,25}?\\b(?:op\\s+elk\\s+(?:moment|gewenst\\s+moment)|altijd|wanneer\\s+je\\s+wilt|wanneer\\s+u\\s+wilt)\\b"
+    },
+    {
+      "id": "ca-op-elk-moment-opzegbaar",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\bop\\s+elk\\s+moment\\s+(?:opzegbaar|annuleerbaar|opzeggen|annuleren|stopzetten)\\b"
+    }
+  ],
+  "pl": [
+    {
+      "id": "rw-dni-na-zwrot",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dni\\s+na\\s+(?:zwrot|odstąpienie|zwroty|wymianę)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-zwrot-w-ciagu",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:zwrot\\p{L}*|zwróc\\p{L}*|odstąpi\\p{L}*)\\b[^.\\n]{0,40}?\\b(?:w\\s+ciągu|do|przez)\\s+(?<n>\\p{Nd}+)\\s+dni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-zwrot-tygodni",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:zwrot\\p{L}*|zwróc\\p{L}*)\\b[^.\\n]{0,40}?\\bw\\s+ciągu\\s+(?<n>\\p{Nd}+)\\s+tygodni\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-zwrot-pieniedzy-w-ciagu",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:zwrot\\s+pieniędzy|zwrócimy|zwrot\\s+środków|refundacj\\p{L}+|zwrot\\s+należności)\\b[^.\\n]{0,40}?\\b(?:w\\s+ciągu|do)\\s+(?<n>\\p{Nd}+)\\s+dni(?:\\s+roboczych)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-miesiecy-gwarancji",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+miesi(?:ąc|ące|ęcy)\\s+gwarancji\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-gwarancja-miesiecy",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgwarancja\\s+(?:na\\s+)?(?<n>\\p{Nd}+)\\s+miesi(?:ąc|ące|ęcy)\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-lat-gwarancji",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:lat|lata|rok)\\s+gwarancji\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-gwarancja-lat",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgwarancja\\s+(?:na\\s+)?(?<n>\\p{Nd}+)\\s+(?:lat|lata|rok)\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dni-gwarancji",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dni\\s+(?:gwarancji\\s+zwrotu\\s+pieniędzy|gwarancji\\s+satysfakcji|gwarancji)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-gwarancja-zwrotu-przez",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bgwarancja\\s+(?:zwrotu\\s+pieniędzy|satysfakcji)\\s+(?:przez\\s+|do\\s+)?(?<n>\\p{Nd}+)\\s+dni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dostawa-w-ciagu",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:dostaw\\p{L}*|wysyłk\\p{L}*|dostarczymy|wysyłamy|realizacja)\\b[^.\\n]{0,30}?\\b(?:w\\s+ciągu|do|w|ok\\.?|około)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|do)\\s*(?<m>\\p{Nd}+))?\\s+dni(?:\\s+roboczych)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-czas-dostawy",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bczas\\s+(?:dostawy|realizacji)\\b\\s*:?\\s*(?:około\\s+|ok\\.?\\s*)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|do)\\s*(?<m>\\p{Nd}+))?\\s+dni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dni-na-dostawe",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|do)\\s*(?<m>\\p{Nd}+))?\\s+dni\\s+(?:roboczych\\s+)?(?:na\\s+)?(?:dostaw\\p{L}+|wysyłk\\p{L}+)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-darmowa-dostawa-od",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:darmowa|bezpłatna|gratis)\\s+(?:dostawa|wysyłka)\\s+(?:od|powyżej|przy\\s+zamówieniach\\s+(?:od|powyżej)|dla\\s+zamówień\\s+(?:od|powyżej)|przy\\s+zakupach\\s+(?:od|powyżej))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|zł|pln|złotych)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|zł|pln|złotych)))"
+    },
+    {
+      "id": "fso-zamowienia-od-darmowa",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bzamówienia\\s+(?:od|powyżej)\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|zł|pln|złotych)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|zł|pln|złotych)))\\s*[,:]?\\s*(?:darmowa|bezpłatna)\\s+(?:dostawa|wysyłka)"
+    },
+    {
+      "id": "t-dni-za-darmo",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dni\\s+(?:za\\s+darmo|bezpłatnego\\s+okresu\\s+próbnego|okresu\\s+próbnego|darmowego\\s+okresu\\s+próbnego|testowych)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-dniowy-okres-probny",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]dniow\\p{L}+\\s+(?:darmow\\p{L}+\\s+|bezpłatn\\p{L}+\\s+)?(?:okres\\s+próbny|okres\\s+testowy|trial|test\\p{L}*)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-przetestuj-przez",
+      "kind": "trialDays",
+      "regex": "(?i)\\bprzetestuj\\s+(?:za\\s+darmo\\s+)?(?:przez|w\\s+ciągu)\\s+(?<n>\\p{Nd}+)\\s+dni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-okres-wypowiedzenia",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bokres\\s+wypowiedzenia\\s+(?:wynosi\\s+)?(?<n>\\p{Nd}+)\\s+dni\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-dniowy-okres-wypowiedzenia",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]dniow\\p{L}+\\s+okres\\s+wypowiedzenia\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-odpowiadamy-w-ciagu-godzin",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:odpowiad\\p{L}*|odpowiedź|odpowiemy|kontakt\\p{L}*|wsparcie)\\b[^.\\n]{0,40}?\\b(?:w\\s+ciągu|do|w)\\s+(?<n>\\p{Nd}+)\\s+godzin\\p{L}*\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-godzinne-wsparcie",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?(?:godzinn\\p{L}+|h)\\s+(?:wsparcie|obsługa|czas\\s+odpowiedzi|support)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-odpowiadamy-w-ciagu-dni",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:odpowiad\\p{L}*|odpowiedź|odpowiemy)\\b[^.\\n]{0,40}?\\b(?:w\\s+ciągu|do)\\s+(?<n>\\p{Nd}+)\\s+dni(?:\\s+roboczych)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-dostepnosci",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:dostępności|uptime|dostępność)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-dostepnosc-wynosi",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:dostępność|uptime|SLA)\\b\\s*(?:wynosi|:|na\\s+poziomie|gwarantowana\\s+na\\s+poziomie)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-darmowe-zwroty",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:darmowe|bezpłatne|gratis)\\s+(?:zwroty|zwrot)\\b"
+    },
+    {
+      "id": "fr-zwroty-sa-darmowe",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:zwroty|zwrot)\\s+(?:są\\s+|jest\\s+)?(?:darmowe|bezpłatne|darmowy|bezpłatny|za\\s+darmo)\\b"
+    },
+    {
+      "id": "fs-darmowa-dostawa",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:darmowa|bezpłatna)\\s+(?:dostawa|wysyłka)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:i|oraz|&)\\b|\\s+przy\\s+każdym\\s+zamówieniu\\b|\\s+na\\s+cały\\s+świat\\b|\\s+w\\s+cenie\\b)"
+    },
+    {
+      "id": "fs-dostawa-jest-darmowa",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:dostawa|wysyłka)\\s+(?:jest\\s+)?(?:darmowa|bezpłatna|gratis)\\b"
+    },
+    {
+      "id": "nc-bez-karty",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:bez|nie\\s+wymagamy)\\s+(?:podawania\\s+)?karty\\s+(?:kredytowej|płatniczej)\\b"
+    },
+    {
+      "id": "nc-karta-nie-jest-wymagana",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bkarta\\s+(?:kredytowa\\s+)?nie\\s+jest\\s+(?:wymagana|potrzebna)\\b"
+    },
+    {
+      "id": "ca-rezygnuj-w-dowolnym-momencie",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:rezygn\\p{L}*|anuluj\\p{L}*|wypowiedz\\p{L}*)\\b[^.\\n]{0,25}?\\b(?:w\\s+dowolnym\\s+momencie|kiedy\\s+chcesz|w\\s+każdej\\s+chwili)\\b"
+    }
+  ],
+  "pt": [
+    {
+      "id": "rw-dias-devolucao",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dias\\s+(?:para\\s+|de\\s+)?(?:devolu\\p{L}+|devolver|troca|trocas|arrependimento)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-devolucao-prazo",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:devolu\\p{L}+|devolver|troca|trocas|arrependimento)\\b[^.\\n]{0,40}?\\b(?:em|no\\s+prazo\\s+de|dentro\\s+de|até|durante)\\s+(?<n>\\p{Nd}+)\\s+dias\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-devolucao-semanas",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:devolu\\p{L}+|devolver)\\b[^.\\n]{0,40}?\\b(?:em|no\\s+prazo\\s+de|dentro\\s+de|até)\\s+(?<n>\\p{Nd}+)\\s+semanas\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-reembolso-prazo",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:reembols\\p{L}+|reembolsamos|estorno|restituição)\\b[^.\\n]{0,40}?\\b(?:em|no\\s+prazo\\s+de|dentro\\s+de)\\s+(?<n>\\p{Nd}+)\\s+dias(?:\\s+úteis)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-meses-de-garantia",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+meses\\s+de\\s+garantia\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garantia-de-meses",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarantia\\s+de\\s+(?<n>\\p{Nd}+)\\s+meses\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-anos-de-garantia",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+anos?\\s+de\\s+garantia\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garantia-de-anos",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgarantia\\s+de\\s+(?<n>\\p{Nd}+)\\s+anos?\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dias-de-garantia",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dias\\s+de\\s+garantia\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garantia-de-dias",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bgarantia\\s+(?:de\\s+)?(?:satisfação\\s+|reembolso\\s+)?(?:de\\s+)?(?<n>\\p{Nd}+)\\s+dias\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-entrega-em",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:entreg\\p{L}+|envio|enviamos|enviad\\p{L}+|chega|chegará|receb\\p{L}+)\\b[^.\\n]{0,30}?\\b(?:em|entre|de|dentro\\s+de|no\\s+prazo\\s+de|até)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|e)\\s*(?<m>\\p{Nd}+))?\\s+dias(?:\\s+úteis)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-prazo-de-entrega",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bprazo\\s+de\\s+(?:entrega|envio)\\b\\s*:?\\s*(?:aproximadamente\\s+|de\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|e)\\s*(?<m>\\p{Nd}+))?\\s+dias\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dias-de-entrega",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|a|e)\\s*(?<m>\\p{Nd}+))?\\s+dias(?:\\s+úteis)?\\s+de\\s+(?:entrega|envio)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-frete-gratis-acima",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:frete|portes|envio|entrega)\\s+(?:grátis|gratuito|gratuitos|gratuita)\\s+(?:a\\s+partir\\s+de|acima\\s+de|para\\s+pedidos\\s+(?:acima\\s+de|superiores\\s+a|a\\s+partir\\s+de|de\\s+mais\\s+de)|em\\s+compras\\s+(?:acima\\s+de|superiores\\s+a|a\\s+partir\\s+de)|para\\s+compras\\s+(?:acima\\s+de|superiores\\s+a|a\\s+partir\\s+de))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|R\\$|euros?|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|R\\$|euros?|eur)))"
+    },
+    {
+      "id": "fso-pedidos-acima-frete",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bpedidos\\s+(?:acima\\s+de|superiores\\s+a)\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|R\\$|euros?|eur)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|R\\$|euros?|eur)))\\s*[,:]?\\s*(?:frete|portes|envio)\\s+grátis"
+    },
+    {
+      "id": "t-dias-de-teste",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dias\\s+(?:de\\s+teste|grátis|de\\s+avaliação|de\\s+experiência)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-teste-gratis-por",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?:teste|avaliação|período\\s+de\\s+teste)\\s+grátis\\s+(?:de|por|durante)\\s+(?<n>\\p{Nd}+)\\s+dias\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-experimente-por",
+      "kind": "trialDays",
+      "regex": "(?i)\\bexperimente\\s+(?:grátis\\s+)?(?:por|durante)\\s+(?<n>\\p{Nd}+)\\s+dias\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-aviso-previo-de",
+      "kind": "noticeDays",
+      "regex": "(?i)\\baviso\\s+prévio\\s+de\\s+(?<n>\\p{Nd}+)\\s+dias\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-dias-de-aviso-previo",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dias\\s+de\\s+aviso\\s+prévio\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-respondemos-em-horas",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:respond\\p{L}*|resposta|retorn\\p{L}*|atend\\p{L}*|suporte)\\b[^.\\n]{0,40}?\\b(?:em|dentro\\s+de|em\\s+até|no\\s+prazo\\s+de|em\\s+menos\\s+de)\\s+(?<n>\\p{Nd}+)\\s*(?:horas?|h)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-horas-de-resposta",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*(?:horas?|h)\\s+(?:de\\s+)?(?:resposta|suporte|atendimento)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-resposta-em-dias",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:respond\\p{L}*|resposta)\\b[^.\\n]{0,40}?\\b(?:em|dentro\\s+de|no\\s+prazo\\s+de)\\s+(?<n>\\p{Nd}+)\\s+dias(?:\\s+úteis)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-disponibilidade",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:de\\s+)?(?:disponibilidade|uptime)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-disponibilidade-de",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:disponibilidade|uptime|SLA)\\b\\s*(?:de|:|garantid[ao]\\s+de)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-devolucao-gratis",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:devolu\\p{L}+|trocas?)\\s+(?:grátis|gratuit[ao]s?)\\b"
+    },
+    {
+      "id": "fr-devolucao-sem-custo",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:devolu\\p{L}+|trocas?)\\s+sem\\s+(?:custo|custos|taxas|despesas)\\b"
+    },
+    {
+      "id": "fs-frete-gratis",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:frete|portes|envio|entrega)\\s+(?:é\\s+|são\\s+)?(?:grátis|gratuit[ao]s?)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:e|&)\\b|\\s+em\\s+todos\\s+os\\s+pedidos\\b|\\s+para\\s+todo\\s+o\\s+mundo\\b|\\s+incluíd[oa]\\b)"
+    },
+    {
+      "id": "nc-sem-cartao",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bsem\\s+(?:necessidade\\s+de\\s+)?cart[ãa]o(?:\\s+de\\s+cr[eé]dito)?\\b"
+    },
+    {
+      "id": "nc-nao-requer-cartao",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bnão\\s+(?:é\\s+)?(?:requer|requerido|necessário|necessita|exige|precisa)\\s+(?:de\\s+)?(?:nenhum\\s+)?cart[ãa]o"
+    },
+    {
+      "id": "ca-cancele-a-qualquer-momento",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\bcancel\\p{L}*\\b[^.\\n]{0,25}?\\b(?:a\\s+qualquer\\s+(?:momento|altura|hora)|quando\\s+quiser)\\b"
+    }
+  ],
+  "ro": [
+    {
+      "id": "rw-zile-pentru-retur",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\s+(?:pentru\\s+|de\\s+)?(?:retur|returnare|retragere)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retur-in",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retur\\p{L}*|returna\\p{L}*|retragere)\\b[^.\\n]{0,40}?\\b(?:în|in|timp\\s+de|în\\s+termen\\s+de|pe\\s+parcursul)\\s+(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retur-saptamani",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retur\\p{L}*|returna\\p{L}*)\\b[^.\\n]{0,40}?\\b(?:în|in|timp\\s+de|în\\s+termen\\s+de)\\s+(?<n>\\p{Nd}+)\\s+săptămâni\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-rambursare-in",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:rambursare\\p{L}*|rambursăm|restituire\\p{L}*|banii\\s+înapoi)\\b[^.\\n]{0,40}?\\b(?:în|in|timp\\s+de|în\\s+termen\\s+de)\\s+(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile(?:\\s+lucrătoare)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-luni-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:de\\s+)?luni\\s+(?:de\\s+)?garan[tțţ]ie\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garantie-luni",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaran[tțţ]ie\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+(?:de\\s+)?luni\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-ani-garantie",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:de\\s+)?(?:ani|an)\\s+(?:de\\s+)?garan[tțţ]ie\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garantie-ani",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaran[tțţ]ie\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+(?:de\\s+)?(?:ani|an)\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-zile-garantie",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\s+(?:de\\s+)?(?:garan[tțţ]ia\\s+banilor\\s+înapoi|garan[tțţ]ie)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garantia-banilor-inapoi",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bgaran[tțţ]ia\\s+(?:banilor\\s+înapoi|satisfac[tțţ]iei)\\s+(?:de\\s+|timp\\s+de\\s+)(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-livrare-in",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:livrare\\p{L}*|livrăm|expediere|expediem|ajunge|trimitem)\\b[^.\\n]{0,30}?\\b(?:în|in|timp\\s+de|în\\s+termen\\s+de|până\\s+la)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|până\\s+la|și|şi)\\s*(?<m>\\p{Nd}+))?\\s+(?:de\\s+)?zile(?:\\s+lucrătoare)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-termen-de-livrare",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:termen|timp|durata)\\s+de\\s+livrare\\b\\s*:?\\s*(?:aproximativ\\s+|circa\\s+|de\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|până\\s+la)\\s*(?<m>\\p{Nd}+))?\\s+(?:de\\s+)?zile\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-zile-de-livrare",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—)\\s*(?<m>\\p{Nd}+))?\\s+zile\\s+(?:lucrătoare\\s+)?(?:de\\s+)?livrare\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-livrare-gratuita-peste",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:livrare|transport)\\s+(?:gratuit[ăa]?|gratis)\\s+(?:de\\s+la|peste|pentru\\s+comenzi\\s+(?:de\\s+la|peste)|la\\s+comenzi\\s+(?:de\\s+la|peste)|la\\s+achiziții\\s+(?:de\\s+la|peste))\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|lei|ron)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|lei|ron)))"
+    },
+    {
+      "id": "fso-comenzi-peste-livrare-gratuita",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bcomenzi\\s+(?:de\\s+la|peste)\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|lei|ron)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|lei|ron)))\\s*[,:]?\\s*(?:livrare|transport)\\s+(?:gratuit[ăa]?|gratis)"
+    },
+    {
+      "id": "t-zile-gratuit",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\s+(?:gratuit\\p{L}*|gratis|de\\s+probă|de\\s+test)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-proba-gratuita-de",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?:probă|perioadă\\s+de\\s+probă|trial)\\s+gratuit[ăa]?\\s+(?:de|timp\\s+de)\\s+(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-incearca-gratuit",
+      "kind": "trialDays",
+      "regex": "(?i)\\bîncearcă\\s+(?:gratuit\\s+)?(?:timp\\s+de|pentru)\\s+(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-preaviz-de",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bpreaviz\\s+(?:de\\s+)?(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-zile-de-preaviz",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile\\s+(?:de\\s+)?preaviz\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-raspundem-in-ore",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:răspund\\p{L}*|răspuns|vă\\s+contactăm|suport)\\b[^.\\n]{0,40}?\\b(?:în|in|în\\s+maxim|în\\s+termen\\s+de|în\\s+cel\\s+mult)\\s+(?<n>\\p{Nd}+)\\s+(?:de\\s+)?ore\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-ore-de-raspuns",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*(?:de\\s+)?ore\\s+(?:de\\s+)?(?:răspuns|suport|asistență)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-raspundem-in-zile",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:răspund\\p{L}*|răspuns)\\b[^.\\n]{0,40}?\\b(?:în|in|în\\s+termen\\s+de|în\\s+maxim)\\s+(?<n>\\p{Nd}+)\\s+(?:de\\s+)?zile(?:\\s+lucrătoare)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-disponibilitate",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:disponibilitate|uptime)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-disponibilitate-de",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:disponibilitate|uptime|SLA)\\b\\s*(?:de|:|garantat[ăa]\\s+de)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-retur-gratuit",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:retur|returnare|retururi)\\s+(?:gratuit\\p{L}*|gratis)\\b"
+    },
+    {
+      "id": "fr-retururile-sunt-gratuite",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:retururile|returnarea)\\s+(?:este\\s+|sunt\\s+)?(?:gratuit\\p{L}*|gratis)\\b"
+    },
+    {
+      "id": "fs-livrare-gratuita",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:livrare|transport)\\s+(?:este\\s+)?(?:gratuit[ăa]?|gratis)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:și|şi|&)\\b|\\s+la\\s+toate\\s+comenzile\\b|\\s+în\\s+toată\\s+lumea\\b|\\s+inclus[ăa]?\\b)"
+    },
+    {
+      "id": "nc-fara-card",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bfără\\s+card(?:\\s+de\\s+credit|\\s+bancar)?\\b"
+    },
+    {
+      "id": "nc-nu-este-nevoie-de-card",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bnu\\s+(?:este\\s+)?(?:necesar|nevoie|cerem|solicităm)\\s+(?:de\\s+)?(?:un\\s+)?card(?:\\s+de\\s+credit|\\s+bancar)?\\b"
+    },
+    {
+      "id": "ca-anuleaza-oricand",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:anul\\p{L}*|renun\\p{L}*|rezili\\p{L}*)\\b[^.\\n]{0,25}?\\b(?:oric[âa]nd|în\\s+orice\\s+moment|când\\s+dorești|când\\s+vrei)\\b"
+    }
+  ],
+  "ru": [
+    {
+      "id": "rw-dney-na-vozvrat",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:дней|дня|день)\\s+на\\s+(?:обмен\\s+и\\s+возврат|возврат|обмен|отказ)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-vozvrat-v-techenie",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:возврат\\p{L}*|вернуть|обмен\\p{L}*|отказ\\p{L}*)\\b[^.\\n]{0,40}?\\b(?:в\\s+течение|в\\s+течении|в\\s+срок\\s+до|до)\\s+(?<n>\\p{Nd}+)\\s+(?:рабочих\\s+|календарных\\s+|банковских\\s+)?(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-srok-vozvrata",
+      "kind": "returnWindow",
+      "regex": "(?i)\\bсрок\\s+(?:возврата|обмена)\\b[^.\\n]{0,15}?\\b(?<n>\\p{Nd}+)\\s+(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-vozvrat-nedel",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:возврат\\p{L}*|вернуть)\\b[^.\\n]{0,40}?\\bв\\s+течение\\s+(?<n>\\p{Nd}+)\\s+(?:недели|недель|неделя)\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-vozvrat-deneg-v-techenie",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:возврат\\s+(?:денег|средств|денежных\\s+средств)|вернем\\s+деньги|вернём\\s+деньги|деньги\\s+вернутся|возместим)\\b[^.\\n]{0,40}?\\b(?:в\\s+течение|в\\s+срок\\s+до|за|до)\\s+(?<n>\\p{Nd}+)\\s+(?:рабочих\\s+|календарных\\s+|банковских\\s+)?(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-mesyacev-garantii",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:месяцев|месяца|месяц)\\s+гарантии\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garantiya-mesyacev",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bгарантия\\s+(?:на\\s+)?(?<n>\\p{Nd}+)\\s+(?:месяцев|месяца|месяц)\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-let-garantii",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:лет|года|год)\\s+гарантии\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garantiya-let",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bгарантия\\s+(?:на\\s+)?(?<n>\\p{Nd}+)\\s+(?:лет|года|год)\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dney-garantii",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:дней|дня|день)\\s+(?:гарантии\\s+возврата\\s+денег|гарантии)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garantiya-vozvrata-deneg",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\bгарантия\\s+(?:возврата\\s+денег|удовлетворенности|удовлетворённости)(?:\\s+в\\s+течение|\\s+на)?\\s+(?<n>\\p{Nd}+)\\s+(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dostavka-za",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:доставк\\p{L}*|доставим|отправ\\p{L}*|получите|привезем|привезём)\\b[^.\\n]{0,30}?\\b(?:за|в\\s+течение|от|до|в\\s+срок\\s+до|в\\s+пределах)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|до|и)\\s*(?<m>\\p{Nd}+))?\\s+(?:рабочих\\s+|календарных\\s+|банковских\\s+)?(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-srok-dostavki",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bсрок\\s+доставки\\b\\s*[:\\-–]?\\s*(?:около\\s+|от\\s+|до\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|до)\\s*(?<m>\\p{Nd}+))?\\s+(?:рабочих\\s+|календарных\\s+|банковских\\s+)?(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dney-dostavki",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|до)\\s*(?<m>\\p{Nd}+))?\\s+(?:рабочих\\s+|календарных\\s+|банковских\\s+)?(?:дней|дня|день)\\s+(?:на\\s+)?доставк\\p{L}*",
+      "unit": "day"
+    },
+    {
+      "id": "fso-besplatnaya-dostavka-ot",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:бесплатная|бесплатную)\\s+(?:доставка|доставку)\\s+(?:от|при\\s+заказе\\s+от|при\\s+покупке\\s+от|при\\s+заказе\\s+свыше|свыше|на\\s+заказы\\s+от|на\\s+заказы\\s+свыше|для\\s+заказов\\s+от)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|руб\\.?|р\\.|рублей)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|руб\\.?|р\\.|рублей)))"
+    },
+    {
+      "id": "fso-dostavka-besplatno-ot",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bдоставка\\s+(?:бесплатная|бесплатно)\\s+(?:от|при\\s+заказе\\s+от|свыше)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|руб\\.?|р\\.|рублей)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|руб\\.?|р\\.|рублей)))"
+    },
+    {
+      "id": "fso-pri-zakaze-ot-dostavka",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bпри\\s+заказе\\s+(?:от|свыше)\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|руб\\.?|р\\.|рублей)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|руб\\.?|р\\.|рублей)))\\s*[,:]?\\s*доставка\\s+(?:бесплатная|бесплатно)"
+    },
+    {
+      "id": "t-dney-besplatno",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+(?:дней|дня|день)\\s+(?:бесплатно|бесплатного\\s+(?:пробного\\s+)?периода|пробного\\s+периода|бесплатного\\s+доступа|бесплатного\\s+использования|тестового\\s+периода)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-dnevnyj-probnyj-period",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?дневный\\s+(?:бесплатный\\s+)?(?:пробный\\s+период|тестовый\\s+период|триал|trial)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-poprobujte-besplatno",
+      "kind": "trialDays",
+      "regex": "(?i)\\bпопробуйте\\s+(?:бесплатно\\s+)?(?:в\\s+течение|на)\\s+(?<n>\\p{Nd}+)\\s+(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-uvedomit-za",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bза\\s+(?<n>\\p{Nd}+)\\s+(?:календарных\\s+)?(?:дней|дня|день)\\s+до\\s+(?:расторжения|отмены|окончания|прекращения)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-srok-uvedomleniya",
+      "kind": "noticeDays",
+      "regex": "(?i)\\bсрок\\s+(?:уведомления|предупреждения)\\s+(?:составляет\\s+)?(?<n>\\p{Nd}+)\\s+(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-otvetim-v-techenie-chasov",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:ответим|отвечаем|ответ|свяжемся|поддержка)\\b[^.\\n]{0,40}?\\b(?:в\\s+течение|в\\s+течении|за|через)\\s+(?<n>\\p{Nd}+)\\s+(?:рабочих\\s+)?(?:часов|часа|час)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-chasovaya-podderzhka",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?часов\\p{L}+\\s+(?:поддержка|ответ|время\\s+ответа)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-otvetim-v-techenie-dnej",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:ответим|отвечаем|ответ|свяжемся)\\b[^.\\n]{0,40}?\\b(?:в\\s+течение|в\\s+течении)\\s+(?<n>\\p{Nd}+)\\s+(?:рабочих\\s+)?(?:дней|дня|день)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-uptime",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:аптайм|uptime|доступност\\p{L}+)",
+      "unit": "percent"
+    },
+    {
+      "id": "up-uptime-sostavlyaet",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:аптайм|uptime|доступность|SLA)\\b\\s*(?:составляет|не\\s+менее|:|гарантирован\\p{L}*\\s+на\\s+уровне)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-besplatnyj-vozvrat",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:бесплатный|бесплатные|бесплатного)\\s+(?:возврат|возвраты|обмен)\\b"
+    },
+    {
+      "id": "fr-vozvrat-besplatnyj",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:возврат|возвраты)\\s+(?:товара\\s+)?(?:бесплатный|бесплатные|бесплатно)\\b"
+    },
+    {
+      "id": "fs-besplatnaya-dostavka",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:бесплатная\\s+доставка|доставка\\s+бесплатная|доставка\\s+бесплатно|бесплатная\\s+отправка)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:и|&)\\b|\\s+на\\s+все\\s+заказы\\b|\\s+по\\s+всему\\s+миру\\b|\\s+включена?\\b)"
+    },
+    {
+      "id": "nc-bez-karty",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bбез\\s+(?:привязки\\s+|ввода\\s+)?(?:банковской\\s+|кредитной\\s+)?карты\\b"
+    },
+    {
+      "id": "nc-karta-ne-trebuetsya",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:банковская\\s+|кредитная\\s+)?карта\\s+не\\s+(?:требуется|нужна|обязательна)\\b"
+    },
+    {
+      "id": "ca-otmena-v-lyuboj-moment",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:отмен\\p{L}*|отказ\\p{L}*|расторг\\p{L}*|отпис\\p{L}*)\\b[^.\\n]{0,25}?\\b(?:в\\s+любой\\s+момент|в\\s+любое\\s+время|когда\\s+угодно)\\b"
+    }
+  ],
+  "sv": [
+    {
+      "id": "rw-dagars-returratt",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dagars\\s+(?:fri\\s+)?(?:returrätt|ångerrätt|öppet\\s+köp|retur|bytesrätt)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-retur-inom",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:retur\\p{L}*|returnera|ångerrätt\\p{L}*|återlämna)\\b[^.\\n]{0,40}?\\binom\\s+(?<n>\\p{Nd}+)\\s+dagar\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-veckors-returratt",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?veckors\\s+(?:returrätt|ångerrätt|öppet\\s+köp)\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-aterbetalning-inom",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:återbetal\\p{L}*|pengarna\\s+tillbaka|återbetalning|ersättning)\\b[^.\\n]{0,40}?\\binom\\s+(?<n>\\p{Nd}+)\\s+(?:arbetsdagar|vardagar|dagar|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-manaders-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?månaders\\s+(?:fabriks)?garanti\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-ars-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?års\\s+(?:fabriks)?garanti\\b",
+      "unit": "year"
+    },
+    {
+      "id": "w-garanti-pa-manader",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+(?:på|i)\\s+(?<n>\\p{Nd}+)\\s+månader\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garanti-pa-ar",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+(?:på|i)\\s+(?<n>\\p{Nd}+)\\s+år\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-dagars-garanti",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dagars\\s+(?:pengarna\\s+tillbaka[- ]?garanti|nöjd[- ]kund[- ]garanti|garanti|pengarna\\s+tillbaka)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-garanti-pa-dagar",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:pengarna\\s+tillbaka[- ]?garanti|garanti)\\s+(?:på|i)\\s+(?<n>\\p{Nd}+)\\s+dagar\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-leverans-inom",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:leverans|levereras|skickas|frakt|fraktas|levererad|ankommer)\\b[^.\\n]{0,30}?\\b(?:inom|på|om)\\s+(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|till|och)\\s*(?<m>\\p{Nd}+))?\\s+(?:arbetsdagar|vardagar|dagar|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-leveranstid",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bleveranstid\\b\\s*(?::|är)?\\s*(?:cirka\\s+|ca\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|till)\\s*(?<m>\\p{Nd}+))?\\s+(?:arbetsdagar|vardagar|dagar|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-dagars-leverans",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|till)\\s*(?<m>\\p{Nd}+))?\\s+(?:arbetsdagars|dagars)\\s+leverans(?:tid)?\\b",
+      "unit": "day"
+    },
+    {
+      "id": "fso-fri-frakt-over",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:fri|gratis)\\s+(?:frakt|leverans)\\s+(?:vid\\s+köp\\s+(?:över|från|på)|för\\s+beställningar\\s+(?:över|från)|vid\\s+beställning\\s+(?:över|från)|vid\\s+order\\s+(?:över|från)|på\\s+beställningar\\s+(?:över|från)|över|från)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kronor|sek)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kronor|sek)))"
+    },
+    {
+      "id": "fso-kop-over-fri-frakt",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\bköp\\s+över\\s+(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kronor|sek)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|kr\\.?|kronor|sek)))\\s*[,:]?\\s*(?:får\\s+du\\s+)?(?:fri|gratis)\\s+(?:frakt|leverans)"
+    },
+    {
+      "id": "t-dagars-prov",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?dagars\\s+(?:gratis\\s+)?(?:prov\\p{L}*|testperiod|test|provperiod)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-prova-gratis-i",
+      "kind": "trialDays",
+      "regex": "(?i)\\bprova\\s+(?:gratis\\s+)?(?:i|under)\\s+(?<n>\\p{Nd}+)\\s+dagar\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-uppsagningstid",
+      "kind": "noticeDays",
+      "regex": "(?i)\\buppsägningstid\\s+(?:på\\s+|om\\s+)?(?<n>\\p{Nd}+)\\s+(?:dagar|dag)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-dagars-uppsagningstid",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s+dagars\\s+uppsägningstid\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-svar-inom-timmar",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:svar\\p{L}*|svarar|återkom\\p{L}*|kontakt\\p{L}*|support)\\b[^.\\n]{0,40}?\\b(?:inom|på|under)\\s+(?<n>\\p{Nd}+)\\s+(?:arbets)?timm\\p{L}*\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-timmars-svar",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)[- ]?timmars\\s+(?:svar|support|svarstid|service)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-svar-inom-dagar",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:svar\\p{L}*|svarar|återkom\\p{L}*)\\b[^.\\n]{0,40}?\\binom\\s+(?<n>\\p{Nd}+)\\s+(?:arbetsdagar|vardagar|dagar)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-upptid",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:upptid|tillgänglighet|uptime)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-upptid-pa",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:upptid|tillgänglighet|uptime|SLA)\\b\\s*(?:på|om|:|garanterad\\s+på)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-fri-retur",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:fri|fria|gratis)\\s+(?:retur|returer|returfrakt)\\b"
+    },
+    {
+      "id": "fr-retur-ar-fri",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:retur|returer)\\s+(?:är\\s+)?(?:fri|gratis|kostnadsfri)\\b"
+    },
+    {
+      "id": "fs-fri-frakt",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:fri|gratis)\\s+(?:frakt|leverans|fraktkostnad)(?:\\s*[.!,;:|)]|\\s*$|\\s+(?:och|&)\\b|\\s+på\\s+alla\\s+(?:beställningar|order)\\b|\\s+över\\s+hela\\s+världen\\b|\\s+ingår\\b)"
+    },
+    {
+      "id": "fs-frakten-ar-fri",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:frakten|leveransen|fraktkostnaden)\\s+är\\s+(?:fri|gratis)\\b"
+    },
+    {
+      "id": "nc-inget-kort-kravs",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:inget|ingen)\\s+(?:kredit|bank|betal)?kort(?:uppgifter)?\\s+(?:krävs|behövs|nödvändigt)\\b"
+    },
+    {
+      "id": "nc-utan-kort",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\butan\\s+(?:kredit|bank|betal)?kort\\b"
+    },
+    {
+      "id": "ca-avsluta-nar-som-helst",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:avsluta|avbryt|säg\\s+upp|uppsägning|avboka)\\p{L}*\\b[^.\\n]{0,25}?\\b(?:när\\s+som\\s+helst|när\\s+du\\s+vill)\\b"
+    }
+  ],
+  "tr": [
+    {
+      "id": "rw-gun-iade",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*gün\\s+(?:koşulsuz\\s+|ücretsiz\\s+)?(?:iade|değişim|cayma)\\p{L}*",
+      "unit": "day"
+    },
+    {
+      "id": "rw-iade-icinde",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:iade|değişim|cayma|geri\\s+gönder)\\p{L}*\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s*gün\\s+(?:içinde|içerisinde|boyunca)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rw-iade-suresi",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:iade|cayma)\\s+(?:süresi|hakkı\\s+süresi)\\s*:?\\s*(?<n>\\p{Nd}+)\\s*gün",
+      "unit": "day"
+    },
+    {
+      "id": "rw-iade-hafta",
+      "kind": "returnWindow",
+      "regex": "(?i)\\b(?:iade|değişim)\\p{L}*\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s*hafta\\s+(?:içinde|içerisinde)\\b",
+      "unit": "week"
+    },
+    {
+      "id": "rf-para-iadesi-gun-icinde",
+      "kind": "refundDays",
+      "regex": "(?i)\\b(?:geri\\s+ödeme|para\\s+iadesi|ödeme\\s+iadesi|iade\\s+bedeli|ücret\\s+iadesi)\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s*(?:iş\\s+)?gün\\p{L}*\\s+(?:içinde|içerisinde)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "w-ay-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*ay\\s+(?:üretici\\s+)?garanti\\p{L}*",
+      "unit": "month"
+    },
+    {
+      "id": "w-yil-garanti",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*yıl\\s+(?:üretici\\s+)?garanti\\p{L}*",
+      "unit": "year"
+    },
+    {
+      "id": "w-garanti-suresi-ay",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+süresi\\s*:?\\s*(?<n>\\p{Nd}+)\\s*ay\\b",
+      "unit": "month"
+    },
+    {
+      "id": "w-garanti-suresi-yil",
+      "kind": "warrantyMonths",
+      "regex": "(?i)\\bgaranti\\s+süresi\\s*:?\\s*(?<n>\\p{Nd}+)\\s*yıl\\b",
+      "unit": "year"
+    },
+    {
+      "id": "g-gun-para-iade-garantisi",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*gün\\s+(?:para\\s+iade\\s+garantisi|memnuniyet\\s+garantisi|iade\\s+garantisi|garanti)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "g-para-iade-garantisi-gun",
+      "kind": "guaranteeDays",
+      "regex": "(?i)\\b(?:para\\s+iade\\s+garantisi|memnuniyet\\s+garantisi)\\s*:?\\s*(?<n>\\p{Nd}+)\\s*gün\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-teslimat-gun",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?:teslimat|kargo|teslim|gönderi|sevkiyat)\\p{L}*\\b[^.\\n]{0,30}?\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|ile|ila)\\s*(?<m>\\p{Nd}+))?\\s*(?:iş\\s+)?gün\\p{L}*\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-teslimat-suresi",
+      "kind": "shippingDays",
+      "regex": "(?i)\\bteslimat\\s+süresi\\b\\s*:?\\s*(?:yaklaşık\\s+|ortalama\\s+)?(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|ila)\\s*(?<m>\\p{Nd}+))?\\s*(?:iş\\s+)?gün\\b",
+      "unit": "day"
+    },
+    {
+      "id": "sd-gun-icinde-teslim",
+      "kind": "shippingDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)(?:\\s*(?:-|–|—|ila)\\s*(?<m>\\p{Nd}+))?\\s*(?:iş\\s+)?gün\\s+(?:içinde|içerisinde)\\s+(?:teslim|kargo|gönder)\\p{L}*",
+      "unit": "day"
+    },
+    {
+      "id": "fso-tl-uzeri-kargo",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|tl|try|lira)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|tl|try|lira)))\\s+(?:ve\\s+)?(?:üzeri|üstü)\\s+(?:\\p{L}+\\s+)?(?:ücretsiz\\s+(?:kargo|teslimat|gönderim)|kargo\\s+(?:bedava|ücretsiz)|bedava\\s+kargo)"
+    },
+    {
+      "id": "fso-ucretsiz-kargo-icin-minimum",
+      "kind": "freeShippingOver",
+      "regex": "(?i)\\b(?:ücretsiz\\s+kargo|bedava\\s+kargo|ücretsiz\\s+teslimat)\\s+için\\s+(?:minimum\\s+|en\\s+az\\s+)?(?:sepet\\s+tutarı\\s+|alışveriş\\s+tutarı\\s+)?(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|tl|try|lira)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|tl|try|lira)))"
+    },
+    {
+      "id": "t-gun-ucretsiz-deneme",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*gün\\s+(?:ücretsiz\\s+)?(?:deneme|test)\\p{L}*",
+      "unit": "day"
+    },
+    {
+      "id": "t-deneme-suresi-gun",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?:ücretsiz\\s+)?(?:deneme|test)\\s+(?:süresi|dönemi)\\s*:?\\s*(?<n>\\p{Nd}+)\\s*gün\\b",
+      "unit": "day"
+    },
+    {
+      "id": "t-gun-boyunca-ucretsiz",
+      "kind": "trialDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*gün\\s+boyunca\\s+ücretsiz\\s+(?:deneyin|kullanın|deneme)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-fesih-bildirim-suresi",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?:fesih|iptal)\\s+(?:bildirim\\s+süresi|ihbar\\s+süresi)\\s*:?\\s*(?<n>\\p{Nd}+)\\s*gün\\b",
+      "unit": "day"
+    },
+    {
+      "id": "n-gun-onceden-bildirim",
+      "kind": "noticeDays",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*gün\\s+(?:önceden\\s+)?(?:yazılı\\s+)?(?:bildirim|ihbar)\\b",
+      "unit": "day"
+    },
+    {
+      "id": "rh-saat-icinde-yanit",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*saat\\s+(?:içinde|içerisinde)\\s+(?:yanıt|cevap|dönüş|geri\\s+dönüş)\\p{L}*",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-destek-saat-icinde",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?:yanıt\\p{L}*|cevap\\p{L}*|dönüş\\p{L}*|destek)\\b[^.\\n]{0,40}?\\b(?<n>\\p{Nd}+)\\s*saat\\s+(?:içinde|içerisinde)\\b",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-is-gunu-icinde-yanit",
+      "kind": "responseHours",
+      "regex": "(?i)\\b(?<n>\\p{Nd}+)\\s*iş\\s+günü\\s+(?:içinde|içerisinde)\\s+(?:yanıt|cevap|dönüş)\\p{L}*",
+      "unit": "day"
+    },
+    {
+      "id": "up-yuzde-uptime",
+      "kind": "uptimePercent",
+      "regex": "(?i)%\\s?(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s+(?:uptime|erişilebilirlik|kesintisiz\\s+çalışma|çalışma\\s+süresi)",
+      "unit": "percent"
+    },
+    {
+      "id": "up-pct-uptime",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s?%\\s+(?:uptime|erişilebilirlik)\\b",
+      "unit": "percent"
+    },
+    {
+      "id": "up-uptime-orani",
+      "kind": "uptimePercent",
+      "regex": "(?i)\\b(?:uptime|erişilebilirlik|SLA)\\b\\s*(?:oranı|:)?\\s*%\\s?(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-ucretsiz-iade",
+      "kind": "freeReturns",
+      "regex": "(?i)\\bücretsiz\\s+(?:iade|değişim)\\b"
+    },
+    {
+      "id": "fr-iade-ucretsiz",
+      "kind": "freeReturns",
+      "regex": "(?i)\\b(?:iade|değişim)\\s+(?:ve\\s+(?:iade|değişim)\\s+)?ücretsiz(?:dir)?\\b"
+    },
+    {
+      "id": "fs-ucretsiz-kargo",
+      "kind": "freeShipping",
+      "regex": "(?i)(?:\\b(?:tüm|bütün|her)\\s+(?:siparişlerde|ürünlerde|alışverişlerde|siparişte|alışverişte)\\s+|(?:^|[.!?:|]\\s*))(?:ücretsiz|bedava)\\s+(?:kargo|teslimat|gönderim)\\b"
+    },
+    {
+      "id": "fs-kargo-ucretsiz",
+      "kind": "freeShipping",
+      "regex": "(?i)\\b(?:kargo|teslimat)\\s+(?:ücretsiz|bedava)(?:dir)?\\b"
+    },
+    {
+      "id": "nc-kredi-karti-gerekmez",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\bkredi\\s+kartı\\s+(?:gerekmez|gerekmiyor|istemiyoruz|bilgisi\\s+gerekmez|gerekli\\s+değil)\\b"
+    },
+    {
+      "id": "nc-kart-olmadan",
+      "kind": "noCardRequired",
+      "regex": "(?i)\\b(?:kredi\\s+kartı|kart\\s+bilgisi)\\s+(?:olmadan|girmeden|istemeden)\\b"
+    },
+    {
+      "id": "ca-istediginiz-zaman-iptal",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:iptal|fesih|üyelik\\s+iptali)\\p{L}*\\b[^.\\n]{0,25}?\\b(?:istediğiniz\\s+zaman|dilediğiniz\\s+zaman|her\\s+zaman|istediğin\\s+zaman)\\b"
+    },
+    {
+      "id": "ca-istedigin-zaman-iptal-et",
+      "kind": "cancelAnytime",
+      "regex": "(?i)\\b(?:istediğiniz|dilediğiniz|istediğin)\\s+zaman\\s+(?:iptal|vazgeç|fesih)\\p{L}*"
+    }
+  ],
+  "zh": [
+    {
+      "id": "rw-tian-tuihuo",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:天|日)\\s*(?:无理由|無理由)?(?:退货|退貨|退换货|退換貨|换货|換貨)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-tian-nei-tuihuo",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:天|日)内[^。\\n]{0,10}?(?:退货|退貨|退换|退換|换货|換貨)",
+      "unit": "day"
+    },
+    {
+      "id": "rw-zhou-tuihuo",
+      "kind": "returnWindow",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:周|週)(?:内)?(?:无理由|無理由)?(?:退货|退貨)",
+      "unit": "week"
+    },
+    {
+      "id": "rf-tuikuan-tian-nei",
+      "kind": "refundDays",
+      "regex": "(?i)(?:退款|退費|退费|款项|退还|退還)[^。\\n]{0,20}?(?<n>\\p{Nd}+)\\s*(?:个)?(?:工作)?(?:天|日)内",
+      "unit": "day"
+    },
+    {
+      "id": "w-yue-baoxiu",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:个|個)?月(?:的)?(?:质保|保修|保固|質保)",
+      "unit": "month"
+    },
+    {
+      "id": "w-nian-baoxiu",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*年(?:的)?(?:质保|保修|保固|質保|免费保修)",
+      "unit": "year"
+    },
+    {
+      "id": "w-baoxiu-qi-yue",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?:保修期|保固期|质保期|保修期限)\\s*[:：为]?\\s*(?<n>\\p{Nd}+)\\s*(?:个|個)?月",
+      "unit": "month"
+    },
+    {
+      "id": "w-baoxiu-qi-nian",
+      "kind": "warrantyMonths",
+      "regex": "(?i)(?:保修期|保固期|质保期|保修期限)\\s*[:：为]?\\s*(?<n>\\p{Nd}+)\\s*年",
+      "unit": "year"
+    },
+    {
+      "id": "g-tian-tuikuan-baozheng",
+      "kind": "guaranteeDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:天|日)(?:内)?(?:无理由)?(?:退款保证|退款保證|满意保证|滿意保證|退款担保|保证退款)",
+      "unit": "day"
+    },
+    {
+      "id": "g-tuikuan-baozheng-tian",
+      "kind": "guaranteeDays",
+      "regex": "(?i)(?:退款保证|退款保證|满意保证)\\s*[:：]?\\s*(?<n>\\p{Nd}+)\\s*(?:天|日)",
+      "unit": "day"
+    },
+    {
+      "id": "sd-fahuo-gongzuori",
+      "kind": "shippingDays",
+      "regex": "(?i)(?:发货|發貨|配送|送达|送達|交付|到货|到貨|物流|快递|快遞)[^。\\n]{0,20}?(?<n>\\p{Nd}+)(?:\\s*(?:-|~|〜|至|到)\\s*(?<m>\\p{Nd}+))?\\s*(?:个)?(?:工作)?(?:天|日)(?:内|左右|送达|送達|到达|到達)",
+      "unit": "day"
+    },
+    {
+      "id": "sd-tian-songda",
+      "kind": "shippingDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)(?:\\s*(?:-|~|〜|至|到)\\s*(?<m>\\p{Nd}+))?\\s*(?:个)?(?:工作)?(?:天|日)(?:内)?(?:送达|送達|发货|發貨|到货|到貨|交付)",
+      "unit": "day"
+    },
+    {
+      "id": "fso-man-baoyou",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?:满|滿|订单满|訂單滿|消费满|消費滿|购物满|購物滿)\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|元|块|塊|nt\\$|ntd|rmb|cny)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|元|块|塊|nt\\$|ntd|rmb|cny)))\\s*(?:即)?(?:可)?(?:免运费|免運費|包邮|包郵|免费配送|免費配送|免運)"
+    },
+    {
+      "id": "fso-baoyou-man",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?:包邮|免运费|免運費|免運)\\s*[（(]\\s*(?:满|滿)?\\s*(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|元|块|塊|nt\\$|ntd|rmb|cny)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|元|块|塊|nt\\$|ntd|rmb|cny)))"
+    },
+    {
+      "id": "fso-yishang-baoyou",
+      "kind": "freeShippingOver",
+      "regex": "(?i)(?<amount>(?:(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|元|块|塊|nt\\$|ntd|rmb|cny)\\s?(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)(?:,-|:-)|(?:\\p{Nd}{1,3}(?:[.,'’ ]\\p{Nd}{3})+(?:[.,]\\p{Nd}{1,2})?|\\p{Nd}+(?:[.,]\\p{Nd}{1,2})?)\\s?(?:[$€£¥₹₩₺₽]|(?-i:[A-Z]{3})|元|块|塊|nt\\$|ntd|rmb|cny)))\\s*(?:以上|起)\\s*(?:免运费|包邮|免運費|免運|包郵)"
+    },
+    {
+      "id": "t-tian-shiyong",
+      "kind": "trialDays",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:天|日)(?:的)?(?:免费|免費)?(?:试用|試用|体验|體驗|试读)",
+      "unit": "day"
+    },
+    {
+      "id": "t-mianfei-shiyong-tian",
+      "kind": "trialDays",
+      "regex": "(?i)(?:免费|免費)(?:试用|試用|体验|體驗)\\s*(?<n>\\p{Nd}+)\\s*(?:天|日)",
+      "unit": "day"
+    },
+    {
+      "id": "n-tiqian-tian-tongzhi",
+      "kind": "noticeDays",
+      "regex": "(?i)(?:提前|需提前|须提前|須提前)\\s*(?<n>\\p{Nd}+)\\s*(?:天|日)(?:书面)?(?:通知|申请|申請|告知)",
+      "unit": "day"
+    },
+    {
+      "id": "n-tongzhi-qi-tian",
+      "kind": "noticeDays",
+      "regex": "(?i)(?:通知期|终止通知|終止通知|通知期限)\\s*[:：为]?\\s*(?<n>\\p{Nd}+)\\s*(?:天|日)",
+      "unit": "day"
+    },
+    {
+      "id": "rh-xiaoshi-nei-huifu",
+      "kind": "responseHours",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*小时内(?:回复|回覆|答复|答覆|响应|響應|联系|聯繫)",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-huifu-xiaoshi-nei",
+      "kind": "responseHours",
+      "regex": "(?i)(?:回复|回覆|答复|响应|響應|客服)[^。\\n]{0,20}?(?<n>\\p{Nd}+)\\s*(?:个)?(?:工作)?小时内",
+      "unit": "hour"
+    },
+    {
+      "id": "rh-gongzuori-nei-huifu",
+      "kind": "responseHours",
+      "regex": "(?i)(?<n>\\p{Nd}+)\\s*(?:个)?工作日内(?:回复|回覆|答复|联系)",
+      "unit": "day"
+    },
+    {
+      "id": "up-pct-keyongxing",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%％]\\s*(?:的)?(?:可用性|可用率|在线率|在線率|稳定性|正常运行时间|正常運行時間|SLA)",
+      "unit": "percent"
+    },
+    {
+      "id": "up-keyongxing-wei",
+      "kind": "uptimePercent",
+      "regex": "(?i)(?:可用性|可用率|在线率|SLA|正常运行时间)\\s*(?:达到|为|:|：|保证|承诺)?\\s*(?<n>\\p{Nd}{2,3}(?:[.,٫]\\p{Nd}+)?)\\s*[%％]",
+      "unit": "percent"
+    },
+    {
+      "id": "fr-mianfei-tuihuo",
+      "kind": "freeReturns",
+      "regex": "(?i)(?:免费|免費)(?:退货|退貨|换货|換貨|退换货|退換貨)"
+    },
+    {
+      "id": "fr-tuihuo-mianfei",
+      "kind": "freeReturns",
+      "regex": "(?i)(?:退货|退貨|退换货|退換貨)(?:免费|免運費|免運|免費)"
+    },
+    {
+      "id": "fs-quanchang-baoyou",
+      "kind": "freeShipping",
+      "regex": "(?i)(?:全场|全場|全国|全國|所有订单|所有訂單|全部订单|全部訂單|全站)\\s*(?:包邮|包郵|免运费|免運費|免運)"
+    },
+    {
+      "id": "nc-wuxu-xinyongka",
+      "kind": "noCardRequired",
+      "regex": "(?i)(?:无需|無需|不需要|不用|免)\\s*(?:绑定|綁定|填写|填寫|输入|輸入)?\\s*(?:信用卡|银行卡|銀行卡|支付方式)"
+    },
+    {
+      "id": "ca-suishi-quxiao",
+      "kind": "cancelAnytime",
+      "regex": "(?i)(?:随时|隨時|任何时候|任何時候)(?:可以|可)?(?:取消|退订|退訂|终止|終止|解约|解約)"
+    },
+    {
+      "id": "ca-dingyue-suishi",
+      "kind": "cancelAnytime",
+      "regex": "(?i)(?:订阅|訂閱|会员|會員|服务|服務)(?:可|均可)?(?:随时|隨時)(?:取消|退订|退訂|终止|終止)"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "testimonial": [
+    {
+      "selector": "blockquote",
+      "attribution": "cite, footer"
+    },
+    {
+      "selector": ".elementor-testimonial-wrapper",
+      "quote": ".elementor-testimonial-content",
+      "attribution": ".elementor-testimonial-name"
+    },
+    {
+      "selector": "[itemprop=\"review\"]",
+      "quote": "[itemprop=\"reviewBody\"]",
+      "attribution": "[itemprop=\"author\"]"
+    },
+    {
+      "selector": ".testimonial, .testimonial-item",
+      "quote": ".testimonial-content, .testimonial-text, .testimonial-quote, blockquote, q",
+      "attribution": ".testimonial-author, .testimonial-name, cite, figcaption"
+    }
+  ],
+  "byline": {
+    "selectors": [
+      "[rel=\"author\"]",
+      "[itemprop=\"author\"]",
+      ".byline",
+      ".posted-by",
+      ".wp-block-post-author__name",
+      ".wp-block-post-author-name"
+    ],
+    "prefixes": {
+      "ar": [
+        "بقلم",
+        "كتبه",
+        "كتبها",
+        "بواسطة",
+        "الكاتب",
+        "الكاتبة"
+      ],
+      "cs": [
+        "autor",
+        "napsal",
+        "napsala",
+        "publikoval",
+        "publikovala"
+      ],
+      "da": [
+        "af",
+        "skrevet af",
+        "forfatter"
+      ],
+      "de": [
+        "von",
+        "geschrieben von",
+        "autor",
+        "verfasst von",
+        "veröffentlicht von"
+      ],
+      "en": [
+        "by",
+        "written by",
+        "posted by",
+        "author",
+        "authored by",
+        "published by",
+        "words by"
+      ],
+      "es": [
+        "por",
+        "escrito por",
+        "autor",
+        "autora",
+        "publicado por"
+      ],
+      "fi": [
+        "kirjoittaja",
+        "kirjoittanut",
+        "kirjoitti",
+        "julkaissut",
+        "tekijä"
+      ],
+      "fr": [
+        "par",
+        "écrit par",
+        "auteur",
+        "autrice",
+        "publié par",
+        "rédigé par"
+      ],
+      "it": [
+        "di",
+        "scritto da",
+        "autore",
+        "autrice",
+        "pubblicato da"
+      ],
+      "ja": [
+        "投稿者",
+        "著者",
+        "執筆者",
+        "作成者",
+        "筆者",
+        "ライター",
+        "by"
+      ],
+      "ko": [
+        "작성자",
+        "글쓴이",
+        "저자",
+        "작가",
+        "기자"
+      ],
+      "nb": [
+        "av",
+        "skrevet av",
+        "forfatter",
+        "publisert av"
+      ],
+      "nl": [
+        "door",
+        "geschreven door",
+        "auteur",
+        "gepubliceerd door"
+      ],
+      "pl": [
+        "autor",
+        "autorka",
+        "przez",
+        "napisał",
+        "napisała",
+        "opublikował",
+        "opublikowała"
+      ],
+      "pt": [
+        "por",
+        "escrito por",
+        "autor",
+        "autora",
+        "publicado por",
+        "postado por"
+      ],
+      "ro": [
+        "de",
+        "scris de",
+        "autor",
+        "publicat de",
+        "postat de"
+      ],
+      "ru": [
+        "автор",
+        "опубликовал",
+        "опубликовала",
+        "написал",
+        "написала",
+        "от"
+      ],
+      "sv": [
+        "av",
+        "skrivet av",
+        "skriven av",
+        "författare",
+        "publicerad av"
+      ],
+      "tr": [
+        "yazan",
+        "yazar",
+        "yazarı",
+        "gönderen",
+        "hazırlayan"
+      ],
+      "zh": [
+        "作者",
+        "撰文",
+        "发布者",
+        "發布者",
+        "撰稿",
+        "记者",
+        "記者",
+        "文/"
+      ]
+    }
+  },
+  "team": {
+    "section": [
+      ".team",
+      ".our-team",
+      ".team-members",
+      ".team-section",
+      "#team",
+      "#our-team"
+    ],
+    "headings": {
+      "ar": [
+        "فريقنا",
+        "تعرف على فريقنا",
+        "فريق العمل",
+        "فريقنا المتميز"
+      ],
+      "cs": [
+        "náš tým",
+        "poznejte náš tým",
+        "seznamte se s naším týmem",
+        "tým"
+      ],
+      "da": [
+        "vores team",
+        "mød teamet",
+        "mød holdet",
+        "vores medarbejdere",
+        "team"
+      ],
+      "de": [
+        "unser team",
+        "das team",
+        "unsere mitarbeiter",
+        "lernen sie unser team kennen",
+        "team"
+      ],
+      "en": [
+        "our team",
+        "meet the team",
+        "meet our team",
+        "the team",
+        "our people",
+        "our staff",
+        "leadership team",
+        "our leadership",
+        "team"
+      ],
+      "es": [
+        "nuestro equipo",
+        "conoce al equipo",
+        "el equipo",
+        "conozca a nuestro equipo",
+        "equipo"
+      ],
+      "fi": [
+        "tiimimme",
+        "tapaa tiimimme",
+        "henkilökuntamme",
+        "tiimi"
+      ],
+      "fr": [
+        "notre équipe",
+        "l'équipe",
+        "l’équipe",
+        "rencontrez l'équipe",
+        "rencontrez l’équipe",
+        "équipe"
+      ],
+      "it": [
+        "il nostro team",
+        "il nostro staff",
+        "il nostro gruppo",
+        "il team",
+        "conosci il nostro team",
+        "team"
+      ],
+      "ja": [
+        "私たちのチーム",
+        "スタッフ紹介",
+        "チーム紹介",
+        "メンバー紹介",
+        "チームメンバー"
+      ],
+      "ko": [
+        "우리 팀",
+        "팀 소개",
+        "팀원 소개",
+        "멤버 소개",
+        "직원 소개",
+        "팀원"
+      ],
+      "nb": [
+        "vårt team",
+        "møt teamet",
+        "våre ansatte",
+        "teamet",
+        "team"
+      ],
+      "nl": [
+        "ons team",
+        "maak kennis met ons team",
+        "ontmoet het team",
+        "het team",
+        "team"
+      ],
+      "pl": [
+        "nasz zespół",
+        "poznaj nasz zespół",
+        "zespół",
+        "nasi pracownicy",
+        "nasz team"
+      ],
+      "pt": [
+        "nossa equipe",
+        "nossa equipa",
+        "a equipe",
+        "a equipa",
+        "conheça a equipe",
+        "conheça a nossa equipa",
+        "equipe",
+        "equipa",
+        "nosso time"
+      ],
+      "ro": [
+        "echipa noastră",
+        "echipa noastra",
+        "echipa",
+        "cunoaște echipa",
+        "cunoașteți echipa"
+      ],
+      "ru": [
+        "наша команда",
+        "команда",
+        "познакомьтесь с командой",
+        "наши сотрудники",
+        "наши специалисты"
+      ],
+      "sv": [
+        "vårt team",
+        "möt teamet",
+        "våra medarbetare",
+        "teamet",
+        "team"
+      ],
+      "tr": [
+        "ekibimiz",
+        "takımımız",
+        "ekibimizle tanışın",
+        "ekip",
+        "kadromuz"
+      ],
+      "zh": [
+        "我们的团队",
+        "团队介绍",
+        "团队成员",
+        "我們的團隊",
+        "團隊介紹",
+        "團隊成員"
+      ]
+    },
+    "name": [
+      ".team-member-name",
+      ".team-name",
+      ".member-name",
+      "[itemtype$=\"schema.org/Person\"] [itemprop=\"name\"]"
+    ]
+  }
+}

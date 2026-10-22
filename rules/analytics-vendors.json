@@ -1,0 +1,173 @@
+[
+  {
+    "id": "google-analytics-4",
+    "hosts": [
+      "www.google-analytics.com",
+      "analytics.google.com",
+      "region1.google-analytics.com",
+      "www.googletagmanager.com"
+    ],
+    "pageView": { "pathMatches": "^/g/(s/)?collect$" },
+    "eventParam": "en",
+    "idParam": "tid",
+    "libraryPaths": "^/gtag/js$",
+    "libraryIdParam": "id",
+    "idPattern": "\\bG-[A-Z0-9]{6,12}\\b"
+  },
+  {
+    "id": "google-tag-manager",
+    "hosts": ["www.googletagmanager.com"],
+    "libraryPaths": "^/gtm\\.js$",
+    "libraryIdParam": "id",
+    "idPattern": "\\bGTM-[A-Z0-9]{5,8}\\b"
+  },
+  {
+    "id": "google-ads",
+    "hosts": ["www.googleadservices.com", "googleads.g.doubleclick.net"],
+    "idPattern": "\\bAW-[0-9]{8,11}\\b"
+  },
+  {
+    "id": "meta-pixel",
+    "hosts": ["www.facebook.com", "connect.facebook.net"],
+    "pageView": { "pathMatches": "^/tr/?$" },
+    "eventParam": "ev",
+    "idParam": "id",
+    "libraryPaths": "^/[a-z]{2}_[A-Z]{2}/fbevents\\.js$",
+    "idPattern": "fbq\\(\\s*['\"]init['\"]\\s*,\\s*['\"](?<id>[0-9]{15,16})"
+  },
+  {
+    "id": "matomo",
+    "hosts": ["*.matomo.cloud"],
+    "pageView": { "pathMatches": "/(matomo|piwik)\\.php$" },
+    "eventParam": "e_a",
+    "idParam": "idsite",
+    "libraryPaths": "/(matomo|piwik)\\.js$",
+    "idPattern": "\\[\\s*['\"]setSiteId['\"]\\s*,\\s*['\"]?(?<id>[0-9]+)"
+  },
+  {
+    "id": "plausible",
+    "hosts": ["plausible.io"],
+    "pageView": { "pathMatches": "^/api/event/?$", "bodyContains": "pageview" },
+    "eventParam": "n",
+    "idParam": "d",
+    "libraryPaths": "^/js/[^/]+\\.js$",
+    "idPattern": "data-domain\\s*=\\s*[\"'](?<id>[^\"']+)[\"']"
+  },
+  {
+    "id": "fathom",
+    "hosts": ["cdn.usefathom.com"],
+    "pageView": { "pathMatches": "^/$" },
+    "eventParam": "name",
+    "idParam": "sid",
+    "libraryPaths": "^/script\\.js$",
+    "idPattern": "data-site\\s*=\\s*[\"'](?<id>[A-Za-z0-9]+)[\"']"
+  },
+  {
+    "id": "umami",
+    "hosts": ["cloud.umami.is", "gateway.umami.is"],
+    "pageView": { "pathMatches": "^/api/send$", "bodyContains": "\"type\":\"event\"" },
+    "eventParam": "$.payload.name",
+    "idParam": "$.payload.website",
+    "libraryPaths": "^/script\\.js$",
+    "idPattern": "data-website-id\\s*=\\s*[\"'](?<id>[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12})[\"']"
+  },
+  {
+    "id": "posthog",
+    "hosts": [
+      "us.i.posthog.com",
+      "eu.i.posthog.com",
+      "us-assets.i.posthog.com"
+    ],
+    "pageView": { "pathMatches": "^/(e|i/v0/e|capture|batch)/?$", "bodyContains": "$pageview" },
+    "eventParam": "event",
+    "idParam": "api_key",
+    "libraryPaths": "^/(static/array\\.js|array/[^/]+/config(\\.js)?)$",
+    "idPattern": "posthog\\.init\\(\\s*['\"](?<id>[^'\"]+)['\"]"
+  },
+  {
+    "id": "mixpanel",
+    "hosts": [
+      "api-js.mixpanel.com",
+      "api.mixpanel.com",
+      "api-eu.mixpanel.com",
+      "api-in.mixpanel.com",
+      "cdn.mxpnl.com"
+    ],
+    "pageView": { "pathMatches": "^/track/?$" },
+    "eventParam": "event",
+    "libraryPaths": "^/libs/mixpanel-[^/]*\\.js$",
+    "idPattern": "mixpanel\\.init\\(\\s*['\"](?<id>[A-Za-z0-9]+)['\"]"
+  },
+  {
+    "id": "segment",
+    "hosts": ["api.segment.io", "cdn.segment.com"],
+    "pageView": { "pathMatches": "^/v1/(p|b)$" },
+    "eventParam": "event",
+    "idParam": "writeKey",
+    "libraryPaths": "^/analytics\\.js/v1/[^/]+/analytics(\\.min|\\.classic)?\\.js$",
+    "idPattern": "analytics\\.load\\(\\s*[\"'](?<id>[A-Za-z0-9]+)[\"']"
+  },
+  {
+    "id": "hotjar",
+    "hosts": ["*.hotjar.com", "*.hotjar.io"],
+    "libraryPaths": "^/c/hotjar-[0-9]+\\.js$",
+    "idPattern": "\\bhjid\\s*[:=]\\s*(?<id>[0-9]+)"
+  },
+  {
+    "id": "microsoft-clarity",
+    "hosts": ["*.clarity.ms"],
+    "libraryPaths": "^/tag/[a-z0-9]+$",
+    "idPattern": "[\"']clarity[\"']\\s*,\\s*[\"']script[\"']\\s*,\\s*[\"'](?<id>[a-z0-9]+)[\"']"
+  },
+  {
+    "id": "tiktok-pixel",
+    "hosts": ["analytics.tiktok.com"],
+    "pageView": { "pathMatches": "^/api/v2/pixel/?$", "bodyContains": "\"event\":\"Pageview\"" },
+    "eventParam": "event",
+    "idParam": "$.context.pixel.code",
+    "libraryPaths": "^/i18n/pixel/events\\.js$",
+    "libraryIdParam": "sdkid",
+    "idPattern": "ttq\\.load\\(\\s*['\"](?<id>[A-Za-z0-9]+)['\"]"
+  },
+  {
+    "id": "linkedin-insight",
+    "hosts": ["px.ads.linkedin.com", "snap.licdn.com"],
+    "pageView": { "pathMatches": "^/collect/?$" },
+    "eventParam": "conversionId",
+    "idParam": "pid",
+    "libraryPaths": "^/li\\.lms-analytics/insight(\\.min)?\\.js$",
+    "idPattern": "_linkedin_partner_id\\s*=\\s*[\"'](?<id>[0-9]+)[\"']"
+  },
+  {
+    "id": "pinterest-tag",
+    "hosts": ["ct.pinterest.com", "s.pinimg.com"],
+    "pageView": { "pathMatches": "^/v3/?$" },
+    "eventParam": "event",
+    "idParam": "tid",
+    "libraryPaths": "^/ct/core\\.js$",
+    "idPattern": "pintrk\\(\\s*['\"]load['\"]\\s*,\\s*['\"](?<id>[0-9]+)['\"]"
+  },
+  {
+    "id": "x-pixel",
+    "hosts": ["analytics.twitter.com", "t.co", "static.ads-twitter.com"],
+    "pageView": { "pathMatches": "^/(1/)?i/adsct$" },
+    "eventParam": "txn_id",
+    "libraryPaths": "^/uwt\\.js$",
+    "idPattern": "twq\\(\\s*['\"]config['\"]\\s*,\\s*['\"](?<id>[A-Za-z0-9]+)['\"]"
+  },
+  {
+    "id": "bing-uet",
+    "hosts": ["bat.bing.com"],
+    "pageView": { "pathMatches": "^/action/0$" },
+    "eventParam": "ea",
+    "idParam": "ti",
+    "libraryPaths": "^/bat\\.js$",
+    "idPattern": "\\bti\\s*:\\s*[\"'](?<id>[0-9]+)[\"']"
+  },
+  {
+    "id": "adobe-analytics",
+    "hosts": ["*.data.adobedc.net", "*.2o7.net"],
+    "pageView": { "pathMatches": "^/b/ss/[^/]+/[0-9]+/" },
+    "eventParam": "events"
+  }
+]

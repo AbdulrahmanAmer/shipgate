@@ -1,0 +1,22 @@
+{
+  "ar": ["البقاء متصلاً", "ابق متصلاً", "تمديد الجلسة", "متابعة الجلسة", "تجديد الجلسة", "لا أزال هنا"],
+  "cs": ["zůstat přihlášen", "zůstat přihlášeni", "zůstat přihlášena", "prodloužit relaci", "prodloužit přihlášení", "pokračovat v relaci", "stále jsem tady"],
+  "da": ["forbliv logget ind", "bliv logget ind", "forlæng session", "forlæng sessionen", "fortsæt sessionen", "jeg er her stadig"],
+  "de": ["angemeldet bleiben", "eingeloggt bleiben", "sitzung verlängern", "sitzung fortsetzen", "ich bin noch da"],
+  "en": ["stay signed in", "stay logged in", "keep me signed in", "keep me logged in", "extend session", "extend my session", "extend your session", "continue session", "renew session", "i'm still here", "i’m still here"],
+  "es": ["mantener la sesión", "mantener sesión iniciada", "mantener la sesión iniciada", "seguir conectado", "continuar conectado", "permanecer conectado", "extender la sesión", "ampliar la sesión", "prolongar la sesión", "continuar la sesión", "sigo aquí"],
+  "fi": ["pysy kirjautuneena", "pidennä istuntoa", "jatka istuntoa", "jatka kirjautuneena", "olen edelleen täällä"],
+  "fr": ["rester connecté", "rester connectée", "prolonger la session", "prolonger ma session", "prolonger votre session", "poursuivre la session", "continuer la session", "maintenir la session", "je suis toujours là"],
+  "it": ["rimani connesso", "resta connesso", "rimani collegato", "estendi la sessione", "prolunga la sessione", "continua la sessione", "mantieni la sessione", "rinnova la sessione", "sono ancora qui"],
+  "ja": ["ログインを維持", "ログイン状態を維持", "ログイン状態を保持", "ログインしたままにする", "セッションを延長", "セッションを継続"],
+  "ko": ["로그인 유지", "로그인 상태 유지", "로그인 연장", "로그인 시간 연장", "세션 연장", "세션 연장하기", "계속 로그인"],
+  "nb": ["forbli innlogget", "forbli pålogget", "bli innlogget", "forleng økten", "forleng økt", "fortsett økten", "jeg er her fortsatt"],
+  "nl": ["ingelogd blijven", "blijf ingelogd", "aangemeld blijven", "blijf aangemeld", "sessie verlengen", "verleng sessie", "sessie voortzetten", "ik ben er nog"],
+  "pl": ["pozostań zalogowany", "pozostań zalogowana", "pozostać zalogowanym", "przedłuż sesję", "wydłuż sesję", "kontynuuj sesję", "nadal tu jestem"],
+  "pt": ["manter sessão", "manter a sessão", "manter sessão iniciada", "continuar conectado", "continuar ligado", "permanecer conectado", "prolongar sessão", "prolongar a sessão", "estender sessão", "renovar sessão", "ainda estou aqui"],
+  "ro": ["rămâi autentificat", "rămâneți autentificat", "rămâi conectat", "prelungește sesiunea", "prelungiți sesiunea", "continuă sesiunea", "continuați sesiunea", "sunt încă aici"],
+  "ru": ["оставаться в системе", "остаться в системе", "оставаться авторизованным", "продлить сеанс", "продлить сессию", "продолжить сеанс", "продолжить сессию", "я всё ещё здесь", "я все еще здесь"],
+  "sv": ["förbli inloggad", "stanna inloggad", "fortsätt vara inloggad", "förläng sessionen", "förläng session", "fortsätt sessionen", "jag är kvar"],
+  "tr": ["oturumu uzat", "oturumu sürdür", "oturumu açık tut", "oturum süresini uzat", "oturumu yenile", "hâlâ buradayım", "hala buradayım"],
+  "zh": ["保持登录", "保持登錄", "保持登入", "延长会话", "延長會話", "延长登录", "延長登入", "继续会话"]
+}

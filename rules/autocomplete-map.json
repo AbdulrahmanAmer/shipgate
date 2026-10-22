@@ -1,0 +1,2025 @@
+[
+  {
+    "token": "email",
+    "types": [
+      "email"
+    ],
+    "names": [
+      "(?i)(^|[_\\-\\[.])e-?mail(_?address)?(\\]|$)",
+      "(?i)^(mail|e[_-]?post|correo|courriel)$"
+    ],
+    "labels": {
+      "ar": [
+        "البريد الإلكتروني",
+        "عنوان البريد الإلكتروني"
+      ],
+      "cs": [
+        "e-mail",
+        "e-mailová adresa",
+        "emailová adresa"
+      ],
+      "da": [
+        "e-mail",
+        "e-mailadresse",
+        "mailadresse"
+      ],
+      "de": [
+        "e-mail",
+        "e-mail-adresse",
+        "e-mail adresse",
+        "email",
+        "mailadresse"
+      ],
+      "en": [
+        "email",
+        "e-mail",
+        "email address",
+        "e-mail address"
+      ],
+      "es": [
+        "correo electrónico",
+        "email",
+        "e-mail",
+        "dirección de correo electrónico"
+      ],
+      "fi": [
+        "sähköposti",
+        "sähköpostiosoite"
+      ],
+      "fr": [
+        "adresse e-mail",
+        "adresse email",
+        "adresse électronique",
+        "e-mail",
+        "email",
+        "courriel"
+      ],
+      "it": [
+        "e-mail",
+        "email",
+        "indirizzo e-mail",
+        "indirizzo email",
+        "posta elettronica"
+      ],
+      "ja": [
+        "メールアドレス",
+        "Eメールアドレス",
+        "電子メール"
+      ],
+      "ko": [
+        "이메일",
+        "이메일 주소"
+      ],
+      "nb": [
+        "e-post",
+        "e-postadresse",
+        "epost"
+      ],
+      "nl": [
+        "e-mail",
+        "e-mailadres",
+        "email",
+        "e-mail adres"
+      ],
+      "pl": [
+        "e-mail",
+        "adres e-mail",
+        "email",
+        "adres email"
+      ],
+      "pt": [
+        "e-mail",
+        "email",
+        "endereço de e-mail",
+        "endereço de email"
+      ],
+      "ro": [
+        "e-mail",
+        "adresa de e-mail",
+        "adresă de e-mail",
+        "email"
+      ],
+      "ru": [
+        "электронная почта",
+        "e-mail",
+        "email",
+        "адрес электронной почты",
+        "эл. почта"
+      ],
+      "sv": [
+        "e-post",
+        "e-postadress",
+        "epost"
+      ],
+      "tr": [
+        "e-posta",
+        "e-posta adresi",
+        "eposta",
+        "e-mail"
+      ],
+      "zh": [
+        "电子邮箱",
+        "电子邮件地址",
+        "邮箱地址",
+        "電子郵件",
+        "電子郵箱",
+        "電子信箱"
+      ]
+    }
+  },
+  {
+    "token": "tel",
+    "types": [
+      "tel"
+    ],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(tel|telephone|phone|mobile|cell(phone)?)(_?(number|no|num))?(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "رقم الهاتف",
+        "رقم الجوال",
+        "رقم الموبايل"
+      ],
+      "cs": [
+        "telefon",
+        "telefonní číslo",
+        "mobilní telefon"
+      ],
+      "da": [
+        "telefon",
+        "telefonnummer",
+        "mobilnummer"
+      ],
+      "de": [
+        "telefon",
+        "telefonnummer",
+        "mobilnummer",
+        "handynummer",
+        "mobiltelefon"
+      ],
+      "en": [
+        "phone",
+        "phone number",
+        "telephone",
+        "telephone number",
+        "mobile number",
+        "mobile phone",
+        "cell phone"
+      ],
+      "es": [
+        "teléfono",
+        "número de teléfono",
+        "teléfono móvil",
+        "celular",
+        "número de celular"
+      ],
+      "fi": [
+        "puhelin",
+        "puhelinnumero",
+        "matkapuhelin",
+        "matkapuhelinnumero"
+      ],
+      "fr": [
+        "téléphone",
+        "numéro de téléphone",
+        "numéro de portable",
+        "téléphone portable"
+      ],
+      "it": [
+        "telefono",
+        "numero di telefono",
+        "cellulare",
+        "numero di cellulare"
+      ],
+      "ja": [
+        "電話番号",
+        "携帯電話番号",
+        "携帯番号"
+      ],
+      "ko": [
+        "전화번호",
+        "휴대폰 번호",
+        "휴대전화",
+        "연락처"
+      ],
+      "nb": [
+        "telefon",
+        "telefonnummer",
+        "mobilnummer"
+      ],
+      "nl": [
+        "telefoon",
+        "telefoonnummer",
+        "mobiel nummer",
+        "mobiel telefoonnummer"
+      ],
+      "pl": [
+        "telefon",
+        "numer telefonu",
+        "telefon komórkowy",
+        "numer komórkowy"
+      ],
+      "pt": [
+        "telefone",
+        "número de telefone",
+        "celular",
+        "número de celular",
+        "telemóvel",
+        "número de telemóvel"
+      ],
+      "ro": [
+        "telefon",
+        "număr de telefon",
+        "numar de telefon",
+        "telefon mobil"
+      ],
+      "ru": [
+        "телефон",
+        "номер телефона",
+        "мобильный телефон",
+        "контактный телефон"
+      ],
+      "sv": [
+        "telefon",
+        "telefonnummer",
+        "mobilnummer",
+        "mobiltelefon"
+      ],
+      "tr": [
+        "telefon",
+        "telefon numarası",
+        "cep telefonu",
+        "cep telefonu numarası"
+      ],
+      "zh": [
+        "手机号码",
+        "手机号",
+        "电话号码",
+        "联系电话",
+        "手機號碼",
+        "手機號",
+        "電話號碼",
+        "聯絡電話",
+        "聯繫電話"
+      ]
+    }
+  },
+  {
+    "token": "cc-number",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(cc|card)[_-]?(num(ber)?|no)(\\]|$)",
+      "(?i)^ccnum$"
+    ],
+    "labels": {
+      "ar": [
+        "رقم البطاقة",
+        "رقم بطاقة الائتمان"
+      ],
+      "cs": [
+        "číslo karty",
+        "číslo platební karty"
+      ],
+      "da": [
+        "kortnummer",
+        "kreditkortnummer"
+      ],
+      "de": [
+        "kartennummer",
+        "kreditkartennummer"
+      ],
+      "en": [
+        "card number",
+        "credit card number",
+        "debit card number"
+      ],
+      "es": [
+        "número de tarjeta",
+        "número de la tarjeta",
+        "número de tarjeta de crédito"
+      ],
+      "fi": [
+        "kortin numero",
+        "korttinumero",
+        "luottokortin numero"
+      ],
+      "fr": [
+        "numéro de carte",
+        "numéro de carte bancaire",
+        "numéro de la carte"
+      ],
+      "it": [
+        "numero di carta",
+        "numero della carta",
+        "numero carta",
+        "numero carta di credito"
+      ],
+      "ja": [
+        "カード番号",
+        "クレジットカード番号",
+        "カードナンバー"
+      ],
+      "ko": [
+        "카드 번호",
+        "카드번호",
+        "신용카드 번호"
+      ],
+      "nb": [
+        "kortnummer",
+        "kredittkortnummer"
+      ],
+      "nl": [
+        "kaartnummer",
+        "creditcardnummer"
+      ],
+      "pl": [
+        "numer karty",
+        "numer karty kredytowej",
+        "numer karty płatniczej"
+      ],
+      "pt": [
+        "número do cartão",
+        "número de cartão",
+        "número do cartão de crédito"
+      ],
+      "ro": [
+        "numărul cardului",
+        "număr card",
+        "număr de card",
+        "numarul cardului"
+      ],
+      "ru": [
+        "номер карты",
+        "номер банковской карты",
+        "номер кредитной карты"
+      ],
+      "sv": [
+        "kortnummer",
+        "kreditkortsnummer"
+      ],
+      "tr": [
+        "kart numarası",
+        "kredi kartı numarası",
+        "kart no"
+      ],
+      "zh": [
+        "银行卡号",
+        "信用卡号",
+        "信用卡卡号",
+        "银行卡卡号",
+        "信用卡號",
+        "銀行卡號",
+        "信用卡卡號"
+      ]
+    }
+  },
+  {
+    "token": "cc-name",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(cc|card)[_-]?(name|holder(_?name)?|owner)(\\]|$)",
+      "(?i)^cardholder$"
+    ],
+    "labels": {
+      "ar": [
+        "الاسم على البطاقة",
+        "اسم حامل البطاقة"
+      ],
+      "cs": [
+        "jméno na kartě",
+        "jméno držitele karty"
+      ],
+      "da": [
+        "navn på kortet",
+        "kortindehaverens navn",
+        "navn på kortholder"
+      ],
+      "de": [
+        "name auf der karte",
+        "karteninhaber",
+        "name des karteninhabers",
+        "name auf karte"
+      ],
+      "en": [
+        "name on card",
+        "name on the card",
+        "cardholder name",
+        "cardholder's name",
+        "card holder name"
+      ],
+      "es": [
+        "nombre en la tarjeta",
+        "nombre del titular",
+        "titular de la tarjeta",
+        "nombre del titular de la tarjeta"
+      ],
+      "fi": [
+        "kortin haltijan nimi",
+        "nimi kortissa",
+        "kortinhaltijan nimi"
+      ],
+      "fr": [
+        "nom sur la carte",
+        "titulaire de la carte",
+        "nom du titulaire"
+      ],
+      "it": [
+        "nome sulla carta",
+        "intestatario della carta",
+        "titolare della carta",
+        "nome del titolare"
+      ],
+      "ja": [
+        "カード名義",
+        "カードに記載されている名前",
+        "カード上のお名前"
+      ],
+      "ko": [
+        "카드 소유자",
+        "카드 소유자 이름",
+        "카드에 표시된 이름",
+        "카드 명의자"
+      ],
+      "nb": [
+        "navn på kortet",
+        "kortholders navn",
+        "navn på kortinnehaver"
+      ],
+      "nl": [
+        "naam op de kaart",
+        "naam kaarthouder",
+        "naam op kaart",
+        "kaarthouder"
+      ],
+      "pl": [
+        "imię i nazwisko na karcie",
+        "właściciel karty",
+        "posiadacz karty",
+        "imię i nazwisko posiadacza karty"
+      ],
+      "pt": [
+        "nome no cartão",
+        "nome impresso no cartão",
+        "titular do cartão",
+        "nome do titular"
+      ],
+      "ro": [
+        "numele de pe card",
+        "nume titular card",
+        "titularul cardului",
+        "nume pe card"
+      ],
+      "ru": [
+        "имя на карте",
+        "имя владельца карты",
+        "владелец карты",
+        "держатель карты"
+      ],
+      "sv": [
+        "namn på kortet",
+        "kortinnehavarens namn",
+        "kortinnehavare"
+      ],
+      "tr": [
+        "kart üzerindeki isim",
+        "kart sahibinin adı",
+        "kart sahibi",
+        "kartın üzerindeki isim"
+      ],
+      "zh": [
+        "持卡人",
+        "卡片上的姓名",
+        "卡上姓名"
+      ]
+    }
+  },
+  {
+    "token": "cc-csc",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])((cc|card)[_-]?)?(cvv2?|cvc2?|csc|cvn|security[_-]?code|verification[_-]?(code|value))(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "رمز الأمان",
+        "رمز التحقق من البطاقة",
+        "cvv",
+        "cvc"
+      ],
+      "cs": [
+        "bezpečnostní kód",
+        "ověřovací kód karty",
+        "cvv",
+        "cvc"
+      ],
+      "da": [
+        "sikkerhedskode",
+        "kontrolcifre",
+        "cvc",
+        "cvv"
+      ],
+      "de": [
+        "prüfnummer",
+        "kartenprüfnummer",
+        "sicherheitscode",
+        "cvv",
+        "cvc"
+      ],
+      "en": [
+        "security code",
+        "card security code",
+        "cvv",
+        "cvc",
+        "cvv2",
+        "card verification"
+      ],
+      "es": [
+        "código de seguridad",
+        "cvv",
+        "cvc"
+      ],
+      "fi": [
+        "turvakoodi",
+        "cvv",
+        "cvc"
+      ],
+      "fr": [
+        "code de sécurité",
+        "cryptogramme",
+        "cryptogramme visuel",
+        "cvv",
+        "cvc"
+      ],
+      "it": [
+        "codice di sicurezza",
+        "cvv",
+        "cvc"
+      ],
+      "ja": [
+        "セキュリティコード",
+        "cvv",
+        "cvc"
+      ],
+      "ko": [
+        "보안 코드",
+        "보안코드",
+        "cvc",
+        "cvv"
+      ],
+      "nb": [
+        "sikkerhetskode",
+        "kontrollsiffer",
+        "cvc",
+        "cvv"
+      ],
+      "nl": [
+        "beveiligingscode",
+        "cvc",
+        "cvv"
+      ],
+      "pl": [
+        "kod bezpieczeństwa",
+        "kod cvv",
+        "kod cvc",
+        "cvv",
+        "cvc"
+      ],
+      "pt": [
+        "código de segurança",
+        "cvv",
+        "cvc"
+      ],
+      "ro": [
+        "cod de securitate",
+        "cvv",
+        "cvc"
+      ],
+      "ru": [
+        "код безопасности",
+        "cvv",
+        "cvc"
+      ],
+      "sv": [
+        "säkerhetskod",
+        "cvc",
+        "cvv"
+      ],
+      "tr": [
+        "güvenlik kodu",
+        "cvv",
+        "cvc"
+      ],
+      "zh": [
+        "安全码",
+        "安全碼",
+        "cvv",
+        "cvc"
+      ]
+    }
+  },
+  {
+    "token": "cc-exp-month",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])((cc|card)[_-]?)?exp(iry|iration)?[_-]?(month|mo|mm)(\\]|$)"
+    ],
+    "labels": {
+      "en": [
+        "expiry month",
+        "expiration month",
+        "exp month",
+        "card expiry month"
+      ]
+    }
+  },
+  {
+    "token": "cc-exp-year",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])((cc|card)[_-]?)?exp(iry|iration)?[_-]?(year|yr|yy|yyyy)(\\]|$)"
+    ],
+    "labels": {
+      "en": [
+        "expiry year",
+        "expiration year",
+        "exp year",
+        "card expiry year"
+      ]
+    }
+  },
+  {
+    "token": "cc-exp",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])((cc|card)[_-]?)?exp(iry|iration)?([_-]?date)?(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "تاريخ انتهاء الصلاحية",
+        "تاريخ الانتهاء"
+      ],
+      "cs": [
+        "platnost do",
+        "datum expirace",
+        "platnost karty"
+      ],
+      "da": [
+        "udløbsdato"
+      ],
+      "de": [
+        "gültig bis",
+        "ablaufdatum",
+        "gültigkeitsdatum",
+        "verfallsdatum"
+      ],
+      "en": [
+        "expiry date",
+        "expiration date",
+        "card expiry",
+        "valid thru"
+      ],
+      "es": [
+        "fecha de caducidad",
+        "fecha de vencimiento",
+        "fecha de expiración"
+      ],
+      "fi": [
+        "voimassaolopäivä",
+        "voimassa asti",
+        "viimeinen voimassaolopäivä"
+      ],
+      "fr": [
+        "date d'expiration",
+        "date d’expiration",
+        "date de validité"
+      ],
+      "it": [
+        "data di scadenza",
+        "scadenza carta",
+        "scadenza della carta"
+      ],
+      "ja": [
+        "有効期限",
+        "カード有効期限"
+      ],
+      "ko": [
+        "유효기간",
+        "만료일",
+        "유효 기간"
+      ],
+      "nb": [
+        "utløpsdato",
+        "gyldig til"
+      ],
+      "nl": [
+        "vervaldatum",
+        "geldig tot",
+        "vervaldatum kaart"
+      ],
+      "pl": [
+        "data ważności",
+        "ważna do",
+        "termin ważności"
+      ],
+      "pt": [
+        "validade do cartão",
+        "data de validade",
+        "data de expiração",
+        "vencimento do cartão"
+      ],
+      "ro": [
+        "data expirării",
+        "data de expirare",
+        "data expirarii"
+      ],
+      "ru": [
+        "срок действия",
+        "срок действия карты",
+        "действует до"
+      ],
+      "sv": [
+        "utgångsdatum",
+        "giltig till",
+        "giltighetstid"
+      ],
+      "tr": [
+        "son kullanma tarihi",
+        "son kullanım tarihi",
+        "geçerlilik tarihi"
+      ],
+      "zh": [
+        "卡有效期",
+        "卡片有效期",
+        "信用卡有效期",
+        "信用卡到期日",
+        "卡到期日"
+      ]
+    }
+  },
+  {
+    "token": "organization",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(company|company[_-]?name|organi[sz]ation|org|business[_-]?name)(\\]|$)",
+      "(?i)^firm$"
+    ],
+    "labels": {
+      "ar": [
+        "اسم الشركة",
+        "اسم المؤسسة"
+      ],
+      "cs": [
+        "název společnosti",
+        "název firmy",
+        "firma"
+      ],
+      "da": [
+        "firmanavn",
+        "virksomhedsnavn",
+        "virksomhed",
+        "firma"
+      ],
+      "de": [
+        "firma",
+        "firmenname",
+        "unternehmen",
+        "unternehmensname"
+      ],
+      "en": [
+        "company",
+        "company name",
+        "organization",
+        "organisation",
+        "business name"
+      ],
+      "es": [
+        "empresa",
+        "nombre de la empresa",
+        "compañía",
+        "organización"
+      ],
+      "fi": [
+        "yritys",
+        "yrityksen nimi",
+        "organisaatio"
+      ],
+      "fr": [
+        "société",
+        "nom de la société",
+        "entreprise",
+        "nom de l'entreprise",
+        "nom de l’entreprise",
+        "organisation"
+      ],
+      "it": [
+        "azienda",
+        "nome dell'azienda",
+        "nome dell’azienda",
+        "società",
+        "ragione sociale",
+        "organizzazione"
+      ],
+      "ja": [
+        "会社名",
+        "法人名",
+        "企業名",
+        "組織名",
+        "社名",
+        "貴社名",
+        "団体名"
+      ],
+      "ko": [
+        "회사명",
+        "회사 이름",
+        "기업명",
+        "업체명"
+      ],
+      "nb": [
+        "firmanavn",
+        "bedriftsnavn",
+        "firma",
+        "selskap",
+        "organisasjon"
+      ],
+      "nl": [
+        "bedrijfsnaam",
+        "bedrijf",
+        "organisatie",
+        "firma"
+      ],
+      "pl": [
+        "nazwa firmy",
+        "firma",
+        "nazwa przedsiębiorstwa",
+        "organizacja"
+      ],
+      "pt": [
+        "empresa",
+        "nome da empresa",
+        "razão social",
+        "organização",
+        "companhia"
+      ],
+      "ro": [
+        "companie",
+        "nume companie",
+        "numele companiei",
+        "firmă",
+        "firma",
+        "organizație"
+      ],
+      "ru": [
+        "компания",
+        "название компании",
+        "организация",
+        "наименование организации",
+        "название организации"
+      ],
+      "sv": [
+        "företag",
+        "företagsnamn",
+        "organisation"
+      ],
+      "tr": [
+        "şirket",
+        "şirket adı",
+        "firma",
+        "firma adı",
+        "kurum adı"
+      ],
+      "zh": [
+        "公司名称",
+        "公司名",
+        "单位名称",
+        "企业名称",
+        "公司名稱",
+        "單位名稱",
+        "企業名稱",
+        "组织名称"
+      ]
+    }
+  },
+  {
+    "token": "name",
+    "types": [],
+    "names": [
+      "(?i)^(full[_-]?)?name$",
+      "(?i)(^|[_\\-\\[.])(full[_-]?name|your[_-]?name|customer[_-]?name|contact[_-]?name|(billing|shipping)[_-]?name)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "الاسم الكامل",
+        "الاسم بالكامل",
+        "الاسم الثلاثي"
+      ],
+      "cs": [
+        "celé jméno",
+        "jméno a příjmení"
+      ],
+      "da": [
+        "fulde navn",
+        "for- og efternavn",
+        "fornavn og efternavn",
+        "dit navn",
+        "navn og efternavn"
+      ],
+      "de": [
+        "vollständiger name",
+        "vor- und nachname",
+        "vorname und nachname",
+        "ihr name"
+      ],
+      "en": [
+        "full name",
+        "your name",
+        "first and last name",
+        "first & last name",
+        "name and surname"
+      ],
+      "es": [
+        "nombre completo",
+        "nombre y apellidos",
+        "nombre y apellido",
+        "su nombre",
+        "tu nombre"
+      ],
+      "fi": [
+        "koko nimi",
+        "etu- ja sukunimi",
+        "etunimi ja sukunimi",
+        "nimesi",
+        "täydellinen nimi"
+      ],
+      "fr": [
+        "nom complet",
+        "nom et prénom",
+        "prénom et nom",
+        "votre nom"
+      ],
+      "it": [
+        "nome e cognome",
+        "nome completo",
+        "cognome e nome",
+        "il tuo nome",
+        "il suo nome"
+      ],
+      "ja": [
+        "氏名",
+        "フルネーム",
+        "お名前(フルネーム)",
+        "お名前(漢字)"
+      ],
+      "ko": [
+        "성명",
+        "전체 이름"
+      ],
+      "nb": [
+        "fullt navn",
+        "fornavn og etternavn",
+        "ditt navn",
+        "navn og etternavn"
+      ],
+      "nl": [
+        "volledige naam",
+        "voor- en achternaam",
+        "voornaam en achternaam",
+        "uw naam",
+        "je naam",
+        "jouw naam"
+      ],
+      "pl": [
+        "imię i nazwisko",
+        "pełne imię i nazwisko",
+        "twoje imię i nazwisko",
+        "nazwisko i imię"
+      ],
+      "pt": [
+        "nome completo",
+        "nome e sobrenome",
+        "nome e apelido",
+        "seu nome",
+        "o seu nome"
+      ],
+      "ro": [
+        "nume și prenume",
+        "nume si prenume",
+        "numele complet",
+        "nume complet",
+        "prenume și nume"
+      ],
+      "ru": [
+        "фио",
+        "ф.и.о.",
+        "полное имя",
+        "имя и фамилия",
+        "фамилия и имя",
+        "ваше имя"
+      ],
+      "sv": [
+        "fullständigt namn",
+        "för- och efternamn",
+        "förnamn och efternamn",
+        "ditt namn"
+      ],
+      "tr": [
+        "ad soyad",
+        "adınız soyadınız",
+        "ad ve soyad",
+        "tam ad",
+        "adı soyadı",
+        "adınız ve soyadınız"
+      ],
+      "zh": [
+        "姓名",
+        "全名",
+        "真实姓名",
+        "真實姓名"
+      ]
+    }
+  },
+  {
+    "token": "given-name",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(first[_-]?name|fname|given[_-]?name|forename)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "الاسم الأول",
+        "الاسم الاول",
+        "الاسم الشخصي"
+      ],
+      "cs": [
+        "křestní jméno",
+        "křestní"
+      ],
+      "da": [
+        "fornavn"
+      ],
+      "de": [
+        "vorname"
+      ],
+      "en": [
+        "first name",
+        "given name",
+        "forename",
+        "first name(s)"
+      ],
+      "es": [
+        "primer nombre",
+        "nombre de pila",
+        "nombre(s)"
+      ],
+      "fi": [
+        "etunimi",
+        "etunimet"
+      ],
+      "fr": [
+        "prénom",
+        "prénoms"
+      ],
+      "it": [
+        "nome di battesimo",
+        "primo nome"
+      ],
+      "ja": [
+        "下の名前",
+        "ファーストネーム",
+        "名前(名)",
+        "名(めい)"
+      ],
+      "ko": [
+        "퍼스트네임",
+        "퍼스트 네임"
+      ],
+      "nb": [
+        "fornavn"
+      ],
+      "nl": [
+        "voornaam",
+        "voornamen"
+      ],
+      "pl": [
+        "pierwsze imię",
+        "imię (imiona)",
+        "imiona"
+      ],
+      "pt": [
+        "primeiro nome",
+        "nome próprio"
+      ],
+      "ro": [
+        "prenume"
+      ],
+      "ru": [
+        "личное имя",
+        "первое имя"
+      ],
+      "sv": [
+        "förnamn"
+      ],
+      "tr": [
+        "adınız",
+        "ad",
+        "ilk adı"
+      ],
+      "zh": [
+        "名字(名)",
+        "名(first name)",
+        "名(given name)"
+      ]
+    }
+  },
+  {
+    "token": "family-name",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(last[_-]?name|lname|surname|family[_-]?name)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "اسم العائلة",
+        "الاسم الأخير",
+        "الاسم الاخير",
+        "اللقب"
+      ],
+      "cs": [
+        "příjmení"
+      ],
+      "da": [
+        "efternavn"
+      ],
+      "de": [
+        "nachname",
+        "familienname",
+        "zuname"
+      ],
+      "en": [
+        "last name",
+        "surname",
+        "family name"
+      ],
+      "es": [
+        "apellidos",
+        "apellido"
+      ],
+      "fi": [
+        "sukunimi"
+      ],
+      "fr": [
+        "nom de famille"
+      ],
+      "it": [
+        "cognome"
+      ],
+      "ja": [
+        "上の名前",
+        "ラストネーム",
+        "名前(姓)",
+        "姓(せい)",
+        "苗字"
+      ],
+      "ko": [
+        "라스트네임",
+        "라스트 네임",
+        "성"
+      ],
+      "nb": [
+        "etternavn"
+      ],
+      "nl": [
+        "achternaam",
+        "familienaam"
+      ],
+      "pl": [
+        "nazwisko"
+      ],
+      "pt": [
+        "sobrenome",
+        "apelido",
+        "último nome"
+      ],
+      "ro": [
+        "nume de familie"
+      ],
+      "ru": [
+        "фамилия"
+      ],
+      "sv": [
+        "efternamn"
+      ],
+      "tr": [
+        "soyad",
+        "soyadı",
+        "soyadınız"
+      ],
+      "zh": [
+        "姓氏"
+      ]
+    }
+  },
+  {
+    "token": "address-line2",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(address[_-]?(line[_-]?)?(2|two)|addr(ess)?[_-]?2|apartment|apt|suite|flat)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "سطر العنوان 2",
+        "العنوان سطر 2",
+        "العنوان 2",
+        "العنوان - السطر الثاني"
+      ],
+      "cs": [
+        "adresa řádek 2",
+        "adresa 2",
+        "doplněk adresy",
+        "adresní řádek 2"
+      ],
+      "da": [
+        "adresselinje 2",
+        "adresse 2",
+        "adresse linje 2"
+      ],
+      "de": [
+        "adresszeile 2",
+        "adresszusatz",
+        "adresse zeile 2",
+        "adresse 2"
+      ],
+      "en": [
+        "address line 2",
+        "address 2",
+        "apartment, suite",
+        "apt, suite",
+        "address line two"
+      ],
+      "es": [
+        "dirección línea 2",
+        "dirección 2",
+        "línea de dirección 2",
+        "complemento de dirección"
+      ],
+      "fi": [
+        "osoite 2",
+        "osoiterivi 2",
+        "osoitteen lisätiedot",
+        "lisäosoite"
+      ],
+      "fr": [
+        "adresse ligne 2",
+        "adresse 2",
+        "ligne d'adresse 2",
+        "ligne d’adresse 2",
+        "complément d'adresse",
+        "complément d’adresse"
+      ],
+      "it": [
+        "indirizzo riga 2",
+        "indirizzo 2",
+        "complemento indirizzo"
+      ],
+      "ja": [
+        "住所2",
+        "建物名",
+        "マンション名",
+        "ビル名"
+      ],
+      "ko": [
+        "주소 2",
+        "주소2",
+        "상세주소",
+        "상세 주소"
+      ],
+      "nb": [
+        "adresselinje 2",
+        "adresse 2",
+        "adresse linje 2"
+      ],
+      "nl": [
+        "adresregel 2",
+        "adres 2"
+      ],
+      "pl": [
+        "adres linia 2",
+        "adres 2",
+        "adres (linia 2)"
+      ],
+      "pt": [
+        "endereço linha 2",
+        "endereço 2",
+        "morada linha 2",
+        "morada 2",
+        "complemento",
+        "linha de endereço 2"
+      ],
+      "ro": [
+        "adresa linia 2",
+        "adresă linia 2",
+        "adresa 2"
+      ],
+      "ru": [
+        "адрес строка 2",
+        "адрес 2",
+        "адрес (строка 2)"
+      ],
+      "sv": [
+        "adressrad 2",
+        "adress 2"
+      ],
+      "tr": [
+        "adres satırı 2",
+        "adres 2"
+      ],
+      "zh": [
+        "地址2",
+        "地址第二行",
+        "地址行2"
+      ]
+    }
+  },
+  {
+    "token": "address-line1",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(address[_-]?(line[_-]?)?(1|one)|addr(ess)?[_-]?1|street1)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "سطر العنوان 1",
+        "العنوان سطر 1",
+        "العنوان 1",
+        "العنوان - السطر الأول"
+      ],
+      "cs": [
+        "adresa řádek 1",
+        "adresa 1",
+        "ulice a číslo popisné",
+        "ulice a číslo"
+      ],
+      "da": [
+        "adresselinje 1",
+        "adresse 1",
+        "vejnavn og husnummer",
+        "vej og husnummer"
+      ],
+      "de": [
+        "adresszeile 1",
+        "adresse zeile 1",
+        "straße und hausnummer",
+        "strasse und hausnummer",
+        "adresse 1"
+      ],
+      "en": [
+        "address line 1",
+        "address 1",
+        "street address line 1",
+        "address line one"
+      ],
+      "es": [
+        "dirección línea 1",
+        "dirección 1",
+        "línea de dirección 1",
+        "calle y número"
+      ],
+      "fi": [
+        "osoite 1",
+        "osoiterivi 1"
+      ],
+      "fr": [
+        "adresse ligne 1",
+        "adresse 1",
+        "ligne d'adresse 1",
+        "ligne d’adresse 1",
+        "numéro et nom de rue"
+      ],
+      "it": [
+        "indirizzo riga 1",
+        "indirizzo 1",
+        "via e numero civico",
+        "indirizzo (riga 1)"
+      ],
+      "ja": [
+        "住所1",
+        "住所(番地)",
+        "番地",
+        "町名・番地"
+      ],
+      "ko": [
+        "주소 1",
+        "주소1",
+        "기본주소",
+        "기본 주소"
+      ],
+      "nb": [
+        "adresselinje 1",
+        "adresse 1",
+        "gate og husnummer"
+      ],
+      "nl": [
+        "adresregel 1",
+        "adres 1",
+        "straat en huisnummer",
+        "straat en nummer",
+        "straatnaam en huisnummer"
+      ],
+      "pl": [
+        "adres linia 1",
+        "adres 1",
+        "ulica i numer domu",
+        "ulica i numer",
+        "adres (linia 1)"
+      ],
+      "pt": [
+        "endereço linha 1",
+        "endereço 1",
+        "morada linha 1",
+        "morada 1",
+        "rua e número",
+        "linha de endereço 1"
+      ],
+      "ro": [
+        "adresa linia 1",
+        "adresă linia 1",
+        "adresa 1",
+        "strada și numărul",
+        "stradă și număr",
+        "strada si numarul"
+      ],
+      "ru": [
+        "адрес строка 1",
+        "адрес 1",
+        "улица и номер дома",
+        "улица, дом",
+        "адрес (строка 1)"
+      ],
+      "sv": [
+        "adressrad 1",
+        "adress 1"
+      ],
+      "tr": [
+        "adres satırı 1",
+        "adres 1",
+        "sokak ve bina numarası"
+      ],
+      "zh": [
+        "地址1",
+        "地址第一行",
+        "地址行1",
+        "地址一"
+      ]
+    }
+  },
+  {
+    "token": "street-address",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])street[_-]?address(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "عنوان الشارع"
+      ],
+      "cs": [
+        "adresa ulice",
+        "ulice"
+      ],
+      "da": [
+        "gadeadresse"
+      ],
+      "de": [
+        "straßenadresse",
+        "strassenadresse"
+      ],
+      "en": [
+        "street address"
+      ],
+      "es": [
+        "dirección de la calle",
+        "dirección postal"
+      ],
+      "fi": [
+        "katuosoite",
+        "lähiosoite"
+      ],
+      "fr": [
+        "adresse postale",
+        "adresse de la rue"
+      ],
+      "it": [
+        "indirizzo stradale",
+        "indirizzo postale"
+      ],
+      "ja": [
+        "住所"
+      ],
+      "ko": [
+        "도로명 주소",
+        "도로명주소"
+      ],
+      "nb": [
+        "gateadresse"
+      ],
+      "nl": [
+        "straatadres"
+      ],
+      "pl": [
+        "ulica"
+      ],
+      "pt": [
+        "endereço da rua",
+        "logradouro"
+      ],
+      "ro": [
+        "adresa stradală",
+        "adresă stradală",
+        "strada",
+        "stradă"
+      ],
+      "ru": [
+        "улица",
+        "адрес улицы"
+      ],
+      "sv": [
+        "gatuadress"
+      ],
+      "tr": [
+        "sokak adresi",
+        "sokak"
+      ],
+      "zh": [
+        "详细地址",
+        "街道地址",
+        "詳細地址"
+      ]
+    }
+  },
+  {
+    "token": "postal-code",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(zip(_?code)?|zipcode|post(al)?[_-]?code|postcode|plz)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "الرمز البريدي",
+        "رمز بريدي"
+      ],
+      "cs": [
+        "psč",
+        "poštovní směrovací číslo",
+        "směrovací číslo"
+      ],
+      "da": [
+        "postnummer"
+      ],
+      "de": [
+        "postleitzahl",
+        "plz"
+      ],
+      "en": [
+        "postal code",
+        "postcode",
+        "zip code",
+        "zip",
+        "post code",
+        "zip/postal code"
+      ],
+      "es": [
+        "código postal"
+      ],
+      "fi": [
+        "postinumero"
+      ],
+      "fr": [
+        "code postal"
+      ],
+      "it": [
+        "cap",
+        "codice postale",
+        "codice di avviamento postale"
+      ],
+      "ja": [
+        "郵便番号"
+      ],
+      "ko": [
+        "우편번호",
+        "우편 번호"
+      ],
+      "nb": [
+        "postnummer"
+      ],
+      "nl": [
+        "postcode"
+      ],
+      "pl": [
+        "kod pocztowy"
+      ],
+      "pt": [
+        "código postal",
+        "cep"
+      ],
+      "ro": [
+        "cod poștal",
+        "cod postal"
+      ],
+      "ru": [
+        "почтовый индекс",
+        "индекс"
+      ],
+      "sv": [
+        "postnummer"
+      ],
+      "tr": [
+        "posta kodu"
+      ],
+      "zh": [
+        "邮政编码",
+        "邮编",
+        "郵遞區號",
+        "郵編"
+      ]
+    }
+  },
+  {
+    "token": "address-level2",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(city|town|locality)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "المدينة"
+      ],
+      "cs": [
+        "město",
+        "obec"
+      ],
+      "da": [
+        "by",
+        "bynavn"
+      ],
+      "de": [
+        "stadt",
+        "ort",
+        "wohnort"
+      ],
+      "en": [
+        "city",
+        "town",
+        "town or city"
+      ],
+      "es": [
+        "ciudad",
+        "localidad",
+        "municipio"
+      ],
+      "fi": [
+        "kaupunki",
+        "postitoimipaikka",
+        "paikkakunta"
+      ],
+      "fr": [
+        "ville",
+        "commune",
+        "localité"
+      ],
+      "it": [
+        "città",
+        "comune",
+        "località"
+      ],
+      "ja": [
+        "市区町村",
+        "市町村"
+      ],
+      "ko": [
+        "시/군/구",
+        "시군구",
+        "도시"
+      ],
+      "nb": [
+        "by",
+        "sted",
+        "poststed"
+      ],
+      "nl": [
+        "plaats",
+        "woonplaats",
+        "stad",
+        "gemeente"
+      ],
+      "pl": [
+        "miasto",
+        "miejscowość"
+      ],
+      "pt": [
+        "cidade",
+        "município",
+        "concelho",
+        "localidade"
+      ],
+      "ro": [
+        "oraș",
+        "oras",
+        "localitate"
+      ],
+      "ru": [
+        "город",
+        "населённый пункт",
+        "населенный пункт"
+      ],
+      "sv": [
+        "ort",
+        "stad",
+        "postort"
+      ],
+      "tr": [
+        "şehir",
+        "ilçe"
+      ],
+      "zh": [
+        "城市",
+        "所在城市"
+      ]
+    }
+  },
+  {
+    "token": "country",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])country(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "الدولة",
+        "البلد"
+      ],
+      "cs": [
+        "země"
+      ],
+      "da": [
+        "land"
+      ],
+      "de": [
+        "land",
+        "land/region"
+      ],
+      "en": [
+        "country",
+        "country/region"
+      ],
+      "es": [
+        "país",
+        "país/región"
+      ],
+      "fi": [
+        "maa"
+      ],
+      "fr": [
+        "pays",
+        "pays/région"
+      ],
+      "it": [
+        "paese",
+        "nazione"
+      ],
+      "ja": [
+        "国名",
+        "国・地域",
+        "国/地域"
+      ],
+      "ko": [
+        "국가",
+        "나라",
+        "국가/지역"
+      ],
+      "nb": [
+        "land"
+      ],
+      "nl": [
+        "land"
+      ],
+      "pl": [
+        "kraj"
+      ],
+      "pt": [
+        "país"
+      ],
+      "ro": [
+        "țara",
+        "tara",
+        "țară",
+        "tară"
+      ],
+      "ru": [
+        "страна"
+      ],
+      "sv": [
+        "land"
+      ],
+      "tr": [
+        "ülke"
+      ],
+      "zh": [
+        "国家",
+        "国家/地区",
+        "国家或地区",
+        "國家",
+        "國家/地區"
+      ]
+    }
+  },
+  {
+    "token": "address-level1",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(state|province|region|prefecture|county)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "المنطقة",
+        "المحافظة",
+        "الولاية"
+      ],
+      "cs": [
+        "kraj",
+        "region"
+      ],
+      "da": [
+        "region"
+      ],
+      "de": [
+        "bundesland",
+        "kanton"
+      ],
+      "en": [
+        "state",
+        "province",
+        "state/province",
+        "state or province",
+        "county",
+        "region",
+        "prefecture"
+      ],
+      "es": [
+        "provincia",
+        "estado/provincia",
+        "comunidad autónoma",
+        "estado o provincia"
+      ],
+      "fi": [
+        "maakunta",
+        "osavaltio"
+      ],
+      "fr": [
+        "région",
+        "département",
+        "province"
+      ],
+      "it": [
+        "provincia",
+        "regione",
+        "stato/provincia"
+      ],
+      "ja": [
+        "都道府県"
+      ],
+      "ko": [
+        "시/도",
+        "시도",
+        "광역시/도"
+      ],
+      "nb": [
+        "fylke",
+        "region"
+      ],
+      "nl": [
+        "provincie",
+        "staat/provincie",
+        "regio"
+      ],
+      "pl": [
+        "województwo",
+        "stan/województwo"
+      ],
+      "pt": [
+        "estado/província",
+        "província",
+        "distrito",
+        "unidade federativa",
+        "uf"
+      ],
+      "ro": [
+        "județ",
+        "judet",
+        "județul",
+        "regiune"
+      ],
+      "ru": [
+        "область",
+        "регион",
+        "штат",
+        "область/край"
+      ],
+      "sv": [
+        "län",
+        "landskap",
+        "region"
+      ],
+      "tr": [
+        "eyalet"
+      ],
+      "zh": [
+        "省份",
+        "省/自治区",
+        "所在省份",
+        "省/直辖市",
+        "州/省",
+        "省/州"
+      ]
+    }
+  },
+  {
+    "token": "bday",
+    "types": [],
+    "names": [
+      "(?i)(^|[_\\-\\[.])(birth[_-]?(date|day)|bday|dob|date[_-]?of[_-]?birth)(\\]|$)"
+    ],
+    "labels": {
+      "ar": [
+        "تاريخ الميلاد"
+      ],
+      "cs": [
+        "datum narození"
+      ],
+      "da": [
+        "fødselsdato"
+      ],
+      "de": [
+        "geburtsdatum",
+        "geburtstag"
+      ],
+      "en": [
+        "date of birth",
+        "birth date",
+        "birthdate",
+        "birthday",
+        "dob"
+      ],
+      "es": [
+        "fecha de nacimiento"
+      ],
+      "fi": [
+        "syntymäaika",
+        "syntymäpäivä"
+      ],
+      "fr": [
+        "date de naissance"
+      ],
+      "it": [
+        "data di nascita"
+      ],
+      "ja": [
+        "生年月日"
+      ],
+      "ko": [
+        "생년월일"
+      ],
+      "nb": [
+        "fødselsdato"
+      ],
+      "nl": [
+        "geboortedatum"
+      ],
+      "pl": [
+        "data urodzenia"
+      ],
+      "pt": [
+        "data de nascimento"
+      ],
+      "ro": [
+        "data nașterii",
+        "data nasterii",
+        "data de naștere"
+      ],
+      "ru": [
+        "дата рождения"
+      ],
+      "sv": [
+        "födelsedatum"
+      ],
+      "tr": [
+        "doğum tarihi"
+      ],
+      "zh": [
+        "出生日期",
+        "生日",
+        "出生年月",
+        "出生年月日"
+      ]
+    }
+  }
+]

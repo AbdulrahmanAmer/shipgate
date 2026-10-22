@@ -1,0 +1,174 @@
+[
+  {
+    "id": "next-404",
+    "bodyContains": ["This page could not be found"]
+  },
+  {
+    "id": "next-pages-500",
+    "titleRegex": "^500: Internal Server Error$",
+    "bodyContains": ["Internal Server Error"]
+  },
+  {
+    "id": "next-pages-client-exception",
+    "bodyContains": ["Application error: a client-side exception has occurred", "see the browser console for more information"]
+  },
+  {
+    "id": "next-app-server-exception",
+    "bodyContains": ["Application error: a server-side exception has occurred", "see the server logs for more information"]
+  },
+  {
+    "id": "next-global-error",
+    "bodyContains": ["This page couldn’t load", "Reload to try again"]
+  },
+  {
+    "id": "nuxt-404",
+    "titleRegex": "^404 - (Page )?Not Found \\| ",
+    "bodyContains": ["Sorry, the page you are looking for could not be found."]
+  },
+  {
+    "id": "nuxt-500",
+    "titleRegex": "^500 - (Server error|Internal Server Error) \\| ",
+    "bodyContains": ["This page is temporarily unavailable."]
+  },
+  {
+    "id": "vite-base-404",
+    "bodyContains": ["The server is configured with a public base URL of", "did you mean to visit"]
+  },
+  {
+    "id": "express-cannot-route",
+    "titleRegex": "^Error$",
+    "bodyContains": ["<pre>Cannot "]
+  },
+  {
+    "id": "express-production-error",
+    "titleRegex": "^Error$",
+    "bodyContains": ["<pre>Internal Server Error</pre>"]
+  },
+  {
+    "id": "django-404",
+    "titleRegex": "^Not Found$",
+    "bodyContains": ["<h1>Not Found</h1>", "The requested resource was not found on this server."]
+  },
+  {
+    "id": "django-500",
+    "titleRegex": "^Server Error \\(500\\)$",
+    "bodyContains": ["<h1>Server Error (500)</h1>"]
+  },
+  {
+    "id": "django-400",
+    "titleRegex": "^Bad Request \\(400\\)$",
+    "bodyContains": ["<h1>Bad Request (400)</h1>"]
+  },
+  {
+    "id": "django-debug-404",
+    "titleRegex": "^Page not found at ",
+    "bodyContains": ["You’re seeing this error because you have", "DEBUG = True"]
+  },
+  {
+    "id": "rails-404",
+    "titleRegex": "^The page you were looking for doesn't exist",
+    "bodyContains": ["You may have mistyped the address or the page may have moved."]
+  },
+  {
+    "id": "rails-500",
+    "titleRegex": "^We're sorry, but something went wrong",
+    "bodyContains": ["We're sorry, but something went wrong.", "check the logs for more information."]
+  },
+  {
+    "id": "rails-422",
+    "titleRegex": "^The change you wanted was rejected",
+    "bodyContains": ["Maybe you tried to change something you didn't have access to."]
+  },
+  {
+    "id": "laravel-error-view",
+    "titleRegex": "^(Not Found|Server Error|Page Expired|Service Unavailable)$",
+    "bodyContains": ["border-r border-gray-400 tracking-wider"]
+  },
+  {
+    "id": "laravel-error-view-legacy",
+    "titleRegex": "^(Not Found|Server Error|Page Expired|Service Unavailable)$",
+    "bodyContains": ["flex-center position-ref full-height", "<div class=\"title\">"]
+  },
+  {
+    "id": "symfony-error",
+    "titleRegex": "^An Error Occurred: ",
+    "bodyContains": ["Oops! An Error Occurred", "Something is broken. Please let us know what you were doing when this error occurred."]
+  },
+  {
+    "id": "nginx-default",
+    "titleRegex": "^(400 Bad Request|401 Authorization Required|403 Forbidden|404 Not Found|405 Not Allowed|413 Request Entity Too Large|500 Internal Server Error|502 Bad Gateway|503 Service Temporarily Unavailable|504 Gateway Time-out)$",
+    "bodyContains": ["<hr><center>nginx"]
+  },
+  {
+    "id": "apache-404",
+    "titleRegex": "^404 Not Found$",
+    "bodyContains": ["<h1>Not Found</h1>", "The requested URL was not found on this server."]
+  },
+  {
+    "id": "apache-403",
+    "titleRegex": "^403 Forbidden$",
+    "bodyContains": ["<h1>Forbidden</h1>", "You don't have permission to access this resource."]
+  },
+  {
+    "id": "apache-500",
+    "titleRegex": "^500 Internal Server Error$",
+    "bodyContains": ["<h1>Internal Server Error</h1>", "The server encountered an internal error or"]
+  },
+  {
+    "id": "apache-503",
+    "titleRegex": "^503 Service Unavailable$",
+    "bodyContains": ["<h1>Service Unavailable</h1>", "The server is temporarily unable to service your"]
+  },
+  {
+    "id": "iis-default-404",
+    "titleRegex": "^404 - File or directory not found\\.$",
+    "bodyContains": ["The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable."]
+  },
+  {
+    "id": "iis-detailed-404",
+    "titleRegex": "^IIS [0-9.]+ Detailed Error - 404\\.0 - Not Found$",
+    "bodyContains": ["HTTP Error 404.0 - Not Found", "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable."]
+  },
+  {
+    "id": "vercel-not-found",
+    "bodyContains": ["The page could not be found", "NOT_FOUND"]
+  },
+  {
+    "id": "vercel-deployment-not-found",
+    "bodyContains": ["The deployment could not be found on Vercel.", "DEPLOYMENT_NOT_FOUND"]
+  },
+  {
+    "id": "netlify-default-404",
+    "bodyContains": ["broken link or entered a URL that"]
+  },
+  {
+    "id": "cloudflare-block",
+    "titleRegex": "^Attention Required! \\| Cloudflare$",
+    "bodyContains": ["Sorry, you have been blocked", "Cloudflare Ray ID"]
+  },
+  {
+    "id": "cloudflare-challenge",
+    "titleRegex": "^Just a moment\\.\\.\\.$",
+    "bodyContains": ["Enable JavaScript and cookies to continue"]
+  },
+  {
+    "id": "github-pages-site-404",
+    "titleRegex": "^Site not found .*GitHub Pages$",
+    "bodyContains": ["There isn't a GitHub Pages site here."]
+  },
+  {
+    "id": "github-pages-file-404",
+    "titleRegex": "^Page not found .*GitHub Pages$",
+    "bodyContains": ["The site configured at this address does not", "contain the requested file."]
+  },
+  {
+    "id": "firebase-hosting-site-not-found",
+    "titleRegex": "^Site Not Found$",
+    "bodyContains": ["Why am I seeing this?", "You may have deployed an empty directory."]
+  },
+  {
+    "id": "heroku-no-such-app",
+    "titleRegex": "^No such app$",
+    "bodyContains": ["herokucdn.com/error-pages/no-such-app.html"]
+  }
+]

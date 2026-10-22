@@ -1,0 +1,22 @@
+{
+  "ar": ["مطلوب", "مطلوبة", "حقل مطلوب", "حقول مطلوبة", "الحقول المطلوبة", "إلزامي", "إلزامية", "حقل إلزامي", "الحقول الإلزامية"],
+  "cs": ["povinné", "povinný", "povinná", "povinné pole", "povinná položka", "povinné položky", "povinné údaje", "povinný údaj", "vyžadováno", "vyžadované", "požadováno", "požadované pole"],
+  "da": ["påkrævet", "påkrævede", "påkrævet felt", "påkrævede felter", "obligatorisk", "obligatoriske", "obligatorisk felt", "obligatoriske felter", "skal udfyldes"],
+  "de": ["pflichtfeld", "pflichtfelder", "pflichtangabe", "pflichtangaben", "erforderlich", "erforderliches feld", "erforderliche felder", "muss-feld", "mussfeld", "mussfelder", "obligatorisch", "obligatorisches feld"],
+  "en": ["required", "required field", "required fields", "indicates required", "denotes required", "indicates a required field", "denotes a required field", "mandatory", "mandatory field", "mandatory fields", "marked with an asterisk"],
+  "es": ["obligatorio", "obligatorios", "obligatoria", "obligatorias", "campo obligatorio", "campos obligatorios", "requerido", "requeridos", "requerida", "requeridas", "campo requerido", "campos requeridos"],
+  "fi": ["pakollinen", "pakolliset", "pakollinen kenttä", "pakolliset kentät", "pakollisia", "pakollista", "pakolliset tiedot", "vaaditaan", "vaadittu"],
+  "fr": ["obligatoire", "obligatoires", "champ obligatoire", "champs obligatoires", "requis", "requise", "requises", "champ requis", "champs requis"],
+  "it": ["obbligatorio", "obbligatori", "obbligatoria", "obbligatorie", "campo obbligatorio", "campi obbligatori", "richiesto", "richiesti", "richiesta", "richieste", "campo richiesto", "campi richiesti"],
+  "ja": ["必須", "必須項目", "入力必須"],
+  "ko": ["필수", "필수 입력", "필수입력", "필수 항목", "필수항목", "필수 사항", "필수사항", "필수 입력 항목", "필수입력항목", "필수 입력사항", "필수입력사항"],
+  "nb": ["obligatorisk", "obligatoriske", "obligatorisk felt", "obligatoriske felt", "obligatoriske felter", "påkrevd", "påkrevde", "påkrevd felt", "påkrevde felt", "må fylles ut", "skal fylles ut", "kreves"],
+  "nl": ["verplicht", "verplichte", "verplicht veld", "verplichte velden", "vereist", "vereiste", "vereist veld", "vereiste velden"],
+  "pl": ["wymagane", "wymagany", "wymagana", "pole wymagane", "pola wymagane", "obowiązkowe", "obowiązkowy", "obowiązkowa", "pole obowiązkowe", "pola obowiązkowe"],
+  "pt": ["obrigatório", "obrigatória", "obrigatórios", "obrigatórias", "campo obrigatório", "campos obrigatórios", "preenchimento obrigatório"],
+  "ro": ["obligatoriu", "obligatorii", "obligatorie", "câmp obligatoriu", "câmpuri obligatorii", "necesar", "necesare", "câmp necesar", "câmpuri necesare"],
+  "ru": ["обязательно", "обязательное", "обязательный", "обязательная", "обязательные", "обязательное поле", "обязательные поля", "обязательно для заполнения"],
+  "sv": ["obligatoriskt", "obligatoriska", "obligatorisk", "obligatoriskt fält", "obligatoriska fält", "påkrävt", "påkrävd", "påkrävda", "påkrävt fält", "krävs"],
+  "tr": ["zorunlu", "zorunlu alan", "zorunlu alanlar", "zorunludur", "gerekli", "gerekli alan", "gerekli alanlar", "gereklidir"],
+  "zh": ["必填", "必须填写", "必須填寫", "必选", "必選"]
+}
