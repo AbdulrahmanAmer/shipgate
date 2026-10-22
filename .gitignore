@@ -2,3 +2,4 @@
 /quality/out/
 /quality/verify.env
 node_modules/
+/.claude/worktrees/
