@@ -220,7 +220,7 @@ corpus: ["web-delivery/rte-005-*"]
 | `detect` | `{ files?: glob[], dependency?: string, dirs?: string[] }`; all given members must match | yes | — |
 | `language` | string[]: `oxc:<lang>` and/or tree-sitter grammar ids | yes | — |
 | `templateLanguages` | string[] from `vue`, `svelte`, `astro`, `embedded-template` (ERB/EJS), `twig`, `blade`, `jinja2` | | `[]` |
-| `regexSinks` | `[{ templateLanguage, pattern: regex, precision: number 0–1 }]` for template languages with no maintained grammar; a service whose files include such a language has coverage level at most `structural`, and template rules on those files report the declared `precision` in the finding (02 § 4) | | `[]` |
+| `regexSinks` | `[{ templateLanguage, pattern: regex, precision: number 0–1 }]` for template languages with no maintained grammar (`pattern` in Rust `regex` syntax, matched against the whole file, a sink at the line where a match starts; `precision` is a declared value; in ruleset `grammar-tiers.json` the language is the entry's key, so its entries omit `templateLanguage`); a service whose files include such a language has coverage level at most `structural`, and template rules on those files report the declared `precision` in the finding (02 § 4) | | `[]` |
 | `defaults.commands` | the § 3.2 `commands` object | yes | — |
 | `windows` | partial manifest whose keys override the others on Windows | | `{}` |
 | `portBinding` | `env:<VAR>` \| `flag:<flag template with {port}>` \| `config`. `config`: the framework reads its port from a file shipgate must not rewrite, so the service must declare an integer `port` in policy (`port: "{port}"`, the default, with a `config` primary adapter → CFG-002); shipgate uses that integer and reports BLD-005 when the port is busy | yes | — |
