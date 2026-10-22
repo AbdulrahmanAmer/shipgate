@@ -1,0 +1,80 @@
+[
+  {
+    "token": "Googlebot",
+    "engine": "google",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Chrome/W.X.Y.Z Safari/537.36"
+  },
+  {
+    "token": "Googlebot",
+    "engine": "google",
+    "variant": "smartphone",
+    "userAgent": "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+  },
+  {
+    "token": "Bingbot",
+    "engine": "bing",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/W.X.Y.Z Safari/537.36"
+  },
+  {
+    "token": "Bingbot",
+    "engine": "bing",
+    "variant": "smartphone",
+    "userAgent": "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+  },
+  {
+    "token": "YandexBot",
+    "engine": "yandex",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)"
+  },
+  {
+    "token": "Yeti",
+    "engine": "naver",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Yeti/1.1; +https://naver.me/spd) Chrome/W.X.Y.Z Safari/537.36"
+  },
+  {
+    "token": "Baiduspider",
+    "engine": "baidu",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "token": "Baiduspider",
+    "engine": "baidu",
+    "variant": "smartphone",
+    "userAgent": "Mozilla/5.0 (Linux;u;Android 4.2.2;zh-cn;) AppleWebKit/534.46 (KHTML,like Gecko)Version/5.1 Mobile Safari/10600.6.3 (compatible; Baiduspider/2.0;+http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "token": "SeznamBot",
+    "engine": "seznam",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 (compatible; SeznamBot/4.0; +https://o-seznam.cz/napoveda/vyhledavani/en/seznambot-crawler/)"
+  },
+  {
+    "token": "Applebot",
+    "engine": "apple",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)"
+  },
+  {
+    "token": "Applebot",
+    "engine": "apple",
+    "variant": "smartphone",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1 (Applebot/0.1; +http://www.apple.com/go/applebot)"
+  },
+  {
+    "token": "Chrome",
+    "engine": "chrome",
+    "variant": "desktop",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+  },
+  {
+    "token": "Chrome",
+    "engine": "chrome",
+    "variant": "smartphone",
+    "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36"
+  }
+]

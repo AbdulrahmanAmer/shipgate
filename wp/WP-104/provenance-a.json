@@ -1,0 +1,432 @@
+{
+  "agentic-feeds.json": {
+    "source": [
+      "spec:spec/packs/search-engines.md SE-114 (shape)",
+      "https://developers.openai.com/commerce/specs/file-upload/products",
+      "https://developers.openai.com/commerce/llms-full.txt",
+      "https://developers.google.com/merchant/ucp/guides/overview/merchant-center",
+      "https://support.google.com/merchants/answer/6324448",
+      "https://support.google.com/merchants/answer/6324371",
+      "https://support.google.com/merchants/answer/6324416",
+      "https://support.google.com/merchants/answer/6324507"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "OpenAI commerce feed field names and values from developers.openai.com (no licence stated on the pages); Google Merchant Center attribute names and values from Google help pages; developers.google.com content is CC BY 4.0."
+  },
+  "ai-agents.json": {
+    "source": [
+      "https://developers.openai.com/api/docs/bots",
+      "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+      "https://support.apple.com/en-us/119829",
+      "https://commoncrawl.org/ccbot",
+      "https://www.tiktok.com/robots.txt",
+      "https://developer.amazon.com/amazonbot",
+      "https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers",
+      "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot",
+      "https://docs.mistral.ai/robots",
+      "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+      "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers",
+      "spec:spec/packs/web-delivery.md § IDX-008"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Facts (token names, user-agent strings, robots.txt behaviour) taken from the vendors' public crawler documentation listed in source; Google pages are CC-BY 4.0 (Google Developers Site Policies)."
+  },
+  "autoIdPatterns.json": {
+    "source": [
+      "https://raw.githubusercontent.com/facebook/react/v18.3.1/packages/react-reconciler/src/ReactFiberHooks.new.js",
+      "https://raw.githubusercontent.com/facebook/react/v19.1.0/packages/react-reconciler/src/ReactFiberHooks.js",
+      "https://raw.githubusercontent.com/facebook/react/main/packages/react-reconciler/src/ReactFiberHooks.js",
+      "https://raw.githubusercontent.com/radix-ui/primitives/main/packages/react/id/src/id.tsx",
+      "https://raw.githubusercontent.com/tailwindlabs/headlessui/main/packages/@headlessui-react/src/components/menu/menu.tsx",
+      "https://raw.githubusercontent.com/vuejs/core/main/packages/runtime-core/src/helpers/useId.ts",
+      "https://raw.githubusercontent.com/mui/material-ui/master/packages/mui-utils/src/useId/useId.ts",
+      "spec:spec/packs/answer-engines.md § AEO-013"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Id formats read from the cited library sources (MIT); patterns authored."
+  },
+  "baseline-js-syntax.json": {
+    "source": [
+      "https://raw.githubusercontent.com/oxc-project/oxc/main/crates/oxc_ast/src/ast/js.rs",
+      "https://raw.githubusercontent.com/oxc-project/oxc/main/crates/oxc_ast/src/ast/literal.rs",
+      "https://registry.npmjs.org/web-features/-/web-features-3.43.0.tgz"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Node type names from oxc_ast (MIT); BCD keys verified present in web-features 3.43.0 (Apache-2.0)."
+  },
+  "bfcache-harness-reasons.json": {
+    "source": [
+      "https://raw.githubusercontent.com/microsoft/playwright/main/packages/playwright-core/src/server/chromium/chromiumSwitches.ts",
+      "https://raw.githubusercontent.com/GoogleChrome/lighthouse/main/core/lib/bf-cache-strings.js",
+      "https://raw.githubusercontent.com/GoogleChrome/lighthouse/main/core/gather/gatherers/bf-cache-failures.js"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Reason names are CDP Page.BackForwardCacheNotRestoredReason values as listed in Lighthouse bf-cache-strings.js (Apache-2.0); selection authored from Playwright's default --disable-back-forward-cache switch and Lighthouse's note that navigating via about:blank yields BrowsingInstanceNotSwapped."
+  },
+  "campaign-params.json": {
+    "source": [
+      "spec:spec/packs/web-delivery.md § 2 Data file shapes (URL-015 shipped names)",
+      "https://support.google.com/analytics/answer/10917952",
+      "https://support.google.com/google-ads/answer/9744275",
+      "https://support.google.com/analytics/answer/11367152",
+      "https://support.google.com/google-ads/answer/10417364",
+      "https://learn.microsoft.com/en-us/advertising/msa-help/hlp_ba_proc_microsoftclickid",
+      "https://ads.tiktok.com/help/article/tiktok-click-id?lang=en",
+      "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Parameter names as documented by Google Analytics, Google Ads, Microsoft Advertising, TikTok and Meta; list fixed by the shipgate spec (URL-015)."
+  },
+  "china-blocked-hosts.json": {
+    "source": [
+      "https://en.greatfire.org/youtube.com",
+      "https://en.greatfire.org/facebook.com",
+      "https://en.greatfire.org/google.com",
+      "https://en.greatfire.org/googleapis.com",
+      "https://en.greatfire.org/twitter.com",
+      "https://en.greatfire.org/instagram.com",
+      "https://en.greatfire.org/pinterest.com",
+      "https://en.greatfire.org/reddit.com",
+      "https://en.greatfire.org/vimeo.com",
+      "https://en.greatfire.org/whatsapp.com",
+      "https://developers.google.com/recaptcha/docs/faq",
+      "spec:spec/packs/search-engines.md § SE-501 (host grammar of 03 § 3.3)"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Facts only: GreatFire.org (en.greatfire.org/<domain>) mainland-China test verdicts fetched 2026-10-22 for each listed domain (full result table: scratchpad hosts/gf-results.tsv). An entry is present only where the page verdict was blocked ('No', 'All blocked' or 'Mostly blocked'); the apex plus a *. wildcard are listed where the domain roll-up reads All blocked or Mostly blocked, otherwise only the tested host. GreatFire's site states no licence on its FAQ page. Google's reCAPTCHA FAQ documents that www.google.com may not be accessible and names recaptcha.net as the alternative host. Wikipedia was not used."
+  },
+  "content-signals.json": {
+    "source": [
+      "https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/",
+      "spec:spec/packs/web-delivery.md § 2 data file shapes"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Signal names and yes/no semantics from Cloudflare's Content Signals documentation."
+  },
+  "default-documents.json": {
+    "source": [
+      "spec:spec/packs/web-delivery.md § URL-014"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "The five entries URL-014 lists."
+  },
+  "engine-crawlers.json": {
+    "source": [
+      "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+      "https://yandex.com/support/webmaster/en/robot-workings/user-agent",
+      "https://yandex.com/support/webmaster/en/robot-workings/check-yandex-robots",
+      "https://help.baidu.com/question?prod_id=99&class=0&id=3001",
+      "https://ziyuan.baidu.com/college/articleinfo?id=1192",
+      "spec:spec/packs/search-engines.md § SE-010"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Token names and fallback behaviour from the Google (CC-BY 4.0), Yandex and Baidu public documentation listed in source."
+  },
+  "features/bing.json": {
+    "source": [
+      "https://www.bing.com/webmasters/help/marking-up-your-site-with-structured-data-3a93e731",
+      "https://www.bing.com/webmasters/help/markup-breadcrumbs-72419f3f",
+      "https://www.bing.com/webmasters/help/?topicid=cc507c09",
+      "https://www.bing.com/webmasters/help/?topicid=0f23328d",
+      "https://www.bing.com/webmasters/help/people-markup-86fb1ed0",
+      "https://www.bing.com/webmasters/help/products-and-offers-markup-138d0977",
+      "https://www.bing.com/webmasters/help/?topicid=da2b3faa",
+      "https://www.bing.com/webmasters/help/?topicid=76f106ad",
+      "https://www.bing.com/webmasters/help/?topicid=785302d2",
+      "https://www.bing.com/webmasters/help/?topicid=7202cff4",
+      "https://www.bing.com/webmasters/help/special-announcement-specifications-5cbd6249",
+      "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a",
+      "https://schema.org/version/latest/schemaorg-current-https.jsonld"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Property requirements read from Bing Webmaster Tools Help (Microsoft). Facts only, no documentation text redistributed. Microsoft site terms were NOT read (UNPROVEN that facts-only reuse needs no attribution). Property names checked against the schema.org release JSON-LD (CC-BY-SA-3.0 vocabulary; validation only, nothing copied)."
+  },
+  "features/google.json": {
+    "source": [
+      "https://developers.google.com/search/docs/appearance/structured-data/search-gallery",
+      "https://developers.google.com/search/docs/appearance/structured-data/article",
+      "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb",
+      "https://developers.google.com/search/docs/appearance/structured-data/carousel",
+      "https://developers.google.com/search/docs/appearance/structured-data/course",
+      "https://developers.google.com/search/docs/appearance/structured-data/dataset",
+      "https://developers.google.com/search/docs/appearance/structured-data/discussion-forum",
+      "https://developers.google.com/search/docs/appearance/structured-data/education-qa",
+      "https://developers.google.com/search/docs/appearance/structured-data/employer-rating",
+      "https://developers.google.com/search/docs/appearance/structured-data/event",
+      "https://developers.google.com/search/docs/appearance/structured-data/factcheck",
+      "https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata",
+      "https://developers.google.com/search/docs/appearance/structured-data/job-posting",
+      "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+      "https://developers.google.com/search/docs/appearance/structured-data/loyalty-program",
+      "https://developers.google.com/search/docs/appearance/structured-data/math-solvers",
+      "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+      "https://developers.google.com/search/docs/appearance/structured-data/movie",
+      "https://developers.google.com/search/docs/appearance/structured-data/organization",
+      "https://developers.google.com/search/docs/appearance/structured-data/paywalled-content",
+      "https://developers.google.com/search/docs/appearance/structured-data/product-snippet",
+      "https://developers.google.com/search/docs/appearance/structured-data/profile-page",
+      "https://developers.google.com/search/docs/appearance/structured-data/qapage",
+      "https://developers.google.com/search/docs/appearance/structured-data/recipe",
+      "https://developers.google.com/search/docs/appearance/structured-data/return-policy",
+      "https://developers.google.com/search/docs/appearance/structured-data/review-snippet",
+      "https://developers.google.com/search/docs/appearance/structured-data/shipping-policy",
+      "https://developers.google.com/search/docs/appearance/structured-data/software-app",
+      "https://developers.google.com/search/docs/appearance/structured-data/speakable",
+      "https://developers.google.com/search/docs/appearance/structured-data/vacation-rental",
+      "https://developers.google.com/search/docs/appearance/structured-data/video",
+      "https://developers.google.com/search/updates",
+      "https://web.archive.org/web/20260301101352/https://developers.google.com/search/docs/appearance/structured-data/faqpage",
+      "https://web.archive.org/web/20230804015537/https://developers.google.com/search/docs/appearance/structured-data/how-to",
+      "https://web.archive.org/web/20240601235227/https://developers.google.com/search/docs/appearance/structured-data/sitelinks-searchbox",
+      "https://web.archive.org/web/20251001120120/https://developers.google.com/search/docs/appearance/structured-data/practice-problems",
+      "https://web.archive.org/web/20250302055321/https://developers.google.com/search/docs/appearance/structured-data/course-info",
+      "https://web.archive.org/web/20250302055348/https://developers.google.com/search/docs/appearance/structured-data/estimated-salary",
+      "https://web.archive.org/web/20240602001053/https://developers.google.com/search/docs/appearance/structured-data/learning-video"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "Property lists and feature status transcribed from Google Search Central documentation (developers.google.com/search), content licensed under Creative Commons Attribution 4.0 (page footer: 'Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License'). Rows for removed features (faq, howto, sitelinks-searchbox, practice-problems, course-info, estimated-salary, learning-video) take their property lists from Internet Archive copies of Google's own pages."
+  },
+  "features/naver.json": {
+    "source": [
+      "https://searchadvisor.naver.com/guide/structured-data-intro",
+      "https://searchadvisor.naver.com/guide/structured-data-channel",
+      "https://searchadvisor.naver.com/guide/structured-data-job",
+      "https://searchadvisor.naver.com/guide/structured-data-address",
+      "https://searchadvisor.naver.com/guide/structured-data-breadcrumb",
+      "https://searchadvisor.naver.com/guide/structured-data-carousel",
+      "https://searchadvisor.naver.com/guide/structured-data-rating",
+      "https://searchadvisor.naver.com/guide/structured-data-recipe",
+      "https://searchadvisor.naver.com/guide/structured-data-review",
+      "https://searchadvisor.naver.com/guide/structured-data-restaurant",
+      "https://searchadvisor.naver.com/guide/structured-data-tvseries",
+      "https://searchadvisor.naver.com/guide/structured-data-movie",
+      "https://searchadvisor.naver.com/guide/structured-data-software",
+      "https://searchadvisor.naver.com/guide/structured-data-video",
+      "https://schema.org/version/latest/schemaorg-current-https.jsonld"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Property requirements read from NAVER Search Advisor webmaster guides (NAVER Corp.). Facts only. NAVER terms of use were NOT read (UNPROVEN). Property names checked against schema.org JSON-LD (validation only)."
+  },
+  "fetch-tools.json": {
+    "source": [
+      "spec:spec/03-formats.md § 16 (shape)",
+      "https://code.claude.com/docs/en/hooks",
+      "https://github.com/microsoft/playwright-mcp",
+      "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "spec:observed 2026-10-22 live Claude Code PostToolUse payload for an MCP tool (scratchpad/partA/feeds/hook-payloads.txt)"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Tool names and input fields from the Playwright MCP README (Apache-2.0) and the MCP servers fetch README; payload pointers observed on a live Claude Code run."
+  },
+  "geo-headers.json": {
+    "source": [
+      "spec:spec/packs/web-delivery.md § 2 data file shapes (I18-011 shipped entries)",
+      "https://developers.cloudflare.com/network/ip-geolocation/",
+      "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/adding-cloudfront-headers.html",
+      "https://vercel.com/docs/headers/request-headers",
+      "https://docs.cloud.google.com/appengine/docs/flexible/reference/request-headers",
+      "https://registry.npmjs.org/geoip-lite/latest",
+      "https://registry.npmjs.org/maxmind/latest",
+      "https://registry.npmjs.org/@maxmind/geoip2-node/latest",
+      "https://registry.npmjs.org/ipinfo/latest"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Entries are the spec's shipped list; header names confirmed in the vendor pages above except x-country-code and the package ip-api (see spec-changes-a.md)."
+  },
+  "gsc-indexed-states.json": {
+    "source": [
+      "https://web.archive.org/web/20201224233535/https://support.google.com/webmasters/answer/7440203?hl=en",
+      "https://web.archive.org/web/20201130115651/https://support.google.com/webmasters/answer/7440203?hl=ar",
+      "https://web.archive.org/web/20201204051525/https://support.google.com/webmasters/answer/7440203?hl=cs",
+      "https://web.archive.org/web/20201028182135/https://support.google.com/webmasters/answer/7440203?hl=de",
+      "https://web.archive.org/web/20201126161905/https://support.google.com/webmasters/answer/7440203?hl=es",
+      "https://web.archive.org/web/20200406152431/https://support.google.com/webmasters/answer/7440203?hl=fi",
+      "https://web.archive.org/web/20200311100334/https://support.google.com/webmasters/answer/7440203?hl=fr",
+      "https://web.archive.org/web/20210225001148/https://support.google.com/webmasters/answer/7440203?hl=it",
+      "https://web.archive.org/web/20210112004056/https://support.google.com/webmasters/answer/7440203?hl=ja",
+      "https://web.archive.org/web/20220426123633/https://support.google.com/webmasters/answer/7440203?hl=nl",
+      "https://web.archive.org/web/20210214180108/https://support.google.com/webmasters/answer/7440203?hl=pl",
+      "https://web.archive.org/web/20220226104314/https://support.google.com/webmasters/answer/7440203?hl=pt-BR",
+      "https://web.archive.org/web/20210122011250/https://support.google.com/webmasters/answer/7440203?hl=ru",
+      "https://web.archive.org/web/20210228214230/https://support.google.com/webmasters/answer/7440203?hl=sv",
+      "https://web.archive.org/web/20200110001356/https://support.google.com/webmasters/answer/7440203?hl=tr",
+      "https://web.archive.org/web/20201011184005/https://support.google.com/webmasters/answer/7440203?hl=zh-Hans",
+      "https://web.archive.org/web/20200925141643/https://support.google.com/webmasters/answer/7440203?hl=zh-Hant"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Search Console Help, 'Index Coverage report' (support.google.com/webmasters/answer/7440203) as archived by the Internet Archive; the two Valid-status labels per language are copied from the page text (checked by string search in the saved pages). Not verified against today's Search Console UI wording. da, ko, nb, ro: no archived copy of that page still lists the labels (earliest copies are the 2022-23 'Page indexing' rewrite, nb has no copy), so those keys are empty."
+  },
+  "iso4217.json": {
+    "source": [
+      "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml",
+      "https://www.six-group.com/en/products-services/financial-information/data-standards.html"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-SIX-ISO4217-List-One-free-of-charge",
+    "attribution": "ISO 4217 List One (current currency and funds), published 2026-09-17 by SIX Financial Information as ISO 4217 Maintenance Agency; the page states the lists are 'available online and free of charge' and gives no licence text. file sha256 33139b438657d1cee116ba737807ea71d19d6de4b90f799a09c56f0cc6a1b0ff."
+  },
+  "lighthouse-audit-renames.json": {
+    "source": [
+      "https://developer.chrome.com/blog/moving-lighthouse-to-insights",
+      "https://raw.githubusercontent.com/GoogleChrome/lighthouse/main/changelog.md"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "Mapping from the 'Moving Lighthouse to insights' article (Chrome for Developers, CC BY 4.0) and the Lighthouse changelog (Apache-2.0), Lighthouse 13.x; tap-targets to target-size from changelog 12.0; layout-shift-elements chains through layout-shifts (changelog 11.x) to cls-culprits-insight."
+  },
+  "local-listing-sources.json": {
+    "source": [
+      "https://support.microsoft.com/bing/add-and-manage-your-business-listing",
+      "https://support.apple.com/guide/apple-business-connect/welcome/web",
+      "https://support.apple.com/126603",
+      "https://business.apple.com/",
+      "https://new.smartplace.naver.com/",
+      "https://yandex.ru/support/business-priority/ru/",
+      "https://didian.baidu.com/",
+      "https://www.firmy.cz/",
+      "https://admin.firmy.cz/pridat-firmu-zaciname/1"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Listing-management URLs and Apple country availability read from the vendors' own pages. Facts only."
+  },
+  "model-hosts.json": {
+    "source": [
+      "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+      "https://docs.anthropic.com/en/api/overview",
+      "https://ai.google.dev/api",
+      "https://docs.mistral.ai/api/",
+      "https://docs.cohere.com/reference/chat",
+      "https://console.groq.com/docs/api-reference",
+      "https://docs.x.ai/docs/api-reference",
+      "https://docs.perplexity.ai/",
+      "https://api-docs.deepseek.com/",
+      "https://openrouter.ai/docs/api-reference/overview",
+      "https://docs.together.ai/docs/openai-api-compatibility",
+      "https://docs.fireworks.ai/api-reference/post-chatcompletions",
+      "https://replicate.com/docs/reference/http",
+      "https://huggingface.co/docs/inference-providers/index",
+      "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/reference",
+      "https://docs.aws.amazon.com/general/latest/gr/bedrock.html",
+      "https://cloud.google.com/vertex-ai/docs/reference/rest",
+      "https://docs.ai21.com/reference/jamba-1-6-api-ref",
+      "https://docs.voyageai.com/reference/embeddings-api",
+      "https://elevenlabs.io/docs/api-reference/text-to-speech/convert"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Facts only (API host names), each read from the provider documentation page listed, by string match on the fetched page. Bedrock (bedrock-runtime.<region>.amazonaws.com, 22 regions listed on the AWS page) and Vertex AI (<region>-aiplatform.googleapis.com, 36 regions listed on the Google page) are listed as explicit hosts because the 03 § 3.3 wildcard is leading-label only."
+  },
+  "placeholder-handles.json": {
+    "source": [
+      "spec:spec/packs/web-delivery.md § MET-011 social part (placeholder-handles.json shape: [string], compared case-insensitively)"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored list of strings that are certainly placeholders. Each entry also appears with a leading @ because YouTube, TikTok, Threads and Snapchat put the handle in an @-prefixed path segment."
+  },
+  "scaffold-routes.json": {
+    "source": [
+      "spec:spec/packs/web-delivery.md § MET-011 scaffold-route"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "The spec's eight named segments plus seven authored scaffold segments (WordPress default slugs hello-world and sample-page, plural/hyphenated variants)."
+  },
+  "schemaorg.json": {
+    "source": [
+      "https://github.com/schemaorg/schemaorg/releases/tag/v30.1",
+      "https://raw.githubusercontent.com/schemaorg/schemaorg/v30.1/data/releases/30.1/schemaorg-current-https.jsonld",
+      "https://schema.org/docs/terms.html"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-SA-3.0",
+    "attribution": "Schema.org vocabulary release 30.1 (schema.org community, https://schema.org/docs/terms.html, CC BY-SA 3.0). Reduced to type names, supertypes, property names, ranges and enumeration member URLs; no descriptions are copied. Source file sha256 0a4b8c4c910fc831ec8695196510973390906a5ee34dc6b862dfec4d21a12f74."
+  },
+  "search-agents.json": {
+    "source": [
+      "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+      "https://blogs.bing.com/webmaster/october-2022/Announcing-user-agent-change-for-Bing-crawler-bingbot",
+      "https://yandex.com/support/webmaster/en/robot-workings/check-yandex-robots",
+      "https://searchadvisor.naver.com/guide/seo-basic-firewall",
+      "https://ziyuan.baidu.com/college/articleinfo?id=1002",
+      "https://o-seznam.cz/napoveda/vyhledavani/en/seznambot-crawler/",
+      "https://support.apple.com/en-us/119829",
+      "https://www.chromium.org/updates/ua-reduction/",
+      "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "User-agent strings copied from the engines' public crawler documentation listed in source; Google pages are CC-BY 4.0. The Chrome rows are constructed from the reduced-UA formats at chromium.org with major version 156 from the Chrome version-history API (stable 156.0.8078.48)."
+  },
+  "social-agents.json": {
+    "source": [
+      "https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers",
+      "https://web.archive.org/web/20240114204225/https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/troubleshooting-cards",
+      "https://www.linkedin.com/robots.txt",
+      "https://developers.facebook.com/documentation/business-messaging/whatsapp/link-previews/",
+      "https://api.slack.com/robots",
+      "https://docs.discord.com/developers/link-previews/component-embeds",
+      "spec:spec/packs/web-delivery.md § MET-005"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "User-agent identifiers from the vendors' public documentation listed in source. LinkedInBot and TelegramBot rows carry the bare token: no fetched vendor page publishes a full user-agent string for either."
+  },
+  "social-hosts.json": {
+    "source": [
+      "spec:spec/packs/web-delivery.md § MET-011 (social part) and § 2 data file shapes",
+      "https://core.telegram.org/api/links",
+      "https://core.telegram.org/widgets/share",
+      "https://docs.x.com/x-for-websites/web-intents/overview.md",
+      "https://docs.x.com/llms-full.txt",
+      "https://developers.facebook.com/documentation/sharing/reference/share-dialog",
+      "https://twitter.com/jack",
+      "https://fb.com/zuck",
+      "https://threads.net/@zuck",
+      "https://www.linkedin.com/in/williamhgates",
+      "https://www.reddit.com/user/spez",
+      "https://bsky.app/profile/bsky.app",
+      "https://www.snapchat.com/add/teamsnapchat"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Facts only (host names, URL path shapes). Documented: Telegram links/share (t.me, telegram.me, telegram.dog, /share/url, /msg/url), X web intents (x.com/intent/*), Facebook share dialog (facebook.com/dialog/share). Everything else (aliases, handleSegment, other share paths) is OBSERVED by HTTP requests on 2026-10-22 (probe table in scratchpad hosts/probe-social.txt): twitter.com and mobile.twitter.com redirect to x.com; fb.com and fb.me redirect to facebook.com; threads.net redirects to threads.com; lnkd.in redirects to linkedin.com; youtu.be redirects to youtube.com; pin.it redirects to pinterest.com; redd.it redirects to reddit.com; old.reddit.com serves reddit; vm.tiktok.com redirects to tiktok.com; snapchat.com/add/<h> redirects to snapchat.com/@<h>; linkedin /in/<h> and /company/<slug> serve 200; reddit /user/<h> and /u/<h> serve 200; bsky.app/profile/<h> serves 200; /sharing/share-offsite and /shareArticle (linkedin), /submit (reddit), /pin/create/button (pinterest), /intent/compose (bsky), /widgets/share/tool and /share/link (tumblr) were observed to exist."
+  },
+  "tracking-param-expansions.json": {
+    "source": [
+      "spec:spec/packs/search-engines.md SE-301 (utm_* example)",
+      "spec:spec/packs/web-delivery.md § 2 Data file shapes and policy default trackingParams",
+      "https://support.google.com/analytics/answer/10917952"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "utm_* names as documented in Google Analytics help."
+  },
+  "web-features.json": {
+    "source": [
+      "https://registry.npmjs.org/web-features/-/web-features-3.43.0.tgz",
+      "https://github.com/web-platform-dx/web-features/releases/tag/v3.43.0"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "Apache-2.0",
+    "attribution": "web-features 3.43.0 by the WebDX Community Group (Apache-2.0); BCD keys come from @mdn/browser-compat-data. Tarball sha1 d47c2f1780e660499c2daa31f9a3108ed6bd5b13."
+  }
+}

@@ -1,0 +1,1119 @@
+[
+  {
+    "feature": "article",
+    "schemaTypes": [
+      "Article",
+      "NewsArticle",
+      "BlogPosting"
+    ],
+    "required": [],
+    "recommended": [
+      "author",
+      "author.name",
+      "author.url",
+      "dateModified",
+      "datePublished",
+      "headline",
+      "image"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/article",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "product",
+    "schemaTypes": [
+      "Product"
+    ],
+    "required": [
+      "name",
+      {
+        "anyOf": [
+          "review",
+          "aggregateRating",
+          "offers"
+        ]
+      }
+    ],
+    "recommended": [
+      "aggregateRating",
+      "offers",
+      "review"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/product-snippet",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "merchant-listing",
+    "schemaTypes": [
+      "Product"
+    ],
+    "required": [
+      "name",
+      "image",
+      "offers",
+      {
+        "anyOf": [
+          "offers.price",
+          "offers.priceSpecification.price"
+        ]
+      },
+      {
+        "anyOf": [
+          "offers.priceCurrency",
+          "offers.priceSpecification.priceCurrency"
+        ]
+      }
+    ],
+    "recommended": [
+      "aggregateRating",
+      "audience",
+      "brand.name",
+      "category",
+      "color",
+      "description",
+      {
+        "anyOf": [
+          "gtin",
+          "gtin8",
+          "gtin12",
+          "gtin13",
+          "gtin14",
+          "isbn"
+        ]
+      },
+      "hasAdultConsideration",
+      "hasCertification",
+      "inProductGroupWithID",
+      "isVariantOf",
+      "material",
+      "mpn",
+      "pattern",
+      "review",
+      "size",
+      "sku",
+      "subjectOf",
+      "offers.availability",
+      "offers.hasMerchantReturnPolicy",
+      "offers.itemCondition",
+      "offers.priceValidUntil",
+      "offers.shippingDetails",
+      "offers.url",
+      "offers.validFrom",
+      "offers.validThrough"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "event",
+    "schemaTypes": [
+      "Event"
+    ],
+    "required": [
+      "location",
+      "location.address",
+      "name",
+      "startDate"
+    ],
+    "recommended": [
+      "description",
+      "endDate",
+      "eventStatus",
+      "image",
+      "location.name",
+      "offers",
+      "offers.availability",
+      "offers.price",
+      "offers.priceCurrency",
+      "offers.validFrom",
+      "offers.url",
+      "organizer",
+      "organizer.name",
+      "organizer.url",
+      "performer",
+      "performer.name",
+      "previousStartDate"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/event",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "job-posting",
+    "schemaTypes": [
+      "JobPosting"
+    ],
+    "required": [
+      "datePosted",
+      "description",
+      "hiringOrganization",
+      {
+        "anyOf": [
+          "jobLocation",
+          "applicantLocationRequirements"
+        ]
+      },
+      "title"
+    ],
+    "recommended": [
+      "applicantLocationRequirements",
+      "baseSalary",
+      "directApply",
+      "employmentType",
+      "identifier",
+      "jobLocationType",
+      "validThrough",
+      "educationRequirements",
+      "educationRequirements.credentialCategory",
+      "experienceRequirements",
+      "experienceRequirements.monthsOfExperience",
+      "experienceInPlaceOfEducation"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/job-posting",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "video",
+    "schemaTypes": [
+      "VideoObject"
+    ],
+    "required": [
+      "name",
+      "thumbnailUrl",
+      "uploadDate"
+    ],
+    "recommended": [
+      "contentUrl",
+      {
+        "anyOf": [
+          "creator",
+          "author"
+        ]
+      },
+      {
+        "anyOf": [
+          "creator.name",
+          "author.name"
+        ]
+      },
+      {
+        "anyOf": [
+          "creator.url",
+          "author.url"
+        ]
+      },
+      "description",
+      "duration",
+      "embedUrl",
+      "expires",
+      "hasPart",
+      "ineligibleRegion",
+      "interactionStatistic",
+      "interactionStatistic.interactionType",
+      "interactionStatistic.userInteractionCount",
+      "publication",
+      "regionsAllowed"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/video",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "image-metadata",
+    "schemaTypes": [
+      "ImageObject"
+    ],
+    "required": [
+      {
+        "anyOf": [
+          "contentUrl",
+          "url"
+        ]
+      },
+      {
+        "anyOf": [
+          "creator",
+          "creditText",
+          "copyrightNotice",
+          "license"
+        ]
+      }
+    ],
+    "recommended": [
+      "acquireLicensePage",
+      "creator",
+      "creator.name",
+      "creditText",
+      "copyrightNotice",
+      "license"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "local-business",
+    "schemaTypes": [
+      "LocalBusiness"
+    ],
+    "required": [
+      "address",
+      "name"
+    ],
+    "recommended": [
+      "aggregateRating",
+      "department",
+      "geo",
+      "geo.latitude",
+      "geo.longitude",
+      "menu",
+      "openingHoursSpecification",
+      "openingHoursSpecification.closes",
+      "openingHoursSpecification.dayOfWeek",
+      "openingHoursSpecification.opens",
+      "openingHoursSpecification.validFrom",
+      "openingHoursSpecification.validThrough",
+      "priceRange",
+      "review",
+      "servesCuisine",
+      "telephone",
+      "url"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "organization",
+    "schemaTypes": [
+      "Organization"
+    ],
+    "required": [],
+    "recommended": [
+      "address",
+      "address.addressCountry",
+      "address.addressLocality",
+      "address.addressRegion",
+      "address.postalCode",
+      "address.streetAddress",
+      "alternateName",
+      "contactPoint",
+      "contactPoint.email",
+      "contactPoint.telephone",
+      "description",
+      "duns",
+      "email",
+      "foundingDate",
+      "globalLocationNumber",
+      "hasMerchantReturnPolicy",
+      "hasMemberProgram",
+      "hasShippingService",
+      "iso6523Code",
+      "legalName",
+      "leiCode",
+      "logo",
+      "naics",
+      "name",
+      "numberOfEmployees",
+      "sameAs",
+      "taxID",
+      "telephone",
+      "url",
+      "vatID"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "breadcrumb",
+    "schemaTypes": [
+      "BreadcrumbList"
+    ],
+    "required": [
+      "itemListElement",
+      "itemListElement.item",
+      "itemListElement.name",
+      "itemListElement.position"
+    ],
+    "recommended": [],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "review-snippet",
+    "schemaTypes": [
+      "Review"
+    ],
+    "required": [
+      "author",
+      "reviewRating",
+      "reviewRating.ratingValue"
+    ],
+    "recommended": [
+      "datePublished",
+      "reviewRating.bestRating",
+      "reviewRating.worstRating"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "aggregate-rating",
+    "schemaTypes": [
+      "AggregateRating"
+    ],
+    "required": [
+      "ratingValue",
+      {
+        "anyOf": [
+          "ratingCount",
+          "reviewCount"
+        ]
+      }
+    ],
+    "recommended": [
+      "bestRating",
+      "worstRating"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/review-snippet",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "recipe",
+    "schemaTypes": [
+      "Recipe"
+    ],
+    "required": [
+      "image",
+      "name"
+    ],
+    "recommended": [
+      "aggregateRating",
+      "author",
+      "cookTime",
+      "datePublished",
+      "description",
+      "keywords",
+      "nutrition.calories",
+      "prepTime",
+      "recipeCategory",
+      "recipeCuisine",
+      "recipeIngredient",
+      "recipeInstructions",
+      "recipeYield",
+      "totalTime",
+      "video"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/recipe",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "course-list",
+    "schemaTypes": [
+      "Course"
+    ],
+    "required": [
+      "description",
+      "name"
+    ],
+    "recommended": [
+      "provider"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/course",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "carousel",
+    "schemaTypes": [
+      "ItemList"
+    ],
+    "required": [
+      "itemListElement",
+      "itemListElement.position",
+      {
+        "anyOf": [
+          "itemListElement.url",
+          "itemListElement.item"
+        ]
+      }
+    ],
+    "recommended": [],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/carousel",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "movie",
+    "schemaTypes": [
+      "Movie"
+    ],
+    "required": [
+      "image",
+      "name"
+    ],
+    "recommended": [
+      "aggregateRating",
+      "dateCreated",
+      "director",
+      "review"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/movie",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "discussion-forum",
+    "schemaTypes": [
+      "DiscussionForumPosting",
+      "SocialMediaPosting"
+    ],
+    "required": [
+      "author",
+      "author.name",
+      "datePublished",
+      {
+        "anyOf": [
+          "text",
+          "image",
+          "video"
+        ]
+      }
+    ],
+    "recommended": [
+      "author.url",
+      "comment",
+      "commentCount",
+      "creativeWorkStatus",
+      "dateModified",
+      "digitalSourceType",
+      "headline",
+      "image",
+      "interactionStatistic",
+      "isPartOf",
+      "sharedContent",
+      "text",
+      "url",
+      "video"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/discussion-forum",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "qa-page",
+    "schemaTypes": [
+      "QAPage"
+    ],
+    "required": [
+      "mainEntity",
+      "mainEntity.answerCount",
+      "mainEntity.name",
+      {
+        "anyOf": [
+          "mainEntity.acceptedAnswer",
+          "mainEntity.suggestedAnswer"
+        ]
+      }
+    ],
+    "recommended": [
+      "mainEntity.author",
+      "mainEntity.author.url",
+      "mainEntity.comment",
+      "mainEntity.commentCount",
+      "mainEntity.dateModified",
+      "mainEntity.datePublished",
+      "mainEntity.digitalSourceType",
+      "mainEntity.image",
+      "mainEntity.text",
+      "mainEntity.upvoteCount",
+      "mainEntity.video"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/qapage",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "education-qa",
+    "schemaTypes": [
+      "Quiz"
+    ],
+    "required": [
+      "hasPart",
+      "hasPart.acceptedAnswer",
+      "hasPart.eduQuestionType",
+      "hasPart.text"
+    ],
+    "recommended": [
+      "about",
+      "about.name",
+      "educationalAlignment",
+      "educationalAlignment.alignmentType",
+      "educationalAlignment.targetName"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/education-qa",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "math-solver",
+    "schemaTypes": [
+      "MathSolver"
+    ],
+    "required": [
+      "potentialAction",
+      "potentialAction.mathExpression-input",
+      "url",
+      "usageInfo",
+      "potentialAction.target"
+    ],
+    "recommended": [
+      "inLanguage",
+      "assesses",
+      "potentialAction.eduQuestionType"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/math-solvers",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "employer-aggregate-rating",
+    "schemaTypes": [
+      "EmployerAggregateRating"
+    ],
+    "required": [
+      "itemReviewed",
+      "ratingValue",
+      {
+        "anyOf": [
+          "ratingCount",
+          "reviewCount"
+        ]
+      }
+    ],
+    "recommended": [
+      "bestRating",
+      "worstRating"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/employer-rating",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "profile-page",
+    "schemaTypes": [
+      "ProfilePage"
+    ],
+    "required": [
+      "mainEntity",
+      {
+        "anyOf": [
+          "mainEntity.name",
+          "mainEntity.alternateName"
+        ]
+      }
+    ],
+    "recommended": [
+      "dateCreated",
+      "dateModified",
+      "mainEntity.agentInteractionStatistic",
+      "mainEntity.alternateName",
+      "mainEntity.description",
+      "mainEntity.identifier",
+      "mainEntity.image",
+      "mainEntity.interactionStatistic",
+      "mainEntity.sameAs"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/profile-page",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "paywalled-content",
+    "schemaTypes": [
+      "CreativeWork",
+      "Article",
+      "NewsArticle",
+      "Blog",
+      "Comment",
+      "Course",
+      "HowTo",
+      "Message",
+      "Review",
+      "WebPage"
+    ],
+    "required": [
+      "isAccessibleForFree"
+    ],
+    "recommended": [
+      "hasPart.cssSelector",
+      "hasPart.@type",
+      "hasPart.isAccessibleForFree"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/paywalled-content",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "dataset",
+    "schemaTypes": [
+      "Dataset"
+    ],
+    "required": [
+      "description",
+      "name"
+    ],
+    "recommended": [
+      "alternateName",
+      "creator",
+      "citation",
+      "funder",
+      {
+        "anyOf": [
+          "hasPart",
+          "isPartOf"
+        ]
+      },
+      "identifier",
+      "isAccessibleForFree",
+      "keywords",
+      "license",
+      "measurementTechnique",
+      "sameAs",
+      "spatialCoverage",
+      "temporalCoverage",
+      "variableMeasured",
+      "version",
+      "url",
+      "includedInDataCatalog",
+      "distribution",
+      "distribution.contentUrl",
+      "distribution.encodingFormat"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/dataset",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "software-app",
+    "schemaTypes": [
+      "SoftwareApplication",
+      "MobileApplication",
+      "WebApplication"
+    ],
+    "required": [
+      "name",
+      "offers.price",
+      {
+        "anyOf": [
+          "aggregateRating",
+          "review"
+        ]
+      }
+    ],
+    "recommended": [
+      "applicationCategory",
+      "operatingSystem"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/software-app",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "speakable",
+    "schemaTypes": [
+      "Article",
+      "WebPage"
+    ],
+    "required": [
+      "speakable",
+      {
+        "anyOf": [
+          "speakable.cssSelector",
+          "speakable.xPath"
+        ]
+      }
+    ],
+    "recommended": [],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/speakable",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "vacation-rental",
+    "schemaTypes": [
+      "VacationRental"
+    ],
+    "required": [
+      "containsPlace",
+      "containsPlace.occupancy",
+      "containsPlace.occupancy.value",
+      "identifier",
+      "image",
+      {
+        "anyOf": [
+          "latitude",
+          "geo.latitude"
+        ]
+      },
+      {
+        "anyOf": [
+          "longitude",
+          "geo.longitude"
+        ]
+      },
+      "name"
+    ],
+    "recommended": [
+      "additionalType",
+      "address",
+      "address.addressCountry",
+      "address.addressLocality",
+      "address.addressRegion",
+      "address.postalCode",
+      "address.streetAddress",
+      "aggregateRating",
+      "brand",
+      "checkinTime",
+      "checkoutTime",
+      "containsPlace.additionalType",
+      "containsPlace.amenityFeature",
+      "containsPlace.bed",
+      "containsPlace.bed.numberOfBeds",
+      "containsPlace.bed.typeOfBed",
+      "containsPlace.floorSize",
+      "containsPlace.numberOfBathroomsTotal",
+      "containsPlace.numberOfBedrooms",
+      "containsPlace.numberOfRooms",
+      "description",
+      "knowsLanguage",
+      "review",
+      "review.contentReferenceTime"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/vacation-rental",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "merchant-return-policy",
+    "schemaTypes": [
+      "MerchantReturnPolicy"
+    ],
+    "required": [
+      {
+        "anyOf": [
+          "applicableCountry",
+          "merchantReturnLink"
+        ]
+      },
+      {
+        "anyOf": [
+          "returnPolicyCategory",
+          "merchantReturnLink"
+        ]
+      }
+    ],
+    "recommended": [
+      "merchantReturnDays",
+      "returnFees",
+      "returnMethod",
+      "returnShippingFeesAmount",
+      "customerRemorseReturnFees",
+      "customerRemorseReturnLabelSource",
+      "customerRemorseReturnShippingFeesAmount",
+      "itemCondition",
+      "itemDefectReturnFees",
+      "itemDefectReturnLabelSource",
+      "itemDefectReturnShippingFeesAmount",
+      "refundType",
+      "restockingFee",
+      "returnLabelSource",
+      "returnPolicyCountry"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/return-policy",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "merchant-shipping-policy",
+    "schemaTypes": [
+      "ShippingService"
+    ],
+    "required": [
+      "shippingConditions"
+    ],
+    "recommended": [
+      "name",
+      "description",
+      "fulfillmentType",
+      "handlingTime",
+      "validForMemberTier"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/shipping-policy",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "loyalty-program",
+    "schemaTypes": [
+      "MemberProgram"
+    ],
+    "required": [
+      "description",
+      "hasTiers",
+      "name",
+      "hasTiers.name",
+      "hasTiers.hasTierBenefit"
+    ],
+    "recommended": [
+      "url",
+      "hasTiers.hasTierRequirement",
+      "hasTiers.membershipPointsEarned",
+      "hasTiers.url"
+    ],
+    "status": "active",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/loyalty-program",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "faq",
+    "schemaTypes": [
+      "FAQPage"
+    ],
+    "required": [
+      "mainEntity",
+      "mainEntity.name",
+      "mainEntity.acceptedAnswer",
+      "mainEntity.acceptedAnswer.text"
+    ],
+    "recommended": [],
+    "status": "deprecated",
+    "deprecatedOn": "2026-05-07",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "howto",
+    "schemaTypes": [
+      "HowTo"
+    ],
+    "required": [
+      "name",
+      "step"
+    ],
+    "recommended": [
+      "estimatedCost",
+      "image",
+      "supply",
+      "tool",
+      "totalTime",
+      "video"
+    ],
+    "status": "deprecated",
+    "deprecatedOn": "2023-09-14",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "sitelinks-searchbox",
+    "schemaTypes": [
+      "WebSite"
+    ],
+    "required": [
+      "potentialAction",
+      "potentialAction.query-input",
+      "potentialAction.target",
+      "url"
+    ],
+    "recommended": [],
+    "status": "deprecated",
+    "deprecatedOn": "2024-11-29",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "practice-problems",
+    "schemaTypes": [
+      "Quiz"
+    ],
+    "required": [
+      {
+        "anyOf": [
+          "about",
+          "hasPart.about"
+        ]
+      },
+      {
+        "anyOf": [
+          "about.name",
+          "hasPart.about.name"
+        ]
+      },
+      "hasPart",
+      "hasPart.acceptedAnswer",
+      "hasPart.eduQuestionType",
+      "hasPart.learningResourceType",
+      "hasPart.suggestedAnswer",
+      "hasPart.suggestedAnswer.text",
+      "hasPart.text"
+    ],
+    "recommended": [],
+    "status": "deprecated",
+    "deprecatedOn": "2026-01-06",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "course-info",
+    "schemaTypes": [
+      "Course"
+    ],
+    "required": [
+      "name",
+      "description",
+      "provider",
+      "provider.name",
+      "offers",
+      "offers.category",
+      "hasCourseInstance"
+    ],
+    "recommended": [
+      "about",
+      "aggregateRating",
+      "availableLanguage",
+      "coursePrerequisites",
+      "datePublished",
+      "educationalCredentialAwarded",
+      "educationalCredentialAwarded.credentialCategory",
+      "educationalCredentialAwarded.name",
+      "educationalCredentialAwarded.offers.category",
+      "educationalCredentialAwarded.offers.price",
+      "educationalCredentialAwarded.offers.priceCurrency",
+      "educationalCredentialAwarded.url",
+      "educationalLevel",
+      "financialAidEligible",
+      "image",
+      "inLanguage",
+      "offers.price",
+      "offers.priceCurrency",
+      "provider.url",
+      "publisher",
+      "publisher.name",
+      "publisher.url",
+      "review",
+      "syllabusSections",
+      "syllabusSections.description",
+      "syllabusSections.name",
+      "syllabusSections.timeRequired",
+      "teaches",
+      "totalHistoricalEnrollment",
+      "video"
+    ],
+    "status": "deprecated",
+    "deprecatedOn": "2025-09-09",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "estimated-salary",
+    "schemaTypes": [
+      "Occupation"
+    ],
+    "required": [
+      "estimatedSalary",
+      "estimatedSalary.duration",
+      "estimatedSalary.name",
+      "name",
+      "occupationLocation"
+    ],
+    "recommended": [
+      "description",
+      "estimatedSalary.currency",
+      "estimatedSalary.median",
+      "estimatedSalary.percentile10",
+      "estimatedSalary.percentile25",
+      "estimatedSalary.percentile75",
+      "estimatedSalary.percentile90",
+      "mainEntityOfPage",
+      "mainEntityOfPage.lastReviewed"
+    ],
+    "status": "deprecated",
+    "deprecatedOn": "2025-09-09",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "learning-video",
+    "schemaTypes": [
+      "VideoObject",
+      "LearningResource"
+    ],
+    "required": [
+      {
+        "anyOf": [
+          "educationalLevel",
+          "educationalAlignment",
+          "learningResourceType"
+        ]
+      }
+    ],
+    "recommended": [],
+    "status": "deprecated",
+    "deprecatedOn": "2025-09-09",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "special-announcement",
+    "schemaTypes": [
+      "SpecialAnnouncement"
+    ],
+    "required": [],
+    "recommended": [],
+    "status": "deprecated",
+    "deprecatedOn": "2025-07-31",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "vehicle-listing",
+    "schemaTypes": [
+      "Vehicle",
+      "Car"
+    ],
+    "required": [],
+    "recommended": [],
+    "status": "deprecated",
+    "deprecatedOn": "2025-09-09",
+    "docUrl": "https://developers.google.com/search/updates",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "fact-check",
+    "schemaTypes": [
+      "ClaimReview"
+    ],
+    "required": [
+      "claimReviewed",
+      "reviewRating",
+      "url"
+    ],
+    "recommended": [
+      "author",
+      "itemReviewed"
+    ],
+    "status": "deprecated",
+    "deprecatedOn": "2025-06-12",
+    "docUrl": "https://developers.google.com/search/docs/appearance/structured-data/factcheck",
+    "checkedOn": "2026-10-22"
+  }
+]

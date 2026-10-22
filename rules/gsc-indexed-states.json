@@ -1,0 +1,27 @@
+{
+  "en": ["Submitted and indexed", "Indexed, not submitted in sitemap"],
+  "ar": ["تم إرسال الصفحة وتمت فهرستها", "تمت فهرسة الصفحة، ولم يتم إرسالها عبر ملف Sitemap"],
+  "cs": ["Odesláno a indexováno", "Indexováno, neodesláno v souboru Sitemap"],
+  "da": [],
+  "de": ["Eingereicht und indexiert", "Indexiert, nicht in Sitemap gesendet"],
+  "es": ["Enviada e indexada", "Indexada, no enviada en sitemap"],
+  "fi": ["Lähetetty ja lisätty hakemistoon", "Lisätty hakemistoon, ei lähetetty sivustokartassa"],
+  "fr": ["Envoyée et indexée", "Indexée, mais non envoyée via un sitemap"],
+  "it": ["Inviata e indicizzata", "Indicizzata, ma non inviata tramite la Sitemap"],
+  "ja": ["送信して登録されました", "インデックス登録されましたが、サイトマップに送信していません"],
+  "ko": [],
+  "nb": [],
+  "nl": ["Ingediend en geïndexeerd", "Geïndexeerd, niet ingediend in sitemap"],
+  "pl": ["Strona przesłana i zindeksowana", "Strona zindeksowana, ale nieprzesłana w mapie witryny"],
+  "pt": ["Enviado e indexado", "Indexado, não enviado no sitemap"],
+  "ro": [],
+  "ru": ["Страница была отправлена в Google и проиндексирована", "Страница проиндексирована, но ее нет в файле Sitemap"],
+  "sv": ["Inskickad och indexerad", "Indexerad men inte inskickad i en webbplatskarta"],
+  "tr": ["Gönderildi ve dizine eklendi", "Dizine eklendi, site haritası kullanılarak gönderilmedi"],
+  "zh": [
+    "已提交，且已编入索引",
+    "已编入索引，但未在站点地图中提交",
+    "已提交並建立索引",
+    "已建立索引，但未提交至 Sitemap"
+  ]
+}

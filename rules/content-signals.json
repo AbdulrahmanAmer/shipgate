@@ -1,0 +1,5 @@
+{
+  "directive": "Content-Signal",
+  "signals": ["search", "ai-input", "ai-train"],
+  "values": ["yes", "no"]
+}

@@ -1,0 +1,9 @@
+[
+  { "token": "facebookexternalhit", "userAgent": "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)" },
+  { "token": "Twitterbot", "userAgent": "Twitterbot/1.0" },
+  { "token": "LinkedInBot", "userAgent": "LinkedInBot" },
+  { "token": "WhatsApp", "userAgent": "WhatsApp/2.22.20.72 A" },
+  { "token": "Slackbot-LinkExpanding", "userAgent": "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)" },
+  { "token": "Discordbot", "userAgent": "Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)" },
+  { "token": "TelegramBot", "userAgent": "TelegramBot" }
+]

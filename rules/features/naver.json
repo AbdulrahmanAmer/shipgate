@@ -1,0 +1,181 @@
+[
+  {
+    "feature": "site-channels",
+    "schemaTypes": ["Person", "Organization"],
+    "required": ["name", "url", "sameAs"],
+    "recommended": [],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-channel",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "job-posting",
+    "schemaTypes": ["JobPosting"],
+    "required": [
+      "title",
+      "datePosted",
+      "employmentType",
+      "experienceRequirements",
+      "jobLocation.address.streetAddress",
+      "jobLocation.address.postalCode",
+      "jobLocation.address.addressLocality",
+      "jobLocation.address.addressRegion",
+      "jobLocation.address.addressCountry",
+      "description",
+      "hiringOrganization.name",
+      "hiringOrganization.sameAs",
+      "identifier.propertyID",
+      "identifier.value"
+    ],
+    "recommended": [
+      "validThrough",
+      "baseSalary",
+      "workHours",
+      "educationRequirements",
+      "qualifications",
+      "hiringOrganization.logo",
+      "hiringOrganization.description"
+    ],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-job",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "address",
+    "schemaTypes": ["PostalAddress"],
+    "required": ["streetAddress"],
+    "recommended": ["postalCode", "addressRegion", "addressLocality"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-address",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "breadcrumb",
+    "schemaTypes": ["BreadcrumbList"],
+    "required": ["itemListElement.item.name"],
+    "recommended": ["itemListElement.position"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-breadcrumb",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "carousel",
+    "schemaTypes": ["ItemList"],
+    "required": [{ "anyOf": ["itemListElement.image", "itemListElement.item.image"] }],
+    "recommended": [
+      { "anyOf": ["itemListElement.name", "itemListElement.item.name"] },
+      { "anyOf": ["itemListElement.url", "itemListElement.item.url"] },
+      "itemListElement.position"
+    ],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-carousel",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "rating",
+    "schemaTypes": ["AggregateRating"],
+    "required": ["ratingValue", { "anyOf": ["ratingCount", "reviewCount"] }],
+    "recommended": ["bestRating"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-rating",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "recipe",
+    "schemaTypes": ["Recipe"],
+    "required": ["recipeInstructions"],
+    "recommended": ["name", "image", "recipeYield", "totalTime", "recipeIngredient"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-recipe",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "review",
+    "schemaTypes": ["Review"],
+    "required": ["reviewBody"],
+    "recommended": ["reviewRating.ratingValue", "reviewRating.bestRating"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-review",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "restaurant",
+    "schemaTypes": ["Restaurant"],
+    "required": ["name", "openingHours"],
+    "recommended": ["telephone", "image", "url", "servesCuisine", "priceRange", "description"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-restaurant",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "tv-series",
+    "schemaTypes": ["TVSeries"],
+    "required": ["name", "actor"],
+    "recommended": ["creator", "genre", "image", "description"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-tvseries",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "movie",
+    "schemaTypes": ["Movie"],
+    "required": ["name", "actor"],
+    "recommended": ["director", "genre", "image", "description"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-movie",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "software",
+    "schemaTypes": ["SoftwareApplication"],
+    "required": ["name", "applicationCategory"],
+    "recommended": ["operatingSystem", "url", "screenshot", "description"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-software",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "video",
+    "schemaTypes": ["VideoObject"],
+    "required": [
+      "name",
+      "description",
+      "url",
+      "thumbnailUrl",
+      "uploadDate",
+      "duration",
+      "cid",
+      "creator.name",
+      "creator.url"
+    ],
+    "recommended": [
+      "contentRating",
+      "mobileUrl",
+      "mobileChannelUrl",
+      "keywords",
+      "width",
+      "height",
+      "additionalType",
+      "interactionStatistic.userInteractionCount"
+    ],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-video",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "video-channel",
+    "schemaTypes": ["Person"],
+    "required": [
+      "name",
+      "url",
+      "cid",
+      "description",
+      "mainEntityOfPage.dateCreated",
+      "mainEntityOfPage.dateModified"
+    ],
+    "recommended": ["adultYn", "keywords", "additionalType", "interactionStatistic.userInteractionCount"],
+    "status": "active",
+    "docUrl": "https://searchadvisor.naver.com/guide/structured-data-video",
+    "checkedOn": "2026-10-22"
+  }
+]

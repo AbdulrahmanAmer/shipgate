@@ -1,0 +1,210 @@
+[
+  {
+    "token": "GPTBot",
+    "vendor": "OpenAI",
+    "category": "training",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.4; +https://openai.com/gptbot",
+    "honoursRobots": true,
+    "docUrl": "https://developers.openai.com/api/docs/bots"
+  },
+  {
+    "token": "OAI-SearchBot",
+    "vendor": "OpenAI",
+    "category": "search",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot",
+    "honoursRobots": true,
+    "docUrl": "https://developers.openai.com/api/docs/bots"
+  },
+  {
+    "token": "ChatGPT-User",
+    "vendor": "OpenAI",
+    "category": "user-fetch",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
+    "honoursRobots": false,
+    "docUrl": "https://developers.openai.com/api/docs/bots"
+  },
+  {
+    "token": "Google-Extended",
+    "vendor": "Google",
+    "category": "training",
+    "userAgent": "",
+    "honoursRobots": true,
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers"
+  },
+  {
+    "token": "ClaudeBot",
+    "vendor": "Anthropic",
+    "category": "training",
+    "userAgent": "ClaudeBot",
+    "honoursRobots": true,
+    "docUrl": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+  },
+  {
+    "token": "Claude-SearchBot",
+    "vendor": "Anthropic",
+    "category": "search",
+    "userAgent": "Claude-SearchBot",
+    "honoursRobots": true,
+    "docUrl": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+  },
+  {
+    "token": "Claude-User",
+    "vendor": "Anthropic",
+    "category": "user-fetch",
+    "userAgent": "Claude-User",
+    "honoursRobots": true,
+    "docUrl": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+  },
+  {
+    "token": "PerplexityBot",
+    "vendor": "Perplexity",
+    "category": "search",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",
+    "honoursRobots": true,
+    "docUrl": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
+  },
+  {
+    "token": "Perplexity-User",
+    "vendor": "Perplexity",
+    "category": "user-fetch",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)",
+    "honoursRobots": false,
+    "docUrl": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
+  },
+  {
+    "token": "Applebot-Extended",
+    "vendor": "Apple",
+    "category": "training",
+    "userAgent": "",
+    "honoursRobots": true,
+    "docUrl": "https://support.apple.com/en-us/119829"
+  },
+  {
+    "token": "CCBot",
+    "vendor": "Common Crawl",
+    "category": "training",
+    "userAgent": "CCBot/2.0 (https://commoncrawl.org/faq/)",
+    "honoursRobots": true,
+    "docUrl": "https://commoncrawl.org/ccbot"
+  },
+  {
+    "token": "Bytespider",
+    "vendor": "ByteDance",
+    "category": "training",
+    "userAgent": "Bytespider",
+    "honoursRobots": true,
+    "docUrl": "https://www.tiktok.com/robots.txt"
+  },
+  {
+    "token": "Amazonbot",
+    "vendor": "Amazon",
+    "category": "training",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amazonbot/0.1) Chrome/W.X.Y.Z Safari/537.36",
+    "honoursRobots": true,
+    "docUrl": "https://developer.amazon.com/amazonbot"
+  },
+  {
+    "token": "Amzn-SearchBot",
+    "vendor": "Amazon",
+    "category": "search",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-SearchBot/0.1) Chrome/W.X.Y.Z Safari/537.36",
+    "honoursRobots": true,
+    "docUrl": "https://developer.amazon.com/amazonbot"
+  },
+  {
+    "token": "Amzn-User",
+    "vendor": "Amazon",
+    "category": "user-fetch",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-User/0.1) Chrome/W.X.Y.Z Safari/537.36",
+    "honoursRobots": false,
+    "docUrl": "https://developer.amazon.com/amazonbot"
+  },
+  {
+    "token": "meta-externalagent",
+    "vendor": "Meta",
+    "category": "training",
+    "userAgent": "meta-externalagent/1.1",
+    "honoursRobots": true,
+    "docUrl": "https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers"
+  },
+  {
+    "token": "meta-webindexer",
+    "vendor": "Meta",
+    "category": "search",
+    "userAgent": "meta-webindexer/1.1",
+    "honoursRobots": true,
+    "docUrl": "https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers"
+  },
+  {
+    "token": "meta-externalfetcher",
+    "vendor": "Meta",
+    "category": "user-fetch",
+    "userAgent": "meta-externalfetcher/1.1",
+    "honoursRobots": false,
+    "docUrl": "https://developers.facebook.com/documentation/sharing/webmasters/web-crawlers"
+  },
+  {
+    "token": "DuckAssistBot",
+    "vendor": "DuckDuckGo",
+    "category": "search",
+    "userAgent": "DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)",
+    "honoursRobots": true,
+    "docUrl": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot"
+  },
+  {
+    "token": "MistralAI-User",
+    "vendor": "Mistral AI",
+    "category": "user-fetch",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-User/1.0; +https://docs.mistral.ai/robots)",
+    "honoursRobots": true,
+    "docUrl": "https://docs.mistral.ai/robots"
+  },
+  {
+    "token": "MistralAI-Index",
+    "vendor": "Mistral AI",
+    "category": "search",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-Index/1.0; +https://docs.mistral.ai/robots)",
+    "honoursRobots": true,
+    "docUrl": "https://docs.mistral.ai/robots"
+  },
+  {
+    "token": "MistralAI-Training",
+    "vendor": "Mistral AI",
+    "category": "training",
+    "userAgent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-Training/1.0; +https://docs.mistral.ai/robots)",
+    "honoursRobots": true,
+    "docUrl": "https://docs.mistral.ai/robots"
+  },
+  {
+    "token": "Google-Agent",
+    "vendor": "Google",
+    "category": "user-fetch",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Google-Agent; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent) Chrome/W.X.Y.Z Safari/537.36",
+    "honoursRobots": false,
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers"
+  },
+  {
+    "token": "Google-GeminiNotebook",
+    "vendor": "Google",
+    "category": "user-fetch",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 (compatible; Google-GeminiNotebook; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-gemininotebook)",
+    "honoursRobots": false,
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers"
+  },
+  {
+    "token": "Google-Pinpoint",
+    "vendor": "Google",
+    "category": "user-fetch",
+    "userAgent": "Google-Pinpoint",
+    "honoursRobots": false,
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers"
+  },
+  {
+    "token": "Google-Read-Aloud",
+    "vendor": "Google",
+    "category": "user-fetch",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",
+    "honoursRobots": false,
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers"
+  }
+]

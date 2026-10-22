@@ -1,0 +1,92 @@
+[
+  {
+    "engine": "google",
+    "token": "Googlebot-Image",
+    "fallbackTokens": ["Googlebot"],
+    "covers": ["images", "favicons"],
+    "appliesWhen": "always",
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "google",
+    "token": "Googlebot-Video",
+    "fallbackTokens": ["Googlebot"],
+    "covers": ["video"],
+    "appliesWhen": "feature:video",
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "google",
+    "token": "Googlebot-News",
+    "fallbackTokens": ["Googlebot"],
+    "covers": ["news"],
+    "appliesWhen": "news.enabled",
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "google",
+    "token": "Storebot-Google",
+    "fallbackTokens": [],
+    "covers": ["shopping"],
+    "appliesWhen": "feature:merchant-listing",
+    "docUrl": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "yandex",
+    "token": "YandexImages",
+    "fallbackTokens": ["Yandex"],
+    "covers": ["images"],
+    "appliesWhen": "always",
+    "docUrl": "https://yandex.com/support/webmaster/en/robot-workings/user-agent",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "yandex",
+    "token": "YandexFavicons",
+    "fallbackTokens": ["Yandex"],
+    "covers": ["favicons"],
+    "appliesWhen": "always",
+    "docUrl": "https://yandex.com/support/webmaster/en/robot-workings/user-agent",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "yandex",
+    "token": "YandexVideo",
+    "fallbackTokens": ["Yandex"],
+    "covers": ["video"],
+    "appliesWhen": "always",
+    "docUrl": "https://yandex.com/support/webmaster/en/robot-workings/user-agent",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "baidu",
+    "token": "Baiduspider-image",
+    "fallbackTokens": ["Baiduspider"],
+    "covers": ["images"],
+    "appliesWhen": "always",
+    "docUrl": "https://help.baidu.com/question?prod_id=99&class=0&id=3001",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "baidu",
+    "token": "Baiduspider-video",
+    "fallbackTokens": ["Baiduspider"],
+    "covers": ["video"],
+    "appliesWhen": "always",
+    "docUrl": "https://help.baidu.com/question?prod_id=99&class=0&id=3001",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "engine": "baidu",
+    "token": "Baiduspider-news",
+    "fallbackTokens": ["Baiduspider"],
+    "covers": ["news"],
+    "appliesWhen": "always",
+    "docUrl": "https://help.baidu.com/question?prod_id=99&class=0&id=3001",
+    "checkedOn": "2026-10-22"
+  }
+]

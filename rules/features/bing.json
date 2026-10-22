@@ -1,0 +1,101 @@
+[
+  {
+    "feature": "breadcrumb",
+    "schemaTypes": ["BreadcrumbList"],
+    "required": [],
+    "recommended": [],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/markup-breadcrumbs-72419f3f",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "organization",
+    "schemaTypes": ["Organization"],
+    "required": ["name"],
+    "recommended": ["address", "url"],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/?topicid=cc507c09",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "event",
+    "schemaTypes": ["Event"],
+    "required": ["startDate"],
+    "recommended": ["description", "endDate", "location", "url", "duration"],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/?topicid=0f23328d",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "person",
+    "schemaTypes": ["Person"],
+    "required": ["name"],
+    "recommended": ["affiliation", "address", "url"],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/people-markup-86fb1ed0",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "product",
+    "schemaTypes": ["Product"],
+    "required": ["name"],
+    "recommended": ["brand", "category", "description", "identifier"],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/products-and-offers-markup-138d0977",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "recipe",
+    "schemaTypes": ["Recipe"],
+    "required": ["name"],
+    "recommended": ["author", "review", "nutrition", "totalTime", "prepTime"],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/?topicid=da2b3faa",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "review",
+    "schemaTypes": ["Review"],
+    "required": ["itemReviewed"],
+    "recommended": ["description"],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/?topicid=76f106ad",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "aggregate-rating",
+    "schemaTypes": ["AggregateRating"],
+    "required": ["itemReviewed"],
+    "recommended": [],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/?topicid=785302d2",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "claim-review",
+    "schemaTypes": ["ClaimReview"],
+    "required": [
+      "claimReviewed",
+      "reviewRating.ratingValue",
+      "reviewRating.bestRating",
+      "reviewRating.worstRating",
+      "reviewRating.alternateName",
+      "itemReviewed.author",
+      "author",
+      "datePublished"
+    ],
+    "recommended": [],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/?topicid=7202cff4",
+    "checkedOn": "2026-10-22"
+  },
+  {
+    "feature": "special-announcement",
+    "schemaTypes": ["SpecialAnnouncement"],
+    "required": ["name", "category", "datePosted"],
+    "recommended": ["expires", "text", "url", "spatialCoverage"],
+    "status": "active",
+    "docUrl": "https://www.bing.com/webmasters/help/special-announcement-specifications-5cbd6249",
+    "checkedOn": "2026-10-22"
+  }
+]
