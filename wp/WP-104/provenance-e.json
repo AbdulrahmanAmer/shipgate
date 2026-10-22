@@ -1,0 +1,375 @@
+{
+  "gazetteer/ae.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/at.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/au.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/be.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/br.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/ca.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/ch.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/cn.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/cz.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/de.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/dk.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/eg.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/es.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/fi.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/fr.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/gb.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/ie.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/in.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/it.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/jp.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/kr.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/mx.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/nl.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/no.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/nz.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/pl.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/pt.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/ro.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/ru.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/sa.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/se.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/tr.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/tw.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "gazetteer/us.json": {
+    "source": [
+      "https://download.geonames.org/export/dump/cities1000.zip",
+      "https://download.geonames.org/export/dump/readme.txt"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "GeoNames, https://www.geonames.org/"
+  },
+  "popular-packages/cargo.txt": {
+    "source": [
+      "https://crates.io/api/v1/crates?sort=downloads"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-crates.io-public-metadata",
+    "attribution": "Crate names ranked by crates.io total downloads (public crates.io API; names only)."
+  },
+  "popular-packages/composer.txt": {
+    "source": [
+      "https://packagist.org/explore/popular.json"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-Packagist-public-metadata",
+    "attribution": "Package names ranked by Packagist downloads (public Packagist API; names only)."
+  },
+  "popular-packages/go.txt": {
+    "source": [
+      "https://pkg.go.dev/v1/search"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-pkg.go.dev-public-metadata",
+    "attribution": "Go module paths ranked by pkg.go.dev \"imported by\" module counts (public pkg.go.dev API; names only)."
+  },
+  "popular-packages/npm.txt": {
+    "source": [
+      "https://raw.githubusercontent.com/wooorm/npm-high-impact/main/lib/top-download.js",
+      "https://api.npmjs.org/downloads/point/last-month/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "MIT",
+    "attribution": "Candidate names (15,916): wooorm/npm-high-impact lib/top-download.js (MIT); that list is crawled upstream from the ecosyste.ms packages API (data CC-BY-SA-4.0), so only names are used and the order is recomputed from last-month counts of the npm public download-counts API."
+  },
+  "popular-packages/nuget.txt": {
+    "source": [
+      "https://www.nuget.org/api/v2/Search()",
+      "https://api.nuget.org/v3/index.json"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-NuGet-public-metadata",
+    "attribution": "Package ids ranked by nuget.org total downloads (public NuGet feed; ids only)."
+  },
+  "popular-packages/pypi.txt": {
+    "source": [
+      "https://sql-clickhouse.clickhouse.com/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-PyPI-public-download-statistics",
+    "attribution": "PyPI download counts for 2026-09 from the public ClickHouse PyPI dataset (ClickPy); names only, no counts stored."
+  },
+  "popular-packages/rubygems.txt": {
+    "source": [
+      "https://rubygems.org/api/v1/search.json"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-RubyGems-public-metadata",
+    "attribution": "Gem names ranked by RubyGems total downloads (public RubyGems API; names only)."
+  },
+  "postal-patterns.json": {
+    "source": [
+      "https://chromium-i18n.appspot.com/ssl-address/data",
+      "https://github.com/google/libaddressinput"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "Apache-2.0",
+    "attribution": "Address metadata from Google libaddressinput (chromium-i18n), Apache License 2.0"
+  }
+}
