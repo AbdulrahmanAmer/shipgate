@@ -1,0 +1,13 @@
+[
+  "csrf",
+  "_csrf",
+  "csrfToken",
+  "csrf_token",
+  "authenticity_token",
+  "_token",
+  "X-CSRF-Token",
+  "X-XSRF-TOKEN",
+  "__RequestVerificationToken",
+  "csrfmiddlewaretoken",
+  "X-CSRFToken"
+]

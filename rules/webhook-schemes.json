@@ -1,0 +1,88 @@
+[
+  {
+    "scheme": "stripe",
+    "signatureHeader": "Stripe-Signature",
+    "format": "t={ts},v1={sig}",
+    "signedPayload": "{ts}.{body}",
+    "algorithm": "hmac-sha256",
+    "encoding": "hex",
+    "secretDecoding": "raw",
+    "timestamp": "format-param",
+    "idSource": {
+      "jsonPath": [
+        "$.id"
+      ]
+    }
+  },
+  {
+    "scheme": "standard-webhooks",
+    "signatureHeader": "webhook-signature",
+    "format": "v1,{sig}",
+    "signedPayload": "{id}.{ts}.{body}",
+    "algorithm": "hmac-sha256",
+    "encoding": "base64",
+    "secretDecoding": "base64-after-prefix",
+    "timestamp": "header",
+    "timestampHeader": "webhook-timestamp",
+    "idSource": {
+      "header": "webhook-id"
+    }
+  },
+  {
+    "scheme": "github",
+    "signatureHeader": "X-Hub-Signature-256",
+    "format": "sha256={sig}",
+    "signedPayload": "{body}",
+    "algorithm": "hmac-sha256",
+    "encoding": "hex",
+    "secretDecoding": "raw",
+    "timestamp": "none",
+    "idSource": {
+      "header": "X-GitHub-Delivery"
+    }
+  },
+  {
+    "scheme": "shopify",
+    "signatureHeader": "X-Shopify-Hmac-Sha256",
+    "format": "{sig}",
+    "signedPayload": "{body}",
+    "algorithm": "hmac-sha256",
+    "encoding": "base64",
+    "secretDecoding": "raw",
+    "timestamp": "none",
+    "idSource": {
+      "header": "X-Shopify-Webhook-Id"
+    }
+  },
+  {
+    "scheme": "paddle",
+    "signatureHeader": "Paddle-Signature",
+    "format": "ts={ts};h1={sig}",
+    "signedPayload": "{ts}:{body}",
+    "algorithm": "hmac-sha256",
+    "encoding": "hex",
+    "secretDecoding": "raw",
+    "timestamp": "format-param",
+    "idSource": {
+      "jsonPath": [
+        "$.event_id"
+      ]
+    }
+  },
+  {
+    "scheme": "lemon-squeezy",
+    "signatureHeader": "X-Signature",
+    "format": "{sig}",
+    "signedPayload": "{body}",
+    "algorithm": "hmac-sha256",
+    "encoding": "hex",
+    "secretDecoding": "raw",
+    "timestamp": "none",
+    "idSource": {
+      "jsonPath": [
+        "$.meta.event_name",
+        "$.data.id"
+      ]
+    }
+  }
+]

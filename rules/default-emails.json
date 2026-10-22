@@ -1,0 +1,13 @@
+[
+  "admin@example.com",
+  "test@*",
+  "*@example.{com,org,net}",
+  "*@*.example",
+  "*@*.test",
+  "*@*.invalid",
+  "*@localhost",
+  "*@*.localhost",
+  "admin@admin.com",
+  "admin@localhost",
+  "root@localhost"
+]

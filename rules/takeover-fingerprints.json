@@ -1,0 +1,134 @@
+[
+  {
+    "service": "AWS/S3",
+    "bodySubstring": "The specified bucket does not exist"
+  },
+  {
+    "service": "Agile CRM",
+    "bodySubstring": "Sorry, this page is no longer available."
+  },
+  {
+    "service": "Airee.ru",
+    "bodySubstring": "Ошибка 402. Сервис Айри.рф не оплачен"
+  },
+  {
+    "service": "Campaign Monitor",
+    "bodySubstring": "Trying to access your account?"
+  },
+  {
+    "service": "Canny",
+    "bodySubstring": "Company Not Found"
+  },
+  {
+    "service": "Canny",
+    "bodySubstring": "There is no such company. Did you enter the right URL?"
+  },
+  {
+    "service": "Digital Ocean",
+    "bodySubstring": "Domain uses DO name servers with no records in DO."
+  },
+  {
+    "service": "Frontify",
+    "bodySubstring": "Oops… looks like you got lost"
+  },
+  {
+    "service": "Getresponse",
+    "bodySubstring": "With GetResponse Landing Pages, lead generation has never been easier"
+  },
+  {
+    "service": "Ghost",
+    "bodySubstring": "Failed to resolve DNS path for this host"
+  },
+  {
+    "service": "Github",
+    "bodySubstring": "There isn't a GitHub Pages site here."
+  },
+  {
+    "service": "HatenaBlog",
+    "bodySubstring": "404 Blog is not found"
+  },
+  {
+    "service": "Help Juice",
+    "bodySubstring": "We could not find what you're looking for."
+  },
+  {
+    "service": "Help Scout",
+    "bodySubstring": "No settings were found for this company:"
+  },
+  {
+    "service": "Intercom",
+    "bodySubstring": "Uh oh. That page doesn't exist."
+  },
+  {
+    "service": "JetBrains",
+    "bodySubstring": "is not a registered InCloud YouTrack"
+  },
+  {
+    "service": "Landingi",
+    "bodySubstring": "It looks like you’re lost..."
+  },
+  {
+    "service": "Netlify",
+    "bodySubstring": "Not Found - Request ID:"
+  },
+  {
+    "service": "Ngrok",
+    "bodySubstring": "ngrok.io not found"
+  },
+  {
+    "service": "Pantheon",
+    "bodySubstring": "404 error unknown site!"
+  },
+  {
+    "service": "Pingdom",
+    "bodySubstring": "Sorry, couldn't find the status page"
+  },
+  {
+    "service": "Readme.io",
+    "bodySubstring": "The creators of this project are still working on making everything perfect!"
+  },
+  {
+    "service": "Readthedocs",
+    "bodySubstring": "The link you have followed or the URL that you entered does not exist."
+  },
+  {
+    "service": "Shopify",
+    "bodySubstring": "Sorry, this shop is currently unavailable."
+  },
+  {
+    "service": "SmartJobBoard",
+    "bodySubstring": "This job board website is either expired or its domain name is invalid."
+  },
+  {
+    "service": "Tumblr",
+    "bodySubstring": "Whatever you were looking for doesn't currently exist at this address"
+  },
+  {
+    "service": "Uberflip",
+    "bodySubstring": "The URL you've accessed does not provide a hub."
+  },
+  {
+    "service": "Vercel",
+    "bodySubstring": "DEPLOYMENT_NOT_FOUND."
+  },
+  {
+    "service": "Webflow",
+    "bodySubstring": "The page you are looking for doesn't exist or has been moved."
+  },
+  {
+    "service": "Wix",
+    "bodySubstring": "Looks Like This Domain Isn't Connected To A Website Yet!"
+  },
+  {
+    "service": "Worksites",
+    "bodySubstring": "Hello! Sorry, but the website you&rsquo;re looking for doesn&rsquo;t exist."
+  },
+  {
+    "service": "AWS/S3",
+    "bodySubstring": "NoSuchBucket"
+  },
+  {
+    "service": "Heroku",
+    "bodySubstring": "herokucdn.com/error-pages/no-such-app"
+  }
+]

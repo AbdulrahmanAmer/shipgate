@@ -1,0 +1,6 @@
+[
+  "(?i)too many failed login attempts",
+  "(?i)exceeded maximum login retries",
+  "(?i)you are temporarily locked out",
+  "(?i)your access to this (site|service) has been (temporarily )?limited"
+]

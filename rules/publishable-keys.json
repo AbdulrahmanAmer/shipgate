@@ -1,0 +1,23 @@
+[
+  {
+    "provider": "stripe",
+    "regex": "^pk_(test|live)_"
+  },
+  {
+    "provider": "supabase",
+    "regex": "^eyJ",
+    "jwtRole": "anon"
+  },
+  {
+    "provider": "supabase",
+    "regex": "^sb_publishable_"
+  },
+  {
+    "provider": "firebase",
+    "regex": "^AIza[0-9A-Za-z_-]{35}$"
+  },
+  {
+    "provider": "google-maps",
+    "regex": "^AIza[0-9A-Za-z_-]{35}$"
+  }
+]

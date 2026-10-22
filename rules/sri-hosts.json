@@ -1,0 +1,30 @@
+[
+  {
+    "host": "cdnjs.cloudflare.com",
+    "versionedPathPattern": "^/ajax/libs/[^/]+/[0-9]+\\.[0-9]+(\\.[0-9]+)?[^/]*/"
+  },
+  {
+    "host": "cdn.jsdelivr.net",
+    "versionedPathPattern": "^/(npm|gh)/(@[^/@]+/)?[^/@]+@[0-9]+\\.[0-9]+\\.[0-9]+[^/]*/|^/gh/[^/@]+/[^/@]+@[0-9]+\\.[0-9]+\\.[0-9]+[^/]*/|^/wp/(themes|plugins)/[^/]+/(tags/)?[0-9]+\\.[0-9]+[^/]*/"
+  },
+  {
+    "host": "unpkg.com",
+    "versionedPathPattern": "^/(@[^/@]+/)?[^/@]+@[0-9]+\\.[0-9]+\\.[0-9]+[^/]*/"
+  },
+  {
+    "host": "code.jquery.com",
+    "versionedPathPattern": "^/(jquery(-migrate|-mobile|-ui|-color)?-[0-9]+\\.[0-9]+(\\.[0-9]+)?[^/]*\\.(js|css)|ui/[0-9]+\\.[0-9]+\\.[0-9]+/.+)$"
+  },
+  {
+    "host": "ajax.googleapis.com",
+    "versionedPathPattern": "^/ajax/libs/[^/]+/[0-9]+\\.[0-9]+(\\.[0-9]+)?[^/]*/"
+  },
+  {
+    "host": "maxcdn.bootstrapcdn.com",
+    "versionedPathPattern": "^/bootstrap/[0-9]+\\.[0-9]+\\.[0-9]+/"
+  },
+  {
+    "host": "stackpath.bootstrapcdn.com",
+    "versionedPathPattern": "^/bootstrap/[0-9]+\\.[0-9]+\\.[0-9]+/"
+  }
+]

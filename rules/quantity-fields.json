@@ -1,0 +1,62 @@
+[
+  {
+    "name": "quantity",
+    "kind": "count"
+  },
+  {
+    "name": "qty",
+    "kind": "count"
+  },
+  {
+    "name": "count",
+    "kind": "count"
+  },
+  {
+    "name": "units",
+    "kind": "count"
+  },
+  {
+    "name": "seats",
+    "kind": "count"
+  },
+  {
+    "name": "licenses",
+    "kind": "count"
+  },
+  {
+    "name": "items",
+    "kind": "count"
+  },
+  {
+    "name": "nights",
+    "kind": "count"
+  },
+  {
+    "name": "guests",
+    "kind": "count"
+  },
+  {
+    "name": "tickets",
+    "kind": "count"
+  },
+  {
+    "name": "amount",
+    "kind": "money"
+  },
+  {
+    "name": "tip",
+    "kind": "money"
+  },
+  {
+    "name": "donation",
+    "kind": "money"
+  },
+  {
+    "name": "credit",
+    "kind": "money"
+  },
+  {
+    "name": "points",
+    "kind": "money"
+  }
+]

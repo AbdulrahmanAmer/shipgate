@@ -1,0 +1,22 @@
+[
+  {
+    "header": "CF-Cache-Status",
+    "pattern": "^HIT$"
+  },
+  {
+    "header": "X-Vercel-Cache",
+    "pattern": "^HIT$"
+  },
+  {
+    "header": "X-Nf-Cache-Status",
+    "pattern": "(?i)^hit"
+  },
+  {
+    "header": "X-Cache",
+    "pattern": "(?i)^hit"
+  },
+  {
+    "header": "Age",
+    "pattern": "^[1-9][0-9]*$"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "ecosystem": "npm",
+    "lockfile": "package-lock.json",
+    "jsonPath": "$.packages.*.hasInstallScript"
+  },
+  {
+    "ecosystem": "npm",
+    "lockfile": "pnpm-lock.yaml",
+    "jsonPath": "$.packages.*.requiresBuild"
+  },
+  {
+    "ecosystem": "npm",
+    "lockfile": "pnpm-lock.yaml",
+    "jsonPath": "$.snapshots.*.requiresBuild"
+  }
+]

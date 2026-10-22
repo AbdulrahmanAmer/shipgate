@@ -1,0 +1,94 @@
+[
+  {
+    "name": "password",
+    "ownerExemptable": false
+  },
+  {
+    "name": "passwd",
+    "ownerExemptable": false
+  },
+  {
+    "name": "passwordhash",
+    "ownerExemptable": false
+  },
+  {
+    "name": "passwordsalt",
+    "ownerExemptable": false
+  },
+  {
+    "name": "salt",
+    "ownerExemptable": false
+  },
+  {
+    "name": "resettoken",
+    "ownerExemptable": false
+  },
+  {
+    "name": "verificationtoken",
+    "ownerExemptable": false
+  },
+  {
+    "name": "refreshtoken",
+    "ownerExemptable": false
+  },
+  {
+    "name": "sessiontoken",
+    "ownerExemptable": false
+  },
+  {
+    "name": "totpsecret",
+    "ownerExemptable": false
+  },
+  {
+    "name": "otpsecret",
+    "ownerExemptable": false
+  },
+  {
+    "name": "mfasecret",
+    "ownerExemptable": false
+  },
+  {
+    "name": "privatekey",
+    "ownerExemptable": false
+  },
+  {
+    "name": "clientsecret",
+    "ownerExemptable": false
+  },
+  {
+    "name": "webhooksecret",
+    "ownerExemptable": false
+  },
+  {
+    "name": "stripesecret",
+    "ownerExemptable": false
+  },
+  {
+    "name": "cardnumber",
+    "ownerExemptable": false
+  },
+  {
+    "name": "cvv",
+    "ownerExemptable": false
+  },
+  {
+    "name": "cvc",
+    "ownerExemptable": false
+  },
+  {
+    "name": "apikey",
+    "ownerExemptable": true
+  },
+  {
+    "name": "secret",
+    "ownerExemptable": true
+  },
+  {
+    "name": "ssn",
+    "ownerExemptable": true
+  },
+  {
+    "name": "taxid",
+    "ownerExemptable": true
+  }
+]

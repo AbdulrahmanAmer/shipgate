@@ -1,0 +1,94 @@
+[
+  {
+    "name": "role",
+    "type": "role"
+  },
+  {
+    "name": "roles",
+    "type": "role"
+  },
+  {
+    "name": "is_admin",
+    "type": "bool"
+  },
+  {
+    "name": "isAdmin",
+    "type": "bool"
+  },
+  {
+    "name": "admin",
+    "type": "bool"
+  },
+  {
+    "name": "tenant_id",
+    "type": "id"
+  },
+  {
+    "name": "tenantId",
+    "type": "id"
+  },
+  {
+    "name": "org_id",
+    "type": "id"
+  },
+  {
+    "name": "owner_id",
+    "type": "id"
+  },
+  {
+    "name": "ownerId",
+    "type": "id"
+  },
+  {
+    "name": "user_id",
+    "type": "id"
+  },
+  {
+    "name": "userId",
+    "type": "id"
+  },
+  {
+    "name": "plan",
+    "type": "string"
+  },
+  {
+    "name": "verified",
+    "type": "bool"
+  },
+  {
+    "name": "email_verified",
+    "type": "bool"
+  },
+  {
+    "name": "emailVerified",
+    "type": "bool"
+  },
+  {
+    "name": "price",
+    "type": "number"
+  },
+  {
+    "name": "amount",
+    "type": "number"
+  },
+  {
+    "name": "balance",
+    "type": "number"
+  },
+  {
+    "name": "credits",
+    "type": "number"
+  },
+  {
+    "name": "permissions",
+    "type": "string"
+  },
+  {
+    "name": "is_staff",
+    "type": "bool"
+  },
+  {
+    "name": "is_superuser",
+    "type": "bool"
+  }
+]

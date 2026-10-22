@@ -1,0 +1,92 @@
+[
+  {
+    "id": "s3-virtual-hosted",
+    "hostPattern": "*.s3.amazonaws.com",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult"
+    ]
+  },
+  {
+    "id": "s3-virtual-hosted-regional",
+    "hostPattern": "*.s3.*.amazonaws.com",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult"
+    ]
+  },
+  {
+    "id": "s3-path-style",
+    "hostPattern": "s3.amazonaws.com",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult"
+    ]
+  },
+  {
+    "id": "gcs-path-style",
+    "hostPattern": "storage.googleapis.com",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult|\"kind\":\\s*\"storage#objects\""
+    ]
+  },
+  {
+    "id": "gcs-virtual-hosted",
+    "hostPattern": "*.storage.googleapis.com",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult|\"kind\":\\s*\"storage#objects\""
+    ]
+  },
+  {
+    "id": "azure-blob",
+    "hostPattern": "*.blob.core.windows.net",
+    "probePaths": [
+      "/?restype=container&comp=list"
+    ],
+    "listingSignatures": [
+      "<EnumerationResults"
+    ]
+  },
+  {
+    "id": "cloudflare-r2",
+    "hostPattern": "*.r2.dev",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult"
+    ]
+  },
+  {
+    "id": "digitalocean-spaces",
+    "hostPattern": "*.digitaloceanspaces.com",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult"
+    ]
+  },
+  {
+    "id": "backblaze-b2",
+    "hostPattern": "*.backblazeb2.com",
+    "probePaths": [
+      "/"
+    ],
+    "listingSignatures": [
+      "<ListBucketResult"
+    ]
+  }
+]

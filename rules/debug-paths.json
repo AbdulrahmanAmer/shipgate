@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/actuator",
+    "signature": "\"_links\""
+  },
+  {
+    "path": "/actuator/env",
+    "signature": "\"propertySources\""
+  },
+  {
+    "path": "/telescope",
+    "signature": "Laravel Telescope"
+  },
+  {
+    "path": "/_profiler",
+    "signature": "Symfony Profiler"
+  },
+  {
+    "path": "/graphiql",
+    "signature": "graphiql"
+  },
+  {
+    "path": "/swagger-ui",
+    "signature": "swagger-ui"
+  },
+  {
+    "path": "/swagger-ui.html",
+    "signature": "swagger-ui"
+  },
+  {
+    "path": "/api-docs",
+    "signature": "\"openapi\"\\s*:|\"swagger\"\\s*:"
+  },
+  {
+    "path": "/phpmyadmin",
+    "signature": "phpMyAdmin"
+  },
+  {
+    "path": "/adminer.php",
+    "signature": "Adminer"
+  },
+  {
+    "path": "/__debug__",
+    "signature": "djdt|djDebug"
+  },
+  {
+    "path": "/rails/info",
+    "signature": "Rails\\.version"
+  },
+  {
+    "path": "/_debugbar",
+    "signature": "(?i)phpdebugbar"
+  },
+  {
+    "path": "/elmah.axd",
+    "signature": "Error Log for"
+  },
+  {
+    "path": "/console",
+    "signature": "Werkzeug|Interactive Console"
+  }
+]

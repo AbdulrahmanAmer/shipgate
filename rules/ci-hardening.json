@@ -1,0 +1,26 @@
+[
+  {
+    "provider": "gitlab-ci",
+    "fileGlob": ".gitlab-ci.yml",
+    "check": "unpinned-include-ref",
+    "pattern": "(?m)^\\s*ref:\\s*['\"]?(main|master|HEAD|develop)['\"]?\\s*(#.*)?$"
+  },
+  {
+    "provider": "gitlab-ci",
+    "fileGlob": ".gitlab-ci.yml",
+    "check": "untrusted-variable-in-script",
+    "pattern": "\\$\\{?(CI_COMMIT_MESSAGE|CI_COMMIT_TITLE|CI_COMMIT_DESCRIPTION|CI_MERGE_REQUEST_TITLE|CI_MERGE_REQUEST_DESCRIPTION)\\b"
+  },
+  {
+    "provider": "circleci",
+    "fileGlob": ".circleci/config.yml",
+    "check": "volatile-orb",
+    "pattern": "@volatile\\b"
+  },
+  {
+    "provider": "bitbucket-pipelines",
+    "fileGlob": "bitbucket-pipelines.yml",
+    "check": "unpinned-pipe",
+    "pattern": "(?m)^\\s*-?\\s*pipe:\\s*[A-Za-z0-9_./-]+(:latest)?\\s*$"
+  }
+]

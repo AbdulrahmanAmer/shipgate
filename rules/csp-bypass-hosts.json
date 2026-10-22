@@ -1,0 +1,582 @@
+[
+  {
+    "host": "bebezoo.1688.com",
+    "reason": "JSONP endpoint bebezoo.1688.com/fragment/index.htm (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.google-analytics.com",
+    "reason": "JSONP endpoint www.google-analytics.com/gtm/js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "googleads.g.doubleclick.net",
+    "reason": "JSONP endpoint googleads.g.doubleclick.net/pagead/conversion/1036918760/wcm (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.googleadservices.com",
+    "reason": "JSONP endpoint www.googleadservices.com/pagead/conversion/1070110417/wcm (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.google.com",
+    "reason": "JSONP endpoint www.google.com/tools/feedback/escalation-options (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pin.aliyun.com",
+    "reason": "JSONP endpoint pin.aliyun.com/check_audio (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "offer.alibaba.com",
+    "reason": "JSONP endpoint offer.alibaba.com/market/CID100002954/5/fetchKeyword.do (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "ccrprod.alipay.com",
+    "reason": "JSONP endpoint ccrprod.alipay.com/ccr/arriveTime.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "group.aliexpress.com",
+    "reason": "JSONP endpoint group.aliexpress.com/ajaxAcquireGroupbuyProduct.do (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "detector.alicdn.com",
+    "reason": "JSONP endpoint detector.alicdn.com/2.7.3/index.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "suggest.taobao.com",
+    "reason": "JSONP endpoint suggest.taobao.com/sug (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "translate.google.com",
+    "reason": "JSONP endpoint translate.google.com/translate_a/l (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "count.tbcdn.cn",
+    "reason": "JSONP endpoint count.tbcdn.cn//counter3 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "wb.amap.com",
+    "reason": "JSONP endpoint wb.amap.com/channel.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "translate.googleapis.com",
+    "reason": "JSONP endpoint translate.googleapis.com/translate_a/l (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "afpeng.alimama.com",
+    "reason": "JSONP endpoint afpeng.alimama.com/ex (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "accounts.google.com",
+    "reason": "JSONP endpoint accounts.google.com/o/oauth2/revoke (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pagead2.googlesyndication.com",
+    "reason": "JSONP endpoint pagead2.googlesyndication.com/relatedsearch (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "yandex.ru",
+    "reason": "JSONP endpoint yandex.ru/soft/browsers/check (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "api.facebook.com",
+    "reason": "JSONP endpoint api.facebook.com/restserver.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "mts0.googleapis.com",
+    "reason": "JSONP endpoint mts0.googleapis.com/maps/vt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "syndication.twitter.com",
+    "reason": "JSONP endpoint syndication.twitter.com/widgets/timelines/765840589183213568 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.youtube.com",
+    "reason": "JSONP endpoint www.youtube.com/profile_style (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "googletagmanager.com",
+    "reason": "JSONP endpoint googletagmanager.com/gtm/js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "mc.yandex.ru",
+    "reason": "JSONP endpoint mc.yandex.ru/watch/24306916/1 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "share.yandex.net",
+    "reason": "JSONP endpoint share.yandex.net/counter/gpp/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "ok.go.mail.ru",
+    "reason": "JSONP endpoint ok.go.mail.ru/lady_on_lady_recipes_r.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.googletagmanager.com",
+    "reason": "JSONP endpoint www.googletagmanager.com/gtm/js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "api.vk.com",
+    "reason": "JSONP endpoint api.vk.com/method/wall.get (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.sharethis.com",
+    "reason": "JSONP endpoint www.sharethis.com/get-publisher-info.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "google.ru",
+    "reason": "JSONP endpoint google.ru/maps/vt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pro.netrox.sc",
+    "reason": "JSONP endpoint pro.netrox.sc/oapi/h_checksite.ashx (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "vimeo.com",
+    "reason": "JSONP endpoint vimeo.com/api/oembed.json/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "de.blog.newrelic.com",
+    "reason": "JSONP endpoint de.blog.newrelic.com/wp-admin/admin-ajax.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "ajax.googleapis.com",
+    "reason": "JSONP endpoint ajax.googleapis.com/ajax/services/search/news and AngularJS at ajax.googleapis.com/ajax/libs/angularjs (csp-evaluator)"
+  },
+  {
+    "host": "ssl.google-analytics.com",
+    "reason": "JSONP endpoint ssl.google-analytics.com/gtm/js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pubsub.pubnub.com",
+    "reason": "JSONP endpoint pubsub.pubnub.com/subscribe/demo/hello_world/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pass.yandex.ua",
+    "reason": "JSONP endpoint pass.yandex.ua/services (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "id.rambler.ru",
+    "reason": "JSONP endpoint id.rambler.ru/script/topline_info.js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "m.addthis.com",
+    "reason": "JSONP endpoint m.addthis.com/live/red_lojson/100eng.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "passport.ngs.ru",
+    "reason": "JSONP endpoint passport.ngs.ru/ajax/check (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "catalog.api.2gis.ru",
+    "reason": "JSONP endpoint catalog.api.2gis.ru/ads/search (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "gum.criteo.com",
+    "reason": "JSONP endpoint gum.criteo.com/sync (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "maps.google.com",
+    "reason": "JSONP endpoint maps.google.com/maps/vt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "ynuf.alipay.com",
+    "reason": "JSONP endpoint ynuf.alipay.com/service/um.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "securepubads.g.doubleclick.net",
+    "reason": "JSONP endpoint securepubads.g.doubleclick.net/gampad/ads (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "c.tiles.mapbox.com",
+    "reason": "JSONP endpoint c.tiles.mapbox.com/v3/texastribune.tx-congress-cvap/6/15/26.grid.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "rexchange.begun.ru",
+    "reason": "JSONP endpoint rexchange.begun.ru/banners (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "an.yandex.ru",
+    "reason": "JSONP endpoint an.yandex.ru/page/147484 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "links.services.disqus.com",
+    "reason": "JSONP endpoint links.services.disqus.com/api/ping (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "api.map.baidu.com",
+    "reason": "JSONP endpoint api.map.baidu.com/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "tj.gongchang.com",
+    "reason": "JSONP endpoint tj.gongchang.com/api/keywordrecomm/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "data.gongchang.com",
+    "reason": "JSONP endpoint data.gongchang.com/livegrail/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "ulogin.ru",
+    "reason": "JSONP endpoint ulogin.ru/token.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "beta.gismeteo.ru",
+    "reason": "JSONP endpoint beta.gismeteo.ru/api/informer/layout.js/120x240-3/ru/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "maps.googleapis.com",
+    "reason": "JSONP endpoint maps.googleapis.com/maps/api/js/GeoPhotoService.GetMetadata (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "a.config.skype.com",
+    "reason": "JSONP endpoint a.config.skype.com/config/v1/Skype/908_1.33.0.111/SkypePersonalization (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "maps.beeline.ru",
+    "reason": "JSONP endpoint maps.beeline.ru/w (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "target.ukr.net",
+    "reason": "JSONP endpoint target.ukr.net/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.meteoprog.ua",
+    "reason": "JSONP endpoint www.meteoprog.ua/data/weather/informer/Poltava.js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "cdn.syndication.twimg.com",
+    "reason": "JSONP endpoint cdn.syndication.twimg.com/widgets/timelines/599200054310604802 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "wslocker.ru",
+    "reason": "JSONP endpoint wslocker.ru/client/user.chk.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "community.adobe.com",
+    "reason": "JSONP endpoint community.adobe.com/CommunityPod/getJSON (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "maps.google.lv",
+    "reason": "JSONP endpoint maps.google.lv/maps/vt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "dev.virtualearth.net",
+    "reason": "JSONP endpoint dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels/26.318581 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "awaps.yandex.ru",
+    "reason": "JSONP endpoint awaps.yandex.ru/10/8938/02400400. (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "nominatim.openstreetmap.org",
+    "reason": "JSONP endpoint nominatim.openstreetmap.org/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "plugins.mozilla.org",
+    "reason": "JSONP endpoint plugins.mozilla.org/en-us/plugins_list.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "h.cackle.me",
+    "reason": "JSONP endpoint h.cackle.me/widget/32153/bootstrap (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "graph.facebook.com",
+    "reason": "JSONP endpoint graph.facebook.com/1/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "fellowes.ugc.bazaarvoice.com",
+    "reason": "JSONP endpoint fellowes.ugc.bazaarvoice.com/data/reviews.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "widgets.pinterest.com",
+    "reason": "JSONP endpoint widgets.pinterest.com/v3/pidgets/boards/ciciwin/hedgehog-squirrel-crafts/pins/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "se.wikipedia.org",
+    "reason": "JSONP endpoint se.wikipedia.org/w/api.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "cse.google.com",
+    "reason": "JSONP endpoint cse.google.com/api/007627024705277327428/cse/r3vs7b0fcli/queries/js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "relap.io",
+    "reason": "JSONP endpoint relap.io/api/v2/similar_pages_jsonp.js (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "c1n3.hypercomments.com",
+    "reason": "JSONP endpoint c1n3.hypercomments.com/stream/subscribe (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "maps.google.de",
+    "reason": "JSONP endpoint maps.google.de/maps/vt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "books.google.com",
+    "reason": "JSONP endpoint books.google.com/books (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "connect.mail.ru",
+    "reason": "JSONP endpoint connect.mail.ru/share_count (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "tr.indeed.com",
+    "reason": "JSONP endpoint tr.indeed.com/m/newjobs (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www-onepick-opensocial.googleusercontent.com",
+    "reason": "JSONP endpoint www-onepick-opensocial.googleusercontent.com/gadgets/proxy (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.panoramio.com",
+    "reason": "JSONP endpoint www.panoramio.com/map/get_panoramas.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "client.siteheart.com",
+    "reason": "JSONP endpoint client.siteheart.com/streamcli/client (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.facebook.com",
+    "reason": "JSONP endpoint www.facebook.com/restserver.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "autocomplete.travelpayouts.com",
+    "reason": "JSONP endpoint autocomplete.travelpayouts.com/avia (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.googleapis.com",
+    "reason": "JSONP endpoint www.googleapis.com/freebase/v1/topic/m/0344_ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "mts1.googleapis.com",
+    "reason": "JSONP endpoint mts1.googleapis.com/mapslt/ft (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "publish.twitter.com",
+    "reason": "JSONP endpoint publish.twitter.com/oembed (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "fast.wistia.com",
+    "reason": "JSONP endpoint fast.wistia.com/embed/medias/o75jtw7654.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "partner.googleadservices.com",
+    "reason": "JSONP endpoint partner.googleadservices.com/gampad/ads (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pass.yandex.ru",
+    "reason": "JSONP endpoint pass.yandex.ru/services (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "gupiao.baidu.com",
+    "reason": "JSONP endpoint gupiao.baidu.com/stocks/stockbets (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "widget.admitad.com",
+    "reason": "JSONP endpoint widget.admitad.com/widget/init (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "api.instagram.com",
+    "reason": "JSONP endpoint api.instagram.com/v1/tags/partykungen23328/media/recent (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "video.media.yql.yahoo.com",
+    "reason": "JSONP endpoint video.media.yql.yahoo.com/v1/video/sapi/streams/063fb76c-6c70-38c5-9bbc-04b7c384de2b (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "ib.adnxs.com",
+    "reason": "JSONP endpoint ib.adnxs.com/jpt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pass.yandex.com",
+    "reason": "JSONP endpoint pass.yandex.com/services (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.google.de",
+    "reason": "JSONP endpoint www.google.de/maps/vt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "clients1.google.com",
+    "reason": "JSONP endpoint clients1.google.com/complete/search (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "api.userlike.com",
+    "reason": "JSONP endpoint api.userlike.com/api/chat/slot/proactive/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.youku.com",
+    "reason": "JSONP endpoint www.youku.com/index_cookielist/s/jsonp (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "mt1.googleapis.com",
+    "reason": "JSONP endpoint mt1.googleapis.com/mapslt/ft (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "api.mixpanel.com",
+    "reason": "JSONP endpoint api.mixpanel.com/track/ (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "wpd.b.qq.com",
+    "reason": "JSONP endpoint wpd.b.qq.com/cgi/get_sign.php (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "pipes.yahooapis.com",
+    "reason": "JSONP endpoint pipes.yahooapis.com/pipes/pipe.run (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "gdata.youtube.com",
+    "reason": "JSONP endpoint gdata.youtube.com/feeds/api/videos/WsJIHN1kNWc (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "9.chart.apis.google.com",
+    "reason": "JSONP endpoint 9.chart.apis.google.com/chart (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "cdn.syndication.twitter.com",
+    "reason": "JSONP endpoint cdn.syndication.twitter.com/moments/709229296800440320 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "api.flickr.com",
+    "reason": "JSONP endpoint api.flickr.com/services/feeds/photos_friends.gne (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "cbks0.googleapis.com",
+    "reason": "JSONP endpoint cbks0.googleapis.com/cbk (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.blogger.com",
+    "reason": "JSONP endpoint www.blogger.com/feeds/5578653387562324002/posts/summary/4427562025302749269 (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "query.yahooapis.com",
+    "reason": "JSONP endpoint query.yahooapis.com/v1/public/yql (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "www.travelpayouts.com",
+    "reason": "JSONP endpoint www.travelpayouts.com/widgets/50f53ce9ada1b54bcc000031.json (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "i.cackle.me",
+    "reason": "JSONP endpoint i.cackle.me/widget/32586/bootstrap (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "translate.yandex.net",
+    "reason": "JSONP endpoint translate.yandex.net/api/v1.5/tr.json/detect (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "a.tiles.mapbox.com",
+    "reason": "JSONP endpoint a.tiles.mapbox.com/v3/zentralmedia.map-n2raeauc.jsonp (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "maps.google.ru",
+    "reason": "JSONP endpoint maps.google.ru/maps/vt (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "c1n2.hypercomments.com",
+    "reason": "JSONP endpoint c1n2.hypercomments.com/stream/subscribe (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "rec.ydf.yandex.ru",
+    "reason": "JSONP endpoint rec.ydf.yandex.ru/cookie (csp-evaluator jsonp.json)"
+  },
+  {
+    "host": "gstatic.com",
+    "reason": "serves AngularJS (script gadget): gstatic.com/fsn/angular_js-bundle1.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "www.gstatic.com",
+    "reason": "serves AngularJS (script gadget): www.gstatic.com/fsn/angular_js-bundle1.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "yandex.st",
+    "reason": "serves AngularJS (script gadget): yandex.st/angularjs/1.2.16/angular-cookies.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "yastatic.net",
+    "reason": "serves AngularJS (script gadget): yastatic.net/angularjs/1.2.23/angular.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "yuedust.yuedu.126.net",
+    "reason": "serves AngularJS (script gadget): yuedust.yuedu.126.net/js/components/angular/angular.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "art.jobs.netease.com",
+    "reason": "serves AngularJS (script gadget): art.jobs.netease.com/script/angular.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "csu-c45.kxcdn.com",
+    "reason": "serves AngularJS (script gadget): csu-c45.kxcdn.com/angular/angular.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "gift-talk.kakao.com",
+    "reason": "serves AngularJS (script gadget): gift-talk.kakao.com/public/javascripts/angular.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "master-sumok.ru",
+    "reason": "serves AngularJS (script gadget): master-sumok.ru/vendors/angular/angular-cookies.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "pangxiehaitao.com",
+    "reason": "serves AngularJS (script gadget): pangxiehaitao.com/framework/angular-1.3.9/angular-animate.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "cdnjs.cloudflare.com",
+    "reason": "serves AngularJS: cdnjs.cloudflare.com/ajax/libs/angular.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "oss.maxcdn.com",
+    "reason": "serves AngularJS (script gadget): oss.maxcdn.com/angularjs/1.2.20/angular.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "reports.zemanta.com",
+    "reason": "serves AngularJS (script gadget): reports.zemanta.com/smedia/common/angularjs/1.2.11/angular.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "cdn.shopify.com",
+    "reason": "serves AngularJS (script gadget): cdn.shopify.com/s/files/1/0225/6463/t/1/assets/angular-animate.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "cdn.jsdelivr.net",
+    "reason": "serves AngularJS: cdn.jsdelivr.net/angularjs (csp-evaluator angular.json); also any npm or GitHub file"
+  },
+  {
+    "host": "cdn.walkme.com",
+    "reason": "serves AngularJS (script gadget): cdn.walkme.com/General/EnvironmentTests/angular/angular.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "laundrymail.com",
+    "reason": "serves AngularJS (script gadget): laundrymail.com/angular/angular.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "askgithub.com",
+    "reason": "serves AngularJS (script gadget): askgithub.com/static/js/angular.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "services.amazon.com",
+    "reason": "serves AngularJS (script gadget): services.amazon.com/solution-providers/assets/vendor/angular-cookies.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "raw.githubusercontent.com",
+    "reason": "serves AngularJS (script gadget): raw.githubusercontent.com/angular/code.angularjs.org/master/1.0.7/angular-resource.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "dl.dropboxusercontent.com",
+    "reason": "serves AngularJS (script gadget): dl.dropboxusercontent.com/u/30877786/angular.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "static.tumblr.com",
+    "reason": "serves AngularJS (script gadget): static.tumblr.com/x5qdx0r/nPOnngtff/angular-resource.min_1_.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "storage.googleapis.com",
+    "reason": "serves AngularJS (script gadget): storage.googleapis.com/assets-prod.urbansitter.net/us-sym/assets/vendor/angular-sanitize/angular-sanitize.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "www.adobe.com",
+    "reason": "serves AngularJS (script gadget): www.adobe.com/devnet-apps/flashshowcase/lib/angular/angular.1.1.5.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "cdn.bootcss.com",
+    "reason": "serves AngularJS (script gadget): cdn.bootcss.com/angular.js/1.2.0/angular.min.js (csp-evaluator angular.json)"
+  },
+  {
+    "host": "unpkg.com",
+    "reason": "serves any npm package file, including AngularJS (https://unpkg.com/angular/angular.min.js); host-wide script gadget"
+  }
+]

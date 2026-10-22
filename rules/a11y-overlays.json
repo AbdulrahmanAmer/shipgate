@@ -1,0 +1,34 @@
+[
+  {
+    "vendor": "accessiBe",
+    "host": "acsbapp.com"
+  },
+  {
+    "vendor": "UserWay",
+    "host": "cdn.userway.org"
+  },
+  {
+    "vendor": "AudioEye",
+    "host": "wsmcdn.audioeye.com"
+  },
+  {
+    "vendor": "EqualWeb",
+    "host": "cdn.equalweb.com"
+  },
+  {
+    "vendor": "Max Access",
+    "host": "maxaccess.io"
+  },
+  {
+    "vendor": "Max Access",
+    "host": "*.maxaccess.io"
+  },
+  {
+    "vendor": "Max Access",
+    "host": "onlineada.com"
+  },
+  {
+    "vendor": "Max Access",
+    "host": "*.onlineada.com"
+  }
+]
