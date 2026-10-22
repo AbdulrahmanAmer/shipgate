@@ -5,5 +5,6 @@ Done claims use exactly `WP-<id>: done` (one per line) or a `| WP-<id> | done | 
 ## Status
 
 WP-000: done
+WP-101: done
 WP-102: done
 WP-103: done
