@@ -1,0 +1,37 @@
+[
+  {
+    "header": "x-middleware-subrequest",
+    "value": "middleware:middleware:middleware:middleware:middleware",
+    "mode": "same-path"
+  },
+  {
+    "header": "x-middleware-subrequest",
+    "value": "src/middleware:src/middleware:src/middleware:src/middleware:src/middleware",
+    "mode": "same-path"
+  },
+  {
+    "header": "X-Forwarded-For",
+    "value": "127.0.0.1",
+    "mode": "same-path"
+  },
+  {
+    "header": "X-Real-IP",
+    "value": "127.0.0.1",
+    "mode": "same-path"
+  },
+  {
+    "header": "X-Forwarded-Host",
+    "value": "localhost",
+    "mode": "same-path"
+  },
+  {
+    "header": "X-Original-URL",
+    "value": "{path}",
+    "mode": "rewrite"
+  },
+  {
+    "header": "X-Rewrite-URL",
+    "value": "{path}",
+    "mode": "rewrite"
+  }
+]

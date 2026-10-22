@@ -1,0 +1,38 @@
+{
+  "marketing": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "local-business": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "saas": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "pseo": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "api": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "docs": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "ecommerce": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "news": {
+    "idleSec": null,
+    "absoluteSec": 2592000
+  },
+  "ymyl": {
+    "idleSec": 3600,
+    "absoluteSec": 86400
+  }
+}

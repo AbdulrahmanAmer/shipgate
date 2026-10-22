@@ -1,0 +1,40 @@
+{
+  "npm": [
+    "registry.npmjs.org",
+    "registry.yarnpkg.com"
+  ],
+  "pypi": [
+    "pypi.org",
+    "files.pythonhosted.org"
+  ],
+  "cargo": [
+    "index.crates.io",
+    "crates.io",
+    "static.crates.io"
+  ],
+  "go": [
+    "proxy.golang.org",
+    "sum.golang.org",
+    "index.golang.org"
+  ],
+  "composer": [
+    "repo.packagist.org",
+    "packagist.org",
+    "api.github.com",
+    "codeload.github.com"
+  ],
+  "rubygems": [
+    "rubygems.org",
+    "index.rubygems.org",
+    "api.rubygems.org"
+  ],
+  "maven": [
+    "repo.maven.apache.org",
+    "repo1.maven.org",
+    "maven.google.com",
+    "plugins.gradle.org"
+  ],
+  "nuget": [
+    "api.nuget.org"
+  ]
+}

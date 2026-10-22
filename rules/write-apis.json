@@ -1,0 +1,139 @@
+[
+  {
+    "vendor": "duda",
+    "host": "api.duda.co",
+    "methods": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "productionOnly": false
+  },
+  {
+    "vendor": "webflow",
+    "host": "api.webflow.com",
+    "methods": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "productionOnly": false
+  },
+  {
+    "vendor": "wix",
+    "host": "www.wixapis.com",
+    "methods": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "productionOnly": false
+  },
+  {
+    "vendor": "squarespace",
+    "host": "api.squarespace.com",
+    "methods": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "productionOnly": false
+  },
+  {
+    "vendor": "shopify-admin",
+    "host": "*.myshopify.com",
+    "methods": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "pathPattern": "^/admin/api/",
+    "productionOnly": false
+  },
+  {
+    "vendor": "wordpress-rest",
+    "host": "*",
+    "methods": [
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+    ],
+    "pathPattern": "^/wp-json/",
+    "productionOnly": true
+  },
+  {
+    "vendor": "indexnow",
+    "host": "api.indexnow.org",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "productionOnly": false
+  },
+  {
+    "vendor": "indexnow-bing",
+    "host": "www.bing.com",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "pathPattern": "^/indexnow",
+    "productionOnly": false
+  },
+  {
+    "vendor": "indexnow-yandex",
+    "host": "yandex.com",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "pathPattern": "^/indexnow",
+    "productionOnly": false
+  },
+  {
+    "vendor": "indexnow-naver",
+    "host": "searchadvisor.naver.com",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "pathPattern": "^/indexnow",
+    "productionOnly": false
+  },
+  {
+    "vendor": "indexnow-seznam",
+    "host": "search.seznam.cz",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "pathPattern": "^/indexnow",
+    "productionOnly": false
+  },
+  {
+    "vendor": "google-indexing",
+    "host": "indexing.googleapis.com",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "productionOnly": false
+  },
+  {
+    "vendor": "sitemap-ping",
+    "host": "*",
+    "methods": [
+      "GET",
+      "POST"
+    ],
+    "pathPattern": "^/ping$",
+    "queryPattern": "(^|&)sitemap=",
+    "productionOnly": false
+  }
+]

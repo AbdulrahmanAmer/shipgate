@@ -1,0 +1,24 @@
+{
+  "postgres": [
+    {
+      "from": "varchar",
+      "to": "text"
+    },
+    {
+      "from": "character varying",
+      "to": "text"
+    },
+    {
+      "from": "text",
+      "to": "varchar"
+    },
+    {
+      "from": "text",
+      "to": "character varying"
+    },
+    {
+      "from": "cidr",
+      "to": "inet"
+    }
+  ]
+}

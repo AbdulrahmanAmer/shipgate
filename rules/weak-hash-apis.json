@@ -1,0 +1,274 @@
+[
+  {
+    "ecosystem": "npm",
+    "call": "crypto.createHash"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "createHash"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "crypto.subtle.digest"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "CryptoJS.MD5"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "CryptoJS.SHA1"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "CryptoJS.SHA256"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "CryptoJS.SHA512"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "md5"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "sha1"
+  },
+  {
+    "ecosystem": "npm",
+    "call": "sha256"
+  },
+  {
+    "ecosystem": "pypi",
+    "call": "hashlib.md5"
+  },
+  {
+    "ecosystem": "pypi",
+    "call": "hashlib.sha1"
+  },
+  {
+    "ecosystem": "pypi",
+    "call": "hashlib.sha224"
+  },
+  {
+    "ecosystem": "pypi",
+    "call": "hashlib.sha256"
+  },
+  {
+    "ecosystem": "pypi",
+    "call": "hashlib.sha384"
+  },
+  {
+    "ecosystem": "pypi",
+    "call": "hashlib.sha512"
+  },
+  {
+    "ecosystem": "pypi",
+    "call": "hashlib.new"
+  },
+  {
+    "ecosystem": "composer",
+    "call": "md5"
+  },
+  {
+    "ecosystem": "composer",
+    "call": "sha1"
+  },
+  {
+    "ecosystem": "composer",
+    "call": "hash"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "Digest::MD5.hexdigest"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "Digest::MD5.digest"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "Digest::SHA1.hexdigest"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "Digest::SHA1.digest"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "Digest::SHA256.hexdigest"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "Digest::SHA256.digest"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "Digest::SHA2.hexdigest"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "OpenSSL::Digest::MD5"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "OpenSSL::Digest::SHA1"
+  },
+  {
+    "ecosystem": "rubygems",
+    "call": "OpenSSL::Digest::SHA256"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "MessageDigest.getInstance"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "DigestUtils.md5Hex"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "DigestUtils.sha1Hex"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "DigestUtils.sha256Hex"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "DigestUtils.sha512Hex"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "DigestUtils.md5"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "DigestUtils.sha1"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "DigestUtils.sha256"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "Hashing.md5"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "Hashing.sha1"
+  },
+  {
+    "ecosystem": "maven",
+    "call": "Hashing.sha256"
+  },
+  {
+    "ecosystem": "go",
+    "call": "md5.Sum"
+  },
+  {
+    "ecosystem": "go",
+    "call": "md5.New"
+  },
+  {
+    "ecosystem": "go",
+    "call": "sha1.Sum"
+  },
+  {
+    "ecosystem": "go",
+    "call": "sha1.New"
+  },
+  {
+    "ecosystem": "go",
+    "call": "sha256.Sum256"
+  },
+  {
+    "ecosystem": "go",
+    "call": "sha256.Sum224"
+  },
+  {
+    "ecosystem": "go",
+    "call": "sha256.New"
+  },
+  {
+    "ecosystem": "go",
+    "call": "sha512.Sum512"
+  },
+  {
+    "ecosystem": "go",
+    "call": "sha512.New"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "MD5.Create"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "MD5.HashData"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "SHA1.Create"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "SHA1.HashData"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "SHA256.Create"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "SHA256.HashData"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "SHA512.Create"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "SHA512.HashData"
+  },
+  {
+    "ecosystem": "nuget",
+    "call": "HashAlgorithm.Create"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Md5::new"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Md5::digest"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Sha1::new"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Sha1::digest"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Sha256::new"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Sha256::digest"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Sha512::new"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "Sha512::digest"
+  },
+  {
+    "ecosystem": "cargo",
+    "call": "md5::compute"
+  }
+]

@@ -1,0 +1,227 @@
+{
+  "node": {
+    "identity": "major",
+    "sources": [
+      {
+        "file": "package.json",
+        "kind": "manifest",
+        "extract": "\"engines\"\\s*:\\s*\\{[^}]*?\"node\"\\s*:\\s*\"([^\"]+)\""
+      },
+      {
+        "file": ".nvmrc",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*v?([^\\s#]+)"
+      },
+      {
+        "file": ".node-version",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*v?([^\\s#]+)"
+      },
+      {
+        "file": ".tool-versions",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*(?:nodejs|node)\\s+v?(\\S+)"
+      },
+      {
+        "file": "mise.toml",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*node\\s*=\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".github/workflows/*.{yml,yaml}",
+        "kind": "ci",
+        "extract": "node-version:\\s*[\"']?v?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".gitlab-ci.yml",
+        "kind": "ci",
+        "extract": "image:\\s*[\"']?node:v?([0-9][^\"'\\s#-]*)"
+      },
+      {
+        "file": ".circleci/config.yml",
+        "kind": "ci",
+        "extract": "cimg/node:v?([0-9][^\"'\\s#]*)"
+      },
+      {
+        "file": "netlify.toml",
+        "kind": "host",
+        "extract": "(?m)^\\s*NODE_VERSION\\s*=\\s*[\"']?v?([^\"'\\s#]+)"
+      },
+      {
+        "file": "wrangler.{toml,jsonc,json}",
+        "kind": "host",
+        "extract": "NODE_VERSION[\"']?\\s*[=:]\\s*[\"']?v?([^\"'\\s#,}]+)"
+      }
+    ]
+  },
+  "python": {
+    "identity": "major.minor",
+    "sources": [
+      {
+        "file": ".python-version",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*([0-9][^\\s#]*)"
+      },
+      {
+        "file": "pyproject.toml",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*requires-python\\s*=\\s*\"([^\"]+)\""
+      },
+      {
+        "file": "Pipfile",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*python_version\\s*=\\s*\"([^\"]+)\""
+      },
+      {
+        "file": "runtime.txt",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*python-([0-9][^\\s#]*)"
+      },
+      {
+        "file": ".tool-versions",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*python\\s+(\\S+)"
+      },
+      {
+        "file": "mise.toml",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*python\\s*=\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".github/workflows/*.{yml,yaml}",
+        "kind": "ci",
+        "extract": "python-version:\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".gitlab-ci.yml",
+        "kind": "ci",
+        "extract": "image:\\s*[\"']?python:([0-9][^\"'\\s#-]*)"
+      },
+      {
+        "file": "netlify.toml",
+        "kind": "host",
+        "extract": "(?m)^\\s*PYTHON_VERSION\\s*=\\s*[\"']?([^\"'\\s#]+)"
+      }
+    ]
+  },
+  "ruby": {
+    "identity": "major.minor",
+    "sources": [
+      {
+        "file": ".ruby-version",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*(?:ruby-)?([0-9][^\\s#]*)"
+      },
+      {
+        "file": "Gemfile",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*ruby\\s+[\"']([^\"']+)[\"']"
+      },
+      {
+        "file": ".tool-versions",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*ruby\\s+(\\S+)"
+      },
+      {
+        "file": "mise.toml",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*ruby\\s*=\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".github/workflows/*.{yml,yaml}",
+        "kind": "ci",
+        "extract": "ruby-version:\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".gitlab-ci.yml",
+        "kind": "ci",
+        "extract": "image:\\s*[\"']?ruby:([0-9][^\"'\\s#-]*)"
+      },
+      {
+        "file": "netlify.toml",
+        "kind": "host",
+        "extract": "(?m)^\\s*RUBY_VERSION\\s*=\\s*[\"']?([^\"'\\s#]+)"
+      }
+    ]
+  },
+  "go": {
+    "identity": "major.minor",
+    "sources": [
+      {
+        "file": "go.mod",
+        "kind": "manifest",
+        "extract": "(?m)^go\\s+([0-9][0-9.]*)"
+      },
+      {
+        "file": ".go-version",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*(?:go)?([0-9][^\\s#]*)"
+      },
+      {
+        "file": ".tool-versions",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*(?:golang|go)\\s+(\\S+)"
+      },
+      {
+        "file": "mise.toml",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*go\\s*=\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".github/workflows/*.{yml,yaml}",
+        "kind": "ci",
+        "extract": "go-version:\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".gitlab-ci.yml",
+        "kind": "ci",
+        "extract": "image:\\s*[\"']?golang:([0-9][^\"'\\s#-]*)"
+      },
+      {
+        "file": "netlify.toml",
+        "kind": "host",
+        "extract": "(?m)^\\s*GO_VERSION\\s*=\\s*[\"']?([^\"'\\s#]+)"
+      }
+    ]
+  },
+  "php": {
+    "identity": "major.minor",
+    "sources": [
+      {
+        "file": "composer.json",
+        "kind": "manifest",
+        "extract": "\"require\"\\s*:\\s*\\{[^}]*?\"php\"\\s*:\\s*\"([^\"]+)\""
+      },
+      {
+        "file": ".php-version",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*([0-9][^\\s#]*)"
+      },
+      {
+        "file": ".tool-versions",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*php\\s+(\\S+)"
+      },
+      {
+        "file": "mise.toml",
+        "kind": "manifest",
+        "extract": "(?m)^\\s*php\\s*=\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".github/workflows/*.{yml,yaml}",
+        "kind": "ci",
+        "extract": "php-version:\\s*[\"']?([^\"'\\s#,]+)"
+      },
+      {
+        "file": ".gitlab-ci.yml",
+        "kind": "ci",
+        "extract": "image:\\s*[\"']?php:([0-9][^\"'\\s#-]*)"
+      },
+      {
+        "file": "netlify.toml",
+        "kind": "host",
+        "extract": "(?m)^\\s*PHP_VERSION\\s*=\\s*[\"']?([^\"'\\s#]+)"
+      }
+    ]
+  }
+}

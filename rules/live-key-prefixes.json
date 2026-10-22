@@ -1,0 +1,27 @@
+[
+  {
+    "provider": "stripe",
+    "kind": "literal",
+    "pattern": "sk_live_"
+  },
+  {
+    "provider": "stripe",
+    "kind": "literal",
+    "pattern": "rk_live_"
+  },
+  {
+    "provider": "stripe",
+    "kind": "literal",
+    "pattern": "pk_live_"
+  },
+  {
+    "provider": "aws",
+    "kind": "regex",
+    "pattern": "AKIA[0-9A-Z]{16}"
+  },
+  {
+    "provider": "paddle",
+    "kind": "literal",
+    "pattern": "pdl_live_apikey_"
+  }
+]

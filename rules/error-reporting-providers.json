@@ -1,0 +1,112 @@
+{
+  "sentry": {
+    "hosts": [
+      "*.ingest.sentry.io",
+      "*.ingest.us.sentry.io"
+    ],
+    "sdkPackages": [
+      "@sentry/browser",
+      "@sentry/node",
+      "@sentry/react",
+      "@sentry/nextjs",
+      "@sentry/vue",
+      "@sentry/svelte",
+      "@sentry/sveltekit",
+      "@sentry/astro",
+      "@sentry/nuxt",
+      "@sentry/remix",
+      "@sentry/angular",
+      "@sentry/bun",
+      "@sentry/cloudflare",
+      "@sentry/electron",
+      "sentry-sdk",
+      "sentry-ruby",
+      "sentry/sentry",
+      "sentry/sentry-laravel"
+    ]
+  },
+  "bugsnag": {
+    "hosts": [
+      "notify.bugsnag.com",
+      "sessions.bugsnag.com"
+    ],
+    "sdkPackages": [
+      "@bugsnag/js",
+      "@bugsnag/browser",
+      "@bugsnag/node",
+      "@bugsnag/plugin-react",
+      "bugsnag",
+      "bugsnag/bugsnag",
+      "bugsnag/bugsnag-laravel"
+    ]
+  },
+  "rollbar": {
+    "hosts": [
+      "api.rollbar.com",
+      "cdn.rollbar.com"
+    ],
+    "sdkPackages": [
+      "rollbar",
+      "@rollbar/react",
+      "rollbar/rollbar"
+    ]
+  },
+  "honeybadger": {
+    "hosts": [
+      "api.honeybadger.io",
+      "js.honeybadger.io"
+    ],
+    "sdkPackages": [
+      "@honeybadger-io/js",
+      "@honeybadger-io/react",
+      "@honeybadger-io/nextjs",
+      "honeybadger",
+      "honeybadger-io/honeybadger-php",
+      "honeybadger-io/honeybadger-laravel"
+    ]
+  },
+  "datadog": {
+    "hosts": [
+      "browser-intake-datadoghq.com",
+      "browser-intake-datadoghq.eu",
+      "browser-intake-us3-datadoghq.com",
+      "browser-intake-us5-datadoghq.com",
+      "browser-intake-ap1-datadoghq.com",
+      "browser-intake-ddog-gov.com",
+      "www.datadoghq-browser-agent.com"
+    ],
+    "sdkPackages": [
+      "@datadog/browser-rum",
+      "@datadog/browser-logs",
+      "dd-trace",
+      "ddtrace",
+      "datadog"
+    ]
+  },
+  "newrelic": {
+    "hosts": [
+      "bam.nr-data.net",
+      "bam-cell.nr-data.net",
+      "js-agent.newrelic.com"
+    ],
+    "sdkPackages": [
+      "newrelic",
+      "@newrelic/browser-agent",
+      "newrelic_rpm"
+    ]
+  },
+  "posthog": {
+    "hosts": [
+      "us.i.posthog.com",
+      "eu.i.posthog.com",
+      "us-assets.i.posthog.com"
+    ],
+    "sdkPackages": [
+      "posthog-js",
+      "posthog-node",
+      "posthog",
+      "posthog-ruby",
+      "posthog/posthog-php"
+    ]
+  }
+}

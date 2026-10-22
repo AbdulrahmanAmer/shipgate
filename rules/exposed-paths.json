@@ -1,0 +1,98 @@
+[
+  {
+    "path": "/.git/HEAD",
+    "signature": "^ref: |^[0-9a-f]{40}"
+  },
+  {
+    "path": "/.git/config",
+    "signature": "\\[core\\]"
+  },
+  {
+    "path": "/.git/index",
+    "signature": "^DIRC"
+  },
+  {
+    "path": "/.env",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.local",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.production",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.development",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.staging",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.backup",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.test",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.production.local",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.development.local",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.env.test.local",
+    "signature": "(?m)^[A-Z_][A-Z0-9_]*="
+  },
+  {
+    "path": "/.DS_Store",
+    "signature": "\\x00\\x00\\x00\\x01Bud1"
+  },
+  {
+    "path": "/debug.log",
+    "signature": "PHP (Notice|Warning|Fatal error)"
+  },
+  {
+    "path": "/wp-content/debug.log",
+    "signature": "PHP (Notice|Warning|Fatal error)"
+  },
+  {
+    "path": "/phpinfo.php",
+    "signature": "phpinfo\\(\\)|PHP Version"
+  },
+  {
+    "path": "/server-status",
+    "signature": "Apache Server Status"
+  },
+  {
+    "path": "/server-info",
+    "signature": "Apache Server Information"
+  },
+  {
+    "path": "/.svn/wc.db",
+    "signature": "^SQLite format 3\\x00"
+  },
+  {
+    "path": "/.aws/credentials",
+    "signature": "aws_access_key_id"
+  },
+  {
+    "path": "/.npmrc",
+    "signature": "_authToken"
+  },
+  {
+    "path": "/id_rsa",
+    "signature": "-----BEGIN [A-Z ]*PRIVATE KEY-----"
+  },
+  {
+    "path": "/.ssh/id_rsa",
+    "signature": "-----BEGIN [A-Z ]*PRIVATE KEY-----"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "provider": "stripe",
+    "template": "cs_test_sg{n}"
+  },
+  {
+    "provider": "paddle",
+    "template": "txn_sg{n}0000000000000000"
+  }
+]

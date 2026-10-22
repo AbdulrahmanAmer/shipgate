@@ -1,0 +1,52 @@
+[
+  {
+    "provider": "stripe",
+    "kind": "literal",
+    "pattern": "pk_test_"
+  },
+  {
+    "provider": "stripe",
+    "kind": "literal",
+    "pattern": "rk_test_"
+  },
+  {
+    "provider": "stripe",
+    "kind": "literal",
+    "pattern": "sk_test_"
+  },
+  {
+    "provider": "stripe",
+    "kind": "regex",
+    "pattern": "livemode\\s*[:=]\\s*(false|0)"
+  },
+  {
+    "provider": "paypal",
+    "kind": "regex",
+    "pattern": "sandbox\\.paypal\\.com|client-id=sb\\b"
+  },
+  {
+    "provider": "paddle",
+    "kind": "regex",
+    "pattern": "sandbox-(api|buy|cdn|vendors)\\.paddle\\.com"
+  },
+  {
+    "provider": "paddle",
+    "kind": "literal",
+    "pattern": "pdl_sdbx_"
+  },
+  {
+    "provider": "braintree",
+    "kind": "regex",
+    "pattern": "sandbox\\.braintreegateway\\.com"
+  },
+  {
+    "provider": "square",
+    "kind": "regex",
+    "pattern": "sandbox\\.web\\.squarecdn\\.com"
+  },
+  {
+    "provider": "adyen",
+    "kind": "regex",
+    "pattern": "checkoutshopper-test\\.adyen\\.com"
+  }
+]
