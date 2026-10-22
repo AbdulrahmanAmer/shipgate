@@ -1,0 +1,10 @@
+{
+  "kind": "deny",
+  "attempted": "echo created > denied.txt",
+  "preToolPayload": "deny-tool.execute.before__bash.json",
+  "pluginAction": "throw new Error(\"shipgate WP-101 deny test\") inside \"tool.execute.before\"",
+  "thrown": "shipgate WP-101 deny test",
+  "forbiddenFileExistsAfterRun": false,
+  "tool_execute_after_ran": false,
+  "hostResultText": "Refused: `shipgate WP-101 deny test`"
+}

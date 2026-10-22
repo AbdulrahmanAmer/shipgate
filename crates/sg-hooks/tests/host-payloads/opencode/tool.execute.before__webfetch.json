@@ -1,0 +1,21 @@
+{
+  "event": "tool.execute.before",
+  "tool": "webfetch",
+  "args": {
+    "url": "https://example.com"
+  },
+  "output": null,
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "webfetch",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_o5sfl6s7h49fkxnbwz1pstm0"
+    },
+    "output": {
+      "args": {
+        "url": "https://example.com"
+      }
+    }
+  }
+}

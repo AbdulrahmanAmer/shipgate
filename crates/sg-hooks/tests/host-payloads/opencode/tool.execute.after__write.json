@@ -1,0 +1,31 @@
+{
+  "event": "tool.execute.after",
+  "tool": "write",
+  "args": {
+    "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt",
+    "content": "hello"
+  },
+  "output": "Wrote file successfully.",
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "write",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_5e69u1bxqw2er44g1e0j19z1",
+      "args": {
+        "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt",
+        "content": "hello"
+      }
+    },
+    "output": {
+      "title": "Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt",
+      "metadata": {
+        "diagnostics": {},
+        "filepath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt",
+        "exists": false,
+        "truncated": false
+      },
+      "output": "Wrote file successfully."
+    }
+  }
+}

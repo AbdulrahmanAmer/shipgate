@@ -1,0 +1,5 @@
+{
+  "host": "cursor",
+  "reason": "Not installed on the build machine (Windows x64, 2026-10-22): `cursor-agent` is not on PATH and the Cursor app is not installed, so no hook run was observed. The 03 section 16 mapping and hook-output rows for `cursor` are docs-derived only.",
+  "needs": "Install the Cursor CLI (`cursor-agent`) or the Cursor app, sign in to a Cursor account (a paid or trial plan that allows agent runs), then rerun WP-101 step 1-3 for `.cursor/hooks.json` (version 1) with the events sessionStart, beforeSubmitPrompt, preToolUse, beforeShellExecution, afterFileEdit, stop."
+}

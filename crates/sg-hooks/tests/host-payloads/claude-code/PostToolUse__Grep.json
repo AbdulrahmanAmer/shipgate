@@ -1,0 +1,28 @@
+{
+  "session_id": "b504b8e2-736c-437f-a0e9-cab130e6410b",
+  "transcript_path": "C:\\Users\\DELL\\.claude\\projects\\C--Users-DELL-AppData-Local-Temp-claude-D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate-c8b35d6c-3ff9-4834-b145-88b68feb46d7-sc-xl5gvd\\b504b8e2-736c-437f-a0e9-cab130e6410b.jsonl",
+  "cwd": "C:\\Users\\DELL\\AppData\\Local\\Temp\\claude\\D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate\\c8b35d6c-3ff9-4834-b145-88b68feb46d7\\scratchpad\\wp101\\cc",
+  "prompt_id": "00bd77fc-2582-40ec-9c2d-52c1a90cd05f",
+  "permission_mode": "bypassPermissions",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Grep",
+  "tool_input": {
+    "pattern": "second",
+    "path": "C:/Users/DELL/AppData/Local/Temp/claude/D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate/c8b35d6c-3ff9-4834-b145-88b68feb46d7/scratchpad/wp101/cc",
+    "output_mode": "content",
+    "-n": true
+  },
+  "tool_response": {
+    "mode": "content",
+    "numFiles": 0,
+    "filenames": [],
+    "content": "sample.txt:2:second line\nprompt2.txt:2:1. Use the Grep tool to search for \"second\" in the current directory.\nrun1-logs\\PostToolUse__Edit__1.json:1:[Omitted long matching line]\nrun1-logs\\PostToolUse__Read__1.json:1:[Omitted long matching line]\n.hooklogs\\PreToolUse__Grep__1.json:1:[Omitted long matching line]\n.hooklogs\\UserPromptSubmit__none__1.json:1:[Omitted long matching line]",
+    "numLines": 6,
+    "totalLines": 6
+  },
+  "tool_use_id": "toolu_01JbZ1rohGSm62mCzLf7JAN3",
+  "duration_ms": 1470
+}

@@ -1,0 +1,21 @@
+{
+  "event": "tool.execute.before",
+  "tool": "glob",
+  "args": {
+    "pattern": "*.txt"
+  },
+  "output": null,
+  "sessionID": "ses_e9ea5ff1affejOEyxJ18DJFd5y",
+  "raw": {
+    "input": {
+      "tool": "glob",
+      "sessionID": "ses_e9ea5ff1affejOEyxJ18DJFd5y",
+      "callID": "call_01_xvyt316wnzxnwv0xztxiafqb"
+    },
+    "output": {
+      "args": {
+        "pattern": "*.txt"
+      }
+    }
+  }
+}

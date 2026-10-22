@@ -1,0 +1,23 @@
+{
+  "kind": "block",
+  "pluginAction": "on the `event` hook, event.type === \"session.idle\": client.session.promptAsync({ path: { id: sessionID }, body: { parts: [{ type: \"text\", text }] } })",
+  "text": "shipgate WP-101 block test: also create the file after-block.txt containing ok",
+  "idlePayload": "block-session.idle.json",
+  "headlessRun": {
+    "command": "opencode run (one-shot client, no --attach)",
+    "followupAccepted": true,
+    "followupHttpStatus": 204,
+    "followupProcessed": false,
+    "note": "the `run` process exits at the first session.idle; the follow-up message was created but no model turn followed (no tool call, no after-block.txt)"
+  },
+  "persistentHost": {
+    "command": "opencode serve + opencode run --attach (the server stays alive after the client exits)",
+    "followupAccepted": true,
+    "followupHttpStatus": 204,
+    "toolCallsAfterFollowup": [
+      "write"
+    ],
+    "followupFileCreated": true,
+    "note": "the agent started a new turn from the follow-up message and wrote after-block.txt"
+  }
+}

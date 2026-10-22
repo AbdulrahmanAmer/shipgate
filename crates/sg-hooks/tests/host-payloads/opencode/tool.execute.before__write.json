@@ -1,0 +1,23 @@
+{
+  "event": "tool.execute.before",
+  "tool": "write",
+  "args": {
+    "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt",
+    "content": "hello"
+  },
+  "output": null,
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "write",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_5e69u1bxqw2er44g1e0j19z1"
+    },
+    "output": {
+      "args": {
+        "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt",
+        "content": "hello"
+      }
+    }
+  }
+}

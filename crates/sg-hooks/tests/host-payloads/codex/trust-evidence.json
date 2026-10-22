@@ -1,0 +1,5 @@
+{
+  "withoutBypassFlag": "run0 (elevated sandbox, no --dangerously-bypass-hook-trust) and run5 (project marked trusted via -c projects.<path>.trust_level, no bypass flag): zero hook invocations, no .hooklogs directory created",
+  "withBypassFlag": "--dangerously-bypass-hook-trust: every event ran",
+  "commandWindowsUsed": "hooks.json held command=node C:/nonexistent/should-not-run-on-windows.mjs and commandWindows=<real logger>; the logger ran, so commandWindows overrides command on Windows"
+}

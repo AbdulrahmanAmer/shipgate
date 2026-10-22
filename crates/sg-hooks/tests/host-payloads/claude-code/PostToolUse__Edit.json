@@ -1,0 +1,41 @@
+{
+  "session_id": "57ba1794-4160-4bb2-8ad9-2e8b20f76aae",
+  "transcript_path": "C:\\Users\\DELL\\.claude\\projects\\C--Users-DELL-AppData-Local-Temp-claude-D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate-c8b35d6c-3ff9-4834-b145-88b68feb46d7-sc-xl5gvd\\57ba1794-4160-4bb2-8ad9-2e8b20f76aae.jsonl",
+  "cwd": "C:\\Users\\DELL\\AppData\\Local\\Temp\\claude\\D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate\\c8b35d6c-3ff9-4834-b145-88b68feb46d7\\scratchpad\\wp101\\cc",
+  "prompt_id": "5fd00d7d-0f43-426a-9ef6-5ce7a560c8ec",
+  "permission_mode": "bypassPermissions",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Edit",
+  "tool_input": {
+    "file_path": "C:\\Users\\DELL\\AppData\\Local\\Temp\\claude\\D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate\\c8b35d6c-3ff9-4834-b145-88b68feb46d7\\scratchpad\\wp101\\cc\\sample.txt",
+    "old_string": "alpha",
+    "new_string": "beta",
+    "replace_all": false
+  },
+  "tool_response": {
+    "filePath": "C:\\Users\\DELL\\AppData\\Local\\Temp\\claude\\D--internal-building-pipeline-for-making-sure-that-all-websites-we-make-real-enterprise-grade-on-search-engines-shipgate\\c8b35d6c-3ff9-4834-b145-88b68feb46d7\\scratchpad\\wp101\\cc\\sample.txt",
+    "oldString": "alpha",
+    "newString": "beta",
+    "originalFile": "alpha line\nsecond line\n",
+    "structuredPatch": [
+      {
+        "oldStart": 1,
+        "oldLines": 2,
+        "newStart": 1,
+        "newLines": 2,
+        "lines": [
+          "-alpha line",
+          "+beta line",
+          " second line"
+        ]
+      }
+    ],
+    "userModified": false,
+    "replaceAll": false
+  },
+  "tool_use_id": "toolu_01QYK1yLuomNb83a7guHCawt",
+  "duration_ms": 22
+}

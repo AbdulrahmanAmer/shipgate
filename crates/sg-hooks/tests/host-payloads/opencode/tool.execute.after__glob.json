@@ -1,0 +1,27 @@
+{
+  "event": "tool.execute.after",
+  "tool": "glob",
+  "args": {
+    "pattern": "*.txt"
+  },
+  "output": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt6.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt4.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt3.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt1.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt0.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\after-block.txt",
+  "sessionID": "ses_e9ea5ff1affejOEyxJ18DJFd5y",
+  "raw": {
+    "input": {
+      "tool": "glob",
+      "sessionID": "ses_e9ea5ff1affejOEyxJ18DJFd5y",
+      "callID": "call_01_xvyt316wnzxnwv0xztxiafqb",
+      "args": {
+        "pattern": "*.txt"
+      }
+    },
+    "output": {
+      "title": "Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p",
+      "metadata": {
+        "count": 8,
+        "truncated": false
+      },
+      "output": "C:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\sample.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt6.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt4.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt3.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt1.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\prompt0.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\notes.txt\nC:\\Users\\DELL\\AppData\\Local\\Temp\\wp101-oc\\p\\after-block.txt"
+    }
+  }
+}

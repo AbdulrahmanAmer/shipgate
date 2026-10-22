@@ -1,0 +1,26 @@
+{
+  "event": "tool.execute.after",
+  "tool": "webfetch",
+  "args": {
+    "url": "https://example.com"
+  },
+  "output": "Example Domain\n\nThis domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.",
+  "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+  "raw": {
+    "input": {
+      "tool": "webfetch",
+      "sessionID": "ses_e9eb099a6ffeIiIKFpIgKmmxdB",
+      "callID": "call_00_o5sfl6s7h49fkxnbwz1pstm0",
+      "args": {
+        "url": "https://example.com"
+      }
+    },
+    "output": {
+      "output": "Example Domain\n\nThis domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.",
+      "title": "https://example.com (text/html; charset=utf-8)",
+      "metadata": {
+        "truncated": false
+      }
+    }
+  }
+}

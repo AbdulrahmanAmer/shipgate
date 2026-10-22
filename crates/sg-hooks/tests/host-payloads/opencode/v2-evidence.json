@@ -1,0 +1,58 @@
+{
+  "host": "opencode",
+  "hostVersion": "v2.1.2 (npm @opencode/cli 2.1.2, the `opencode` on PATH on this machine)",
+  "observedOn": "2026-10-22",
+  "os": "windows-x64",
+  "finding": "OpenCode v2.1.2 does not load v1-style plugins (`export const X = async ({client}) => ({ 'tool.execute.before': ... })`), and its plugin API has no tool.execute.before / tool.execute.after / session.idle hook. A generated plugin as described in 03 section 16 cannot gate tool calls on v2.1.2.",
+  "attempts": [
+    {
+      "n": 1,
+      "what": "v1-style plugin file in <project>/.opencode/plugins/shipgate-probe.js (location given by https://opencode.ai/docs/plugins/), `opencode run --standalone --print-logs --log-level debug`",
+      "logLines": [
+        "timestamp=2026-10-22T00:51:40.063Z level=INFO run=9db8ab89 msg=\"loading plugin\" id=\"<scratch>\\\\oc\\\\.opencode\\\\plugins\\\\shipgate-probe.js\" entrypoint=file:///<scratch>/oc/.opencode/plugins/shipgate-probe.js http.span=842 role=server\r",
+        "timestamp=2026-10-22T00:51:40.087Z level=WARN run=9db8ab89 message=\"failed to load plugin\" target=\"<scratch>\\\\oc\\\\.opencode\\\\plugins\\\\shipgate-probe.js\" ref=err_614118d1 cause=\"Cause([Fail(PluginModule.LoadError: Plugin must export a default definition with an id and an effect or setup function. (cause: SchemaError(Missing key\\n  at [\\\"default\\\"])))])\" http.span=866 role=server\r"
+      ],
+      "result": "plugin not loaded; the agent ran its tools with no hook calls"
+    },
+    {
+      "n": 2,
+      "what": "same file in <project>/.opencode/plugin/ (singular, the v1 directory name)",
+      "logLines": [
+        "timestamp=2026-10-22T00:52:18.542Z level=INFO run=33d52321 msg=\"loading plugin\" id=\"<scratch>\\\\oc\\\\.opencode\\\\plugin\\\\shipgate-probe.js\" entrypoint=file:///<scratch>/oc/.opencode/plugin/shipgate-probe.js http.span=642 role=server\r",
+        "timestamp=2026-10-22T00:52:18.554Z level=WARN run=33d52321 message=\"failed to load plugin\" target=\"<scratch>\\\\oc\\\\.opencode\\\\plugin\\\\shipgate-probe.js\" ref=err_a0188dac cause=\"Cause([Fail(PluginModule.LoadError: Plugin must export a default definition with an id and an effect or setup function. (cause: SchemaError(Missing key\\n  at [\\\"default\\\"])))])\" http.span=654 role=server\r"
+      ],
+      "result": "plugin not loaded"
+    },
+    {
+      "n": 3,
+      "what": "same file referenced from <project>/opencode.json `plugin: [file:///...]`",
+      "logLines": [
+        "timestamp=2026-10-22T00:53:07.047Z level=WARN run=2b5a63b1 message=\"configured plugin path must be a directory\" target=\"<scratch>\\\\oc\\\\legacy\\\\shipgate-probe.js\" http.span=1137 role=server\r"
+      ],
+      "result": "plugin not loaded; config `plugin` entries must be directories of v2 plugins"
+    }
+  ],
+  "v2PluginApi": {
+    "package": "@opencode-ai/plugin 1.18.18 dist/v2 (promise and effect flavours)",
+    "contract": "default export { id, setup(context) } (promise) or { id, effect(context) } (effect)",
+    "contextHooks": [
+      "agent",
+      "aisdk",
+      "catalog",
+      "command",
+      "integration",
+      "plugin",
+      "reference",
+      "skill"
+    ],
+    "toolOrIdleHooks": "none"
+  },
+  "binaryStringCensus": {
+    "file": "@opencode/cli/bin/opencode.exe 2.1.2",
+    "tool.execute": 0,
+    "tool.execute.before": 0,
+    "session.idle": 2,
+    "must export a default definition": 2,
+    "note": "`tool.execute` occurs nowhere in the binary; `session.idle` occurs twice (one hit seen: the SDK event schema definition)."
+  }
+}
