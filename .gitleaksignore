@@ -1,0 +1,2 @@
+# gitleaks false positives: browser API feature keys in the web-features dataset (UX-008), not secrets.
+6458dbea8adb95a4f42cf91cecb0398cedd8d130:rules/web-features.json:generic-api-key:1
