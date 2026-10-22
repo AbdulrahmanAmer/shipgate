@@ -1,0 +1,15 @@
+[package]
+name = "sg-cli"
+description = "The shipgate command line: every command of spec/05 § 1 and its exit codes."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[[bin]]
+name = "shipgate"
+path = "src/main.rs"
+
+[lints]
+workspace = true

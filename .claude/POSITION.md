@@ -33,3 +33,9 @@ Stage 0 (spec audit loop, `audit/README.md`). No build work until a round is GO.
 - **Operator (2026-10-22): "fix the current conflicts and contradictions yourself, one shot, then start building; you decide orchestration vs build yourself."** No more audit rounds. Stage 0 ends with this pass.
 - Pass = me (Opus) alone, single writer, reading SPEC.md → spec/01..05 → packs → BUILD_MAP; findings logged as I go in `audit/rounds/09-solo/findings.md` (survives compaction), then fixed, lint green, commit.
 - Then CLAUDE.md / ORCHESTRATOR_PROMPT.md switch from "no build until GO" to the build-first, fixture-first loop, and Stage 1 starts (WP-000).
+
+## 2026-10-22 — round 09 CLOSED (commit 7f9df26, spec v7.8.0); Stage 1 started
+- Round 09: 15 contradictions fixed, 4 xcheck hits rejected with reasons (`audit/rounds/09-solo/findings.md`). Gates: spec-lint 0/0; self-tests 19/28/11/8/7 all passing. Stray `$F $S $SP $TEMP $TMP` dirs removed.
+- DECISIONS D-006 (Stage 0 closed by Operator), D-007 (orchestration: I build WP-000 myself; later WPs card → fixture author Opus-high → builder Sonnet-high in a worktree → reviewer holdouts Opus-high → gates → merge).
+- Environment: rustc/cargo 1.95.0 stable-msvc, VS Build Tools 2022, Node 24.13, git 2.55, gh 2.92, LongPathsEnabled=1. No git remote (CI configs are written but can't run until the repo is on GitHub). cargo-nextest/deny/mutants being installed with `cargo install --locked`.
+- Now: WP-000 bootstrap (workspace skeleton, lints, xtask stub-scan, nextest ci profile, CI workflow, deny.toml, rust-toolchain.toml, BUILD_STATE.md, empty FIXTURES.lock/deferred.tsv, acceptance tests `wp_000__workspace_builds_and_lints`, `wp_000__ci_runs_trace_gates`). Then Phase 1 (WP-101..104) in parallel.

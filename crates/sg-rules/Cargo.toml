@@ -1,0 +1,11 @@
+[package]
+name = "sg-rules"
+description = "Rule registry (metadata YAML), embedded rulesets, feature tables, ruleset data, brief resolution."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

@@ -1,0 +1,11 @@
+[package]
+name = "sg-core"
+description = "Shared types: rule ids, severities, part severities, lifecycles, outcomes, statuses, findings, errors."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

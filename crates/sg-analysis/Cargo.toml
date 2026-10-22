@@ -1,0 +1,11 @@
+[package]
+name = "sg-analysis"
+description = "ast-grep-core integration, oxc semantics and module graph, template grammars, SQL parsing."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

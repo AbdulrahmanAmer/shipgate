@@ -1,0 +1,11 @@
+[package]
+name = "sg-diff"
+description = "Diff bases, treeHash and repo-id, session snapshots, sensitive paths, git integration, rename detection."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

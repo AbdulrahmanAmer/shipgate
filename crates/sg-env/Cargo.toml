@@ -1,0 +1,11 @@
+[package]
+name = "sg-env"
+description = "Process supervisor, ports, embedded databases, SessionProvider, Supabase prep, SMTP sink, egress and front proxies, fault injection, stage scheduler."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

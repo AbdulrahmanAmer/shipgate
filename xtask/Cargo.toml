@@ -1,0 +1,14 @@
+[package]
+name = "xtask"
+description = "Repository tasks: stub-scan now; schema generation, corpus runner, feature-table refresh, release and notices in later WPs."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+regex = "1"
+
+[lints]
+workspace = true

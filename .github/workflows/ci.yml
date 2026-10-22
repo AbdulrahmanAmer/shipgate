@@ -1,0 +1,66 @@
+# shipgate CI (BUILD_MAP WP-000, § 4 and § 4.1). The order of the trace gates matters: spec-lint,
+# the tools/trace self-tests, merge-gate on pull requests, then trace-check, which builds HEAD,
+# runs every locked fixture and nextest itself. CI's result is authoritative over the local Stop hook.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  trace-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: dtolnay/rust-toolchain@1.95.0
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-nextest
+      - name: spec-lint
+        run: node tools/trace/spec-lint.mjs
+      - name: tools/trace self-tests
+        run: |
+          node tools/trace/spec-lint.test.mjs
+          node tools/trace/trace-check.test.mjs
+          node tools/trace/stop-gate.test.mjs
+          node tools/trace/merge-gate.test.mjs
+          node tools/trace/wp-card.test.mjs
+      - name: merge-gate (pull requests)
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin main:refs/remotes/origin/main
+          node tools/trace/merge-gate.mjs "origin/${{ github.head_ref }}" --base origin/main
+      - name: trace-check of every claimed WP
+        run: node tools/trace/trace-check.mjs --claimed BUILD_STATE.md
+
+  rust:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.95.0
+        with:
+          components: rustfmt, clippy
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-nextest,cargo-deny
+      - name: fmt
+        run: cargo fmt --all --check
+      - name: clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: stub-scan
+        run: cargo xtask stub-scan
+      - name: tests
+        run: cargo nextest run --profile ci --workspace
+      - name: deny
+        if: matrix.os == 'ubuntu-latest'
+        run: cargo deny check

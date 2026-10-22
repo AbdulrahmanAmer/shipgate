@@ -1,0 +1,11 @@
+[package]
+name = "sg-keys"
+description = "Ed25519, Argon2id, OS keychain backends, trust store, signatures, sealed-verdict HMAC."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

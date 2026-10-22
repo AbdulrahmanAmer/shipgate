@@ -1,0 +1,11 @@
+[package]
+name = "sg-policy"
+description = "Policy loading and validation (CFG-*, pack validators, 03 § 3.5 defaults), URL-pattern grammar, globs."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

@@ -1,0 +1,11 @@
+[package]
+name = "sg-programmatic"
+description = "Dataset validation, quarantine, eligibility, inventory, oracle, ICU4X formatting, relations, AI-text grounding, rollout."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true

@@ -1,0 +1,35 @@
+# cargo-deny (BUILD_MAP § 4; spec 05 § 8): compiled-in dependencies must be permissive.
+[graph]
+all-features = true
+
+[licenses]
+# spec 05 § 8: MIT, Apache-2.0, BSD, ISC, Zlib, Unicode-3.0, PostgreSQL.
+# "Apache-2.0 WITH LLVM-exception" only relaxes Apache-2.0 (DECISIONS D-008).
+allow = [
+  "MIT",
+  "Apache-2.0",
+  "Apache-2.0 WITH LLVM-exception",
+  "BSD-2-Clause",
+  "BSD-3-Clause",
+  "ISC",
+  "Zlib",
+  "Unicode-3.0",
+  "PostgreSQL",
+]
+confidence-threshold = 0.9
+
+# The workspace's own crates (publish = false) carry the commercial licence and aren't judged.
+[licenses.private]
+ignore = true
+
+[advisories]
+version = 2
+yanked = "deny"
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

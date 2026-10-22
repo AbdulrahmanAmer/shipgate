@@ -1,0 +1,11 @@
+[package]
+name = "sg-hooks"
+description = "Agent-host adapters, normalised events, command-policy evaluator, sealed-verdict stop logic."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true
