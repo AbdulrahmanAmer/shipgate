@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+{% import "macros.twig" as m %}
+{% block content %}
+  {# a comment #}
+  {% for user in users|filter(u => u.active) %}
+    <li class="{{ loop.index is odd ? 'odd' : 'even' }}">{{ user.name|e('html')|upper }}</li>
+    {{ include('card.twig', {title: user.name, tags: [1, 2]}) }}
+  {% else %}
+    <p>none</p>
+  {% endfor %}
+  {% set x = {'a': 1, 'b': [1, 2]} %}
+  {% if a and not b or c == 'x' %}ok{% elseif d %}d{% endif %}
+  {{ 'x' ~ y }}
+  <div>{{ body|raw }}</div>
+  <p>{{ intro | default('') | raw }}</p>
+  {% autoescape false %}{{ more }}{% endautoescape %}
+{% endblock %}

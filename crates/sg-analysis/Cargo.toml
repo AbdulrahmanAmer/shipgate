@@ -9,3 +9,33 @@ publish = false
 
 [lints]
 workspace = true
+
+# Grammar crates are pinned exactly (BUILD_MAP § 4: permissive licences only, `cargo deny check licenses`).
+# Every grammar links against the one `tree-sitter` that `ast-grep-core` uses.
+[dependencies]
+ast-grep-core = "=0.51.0"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tree-sitter = "=0.27.1"
+tree-sitter-css = "=0.25.0"
+tree-sitter-c-sharp = "=0.23.5"
+tree-sitter-go = "=0.25.0"
+tree-sitter-html = "=0.23.2"
+tree-sitter-java = "=0.23.5"
+tree-sitter-javascript = "=0.25.0"
+tree-sitter-kotlin-sg = "=0.4.1"
+tree-sitter-php = "=0.25.1"
+tree-sitter-python = "=0.25.0"
+tree-sitter-ruby = "=0.23.1"
+tree-sitter-rust = "=0.24.2"
+tree-sitter-typescript = "=0.23.2"
+# Template languages (rules/grammar-tiers.json records why each one was chosen).
+tree-sitter-astro-next = "=0.1.1"
+tree-sitter-embedded-template = "=0.25.0"
+tree-sitter-jinja = "=0.13.0"
+tree-sitter-svelte-next = "=0.1.1"
+tree-sitter-vue-next = "=0.1.0"
+# Vendored (not on crates.io; `cargo deny` bans git dependencies): vendor/*/VENDORED.md.
+tree-sitter-blade = { path = "vendor/tree-sitter-blade", version = "=0.12.0" }
+tree-sitter-twig = { path = "vendor/tree-sitter-twig", version = "=1.1.0" }

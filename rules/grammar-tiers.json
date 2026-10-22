@@ -1,0 +1,245 @@
+{
+  "formatVersion": 1,
+  "typescript": {
+    "grammar": "tree-sitter-typescript",
+    "version": "0.23.2",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-typescript",
+    "notes": "tree-sitter org grammar (LANGUAGE_TYPESCRIPT). crates.io 0.23.2 published 2024-11-11; repo last commit 2025-01-30 (licence file). Embedding: sample.ts parses with 0 ERROR/MISSING nodes through ast-grep-core 0.51.0 on tree-sitter 0.27.1."
+  },
+  "tsx": {
+    "grammar": "tree-sitter-typescript",
+    "version": "0.23.2",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-typescript",
+    "notes": "Same crate as typescript (LANGUAGE_TSX). JSX sink dangerouslySetInnerHTML found by ast-grep patterns (attribute and object prop). Embedding: sample.tsx parses with 0 ERROR nodes, sink on line 2."
+  },
+  "javascript": {
+    "grammar": "tree-sitter-javascript",
+    "version": "0.25.0",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-javascript",
+    "notes": "tree-sitter org grammar, includes JSX. crates.io 0.25.0 published 2025-09-01, the repo head is later. Embedding: sample.js parses with 0 ERROR nodes; the JSX sink detectors run on it."
+  },
+  "python": {
+    "grammar": "tree-sitter-python",
+    "version": "0.25.0",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-python",
+    "notes": "tree-sitter org grammar. crates.io 0.25.0 published 2025-09-11; repo last commit 2025-09-15. Patterns need the expando character (µ) because $ is not an identifier character."
+  },
+  "ruby": {
+    "grammar": "tree-sitter-ruby",
+    "version": "0.23.1",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-ruby",
+    "notes": "tree-sitter org grammar. crates.io 0.23.1 published 2024-11-11; repo last commit 2026-03-10 (scanner fix). Also used to parse the Ruby inside ERB directives."
+  },
+  "php": {
+    "grammar": "tree-sitter-php",
+    "version": "0.25.1",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-php",
+    "notes": "tree-sitter org grammar (LANGUAGE_PHP, PHP with HTML). crates.io 0.25.1 published 2026-10-06; repo head 2026-10-06. A bare ast-grep pattern does not parse in PHP (text outside <?php is HTML), so PHP rules match by node kind (function_definition etc.). Embedding: sample.php parses with 0 ERROR nodes."
+  },
+  "go": {
+    "grammar": "tree-sitter-go",
+    "version": "0.25.0",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-go",
+    "notes": "tree-sitter org grammar. crates.io 0.25.0 published 2025-08-29."
+  },
+  "java": {
+    "grammar": "tree-sitter-java",
+    "version": "0.23.5",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-java",
+    "notes": "tree-sitter org grammar. crates.io 0.23.5 published 2024-12-21; repo last commit 2025-01-30."
+  },
+  "kotlin": {
+    "grammar": "tree-sitter-kotlin-sg",
+    "version": "0.4.1",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/ast-grep/tree-sitter-kotlin",
+    "notes": "ast-grep team's maintained fork of fwcd/tree-sitter-kotlin, the grammar ast-grep itself ships. crates.io 0.4.1 published 2026-05-09; repo last commit 2026-05-09. tree-sitter-kotlin-ng 1.1.0 (tree-sitter-grammars, last published 2025-01-09) exists; not used so rule node names match ast-grep's Kotlin."
+  },
+  "csharp": {
+    "grammar": "tree-sitter-c-sharp",
+    "version": "0.23.5",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-c-sharp",
+    "notes": "tree-sitter org grammar. crates.io 0.23.5 published 2026-04-14; repo last commit 2026-06-02 (C# 14 support)."
+  },
+  "rust": {
+    "grammar": "tree-sitter-rust",
+    "version": "0.24.2",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-rust",
+    "notes": "tree-sitter org grammar. crates.io 0.24.2 published 2026-03-27."
+  },
+  "html": {
+    "grammar": "tree-sitter-html",
+    "version": "0.23.2",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-html",
+    "notes": "tree-sitter org grammar. crates.io 0.23.2 published 2024-11-11; repo last commit 2025-01-30. Stable grammar: HTML itself does not change."
+  },
+  "css": {
+    "grammar": "tree-sitter-css",
+    "version": "0.25.0",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-css",
+    "notes": "tree-sitter org grammar. crates.io 0.25.0 published 2025-09-28."
+  },
+  "vue": {
+    "grammar": "tree-sitter-vue-next",
+    "version": "0.1.0",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/jamie8johnson/tree-sitter-vue",
+    "regexSinks": [
+      {
+        "pattern": "\\bv-html\\b",
+        "precision": 0.9
+      }
+    ],
+    "notes": "Regenerated fork of the 2022 xiaoxin-sky/tree-sitter-vue lineage (repo commits 2026-01-24: ABI 15, scanner UB and CRLF fixes; 2026-03-07: crate rename). crates.io 0.1.0 published 2026-03-07. MAINTENANCE RISK: single maintainer, 0 stars, 0 issues; it meets the criteria (commit within 24 months, not archived, builds and parses on tree-sitter 0.27) but the bus factor is one. Candidates were built one at a time (several grammar crates export the same C symbol, so linking two silently gives one grammar) and each parsed sample.vue and a stress file (v-for, v-model, #slot, v-if/v-else, script setup, scoped scss) with 0 ERROR nodes: tree-sitter-vue-next 0.1.0 (67 node kinds, ABI 15, chosen); arborium-vue 2.18.2 (MIT, bearcove/arborium bundle, 67 kinds, ABI 15, pulls arborium-html; the fallback if vue-next is abandoned); tree-sitter-vue-updated 0.1.0 (c-gamble fork of the 2022 grammar, 79 kinds, ABI 14: different kinds, detectors would need rechecking). Rejected: tree-sitter-vue 0.0.3 and tree-sitter-vue3 0.0.4 (2022, tree-sitter 0.20 API): linking them next to tree-sitter 0.27 fails (MSVC LNK2005 duplicate ts_* symbols; vue3 also LNK2019 unresolved tree_sitter_vue3). Embedding: v-html is a directive_attribute whose directive_name is v-html (sample line 3; stress lines 8 and 9); the word v-html in a comment or prose is ignored by the grammar. regexSinks are the fallback; they also match that comment and prose, hence the declared precision below 1 (declared, not measured on a corpus)."
+  },
+  "svelte": {
+    "grammar": "tree-sitter-svelte-next",
+    "version": "0.1.1",
+    "licence": "MIT OR Apache-2.0",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/PRRPCHT/tree-sitter-svelte-next",
+    "regexSinks": [
+      {
+        "pattern": "\\{@html\\b",
+        "precision": 0.95
+      }
+    ],
+    "notes": "Svelte 5 aware grammar. crates.io 0.1.1 published 2026-02-11; repo last commit 2026-02-11. MAINTENANCE RISK: single maintainer, 0 stars, a few days of history. Candidates built one at a time; each parsed sample.svelte, a stress file and a Svelte 5 file ($props/$state/$derived runes, {#snippet}, {@render}, {#key}) with 0 ERROR nodes: tree-sitter-svelte-next 0.1.1 (118 node kinds, ABI 14, chosen); tree-sitter-svelte-ng 1.0.2 (tree-sitter-grammars/tree-sitter-svelte, MIT, published 2024-09-08, default branch last commit 2024-10-19, i.e. 24 months idle; 118 kinds, ABI 14); arborium-svelte 2.18.2 (MIT, 118 kinds, ABI 15). Same kind count in all three, so swapping is cheap. Rejected: tree-sitter-svelte 0.10.2 (Himujjal, 2022, tree-sitter 0.20 API): linking it next to tree-sitter 0.27 fails (MSVC LNK2005). Embedding: {@html expr} is an html_tag node (sample line 6; stress lines 20 and 21; Svelte 5 file line 18). The word in a comment is ignored by the grammar but matched by regexSinks (declared precision, not measured on a corpus)."
+  },
+  "astro": {
+    "grammar": "tree-sitter-astro-next",
+    "version": "0.1.1",
+    "licence": "MIT OR Apache-2.0",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/PRRPCHT/tree-sitter-astro-next",
+    "regexSinks": [
+      {
+        "pattern": "\\bset:html\\b",
+        "precision": 0.9
+      }
+    ],
+    "notes": "Fork of virchau13/tree-sitter-astro (MIT, last commit 2025-04-23; the name tree-sitter-astro returns 404 on crates.io) rebuilt for current tree-sitter. crates.io 0.1.1 published 2026-02-14; repo last commit 2026-02-13. MAINTENANCE RISK: the only Astro grammar on crates.io; single maintainer, 0 stars, three commits. ABI 14, 58 node kinds (tree-sitter 0.27 reads ABI 13 to 15). Embedding: sample.astro and a stress file (frontmatter, components with client:load, set:html on Fragment and div, set:text, JSX map, style and script blocks) parse with 0 ERROR nodes; set:html is an attribute whose attribute_name is set:html (sample line 5; stress lines 11 and 12). Frontmatter and expressions are opaque text nodes: oxc analyses them (02 § 4). regexSinks precision is declared, not measured on a corpus."
+  },
+  "embedded-template": {
+    "grammar": "tree-sitter-embedded-template",
+    "version": "0.25.0",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/tree-sitter/tree-sitter-embedded-template",
+    "regexSinks": [
+      {
+        "pattern": "<%\\|?==|<%[=-][^%]*?\\braw\\s*\\(|\\.html_safe\\b",
+        "precision": 0.8
+      }
+    ],
+    "notes": "tree-sitter org grammar for ERB, EJS and ETA. crates.io 0.25.0 published 2025-08-29; repo last commit 2025-08-31. Embedding: sample.html.erb and a stress file (comments, trim markers, blocks, <%==, raw(), .html_safe, sanitize) parse with 0 ERROR nodes. Directives are opaque code nodes: the raw( ) and .html_safe sinks are found by parsing all code nodes as one Ruby document (everything else blanked, so line numbers stay) with ast-grep patterns. The grammar cannot tell EJS <%- (raw output) from ERB <%- (whitespace trim): both are output_directive, so <%- is a sink only when the file name ends .ejs, which regexSinks cannot know (EJS <%- is not in the regex). <%== is Erubi raw output (sample line 2)."
+  },
+  "twig": {
+    "grammar": "gbprod/tree-sitter-twig (vendored)",
+    "version": "1.1.0+2208d2a3c3ee7ef378e97df2e51c18feb7ee9dfc",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/gbprod/tree-sitter-twig",
+    "regexSinks": [
+      {
+        "pattern": "\\|\\s*raw\\b|\\{%-?\\s*autoescape\\s+false\\b",
+        "precision": 0.9
+      }
+    ],
+    "notes": "Not on crates.io (tree-sitter-twig returns 404) and cargo deny bans git dependencies, so the generated parser is vendored verbatim in crates/sg-analysis/vendor/tree-sitter-twig (VENDORED.md has the commit and sha256). Active: head commit 2026-08-31 (a Twig string-lexing fix merged from fabpot, Twig's author), release v1.1.0 2026-08-06, 44 stars. LICENCE NOTE: the author relicensed from WTFPL to MIT on 2026-08-25 (commit b67fafe842); the vendored commit is after that. 153 node kinds, ABI 15. Parses the sample and a stress file (extends, import, for/else, filters with arrow functions, ternary, tests, set with hash and array, elseif, ~, include with hash, autoescape) with 0 ERROR nodes. |raw is a filter node whose filter_identifier is raw (sample line 2; stress lines 14 and 15), {% autoescape false %} a tag_statement (stress line 16). Tried (built alone): tree-sitter-jinja-dialects 0.1.1 (MIT) parses the sample but leaves 1 ERROR node on the stress file; tree-sitter-shopware-twig 0.2.3 (Shopware dialect) leaves 9 ERROR nodes on the sample and 52 on the stress file; kaermorchen/tree-sitter-twig is MPL-2.0 per the GitHub API (not permissive, not built). Revert path if vendoring is refused: set maintained false; regexSinks take over and the cap falls to structural."
+  },
+  "blade": {
+    "grammar": "EmranMR/tree-sitter-blade (vendored)",
+    "version": "0.12.0+b5291d1ba207a8ebb8383b2ecb8a8a6535210a50",
+    "licence": "MIT",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/EmranMR/tree-sitter-blade",
+    "regexSinks": [
+      {
+        "pattern": "\\{!!",
+        "precision": 0.9
+      }
+    ],
+    "notes": "Not on crates.io (no tree-sitter-blade* crate found) and cargo deny bans git dependencies, so the generated parser (23 MB parser.c, because it embeds HTML) and scanner are vendored verbatim in crates/sg-analysis/vendor/tree-sitter-blade (VENDORED.md has the commit and sha256). Active: head commit 2026-08-31, 264 stars, release v0.12.3 2025-08-25. 279 node kinds, ABI 15. Parses the sample and a stress file (@extends, @section, @foreach/@empty, @include with array, @if/@elseif, {!! !!}, x-components, @php blocks, comments) with 0 ERROR nodes. {{ }} and {!! !!} are both php_statement nodes; the sink is the one whose text starts {!! (sample line 2; stress lines 15 and 20). Cost: a larger repository and a slower first build. Revert path if the size is refused: set maintained false; regexSinks take over and the cap falls to structural."
+  },
+  "jinja2": {
+    "grammar": "tree-sitter-jinja",
+    "version": "0.13.0",
+    "licence": "Apache-2.0",
+    "maintained": true,
+    "tierCap": "full",
+    "embedding": "pass",
+    "repository": "https://github.com/cathaysia/tree-sitter-jinja",
+    "regexSinks": [
+      {
+        "pattern": "\\|\\s*safe\\b|\\{%-?\\s*autoescape\\s+false\\b",
+        "precision": 0.9
+      }
+    ],
+    "notes": "crates.io 0.13.0 published 2026-07-02, release-please releases (0.12.0 2026-03-28, 0.12.1 2026-05-27, 0.13.0 2026-07-02), 15 stars, no open issues. The crates.io package has no LICENSE file; the repository's licence is Apache-2.0 and Cargo.toml says Apache-2.0. 235 node kinds, ABI 15. Candidates built one at a time (tree-sitter-jinja and tree-sitter-jinja-dialects export the same C symbol); all parse sample.html.j2 and a stress file (extends, from-import, for/if/else, ternary, tests, set with dict, elif, macro, filter chains, autoescape) with 0 ERROR nodes except as noted: tree-sitter-jinja 0.13.0 (chosen); tree-sitter-jinja2 0.0.16 (uros-5, 73 kinds; no LICENSE file anywhere: the crate says MIT, the repository has none, so the licence cannot be verified; flat tree); arborium-jinja2 2.18.2 (Apache-2.0, 71 kinds); tree-sitter-jinja-dialects 0.1.1 (MIT, 175 kinds, typed filter_expression nodes, but 1 ERROR node when it parses the Twig stress file). In this grammar a filter application is a binary_expression whose binary_operator is | (children: value, operator, name), so |safe is such an expression whose right operand is exactly safe (sample line 2; stress lines 15 and 16); {% autoescape false %} is an autoescape_statement holding a boolean_literal (sample line 3; stress line 17)."
+  }
+}

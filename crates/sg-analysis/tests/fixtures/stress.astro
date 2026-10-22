@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+const { body, title = 'x', items = [] } = Astro.props;
+const html = await fetch('/x').then((r) => r.text());
+---
+<Layout title={title}>
+  <h1 class="big">{title}</h1>
+  <ul>{items.map((i) => <li>{i}</li>)}</ul>
+  <Card client:load name="a" />
+  <Fragment set:html={body} />
+  <div set:html={html} class="y"></div>
+  <p set:text={title}></p>
+  {title && <span>yes</span>}
+</Layout>
+<style>
+  h1 { color: red; }
+</style>
+<script>
+  console.log('hi');
+</script>
