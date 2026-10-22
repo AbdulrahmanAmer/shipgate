@@ -1,18 +1,27 @@
 # shipgate — System Specification (index)
 
 ```yaml
-spec_version: 7.8.0
+spec_version: 8.0.0
 status: source of truth for the tool build
 working_name: shipgate        # rename freely; nothing depends on the name
 date: 2026-10-22
-history: v3 (Gemini draft) → v4.x (merged reviews: Claude, GPT, DeepSeek, Grok) → v5 (single-file SEO spec) → v6 (any product, any stack; core + adapters + packs) → v7 (independent gap audit resolved: formats, algorithms, integrations, new packs) → v7.1 (verification audit resolved: verdict engine, enforcement chain, remote mode, missing schemas, decidability; answer-engines pack) → v7.2 (multi-engine search-engines pack, programmatic AI-text/rollout/crawl rules, readiness audit resolved; BUILD_MAP and orchestrator prompt added) → v7.3 (final readiness audits: GO; two-step verdict so narrow runs can't hide FAIL; reduced mode only via signed policy; handoff conditions; per-part severities in keys; section-aware skeleton identity; CI detection; operational-only precedence; test-keys signing; full WP ownership) → v7.4 (outcome coverage audits: launch and re-platforming checks, placeholder/business-fact oracles, ux pack, local and ecommerce search, trust pages, AI agents, OWASP 2025 probes, supply chain, Consent Mode v2 / CCPA 2026 / EAA / AI Act, WCAG 2.2 gaps, verifier-evasion detection, new-project lifecycle, host-calibrated budgets) → v7.5 (round-06 concreteness audit: 404 findings fixed; ownership ledger, spec-lint, completeness contract) → v7.6 (round-07: 436 findings fixed, done-gate hardened) → v7.7 (round-08: 387 findings fixed; gate produces its own evidence) → v7.8 (round-09 single-writer consistency pass; Stage 0 closed by the Operator, build starts)
+history: v3 (Gemini draft) → v4.x (merged reviews: Claude, GPT, DeepSeek, Grok) → v5 (single-file SEO spec) → v6 (any product, any stack; core + adapters + packs) → v7 (independent gap audit resolved: formats, algorithms, integrations, new packs) → v7.1 (verification audit resolved: verdict engine, enforcement chain, remote mode, missing schemas, decidability; answer-engines pack) → v7.2 (multi-engine search-engines pack, programmatic AI-text/rollout/crawl rules, readiness audit resolved; BUILD_MAP and orchestrator prompt added) → v7.3 (final readiness audits: GO; two-step verdict so narrow runs can't hide FAIL; reduced mode only via signed policy; handoff conditions; per-part severities in keys; section-aware skeleton identity; CI detection; operational-only precedence; test-keys signing; full WP ownership) → v7.4 (outcome coverage audits: launch and re-platforming checks, placeholder/business-fact oracles, ux pack, local and ecommerce search, trust pages, AI agents, OWASP 2025 probes, supply chain, Consent Mode v2 / CCPA 2026 / EAA / AI Act, WCAG 2.2 gaps, verifier-evasion detection, new-project lifecycle, host-calibrated budgets) → v7.5 (round-06 concreteness audit: 404 findings fixed; ownership ledger, spec-lint, completeness contract) → v7.6 (round-07: 436 findings fixed, done-gate hardened) → v7.7 (round-08: 387 findings fixed; gate produces its own evidence) → v7.8 (round-09 single-writer consistency pass; Stage 0 closed by the Operator, build starts) → v8.0 (scope correction by the Operator: from a pass/fail verifier to the whole growth pipeline — intake, research, plan, gate, measure, iterate — with seven entry modes; targeting and measure packs; growth connectors)
 ```
 
 ## What shipgate is
 
-A verifier between AI coding agents (Claude Code, Codex, Cursor, OpenCode, Antigravity, custom loops) and production, for **anything reachable in a browser**: marketing sites, programmatic SEO sites, SaaS apps, APIs, multi-service platforms, plain HTML sites and hosted-builder sites, on any stack.
+The system that gets a site found, ranked, chosen and cited, for **anything reachable in a browser** (marketing sites, programmatic SEO sites, SaaS apps, APIs, multi-service platforms, plain HTML sites and hosted-builder sites, on any stack), built by AI coding agents (Claude Code, Codex, Cursor, OpenCode, Antigravity, custom loops).
 
-It **briefs** agents automatically with only the rules that apply, **checks** every edit through hooks, **gates** completion with a verdict it computes itself, and **locks behaviour** before refactors to prove nothing broke. Agents write the code; the Operator signs the policy; shipgate owns the verdict. It runs on the device alone: no Docker, no global installs.
+It works the way an enterprise agency does, as one pipeline (06):
+1. **Intake:** the business, its markets, offerings and goals.
+2. **Research:** what people actually search, with what intent, who ranks and why, the content and link gaps, adjacent demand, and who the AI engines cite.
+3. **Plan:** a site architecture and a brief per page drawn from that demand, priorities, and an off-site plan.
+4. **Build:** agents build, **briefed** automatically with the page's brief and only the rules that apply, with every edit **checked** through hooks.
+5. **Gate:** completion is gated with a verdict shipgate computes itself, on technical quality and against the approved plan; behaviour is **locked** before refactors to prove nothing broke.
+6. **Measure:** rankings, clicks, index status, AI citations, field speed and conversions in production.
+7. **Iterate:** results turn into the next plan.
+
+It starts from wherever the site is: an existing repo, a live URL with no code, a refactor, a site built from scratch, a comparison of two sites, research only or measurement only. Agents write the code and draft the judgement parts of plans; the Operator signs the policy, the targets and the plan; shipgate computes every number and owns the verdict. The gate runs on the device alone (no Docker, no global installs); research and measure use the data providers the Operator connects.
 
 This spec is for the tool and the people/agents building it. **Agents using shipgate never read it.**
 
@@ -24,7 +33,10 @@ This spec is for the tool and the people/agents building it. **Agents using ship
 | `spec/02-adapters.md` | Coverage tiers, composition, engines (ast-grep-core + oxc), built-in adapters and traps, local databases, adding stacks | stack support, source rules |
 | `spec/03-formats.md` | Grammars (URL patterns, globs, tokens, command policy), policy schema + defaults, auth/test accounts, rule metadata, adapter manifest, lock, debt, flows, refactor, baselines, inventory, report/SARIF, agent-side files | any reader/writer |
 | `spec/04-algorithms.md` | Verdict, origin mapping, host emulation, processes/databases/platform services, diff base, browser driver matrix, brief, check/stop budgets, grouping & hashing, crawl & sampling, programmatic algorithms, parity/soft-404/leaks, static-analysis precision, false-positive governance, caching | engine subsystems |
-| `spec/05-integrations.md` | CLI surface, `init`, agent-host hook matrix, MCP mode, CI, versioning, releases, licensing, telemetry | CLI, installers, release |
+| `spec/05-integrations.md` | CLI surface, `init`, agent-host hook matrix, MCP mode, CI, versioning, releases, licensing, telemetry, growth connectors | CLI, installers, release, connectors |
+| `spec/06-growth.md` | Stage model, entry modes and stage sequences, intake, research, plan, build briefs, measure, diagnosis, growth algorithms | intake, research, plan, measure, diagnosis |
+| `spec/packs/targeting.md` | The site against its approved targets and plan: planned pages exist, no cannibalisation, query placement, terms, outline, links, schema, depth, proof, intent fit | sites with signed targets |
+| `spec/packs/measure.md` | Post-launch signals (W only, never a verdict): index status, ranking, unplanned demand, CTR, AI visibility, field speed, authority, conversions, local consistency | production sites |
 | `spec/packs/web-delivery.md` | Full SEO: rendering, status, URLs, metadata, structured data, links, sitemaps, robots & AI crawlers, i18n, mobile parity, content quality, keyword targeting | public surfaces |
 | `spec/packs/search-engines.md` | Engine-specific: Google features (Discover, News, Images, Video, Merchant, Jobs, paywall, site names), spam-policy compliance, faceted navigation, robots.txt robustness, Bing/Copilot, Yandex, Naver, Baidu, Seznam, Apple; ruleset-maintained feature tables | public surfaces |
 | `spec/packs/answer-engines.md` | AEO/GEO: snippet controls, entity identity, authors, answer-ready structure, citations, freshness, IndexNow, crawler reach at the edge, text-first content | public surfaces |
@@ -41,7 +53,7 @@ This spec is for the tool and the people/agents building it. **Agents using ship
 | `spec/packs/refactor.md` | Behaviour + visual baselines, allowed changes, re-platforming from a live site (remote baselines, legacy URLs) | refactors, migrations, site rebuilds |
 | `spec/packs/ux.md` | Real-use basics: every form proven to deliver, business facts oracle, contact links, error pages, dead controls, cross-browser smoke, visual collateral damage, analytics/conversion firing | public and app surfaces |
 
-Rule prefixes — core: `CFG AGT BLD` (tool requirements `TR`) · web-delivery: `WCF RTE URL MET SCH LNK IDX I18 CQ KW TRS` · search-engines: `SE LOC` · answer-engines: `AEO` · programmatic: `PCF DAT TPL CNT PLK ROL CRW` (+ `KW-003`) · `PRF` · `A11` · `SEC` · `PRV` · `ARC` · `API DB JOB` · `RES` · `OPS` · `TST` · `REF` · ux: `UX` · adapter traps `<ADAPTER>-NNN`.
+Rule prefixes — core: `CFG AGT BLD` (tool requirements `TR`) · web-delivery: `WCF RTE URL MET SCH LNK IDX I18 CQ KW TRS` · search-engines: `SE LOC` · answer-engines: `AEO` · programmatic: `PCF DAT TPL CNT PLK ROL CRW` (+ `KW-003`) · `PRF` · `A11` · `SEC` · `PRV` · `ARC` · `API DB JOB` · `RES` · `OPS` · `TST` · `REF` · ux: `UX` · targeting: `TGT` · measure: `MSR` · growth tool requirements `TR-2xx` (06) · adapter traps `<ADAPTER>-NNN`.
 
 ## Architecture decision (tool)
 
@@ -58,12 +70,14 @@ Settled; re-open only with the Operator.
 
 | Decision | Chosen | Rejected (why) |
 |---|---|---|
-| Form | Verifier tool; spec is its source; agents get rule slices | Big Markdown prompt/skill |
-| Scope | Any browser-reachable product, any stack; core + adapters + 15 packs (incl. search-engines, answer-engines and ux); new projects from scratch, live projects, re-platforming and launch | SEO-only; existing-projects-only |
+| Form | Growth pipeline with a verifier at its core (v8.0, Operator): intake → research → plan → build → gate → measure → iterate; spec is its source; agents get stage and rule slices | A pass/fail verifier only (v7: left research, strategy and measurement out by definition, so a technically perfect site still didn't rank); big Markdown prompt/skill |
+| Entry points | Seven modes over one pipeline: audit a repo, audit a live URL, refactor, new site, compare, research, measure (06 § 2) | Codebase-only entry |
+| External data | Gate offline and deterministic; research and measure online through Operator-connected providers (keychain credentials, cached, budgeted); every number sourced and dated; a missing provider is BLOCKED, never guessed (06 G1–G5) | Calling providers inside `verify` (non-deterministic verdicts); model-estimated numbers |
+| Scope | Any browser-reachable product, any stack; core + growth stages (06) + adapters + 17 packs (incl. search-engines, answer-engines, ux, targeting and measure); new projects from scratch, live projects, re-platforming and launch | SEO-only; existing-projects-only |
 | Search engine coverage | Shared fundamentals (web-delivery) + engine-specific pack for Google, Bing/Copilot (and DuckDuckGo/Yahoo via Bing), Yandex, Naver, Baidu, Seznam, Apple; Google feature requirements in ruleset-maintained tables refreshed every release from the engines' docs | Google-only rules; hard-coded feature requirements that go stale |
 | Build scope | Full system, built by agents in dependency order from a build map | Narrow v1 slice |
 | Stack support | Behaviour checks everywhere; source depth by earned tier; `minCoverage` per service | Pretending equal depth everywhere |
-| Role | Brief (auto-injected) + check + gate + refactor baselines | Gate-only; tool-generated code |
+| Role | Intake + research + plan + brief (auto-injected) + check + gate + refactor baselines + measure + iterate (v8.0) | Gate-only (v7; the reason a passing site still didn't rank); tool-generated code |
 | Oracle | Policy + data, contracts, Operator flows, signed baselines | Tests calling the app's own code |
 | Acceptance criteria | Operator-signed; agents draft proposals only | Agent-defined contracts |
 | Spec layout | Index + core + formats + algorithms + integrations + one file per pack | Single huge file |
@@ -107,7 +121,7 @@ Settled; re-open only with the Operator.
 | Language | Rust core + managed Node for Playwright/Lighthouse | Pure TypeScript; Go; Python |
 | Licence | Closed/commercial; offline signed licence; licence-free deploy-pipeline commands | Online activation |
 | Telemetry | None; opt-in crash reports | Usage stats on by default |
-| Production monitoring | Separate later product | In scope now |
+| Production monitoring | In scope as `measure` (v8.0): read-only, W findings, never part of a verdict, feeds `iterate` | A separate later product (v7; reversed by the Operator) |
 
 ## Gap audit (v6 → v7)
 
@@ -159,7 +173,7 @@ Still open as engineering tasks for the build (not Operator decisions):
 
 ## Expectations
 
-shipgate removes every site-side reason a page can't rank or a product can't be trusted. It covers broken rendering, wrong status codes, duplicate or thin pages, bad canonicals, crawler blocks, slow pages, inaccessible UI, security and privacy holes, fragile dependencies, and invented content. Ranking first also depends on content quality against competitors, backlinks and brand demand, which no build tool controls. The `targets` map (web-delivery KW-*) keeps keyword-to-page assignments clean, but it doesn't measure competition. The same holds for answer engines: the answer-engines pack makes pages reachable, attributable and citable, but being cited depends on authority and competition. Measuring rankings and AI citations belongs to the later monitoring product, which together with shipgate forms the full enterprise setup.
+shipgate removes every site-side reason a page can't rank or a product can't be trusted: broken rendering, wrong status codes, duplicate or thin pages, bad canonicals, crawler blocks, slow pages, inaccessible UI, security and privacy holes, fragile dependencies and invented content. Since v8.0 it also decides what the site should win and checks that it competes: research finds the demand, the competitors and the gaps; the plan turns them into pages and briefs; the targeting pack gates the site against that plan (pages exist, match intent, cover what the winning pages cover, link as planned); measure shows what actually happened in search results and AI answers, and iterate turns it into the next plan. What no tool can promise is the outcome itself: rankings and citations also depend on authority and on what competitors do next. shipgate plans for them, measures them and says what to do about them; it never claims them.
 
 A readiness audit of v7.1 + the search-engines pack + the build map (354 rule IDs, 0 duplicates, 0 dangling references) returned NO-GO on 8 items plus Majors; v7.2 resolves them:
 - **Verdict:** build failures can't yield BLOCKED; reduced mode must be declared; subset and adopt runs never seal a PASS; the loop guard records `unverified-stop`.

@@ -10,6 +10,7 @@ export const SPEC_FILES = [
   "spec/03-formats.md",
   "spec/04-algorithms.md",
   "spec/05-integrations.md",
+  "spec/06-growth.md",
 ];
 
 export function packFiles(root) {

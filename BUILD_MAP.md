@@ -6,7 +6,7 @@
 
 ## 1. Outcome
 
-A signed, closed-source, single-binary tool (`shipgate`) for Windows, macOS and Linux that implements the full spec (`SPEC.md` v7.8+): core engine, all 15 packs, adapters, agent-host hooks, MCP mode, licensing and release pipeline. It must be proven on its own conformance corpus and dogfooded on real projects.
+A signed, closed-source, single-binary tool (`shipgate`) for Windows, macOS and Linux that implements the full spec (`SPEC.md` v8.0+): core engine, the growth pipeline (intake, research, plan, measure, iterate), all 17 packs, adapters, agent-host hooks, MCP mode, licensing and release pipeline. It must be proven on its own conformance corpus and dogfooded on real projects.
 
 ## 2. Development environment (Windows-first, no Docker)
 
@@ -39,6 +39,7 @@ A signed, closed-source, single-binary tool (`shipgate`) for Windows, macOS and 
     sg-http          HTTP probes, crawler, sampling, route groups, site graph
     sg-html          html5ever DOM, raw-HTML checks, leak scan, soft-404, parse-back, skeleton hashing
     sg-content       MinHash/LSH similarity, duplicates, claims
+    sg-growth        growth stages: intake, research, plan, measure, diagnosis; connectors, provider cache, state
     sg-programmatic  dataset validation, quarantine, eligibility, inventory, oracle, ICU4X formatting,
                      relations, AI-text grounding, rollout
     sg-codegen       generated helpers per language: URL module, safeJsonLd, env module, inventory reader, row types
@@ -112,6 +113,7 @@ Agents tend to report a work package done when the parts they found hard are mis
 | WP-102 | Toolchain sourcing: portable PostgreSQL (versions, extensions per OS), MySQL portable builds, PostgREST and Supabase Auth builds per OS, Playwright + browser pins, Lighthouse, axe-core, web-vitals, OSV-Scanner + offline DB; Hunspell dictionaries per locale (CQ-007); `lingua` language models pinned for I18-007; libphonenumber metadata; PDF parser crate (A11-026); webpki root store (SEC-056); registry publish-time snapshot sources (SEC-053); offline WordPress vulnerability feed with licence check (Wordfence free feed needs attribution, WPScan is commercial; SEC-073); Hunspell, GeoNames and web-features licences; licences and checksums → draft toolchain manifest (03 § 19) | WP-000 |
 | WP-103 | Grammar maturity (02 § 4): tree-sitter grammars for vue, svelte, astro, embedded-template, twig, blade, jinja2 + ast-grep-core embedding test; record tier caps in ruleset `grammar-tiers.json` | WP-000 |
 | WP-104 | **Ruleset data**: feature tables (`rules/features/google.json`, `bing.json`, `naver.json`) from current docs; soft-404 phrase lists for 20 locales; generic anchor-text lists; clickbait patterns (SE-103); China-blocked host list (SE-501); stop words, verb lists and a pinned Snowball stemmer per locale (KW-002/003, SE-121); Search Console "indexed" state labels per locale (ROL-003); provider secret-key patterns (SEC-050); live-key prefixes (CFG-004); bool labels per locale; plus the coverage-audit data listed below the table | WP-000 |
+| WP-105 | **Growth ruleset data** (06): `intent-modifiers.json` (per D-010 locale: `local`, `transactional` and `commercial` modifier lists), `directory-domains.json` (directories, marketplaces, forums and social hosts, with the market each applies to), `citation-sources.json` (business directories per country of the gazetteer countries), `ctr-curve.json` (expected organic CTR by position 1–20 from a published, dated study, with its licence); each with its `rules/provenance.json` entry | WP-000 |
 
 **WP-104 coverage-audit ruleset data:**
 - **Crawlers and agents:** `ai-agents.json` (token, vendor, category, userAgent); `content-signals.json`; `social-agents.json`.
@@ -231,6 +233,19 @@ Agents tend to report a work package done when the parts they found hard are mis
 | WP-804 | MCP server (`rmcp`) with async verify jobs | WP-308 |
 | WP-805 | `break-glass`, `waiver add`, `override add`, `approve pages`, `conformance --adapter`, `migrate` | WP-205, WP-206, WP-209 |
 
+### Phase 8b — Growth: intake, research, plan, targeting, measure (06)
+| WP | Goal | Depends |
+|---|---|---|
+| WP-821 | `sg-growth` core: stage model and `state.json` (03 § 25), `start <mode>` stage sequences and stage-scoped briefs (06 § 2), sourced values, provider cache and `--budget` (03 § 20.1–20.2), the `growth` policy section (03 § 20.3) | WP-202, WP-203, WP-208 |
+| WP-822 | Growth connectors (05 § 10): keychain credentials, `sources add\|remove\|doctor` (TR-210); clients for ahrefs, dataforseo, semrush, google-search-console, bing-webmaster, crux, ga4, openai, perplexity, gemini with rate limits, retries and the cache; a recorded-response test double for every client, so no test calls a provider | WP-821, WP-204 |
+| WP-823 | Intake (TR-201, TR-202): business facts from the live site (remote read), one-batch questions, seeds | WP-821, WP-407, WP-105 |
+| WP-824 | Research demand: expansion, intent, SERP capture, clusters (TR-211..214; 06 §§ 9.1–9.3) | WP-822, WP-823 |
+| WP-825 | Research competition: competitors, winning-page profiles and terms, adjacent demand, authority and local citations (TR-215..218; 06 § 9.5) | WP-824, WP-408 |
+| WP-826 | AI-answer sampling (TR-219, 06 § 9.6); the research run files and the targets proposal (TR-220, 03 § 21) | WP-825 |
+| WP-827 | Plan: site plan, briefs and `plan --check`, programmatic candidates, off-site plan, priorities, `approve targets\|plan` signing (TR-230..235; 06 §§ 9.4, 9.7; 03 § 22) | WP-826, WP-205, WP-502 |
+| WP-828 | Targeting pack TGT-001..012 (channel `targets`, G5); the signed targets feeding the web-delivery `targets` map and answer-engines `questions`; page briefs in `brief` (TR-240) | WP-827, WP-410, WP-412, WP-501, WP-307 |
+| WP-829 | Measure: collection, diff and significance, measure pack MSR-001..010 (TR-250..252; 06 § 9.8; 03 § 23); a CI cron template for `measure` | WP-827, WP-822 |
+| WP-830 | Diagnosis and compare (TR-260, TR-261; 03 § 24); MCP tools `start` and `growth_status`, resource `diagnosis://latest` | WP-828, WP-829, WP-804 |
 ### Phase 9 — Adapter breadth and corpus
 | WP | Goal | Depends |
 |---|---|---|
@@ -260,6 +275,15 @@ Rule IDs are owned in `trace/ownership.tsv`. The sections below define behaviour
 | Section | WP |
 |---|---|
 | 01 § 1 Principles, 01 § 2 Scope, 01 § 2.1 Surfaces, 01 § 3 Vocabulary | every WP card (preamble) |
+| 06 § 1 Stage model, 06 § 2 Entry modes and their stage sequences | WP-821 |
+| 06 § 3 Intake | WP-823 |
+| 06 § 4 Research, 06 § 9.1 Clusters, 06 § 9.2 Intent, 06 § 9.3 Page type | WP-824; competition parts WP-825, AI answers WP-826 |
+| 06 § 9.5 Terms | WP-825 |
+| 06 § 9.6 AI-answer protocol | WP-826 |
+| 06 § 5 Plan, 06 § 9 Algorithms, 06 § 9.4 Value, impact, effort, 06 § 9.7 Page–cluster match | WP-827 |
+| 06 § 6 Build | WP-828 |
+| 06 § 7 Measure, 06 § 9.8 Significance | WP-829 |
+| 06 § 8 Diagnosis | WP-830 |
 | 01 § 5.1 Precedence, 01 § 5.2 Ownership | WP-206 (`owns` metadata), WP-207 (precedence in the verdict) |
 | 01 § 5.3 Signed lock, 01 § 5.4 Waivers and overrides, 01 § 5.5 Debt | WP-205; commands in WP-805, WP-802 |
 | 01 § 6 Policy and environment, 01 § 6.1 Tool requirements | WP-203; TR-00x rows in `trace/ownership.tsv` |
@@ -288,6 +312,7 @@ These WPs build machinery or deliverables that no rule ID or section carries. Ea
 |---|---|---|
 | WP-000 | `wp_000__workspace_builds_and_lints`, `wp_000__ci_runs_trace_gates` | workspace builds; fmt/clippy/deny clean; CI runs the § 4.1 pipeline |
 | WP-103 | `wp_103__grammar_tiers_recorded` | `rules/grammar-tiers.json` lists every grammar with its tier cap and the embedding test result |
+| WP-105 | `wp_105__growth_ruleset_files_exist_and_parse` | the four WP-105 files exist under `rules/`, parse, cover every D-010 locale where per-locale, and have provenance entries |
 | WP-104 | `wp_104__named_ruleset_files_exist_and_parse`, `wp_104__feature_tables_have_source_dates` | every file named in WP-104 exists under `rules/` and parses in the shape the citing rule defines; `rules/provenance.json` (`{ "<path under rules/>": { source: [URL], retrieved: YYYY-MM-DD, licence: SPDX id or "LicenseRef-<name>", attribution?: string } }`) has an entry for each of them (locale-keyed files can't carry extra keys, 03 § 1); every feature-table row has `docUrl` and `checkedOn` (search-engines § 4) |
 | WP-901 | `wp_901__adapter_conformance` | `shipgate conformance --adapter next-pages` passes on ≥ 3 corpus projects |
 | WP-902 | `wp_902__adapter_conformance` | `shipgate conformance --adapter vite-spa` passes on ≥ 3 corpus projects |

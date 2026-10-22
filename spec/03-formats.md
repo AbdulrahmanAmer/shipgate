@@ -135,6 +135,9 @@ Pack sections are shown in each pack file as examples. **Convention:** every val
 | testing | — | — |
 | refactor | — | — |
 | ux | — | `contactPath`, `socialProofSources`, `stockSources`, `trackingIds` |
+| growth (06, § 20.3) | — | — |
+| targeting | — | — (the pack needs a signed `quality/targets.json`) |
+| measure | — | `production.origins` (policy) for `measure` runs |
 
 Additional keys defined by v7.1+ text and not shown in older examples: web-delivery `retired: [{ path, successor? }]`, `contentParams: [{ pattern, param, mode: "canonical-clean"|"self-canonical" }]`, `pagination: [{ pattern, param, style: "query"|"path" }]`; programmatic families `lastmodField` (default `updatedAt`), `ymylReviewers: []`, hubs `paginatedDescriptionTemplate`; search-engines `facets.defaults: { param: value }`, `facets.routes: [pattern]` (no default; facet probe bases, search-engines § 3.3), `facets.indexable: [[param…]]` (absent = `[]`: no facet combination is indexable); programmatic families `offerField` (string or `null`, default `null`, PCF-003); programmatic `sources.<id>.rights` (`"owned"`|`"licensed"`|`"public-domain"`|`"open:<SPDX id>"`|`"facts-only"`, no default), `.attribution` (string or `null`; the key is required for `licensed` and non-null for attribution-requiring `open:` licences), `.attributionFragment` (a `staticFragments` key, default `attribution-<id>`) (DAT-018); search-engines `sitewideLinkAllow: [host | { host, anchor }]` (§ 3.3 host grammar, default `[]`, SE-128); web-delivery `siteAlternateName` (string, default `null`, SE-102); ops `email.dkimSelectors: []`, `domain.minDaysValid: 60` (integer days, OPS-016); flows `requires: [host]`.
 
@@ -568,3 +571,62 @@ Ruleset `fetch-tools.json`: `[{ host: <host id>, tool: <regex over the tool name
 ## 19. Toolchain manifest (inside each shipgate release)
 
 `{ formatVersion, items: [{ name, version, platform, url, sha256, size, licence, purpose, refresh?, unpackTo, requires: [] }] }`. `platform`: `windows-x64|windows-arm64|macos-arm64|macos-x64|linux-x64-gnu|linux-arm64-gnu|linux-x64-musl|linux-arm64-musl|any`. `purpose`: `tool|browser|database|grammar|data`. Data snapshots are entries with `purpose: "data"` and `refresh: "fetch"`: `fetch` downloads the current `snapshots.json` of the same release channel (signed with the vendor release key compiled into the binary, signature per § 7.1 encodings) and checks each snapshot's `sha256` against it. **`snapshots.json`:** `{ formatVersion, release: <verifier version>, channel: "stable"|"beta", items: [{ name, version, url, sha256, size }], signature }`; `signature` = base64 Ed25519 (vendor release key) over the JCS of the object without `signature`. A bad signature, or a `release` ≠ the running binary's version → `fetch` exits 3 and no snapshot is replaced. **Archives:** by the URL's extension — `.zip`, `.tar.gz`, `.tar.xz`, otherwise a single file stored as is; `unpackTo` is a relative path under `<cache.dir>/toolchain/<toolchain-manifest sha256 hex>/` (§ 7.3); an archive entry that would unpack outside it (absolute path, `..`, symlink escaping) rejects the whole download. `size` = bytes of the download. With a mirror (`SHIPGATE_MIRROR` or config `mirror`), every download URL becomes `<mirror>/<sha256 hex>/<basename(url)>`; the `sha256` check is unchanged. npm packages are fetched from the npm registry by exact version and integrity hash at `fetch` time, not shipped inside the release (05 § 8). The entries cover the data snapshots refreshed by `fetch` (OSV database; npm `deprecated` metadata for packages in the project's lockfiles only — other ecosystems' deprecation status is reported as unknown/W) for portable Node, Playwright + browsers, Lighthouse, axe-core, web-vitals, OSV-Scanner + database snapshot, PostgreSQL/MySQL (with `extensions[]`), PostgREST, Supabase Auth, Supabase schema DDL, the Firebase emulator suite with its JRE (for the platforms where a build exists; DB-011 `emulator`), tree-sitter grammars.
+
+## 20. Growth: shared conventions and intake
+
+### 20.1 Sourced values
+Every value a growth provider returned is written as `{ value, source, fetchedAt, cacheKey, estimate? }`: `source` = `<provider id>:<capability>` (05 § 10), `fetchedAt` = RFC 3339 UTC, `cacheKey` = the § 20.2 key of the response it came from, `estimate: true` (with `method`) when the provider models the number rather than counts it. Tables (`*.jsonl`) carry `source`, `fetchedAt` and `cacheKey` per row instead of per value. A value without them fails validation (TGT-001, 06 G1).
+
+### 20.2 Provider cache
+`<cache dir>/growth/<provider>/<cacheKey>.json` in the user cache (03 § 7.3; never in the repo): `{ request: { capability, params }, response, status, fetchedAt }`. `cacheKey` = `sha256:` of the JCS-canonical `{ provider, capability, params }`. A cached response younger than `growth.cacheDays` is reused; `--refresh` ignores the cache. Credentials are never part of `params` or the stored request.
+
+### 20.3 `quality/growth/intake.json`
+`{ formatVersion, markets: [{ country, language }], offerings: [{ id, name, kind: "service"|"product"|"content", local: bool }], audiences: [string], goals: [{ id, kind: "leads"|"sales"|"calls"|"bookings"|"signups"|"readers", conversion: { event?: string, flow?: string } }], competitorsKnown: [host], constraints: [string], assets: { searchConsole?: bool, bingWebmaster?: bool, businessProfile?: url, socials: [url] }, seeds: [{ query, market, origin: "offering"|"place"|"modifier"|"operator" }], found: [{ field, value, url }] }`. Agent-writable as a proposal; the business facts themselves go to `quality/proposals/business.json` (§ 14) and are signed there.
+
+Policy section (03 § 3.5 row `growth`):
+
+```jsonc
+"growth": {
+  "cacheDays": 30,
+  "research": { "expandDepth": 2, "maxKeywords": 2000, "minVolume": 10, "serpBudget": 300, "clusterOverlap": 4, "cpcFloor": 0.1, "priorityClusters": 50 },
+  "ai": { "questionsPerCluster": 3, "samples": 3 }
+}
+```
+
+## 21. Research run and targets
+
+### 21.1 `quality/growth/research/<run>/`
+`<run>` = UTC timestamp `YYYYMMDDTHHMMSSZ`. Files: `run.json` `{ formatVersion, run, intakeHash, sources: [{ capability, provider, status }], calls: [{ provider, count }], blocked: [{ part, capability, unblock }] }`; `keywords.jsonl` (TR-211 rows + `intent`); `serps.jsonl` `{ query, market, results: [{ rank, url, pageType }], features: [string], aiOverview?: { citedUrls: [url] }, paa: [string], source, fetchedAt, cacheKey }`; `clusters.json` `[{ id, primaryQuery, queries[], intent, value, priority, serp: bool, adjacent: bool, winning?: { format, requiredTerms[], wordRange: [min, max], urls[] } }]`; `competitors.json`; `authority.json`; `ai-citations.jsonl` `{ question, cluster, provider, model, askedAt, answerHash, citedUrls[], siteCited: bool, competitorsCited[] }`; `report.md`.
+
+### 21.2 `quality/targets.json` (proposal: `quality/proposals/targets.json`; signed with the lock, TR-235)
+`{ formatVersion, researchRun, approvedAt?, clusters: [{ id, primaryQuery, queries: [string], market, intent, value, priority, requiredTerms: [string], questions: [string], wordRange: [min, max], winningFormat, competitorsTop3: [host], targetPage: "<service>:<path>" | "new", alsoServes: ["<service>:<path>"], goal: "<intake goal id>" }] }`. Numbers follow § 20.1. A cluster id is stable across runs when its primary query is unchanged.
+
+## 22. Site plan and briefs — `quality/plan/` (proposal: `quality/proposals/plan/`; signed with the lock)
+
+### 22.1 `site.json`
+`{ formatVersion, targetsHash, pages: [{ id, url: "<service>:<path>", cluster?: id, role: "hub"|"spoke"|"page"|"home", new: bool }], links: [{ from: pageId, to: pageId, anchor }] }`.
+
+### 22.2 `briefs/<pageId>.json`
+`{ formatVersion, page, cluster, primaryQuery, queries[], intent, title, h1, metaDescription, outline: [{ heading, optional?: bool }], requiredTerms[], waivedTerms: [{ term, reason }], questions[], proof: [{ fact: "<business.json or dataset path>", value }], schemaType, linksIn[], linksOut[], cta: { goal, kind: "form"|"call"|"buy"|"book"|"signup"|"subscribe" }, wordRange: [min, max] }`. Prose fields (`title`, `h1`, `metaDescription`, `outline`) are agent-drafted; the rest is computed (TR-231).
+
+Intent → compatible page types (06 § 9.3) and default schema type:
+
+| Intent | Compatible page types | Default schema type |
+|---|---|---|
+| `informational` | article, page, video, comparison | `Article` |
+| `commercial` | comparison, article, category, page | `Article` (comparison: `ItemList`) |
+| `transactional` | product, category, local, page with a brief `cta` | `Product` (category: `ItemList`; service: `Service`) |
+| `local` | local, page, category | `LocalBusiness` subtype from `business.json` |
+| `navigational` | page, home | `WebPage` |
+
+### 22.3 `families.json`, `priorities.json`, `offsite.md`
+`families.json` `[{ id, clusters: [id], varies: "place"|"<dataset field>", rows: [{ value, demand }] }]`. `priorities.json` `[{ id, kind: "new-page"|"page-change"|"finding"|"offsite"|"family", ref, impact: "H"|"M"|"L", effort: "S"|"M"|"L", value, proof: "<rule id or metric>" }]` in priority order (06 § 9.4). `offsite.md` is free text with a source per claim.
+
+## 23. Measure run — `quality/growth/measure/<date>/`
+`<date>` = `YYYY-MM-DD` (UTC). `run.json` (as § 21.1); `queries.jsonl` `{ query, cluster, page, clicks, impressions, ctr, position, window: "current"|"previous", source, fetchedAt, cacheKey }`; `index.jsonl` `{ url, state, lastCrawl, source, fetchedAt, cacheKey }`; `ranks.jsonl` `{ query, position, above: [host], source, fetchedAt, cacheKey }`; `ai-citations.jsonl` (§ 21.1 shape); `cwv.jsonl` `{ url|origin, lcp, inp, cls, status, source, fetchedAt, cacheKey }`; `links.json` `{ gained: [host], lost: [host] }`; `conversions.jsonl` `{ page, goal, conversions, source, fetchedAt, cacheKey }`; `diff.json` (06 § 9.8 changes); `findings.json` (measure pack, 03 § 17 finding shape); `summary.md`.
+
+## 24. Diagnosis — `quality/out/diagnosis.json` (+ `diagnosis.md`)
+`{ formatVersion, mode, target, researchRun?, sections: [{ id: "reach"|"demand"|"competitiveness"|"authority"|"ai"|"plan", status: "ok"|"issues"|"blocked", findings: [<03 § 17 finding ref>], notes: [string], blocked: [{ part, capability, unblock }] }], priorities: [<§ 22.3 item>] }`. `compare` writes `quality/out/compare.json` `{ a: <diagnosis>, b: <diagnosis>, deltas: [{ section, a, b }] }`.
+
+## 25. Growth state — `quality/growth/state.json`
+`{ formatVersion, mode, target, stages: [{ name, status: "pending"|"done"|"stale"|"blocked"|"needs-approval", inputs: [{ file, sha256 }], outputs: [file], at? , blocked?: string }] }`. Written by `start` (06 § 2) after each stage; agent-writable (state, not oracle).

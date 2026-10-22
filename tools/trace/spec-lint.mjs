@@ -90,7 +90,7 @@ for (const [n, locs] of rulesetRefs) {
 
 // 4b. "ruleset" mentions that name no file ("ruleset maximums", "from the ruleset"), and `x.json`
 // names inside packs that aren't sourced and aren't project/product files.
-const PRODUCT_FILES = /^(image-sources|launch-forms|budgets|a11y|security|package|package-lock|tsconfig|composer|vercel|netlify|firebase|settings|manifest|business|ownership|redirects|routes|expected|report|review|refactor|dependencies|waiver-requests|counts|cycles|attempts|handoff|lock|debt|policy|shipgate|toolchain|baseline|inventory|flows|seed|approvals|_login|deno|bun|app|angular|nest-cli|turbo|nx|lerna|pnpm-lock|yarn|bower|project|launch|devcontainer|renovate|dependabot|sarif|junit|summary|verify|state|trust|keys|licence|license|feed|schema)$/;
+const PRODUCT_FILES = /^(image-sources|launch-forms|budgets|a11y|security|package|package-lock|tsconfig|composer|vercel|netlify|firebase|settings|manifest|business|ownership|redirects|routes|expected|report|review|refactor|dependencies|waiver-requests|counts|cycles|attempts|handoff|lock|debt|policy|shipgate|toolchain|baseline|inventory|flows|seed|approvals|_login|deno|bun|app|angular|nest-cli|turbo|nx|lerna|pnpm-lock|yarn|bower|project|launch|devcontainer|renovate|dependabot|sarif|junit|summary|verify|state|trust|keys|licence|license|feed|schema|targets|intake|site|run|keywords|serps|clusters|competitors|authority|ai-citations|families|priorities|queries|index|ranks|cwv|links|conversions|diff|findings|diagnosis|compare)$/;
 for (const f of specFiles) {
   read(f).split(/\r?\n/).forEach((line, i) => {
     for (const m of line.matchAll(/\b(?:the |a |its )?ruleset(?:'s)?\b(?!\s+(?:per-locale\s+)?`)(?!\s*\(`)([^.;:)]{0,40})/gi)) {
@@ -155,6 +155,7 @@ else {
     deps: "WP-705", data: "WP-203", db: "WP-403", contract: "WP-701", build: "WP-409",
     http: "WP-407", html: "WP-408", site: "WP-407", content: "WP-501", browser: "WP-601",
     baseline: "WP-801", edge: "WP-414", review: "WP-207", hook: "WP-306",
+    targets: "WP-828", measure: "WP-829",
   };
   const deps = readWpDeps(buildMap.slice(0, buildMap.indexOf("### Section ownership")));
   const closure = (wp, seen = new Set()) => {
@@ -233,7 +234,7 @@ if (own) {
     for (const wp of ids) {
       const hasSlice = own.some((o) => o.wp === wp);
       const inTable = new RegExp(`\\b${wp}\\b|every WP card`).test(table) && [...table.matchAll(/^\| ([^|]*§[^|]*) \| ([^|]*) \|$/gm)].some((m) => new RegExp(`\\b${wp}\\b`).test(m[2]));
-      const cites = /\b0[1-5] § [0-9]/.test(row[3]);
+      const cites = /\b0[1-6] § [0-9]/.test(row[3]);
       const acc = readAcceptanceTests(root).get(wp) || [];
       for (const name of acc) if (!name.startsWith(`wp_${wp.slice(3)}__`)) err("wp-owns-nothing", `${wp} acceptance test ${name} must be named wp_${wp.slice(3)}__<what>`);
       if (!hasSlice && !inTable && !cites && !acc.length) err("wp-owns-nothing", `${wp} owns no requirement slice and no spec section: trace-check could never hold it to anything`);
@@ -241,11 +242,11 @@ if (own) {
   }
 }
 
-// 7. Numbered sections of 01–05 that no work package references.
+// 7. Numbered sections of 01–06 that no work package references.
 const sections = readSections(root);
 const wpText = buildMap.slice(buildMap.indexOf("## 5. Phases"), buildMap.indexOf("## 6."));
 const sectionRefs = new Set();
-for (const m of wpText.matchAll(/\b(0[1-5]) § ([0-9]+(?:\.[0-9]+)*)/g)) {
+for (const m of wpText.matchAll(/\b(0[1-6]) § ([0-9]+(?:\.[0-9]+)*)/g)) {
   sectionRefs.add(`${m[1]} § ${m[2]}`);
   const parts = m[2].split(".");
   for (let n = 1; n < parts.length; n++) sectionRefs.add(`${m[1]} § ${parts.slice(0, n).join(".")}`);

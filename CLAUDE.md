@@ -1,6 +1,6 @@
 # shipgate — CLAUDE.md
 
-shipgate is a closed-source Rust verifier that gates AI-agent-built websites and apps so they thrive in search engines, AI answer engines and real use. This repo holds its specification (`SPEC.md`, `spec/**`), build plan (`BUILD_MAP.md`) and its code.
+shipgate is a closed-source Rust tool that takes AI-agent-built websites and apps through the whole growth path — intake, research, plan, build, gate, measure, iterate — so they get found, rank, get cited by AI engines and work in real use (spec v8.0, DECISIONS D-018). The gate is one stage of it, not the product. This repo holds its specification (`SPEC.md`, `spec/**`), build plan (`BUILD_MAP.md`) and its code.
 
 **Where we are lives in `.claude/POSITION.md`** (injected at session start). To drive the work, follow `ORCHESTRATOR_PROMPT.md`.
 

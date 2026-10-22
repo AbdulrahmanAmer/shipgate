@@ -15,13 +15,14 @@
 | `data`, `db` (migrations, SQL), `contract` (static validation) | G2 |
 | `build` | G3 |
 | `http`, `html`, `site`, `contract` (live responses), `db` (runtime checks: JOB-002 job runs, readback and "no side effect" checks after G4 probes) | G4 |
-| `content` | G5 |
+| `content`, `targets` (targeting pack, against the signed targets and plan, 06 G2) | G5 |
 | `browser`, `db` (checks run after a G6 flow, e.g. PRV-016) | G6 |
 | `baseline` (against `--against`, refactor or remote baselines) | G7 |
 | Comparisons against `quality/baselines/_main/` (AGT-005, AEO-012, CQ-006, ARC-003, PRF-010, UX-009, IDX-003) | `baseline`-channel comparisons in G5; the others in the gate of the rule's own channel (ARC-003 G1, PRF-010 G3/G6, UX-009 G6, IDX-003 G4; without a valid `_main/` IDX-003 uses the committer time). Only when `_main/` exists with a valid `ci` signature (03 § 12); otherwise that comparison is `skipped(no-main)` with a warning |
 | `edge` | G8 |
 | `review` | consumed in G9 |
 | `hook` | `check` modes only |
+| `measure` | `measure` runs only (06 § 7); never in `verify`, never part of a verdict |
 
 A rule spanning several channels is evaluated in each corresponding gate; each finding carries the gate of the channel that produced it.
 

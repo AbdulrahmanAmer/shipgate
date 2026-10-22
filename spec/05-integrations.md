@@ -28,6 +28,14 @@ Precedence for **operational settings** (output format, colour, cache, mirror, p
 | `dev grammar-probe --lang <id> --file <path>` | shipgate developers (hidden, as `dev fixture`) | Parses one file with the source-analysis engine of 02 § 4 for language `<id>` (a tree-sitter grammar through ast-grep-core, or the declared `regexSinks` where `rules/grammar-tiers.json` records no maintained grammar) and prints `{ formatVersion, lang, engine: "tree-sitter"\|"regex", parsed, errorNodes, sinks: [{ line, text }] }` with `--json` (`sinks` = raw-HTML sinks for template languages and JSX, SEC-001); WP-103's grammar-maturity check. `parsed` is true when a syntax tree was produced (always false, with `errorNodes: 0`, for the `regex` engine); `errorNodes` counts ERROR and MISSING nodes; the file name is a hint where one grammar serves two dialects (ERB/EJS `<%-` is a raw sink only in `*.ejs`). Without `--json` a short text form is printed. Writes nothing; exit 0, or 3 for an unknown language, an unreadable file or bad arguments. Licence-free |
 | `inventory` | anyone | `inventory [--family <id>]…` writes `quality/generated/inventory/<family>.jsonl` (03 § 13) for the given families (default: every programmatic family), deterministically; exit 3 on a dataset or template error |
 | `codegen` | Operator; `--check` anyone | Types/helpers into `quality/generated/` (generators below) |
+| `start <mode>` | agents, Operator | Runs a growth mode's stage sequence (06 § 2): `audit [--url <url>]`, `refactor`, `new`, `compare <a> <b>`, `research`, `measure`; `--stage <name>` re-runs one stage; `--budget <calls>`; prints the plan (stages, providers, call estimate) before any provider call and asks when the estimate exceeds `--budget` |
+| `intake` | agents, Operator | TR-201/202; writes proposals; questions go to the Operator in one batch |
+| `research` | agents, Operator | TR-210..220; `--refresh` ignores the provider cache; `--budget <calls>` |
+| `plan` | agents, Operator | TR-230..234; `plan --check` validates proposals and signed plans (TR-231) |
+| `measure` | agents, CI | TR-250..252; read-only against production; writes 03 § 23 and the measure pack findings |
+| `iterate` | agents | Proposals from the last two measure runs (06 § 1) |
+| `sources add <provider> \| remove <provider>` | Operator | Stores or removes a provider credential in the OS keychain (§ 10) |
+| `sources doctor` | anyone | TR-210: capability, provider, status, unblock step |
 | `approve pages` | Operator | Signs `quality/approvals/pages-<n>.json` for bulk page additions (CQ-006, 03 § 14) |
 | `baseline` | Operator; `--ci` in CI | Record a baseline; `--id`; `--from-remote <origin>` records a read-only URL inventory of a live site before it is rebuilt or re-platformed and writes a signed `refactor.json` pointing at it (REF-010, 03 § 12, 04 § 1.6); `--ci` signs `_main` with the CI key (no TTY; requires CI detection + `SHIPGATE_CI_SIGNING_KEY`) |
 | `debt record` / `debt add --reason` / `debt show` | Operator / Operator / anyone | Debt ratchet |
@@ -158,7 +166,7 @@ If `quality/policy.json` exists, `init` (with or without `--new`) changes nothin
 - **Indexing pings:** covered by `writeApi` (IndexNow, Google Indexing API, `/ping?sitemap=`), including `GET` pings.
 - **Hook tampering:** `* when: protectedTarget`.
 - **Verifier environment tampering:** `* when: setsVerifierVar`, in agent sessions.
-- **shipgate Operator verbs:** `shipgate * init|lock|baseline|waiver|override|break-glass|conformance|migrate|codegen|approve` · `shipgate * debt record|add|rotate` · `shipgate * keys init|trust|export|import` · `shipgate * hooks install` · `shipgate * rollout release` — except `init --draft`, `migrate --check`, `codegen --check` and `baseline --ci` (which additionally requires CI detection, 04 § 15). This list is the single definition of "Operator command" (§ 1).
+- **shipgate Operator verbs:** `shipgate * init|lock|baseline|waiver|override|break-glass|conformance|migrate|codegen|approve` · `shipgate * debt record|add|rotate` · `shipgate * keys init|trust|export|import` · `shipgate * sources add|remove` · `shipgate * hooks install` · `shipgate * rollout release` — except `init --draft`, `migrate --check`, `codegen --check` and `baseline --ci` (which additionally requires CI detection, 04 § 15). This list is the single definition of "Operator command" (§ 1).
 
 ### 3.3 Host matrix
 Host ids: `claude-code`, `codex`, `cursor`, `opencode`, `antigravity`, `git` (also used by 03 § 16 `host`). `hooks install --host <id> --role <role>` writes the host config; the hook command is `shipgate check --hook <event> --host <id>` (`pre`→`pre-tool`, `post`→`post-tool`, `session`→`session-start`, `prompt`→`prompt`, `stop`→`stop`, § 1); payloads (JSON on stdin) are normalised per the 03 § 16 mapping table. **Fetch recording:** on `post-tool` events with `tool: "fetch"` (web fetches, web searches and the browser/fetch MCP tools of ruleset `fetch-tools.json`), the post-hook appends each `fetched[]` document to the session fetch store (03 § 15), which CQ-010 reads; hosts whose row in 03 § 16 reports no fetches produce no store, and CQ-010 is then `skipped(no-fetch-store)`. Each row carries the verification status of the host's hook API; verifying every row against the current host version is the **first host work package** of the build. Until verified, a host is reported as "reduced enforcement".
@@ -192,8 +200,10 @@ Transport: stdio (`shipgate mcp`). Long runs are asynchronous. Every tool return
 | `status` | `{ job?: string }` | `{ state: "none"\|"running"\|"done", verdict?, treeHash, summary? }` |
 | `verify_start` | `{ changed?: bool, gate?: string[], pack?: string[], service?: string[], profile?: "default"\|"nightly" }` | `{ jobId }` (as `verify --detach`; narrowing inputs make the run partial, § 1) |
 | `verify_result` | `{ jobId, waitSec?: int 0–50 (default 0; any other value → tool error, code 3) }` | `{ state: "running"\|"done", verdict?, reportUri?: "report://latest" (present when `state` is `done`) }` |
+| `start` | `{ mode: "audit"\|"refactor"\|"new"\|"compare"\|"research"\|"measure", url?, urlB?, stage?, budget?: int }` | `{ jobId, plan: { stages, providers, calls } }` (async, as `verify_start`) |
+| `growth_status` | `{ jobId? }` | `{ state, stages: [03 § 25 stage], blocked: [{ part, capability, unblock }] }` |
 
-Resources: `report://latest` = the 03 § 17 JSON for the current tree; `rule://<ID>` = the rule's markdown. MCP never exposes Operator commands, and the stop decision stays with the stop hook (04 § 8.1).
+Resources: `diagnosis://latest` = the 03 § 24 JSON; `report://latest` = the 03 § 17 JSON for the current tree; `rule://<ID>` = the rule's markdown. MCP never exposes Operator commands, and the stop decision stays with the stop hook (04 § 8.1).
 
 ---
 
@@ -259,4 +269,23 @@ Templates for GitHub Actions, GitLab CI, Bitbucket Pipelines, Azure Pipelines, C
 
 ## 9. Telemetry and privacy
 
-No telemetry. Nothing leaves the device except toolchain/database downloads, update checks when config `update.check` is `true` (default `false`, 03 § 7.3), edge-pass requests the Operator configured, external link checks (LNK-006/007, TR-106), browser loads of `hosts[]` entries with `browser: true` (04 § 6.1), and `report-fp` packages the user sends. Opt-in crash reports only (`telemetry.crashReports`). The session fetch store (03 § 15) holds copies of text agents fetched; it stays in the user state dir and is never sent anywhere. A published data inventory lists every file written and every network destination.
+No telemetry. Nothing leaves the device except growth-provider calls the Operator connected (§ 10; queries, URLs and questions only, never project source or business data beyond the names being searched), toolchain/database downloads, update checks when config `update.check` is `true` (default `false`, 03 § 7.3), edge-pass requests the Operator configured, external link checks (LNK-006/007, TR-106), browser loads of `hosts[]` entries with `browser: true` (04 § 6.1), and `report-fp` packages the user sends. Opt-in crash reports only (`telemetry.crashReports`). The session fetch store (03 § 15) holds copies of text agents fetched; it stays in the user state dir and is never sent anywhere. A published data inventory lists every file written and every network destination.
+
+---
+
+## 10. Growth connectors
+
+Providers per capability (06 TR-210). Each connector is a built-in Rust client with the provider's documented API, a request-rate limit below the provider's published limit, retries on 429/5xx with backoff (at most 2), and the 03 § 20.2 cache. Credentials come from the OS keychain entry `shipgate/growth/<provider>` (`sources add`), OAuth tokens are refreshed there, and none ever reaches a log, report or agent.
+
+| Capability | Providers (any one connects it) | Credential |
+|---|---|---|
+| `keywords` | `ahrefs` (API v3), `dataforseo` (Keywords Data / Labs), `semrush` (API) | API key (DataForSEO: login + password) |
+| `serp` | `dataforseo` (SERP API, AI Overview included), `ahrefs` (SERP overview) | as above |
+| `backlinks` | `ahrefs`, `dataforseo` (Backlinks), `semrush` | as above |
+| `gsc` | `google-search-console` (Search Analytics, URL Inspection) | OAuth (Operator signs in once; scope read-only) |
+| `bing` | `bing-webmaster` | API key |
+| `crux` | `crux` (CrUX API) | Google API key |
+| `analytics` | `ga4` (Data API) | OAuth, read-only |
+| `ai` | `openai` (Responses API with web search), `perplexity` (Sonar), `gemini` (grounding with Google Search) | API key each; each connected provider is sampled |
+
+Scraping search-engine result pages is not a provider: SERP data comes only from an API whose terms allow it. Fetching competitor pages for TR-216 follows the remote-read crawl rules (04 § 10: robots.txt, rate limits, honest user agent).

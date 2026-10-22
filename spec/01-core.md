@@ -23,8 +23,9 @@
 **Projects:** marketing/content sites, programmatic SEO sites, SaaS web apps, APIs, multi-service platforms, plain HTML sites, sites on hosted builders.
 **Stacks:** anything that serves HTTP to a browser; depth by adapter coverage level (`02-adapters.md`).
 **Lifecycle:** new projects built from scratch (`init --new`, CFG-009; the brief starts with the launch definition of done), live projects, re-platforming of existing sites (old-URL preservation, REF-010), and launch (`project.stage: "live"`, launch checks against production).
-**Role:** brief → check every edit → gate completion → lock behaviour for refactors. Agents write all code; shipgate never edits application code (`codegen` only on Operator or CI command; `inventory` is licence-free and may be run by anyone, 03 § 13).
-**Out of scope:** ranking outcomes, the truth of upstream data, native mobile/desktop apps, infrastructure provisioning, production monitoring (a separate later product).
+**Role:** the whole path a site takes to be found and chosen: intake → research → plan → brief → check every edit → gate completion → lock behaviour for refactors → measure in production → iterate (06). Agents write all code and draft the judgement parts of plans; shipgate computes every number, checks, gates and measures; the Operator approves targets and plans. shipgate never edits application code (`codegen` only on Operator or CI command; `inventory` is licence-free and may be run by anyone, 03 § 13).
+**Entry points:** an existing repo, a live URL with no code, a refactor, a site built from scratch, a comparison of two sites, research only, measurement only (06 § 2).
+**Out of scope:** guaranteeing ranking outcomes (shipgate plans for them, gates the site against the plan and measures them, 06), the truth of upstream data, native mobile/desktop apps, infrastructure provisioning.
 
 ### 2.1 Surfaces
 Every route and endpoint belongs to exactly one surface per service:
@@ -42,7 +43,7 @@ An undeclared route is a P0 finding (CFG-003).
 
 ## 3. Vocabulary
 
-**Operator** (the human; signs policy, data, flows, contracts, baselines, debt, waivers) · **Planner / Builder / Auditor** (agent roles, § 10) · **Verifier** (shipgate) · **Pack** (rules for one quality domain) · **Adapter** (stack knowledge) · **Service** (one runnable or remote unit) · **Verify environment** (disposable, seeded, local; never production) · **Baseline** (locked behaviour recording) · **Debt** (recorded pre-existing findings) · **Finding** (one rule × one root cause, with count and examples).
+**Operator** (the human; signs policy, data, flows, contracts, baselines, debt, waivers) · **Planner / Builder / Auditor** (agent roles, § 10) · **Verifier** (shipgate) · **Pack** (rules for one quality domain) · **Adapter** (stack knowledge) · **Service** (one runnable or remote unit) · **Verify environment** (disposable, seeded, local; never production) · **Baseline** (locked behaviour recording) · **Debt** (recorded pre-existing findings) · **Finding** (one rule × one root cause, with count and examples) · **Cluster** (the queries one page should rank for, 06 § 9.1) · **Targets** (the Operator-signed clusters, 03 § 21.2) · **Plan** (the signed site plan and page briefs, 03 § 22) · **Stage** (one step of the growth pipeline, 06 § 1) · **Provider** (an external data source the Operator connected, 05 § 10).
 
 ---
 
@@ -160,6 +161,7 @@ Policy shape, defaults and every key: `03-formats.md` § 3. Core validation:
 | `verify --changed` | during work | `PARTIAL` at best |
 | `verify` | before handoff; CI | `PASS` / `FAIL` / `BLOCKED`, or `PARTIAL` when the run has a partial cause (04 § 1.6 step 2) |
 | `baseline`, `verify --against` | refactors | as above |
+| `start <mode>`, `intake`, `research`, `plan`, `measure`, `iterate` | growth stages (06); `start` runs a mode's stage sequence | — (stage outputs; `measure` findings are W and never a verdict) |
 | Operator commands | exactly the commands denied by 05 § 3.2 "shipgate Operator verbs" (the single definition; incl. `debt rotate`, `conformance`, `migrate`). Its exceptions `init --draft`, `migrate --check`, `codegen --check` and `baseline --ci` (CI detection required, 04 § 15), and `keys show` and `inventory`, which are not Operator verbs, may be run by anyone | — |
 
 Full CLI: `05-integrations.md` § 1. Time budgets and what each mode runs: `04-algorithms.md` § 8.
@@ -184,6 +186,8 @@ Gate statuses, prerequisites and early stopping: `04-algorithms.md` § 1.4–1.5
 | **G9 verdict** | Compute verdict (04 § 1), write reports (03 § 17), update the sealed verdict record (04 § 8.1) |
 
 Coverage, crawl and sampling: 04 § 10.
+
+The gates are one stage of the growth pipeline (06 § 1): intake, research and plan come before them and feed the targeting pack (G5) its signed targets and plan; measure and iterate come after, outside `verify`.
 
 ---
 

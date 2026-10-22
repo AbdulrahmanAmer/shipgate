@@ -1,0 +1,11 @@
+[package]
+name = "sg-growth"
+description = "Growth stages: intake, research, plan, measure, diagnosis; connectors, provider cache, state."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true
