@@ -1,0 +1,122 @@
+{
+  "ar": {
+    "pause": ["إيقاف مؤقت", "إيقاف مؤقتاً", "إيقاف مؤقتا", "إيقاف العرض مؤقتاً", "إيقاف التشغيل التلقائي مؤقتاً"],
+    "stop": ["إيقاف", "إيقاف العرض", "إيقاف التشغيل التلقائي", "إيقاف التمرير التلقائي", "إيقاف عرض الشرائح"],
+    "play": ["تشغيل", "تشغيل العرض", "تشغيل عرض الشرائح", "بدء العرض", "بدء التشغيل التلقائي", "استئناف", "استئناف العرض"],
+    "next": ["التالي", "التالية", "التالى", "الشريحة التالية", "الصورة التالية", "العنصر التالي"]
+  },
+  "cs": {
+    "pause": ["pozastavit", "pauza", "pozastavit prezentaci", "pozastavit karusel", "pozastavit automatické přehrávání", "pozastavit automatické posouvání"],
+    "stop": ["zastavit", "stop", "zastavit prezentaci", "zastavit karusel", "zastavit automatické přehrávání", "zastavit automatické posouvání"],
+    "play": ["přehrát", "spustit", "pokračovat", "spustit prezentaci", "spustit karusel", "spustit automatické přehrávání", "obnovit přehrávání"],
+    "next": ["další", "další snímek", "další obrázek", "další položka", "následující", "následující snímek", "následující obrázek", "následující položka"]
+  },
+  "da": {
+    "pause": ["pause", "sæt på pause", "pause diasshow", "pause slideshow", "pause karrusel", "sæt diasshow på pause", "sæt karrusellen på pause", "pause automatisk afspilning"],
+    "stop": ["stop", "stop diasshow", "stop slideshow", "stop karrusel", "stop automatisk afspilning", "stop automatisk rotation"],
+    "play": ["afspil", "genoptag", "genoptag afspilning", "start diasshow", "start slideshow", "start karrusel", "start automatisk afspilning"],
+    "next": ["næste", "næste dias", "næste slide", "næste billede", "næste element"]
+  },
+  "de": {
+    "pause": ["pause", "pausieren", "diashow pausieren", "slider pausieren", "karussell pausieren", "automatische wiedergabe pausieren", "autoplay pausieren", "animation pausieren"],
+    "stop": ["stopp", "stop", "stoppen", "anhalten", "diashow stoppen", "diashow anhalten", "slider anhalten", "karussell anhalten", "automatische wiedergabe stoppen", "autoplay stoppen"],
+    "play": ["abspielen", "wiedergabe", "wiedergabe starten", "fortsetzen", "diashow starten", "diashow abspielen", "slider starten", "karussell starten", "automatische wiedergabe starten", "autoplay starten"],
+    "next": ["weiter", "nächste", "nächstes", "nächster", "nächste folie", "nächstes bild", "nächster eintrag"]
+  },
+  "en": {
+    "pause": ["pause", "pause slideshow", "pause autoplay", "pause carousel", "pause automatic slide show"],
+    "stop": ["stop", "stop autoplay", "stop slideshow", "stop carousel", "stop automatic slide show", "stop slide rotation"],
+    "play": ["play", "play slideshow", "play autoplay", "play carousel", "resume", "resume autoplay", "start autoplay", "start slideshow", "start carousel", "start automatic slide show", "start slide rotation"],
+    "next": ["next", "next slide", "next item", "next image", "next photo", "next product", "next testimonial"]
+  },
+  "es": {
+    "pause": ["pausa", "pausar", "pausar presentación", "pausar la presentación", "pausar carrusel", "pausar el carrusel", "pausar reproducción automática", "pausar la reproducción automática"],
+    "stop": ["detener", "parar", "detener presentación", "detener la presentación", "detener carrusel", "detener el carrusel", "detener reproducción automática", "detener la reproducción automática", "detener desplazamiento automático"],
+    "play": ["reproducir", "reanudar", "iniciar presentación", "iniciar la presentación", "iniciar carrusel", "iniciar reproducción automática", "reproducir presentación", "reproducir carrusel", "reanudar presentación"],
+    "next": ["siguiente", "diapositiva siguiente", "siguiente diapositiva", "imagen siguiente", "siguiente imagen", "siguiente elemento", "elemento siguiente"]
+  },
+  "fi": {
+    "pause": ["tauko", "tauota", "keskeytä", "keskeytä diaesitys", "keskeytä karuselli", "keskeytä automaattinen toisto", "keskeytä automaattinen vieritys", "tauota diaesitys"],
+    "stop": ["pysäytä", "lopeta", "pysäytä diaesitys", "pysäytä karuselli", "pysäytä automaattinen toisto", "pysäytä automaattinen vieritys", "lopeta diaesitys", "lopeta automaattinen toisto"],
+    "play": ["toista", "käynnistä", "aloita", "jatka", "käynnistä diaesitys", "käynnistä karuselli", "käynnistä automaattinen toisto", "toista diaesitys", "aloita automaattinen toisto", "jatka toistoa", "jatka automaattista toistoa"],
+    "next": ["seuraava", "seuraava dia", "seuraava kuva", "seuraava kohde"]
+  },
+  "fr": {
+    "pause": ["pause", "mettre en pause", "mettre en pause le diaporama", "mettre en pause le carrousel", "mettre le carrousel en pause", "mettre en pause la lecture automatique", "suspendre", "suspendre le diaporama", "suspendre le défilement", "pause du diaporama", "pause du carrousel"],
+    "stop": ["stop", "arrêter", "arrêter le diaporama", "arrêter le carrousel", "arrêter le défilement", "arrêter la lecture automatique", "arrêt du défilement automatique"],
+    "play": ["lecture", "lire", "démarrer", "démarrer le diaporama", "démarrer le carrousel", "démarrer la lecture automatique", "démarrer le défilement automatique", "reprendre", "reprendre la lecture", "reprendre le défilement", "lancer le diaporama", "lancer le défilement"],
+    "next": ["suivant", "suivante", "diapositive suivante", "image suivante", "élément suivant"]
+  },
+  "it": {
+    "pause": ["pausa", "metti in pausa", "mettere in pausa", "metti in pausa la presentazione", "metti in pausa il carosello", "metti in pausa lo slider", "pausa presentazione", "pausa carosello", "sospendi", "sospendi lo scorrimento automatico"],
+    "stop": ["stop", "ferma", "arresta", "interrompi", "ferma la presentazione", "ferma il carosello", "ferma lo slider", "ferma la riproduzione automatica", "ferma scorrimento automatico", "arresta lo scorrimento automatico", "interrompi la riproduzione automatica"],
+    "play": ["riproduci", "avvia", "riprendi", "avvia la presentazione", "avvia il carosello", "avvia lo slider", "avvia riproduzione automatica", "riproduci la presentazione", "riprendi la riproduzione"],
+    "next": ["successivo", "successiva", "prossimo", "prossima", "avanti", "slide successiva", "diapositiva successiva", "immagine successiva", "prossima slide", "elemento successivo"]
+  },
+  "ja": {
+    "pause": ["一時停止", "ポーズ"],
+    "stop": ["停止", "ストップ", "スライドショーを停止", "自動再生を停止", "自動スクロールを停止"],
+    "play": ["再生", "再開", "スタート", "スライドショーを開始", "自動再生を開始", "スライドショーを再生"],
+    "next": ["次へ", "次のスライド", "次の画像", "次の写真", "次の項目", "次のアイテム", "進む"]
+  },
+  "ko": {
+    "pause": ["일시정지", "일시 정지", "일시중지", "일시 중지", "슬라이드 일시정지", "슬라이드쇼 일시정지", "자동 재생 일시정지", "자동재생 일시정지"],
+    "stop": ["정지", "멈춤", "중지", "정지하기", "중지하기", "슬라이드 정지", "슬라이드 멈춤", "자동 재생 정지", "자동재생 정지", "자동 재생 중지", "자동 롤링 정지"],
+    "play": ["재생", "재생하기", "재개", "시작", "슬라이드 재생", "슬라이드 시작", "슬라이드쇼 재생", "자동 재생 시작", "자동재생 시작", "자동 롤링 시작"],
+    "next": ["다음", "다음으로", "다음 슬라이드", "다음 이미지", "다음 사진", "다음 보기", "다음 배너", "다음 상품", "다음 항목"]
+  },
+  "nb": {
+    "pause": ["pause", "pauser", "sett på pause", "pause lysbildefremvisning", "pause lysbildeshow", "pause karusell", "sett karusellen på pause", "pause automatisk avspilling"],
+    "stop": ["stopp", "stopp lysbildefremvisning", "stopp lysbildeshow", "stopp slideshow", "stopp karusell", "stopp karusellen", "stopp automatisk avspilling", "stopp automatisk rotasjon"],
+    "play": ["spill av", "fortsett", "fortsett avspilling", "start lysbildefremvisning", "start lysbildeshow", "start karusellen", "start automatisk avspilling"],
+    "next": ["neste", "neste bilde", "neste lysbilde", "neste slide", "neste element"]
+  },
+  "nl": {
+    "pause": ["pauze", "pauzeren", "pauzeer", "pauzeer diavoorstelling", "pauzeer de slideshow", "pauzeer slider", "pauzeer carrousel", "pauzeer automatisch afspelen", "diavoorstelling pauzeren", "slideshow pauzeren", "carrousel pauzeren", "automatisch afspelen pauzeren"],
+    "stop": ["stop", "stoppen", "stop slideshow", "stop de slideshow", "stop diavoorstelling", "stop carrousel", "stop slider", "stop automatisch afspelen", "slideshow stoppen", "automatisch afspelen stoppen"],
+    "play": ["afspelen", "speel af", "hervat", "hervatten", "start slideshow", "start de slideshow", "start diavoorstelling", "start carrousel", "start automatisch afspelen", "slideshow starten", "automatisch afspelen starten"],
+    "next": ["volgende", "volgend", "volgende dia", "volgende slide", "volgende afbeelding", "volgende foto", "volgend item"]
+  },
+  "pl": {
+    "pause": ["pauza", "pauzuj", "wstrzymaj", "wstrzymaj pokaz slajdów", "wstrzymaj karuzelę", "wstrzymaj automatyczne przewijanie", "wstrzymaj odtwarzanie", "wstrzymaj automatyczne odtwarzanie"],
+    "stop": ["stop", "zatrzymaj", "zatrzymaj pokaz slajdów", "zatrzymaj karuzelę", "zatrzymaj slider", "zatrzymaj automatyczne przewijanie", "zatrzymaj odtwarzanie", "zatrzymaj automatyczne odtwarzanie", "zatrzymaj autoodtwarzanie"],
+    "play": ["odtwórz", "odtwarzaj", "wznów", "uruchom", "uruchom pokaz slajdów", "uruchom karuzelę", "wznów odtwarzanie", "wznów automatyczne przewijanie", "rozpocznij pokaz slajdów", "włącz automatyczne przewijanie", "włącz autoodtwarzanie"],
+    "next": ["następny", "następna", "następne", "następny slajd", "następny element", "następne zdjęcie", "następny obraz", "kolejny", "kolejny slajd", "dalej"]
+  },
+  "pt": {
+    "pause": ["pausa", "pausar", "pausar apresentação", "pausar a apresentação", "pausar apresentação de slides", "pausar carrossel", "pausar o carrossel", "pausar reprodução automática", "pausar slideshow", "colocar em pausa", "pôr em pausa"],
+    "stop": ["parar", "interromper", "stop", "parar apresentação", "parar a apresentação", "parar carrossel", "parar o carrossel", "parar reprodução automática", "parar a reprodução automática", "parar slideshow", "parar rotação"],
+    "play": ["reproduzir", "reprodução", "iniciar", "retomar", "iniciar apresentação", "iniciar a apresentação", "iniciar carrossel", "iniciar reprodução automática", "reproduzir apresentação", "retomar reprodução"],
+    "next": ["próximo", "próxima", "seguinte", "avançar", "próximo slide", "slide seguinte", "imagem seguinte", "próxima imagem", "próximo item"]
+  },
+  "ro": {
+    "pause": ["pauză", "întrerupe", "pune pe pauză", "pune pe pauză prezentarea", "pune pe pauză caruselul", "pauză prezentare", "pauză carusel", "pauză slideshow", "întrerupe redarea automată", "pauză redare automată"],
+    "stop": ["stop", "oprește", "opreşte", "oprire", "oprește prezentarea", "oprește caruselul", "oprește redarea automată", "oprește derularea automată", "oprește slideshow"],
+    "play": ["redă", "redare", "reia", "pornește", "porneşte", "pornește prezentarea", "pornește caruselul", "pornește redarea automată", "pornește derularea automată", "redă prezentarea", "reia redarea", "pornește slideshow"],
+    "next": ["următorul", "următoarea", "următor", "înainte", "următorul slide", "următoarea imagine", "slide următor", "diapozitiv următor", "diapozitivul următor", "următorul element"]
+  },
+  "ru": {
+    "pause": ["пауза", "приостановить", "поставить на паузу", "приостановить слайд-шоу", "приостановить карусель", "приостановить автоматическую прокрутку", "приостановить автопрокрутку", "приостановить воспроизведение", "приостановить автовоспроизведение", "пауза слайд-шоу"],
+    "stop": ["стоп", "остановить", "остановить слайд-шоу", "остановить карусель", "остановить автоматическую прокрутку", "остановить автопрокрутку", "остановить воспроизведение", "остановить автовоспроизведение", "остановить показ"],
+    "play": ["воспроизвести", "воспроизведение", "запустить", "возобновить", "запустить слайд-шоу", "запустить карусель", "запустить автоматическую прокрутку", "запустить автопрокрутку", "включить слайд-шоу", "возобновить воспроизведение", "начать показ"],
+    "next": ["далее", "дальше", "следующий", "следующая", "следующее", "вперёд", "вперед", "следующий слайд", "следующее изображение", "следующий элемент", "следующее фото"]
+  },
+  "sv": {
+    "pause": ["pausa", "pausa bildspel", "pausa bildspelet", "pausa karusellen", "pausa slider", "pausa automatisk uppspelning"],
+    "stop": ["stopp", "stoppa", "stoppa bildspel", "stoppa bildspelet", "stoppa karusellen", "stoppa slider", "stoppa automatisk uppspelning", "stoppa automatisk rullning"],
+    "play": ["spela", "spela upp", "återuppta", "fortsätt", "starta bildspel", "starta bildspelet", "starta karusellen", "starta automatisk uppspelning", "spela bildspel"],
+    "next": ["nästa", "nästa bild", "nästa slide"]
+  },
+  "tr": {
+    "pause": ["duraklat", "slayt gösterisini duraklat", "gösteriyi duraklat", "otomatik oynatmayı duraklat", "oynatmayı duraklat", "karuseli duraklat", "kaydırıcıyı duraklat", "otomatik kaydırmayı duraklat"],
+    "stop": ["durdur", "slayt gösterisini durdur", "gösteriyi durdur", "otomatik oynatmayı durdur", "oynatmayı durdur", "karuseli durdur", "kaydırıcıyı durdur", "otomatik kaydırmayı durdur"],
+    "play": ["oynat", "başlat", "devam et", "slayt gösterisini başlat", "gösteriyi başlat", "otomatik oynatmayı başlat", "oynatmayı başlat", "oynatmayı sürdür", "oynatmaya devam et", "karuseli başlat", "kaydırıcıyı başlat", "otomatik kaydırmayı başlat"],
+    "next": ["sonraki", "ileri", "sonraki slayt", "sonraki görsel", "sonraki fotoğraf"]
+  },
+  "zh": {
+    "pause": ["暂停", "暫停"],
+    "stop": ["停止"],
+    "play": ["播放", "开始轮播", "開始輪播", "继续轮播", "繼續輪播"],
+    "next": ["下一张", "下一張", "下一页", "下一頁", "下一个", "下一個", "下一项", "下一項"]
+  }
+}

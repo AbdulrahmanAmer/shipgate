@@ -1,0 +1,13 @@
+[
+  "active",
+  "is-active",
+  "current",
+  "current-menu-item",
+  "current-menu-parent",
+  "current-menu-ancestor",
+  "current_page_item",
+  "current_page_parent",
+  "current_page_ancestor",
+  "router-link-active",
+  "router-link-exact-active"
+]

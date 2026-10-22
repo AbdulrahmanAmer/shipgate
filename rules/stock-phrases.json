@@ -1,0 +1,1179 @@
+{
+  "ar": {
+    "in stock": [
+      "متوفر",
+      "متوفر في المخزون",
+      "متاح في المخزون",
+      "متوفر بالمخزون",
+      "متوفر الآن",
+      "في المخزون",
+      "موجود في المخزون",
+      "متوفر حالياً"
+    ],
+    "out of stock": [
+      "غير متوفر",
+      "غير متوفرة",
+      "غير متاح",
+      "غير متاحة",
+      "غير متوفر في المخزون",
+      "غير متوفر حاليا",
+      "غير متوفر حالياً",
+      "غير موجود في المخزون",
+      "نفد من المخزون",
+      "نفد المخزون",
+      "خارج المخزون",
+      "ليس في المخزون",
+      "لم يعد متوفر"
+    ],
+    "sold out": [
+      "نفدت الكمية",
+      "نفذت الكمية",
+      "مباع بالكامل",
+      "بيعت بالكامل",
+      "نفدت"
+    ],
+    "pre-order": [
+      "طلب مسبق",
+      "الطلب المسبق",
+      "اطلب مسبقاً",
+      "اطلب مسبقا",
+      "حجز مسبق",
+      "للطلب المسبق",
+      "متاح للطلب المسبق"
+    ],
+    "back-order": [
+      "الطلب المتأخر",
+      "قيد التوفير",
+      "سيتوفر قريباً",
+      "سيتوفر قريبا",
+      "في انتظار التوفر"
+    ],
+    "limited": [
+      "كمية محدودة",
+      "الكميات محدودة",
+      "كميات محدودة",
+      "مخزون محدود",
+      "آخر القطع",
+      "القطع الأخيرة",
+      "بقي القليل",
+      "كمية قليلة"
+    ],
+    "discontinued": [
+      "تم إيقاف المنتج",
+      "منتج متوقف",
+      "لم يعد متوفراً",
+      "لم يعد متوفرا",
+      "لم يعد متاحاً",
+      "لم يعد متاح",
+      "توقف الإنتاج",
+      "تم إيقاف إنتاجه"
+    ]
+  },
+  "cs": {
+    "in stock": [
+      "skladem",
+      "na skladě",
+      "ihned k odeslání",
+      "ihned dostupné",
+      "dostupné ihned"
+    ],
+    "out of stock": [
+      "není skladem",
+      "není na skladě",
+      "nedostupné",
+      "momentálně nedostupné",
+      "dočasně nedostupné",
+      "nedostupný"
+    ],
+    "sold out": [
+      "vyprodáno",
+      "vyprodané",
+      "vyprodaný"
+    ],
+    "pre-order": [
+      "předobjednávka",
+      "předobjednat",
+      "předprodej",
+      "v předprodeji",
+      "k předobjednání"
+    ],
+    "back-order": [
+      "brzy skladem",
+      "čeká na naskladnění",
+      "očekáváme naskladnění",
+      "bude naskladněno",
+      "backorder"
+    ],
+    "limited": [
+      "omezené množství",
+      "omezený počet",
+      "poslední kusy",
+      "poslední kus",
+      "málo kusů",
+      "nízký stav zásob",
+      "omezená zásoba"
+    ],
+    "discontinued": [
+      "vyřazeno z nabídky",
+      "vyřazen z nabídky",
+      "již se nevyrábí",
+      "výroba ukončena",
+      "ukončená výroba",
+      "ukončený produkt"
+    ]
+  },
+  "da": {
+    "in stock": [
+      "på lager",
+      "i lager",
+      "lagervare"
+    ],
+    "out of stock": [
+      "ikke på lager",
+      "ikke i lager",
+      "ikke tilgængelig",
+      "midlertidigt udsolgt",
+      "midlertidigt ikke på lager",
+      "mangler på lager"
+    ],
+    "sold out": [
+      "udsolgt",
+      "helt udsolgt"
+    ],
+    "pre-order": [
+      "forudbestil",
+      "forudbestilling",
+      "forudbestille",
+      "pre-order",
+      "forsalg"
+    ],
+    "back-order": [
+      "restordre",
+      "bagordre",
+      "ved restordre",
+      "forventes på lager"
+    ],
+    "limited": [
+      "begrænset lager",
+      "begrænset antal",
+      "begrænset mængde",
+      "få tilbage",
+      "sidste eksemplarer",
+      "lav lagerbeholdning",
+      "få på lager"
+    ],
+    "discontinued": [
+      "udgået",
+      "udgået vare",
+      "udgået fra sortimentet",
+      "ikke længere tilgængelig",
+      "produktet er udgået",
+      "udgået model"
+    ]
+  },
+  "de": {
+    "in stock": [
+      "auf Lager",
+      "an Lager",
+      "vorrätig",
+      "sofort lieferbar",
+      "sofort verfügbar",
+      "wieder auf Lager"
+    ],
+    "out of stock": [
+      "nicht auf Lager",
+      "nicht vorrätig",
+      "nicht lieferbar",
+      "derzeit nicht lieferbar",
+      "nicht verfügbar",
+      "derzeit nicht verfügbar",
+      "zurzeit nicht verfügbar"
+    ],
+    "sold out": [
+      "ausverkauft",
+      "vergriffen",
+      "leider ausverkauft"
+    ],
+    "pre-order": [
+      "Vorbestellung",
+      "vorbestellbar",
+      "jetzt vorbestellen",
+      "vorbestellen",
+      "Pre-Order"
+    ],
+    "back-order": [
+      "Backorder",
+      "nachbestellbar",
+      "Lieferrückstand"
+    ],
+    "limited": [
+      "begrenzter Vorrat",
+      "begrenzte Stückzahl",
+      "geringer Bestand",
+      "nur noch wenige",
+      "Restbestand",
+      "solange der Vorrat reicht"
+    ],
+    "discontinued": [
+      "Auslaufartikel",
+      "Auslaufmodell",
+      "nicht mehr lieferbar",
+      "nicht mehr erhältlich",
+      "nicht mehr verfügbar"
+    ]
+  },
+  "en": {
+    "in stock": [
+      "in stock",
+      "back in stock",
+      "in stock now"
+    ],
+    "out of stock": [
+      "out of stock",
+      "currently out of stock",
+      "temporarily out of stock",
+      "not in stock",
+      "currently unavailable"
+    ],
+    "sold out": [
+      "sold out",
+      "sold-out"
+    ],
+    "pre-order": [
+      "pre-order",
+      "preorder",
+      "pre order",
+      "available for pre-order"
+    ],
+    "back-order": [
+      "back-order",
+      "backorder",
+      "back order",
+      "backordered",
+      "on backorder"
+    ],
+    "limited": [
+      "limited stock",
+      "low stock",
+      "limited availability",
+      "limited quantities",
+      "limited supply"
+    ],
+    "discontinued": [
+      "discontinued",
+      "no longer available",
+      "no longer produced"
+    ]
+  },
+  "es": {
+    "in stock": [
+      "en stock",
+      "en existencias",
+      "stock disponible",
+      "disponible en stock",
+      "de nuevo en stock"
+    ],
+    "out of stock": [
+      "sin stock",
+      "sin existencias",
+      "no disponible",
+      "no hay stock",
+      "fuera de stock",
+      "temporalmente sin stock",
+      "producto no disponible",
+      "no hay existencias"
+    ],
+    "sold out": [
+      "agotado",
+      "agotada",
+      "agotados",
+      "se ha agotado"
+    ],
+    "pre-order": [
+      "preventa",
+      "pre-venta",
+      "prepedido",
+      "pre-pedido"
+    ],
+    "back-order": [
+      "pendiente de reposición",
+      "en reposición",
+      "reposición de stock",
+      "backorder"
+    ],
+    "limited": [
+      "stock limitado",
+      "existencias limitadas",
+      "unidades limitadas",
+      "últimas unidades",
+      "últimas piezas",
+      "pocas unidades",
+      "stock bajo",
+      "cantidades limitadas",
+      "bajo stock"
+    ],
+    "discontinued": [
+      "descatalogado",
+      "producto descatalogado",
+      "artículo descatalogado",
+      "ya no está disponible",
+      "ya no disponible",
+      "fuera de catálogo",
+      "discontinuado",
+      "producto discontinuado"
+    ]
+  },
+  "fi": {
+    "in stock": [
+      "varastossa",
+      "on varastossa",
+      "heti saatavilla",
+      "heti toimitukseen",
+      "toimitusvalmis"
+    ],
+    "out of stock": [
+      "ei varastossa",
+      "ei saatavilla",
+      "tilapäisesti loppu",
+      "tilapäisesti ei saatavilla",
+      "ei saatavissa",
+      "ei ole varastossa",
+      "loppu varastosta"
+    ],
+    "sold out": [
+      "loppuunmyyty",
+      "loppunut",
+      "myyty loppuun",
+      "täysin loppuunmyyty"
+    ],
+    "pre-order": [
+      "ennakkotilaus",
+      "ennakkotilaa",
+      "ennakkotilattavissa",
+      "ennakkomyynti",
+      "ennakkovaraa"
+    ],
+    "back-order": [
+      "jälkitoimitus",
+      "jälkitilaus",
+      "tulossa varastoon",
+      "täydennystä odotetaan"
+    ],
+    "limited": [
+      "rajoitettu erä",
+      "rajoitettu määrä",
+      "vähän varastossa",
+      "viimeiset kappaleet",
+      "rajoitetusti saatavilla",
+      "vähissä"
+    ],
+    "discontinued": [
+      "poistunut valikoimasta",
+      "poistettu valikoimasta",
+      "ei enää saatavilla",
+      "tuotanto lopetettu",
+      "poistotuote",
+      "lopetettu tuote",
+      "valmistus lopetettu",
+      "poistuva tuote"
+    ]
+  },
+  "fr": {
+    "in stock": [
+      "en stock",
+      "disponible immédiatement",
+      "de nouveau en stock"
+    ],
+    "out of stock": [
+      "rupture de stock",
+      "en rupture de stock",
+      "hors stock",
+      "pas en stock",
+      "non disponible",
+      "indisponible",
+      "momentanément indisponible",
+      "temporairement indisponible"
+    ],
+    "sold out": [
+      "épuisé",
+      "épuisée",
+      "produit épuisé"
+    ],
+    "pre-order": [
+      "précommande",
+      "pré-commande",
+      "en précommande",
+      "disponible en précommande",
+      "précommander"
+    ],
+    "back-order": [
+      "réapprovisionnement",
+      "en réapprovisionnement",
+      "en cours de réapprovisionnement",
+      "backorder"
+    ],
+    "limited": [
+      "stock limité",
+      "dernières pièces",
+      "derniers exemplaires",
+      "quantités limitées",
+      "quantité limitée",
+      "stock faible"
+    ],
+    "discontinued": [
+      "discontinué",
+      "produit discontinué",
+      "n'est plus disponible",
+      "n’est plus disponible",
+      "plus commercialisé",
+      "n'est plus fabriqué",
+      "n’est plus fabriqué"
+    ]
+  },
+  "it": {
+    "in stock": [
+      "disponibile subito",
+      "disponibile in magazzino",
+      "in magazzino",
+      "a magazzino",
+      "pronta consegna",
+      "in stock",
+      "di nuovo disponibile"
+    ],
+    "out of stock": [
+      "non disponibile",
+      "non disponibile al momento",
+      "non in magazzino",
+      "momentaneamente non disponibile",
+      "temporaneamente non disponibile",
+      "fuori magazzino",
+      "non in stock",
+      "non disponibile in magazzino"
+    ],
+    "sold out": [
+      "esaurito",
+      "esaurita",
+      "prodotto esaurito",
+      "tutto esaurito",
+      "sold out"
+    ],
+    "pre-order": [
+      "preordine",
+      "pre-ordine",
+      "pre ordine",
+      "preordina",
+      "in preordine",
+      "disponibile in preordine"
+    ],
+    "back-order": [
+      "riassortimento",
+      "in riassortimento",
+      "back order",
+      "backorder"
+    ],
+    "limited": [
+      "disponibilità limitata",
+      "scorte limitate",
+      "ultimi pezzi",
+      "ultimi articoli",
+      "ultimi disponibili",
+      "pezzi limitati",
+      "quantità limitata",
+      "ultimo pezzo",
+      "poche unità",
+      "scorte in esaurimento"
+    ],
+    "discontinued": [
+      "fuori produzione",
+      "prodotto fuori produzione",
+      "fuori catalogo",
+      "non più disponibile",
+      "non più in produzione",
+      "articolo fuori produzione",
+      "discontinuato",
+      "prodotto discontinuato"
+    ]
+  },
+  "ja": {
+    "in stock": [
+      "在庫あり",
+      "在庫有り",
+      "在庫あります",
+      "在庫がございます",
+      "通常在庫あり",
+      "即納可能"
+    ],
+    "out of stock": [
+      "在庫なし",
+      "在庫無し",
+      "在庫切れ",
+      "在庫がありません",
+      "在庫がございません",
+      "在庫ありません",
+      "一時的に在庫切れ",
+      "現在在庫なし",
+      "品切れ"
+    ],
+    "sold out": [
+      "売り切れ",
+      "売切れ",
+      "完売",
+      "完売御礼"
+    ],
+    "pre-order": [
+      "予約受付中",
+      "予約販売",
+      "予約注文",
+      "予約可能",
+      "先行予約",
+      "予約商品",
+      "ご予約受付中"
+    ],
+    "back-order": [
+      "入荷待ち",
+      "取り寄せ",
+      "取り寄せ商品",
+      "納期未定",
+      "再入荷待ち",
+      "入荷未定",
+      "お取り寄せ"
+    ],
+    "limited": [
+      "残りわずか",
+      "残り僅か",
+      "数量限定",
+      "在庫わずか",
+      "在庫僅少",
+      "在庫少"
+    ],
+    "discontinued": [
+      "販売終了",
+      "取り扱い終了",
+      "取扱終了",
+      "生産終了",
+      "廃盤",
+      "製造終了",
+      "取扱い終了",
+      "生産終了品",
+      "廃番"
+    ]
+  },
+  "ko": {
+    "in stock": [
+      "재고 있음",
+      "재고있음",
+      "재고 보유",
+      "재고 충분",
+      "재고 있습니다",
+      "현재 재고 있음",
+      "즉시 배송",
+      "당일 발송"
+    ],
+    "out of stock": [
+      "재고 없음",
+      "재고없음",
+      "재고 없습니다",
+      "재고 부족",
+      "일시품절",
+      "일시 품절",
+      "일시적 품절",
+      "현재 재고 없음"
+    ],
+    "sold out": [
+      "품절",
+      "완판",
+      "매진",
+      "솔드아웃",
+      "솔드 아웃"
+    ],
+    "pre-order": [
+      "예약 판매",
+      "예약판매",
+      "예약 구매",
+      "사전 예약",
+      "사전예약",
+      "프리오더",
+      "예약 주문",
+      "예약 가능"
+    ],
+    "back-order": [
+      "입고 예정",
+      "입고예정",
+      "재입고 예정",
+      "재입고 알림",
+      "재입고 대기",
+      "입고 지연",
+      "백오더"
+    ],
+    "limited": [
+      "한정 수량",
+      "한정수량",
+      "수량 한정",
+      "재고 한정",
+      "마감 임박",
+      "품절 임박",
+      "소량 재고",
+      "재고 소량"
+    ],
+    "discontinued": [
+      "단종",
+      "단종 상품",
+      "단종된 상품",
+      "판매 종료",
+      "판매종료",
+      "생산 중단",
+      "생산중단",
+      "판매 중단",
+      "판매중단",
+      "취급 종료",
+      "취급종료"
+    ]
+  },
+  "nb": {
+    "in stock": [
+      "på lager",
+      "tilgjengelig på lager",
+      "lagervare"
+    ],
+    "out of stock": [
+      "ikke på lager",
+      "ikke tilgjengelig",
+      "midlertidig utsolgt",
+      "mangler på lager",
+      "slutt på lager"
+    ],
+    "sold out": [
+      "utsolgt",
+      "helt utsolgt"
+    ],
+    "pre-order": [
+      "forhåndsbestill",
+      "forhåndsbestilling",
+      "forhåndsbestille",
+      "pre-order",
+      "forhåndssalg"
+    ],
+    "back-order": [
+      "restordre",
+      "restbestilling",
+      "venter på påfyll",
+      "ved restordre"
+    ],
+    "limited": [
+      "begrenset antall",
+      "begrenset lager",
+      "få igjen",
+      "siste eksemplarer",
+      "lavt lager"
+    ],
+    "discontinued": [
+      "utgått",
+      "utgått vare",
+      "utgått fra sortimentet",
+      "ikke lenger tilgjengelig",
+      "produktet er utgått",
+      "utgått modell",
+      "utfaset"
+    ]
+  },
+  "nl": {
+    "in stock": [
+      "op voorraad",
+      "direct leverbaar",
+      "voorradig",
+      "weer op voorraad",
+      "uit voorraad leverbaar"
+    ],
+    "out of stock": [
+      "niet op voorraad",
+      "niet voorradig",
+      "uit voorraad",
+      "niet leverbaar",
+      "tijdelijk niet leverbaar",
+      "tijdelijk niet op voorraad",
+      "momenteel niet beschikbaar",
+      "niet beschikbaar",
+      "geen voorraad"
+    ],
+    "sold out": [
+      "uitverkocht",
+      "helaas uitverkocht",
+      "sold out"
+    ],
+    "pre-order": [
+      "pre-order",
+      "preorder",
+      "voorbestellen",
+      "te pre-orderen",
+      "voorbestelling"
+    ],
+    "back-order": [
+      "backorder",
+      "op nabestelling",
+      "binnenkort weer op voorraad"
+    ],
+    "limited": [
+      "beperkte voorraad",
+      "beperkt beschikbaar",
+      "beperkt leverbaar",
+      "laatste exemplaren",
+      "laatste stuks",
+      "weinig voorraad",
+      "bijna uitverkocht"
+    ],
+    "discontinued": [
+      "uit het assortiment",
+      "niet meer leverbaar",
+      "niet meer verkrijgbaar",
+      "uitgefaseerd",
+      "uit productie",
+      "niet langer leverbaar",
+      "niet langer verkrijgbaar"
+    ]
+  },
+  "pl": {
+    "in stock": [
+      "w magazynie",
+      "na stanie",
+      "na magazynie",
+      "dostępny od ręki",
+      "dostępny natychmiast",
+      "produkt dostępny",
+      "towar dostępny",
+      "dostępny w magazynie"
+    ],
+    "out of stock": [
+      "brak w magazynie",
+      "brak na stanie",
+      "niedostępny",
+      "produkt niedostępny",
+      "chwilowo niedostępny",
+      "tymczasowo niedostępny",
+      "brak towaru",
+      "brak na magazynie",
+      "towar niedostępny"
+    ],
+    "sold out": [
+      "wyprzedane",
+      "wyprzedany",
+      "wyprzedana",
+      "produkt wyprzedany",
+      "wyprzedano"
+    ],
+    "pre-order": [
+      "przedsprzedaż",
+      "przedsprzedaży",
+      "w przedsprzedaży",
+      "zamówienie przedpremierowe",
+      "przedpremierowo"
+    ],
+    "back-order": [
+      "oczekiwanie na dostawę",
+      "oczekujemy na dostawę",
+      "w trakcie uzupełniania",
+      "wkrótce w magazynie"
+    ],
+    "limited": [
+      "ograniczona ilość",
+      "ograniczona liczba",
+      "ostatnie sztuki",
+      "ostatnie egzemplarze",
+      "mało sztuk",
+      "niski stan magazynowy",
+      "limitowana ilość"
+    ],
+    "discontinued": [
+      "produkt wycofany",
+      "wycofany z oferty",
+      "wycofany ze sprzedaży",
+      "wycofane z oferty",
+      "produkt wycofany z oferty",
+      "nie jest już dostępny",
+      "nie jest już produkowany",
+      "wycofany z produkcji"
+    ]
+  },
+  "pt": {
+    "in stock": [
+      "em stock",
+      "em estoque",
+      "disponível em stock",
+      "disponível em estoque",
+      "pronta entrega",
+      "disponível imediatamente"
+    ],
+    "out of stock": [
+      "sem stock",
+      "sem estoque",
+      "fora de stock",
+      "fora de estoque",
+      "indisponível",
+      "produto indisponível",
+      "temporariamente indisponível",
+      "não disponível"
+    ],
+    "sold out": [
+      "esgotado",
+      "esgotada",
+      "produto esgotado",
+      "esgotou"
+    ],
+    "pre-order": [
+      "pré-venda",
+      "pré venda",
+      "pré-encomenda",
+      "pré encomenda",
+      "pré-pedido",
+      "pré-reserva"
+    ],
+    "back-order": [
+      "encomenda pendente",
+      "reposição",
+      "em reposição",
+      "aguardando reposição",
+      "backorder"
+    ],
+    "limited": [
+      "stock limitado",
+      "estoque limitado",
+      "últimas unidades",
+      "poucas unidades",
+      "quantidade limitada",
+      "quantidades limitadas",
+      "estoque baixo",
+      "stock baixo",
+      "últimas peças"
+    ],
+    "discontinued": [
+      "descontinuado",
+      "produto descontinuado",
+      "fora de linha",
+      "já não está disponível",
+      "já não disponível",
+      "deixou de ser fabricado",
+      "fora de catálogo",
+      "não está mais disponível",
+      "não é mais fabricado"
+    ]
+  },
+  "ro": {
+    "in stock": [
+      "în stoc",
+      "in stoc",
+      "stoc disponibil",
+      "disponibil în stoc",
+      "pe stoc",
+      "disponibil imediat"
+    ],
+    "out of stock": [
+      "indisponibil",
+      "produs indisponibil",
+      "fără stoc",
+      "nu este în stoc",
+      "nu este disponibil",
+      "temporar indisponibil",
+      "momentan indisponibil",
+      "stoc indisponibil",
+      "nu este pe stoc"
+    ],
+    "sold out": [
+      "epuizat",
+      "stoc epuizat",
+      "produs epuizat"
+    ],
+    "pre-order": [
+      "precomandă",
+      "precomanda",
+      "pre-comandă",
+      "pre-order",
+      "în precomandă",
+      "disponibil la precomandă"
+    ],
+    "back-order": [
+      "în curând în stoc",
+      "reaprovizionare",
+      "în curs de reaprovizionare",
+      "așteptăm aprovizionarea",
+      "backorder",
+      "în aprovizionare"
+    ],
+    "limited": [
+      "stoc limitat",
+      "cantitate limitată",
+      "stoc redus",
+      "ultimele bucăți",
+      "ultimele bucăţi",
+      "ultimele produse",
+      "ultima bucată"
+    ],
+    "discontinued": [
+      "produs retras",
+      "retras din ofertă",
+      "retras de la vânzare",
+      "produs descontinuat",
+      "descontinuat",
+      "nu se mai produce",
+      "nu mai este disponibil",
+      "nu mai e disponibil",
+      "scos din ofertă",
+      "scos din producție",
+      "produs scos din fabricație"
+    ]
+  },
+  "ru": {
+    "in stock": [
+      "в наличии",
+      "есть в наличии",
+      "в наличии на складе",
+      "на складе",
+      "товар в наличии"
+    ],
+    "out of stock": [
+      "нет в наличии",
+      "товара нет в наличии",
+      "временно нет в наличии",
+      "временно отсутствует",
+      "нет на складе"
+    ],
+    "sold out": [
+      "распродано",
+      "товар распродан",
+      "распродан"
+    ],
+    "pre-order": [
+      "предзаказ",
+      "предварительный заказ",
+      "предзаказа",
+      "предзаказать"
+    ],
+    "back-order": [
+      "под заказ",
+      "ожидается поступление",
+      "скоро в наличии",
+      "ожидаем поступление",
+      "поставка ожидается",
+      "товар ожидается"
+    ],
+    "limited": [
+      "ограниченное количество",
+      "ограниченное число",
+      "последние экземпляры",
+      "последние штуки",
+      "заканчивается",
+      "мало в наличии",
+      "осталось мало"
+    ],
+    "discontinued": [
+      "снят с производства",
+      "снято с производства",
+      "товар снят с продажи",
+      "снят с продажи",
+      "больше не выпускается",
+      "больше недоступен",
+      "архивный товар"
+    ]
+  },
+  "sv": {
+    "in stock": [
+      "i lager",
+      "finns i lager",
+      "på lager",
+      "åter i lager"
+    ],
+    "out of stock": [
+      "slut i lager",
+      "ej i lager",
+      "inte i lager",
+      "ej tillgänglig",
+      "inte tillgänglig",
+      "tillfälligt slut",
+      "tillfälligt slut i lager",
+      "finns ej i lager"
+    ],
+    "sold out": [
+      "slutsåld",
+      "helt slutsåld",
+      "utsåld"
+    ],
+    "pre-order": [
+      "förbeställ",
+      "förbeställning",
+      "förboka",
+      "förbokning",
+      "förbeställa"
+    ],
+    "back-order": [
+      "restnoterad",
+      "restnotering",
+      "på restnotering"
+    ],
+    "limited": [
+      "begränsat lager",
+      "begränsad mängd",
+      "begränsat antal",
+      "få kvar",
+      "sista exemplaren",
+      "lågt lagersaldo",
+      "begränsad tillgång"
+    ],
+    "discontinued": [
+      "utgått",
+      "utgått ur sortimentet",
+      "produkten har utgått",
+      "utgående modell",
+      "inte längre tillgänglig",
+      "ej längre tillgänglig"
+    ]
+  },
+  "tr": {
+    "in stock": [
+      "stokta",
+      "stokta var",
+      "stokta mevcut",
+      "hemen teslim",
+      "stokta bulunuyor"
+    ],
+    "out of stock": [
+      "stokta yok",
+      "stokta bulunmuyor",
+      "stokta mevcut değil",
+      "stok yok",
+      "geçici olarak stokta yok",
+      "şu anda stokta yok",
+      "temin edilemiyor",
+      "mevcut değil",
+      "ürün mevcut değil",
+      "stokta değil"
+    ],
+    "sold out": [
+      "tükendi",
+      "tükenmiştir",
+      "satıldı",
+      "ürün tükendi",
+      "ürün tükenmiştir",
+      "stoklar tükendi"
+    ],
+    "pre-order": [
+      "ön sipariş",
+      "ön siparişe açık",
+      "ön sipariş verilebilir",
+      "ön siparişle",
+      "ön satış",
+      "ön siparişte"
+    ],
+    "back-order": [
+      "tedarik ediliyor",
+      "stok bekleniyor",
+      "yakında stokta",
+      "tedarik aşamasında",
+      "temin sürecinde"
+    ],
+    "limited": [
+      "sınırlı stok",
+      "sınırlı sayıda",
+      "son birkaç adet",
+      "son ürünler",
+      "stok azalıyor",
+      "sınırlı sayıda ürün",
+      "tükenmek üzere"
+    ],
+    "discontinued": [
+      "üretimden kaldırıldı",
+      "üretimi durduruldu",
+      "satıştan kaldırıldı",
+      "artık satılmıyor",
+      "artık üretilmiyor",
+      "ürün kalktı",
+      "üretimi sonlandırıldı",
+      "satıştan kalktı"
+    ]
+  },
+  "zh": {
+    "in stock": [
+      "有货",
+      "现货",
+      "现货供应",
+      "库存充足",
+      "有現貨",
+      "現貨",
+      "現貨供應",
+      "有庫存",
+      "有库存",
+      "庫存充足"
+    ],
+    "out of stock": [
+      "缺货",
+      "无货",
+      "暂时缺货",
+      "暂无库存",
+      "暫無庫存",
+      "暂无现货",
+      "無貨",
+      "缺貨",
+      "暫時缺貨",
+      "没有库存",
+      "无库存",
+      "暫無現貨",
+      "断货",
+      "斷貨",
+      "非现货",
+      "无现货"
+    ],
+    "sold out": [
+      "售罄",
+      "已售罄",
+      "售完",
+      "已售完"
+    ],
+    "pre-order": [
+      "预售",
+      "預售",
+      "预订",
+      "預訂",
+      "预购",
+      "預購",
+      "可预订",
+      "预售中",
+      "接受预订"
+    ],
+    "back-order": [
+      "补货中",
+      "補貨中",
+      "待补货",
+      "待到货",
+      "预计到货",
+      "預計到貨",
+      "缺货登记",
+      "调货中",
+      "調貨中"
+    ],
+    "limited": [
+      "限量",
+      "限量供应",
+      "库存紧张",
+      "庫存緊張",
+      "库存有限",
+      "庫存有限",
+      "数量有限",
+      "數量有限",
+      "仅剩少量",
+      "僅剩少量",
+      "少量现货",
+      "少量現貨"
+    ],
+    "discontinued": [
+      "停产",
+      "停產",
+      "已停产",
+      "已停產",
+      "已下架",
+      "停售",
+      "已停售",
+      "不再销售",
+      "不再銷售",
+      "不再生产",
+      "绝版",
+      "絕版"
+    ]
+  }
+}

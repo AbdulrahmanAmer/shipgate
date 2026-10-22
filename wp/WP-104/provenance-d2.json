@@ -1,0 +1,424 @@
+{
+  "affiliate-disclosure-phrases.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 2 UX-021"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": ""
+  },
+  "analytics-vendors.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (shape)",
+      "https://developers.google.com/tag-platform/gtagjs/install",
+      "https://developers.google.com/tag-platform/learn/sst-fundamentals/5-sst-setup-analytics",
+      "https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=gtag",
+      "https://support.google.com/analytics/answer/7372977",
+      "https://www.googletagmanager.com/gtag/js",
+      "https://www.googletagmanager.com/gtm.js",
+      "https://developers.facebook.com/docs/meta-pixel/get-started",
+      "https://connect.facebook.net/en_US/fbevents.js",
+      "https://developer.matomo.org/api-reference/tracking-api",
+      "https://cdn.matomo.cloud/demo.matomo.cloud/matomo.js",
+      "https://plausible.io/docs/events-api",
+      "https://plausible.io/js/script.js",
+      "https://usefathom.com/docs/script/script-advanced",
+      "https://cdn.usefathom.com/script.js",
+      "https://cloud.umami.is/script.js",
+      "https://posthog.com/docs/api/capture",
+      "https://docs.mixpanel.com/reference/track-event",
+      "https://raw.githubusercontent.com/mixpanel/mixpanel-js/master/src/mixpanel-core.js",
+      "https://raw.githubusercontent.com/segmentio/analytics-next/master/packages/browser/src/plugins/segmentio/index.ts",
+      "https://raw.githubusercontent.com/segmentio/analytics-next/master/packages/browser/src/core/constants/index.ts",
+      "https://static.hotjar.com/c/",
+      "https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup",
+      "https://www.clarity.ms/tag/",
+      "https://analytics.tiktok.com/i18n/pixel/events.js",
+      "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+      "https://s.pinimg.com/ct/core.js",
+      "https://static.ads-twitter.com/uwt.js",
+      "https://bat.bing.com/bat.js",
+      "https://experienceleague.adobe.com/en/docs/analytics/implementation/other/hardcoded",
+      "https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/config-vars/trackingserver",
+      "https://developer.adobe.com/analytics-collection-apis/methods/data-insertion/variable-reference"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Facts (hosts, request paths, parameter names, id shapes) from the vendors' public documentation and open-source client libraries listed (Mixpanel mixpanel-js and Segment analytics-next are MIT-licensed; only endpoint names were read). Browser hit shapes for Google tag, Meta Pixel, Matomo Cloud, Fathom, Umami, Hotjar, TikTok, LinkedIn, Pinterest, X and Bing UET were also observed on 2026-10-22 by running each vendor's install snippet with a shape-valid fake id in headless Chrome 155 and recording the requests; Plausible's hit was observed on plausible.io itself."
+  },
+  "autocomplete-map.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md § A11-022 (shape)",
+      "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Autocomplete token names are from the WHATWG HTML Standard (autofill field names, CC BY 4.0). The per-locale label phrases and name-attribute regexes are authored by shipgate from common form wording and field-name conventions; they are not copied from a source."
+  },
+  "carousel-controls.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md A11-021 part carousel",
+      "spec:spec/04-algorithms.md § 15 Disclosure exemption",
+      "https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-1-prev-next/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "English control names checked against the W3C WAI-ARIA APG carousel example (aria-label values `Stop automatic slide show`, `Next Slide`, `Previous Slide`); other locales authored from knowledge."
+  },
+  "carousel-markers.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md § A11-021 (use)",
+      "https://swiperjs.com/swiper-api",
+      "https://raw.githubusercontent.com/kenwheeler/slick/master/slick/slick.js",
+      "https://splidejs.com/guides/structure/",
+      "https://raw.githubusercontent.com/metafizzy/flickity/master/css/flickity.css",
+      "https://raw.githubusercontent.com/glidejs/glide/master/README.md",
+      "https://raw.githubusercontent.com/OwlCarousel2/OwlCarousel2/develop/dist/assets/owl.carousel.css",
+      "https://getbootstrap.com/docs/5.3/components/carousel/",
+      "https://keen-slider.io/docs",
+      "https://raw.githubusercontent.com/ganlanyuan/tiny-slider/master/src/tiny-slider.js",
+      "https://raw.githubusercontent.com/pawelgrzybek/siema/master/README.md"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Class names are facts taken from each library's documentation or source (Swiper, Slick, Splide, Flickity, Glide, Owl Carousel 2, Bootstrap, Keen Slider, tiny-slider, Siema); no code is copied."
+  },
+  "chrome-state-classes.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (chrome-state-classes shape)",
+      "https://developer.wordpress.org/reference/functions/wp_nav_menu/",
+      "https://router.vuejs.org/guide/essentials/active-links.html",
+      "https://bulma.io/documentation/components/navbar/",
+      "https://getbootstrap.com/docs/5.3/components/navs-tabs/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "State class names from the WordPress nav-menu documentation, Vue Router, Bulma and Bootstrap docs. The generic token `current` is authored (Jekyll/Hugo site convention) and not verified against a fetched source."
+  },
+  "claimPatterns.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (claimPatterns shape)",
+      "spec:spec/packs/ux.md § 2 UX-003 (numeric claims)"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored for shipgate; no external text copied. Not checked by native speakers."
+  },
+  "claimPhrases.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 2 UX-013 (shape and English examples), § 3 Phrase-list matching"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": ""
+  },
+  "countdown-markers.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (countdown-markers shape), UX-020 part timer",
+      "https://cdn.jsdelivr.net/npm/flipclock/dist/flipclock.css",
+      "https://cdn.jsdelivr.net/npm/flipdown/dist/flipdown.js",
+      "https://raw.githubusercontent.com/PButcher/flipdown/master/README.md",
+      "https://cdn.jsdelivr.net/gh/wimbarelds/TimeCircles/inc/TimeCircles.css"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Library root selectors (FlipClock .flip-clock, FlipDown .flipdown, TimeCircles .time_circles) are facts from the libraries' CSS and README. The text and duration regexes are authored by shipgate."
+  },
+  "error-pages.json": {
+    "source": [
+      "spec:spec/packs/ux.md UX-005 and § 3 (shape)",
+      "https://registry.npmjs.org/next (next@16.4.2 and next@15.5.9 tarballs: dist/pages/_error.js, dist/client/components/builtin/not-found.js, global-error.js, http-access-fallback/error-fallback.js)",
+      "https://registry.npmjs.org/@nuxt/ui-templates (1.3.4: dist/templates/error-404.vue, error-500.vue)",
+      "https://raw.githubusercontent.com/nuxt/nuxt/main/packages/nuxt/src/app/components/nuxt-error-page.vue",
+      "https://raw.githubusercontent.com/vitejs/vite/main/packages/vite/src/node/server/middlewares/base.ts",
+      "https://raw.githubusercontent.com/pillarjs/finalhandler/master/index.js",
+      "https://raw.githubusercontent.com/django/django/main/django/views/defaults.py",
+      "https://raw.githubusercontent.com/django/django/main/django/views/templates/technical_404.html",
+      "https://raw.githubusercontent.com/rails/rails/main/railties/lib/rails/generators/rails/app/templates/public/404.html",
+      "https://raw.githubusercontent.com/rails/rails/main/railties/lib/rails/generators/rails/app/templates/public/500.html",
+      "https://raw.githubusercontent.com/rails/rails/main/railties/lib/rails/generators/rails/app/templates/public/422.html",
+      "https://raw.githubusercontent.com/laravel/framework/12.x/src/Illuminate/Foundation/Exceptions/views/minimal.blade.php",
+      "https://raw.githubusercontent.com/laravel/framework/12.x/src/Illuminate/Foundation/Exceptions/views/layout.blade.php",
+      "https://raw.githubusercontent.com/symfony/symfony/7.4/src/Symfony/Component/ErrorHandler/Resources/views/error.html.php",
+      "https://raw.githubusercontent.com/nginx/nginx/master/src/http/ngx_http_special_response.c",
+      "https://raw.githubusercontent.com/apache/httpd/trunk/modules/http/http_protocol.c",
+      "https://pubstore.acs.org/acsccc-16-12.html",
+      "https://ewh.ieee.org/soc/nps/nss-mic/2014/Phocea/Css/bootstrap/ico/apple-touch-icon-57-precomposed.html",
+      "https://static-site.vercel.app/sg-no-such-path-8271634",
+      "https://examples.vercel.app/sg-no-such-path-8271634",
+      "https://sg-no-such-project-8271634.vercel.app/",
+      "https://answers.netlify.com/t/page-not-found-looks-like-youve-followed-a-broken-link-or-entered-a-url-that-doesnt-exist-on-this-site/18031",
+      "https://www.crunchbase.com/",
+      "https://1337x.to/sg-no-such-path-8271634",
+      "https://www.truthfinder.com/sg-no-such-path-8271634",
+      "https://sg-no-such-user-8271634.github.io/",
+      "https://octocat.github.io/sg-no-such-path-8271634",
+      "https://sg-no-such-app-8271634.web.app/",
+      "https://sg-no-such-app-8271634.herokuapp.com/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Each entry is a short factual string (page title, headline, status wording) that a framework, server or host serves by default; no template, markup or code is copied. Product names belong to their owners."
+  },
+  "extend-session-labels.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md A11-033",
+      "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored from knowledge of session-timeout dialog wording; WCAG 2.2 Understanding 2.2.1 consulted for the requirement only."
+  },
+  "generic-green-claims.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 2 UX-013 part green",
+      "https://eur-lex.europa.eu/eli/dir/2024/825/oj",
+      "https://publications.europa.eu/resource/celex/32024L0825"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "CC-BY-4.0",
+    "attribution": "Example terms of generic environmental claims and offset-based climate claims quoted from recitals of Directive (EU) 2024/825 in cs, da, de, en, es, fi, fr, it, nl, pl, pt, ro, sv (Publications Office of the European Union, reuse under Commission Decision 2011/833/EU, CC BY 4.0). Inflected forms and the ar, ja, ko, nb, ru, tr, zh lists are shipgate-authored."
+  },
+  "incentive-disclosure-phrases.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 2 UX-027 and § 3"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": ""
+  },
+  "logo-wall-headings.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 2 UX-019 part logo-wall"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": ""
+  },
+  "no-results-phrases.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 2 UX-026 part empty",
+      "https://github.com/Shopify/dawn/tree/main/locales",
+      "https://translate.wordpress.org/projects/wp-themes/twentytwentyone/",
+      "https://translate.wordpress.org/projects/wp-themes/twentytwenty/",
+      "https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/",
+      "https://translate.wordpress.org/projects/wp/dev/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Short interface strings checked against the default no-results strings of Shopify Dawn locales (MIT) and the WordPress core, Twenty Twenty, Twenty Twenty-One and WooCommerce translations (GPL-2.0-or-later). The file lists short factual phrases (the first clause of each string, no term placeholders), not the translation files; the orchestrator decides whether GPL provenance of these phrase fragments matters (see notes-L2.md item 2)."
+  },
+  "password-reset-labels.json": {
+    "source": [
+      "spec:spec/packs/ux.md UX-018",
+      "https://raw.githubusercontent.com/tigrish/devise-i18n/master/rails/locales/en.yml",
+      "https://raw.githubusercontent.com/tigrish/devise-i18n/master/rails/locales/de.yml",
+      "https://raw.githubusercontent.com/tigrish/devise-i18n/master/rails/locales/fr.yml",
+      "https://raw.githubusercontent.com/tigrish/devise-i18n/master/rails/locales/ja.yml",
+      "https://raw.githubusercontent.com/tigrish/devise-i18n/master/rails/locales/zh-CN.yml"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Anchor phrases for all 20 locales cross-checked against the devise-i18n `forgot_your_password` / `send_me_reset_password_instructions` strings (MIT, https://github.com/tigrish/devise-i18n; ar, cs, da, de, en, es, fi, fr, it, ja, ko, nb, nl, pl, pt-BR, ro, ru, sv, tr, zh-CN files fetched). Short factual UI phrases only; the remaining variants are authored from knowledge."
+  },
+  "password-reset-paths.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (password-reset-paths shape)",
+      "spec:spec/packs/security.md SEC-025"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Framework slugs (Django password_reset, django-allauth accounts/password/reset, Laravel forgot-password and password/reset, Devise users/password/new, Rails passwords/new, WooCommerce lost-password, PrestaShop password-recovery, Keycloak reset-credentials, Moodle forgot_password.php, Drupal user/password, Shopify account/reset, Magento forgotpassword) and localised slugs are authored from knowledge, not fetched."
+  },
+  "payment-amounts.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (shape)",
+      "https://docs.stripe.com/api/checkout/sessions/create",
+      "https://docs.stripe.com/api/payment_intents/create",
+      "https://docs.stripe.com/currencies",
+      "https://developer.paypal.com/docs/api/orders/v2/",
+      "https://developer.paypal.com/docs/api/orders/v2/schema.json",
+      "https://raw.githubusercontent.com/Adyen/adyen-openapi/main/json/CheckoutService-v71.json",
+      "https://docs.adyen.com/development-resources/live-endpoints/",
+      "https://developer.paypal.com/braintree/graphql/guides/transactions/",
+      "https://developer.paypal.com/braintree/graphql/guides/making_api_calls/",
+      "https://developer.squareup.com/reference/square/payments-api/create-payment",
+      "https://developer.squareup.com/reference/square/checkout-api/create-payment-link",
+      "https://developer.squareup.com/docs/build-basics/using-rest-api",
+      "https://docs.mollie.com/reference/create-payment",
+      "https://developer.paddle.com/api-reference/transactions/create-transaction",
+      "https://developer.paddle.com/api-reference/about/",
+      "https://docs.lemonsqueezy.com/api/checkouts/create-checkout",
+      "https://docs.lemonsqueezy.com/api/getting-started/requests",
+      "https://shopify.dev/docs/api/ajax/reference/cart"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Request paths, field names and amount units from each provider's public API documentation and, for PayPal Orders v2 and Adyen Checkout v71, the providers' published OpenAPI documents."
+  },
+  "placeholder-tracking-ids.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (shipped list)",
+      "https://developers.google.com/tag-platform/gtagjs/install",
+      "https://support.google.com/analytics/answer/7372977",
+      "https://developers.facebook.com/docs/meta-pixel/get-started",
+      "https://usefathom.com/docs/script/script-advanced",
+      "https://docs.mixpanel.com/docs/tracking-methods/sdks/javascript",
+      "https://matomo.org/faq/how-to-install/faq_19424/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "The first, UA, zero, sequence and your/test/demo entries are the list in spec/packs/ux.md § 3; the others are the placeholder spellings the vendors' own install docs print (G-/GT-/AW-XXXXXXXXX, TAG_ID, {your-pixel-id-goes-here}, ABCDEFG, YOUR_PROJECT_TOKEN, {$IDSITE})."
+  },
+  "rating-widget-markers.json": {
+    "source": [
+      "spec:spec/packs/privacy.md § PRV-024 (shape)",
+      "https://framer.com/help/articles/how-to-embed-trustpilot-widget-into-your-website",
+      "https://support.yotpo.com/docs/adding-the-reviews-widget-30",
+      "https://support.yotpo.com/docs/generic-other-platforms-installing-yotpo-reviews-v1",
+      "https://judge.me/help/en/articles/12058208-liquid-code-for-judge-me-widgets",
+      "https://stampedsupport.stamped.io/hc/en-us/articles/9069569060891-Unsupported-or-Custom-Platform-Getting-Started",
+      "https://support.okendo.io/en/articles/1770332-manually-install-okendo-reviews-basic-setup",
+      "https://docs.bazaarvoice.com/articles/ratings-reviews/integrate-bazaarvoice-ugc-into-your-pdp.md",
+      "https://docs.bazaarvoice.com/articles/ratings-reviews/inline_ratings.md",
+      "https://help.feefo.com/knowledge-base/on-page-reviews",
+      "https://raw.githubusercontent.com/woocommerce/woocommerce/trunk/plugins/woocommerce/templates/single-product/rating.php"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Selectors are the embed markup the vendors document (Trustpilot via a third-party Framer help page, Yotpo, Judge.me, Stamped, Okendo, Bazaarvoice, Feefo) and the WooCommerce rating template."
+  },
+  "ratingPatterns.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (ratingPatterns shape)",
+      "spec:spec/packs/ux.md § 2 UX-003 (rating candidates)"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored for shipgate from knowledge of how rating widgets and review summaries are worded in each language; no external text copied. Not checked by native speakers."
+  },
+  "regulated-claims.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (regulated-claims.json shape)",
+      "spec:spec/packs/ux.md § 2 UX-013 part regulated",
+      "https://www.legislation.gov.uk/eur/2018/848/annex/IV"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Reserved organic-production terms for the EU languages come from Annex IV of Regulation (EU) 2018/848 as published on legislation.gov.uk (version derived from EUR-Lex on IP completion day, 31 December 2020; Open Government Licence v3.0; EUR-Lex content reused under Commission Decision 2011/833/EU). All other entries (health, medical, origin, and organic terms of non-EU locales) are authored by shipgate from knowledge, not fetched, and not checked by native speakers."
+  },
+  "required-labels.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md A11-003 part required"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  },
+  "same-as-labels.json": {
+    "source": [
+      "spec:spec/packs/accessibility.md A11-030",
+      "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored from knowledge of checkout address-copy checkbox wording; WCAG 2.2 Understanding 3.3.7 consulted for the requirement only."
+  },
+  "social-proof-widgets.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (social-proof-widgets shape), UX-020 part social-proof",
+      "https://help.nudgify.com/article/236-install-nudgify-on-any-website",
+      "https://trustpulse.com/how-trustpulse-works/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Hosts: Nudgify script host pixel.nudgify.com from Nudgify's install article; TrustPulse script host a.trstplse.com from trustpulse.com. The generic text patterns are authored by shipgate."
+  },
+  "stock-count-phrases.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (stock-count-phrases shape)",
+      "spec:spec/packs/ux.md § 2 UX-020 part stock"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored for shipgate from knowledge of storefront wording in each language; no external text copied. Not checked by native speakers."
+  },
+  "stock-phrases.json": {
+    "source": [
+      "spec:spec/packs/search-engines.md § 2 SE-112 (stock-phrases.json shape and states)"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored for shipgate from knowledge of storefront wording in each language; no external text copied. Not checked by native speakers."
+  },
+  "stock-preview-hosts.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (shape)",
+      "https://www.gettyimages.com/photos/dog",
+      "https://www.istockphoto.com/photos/dog",
+      "https://depositphotos.com/stock-photos/dog.html",
+      "https://www.alamy.com/stock-photo/dog.html",
+      "https://stock.adobe.com/search?k=dog",
+      "https://api-reference.shutterstock.com/"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-vendor-documentation-facts",
+    "attribution": "Image CDN hostnames and path shapes observed in the image requests of the public search pages listed (headless Chrome, 2026-10-22); Shutterstock hosts and paths from the example responses in Shutterstock's public API reference. No images were downloaded or stored."
+  },
+  "term-patterns.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (term-patterns.json shape)",
+      "spec:spec/packs/ux.md § 2 UX-023 (kinds and units)"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Authored for shipgate from knowledge of commercial-terms wording in each language; no external text copied. Not checked by native speakers."
+  },
+  "testimonial-markers.json": {
+    "source": [
+      "spec:spec/packs/ux.md § 3 (testimonial-markers shape), UX-014, UX-017",
+      "https://raw.githubusercontent.com/elementor/elementor/main/includes/widgets/testimonial.php",
+      "https://cdn.jsdelivr.net/npm/@wordpress/block-library/src/pullquote/save.js",
+      "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/packages/block-library/src/post-author/index.php",
+      "https://raw.githubusercontent.com/WordPress/twentytwentyone/master/inc/template-tags.php",
+      "https://schema.org/Review",
+      "https://html.spec.whatwg.org/multipage/grouping-content.html"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Selector facts from Elementor's testimonial widget, WordPress core blocks and Twenty Twenty-One, schema.org and the HTML Standard. The generic .testimonial and .team* selectors and all byline/team phrases for the 20 locales are authored by shipgate."
+  },
+  "trust-marks.json": {
+    "source": [
+      "spec:spec/packs/ux.md UX-019 (shape and dHash definition)",
+      "https://cdn.trustpilot.net/brand-assets/4.1.0/logo-black.svg",
+      "https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg",
+      "https://m.bbb.org/brand/seals/Accredited_Business_Seal_Rating_RGB.svg",
+      "https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png",
+      "https://stripe.com/newsroom/brand-assets",
+      "https://images.stripeassets.com/fzn2n1nzq965/4M6d6BSWzlgsrJx8rdZb0I/733f37ef69b5ca1d3d33e127184f4ce4/Powered_by_Stripe.svg",
+      "https://www.trustedshops.co.uk/hubfs/trustmark_intro.svg",
+      "https://fsc.org/themes/custom/fsc_theme/images/fsc-logo-black.png",
+      "https://commons.wikimedia.org/wiki/File:Conformit%C3%A9_Europ%C3%A9enne_(logo).svg",
+      "https://commons.wikimedia.org/wiki/File:Energy_Star_logo.svg",
+      "https://commons.wikimedia.org/wiki/File:USDA_organic_seal.svg",
+      "https://commons.wikimedia.org/wiki/File:Fairtrade_Certification_Mark.svg",
+      "https://commons.wikimedia.org/wiki/File:Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB.svg",
+      "https://knowledge.digicert.com/alerts/update-your-norton-seal-script-for-continued-display-on-your-website",
+      "https://docs.rackspace.com/docs/add-a-site-seal-code-to-your-website",
+      "https://colonelserver.com/kb/installing-an-ssl-certificate-site-seal/",
+      "https://all-inkl.com/it/importante/guide/scripts/miscellaneous/ssl-trust-logo/how-to-implement-the-ssl-trust-logo_81.html",
+      "https://www.feroot.com/trackers-database/truste-seal",
+      "https://en.wikipedia.org/wiki/3-D_Secure"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored",
+    "attribution": "Only names, host names, file-name globs, alt-text patterns and 64-bit perceptual hashes derived from the badge images are stored; no image is redistributed. Names and marks belong to their owners and are used as factual identifiers."
+  },
+  "unsubscribe-labels.json": {
+    "source": [
+      "spec:spec/packs/ops.md OPS-005"
+    ],
+    "retrieved": "2026-10-22",
+    "licence": "LicenseRef-shipgate-authored"
+  }
+}

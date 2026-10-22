@@ -1,0 +1,678 @@
+{
+  "ar": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|من)\\s*(?<best>5|10|٥|١٠)\\s*(?:نجوم|نجمة|نجمات)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10|٥|١٠)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:التقييم|تقييم|تقييمات|التقييمات|متوسط التقييم|تقييم العملاء|التصنيف|درجة التقييم|التقييم العام)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|من)\\s*(?<best>5|10|٥|١٠)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:بناءً على|استنادًا إلى|من|حسب)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:تقييم|تقييمات|مراجعة|مراجعات|تعليق|تعليقات|رأي|آراء|أصوات|صوت)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:التقييم|تقييم|تقييمات|التقييمات|متوسط التقييم|تقييم العملاء|التصنيف|درجة التقييم|التقييم العام)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:بناءً على|استنادًا إلى|من|حسب)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:تقييم|تقييمات|مراجعة|مراجعات|تعليق|تعليقات|رأي|آراء|أصوات|صوت)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:التقييم|تقييم|تقييمات|التقييمات|متوسط التقييم|تقييم العملاء|التصنيف|درجة التقييم|التقييم العام)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:نجوم|نجمة|نجمات)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:تقييم|تقييمات|مراجعة|مراجعات|تعليق|تعليقات|رأي|آراء|أصوات|صوت)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:تقييم|تقييمات|مراجعة|مراجعات|تعليق|تعليقات|رأي|آراء|أصوات|صوت)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:نجوم|نجمة|نجمات)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:تقييم|تقييمات|مراجعة|مراجعات|تعليق|تعليقات|رأي|آراء|أصوات|صوت)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:تقييم|تقييمات|مراجعة|مراجعات|تعليق|تعليقات|رأي|آراء|أصوات|صوت)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:تقييم|تقييمات|مراجعة|مراجعات|تعليق|تعليقات|رأي|آراء|أصوات|صوت)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "cs": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|z)\\s*(?<best>5|10)\\s*(?:hvězdiček|hvězdičky|hvězdička|hvězd)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:hodnocení|skóre|průměrné hodnocení|ohodnoceno|známka|recenze)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|z)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:na základě|z|podle)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recenzí|recenze|recenzích|hodnocení|názorů|hlasů|hodnocení zákazníků)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:hodnocení|skóre|průměrné hodnocení|ohodnoceno|známka|recenze)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:na základě|z|podle)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recenzí|recenze|recenzích|hodnocení|názorů|hlasů|hodnocení zákazníků)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:hodnocení|skóre|průměrné hodnocení|ohodnoceno|známka|recenze)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:hvězdiček|hvězdičky|hvězdička|hvězd)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:recenzí|recenze|recenzích|hodnocení|názorů|hlasů|hodnocení zákazníků)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:recenzí|recenze|recenzích|hodnocení|názorů|hlasů|hodnocení zákazníků)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:hvězdiček|hvězdičky|hvězdička|hvězd)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:recenzí|recenze|recenzích|hodnocení|názorů|hlasů|hodnocení zákazníků)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recenzí|recenze|recenzích|hodnocení|názorů|hlasů|hodnocení zákazníků)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:recenzí|recenze|recenzích|hodnocení|názorů|hlasů|hodnocení zákazníků)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "da": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|af)\\s*(?<best>5|10)\\s*(?:stjerner|stjerne)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:vurdering|vurderinger|bedømmelse|score|karakter|gennemsnitlig vurdering|anmeldelse)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|af)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:baseret på|fra|af)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:anmeldelser|anmeldelse|vurderinger|bedømmelser|omtaler|stemmer)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:vurdering|vurderinger|bedømmelse|score|karakter|gennemsnitlig vurdering|anmeldelse)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:baseret på|fra|af)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:anmeldelser|anmeldelse|vurderinger|bedømmelser|omtaler|stemmer)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:vurdering|vurderinger|bedømmelse|score|karakter|gennemsnitlig vurdering|anmeldelse)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:stjerner|stjerne)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:anmeldelser|anmeldelse|vurderinger|bedømmelser|omtaler|stemmer)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:anmeldelser|anmeldelse|vurderinger|bedømmelser|omtaler|stemmer)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:stjerner|stjerne)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:anmeldelser|anmeldelse|vurderinger|bedømmelser|omtaler|stemmer)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:anmeldelser|anmeldelse|vurderinger|bedømmelser|omtaler|stemmer)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:anmeldelser|anmeldelse|vurderinger|bedømmelser|omtaler|stemmer)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "de": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|von)\\s*(?<best>5|10)\\s*(?:Sterne|Sternen|Stern)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:Bewertung|Bewertungen|Durchschnittliche Bewertung|Kundenbewertung|Gesamtbewertung|Note)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|von)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basierend auf|auf Basis von|aus|bei|von)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:Bewertungen|Bewertung|Rezensionen|Rezension|Kundenbewertungen|Meinungen|Stimmen)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:Bewertung|Bewertungen|Durchschnittliche Bewertung|Kundenbewertung|Gesamtbewertung|Note)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basierend auf|auf Basis von|aus|bei|von)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:Bewertungen|Bewertung|Rezensionen|Rezension|Kundenbewertungen|Meinungen|Stimmen)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:Bewertung|Bewertungen|Durchschnittliche Bewertung|Kundenbewertung|Gesamtbewertung|Note)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:Sterne|Sternen|Stern)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:Bewertungen|Bewertung|Rezensionen|Rezension|Kundenbewertungen|Meinungen|Stimmen)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:Bewertungen|Bewertung|Rezensionen|Rezension|Kundenbewertungen|Meinungen|Stimmen)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:Sterne|Sternen|Stern)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:Bewertungen|Bewertung|Rezensionen|Rezension|Kundenbewertungen|Meinungen|Stimmen)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:Bewertungen|Bewertung|Rezensionen|Rezension|Kundenbewertungen|Meinungen|Stimmen)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:Bewertungen|Bewertung|Rezensionen|Rezension|Kundenbewertungen|Meinungen|Stimmen)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "en": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|out of)\\s*(?<best>5|10)\\s*(?:stars?)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:rated|rating|ratings|average rating|review score|customer rating)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|out of)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:based on|from|by)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:reviews?|ratings?|customer reviews|votes?)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:rated|rating|ratings|average rating|review score|customer rating)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:based on|from|by)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:reviews?|ratings?|customer reviews|votes?)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:rated|rating|ratings|average rating|review score|customer rating)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:stars?)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:reviews?|ratings?|customer reviews|votes?)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:reviews?|ratings?|customer reviews|votes?)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:stars?)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:reviews?|ratings?|customer reviews|votes?)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:reviews?|ratings?|customer reviews|votes?)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:reviews?|ratings?|customer reviews|votes?)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "es": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|de)\\s*(?<best>5|10)\\s*(?:estrellas?)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:valoración|valoraciones|puntuación|calificación|nota|valorado con|puntuado con|opinión media)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|de)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basado en|basada en|de|según)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:opiniones|reseñas|valoraciones|comentarios|votos|calificaciones)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:valoración|valoraciones|puntuación|calificación|nota|valorado con|puntuado con|opinión media)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basado en|basada en|de|según)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:opiniones|reseñas|valoraciones|comentarios|votos|calificaciones)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:valoración|valoraciones|puntuación|calificación|nota|valorado con|puntuado con|opinión media)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:estrellas?)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:opiniones|reseñas|valoraciones|comentarios|votos|calificaciones)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:opiniones|reseñas|valoraciones|comentarios|votos|calificaciones)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:estrellas?)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:opiniones|reseñas|valoraciones|comentarios|votos|calificaciones)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:opiniones|reseñas|valoraciones|comentarios|votos|calificaciones)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:opiniones|reseñas|valoraciones|comentarios|votos|calificaciones)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "fi": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|\\/)\\s*(?<best>5|10)\\s*(?:tähteä|tähden|tähti)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:arvosana|arvosanat|arvostelu|arvostelut|keskiarvo|arvio|arvioitu|pisteet)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|\\/)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:perustuu|perusteella|yhteensä)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:arvostelua|arvostelut|arvostelun|arviota|arviot|arvio|kommenttia|ääntä|asiakasarvostelua|asiakasarvostelut)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:arvosana|arvosanat|arvostelu|arvostelut|keskiarvo|arvio|arvioitu|pisteet)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:perustuu|perusteella|yhteensä)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:arvostelua|arvostelut|arvostelun|arviota|arviot|arvio|kommenttia|ääntä|asiakasarvostelua|asiakasarvostelut)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:arvosana|arvosanat|arvostelu|arvostelut|keskiarvo|arvio|arvioitu|pisteet)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:tähteä|tähden|tähti)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:arvostelua|arvostelut|arvostelun|arviota|arviot|arvio|kommenttia|ääntä|asiakasarvostelua|asiakasarvostelut)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:arvostelua|arvostelut|arvostelun|arviota|arviot|arvio|kommenttia|ääntä|asiakasarvostelua|asiakasarvostelut)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:tähteä|tähden|tähti)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:arvostelua|arvostelut|arvostelun|arviota|arviot|arvio|kommenttia|ääntä|asiakasarvostelua|asiakasarvostelut)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:arvostelua|arvostelut|arvostelun|arviota|arviot|arvio|kommenttia|ääntä|asiakasarvostelua|asiakasarvostelut)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:arvostelua|arvostelut|arvostelun|arviota|arviot|arvio|kommenttia|ääntä|asiakasarvostelua|asiakasarvostelut)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "fr": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|sur)\\s*(?<best>5|10)\\s*(?:étoiles?)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:note|notes|évaluation|notation|note moyenne|noté|notée|avis clients)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|sur)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basée? sur|selon|d['’]après|sur)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:avis|évaluations|commentaires|notes)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:note|notes|évaluation|notation|note moyenne|noté|notée|avis clients)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basée? sur|selon|d['’]après|sur)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:avis|évaluations|commentaires|notes)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:note|notes|évaluation|notation|note moyenne|noté|notée|avis clients)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:étoiles?)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:avis|évaluations|commentaires|notes)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:avis|évaluations|commentaires|notes)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:étoiles?)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:avis|évaluations|commentaires|notes)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:avis|évaluations|commentaires|notes)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:avis|évaluations|commentaires|notes)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "it": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|su)\\s*(?<best>5|10)\\s*(?:stelle|stella)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:valutazione|valutazioni|punteggio|voto|valutato|giudizio)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|su)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basato su|basata su|su|da)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recensioni|recensione|valutazioni|opinioni|voti|giudizi)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:valutazione|valutazioni|punteggio|voto|valutato|giudizio)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basato su|basata su|su|da)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recensioni|recensione|valutazioni|opinioni|voti|giudizi)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:valutazione|valutazioni|punteggio|voto|valutato|giudizio)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:stelle|stella)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:recensioni|recensione|valutazioni|opinioni|voti|giudizi)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:recensioni|recensione|valutazioni|opinioni|voti|giudizi)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:stelle|stella)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:recensioni|recensione|valutazioni|opinioni|voti|giudizi)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recensioni|recensione|valutazioni|opinioni|voti|giudizi)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:recensioni|recensione|valutazioni|opinioni|voti|giudizi)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "ja": [
+    {
+      "regex": "(?<best>5|10)\\s*(?:点|段階|つ星)?\\s*満点中\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)"
+    },
+    {
+      "regex": "(?:評価|総合評価|平均評価|レビュー評価|星評価)\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|／)\\s*(?<best>5|10)(?:\\s*[（(]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*件?\\s*[）)])?"
+    },
+    {
+      "regex": "(?:評価|総合評価|平均評価|レビュー評価|星評価)\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})(?:\\s*[（(]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*件?\\s*[）)])?"
+    },
+    {
+      "regex": "(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*つ星"
+    },
+    {
+      "regex": "[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)(?:\\s*[（(]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*件?\\s*[）)])?"
+    },
+    {
+      "regex": "(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*件(?:の)?\\s*(?:レビュー|口コミ|クチコミ|評価|感想|ご感想|お客様の声)"
+    },
+    {
+      "regex": "(?:レビュー|口コミ|クチコミ|評価|感想)\\s*[:：(（]?\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*件"
+    },
+    {
+      "regex": "(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    }
+  ],
+  "ko": [
+    {
+      "regex": "(?<best>5|10)\\s*점\\s*만점\\s*(?:에|중)?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*점?"
+    },
+    {
+      "regex": "(?:평점|별점|평가|만족도|평균 평점|고객 평점|평균 별점|점수)\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:점\\s*)?/\\s*(?<best>5|10)"
+    },
+    {
+      "regex": "(?:평점|별점|평가|만족도|평균 평점|고객 평점|평균 별점|점수)\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*점?"
+    },
+    {
+      "regex": "[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)(?:\\s*[(（]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:개|건)?\\s*[)）])?"
+    },
+    {
+      "regex": "(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:개|건|명)\\s*(?:의)?\\s*(?:리뷰|후기|평가|구매평|상품평)"
+    },
+    {
+      "regex": "(?:리뷰|후기|평가|구매평|상품평)\\s*[:：(（]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:개|건)?"
+    },
+    {
+      "regex": "(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    }
+  ],
+  "nb": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|av)\\s*(?<best>5|10)\\s*(?:stjerner|stjerne)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:vurdering|vurderinger|omtale|score|karakter|snittscore|gjennomsnittlig vurdering)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|av)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basert på|fra|av)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:anmeldelser|anmeldelse|vurderinger|omtaler|stemmer|tilbakemeldinger)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:vurdering|vurderinger|omtale|score|karakter|snittscore|gjennomsnittlig vurdering)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:basert på|fra|av)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:anmeldelser|anmeldelse|vurderinger|omtaler|stemmer|tilbakemeldinger)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:vurdering|vurderinger|omtale|score|karakter|snittscore|gjennomsnittlig vurdering)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:stjerner|stjerne)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:anmeldelser|anmeldelse|vurderinger|omtaler|stemmer|tilbakemeldinger)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:anmeldelser|anmeldelse|vurderinger|omtaler|stemmer|tilbakemeldinger)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:stjerner|stjerne)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:anmeldelser|anmeldelse|vurderinger|omtaler|stemmer|tilbakemeldinger)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:anmeldelser|anmeldelse|vurderinger|omtaler|stemmer|tilbakemeldinger)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:anmeldelser|anmeldelse|vurderinger|omtaler|stemmer|tilbakemeldinger)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "nl": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|van|op|uit)\\s*(?<best>5|10)\\s*(?:sterren|ster)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:beoordeling|beoordelingen|waardering|score|cijfer|gemiddelde beoordeling|beoordeeld met|gemiddeld)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|van|op|uit)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:gebaseerd op|op basis van|van|uit|door)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:beoordelingen|beoordeling|reviews?|recensies|ervaringen|stemmen|klantbeoordelingen)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:beoordeling|beoordelingen|waardering|score|cijfer|gemiddelde beoordeling|beoordeeld met|gemiddeld)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:gebaseerd op|op basis van|van|uit|door)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:beoordelingen|beoordeling|reviews?|recensies|ervaringen|stemmen|klantbeoordelingen)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:beoordeling|beoordelingen|waardering|score|cijfer|gemiddelde beoordeling|beoordeeld met|gemiddeld)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:sterren|ster)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:beoordelingen|beoordeling|reviews?|recensies|ervaringen|stemmen|klantbeoordelingen)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:beoordelingen|beoordeling|reviews?|recensies|ervaringen|stemmen|klantbeoordelingen)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:sterren|ster)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:beoordelingen|beoordeling|reviews?|recensies|ervaringen|stemmen|klantbeoordelingen)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:beoordelingen|beoordeling|reviews?|recensies|ervaringen|stemmen|klantbeoordelingen)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:beoordelingen|beoordeling|reviews?|recensies|ervaringen|stemmen|klantbeoordelingen)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "pl": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|na|z)\\s*(?<best>5|10)\\s*(?:gwiazdek|gwiazdki|gwiazdka|gwiazd)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:ocena|oceny|ocen|średnia ocena|ocena klientów|ocenione|opinia|ocenił)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|na|z)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:na podstawie|z|na)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:opinii|opinie|opinia|recenzji|recenzje|recenzja|ocen|oceny|głosów|głosy)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:ocena|oceny|ocen|średnia ocena|ocena klientów|ocenione|opinia|ocenił)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:na podstawie|z|na)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:opinii|opinie|opinia|recenzji|recenzje|recenzja|ocen|oceny|głosów|głosy)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:ocena|oceny|ocen|średnia ocena|ocena klientów|ocenione|opinia|ocenił)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:gwiazdek|gwiazdki|gwiazdka|gwiazd)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:opinii|opinie|opinia|recenzji|recenzje|recenzja|ocen|oceny|głosów|głosy)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:opinii|opinie|opinia|recenzji|recenzje|recenzja|ocen|oceny|głosów|głosy)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:gwiazdek|gwiazdki|gwiazdka|gwiazd)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:opinii|opinie|opinia|recenzji|recenzje|recenzja|ocen|oceny|głosów|głosy)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:opinii|opinie|opinia|recenzji|recenzje|recenzja|ocen|oceny|głosów|głosy)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:opinii|opinie|opinia|recenzji|recenzje|recenzja|ocen|oceny|głosów|głosy)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "pt": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|de)\\s*(?<best>5|10)\\s*(?:estrelas?)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:avaliação|avaliações|nota|classificação|pontuação|avaliado|avaliada)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|de)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:com base em|baseado em|baseada em|de|em)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:avaliações|avaliação|comentários|opiniões|críticas|reviews?|votos)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:avaliação|avaliações|nota|classificação|pontuação|avaliado|avaliada)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:com base em|baseado em|baseada em|de|em)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:avaliações|avaliação|comentários|opiniões|críticas|reviews?|votos)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:avaliação|avaliações|nota|classificação|pontuação|avaliado|avaliada)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:estrelas?)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:avaliações|avaliação|comentários|opiniões|críticas|reviews?|votos)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:avaliações|avaliação|comentários|opiniões|críticas|reviews?|votos)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:estrelas?)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:avaliações|avaliação|comentários|opiniões|críticas|reviews?|votos)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:avaliações|avaliação|comentários|opiniões|críticas|reviews?|votos)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:avaliações|avaliação|comentários|opiniões|críticas|reviews?|votos)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "ro": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|din)\\s*(?<best>5|10)\\s*(?:stele|stea)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:rating|evaluare|evaluări|notă|scor|punctaj|nota medie|evaluat)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|din)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:pe baza|bazat pe|din|după)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recenzii|recenzie|evaluări|evaluare|păreri|voturi|opinii|review-uri|review)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:rating|evaluare|evaluări|notă|scor|punctaj|nota medie|evaluat)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:pe baza|bazat pe|din|după)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recenzii|recenzie|evaluări|evaluare|păreri|voturi|opinii|review-uri|review)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:rating|evaluare|evaluări|notă|scor|punctaj|nota medie|evaluat)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:stele|stea)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:recenzii|recenzie|evaluări|evaluare|păreri|voturi|opinii|review-uri|review)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:recenzii|recenzie|evaluări|evaluare|păreri|voturi|opinii|review-uri|review)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:stele|stea)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:recenzii|recenzie|evaluări|evaluare|păreri|voturi|opinii|review-uri|review)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:recenzii|recenzie|evaluări|evaluare|păreri|voturi|opinii|review-uri|review)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:recenzii|recenzie|evaluări|evaluare|păreri|voturi|opinii|review-uri|review)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "ru": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|из)\\s*(?<best>5|10)\\s*(?:звезд|звёзд|звезды|звезда|звездочек|звёздочек)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:рейтинг|оценка|оценки|средняя оценка|средний рейтинг|рейтинг товара)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|из)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:на основе|по|из|на основании)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:отзывов|отзыва|отзыв|оценок|оценки|оценка|голосов|голоса|мнений|рецензий)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:рейтинг|оценка|оценки|средняя оценка|средний рейтинг|рейтинг товара)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:на основе|по|из|на основании)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:отзывов|отзыва|отзыв|оценок|оценки|оценка|голосов|голоса|мнений|рецензий)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:рейтинг|оценка|оценки|средняя оценка|средний рейтинг|рейтинг товара)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:звезд|звёзд|звезды|звезда|звездочек|звёздочек)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:отзывов|отзыва|отзыв|оценок|оценки|оценка|голосов|голоса|мнений|рецензий)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:отзывов|отзыва|отзыв|оценок|оценки|оценка|голосов|голоса|мнений|рецензий)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:звезд|звёзд|звезды|звезда|звездочек|звёздочек)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:отзывов|отзыва|отзыв|оценок|оценки|оценка|голосов|голоса|мнений|рецензий)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:отзывов|отзыва|отзыв|оценок|оценки|оценка|голосов|голоса|мнений|рецензий)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:отзывов|отзыва|отзыв|оценок|оценки|оценка|голосов|голоса|мнений|рецензий)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "sv": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|av)\\s*(?<best>5|10)\\s*(?:stjärnor|stjärna)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:betyg|snittbetyg|omdöme|kundbetyg|recensionsbetyg)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|av)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:baserat på|från|av|utifrån)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:omdömen|recensioner|recension|betyg|röster|kundomdömen)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:betyg|snittbetyg|omdöme|kundbetyg|recensionsbetyg)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:baserat på|från|av|utifrån)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:omdömen|recensioner|recension|betyg|röster|kundomdömen)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:betyg|snittbetyg|omdöme|kundbetyg|recensionsbetyg)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:stjärnor|stjärna)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:omdömen|recensioner|recension|betyg|röster|kundomdömen)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:omdömen|recensioner|recension|betyg|röster|kundomdömen)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:stjärnor|stjärna)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:omdömen|recensioner|recension|betyg|röster|kundomdömen)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:omdömen|recensioner|recension|betyg|röster|kundomdömen)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:omdömen|recensioner|recension|betyg|röster|kundomdömen)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    }
+  ],
+  "tr": [
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|\\/)\\s*(?<best>5|10)\\s*(?:yıldız)\\b"
+    },
+    {
+      "regex": "(?i)(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:puan|değerlendirme|derecelendirme|ortalama puan|müşteri puanı|oy)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|\\/)\\s*(?<best>5|10)\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:bazında|temelinde)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:değerlendirme|yorum|yorumlar|inceleme|incelemeler|oy|değerlendirmeler|müşteri yorumu|kullanıcı yorumu)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:puan|değerlendirme|derecelendirme|ortalama puan|müşteri puanı|oy)\\b\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\b(?:\\s*[(\\[,·–-]?\\s*(?:(?:bazında|temelinde)\\s+)?(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:değerlendirme|yorum|yorumlar|inceleme|incelemeler|oy|değerlendirmeler|müşteri yorumu|kullanıcı yorumu)\\b)?"
+    },
+    {
+      "regex": "(?i)\\b(?:puan|değerlendirme|derecelendirme|ortalama puan|müşteri puanı|oy)\\b\\s*[:：]?\\s*(?<value>[1-5])\\s*(?:yıldız)\\b"
+    },
+    {
+      "regex": "(?i)[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:değerlendirme|yorum|yorumlar|inceleme|incelemeler|oy|değerlendirmeler|müşteri yorumu|kullanıcı yorumu)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[★⭐](?:\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:(?:değerlendirme|yorum|yorumlar|inceleme|incelemeler|oy|değerlendirmeler|müşteri yorumu|kullanıcı yorumu)\\s*)?[)\\]])?"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:yıldız)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*[(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:değerlendirme|yorum|yorumlar|inceleme|incelemeler|oy|değerlendirmeler|müşteri yorumu|kullanıcı yorumu)\\s*[)\\]]"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:değerlendirme|yorum|yorumlar|inceleme|incelemeler|oy|değerlendirmeler|müşteri yorumu|kullanıcı yorumu)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?:değerlendirme|yorum|yorumlar|inceleme|incelemeler|oy|değerlendirmeler|müşteri yorumu|kullanıcı yorumu)\\s*[:(\\[]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\b"
+    },
+    {
+      "regex": "(?i)\\b(?<best>5|10)\\s+üzerinden\\s+(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\b(?:\\s*(?:puan|yıldız))?"
+    },
+    {
+      "regex": "(?i)\\b(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s+(?:yorum|değerlendirme|oy|inceleme)\\b"
+    }
+  ],
+  "zh": [
+    {
+      "regex": "(?:评分|评价|綜合評分|综合评分|总体评分|用户评分|用户评价|商品评分|評分|評價|用戶評分|得分|评星|評星)\\s*[:：]?\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*(?:/|／|分\\s*/)\\s*(?<best>5|10)"
+    },
+    {
+      "regex": "(?:评分|评价|綜合評分|综合评分|总体评分|用户评分|用户评价|商品评分|評分|評價|用戶評分|得分|评星|評星)\\s*[:：]?\\s*(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*分?"
+    },
+    {
+      "regex": "(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)\\s*分\\s*[（(]?\\s*(?:满分|滿分)\\s*(?<best>5|10)\\s*分?"
+    },
+    {
+      "regex": "(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s*(?:颗|顆)?星"
+    },
+    {
+      "regex": "[★⭐]\\s*(?<value>\\p{Nd}+(?:[.,٫]\\p{Nd}+)?)(?:\\s*[（(]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:条|條|个|個)?\\s*[）)])?"
+    },
+    {
+      "regex": "(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*(?:条|條|个|個|位|則)\\s*(?:用户)?(?:评价|评论|点评|评分|評價|評論|點評)"
+    },
+    {
+      "regex": "(?:评价|评论|点评|评分|評價|評論|點評)\\s*[:：(（]\\s*(?<count>\\p{Nd}{1,3}(?:[.,'’٬ ]\\p{Nd}{3})+|\\p{Nd}+)\\s*[)）]?"
+    },
+    {
+      "regex": "(?<value>\\p{Nd}[.,٫]\\p{Nd})\\s?/\\s?(?<best>5|10)\\b"
+    }
+  ]
+}

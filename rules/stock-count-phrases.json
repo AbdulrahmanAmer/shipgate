@@ -1,0 +1,374 @@
+{
+  "ar": [
+    {
+      "id": "tabaqa-n-qita",
+      "regex": "(?i)(?:تبقى|تبقّى|متبقي|متبقية|بقي|بقيت|المتبقي|المتوفر)\\s*(?:فقط\\s*)?(?<n>\\p{Nd}{1,6})\\s*(?:قطعة|قطع|وحدة|وحدات|حبة|منتج)"
+    },
+    {
+      "id": "faqat-n",
+      "regex": "(?i)(?:^|\\s)فقط\\s*(?<n>\\p{Nd}{1,6})\\s*(?:قطعة|قطع|وحدة|وحدات|حبة)(?:\\s*(?:متبقية|متبقي|متوفرة|متوفر|في\\s+المخزون|بالمخزون))?"
+    },
+    {
+      "id": "n-mutawafira",
+      "regex": "(?i)(?:^|\\s)(?<n>\\p{Nd}{1,6})\\s*(?:قطعة|قطع|وحدة|وحدات|حبة)\\s*(?:متبقية|متبقي|متوفرة|متوفر|في\\s+المخزون|بالمخزون)"
+    },
+    {
+      "id": "kamiyya-colon-n",
+      "regex": "(?i)(?:الكمية(?:\\s+المتاحة)?|المخزون|المتوفر)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})(?:$|[^\\p{Nd}])"
+    }
+  ],
+  "cs": [
+    {
+      "id": "pouze-n-ks",
+      "regex": "(?i)\\b(?:pouze|jen|poslední|zbývají|zbývá|zbylo)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:ks|kusy|kusů|kus|párů|páry)\\b"
+    },
+    {
+      "id": "pouze-n-skladem",
+      "regex": "(?i)\\b(?:pouze|jen)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:ks|kusy|kusů|kus)\\s+)?(?:skladem|k\\s+dispozici|zbývá|zbývají)\\b"
+    },
+    {
+      "id": "n-skladem",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:ks|kusy|kusů|kus)\\s+)?(?:skladem|k\\s+dispozici)\\b"
+    },
+    {
+      "id": "skladem-pouze-n",
+      "regex": "(?i)\\bskladem\\s*[:：]?\\s*(?:pouze\\s+|jen\\s+)?(?<n>\\p{Nd}{1,6})\\s*(?:ks|kusů|kusy|kus)\\b"
+    },
+    {
+      "id": "sklad-colon-n",
+      "regex": "(?i)\\b(?:dostupnost|počet\\s+kusů)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "da": [
+    {
+      "id": "kun-n-tilbage",
+      "regex": "(?i)\\b(?:kun|bare|sidste)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:stk|styk|eksemplarer?|varer|par)\\.?\\s+)?(?:tilbage|på\\s+lager|tilgængelig|tilgængelige|i\\s+lager)\\b"
+    },
+    {
+      "id": "kun-n-enhed",
+      "regex": "(?i)\\b(?:kun|bare)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:stk|styk|eksemplarer?|varer|par)\\b"
+    },
+    {
+      "id": "n-pa-lager",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:stk|styk|varer|par)\\.?\\s+)?(?:på\\s+lager|tilbage|i\\s+lager)\\b"
+    },
+    {
+      "id": "lager-colon-n",
+      "regex": "(?i)\\b(?:lagerstatus|lagerbeholdning|lager)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "de": [
+    {
+      "id": "nur-noch-n-stueck",
+      "regex": "(?i)\\b(?:nur|lediglich)(?:\\s+noch)?\\s+(?<n>\\p{Nd}{1,6})\\s+(?:Stück|Artikel|Exemplare?|Einheiten?|Paar|Stk)\\b"
+    },
+    {
+      "id": "nur-noch-n-verfuegbar",
+      "regex": "(?i)\\b(?:nur|lediglich|noch)(?:\\s+noch)?\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:Stück|Artikel|Exemplare?)\\s+)?(?:verfügbar|auf\\s+Lager|vorrätig|übrig|lieferbar|erhältlich)\\b"
+    },
+    {
+      "id": "n-auf-lager",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:Stück|Artikel|Exemplare?)\\s+)?(?:auf\\s+Lager|vorrätig|an\\s+Lager)\\b"
+    },
+    {
+      "id": "bestand-colon-n",
+      "regex": "(?i)\\b(?:Lagerbestand|Bestand|Verfügbarkeit)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "en": [
+    {
+      "id": "only-n-left",
+      "regex": "(?i)\\b(?:only|just)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:items?|units?|pieces?|pcs|pairs?|sizes?)\\s+)?(?:left|remaining|available|in\\s+stock)\\b"
+    },
+    {
+      "id": "n-in-stock",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:items?|units?|pieces?|pairs?)\\s+)?(?:left\\s+)?in\\s+stock\\b"
+    },
+    {
+      "id": "n-left",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:items?|units?|pieces?|pairs?)\\s+)?(?:left|remaining)\\b"
+    },
+    {
+      "id": "stock-colon-n",
+      "regex": "(?i)\\b(?:in\\s+stock|stock|available|availability|quantity\\s+available)\\s*[:\\-–]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "es": [
+    {
+      "id": "solo-quedan-n",
+      "regex": "(?i)\\b(?:solo|sólo|únicamente|tan\\s+solo)\\s+(?:quedan|queda|nos\\s+quedan|disponibles?|hay)\\s+(?<n>\\p{Nd}{1,6})\\b"
+    },
+    {
+      "id": "quedan-n-unidades",
+      "regex": "(?i)\\b(?:quedan|queda)\\s+(?:solo\\s+|sólo\\s+|tan\\s+solo\\s+)?(?<n>\\p{Nd}{1,6})\\s+(?:unidades?|artículos?|piezas?|pares?|en\\s+stock|disponibles?)\\b"
+    },
+    {
+      "id": "solo-n-disponibles",
+      "regex": "(?i)\\b(?:solo|sólo|únicamente|tan\\s+solo)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:unidades?|artículos?|piezas?|pares?)\\s+)?(?:disponibles?|en\\s+stock|en\\s+existencias|restantes?)\\b"
+    },
+    {
+      "id": "n-en-stock",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:unidades?|artículos?|piezas?|pares?)\\s+)?(?:en\\s+stock|en\\s+existencias|disponibles?)\\b"
+    },
+    {
+      "id": "stock-colon-n",
+      "regex": "(?i)\\b(?:stock|existencias|disponibilidad|unidades\\s+disponibles)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "fi": [
+    {
+      "id": "vain-n-jaljella",
+      "regex": "(?i)\\b(?:vain|enää|ainoastaan|viimeiset)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:kpl|kappaletta|tuotetta|paria)\\s+)?(?:jäljellä|varastossa|saatavilla)\\b"
+    },
+    {
+      "id": "vain-n-yksikko",
+      "regex": "(?i)\\b(?:vain|enää|ainoastaan)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:kpl|kappaletta|tuotetta|paria)\\b"
+    },
+    {
+      "id": "n-varastossa",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:kpl|kappaletta|tuotetta)\\s+)?(?:varastossa|jäljellä|saatavilla)\\b"
+    },
+    {
+      "id": "varastossa-vain-n",
+      "regex": "(?i)\\bvarastossa\\s+(?:vain\\s+|enää\\s+)?(?<n>\\p{Nd}{1,6})\\s+(?:kpl|kappaletta)\\b"
+    },
+    {
+      "id": "varasto-colon-n",
+      "regex": "(?i)\\b(?:varastosaldo|saatavuus|varastossa)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "fr": [
+    {
+      "id": "plus-que-n-unite",
+      "regex": "(?i)\\b(?:plus\\s+que|seulement|uniquement|il\\s+(?:ne\\s+)?reste(?:nt)?(?:\\s+(?:plus\\s+que|que|seulement))?)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:articles?|unités?|pièces?|exemplaires?|paires?)\\b"
+    },
+    {
+      "id": "plus-que-n-stock",
+      "regex": "(?i)\\b(?:plus\\s+que|seulement|uniquement|reste(?:nt)?(?:\\s+que)?)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:articles?|unités?|pièces?|exemplaires?|paires?)\\s+)?(?:en\\s+stock|disponibles?|restants?|restantes?)\\b"
+    },
+    {
+      "id": "il-nen-reste-que-n",
+      "regex": "(?i)\\bil\\s+n['’]en\\s+reste\\s+(?:plus\\s+que|que|seulement)\\s+(?<n>\\p{Nd}{1,6})\\b"
+    },
+    {
+      "id": "n-en-stock",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:articles?|unités?|pièces?|exemplaires?|paires?)\\s+)?(?:en\\s+stock|disponibles?|restants?|restantes?|en\\s+magasin)\\b"
+    },
+    {
+      "id": "stock-colon-n",
+      "regex": "(?i)\\b(?:stock|quantité\\s+disponible|disponibilité)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "it": [
+    {
+      "id": "solo-n-disponibili",
+      "regex": "(?i)\\b(?:solo|soltanto|solamente|ultim[ie]|ancora|ne\\s+restano|ne\\s+rimangono)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:pezzi|articoli|unità|paia|pezzo)\\s+)?(?:disponibili|rimast[ie]|rimanenti|in\\s+magazzino|a\\s+magazzino|in\\s+stock)\\b"
+    },
+    {
+      "id": "solo-n-pezzi",
+      "regex": "(?i)\\b(?:solo|soltanto|solamente|ne\\s+restano|ne\\s+rimangono|ultimi)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:pezzi|articoli|unità|paia)\\b"
+    },
+    {
+      "id": "n-disponibili",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:pezzi|articoli|unità|paia)\\s+)?(?:disponibili|in\\s+magazzino|a\\s+magazzino|in\\s+stock)\\b"
+    },
+    {
+      "id": "disponibilita-colon-n",
+      "regex": "(?i)\\b(?:disponibilità|giacenza|scorte)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "ja": [
+    {
+      "id": "nokori-n",
+      "regex": "(?i)(?:在庫)?残り(?:わずか)?\\s*(?<n>\\p{Nd}{1,6})\\s*(?:点|個|枚|足|台|冊|着|本|セット)"
+    },
+    {
+      "id": "ato-n",
+      "regex": "(?i)(?:在庫(?:は)?|あと)\\s*(?<n>\\p{Nd}{1,6})\\s*(?:点|個|枚|足|台|冊|着|本|セット)"
+    },
+    {
+      "id": "nokori-n-nomi",
+      "regex": "(?i)(?:残り|在庫)\\s*(?<n>\\p{Nd}{1,6})\\s*(?:点|個)?\\s*のみ"
+    },
+    {
+      "id": "zaiko-colon-n",
+      "regex": "(?i)在庫(?:数)?\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})(?:$|[^\\p{Nd}])"
+    }
+  ],
+  "ko": [
+    {
+      "id": "jaego-n-nameum",
+      "regex": "(?i)(?:재고|수량)?\\s*(?:단|딱|겨우)?\\s*(?<n>\\p{Nd}{1,6})\\s*(?:개|점|벌|족|켤레|대|권)\\s*(?:남음|남았|남은)"
+    },
+    {
+      "id": "nameun-n",
+      "regex": "(?i)(?:남은\\s*(?:재고|수량)?|잔여\\s*(?:수량)?|재고)\\s*[:：]?\\s*(?<n>\\p{Nd}{1,6})\\s*(?:개|점|벌|족|켤레|대|권)"
+    },
+    {
+      "id": "dan-n-gae",
+      "regex": "(?i)(?:단|딱|겨우|마지막)\\s*(?<n>\\p{Nd}{1,6})\\s*(?:개|벌|켤레)\\s*(?:만\\s*(?:남|있)|뿐|남)"
+    }
+  ],
+  "nb": [
+    {
+      "id": "kun-n-igjen",
+      "regex": "(?i)\\b(?:kun|bare|siste|bare\\s+igjen)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:stk|stykker?|eksemplarer?|varer|par)\\.?\\s+)?(?:igjen|på\\s+lager|tilgjengelig|tilgjengelige)\\b"
+    },
+    {
+      "id": "kun-n-enhet",
+      "regex": "(?i)\\b(?:kun|bare)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:stk|stykker?|eksemplarer?|varer|par)\\b"
+    },
+    {
+      "id": "n-pa-lager",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:stk|stykker?|varer|par)\\.?\\s+)?(?:på\\s+lager|igjen)\\b"
+    },
+    {
+      "id": "lager-colon-n",
+      "regex": "(?i)\\b(?:lagerstatus|lagerbeholdning|lager|tilgjengelighet)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "nl": [
+    {
+      "id": "nog-n-voorraad",
+      "regex": "(?i)\\b(?:nog\\s+maar|nog\\s+slechts|slechts|alleen|nog)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:stuks?|exemplaren|artikelen|paar|paren)\\s+)?(?:op\\s+voorraad|beschikbaar|over|leverbaar|verkrijgbaar)\\b"
+    },
+    {
+      "id": "nog-n-stuks",
+      "regex": "(?i)\\b(?:nog\\s+maar|nog\\s+slechts|slechts|alleen|nog)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:stuks?|exemplaren|artikelen|paren)\\b"
+    },
+    {
+      "id": "n-op-voorraad",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:stuks?|exemplaren|artikelen|paar|paren)\\s+)?(?:op\\s+voorraad|beschikbaar|leverbaar)\\b"
+    },
+    {
+      "id": "voorraad-colon-n",
+      "regex": "(?i)\\b(?:voorraad|beschikbaarheid)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "pl": [
+    {
+      "id": "tylko-n-sztuk",
+      "regex": "(?i)\\b(?:tylko|zaledwie|jedynie|pozostało|zostało|ostatnie)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:szt|sztuk|sztuki|sztuka|par|pary)\\b"
+    },
+    {
+      "id": "tylko-n-dostepne",
+      "regex": "(?i)\\b(?:tylko|zaledwie|jedynie)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:szt|sztuk|sztuki|sztuka)\\.?\\s+)?(?:w\\s+magazynie|na\\s+stanie|dostępn(?:e|ych|a|y))\\b"
+    },
+    {
+      "id": "n-w-magazynie",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:szt|sztuk|sztuki|sztuka)\\.?\\s+)?(?:w\\s+magazynie|na\\s+stanie|dostępn(?:e|ych|a|y))\\b"
+    },
+    {
+      "id": "stan-colon-n",
+      "regex": "(?i)\\b(?:dostępnych|dostępność|stan\\s+magazynowy)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "pt": [
+    {
+      "id": "so-restam-n-unidades",
+      "regex": "(?i)\\b(?:só|apenas|somente|restam(?:\\s+apenas|\\s+só)?|resta(?:\\s+apenas|\\s+só)?)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:unidades?|peças?|itens?|pares?)\\b"
+    },
+    {
+      "id": "so-n-disponiveis",
+      "regex": "(?i)\\b(?:só|apenas|somente|restam|resta)(?:\\s+apenas|\\s+só)?\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:unidades?|peças?|itens?|pares?)\\s+)?(?:disponíveis|disponível|em\\s+stock|em\\s+estoque|restantes?)\\b"
+    },
+    {
+      "id": "n-em-estoque",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:unidades?|peças?|itens?|pares?)\\s+)?(?:em\\s+stock|em\\s+estoque|disponíveis|disponível)\\b"
+    },
+    {
+      "id": "estoque-colon-n",
+      "regex": "(?i)\\b(?:stock|estoque|disponibilidade|quantidade\\s+disponível)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "ro": [
+    {
+      "id": "doar-n-stoc",
+      "regex": "(?i)\\b(?:doar|numai|mai|a\\s+mai\\s+rămas|au\\s+mai\\s+rămas|ultimele)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:bucăți|bucăţi|bucată|buc|produse|articole|perechi)\\s+)?(?:[iî]n\\s+stoc|disponibile|rămase|rămas|pe\\s+stoc|la\\s+stoc)\\b"
+    },
+    {
+      "id": "doar-n-bucati",
+      "regex": "(?i)\\b(?:doar|numai|mai\\s+sunt|au\\s+mai\\s+rămas|a\\s+mai\\s+rămas|ultimele)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:bucăți|bucăţi|bucată|buc|produse|articole|perechi)\\b"
+    },
+    {
+      "id": "n-in-stoc",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:bucăți|bucăţi|bucată|buc|produse)\\s+)?(?:[iî]n\\s+stoc|disponibile|pe\\s+stoc|la\\s+stoc)\\b"
+    },
+    {
+      "id": "stoc-colon-n",
+      "regex": "(?i)\\b(?:stoc|disponibilitate|stoc\\s+disponibil)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "ru": [
+    {
+      "id": "ostalos-n",
+      "regex": "(?i)\\b(?:осталось|остался|осталась|остались)\\s+(?:только\\s+|всего\\s+|лишь\\s+)?(?<n>\\p{Nd}{1,6})\\s+(?:шт|штук|штуки|штука|единиц|единицы|единица|пар|пары|товаров|товара|товар|экземпляров|экземпляра)\\b"
+    },
+    {
+      "id": "vsego-n-v-nalichii",
+      "regex": "(?i)\\b(?:всего|только|лишь)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:шт|штук|штуки|штука|единиц|единицы|пар|пары)\\s+(?:в\\s+наличии|осталось)\\b"
+    },
+    {
+      "id": "v-nalichii-n",
+      "regex": "(?i)\\bв\\s+наличии\\s*[:：]?\\s*(?:всего\\s+|только\\s+)?(?<n>\\p{Nd}{1,6})\\s+(?:шт|штук|штуки|штука|единиц|единицы)\\b"
+    },
+    {
+      "id": "n-v-nalichii",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:шт|штук|штуки|единиц|единицы)\\s+в\\s+наличии\\b"
+    },
+    {
+      "id": "poslednie-n",
+      "regex": "(?i)\\bпоследни[ех]\\s+(?<n>\\p{Nd}{1,6})\\s+(?:шт|штук|штуки|штука|единиц|единицы|пар|пары)\\b"
+    }
+  ],
+  "sv": [
+    {
+      "id": "endast-n-kvar",
+      "regex": "(?i)\\b(?:endast|bara|enbart|sista)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:(?:st|stycken|exemplar|artiklar|par)\\s+)?(?:kvar|i\\s+lager|på\\s+lager|tillgängliga|tillgänglig)\\b"
+    },
+    {
+      "id": "endast-n-enhet",
+      "regex": "(?i)\\b(?:endast|bara|enbart)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:st|stycken|exemplar|artiklar|par)\\b"
+    },
+    {
+      "id": "n-i-lager",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:(?:st|stycken|exemplar|artiklar|par)\\s+)?(?:i\\s+lager|på\\s+lager|kvar)\\b"
+    },
+    {
+      "id": "lagersaldo-colon-n",
+      "regex": "(?i)\\b(?:lagersaldo|lager|tillgänglighet)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "tr": [
+    {
+      "id": "sadece-n-adet",
+      "regex": "(?i)\\b(?:sadece|yalnızca|yalnizca|son)\\s+(?<n>\\p{Nd}{1,6})\\s+(?:adet|ürün|çift)\\b"
+    },
+    {
+      "id": "stokta-n-adet",
+      "regex": "(?i)\\bstokta\\s+(?:sadece\\s+|yalnızca\\s+|son\\s+)?(?<n>\\p{Nd}{1,6})\\s+(?:adet|ürün|çift)\\b"
+    },
+    {
+      "id": "n-adet-stokta",
+      "regex": "(?i)\\b(?<n>\\p{Nd}{1,6})\\s+(?:adet|ürün|çift)\\s+(?:kaldı|kaldi|stokta|mevcut)\\b"
+    },
+    {
+      "id": "stok-colon-n",
+      "regex": "(?i)\\b(?:stok|stok\\s+adedi|stok\\s+durumu)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})\\b"
+    }
+  ],
+  "zh": [
+    {
+      "id": "jinsheng-n",
+      "regex": "(?i)(?:仅剩|仅余|只剩下|只剩|仅有|还剩|剩余|剩餘|僅剩|只剩餘|库存仅剩|庫存僅剩)\\s*(?<n>\\p{Nd}{1,6})\\s*(?:件|个|個|双|雙|台|套|本|份|张|張)"
+    },
+    {
+      "id": "kucun-n",
+      "regex": "(?i)(?:库存|庫存)\\s*[:：]?\\s*(?:仅|僅|只)?(?:剩|剩余|剩餘)?\\s*(?<n>\\p{Nd}{1,6})\\s*(?:件|个|個|双|雙|台|套|本|份|张)"
+    },
+    {
+      "id": "kucun-colon-n",
+      "regex": "(?i)(?:库存|庫存|库存数量|庫存數量)\\s*[:：]\\s*(?<n>\\p{Nd}{1,3})(?:$|[^\\p{Nd}])"
+    }
+  ]
+}

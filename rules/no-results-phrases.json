@@ -1,0 +1,205 @@
+{
+  "ar": [
+    "لا توجد نتائج",
+    "لم يتم العثور على نتائج",
+    "لم نتمكن من العثور على أي نتائج",
+    "لم يتم العثور على أي نتائج",
+    "لا توجد منتجات تتوافق مع اختيارك",
+    "لم يتم العثور على شيء",
+    "لا شيء يتطابق مع مصطلحات البحث"
+  ],
+  "cs": [
+    "nebyly nalezeny žádné výsledky",
+    "nic nenalezeno",
+    "nebylo nic nalezeno",
+    "nebyly nalezeny žádné produkty",
+    "zadanému výrazu neodpovídá žádný obsah",
+    "vašemu výběru neodpovídají žádné produkty"
+  ],
+  "da": [
+    "ingen resultater fundet",
+    "der blev ikke fundet nogen resultater",
+    "der blev ikke fundet noget",
+    "ingen resultater",
+    "din søgning gav ingen resultater",
+    "der blev ikke fundet nogen varer",
+    "vi kunne ikke finde nogen resultater"
+  ],
+  "de": [
+    "keine ergebnisse",
+    "keine treffer",
+    "nichts gefunden",
+    "es konnten keine ergebnisse",
+    "es wurden keine ergebnisse gefunden",
+    "es wurden keine produkte gefunden",
+    "keine produkte gefunden",
+    "es konnte leider nichts passendes gefunden werden",
+    "0 ergebnisse",
+    "0 treffer"
+  ],
+  "en": [
+    "no results",
+    "nothing found",
+    "no matches found",
+    "0 results",
+    "did not match any",
+    "nothing matched your search",
+    "we couldn't find",
+    "we couldn’t find",
+    "we could not find any results",
+    "no products were found"
+  ],
+  "es": [
+    "sin resultados",
+    "no se encontraron resultados",
+    "no se han encontrado resultados",
+    "no hay resultados",
+    "no se ha encontrado nada",
+    "no hemos encontrado resultados",
+    "no se han encontrado productos",
+    "no se encontraron productos",
+    "0 resultados",
+    "no hay nada que coincida con tus términos de búsqueda"
+  ],
+  "fi": [
+    "ei tuloksia",
+    "mitään ei löytynyt",
+    "haulla ei löytynyt mitään",
+    "emme löytäneet tuloksia",
+    "valitun kaltaisia tuotteita ei löytynyt",
+    "0 tulosta",
+    "ei hakutuloksia"
+  ],
+  "fr": [
+    "aucun résultat",
+    "pas de résultat",
+    "0 résultat",
+    "0 résultats",
+    "rien de trouvé",
+    "nous n’avons trouvé aucun résultat",
+    "nous n'avons trouvé aucun résultat",
+    "aucun produit ne correspond",
+    "rien ne correspond à vos critères de recherche"
+  ],
+  "it": [
+    "nessun risultato",
+    "non è stato trovato nessun prodotto",
+    "non c'è nessuna corrispondenza con i termini di ricerca",
+    "non siamo riusciti a trovare nessun risultato",
+    "nessun prodotto trovato",
+    "0 risultati"
+  ],
+  "ja": [
+    "検索結果がありません",
+    "検索結果は見つかりませんでした",
+    "検索結果が見つかりませんでした",
+    "検索結果はありません",
+    "一致する結果は見つかりませんでした",
+    "一致するものが見つかりませんでした",
+    "一致する商品が見つかりませんでした",
+    "該当する商品はありません"
+  ],
+  "ko": [
+    "검색 결과가 없습니다",
+    "검색결과가 없습니다",
+    "검색 결과를 찾을 수 없습니다",
+    "결과를 찾을 수 없습니다",
+    "일치하는 상품이 없습니다",
+    "일치하는 상품을 찾을 수 없습니다",
+    "검색어에 일치하는 것이 없습니다"
+  ],
+  "nb": [
+    "ingen resultater",
+    "ingen treff",
+    "intet funnet",
+    "fant ingen resultater",
+    "fant ingen produkter",
+    "vi kunne ikke finne noen resultater",
+    "0 resultater",
+    "0 treff",
+    "ikke noe som passet til ditt søk"
+  ],
+  "nl": [
+    "geen resultaten",
+    "niets gevonden",
+    "geen producten gevonden",
+    "we konden geen resultaten vinden",
+    "er kwam niets overeen met je zoektermen",
+    "0 resultaten",
+    "geen zoekresultaten"
+  ],
+  "pl": [
+    "brak wyników",
+    "nie znaleziono wyników",
+    "nie znaleziono żadnych wyników",
+    "niczego nie znaleziono",
+    "nie znaleziono produktów",
+    "nie można było znaleźć żadnych wyników",
+    "0 wyników"
+  ],
+  "pt": [
+    "nenhum resultado",
+    "sem resultados",
+    "não foram encontrados resultados",
+    "não foi encontrado nada",
+    "não foi possível encontrar nenhum resultado",
+    "nenhum produto foi encontrado",
+    "não foram encontrados produtos",
+    "0 resultados"
+  ],
+  "ro": [
+    "niciun rezultat",
+    "nu am găsit niciun rezultat",
+    "nu s-au găsit rezultate",
+    "nu am găsit nimic",
+    "nu a fost găsit niciun produs",
+    "nu am găsit niciun produs",
+    "0 rezultate",
+    "nu s-a potrivit nimic cu termenii tăi de căutare"
+  ],
+  "ru": [
+    "ничего не найдено",
+    "результатов не найдено",
+    "результаты не найдены",
+    "нет результатов",
+    "ничего не нашлось",
+    "не найдено товаров",
+    "товаров, соответствующих вашему запросу, не обнаружено",
+    "0 результатов"
+  ],
+  "sv": [
+    "inga resultat",
+    "inget hittades",
+    "din sökning gav inga matchande resultat",
+    "inga produkter hittades",
+    "0 resultat",
+    "inget matchade dina söktermer",
+    "inga sökresultat"
+  ],
+  "tr": [
+    "sonuç bulunamadı",
+    "hiçbir şey bulunamadı",
+    "ürün bulunamadı",
+    "sonuç bulamadık",
+    "0 sonuç",
+    "arama sonucu bulunamadı",
+    "aramanızla hiçbir şey eşleşmedi"
+  ],
+  "zh": [
+    "未找到“",
+    "没有找到相关结果",
+    "没有找到结果",
+    "没有找到相关商品",
+    "未找到结果",
+    "未找到相关结果",
+    "暂无搜索结果",
+    "没有搜索结果",
+    "无搜索结果",
+    "没有符合您搜索条件的结果",
+    "没有符合您选择项的产品",
+    "沒有找到相關結果",
+    "找不到結果",
+    "查無結果",
+    "沒有搜尋結果"
+  ]
+}

@@ -1,0 +1,992 @@
+{
+  "ar": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)(?:سريرياً|سريريا)\\s+(?:مثبت|مثبتة|مختبر|مختبرة|مجرب|مجربة)|(?:مثبت|مثبتة|مختبر|مختبرة|مجرب|مجربة)\\s+(?:سريرياً|سريريا|علمياً|علميا)|(?:ثبت|أثبتت)\\s+(?:سريرياً|سريريا|علمياً|علميا)"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)(?:يخفض|تخفض|يقلل|تقلل|يخفّض|يساعد\\s+على\\s+خفض)\\s+(?:من\\s+)?(?:الكوليسترول|الكولسترول|ضغط\\s+الدم|سكر\\s+الدم|مستوى\\s+السكر)"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)(?:يقوي|تقوي|يعزز|تعزز|يدعم|تدعم|يقوّي|يعزّز)\\s+(?:جهاز\\s+)?(?:المناعة|الجهاز\\s+المناعي|مناعة\\s+الجسم)"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)(?:موصى\\s+(?:به|بها)|ينصح\\s+به|يوصي\\s+به)\\s+(?:من\\s+(?:قبل\\s+)?)?(?:الأطباء|أطباء|الصيادلة|أطباء\\s+الجلدية|أطباء\\s+الأسنان)|مختبر\\s+جلدي(?:اً|ا)"
+    },
+    {
+      "id": "medical-regulator-approved",
+      "kind": "medical",
+      "regex": "(?i)(?:معتمد|موافق\\s+عليه|مصرح\\s+به|مرخص|مسجل)\\s+(?:من\\s+)?(?:قبل\\s+)?(?:إدارة\\s+الغذاء\\s+والدواء|هيئة\\s+الغذاء\\s+والدواء|وزارة\\s+الصحة|FDA|SFDA)|(?:FDA|SFDA)\\s+(?:معتمد|مرخص)"
+    },
+    {
+      "id": "origin-sunia-fi",
+      "kind": "origin",
+      "regex": "(?i)(?:صنع|صُنع|مصنوع|مصنع|مصنّع|منتج)\\s+في\\s+(?:السعودية|الإمارات|مصر|الأردن|لبنان|تركيا|ألمانيا|إيطاليا|فرنسا|إسبانيا|الصين|الهند|اليابان|الولايات\\s+المتحدة|أمريكا|بريطانيا|المملكة\\s+المتحدة|سويسرا|هولندا|بلجيكا|كوريا|تايوان|فيتنام|تايلاند|المغرب|تونس|الكويت|قطر|عمان|البحرين)"
+    },
+    {
+      "id": "origin-balad-almansha",
+      "kind": "origin",
+      "regex": "(?i)بلد\\s+(?:المنشأ|الصنع)\\s*[:：]?\\s*(?:السعودية|الإمارات|مصر|الأردن|لبنان|تركيا|ألمانيا|إيطاليا|فرنسا|إسبانيا|الصين|الهند|اليابان|الولايات\\s+المتحدة|أمريكا|بريطانيا|سويسرا|هولندا|كوريا|تايوان|المغرب)"
+    },
+    {
+      "id": "organic-certified",
+      "kind": "organic",
+      "regex": "(?i)(?:شهادة|معتمد|معتمدة|مصدق|مصدقة)\\s+(?:عضوي|عضوية)|(?:عضوي|عضوية)\\s+معتمد(?:ة)?|100\\s?[%٪]\\s+(?:عضوي|عضوية)|(?:الزراعة|زراعة)\\s+(?:ال)?عضوية"
+    },
+    {
+      "id": "organic-product",
+      "kind": "organic",
+      "regex": "(?i)(?:منتجات|منتج|قطن|أغذية|غذاء|طعام|فواكه|خضروات|خضار|شاي|قهوة|حليب|لحم|لحوم|بيض|عسل|زيت|دقيق|أرز|سكر|مستحضرات\\s+تجميل|شامبو|صابون|مكونات)\\s+(?:عضوي|عضوية|عضويه)"
+    }
+  ],
+  "cs": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:klinicky|vědecky)\\s+(?:prokázáno|prokázaný|prokázaná|prokázané|testováno|testovaný|testovaná|testované|ověřeno|ověřený|ověřená|ověřené)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:snižuje|sníží|redukuje)\\s+(?:hladinu\\s+)?(?:cholesterolu|cholesterol|krevní\\s+tlak|cukru\\s+v\\s+krvi)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:posiluje|podporuje|zlepšuje|stimuluje)\\s+(?:imunitní\\s+systém|imunitu|odolnost|přirozenou\\s+imunitu)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:doporučeno|doporučený|doporučená|doporučené|schváleno|schválený)\\s+(?:lékaři|dermatology|zubaři|pediatry|veterináři|lékárníky)\\b|\\b(?:dermatologicky|klinicky|pediatricky|oftalmologicky)\\s+(?:testován[oaiy]?|testovaný|testovaná|testované|ověřen[oaiy]?)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bschválen[oaiýáé]*\\s+(?:úřadem\\s+)?FDA\\b|\\bFDA[- ]schválen[oaiýáé]*\\b"
+    },
+    {
+      "id": "origin-vyrobeno-v",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:vyrobeno|vyráběno|vyrobený|vyrobená|vyrobené)\\s+(?:v|ve)\\s+(?:České\\s+republice|Česku|Německu|Itálii|Francii|Španělsku|Portugalsku|Polsku|Slovensku|Rakousku|Číně|Indii|Japonsku|Turecku|USA|Velké\\s+Británii|Nizozemsku|Belgii|Švýcarsku|Řecku|Švédsku|Dánsku|Finsku|Norsku|Rumunsku|Maďarsku|Vietnamu|Thajsku|Tchaj-wanu|Kanadě)\\b|\\bčeský\\s+(?:výrobek|produkt)\\b"
+    },
+    {
+      "id": "organic-certifikovano",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:certifikovan[aáéýoy]+\\s+(?:ekologick[aáéýoy]+|bio)|100\\s?%\\s+(?:ekologick[aáéýoy]+|bio)|ekologické\\s+zemědělství|ekologické\\s+pěstování|biozemědělství)\\b"
+    },
+    {
+      "id": "organic-produkt",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:ekologick[aáéýoy]+|biologick[aáéýoy]+|bio)\\s+(?:bavlna|bavlny|produkty|produkt|potraviny|ovoce|zelenina|čaj|káva|mléko|maso|vejce|víno|med|olej|mouka|rýže|cukr|kosmetika|šampon|mýdlo|suroviny)\\b"
+    }
+  ],
+  "da": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:klinisk\\s+(?:bevist|testet|dokumenteret|afprøvet)|videnskabeligt\\s+(?:bevist|dokumenteret|testet))\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:sænker|reducerer|nedsætter)\\s+(?:(?:dit|din|et|en)\\s+)?(?:kolesterol|blodtryk|blodsukker|kolesterolet|blodtrykket)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:styrker|understøtter|stimulerer|forbedrer)\\s+(?:(?:dit|din|et|en)\\s+)?(?:immunforsvar|immunforsvaret|immunsystem|immunsystemet)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:anbefalet|godkendt)\\s+af\\s+(?:læger|tandlæger|hudlæger|børnelæger|dyrlæger|apotekere)\\b|\\bdermatologisk\\s+(?:testet|godkendt)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bFDA[- ]godkendt\\b|\\bgodkendt\\s+af\\s+FDA\\b"
+    },
+    {
+      "id": "origin-produceret-i",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:produceret|fremstillet|lavet)\\s+i\\s+(?:Danmark|Sverige|Norge|Finland|Tyskland|Italien|Frankrig|Spanien|Portugal|Polen|Kina|Indien|Japan|Tyrkiet|USA|Storbritannien|Holland|Nederlandene|Belgien|Schweiz|Østrig|Grækenland|Rumænien|Ungarn|Vietnam|Thailand|Taiwan|Canada)\\b"
+    },
+    {
+      "id": "organic-certificeret",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:økologisk\\s+certificeret|certificeret\\s+økologisk|100\\s?%\\s+økologisk|økologisk\\s+dyrket|økologisk\\s+landbrug|Ø-mærket|Ø-mærke)\\b"
+    },
+    {
+      "id": "organic-produkt",
+      "kind": "organic",
+      "regex": "(?i)\\bøkologisk(?:e)?\\s+(?:bomuld|produkter|produkt|mad|fødevarer|frugt|grøntsager|te|kaffe|mælk|kød|æg|vin|honning|olie|mel|ris|sukker|kosmetik|shampoo|sæbe|ingredienser)\\b"
+    }
+  ],
+  "de": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:klinisch\\s+(?:getestet|erprobt|bewiesen|nachgewiesen|geprüft|belegt|erwiesen)|wissenschaftlich\\s+(?:bewiesen|belegt|nachgewiesen))\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:senkt|reduziert|vermindert)\\s+(?:den\\s+|Ihren\\s+|deinen\\s+)?(?:Cholesterin(?:spiegel)?|Blutdruck|Blutzucker(?:spiegel)?)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:stärkt|unterstützt|fördert|aktiviert)\\s+(?:das\\s+|Ihr\\s+|dein\\s+|die\\s+)?(?:Immunsystem|Abwehrkräfte|Immunabwehr)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:ärztlich|zahnärztlich|dermatologisch|tierärztlich|kinderärztlich)\\s+(?:empfohlen|getestet|geprüft|bestätigt)\\b|\\bvon\\s+(?:Ärzten|Zahnärzten|Hautärzten|Tierärzten|Kinderärzten)\\s+empfohlen\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bFDA[- ](?:zugelassen|geprüft|genehmigt|registriert)\\b|\\bvon\\s+der\\s+FDA\\s+(?:zugelassen|genehmigt|geprüft)\\b"
+    },
+    {
+      "id": "origin-hergestellt-in",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:hergestellt|produziert|gefertigt|gebaut|entwickelt)\\s+in\\s+(?:Deutschland|Österreich|der\\s+Schweiz|Italien|Frankreich|Spanien|Portugal|Polen|Tschechien|den\\s+USA|Japan|der\\s+Türkei|Großbritannien|Dänemark|Schweden|Finnland|Norwegen|den\\s+Niederlanden|Belgien|Ungarn|Rumänien|Griechenland|Kroatien|China|Indien|Taiwan|Vietnam)\\b"
+    },
+    {
+      "id": "origin-produkt-aus",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:Produkt|Ware)\\s+aus\\s+(?:Deutschland|Österreich|der\\s+Schweiz|Italien|Frankreich|Spanien|Portugal|Polen)\\b"
+    },
+    {
+      "id": "organic-bio-prefix",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:Bio|Öko)[- ](?:Qualität|Siegel|Produkte?|Baumwolle|Lebensmittel|Fleisch|Milch|Eier|Obst|Gemüse|Kaffee|Tee|Wein|Kosmetik|Zertifikat|Zertifizierung|Landbau|Anbau|Saatgut|Futter|Honig|Mehl|Reis|Saft|Textilien|Hautpflege|Shampoo|Seife|Joghurt|Käse|Butter|Brot|Nudeln|Müsli|Schokolade)\\b"
+    },
+    {
+      "id": "organic-anbau-zertifiziert",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:aus\\s+)?(?:kontrolliert\\s+)?(?:biologischem|ökologischem)\\s+(?:Anbau|Landbau)\\b|\\bkontrolliert\\s+biologisch\\b|\\bBio-zertifiziert\\b|\\b(?:zertifizierte[rsmn]?|100\\s?%)\\s+(?:Bio|biologisch|ökologisch)\\b"
+    }
+  ],
+  "en": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\bclinically\\s+(?:proven|tested|studied|shown|validated|verified)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:lowers?|reduces?|cuts?)\\s+(?:your\\s+)?(?:bad\\s+)?(?:ldl\\s+)?(?:cholesterol|blood\\s+pressure|blood\\s+sugar)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:boosts?|strengthens?|supports?)\\s+(?:your\\s+)?(?:immune\\s+system|immunity)\\b"
+    },
+    {
+      "id": "health-cure-claim",
+      "kind": "health",
+      "regex": "(?i)\\b(?:cures?|prevents?|treats?|reverses?)\\s+(?:cancer|diabetes|arthritis|alzheimer'?s|covid(?:-19)?|heart\\s+disease)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bfda[- ](?:approved|cleared|registered|authori[sz]ed)\\b|\\b(?:approved|cleared)\\s+by\\s+(?:the\\s+)?fda\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:doctor|physician|dentist|dermatologist|pediatrician|vet|veterinarian)s?[- ](?:recommended|approved|endorsed|tested)\\b|\\brecommended\\s+by\\s+(?:doctors|physicians|dentists|dermatologists|pediatricians|vets|veterinarians)\\b"
+    },
+    {
+      "id": "origin-product-of",
+      "kind": "origin",
+      "regex": "(?i)\\bproducts?\\s+of\\s+(?:the\\s+)?(?:USA|U\\.S\\.A?|UK|U\\.K\\.|England|Scotland|Wales|Ireland|Canada|Australia|New\\s+Zealand|France|Germany|Italy|Spain|Portugal|Netherlands|Holland|Belgium|Switzerland|Austria|Sweden|Norway|Denmark|Finland|Iceland|Poland|Czech\\s+Republic|Hungary|Greece|Turkey|India|China|Japan|South\\s+Korea|Korea|Taiwan|Thailand|Vietnam|Indonesia|Malaysia|Mexico|Brazil|Argentina|Chile|Peru|Colombia|Morocco|Egypt|South\\s+Africa|Israel)\\b"
+    },
+    {
+      "id": "organic-certified",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:certified|100\\s?%|usda|eu)\\s+organic\\b"
+    },
+    {
+      "id": "organic-product",
+      "kind": "organic",
+      "regex": "(?i)\\borganic\\s+(?:foods?|products?|cotton|ingredients?|produce|fruits?|vegetables?|farm(?:ing|s)?|skincare|cosmetics?|tea|coffee|milk|meat|eggs|wine|fertili[sz]er|fabrics?|bedding|baby|snacks?|oils?|honey|juice|flour|rice|sugar)\\b"
+    }
+  ],
+  "es": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:clínicamente|científicamente)\\s+(?:probad[oa]s?|comprobad[oa]s?|testad[oa]s?|demostrad[oa]s?|validad[oa]s?)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:reduce|baja|disminuye|rebaja)\\s+(?:el\\s+|tu\\s+|su\\s+)?(?:colesterol|tensión(?:\\s+arterial)?|azúcar\\s+en\\s+(?:la\\s+)?sangre|presión\\s+arterial)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:refuerza|fortalece|estimula|mejora|apoya)\\s+(?:el\\s+|la\\s+|las\\s+|tu\\s+|tus\\s+|su\\s+|sus\\s+)?(?:sistema\\s+inmunol[oó]gico|sistema\\s+inmune|defensas|inmunidad)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:recomendad[oa]s?|aprobad[oa]s?|avalad[oa]s?)\\s+por\\s+(?:los\\s+)?(?:médicos|dermatólogos|dentistas|pediatras|veterinarios|farmacéuticos|odontólogos)\\b|\\b(?:dermatológicamente|clínicamente|oftalmológicamente|pediátricamente)\\s+(?:testad[oa]s?|probad[oa]s?)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:aprobad[oa]s?|autorizad[oa]s?|certificad[oa]s?)\\s+por\\s+(?:la\\s+)?FDA\\b"
+    },
+    {
+      "id": "origin-hecho-en",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:hecho|fabricad[oa]|producid[oa]|elaborad[oa]|manufacturad[oa])\\s+en\\s+(?:España|Italia|Francia|Alemania|Portugal|México|Argentina|Colombia|Chile|Perú|China|India|Japón|Turquía|Marruecos|Estados\\s+Unidos|Reino\\s+Unido|Países\\s+Bajos|Bélgica|Suiza|Polonia|Grecia|Suecia|Dinamarca|Finlandia|Noruega|Rumanía|Hungría|Vietnam|Tailandia|Taiwán|Canadá|Brasil|Uruguay|Ecuador)\\b"
+    },
+    {
+      "id": "origin-producto-de",
+      "kind": "origin",
+      "regex": "(?i)\\bproducto\\s+de\\s+(?:España|Italia|Francia|Alemania|Portugal|México|Argentina|Chile|Perú|Colombia)\\b"
+    },
+    {
+      "id": "organic-certificado",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:certificad[oa]s?\\s+(?:como\\s+)?(?:ecológic[oa]s?|biológic[oa]s?|orgánic[oa]s?|bio)|100\\s?%\\s+(?:ecológic[oa]s?|orgánic[oa]s?|biológic[oa]s?|bio)|agricultura\\s+(?:ecológica|biológica|orgánica)|cultivo\\s+(?:ecológico|orgánico|biológico))\\b"
+    },
+    {
+      "id": "organic-producto",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:algodón|producto|productos|alimentos?|frutas?|verduras?|té|café|leche|carne|huevos|vino|miel|aceite|harina|arroz|azúcar|cosmética|cosméticos|champú|jabón)\\s+(?:ecológic[oa]s?|biológic[oa]s?|orgánic[oa]s?|bio)\\b"
+    }
+  ],
+  "fi": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:kliinisesti|tieteellisesti)\\s+(?:todistettu|testattu|tutkittu|osoitettu)\\p{L}*"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:alentaa|laskee|pienentää)\\s+(?:kolesterolia|kolesterolin|verenpainetta|verensokeria|kolesteroliarvoja)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:vahvistaa|tukee|parantaa|tehostaa)\\s+(?:immuunijärjestelmää|vastustuskykyä|elimistön\\s+puolustuskykyä|puolustusjärjestelmää)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:lääkärien|lääkärin|hammaslääkärien|ihotautilääkärien|ihotautilääkärin|eläinlääkärien)\\s+(?:suosittelema|suosittelemaa|hyväksymä|testaama)\\b|\\bdermatologisesti\\s+testattu\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bFDA[- ]hyväksytty\\b|\\bFDA:n\\s+hyväksymä\\b"
+    },
+    {
+      "id": "origin-valmistettu",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:valmistettu|tehty|tuotettu|valmistetaan)\\s+(?:Suomessa|Ruotsissa|Norjassa|Tanskassa|Saksassa|Italiassa|Ranskassa|Espanjassa|Portugalissa|Puolassa|Kiinassa|Intiassa|Japanissa|Turkissa|Yhdysvalloissa|Britanniassa|Alankomaissa|Belgiassa|Sveitsissä|Itävallassa|Kreikassa|Romaniassa|Unkarissa|Vietnamissa|Thaimaassa|Taiwanissa|Kanadassa|Virossa)\\b|\\b(?:Suomessa|Ruotsissa|Saksassa|Italiassa)\\s+(?:valmistettu|tehty|tuotettu)\\b"
+    },
+    {
+      "id": "organic-sertifioitu",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:luomu(?:sertifioitu|tuotanto|tuote|viljelty|viljelmä)|luonnonmukai(?:sesti|nen|sen)\\s+(?:viljelty|tuotanto|tuote|tuotettu|viljelyn)|sertifioitu\\s+luomu|100\\s?%\\s+luomu)\\p{L}*"
+    },
+    {
+      "id": "organic-tuote",
+      "kind": "organic",
+      "regex": "(?i)\\bluomu[- ]?(?:puuvilla|tuotteet|tuote|ruoka|elintarvike|hedelmä|vihannes|tee|kahvi|maito|liha|kananmuna|viini|hunaja|öljy|jauho|riisi|sokeri|kosmetiikka|shampoo|saippua)\\p{L}*"
+    }
+  ],
+  "fr": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\bcliniquement\\s+(?:prouvé|testé|démontré|éprouvé|validé)(?:e|s|es)?\\b|\\b(?:scientifiquement\\s+prouvé|prouvé\\s+scientifiquement)(?:e|s|es)?\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:réduit|diminue|abaisse|fait\\s+baisser)\\s+(?:le\\s+|la\\s+|votre\\s+|son\\s+)?(?:taux\\s+de\\s+)?(?:cholestérol|tension|glycémie)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:renforce|stimule|soutient|booste|améliore)\\s+(?:le\\s+|votre\\s+|vos\\s+|les\\s+|l['’])\\s?(?:système\\s+immunitaire|défenses\\s+naturelles|défenses\\s+immunitaires|immunité)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:recommandé|approuvé|conseillé|testé)(?:e|s|es)?\\s+(?:par\\s+)?(?:les\\s+)?(?:médecins|dermatologues|dentistes|pédiatres|vétérinaires|pharmaciens)\\b|\\b(?:dermatologiquement|cliniquement|pédiatriquement|ophtalmologiquement)\\s+testé(?:e|s|es)?\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:approuvé|validé|autorisé|certifié)(?:e|s|es)?\\s+par\\s+(?:la\\s+)?FDA\\b|\\bFDA[- ](?:approved|cleared)\\b"
+    },
+    {
+      "id": "origin-fabrique-en",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:fabriqué|produit|conçu|façonné|assemblé|élaboré)(?:e|s|es)?\\s+(?:en|au|aux)\\s+(?:France|Italie|Espagne|Allemagne|Suisse|Belgique|Portugal|Pologne|Chine|Inde|Japon|Turquie|Maroc|Tunisie|Canada|États-Unis|Etats-Unis|Royaume-Uni|Angleterre|Pays-Bas|Autriche|Grèce|Suède|Danemark|Finlande|Norvège|Roumanie|Hongrie|Vietnam|Thaïlande|Taïwan)\\b"
+    },
+    {
+      "id": "origin-france-garantie",
+      "kind": "origin",
+      "regex": "(?i)\\bOrigine\\s+France(?:\\s+Garantie)?\\b|\\bfabrication\\s+(?:française|italienne|allemande|suisse|belge|portugaise|espagnole)\\b"
+    },
+    {
+      "id": "organic-certifie",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:agriculture\\s+biologique|issu(?:e|s|es)?\\s+de\\s+l['’]agriculture\\s+biologique|certifié(?:e|s|es)?\\s+(?:bio|biologique)|100\\s?%\\s+(?:bio|biologique))\\b"
+    },
+    {
+      "id": "organic-produit",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:coton|produits?|aliments?|fruits?|légumes?|thé|café|lait|viande|œufs|oeufs|vin|miel|huile|farine|riz|sucre|cosmétiques?|soins?|shampooing|savon)\\s+(?:bio|biologiques?)\\b"
+    }
+  ],
+  "it": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:clinicamente|scientificamente)\\s+(?:provat[oaie]|testat[oaie]|dimostrat[oaie]|validat[oaie]|comprovat[oaie])\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:riduce|abbassa|diminuisce)\\s+(?:il\\s+|la\\s+|i\\s+)?(?:colesterolo|pressione(?:\\s+arteriosa)?|glicemia|livelli\\s+di\\s+colesterolo)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:rafforza|stimola|sostiene|potenzia|migliora)\\s+(?:il\\s+|le\\s+|tue\\s+|le\\s+tue\\s+)?(?:sistema\\s+immunitario|difese\\s+immunitarie|difese\\s+naturali|difese)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:raccomandat[oaie]|consigliat[oaie]|approvat[oaie])\\s+(?:da|dai|dagli)\\s+(?:medici|dermatologi|dentisti|pediatri|veterinari|farmacisti)\\b|\\b(?:dermatologicamente|clinicamente|oculisticamente|pediatricamente)\\s+testat[oaie]\\b|\\btestat[oaie]\\s+dermatologicamente\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:approvat[oaie]|autorizzat[oaie]|certificat[oaie])\\s+(?:dalla\\s+|dall['’]\\s?)FDA\\b"
+    },
+    {
+      "id": "origin-prodotto-in",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:prodott[oaie]|fatt[oaie]|realizzat[oaie]|fabbricat[oaie]|costruit[oaie])\\s+in\\s+(?:Italia|Francia|Spagna|Germania|Svizzera|Portogallo|Polonia|Cina|India|Giappone|Turchia|Austria|Belgio|Paesi\\s+Bassi|Regno\\s+Unito|Stati\\s+Uniti|Grecia|Svezia|Danimarca|Finlandia|Norvegia|Romania|Ungheria|Vietnam|Tailandia|Taiwan|Canada|Brasile)\\b|\\b100\\s?%\\s+(?:Made\\s+in\\s+Italy|italiano)\\b"
+    },
+    {
+      "id": "organic-certificato",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:certificat[oaie]\\s+(?:come\\s+)?(?:biologic(?:o|a|i|he)|bio)|100\\s?%\\s+(?:biologic(?:o|a|i|he)|bio)|agricoltura\\s+biologica|coltivazione\\s+biologica)\\b"
+    },
+    {
+      "id": "organic-prodotto",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:cotone|prodott[oi]|aliment[oi]|frutta|verdura|tè|caffè|latte|carne|uova|vino|miele|olio|farina|riso|zucchero|cosmetic[oi]|shampoo|sapone)\\s+(?:biologic(?:o|a|i|he)|bio)\\b"
+    }
+  ],
+  "ja": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)臨床(?:試験|実験)?(?:で|により|的に|にて)?(?:証明|実証|確認|検証)(?:済み|されて|された)?|臨床(?:試験|テスト)済み|科学的に(?:証明|実証)"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)コレステロール(?:値)?を?(?:下げる|低下|低減|減らす|抑える)|血圧を?(?:下げる|低下)|血糖値を?(?:下げる|抑える|低下)"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)免疫力?を?(?:高める|強化|アップ|向上|サポート)|免疫力(?:アップ|向上|強化)"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)(?:医師|皮膚科医|歯科医師?|獣医師|薬剤師|専門医)(?:が|も|の|による)?(?:推奨|おすすめ|オススメ|推薦|監修|認定)|皮膚科(?:医)?テスト済み"
+    },
+    {
+      "id": "medical-regulator-approved",
+      "kind": "medical",
+      "regex": "(?i)厚生労働省(?:の)?(?:承認|認可|許可)|(?:薬機法|厚労省)(?:に基づく)?承認|FDA(?:の)?(?:承認|認可)(?:済み)?"
+    },
+    {
+      "id": "origin-made-in-japanese",
+      "kind": "origin",
+      "regex": "(?i)日本製|国産|メイドインジャパン|(?:中国|韓国|イタリア|フランス|ドイツ|アメリカ|米国|台湾|ベトナム|インド|タイ|イギリス|英国|スイス|スペイン|ポルトガル|トルコ|カナダ|オーストラリア|ニュージーランド|スウェーデン)製"
+    },
+    {
+      "id": "organic-certified",
+      "kind": "organic",
+      "regex": "(?i)有機\\s?JAS(?:マーク|認証|認定)?|(?:有機|オーガニック)(?:認証|認定)|(?:100|１００)\\s?[%％]\\s?(?:有機|オーガニック)"
+    },
+    {
+      "id": "organic-product",
+      "kind": "organic",
+      "regex": "(?i)有機(?:栽培|農業|農法|農産物|野菜|果物|米|茶|コーヒー|綿|食品|原料|素材|ハーブ)|オーガニック(?:コットン|綿|食品|野菜|フルーツ|茶|ティー|コーヒー|原料|素材|ハーブ|ワイン|ミルク|ヨーグルト|化粧品|コスメ|シャンプー|石鹸|オイル)"
+    }
+  ],
+  "ko": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)임상\\s?(?:시험|실험)?\\s?(?:을\\s?통해\\s?)?(?:으로\\s?)?(?:입증|검증|확인|증명|테스트\\s?완료|시험\\s?완료)|임상\\s?(?:시험\\s?)?(?:완료|입증|검증)|과학적으로\\s?(?:입증|검증)"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)콜레스테롤(?:을|\\s?수치를)?\\s?(?:낮춰|낮추|낮춤|감소|저하|개선)|혈압(?:을)?\\s?(?:낮춰|낮추|낮춤)|혈당(?:을)?\\s?(?:낮춰|낮추|낮춤|조절|개선)"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)면역력?(?:을)?\\s?(?:높여|높이|강화|증진|향상|증강|개선)"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)(?:의사|피부과\\s?전문의|피부과|치과의사|수의사|약사|전문의)(?:가|들이)?\\s?(?:추천|권장|인증|검증|인정)|피부과\\s?테스트\\s?완료|피부과\\s?임상\\s?테스트"
+    },
+    {
+      "id": "medical-regulator-approved",
+      "kind": "medical",
+      "regex": "(?i)(?:식약처|식품의약품안전처|FDA|KFDA)\\s?(?:승인|인증|허가|등록|인가|획득)"
+    },
+    {
+      "id": "origin-gungnaesan",
+      "kind": "origin",
+      "regex": "(?i)국내산|국산|한국산|대한민국\\s?제조|(?:중국|일본|미국|독일|프랑스|이탈리아|영국|스위스|스페인|호주|뉴질랜드|베트남|태국|대만|인도|터키|캐나다|스웨덴)산"
+    },
+    {
+      "id": "origin-wonsanji",
+      "kind": "origin",
+      "regex": "(?i)(?:원산지|제조국)\\s?[:：]?\\s?(?:한국|대한민국|국내|중국|일본|미국|독일|프랑스|이탈리아|영국|스위스|스페인|호주|뉴질랜드|베트남|태국|대만|인도네시아|인도|터키|캐나다|스웨덴|필리핀)"
+    },
+    {
+      "id": "organic-certified",
+      "kind": "organic",
+      "regex": "(?i)유기농\\s?(?:인증|인증마크|인증\\s?제품)|(?:친환경|유기농)\\s?인증|100\\s?[%％]\\s?유기농|유기가공식품"
+    },
+    {
+      "id": "organic-product",
+      "kind": "organic",
+      "regex": "(?i)유기농\\s?(?:면|코튼|제품|식품|농산물|채소|과일|쌀|차|커피|우유|고기|계란|와인|꿀|오일|밀가루|설탕|화장품|샴푸|비누|원료|재료|이유식)"
+    }
+  ],
+  "nb": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:klinisk|vitenskapelig)\\s+(?:bevist|testet|dokumentert|utprøvd)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:senker|reduserer|nedsetter)\\s+(?:(?:ditt|din|et|en)\\s+)?(?:kolesterol|blodtrykk|blodsukker|kolesterolet|blodtrykket)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:styrker|støtter|stimulerer|forbedrer)\\s+(?:(?:ditt|din|et|en)\\s+)?(?:immunforsvar|immunforsvaret|immunsystem|immunsystemet)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:anbefalt|godkjent)\\s+av\\s+(?:leger|tannleger|hudleger|barneleger|veterinærer|apotekere)\\b|\\bdermatologisk\\s+(?:testet|godkjent)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bFDA[- ]godkjent\\b|\\bgodkjent\\s+av\\s+FDA\\b"
+    },
+    {
+      "id": "origin-produsert-i",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:produsert|laget|fremstilt|tilvirket|framstilt)\\s+i\\s+(?:Norge|Sverige|Danmark|Finland|Tyskland|Italia|Frankrike|Spania|Portugal|Polen|Kina|India|Japan|Tyrkia|USA|Storbritannia|Nederland|Belgia|Sveits|Østerrike|Hellas|Romania|Ungarn|Vietnam|Thailand|Taiwan|Canada)\\b|\\bnorsk\\s*produsert\\b"
+    },
+    {
+      "id": "organic-sertifisert",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:økologisk\\s+sertifisert|sertifisert\\s+økologisk|100\\s?%\\s+økologisk|økologisk\\s+dyrket|økologisk\\s+landbruk|Debio[- ]merket)\\b"
+    },
+    {
+      "id": "organic-produkt",
+      "kind": "organic",
+      "regex": "(?i)\\bøkologisk(?:e)?\\s+(?:bomull|produkter|produkt|mat|matvarer|frukt|grønnsaker|te|kaffe|melk|kjøtt|egg|vin|honning|olje|mel|ris|sukker|kosmetikk|sjampo|såpe|ingredienser)\\b"
+    }
+  ],
+  "nl": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:klinisch|wetenschappelijk)\\s+(?:bewezen|getest|onderzocht|aangetoond|gevalideerd)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:verlaagt|vermindert)\\s+(?:(?:je|uw|het|de)\\s+)?(?:cholesterol|bloeddruk|bloedsuiker)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:versterkt|ondersteunt|stimuleert|verbetert)\\s+(?:(?:je|uw|het|de)\\s+)?(?:immuunsysteem|weerstand|afweer|afweersysteem)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:aanbevolen|goedgekeurd|getest|aangeraden)\\s+door\\s+(?:artsen|huisartsen|tandartsen|dermatologen|kinderartsen|dierenartsen|apothekers)\\b|\\bdermatologisch\\s+(?:getest|goedgekeurd)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:goedgekeurd|erkend)\\s+door\\s+(?:de\\s+)?FDA\\b|\\bFDA[- ]goedgekeurd\\b"
+    },
+    {
+      "id": "origin-gemaakt-in",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:gemaakt|geproduceerd|vervaardigd|gefabriceerd|ontworpen)\\s+in\\s+(?:Nederland|België|Duitsland|Frankrijk|Italië|Spanje|Portugal|Polen|Zwitserland|Oostenrijk|China|India|Japan|Turkije|Marokko|de\\s+VS|Verenigde\\s+Staten|het\\s+Verenigd\\s+Koninkrijk|Engeland|Denemarken|Zweden|Finland|Noorwegen|Griekenland|Roemenië|Hongarije|Vietnam|Thailand|Taiwan|Canada)\\b"
+    },
+    {
+      "id": "origin-product-van",
+      "kind": "origin",
+      "regex": "(?i)\\bproduct\\s+van\\s+(?:Nederland|België|Italië|Spanje|Duitsland|Frankrijk)\\b"
+    },
+    {
+      "id": "organic-gecertificeerd",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:gecertificeerd\\s+(?:biologisch|ecologisch|bio)|100\\s?%\\s+(?:biologisch|ecologisch|bio)|biologische\\s+(?:landbouw|teelt)|biologisch\\s+geteeld|biologisch\\s+gecertificeerd)\\b"
+    },
+    {
+      "id": "organic-product",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:biologische|ecologische|bio)\\s+(?:katoen|producten|product|voeding|voedsel|fruit|groente|groenten|thee|koffie|melk|vlees|eieren|wijn|honing|olie|bloem|rijst|suiker|cosmetica|shampoo|zeep|ingrediënten)\\b"
+    }
+  ],
+  "pl": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:klinicznie|naukowo)\\s+(?:udowodnion[aey]|przetestowan[aey]|potwierdzon[aey]|sprawdzon[aey]|badan[aey])\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:obniża|redukuje|zmniejsza)\\s+(?:poziom\\s+)?(?:cholesterolu|cholesterol|cukru\\s+we\\s+krwi|ciśnienie(?:\\s+krwi)?)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:wzmacnia|wspiera|poprawia|stymuluje)\\s+(?:układ\\s+odpornościowy|odporność|system\\s+odpornościowy|naturalną\\s+odporność)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:polecany|polecane|polecana|zalecany|zalecane|zalecana|rekomendowany|rekomendowane|testowany|testowane|przebadany|przebadane)\\s+(?:przez\\s+)?(?:lekarzy|dermatologów|dentystów|pediatrów|weterynarzy|farmaceutów)\\b|\\b(?:dermatologicznie|klinicznie|pediatrycznie|okulistycznie)\\s+(?:testowan[aey]|przebadan[aey])\\b|\\b(?:przebadan[aey]|testowan[aey])\\s+(?:dermatologicznie|klinicznie|pediatrycznie|okulistycznie)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:zatwierdzon[aey]|dopuszczon[aey]|zaakceptowan[aey])\\s+przez\\s+FDA\\b|\\bFDA[- ]approved\\b"
+    },
+    {
+      "id": "origin-wyprodukowano-w",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:wyprodukowan[aeyo]|produkowan[aeyo]|wykonan[aeyo]|zrobion[aeyo])\\s+(?:w|we)\\s+(?:Polsce|Niemczech|Włoszech|Francji|Hiszpanii|Portugalii|Czechach|Chinach|Indiach|Japonii|Turcji|USA|Wielkiej\\s+Brytanii|Holandii|Belgii|Szwajcarii|Austrii|Grecji|Szwecji|Danii|Finlandii|Norwegii|Rumunii|Węgrzech|Wietnamie|Tajlandii|Tajwanie|Kanadzie)\\b|\\bprodukt\\s+polski\\b"
+    },
+    {
+      "id": "organic-certyfikowany",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:certyfikowan[aey]\\s+(?:ekologiczn[aey]|bio)|100\\s?%\\s+(?:ekologiczn[aey]|bio)|rolnictwo\\s+ekologiczne|uprawa\\s+ekologiczna|z\\s+(?:upraw|rolnictwa)\\s+ekologiczn(?:ych|ego)|certyfikat\\s+ekologiczny)\\b"
+    },
+    {
+      "id": "organic-produkt",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:ekologiczn(?:a|e|y|ych|ej|ego|ą)|bio)\\s+(?:bawełna|bawełny|produkty|produkt|żywność|owoce|warzywa|herbata|kawa|mleko|mięso|jajka|wino|miód|olej|mąka|ryż|cukier|kosmetyki|szampon|mydło|składniki)\\b"
+    }
+  ],
+  "pt": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:clinicamente|cientificamente)\\s+(?:comprovad[oa]s?|testad[oa]s?|provad[oa]s?|demonstrad[oa]s?|validad[oa]s?)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:reduz|baixa|diminui)\\s+(?:o\\s+|a\\s+|seu\\s+|sua\\s+)?(?:colesterol|pressão\\s+arterial|glicemia|açúcar\\s+no\\s+sangue|tensão\\s+arterial)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:reforça|fortalece|estimula|melhora|apoia)\\s+(?:o\\s+|a\\s+|seu\\s+|sua\\s+|as\\s+)?(?:sistema\\s+imunit[aá]rio|sistema\\s+imunológico|defesas|imunidade)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:recomendad[oa]s?|aprovad[oa]s?|aconselhad[oa]s?)\\s+por\\s+(?:os\\s+)?(?:médicos|dermatologistas|dentistas|pediatras|veterinários|farmacêuticos)\\b|\\b(?:dermatologicamente|clinicamente|oftalmologicamente|pediatricamente)\\s+testad[oa]s?\\b"
+    },
+    {
+      "id": "medical-regulator-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:aprovad[oa]s?|registrad[oa]s?|autorizad[oa]s?|certificad[oa]s?)\\s+(?:pela|na|pelo)\\s+(?:FDA|Anvisa|Infarmed)\\b"
+    },
+    {
+      "id": "origin-fabricado-em",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:fabricad[oa]|feit[oa]|produzid[oa]|manufaturad[oa])\\s+(?:em|no|na)\\s+(?:Portugal|Brasil|Itália|França|Espanha|Alemanha|Suíça|Polónia|Polônia|China|Índia|Japão|Turquia|Marrocos|Estados\\s+Unidos|Reino\\s+Unido|Países\\s+Baixos|Bélgica|Grécia|Suécia|Dinamarca|Finlândia|Noruega|Roménia|Romênia|Hungria|Vietname|Vietnã|Tailândia|Taiwan|Canadá|Argentina|México)\\b"
+    },
+    {
+      "id": "origin-produto-de",
+      "kind": "origin",
+      "regex": "(?i)\\bprodut[oa]s?\\s+de\\s+(?:Portugal|Brasil|Itália|Espanha)\\b"
+    },
+    {
+      "id": "organic-certificado",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:certificad[oa]s?\\s+(?:como\\s+)?(?:biológic[oa]s?|orgânic[oa]s?|bio)|100\\s?%\\s+(?:biológic[oa]s?|orgânic[oa]s?|bio)|agricultura\\s+(?:biológica|orgânica)|cultivo\\s+(?:biológico|orgânico))\\b"
+    },
+    {
+      "id": "organic-produto",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:algodão|produtos?|alimentos?|frutas?|legumes?|vegetais|chá|café|leite|carne|ovos|vinho|mel|azeite|óleo|farinha|arroz|açúcar|cosméticos?|shampoo|sabonete|sabão)\\s+(?:biológic[oa]s?|orgânic[oa]s?|bio)\\b"
+    }
+  ],
+  "ro": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:dovedit|testat|demonstrat|validat|verificat)\\s+(?:clinic|științific|ştiinţific)\\b|\\bclinic\\s+(?:dovedit|testat|demonstrat|validat)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:scade|reduce|diminuează|coboară)\\s+(?:nivelul\\s+(?:de\\s+)?)?(?:colesterolul|colesterol|tensiunea\\s+arterială|glicemia|zahărul\\s+din\\s+sânge)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:întărește|întăreşte|stimulează|susține|susţine|îmbunătățește)\\s+(?:sistemul\\s+imunitar|imunitatea|apărarea\\s+naturală|sistemul\\s+imun)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:recomandat|aprobat|testat)\\s+de\\s+(?:medici|dermatologi|stomatologi|pediatri|medici\\s+veterinari|farmaciști|farmacişti)\\b|\\bdermatologic\\s+testat\\b|\\btestat\\s+dermatologic\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:aprobat|autorizat)\\s+de\\s+FDA\\b|\\bFDA[- ]approved\\b"
+    },
+    {
+      "id": "origin-fabricat-in",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:fabricat|produs|realizat|făcut)\\s+în\\s+(?:România|Germania|Italia|Franța|Franţa|Spania|Portugalia|Polonia|China|India|Japonia|Turcia|SUA|Marea\\s+Britanie|Olanda|Belgia|Elveția|Elveţia|Austria|Grecia|Suedia|Danemarca|Finlanda|Norvegia|Ungaria|Bulgaria|Vietnam|Thailanda|Taiwan|Canada)\\b|\\bprodus\\s+românesc\\b"
+    },
+    {
+      "id": "organic-certificat",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:certificat\\s+(?:ecologic|bio)|100\\s?%\\s+(?:ecologic|bio)|agricultur[ăa]\\s+ecologic[ăa]|cultivat\\s+ecologic|produs\\s+ecologic|produse\\s+ecologice)\\b"
+    },
+    {
+      "id": "organic-produs",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:bumbac|produse?|alimente?|fructe|legume|ceai|cafea|lapte|carne|ouă|vin|miere|ulei|făină|orez|zahăr|cosmetice|șampon|săpun|ingrediente)\\s+(?:ecologic|ecologice|bio)\\b"
+    }
+  ],
+  "ru": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\bклинически\\s+(?:доказан|протестирован|подтвержден|подтверждён|проверен|испытан)\\p{L}*|\\bнаучно\\s+доказан\\p{L}*"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:снижает|понижает|уменьшает|нормализует)\\s+(?:уровень\\s+)?(?:холестерина|холестерин|давление|артериальное\\s+давление|сахара\\s+в\\s+крови|уровень\\s+сахара)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:укрепляет|повышает|поддерживает|стимулирует)\\s+(?:иммунитет|иммунную\\s+систему|защитные\\s+силы|иммунную\\s+защиту)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:рекомендован|одобрен|протестирован)\\p{L}*\\s+(?:врачами|дерматологами|стоматологами|педиатрами|ветеринарами|фармацевтами)\\b|\\b(?:рекомендовано|рекомендуется)\\s+(?:врачами|дерматологами|стоматологами)\\b|\\bдерматологически\\s+протестирован\\p{L}*"
+    },
+    {
+      "id": "medical-regulator-approved",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:одобрен|утвержден|утверждён|зарегистрирован)\\p{L}*\\s+(?:FDA|управлением\\s+FDA|Росздравнадзором|Минздравом)\\b|\\bFDA[- ]одобрен\\p{L}*"
+    },
+    {
+      "id": "origin-sdelano-v",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:сделано|произведено|изготовлено|выпущено)\\s+(?:в|на)\\s+(?:России|Германии|Италии|Франции|Испании|Португалии|Польше|Китае|Индии|Японии|Турции|США|Великобритании|Нидерландах|Бельгии|Швейцарии|Австрии|Греции|Швеции|Дании|Финляндии|Норвегии|Румынии|Венгрии|Вьетнаме|Таиланде|Тайване|Канаде|Беларуси|Белоруссии|Казахстане|Украине|Корее)\\b"
+    },
+    {
+      "id": "origin-strana-proizvodstva",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:страна\\s+(?:происхождения|производства|производитель)|производство)\\s*[:\\-–]?\\s*(?:Россия|Германия|Италия|Франция|Испания|Китай|Турция|Беларусь|США)\\b"
+    },
+    {
+      "id": "organic-sertificirovan",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:сертифицированн\\p{L}*\\s+(?:органическ\\p{L}*|био)|100\\s?%\\s+(?:органическ\\p{L}*|био)|органическое\\s+(?:земледелие|сельское\\s+хозяйство|производство)|органическ\\p{L}*\\s+продукц\\p{L}*)"
+    },
+    {
+      "id": "organic-produkt",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:органическ\\p{L}*|био)\\s+(?:хлопок|хлопка|продукты|продуктов|продукт|продукция|еда|фрукты|овощи|чай|кофе|молоко|мясо|яйца|вино|мёд|мед|масло|мука|рис|сахар|косметика|шампунь|мыло|ингредиенты)\\b"
+    }
+  ],
+  "sv": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:kliniskt|vetenskapligt)\\s+(?:bevisad|bevisat|testad|testat|beprövad|beprövat|bevisade|testade)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:sänker|minskar|reducerar)\\s+(?:(?:ditt|din|ett|en)\\s+)?(?:kolesterol|blodtryck|blodsocker|kolesterolet|blodtrycket)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\b(?:stärker|stödjer|stimulerar|förbättrar)\\s+(?:(?:ditt|din|ett|en)\\s+)?(?:immunförsvar|immunförsvaret|immunsystem|immunsystemet)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:rekommenderad|rekommenderas|godkänd|rekommenderade)\\s+av\\s+(?:läkare|tandläkare|hudläkare|barnläkare|veterinärer|apotekare)\\b|\\bdermatologiskt\\s+(?:testad|testat|godkänd)\\b"
+    },
+    {
+      "id": "medical-fda-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bFDA[- ]godkänd\\b|\\bgodkänd\\s+av\\s+FDA\\b"
+    },
+    {
+      "id": "origin-tillverkad-i",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:tillverkad|tillverkat|producerad|producerat|framställd|framställt|gjord|gjort)\\s+i\\s+(?:Sverige|Norge|Danmark|Finland|Tyskland|Italien|Frankrike|Spanien|Portugal|Polen|Kina|Indien|Japan|Turkiet|USA|Storbritannien|Nederländerna|Belgien|Schweiz|Österrike|Grekland|Rumänien|Ungern|Vietnam|Thailand|Taiwan|Kanada)\\b"
+    },
+    {
+      "id": "organic-certifierad",
+      "kind": "organic",
+      "regex": "(?i)\\b(?:ekologiskt\\s+certifierad|certifierad\\s+ekologisk|100\\s?%\\s+ekologisk|ekologiskt\\s+odlad|ekologiskt\\s+jordbruk|KRAV[- ]märkt)\\b"
+    },
+    {
+      "id": "organic-produkt",
+      "kind": "organic",
+      "regex": "(?i)\\bekologisk(?:t|a)?\\s+(?:bomull|produkter|produkt|mat|livsmedel|frukt|grönsaker|te|kaffe|mjölk|kött|ägg|vin|honung|olja|mjöl|ris|socker|kosmetik|schampo|tvål|ingredienser)\\b"
+    }
+  ],
+  "tr": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)\\b(?:klinik\\s+olarak|klinikçe|bilimsel\\s+olarak)\\s+(?:kanıtlanmış|kanıtlandı|test\\s+edilmiş|test\\s+edildi|onaylanmış|doğrulanmış)\\b"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)\\b(?:kolesterolü|kolesterolu|tansiyonu|kan\\s+şekerini|kan\\s+basıncını)\\s+(?:düşürür|azaltır|düzenler|dengeler)\\b"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)\\bbağışıklık\\s+(?:sistemini\\s+)?(?:güçlendirir|destekler|artırır)\\b"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)\\b(?:doktor|dermatolog|diş\\s+hekimi|diş\\s+doktoru|veteriner|eczacı|pediatrist)\\s+(?:tavsiyesi|onaylı|önerisi|tarafından\\s+(?:önerilir|onaylanmıştır|test\\s+edilmiştir))\\b|\\bdermatolojik\\s+olarak\\s+test\\s+edilmiştir\\b|\\bdermatolojik\\s+(?:test(?:li|ten\\s+geçmiş)|onaylı)\\b|\\bdoktorların\\s+(?:tavsiye\\s+ettiği|önerdiği)\\b"
+    },
+    {
+      "id": "medical-regulator-approved",
+      "kind": "medical",
+      "regex": "(?i)\\bFDA[- ]?(?:onaylı|onaylıdır|onayı)\\b|\\bFDA\\s+tarafından\\s+onaylanmıştır\\b|\\bSağlık\\s+Bakanlığı\\s+(?:onaylı|ruhsatlı)\\b"
+    },
+    {
+      "id": "origin-uretilmistir",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:Türkiye|Almanya|İtalya|Fransa|İspanya|Çin|Hindistan|Japonya|ABD|İngiltere|Hollanda|Belçika|İsviçre|Avusturya|Yunanistan|İsveç|Danimarka|Finlandiya|Norveç|Romanya|Macaristan|Vietnam|Tayland|Tayvan|Kanada)['’]?(?:de|da|te|ta)\\s+(?:üretilmiştir|üretilmiş|üretildi|üretilen|yapılmıştır|yapıldı|imal\\s+edilmiştir|imal\\s+edilmiş)\\b"
+    },
+    {
+      "id": "origin-yerli-uretim",
+      "kind": "origin",
+      "regex": "(?i)\\b(?:yerli\\s+üretim|yerli\\s+malı|Türk\\s+malı)\\b"
+    },
+    {
+      "id": "organic-sertifikali",
+      "kind": "organic",
+      "regex": "(?i)(?:\\bsertifikalı\\s+organik\\b|%\\s?100\\s+organik\\b|\\borganik\\s+(?:tarım|sertifikalı|sertifika)\\b|\\borganik\\s+olarak\\s+(?:yetiştirilmiş|üretilmiş)\\b)"
+    },
+    {
+      "id": "organic-urun",
+      "kind": "organic",
+      "regex": "(?i)\\borganik\\s+(?:pamuk|ürünler|ürün|gıda|meyve|sebze|çay|kahve|süt|et|yumurta|şarap|bal|yağ|un|pirinç|şeker|kozmetik|şampuan|sabun|içerik)\\b"
+    }
+  ],
+  "zh": [
+    {
+      "id": "origin-made-in",
+      "kind": "origin",
+      "regex": "(?i)\\bMade\\s+in\\s+(?:the\\s+)?(?-i:[A-Z]\\p{L}{2,})"
+    },
+    {
+      "id": "health-clinically-proven",
+      "kind": "health",
+      "regex": "(?i)临床(?:试验)?(?:证明|验证|实证|检测|测试|研究证实)|经临床(?:试验|验证|证实)|臨床(?:證明|驗證|試驗|證實)|經臨床(?:試驗|驗證|證實)|科学(?:证明|证实)|科學(?:證明|證實)"
+    },
+    {
+      "id": "health-lowers-cholesterol",
+      "kind": "health",
+      "regex": "(?i)(?:降低|调节|調節)(?:胆固醇|膽固醇|血压|血壓|血糖|血脂)|降(?:胆固醇|血压|血糖|血脂|膽固醇|血壓)"
+    },
+    {
+      "id": "health-immune-support",
+      "kind": "health",
+      "regex": "(?i)(?:增强|增強|提高|提升|增加|调节|調節)(?:免疫力|免疫功能|免疫系统|免疫系統)|提高免疫"
+    },
+    {
+      "id": "medical-doctor-recommended",
+      "kind": "medical",
+      "regex": "(?i)(?:医生|醫生|医师|醫師|牙医|牙醫|兽医|獸醫|药师|藥師)(?:强烈)?(?:推荐|推薦|认证|認證)|皮肤科(?:医生)?测试|皮膚科(?:醫生)?測試|(?:经|經)(?:皮肤科|皮膚科)(?:测试|測試|验证|驗證)"
+    },
+    {
+      "id": "medical-regulator-approved",
+      "kind": "medical",
+      "regex": "(?i)(?:国家药监局|国家药品监督管理局|NMPA|CFDA|FDA)\\s?(?:批准|批文|认证|注册|核准|许可)|(?:衛福部|食藥署|TFDA)\\s?(?:核准|許可|認證|批准)"
+    },
+    {
+      "id": "origin-made-in-chinese",
+      "kind": "origin",
+      "regex": "(?i)(?:中国|中國|日本|美国|美國|德国|德國|法国|法國|意大利|韩国|韓國|英国|英國|瑞士|瑞典|澳大利亚|澳洲|新西兰|紐西蘭|台湾|台灣|越南|泰国|泰國|西班牙|葡萄牙)(?:制造|製造|产|產|生产|生產)|(?:产地|產地|原产地|原產地)[:：]?\\s*\\p{Han}{2,5}|国产|國產|原装进口|原裝進口"
+    },
+    {
+      "id": "organic-certified",
+      "kind": "organic",
+      "regex": "(?i)(?:有机|有機)(?:认证|認證|标志|標誌|转换|轉換)|(?:100|１００)\\s?[%％]\\s?(?:有机|有機)|中国有机产品|中國有機產品"
+    },
+    {
+      "id": "organic-product",
+      "kind": "organic",
+      "regex": "(?i)(?:有机|有機)(?:产品|產品|食品|农产品|農產品|种植|種植|栽培|农业|農業|棉|茶|米|蔬菜|水果|牛奶|大米|咖啡|护肤|護膚|化妆品|化妝品|洗发水|洗髮水)"
+    }
+  ]
+}

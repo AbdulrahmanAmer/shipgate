@@ -1,0 +1,290 @@
+[
+  {
+    "id": "trustpilot",
+    "kind": "review-platform",
+    "names": ["Trustpilot", "Trustpilot Reviews", "Trustpilot TrustScore"],
+    "imageHosts": ["cdn.trustpilot.net"],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\btrustpilot\\b"],
+    "dhash": ["a291860aa9b2753d", "555555aaaaaa5555", "545454aaaaaa5454", "545454a8a8a85454", "515153aaaaa25151"]
+  },
+  {
+    "id": "trusted-shops",
+    "kind": "review-platform",
+    "names": ["Trusted Shops", "Trusted Shops Trustmark", "Trusted Shops Guarantee", "Trusted Shops Buyer Protection"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\btrusted\\s*shops\\b"],
+    "dhash": ["44f0e8d4ccf9306c"]
+  },
+  {
+    "id": "ekomi",
+    "kind": "review-platform",
+    "names": ["eKomi", "eKomi Verified Reviews", "eKomi Seal of Approval"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bekomi\\b"],
+    "dhash": []
+  },
+  {
+    "id": "yotpo",
+    "kind": "review-platform",
+    "names": ["Yotpo", "Yotpo Reviews", "Yotpo Verified Reviews"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\byotpo\\b"],
+    "dhash": []
+  },
+  {
+    "id": "google-customer-reviews",
+    "kind": "review-platform",
+    "names": ["Google Customer Reviews", "Google Seller Ratings", "Google Reviews"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bgoogle\\s+(customer\\s+reviews|seller\\s+ratings|reviews)\\b"],
+    "dhash": []
+  },
+  {
+    "id": "bbb-accredited",
+    "kind": "certification",
+    "names": ["BBB Accredited Business", "Better Business Bureau Accredited Business", "BBB Accredited", "BBB Accreditation"],
+    "imageHosts": ["m.bbb.org"],
+    "fileNamePatterns": ["Accredited_Business_Seal*"],
+    "altPatterns": ["(?i)\\bbbb\\b.{0,40}\\baccredited\\b", "(?i)\\baccredited\\b.{0,40}\\bbbb\\b", "(?i)\\bbetter business bureau\\b"],
+    "dhash": ["d0b219191191b2d0"]
+  },
+  {
+    "id": "norton-verisign-secured",
+    "kind": "payment-security",
+    "names": ["Norton Secured", "Norton Secured powered by DigiCert", "Norton Secured powered by Symantec", "VeriSign Secured", "Symantec Secured"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bnorton\\s+secured\\b", "(?i)\\bverisign\\s+(secured|trusted)\\b", "(?i)\\bsymantec\\s+secured\\b"],
+    "dhash": []
+  },
+  {
+    "id": "digicert-seal",
+    "kind": "payment-security",
+    "names": ["DigiCert Secured Site Seal", "DigiCert Secure Site Seal", "DigiCert Smart Seal", "DigiCert Trusted Site Seal", "DigiCert Secured"],
+    "imageHosts": ["seal.digicert.com"],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bdigicert\\s+(secured|secure\\s+site|trusted\\s+site|smart\\s+seal)\\b"],
+    "dhash": []
+  },
+  {
+    "id": "sectigo-comodo-seal",
+    "kind": "payment-security",
+    "names": ["Sectigo Trust Seal", "Sectigo Secure Site Seal", "Sectigo Secured", "Comodo Trust Seal", "Comodo Secure", "COMODO SSL"],
+    "imageHosts": ["secure.trust-provider.com", "secure.sectigo.com"],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\b(sectigo|comodo)\\s+(trust\\s+seal|secure|secured|ssl|positivessl)\\b"],
+    "dhash": []
+  },
+  {
+    "id": "trustwave-seal",
+    "kind": "payment-security",
+    "names": ["Trustwave Trusted Commerce", "Trustwave Seal", "Trustwave Secured"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\btrustwave\\s+(trusted\\s+commerce|seal|secured|trust\\s+seal)\\b"],
+    "dhash": []
+  },
+  {
+    "id": "mcafee-secure",
+    "kind": "payment-security",
+    "names": ["McAfee SECURE", "McAfee Secure", "McAfee Secure Trustmark"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bmcafee\\s+secure\\b"],
+    "dhash": []
+  },
+  {
+    "id": "card-authentication-programs",
+    "kind": "payment-security",
+    "names": ["Verified by Visa", "Visa Secure", "Mastercard SecureCode", "Mastercard Identity Check", "American Express SafeKey", "J/Secure", "ProtectBuy"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bverified\\s+by\\s+visa\\b", "(?i)\\bvisa\\s+secure\\b", "(?i)\\bmaster\\s?card\\s+(secure\\s?code|identity\\s+check|id\\s+check)\\b", "(?i)\\bamerican\\s+express\\s+safekey\\b", "(?i)\\bj/secure\\b", "(?i)\\bprotectbuy\\b"],
+    "dhash": []
+  },
+  {
+    "id": "pci-dss",
+    "kind": "payment-security",
+    "names": ["PCI DSS", "PCI DSS Compliant", "PCI Compliant", "PCI DSS Certified"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bpci[\\s-]*(dss)?[\\s-]*(compliant|compliance|certified)\\b"],
+    "dhash": []
+  },
+  {
+    "id": "paypal",
+    "kind": "payment-security",
+    "names": ["PayPal Verified", "PayPal Secure", "PayPal Secured", "PayPal Buyer Protection", "PayPal"],
+    "imageHosts": [],
+    "fileNamePatterns": ["pp-logo-*px.png", "PP_logo_h_*.png"],
+    "altPatterns": ["(?i)\\bpaypal\\s+(verified|seal|secure|secured|buyer\\s+protection)\\b", "(?i)\\b(secure|safe)\\b.{0,20}\\bpaypal\\b"],
+    "dhash": ["102c2424287b7318", "10252424287b7318"]
+  },
+  {
+    "id": "stripe-powered",
+    "kind": "payment-security",
+    "names": ["Powered by Stripe", "Stripe"],
+    "imageHosts": [],
+    "fileNamePatterns": ["Powered_by_Stripe*"],
+    "altPatterns": ["(?i)\\bpowered\\s+by\\s+stripe\\b"],
+    "dhash": ["150134a6c67e0141"]
+  },
+  {
+    "id": "truste-trustarc",
+    "kind": "certification",
+    "names": ["TRUSTe Privacy Certification", "TRUSTe Certified Privacy", "TRUSTe", "TrustArc Certified Privacy", "TrustArc Privacy Certification"],
+    "imageHosts": ["privacy-policy.truste.com"],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\btruste\\b", "(?i)\\btrustarc\\s+(certified|privacy|seal)\\b"],
+    "dhash": []
+  },
+  {
+    "id": "iso-9001",
+    "kind": "certification",
+    "names": ["ISO 9001", "ISO 9001:2015", "ISO 9001:2015 Certified", "ISO 9001 Certified"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\biso[\\s-]*9001\\b"],
+    "dhash": []
+  },
+  {
+    "id": "iso-14001",
+    "kind": "certification",
+    "names": ["ISO 14001", "ISO 14001:2015", "ISO 14001:2015 Certified", "ISO 14001 Certified"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\biso[\\s-]*14001\\b"],
+    "dhash": []
+  },
+  {
+    "id": "iso-27001",
+    "kind": "certification",
+    "names": ["ISO 27001", "ISO/IEC 27001", "ISO/IEC 27001:2022", "ISO 27001 Certified", "ISO/IEC 27001 Certified"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\biso[\\s/-]*(iec[\\s-]*)?27001\\b"],
+    "dhash": []
+  },
+  {
+    "id": "ce-marking",
+    "kind": "certification",
+    "names": ["CE marking", "CE mark", "CE Certified", "CE Compliant"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bCE[\\s-]+(mark(ing)?|certified|certification|compliant)\\b"],
+    "dhash": ["c7840c2c2c0c84c7"]
+  },
+  {
+    "id": "energy-star",
+    "kind": "certification",
+    "names": ["ENERGY STAR", "ENERGY STAR Certified", "ENERGY STAR Partner"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\benergy\\s*star\\b"],
+    "dhash": ["8eb2e026e7829a98"]
+  },
+  {
+    "id": "usda-organic",
+    "kind": "certification",
+    "names": ["USDA Organic", "USDA Certified Organic", "Certified Organic"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\busda\\s+(certified\\s+)?organic\\b"],
+    "dhash": ["cc86615933b6f0f0"]
+  },
+  {
+    "id": "eu-ecolabel",
+    "kind": "sustainability",
+    "names": ["EU Ecolabel", "European Ecolabel"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\b(eu|european)\\s+eco[\\s-]?label\\b"],
+    "dhash": []
+  },
+  {
+    "id": "fsc",
+    "kind": "sustainability",
+    "names": ["FSC", "FSC Certified", "Forest Stewardship Council", "Forest Stewardship Council Certified"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bfsc[\\s-]*(certified|logo|mix|recycled)\\b", "(?i)\\bforest\\s+stewardship\\s+council\\b"],
+    "dhash": ["b864d6daa8b2d4d8"]
+  },
+  {
+    "id": "fairtrade",
+    "kind": "sustainability",
+    "names": ["Fairtrade", "Fairtrade Certified", "Fairtrade International", "Fairtrade Mark"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bfairtrade\\s+(certified|mark|international|logo)\\b"],
+    "dhash": ["8c34b4446030b464"]
+  },
+  {
+    "id": "b-corp",
+    "kind": "sustainability",
+    "names": ["Certified B Corporation", "Certified B Corp", "B Corp", "B Corp Certified"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bcertified\\s+b[\\s-]?corp(oration)?\\b", "(?i)\\bb[\\s-]?corp\\s+(certified|logo|badge)\\b"],
+    "dhash": ["9af8e4aaaaf0f8ec"]
+  },
+  {
+    "id": "rainforest-alliance",
+    "kind": "sustainability",
+    "names": ["Rainforest Alliance Certified", "Rainforest Alliance"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\brainforest\\s+alliance\\b"],
+    "dhash": []
+  },
+  {
+    "id": "climate-neutral",
+    "kind": "sustainability",
+    "names": ["Climate Neutral Certified", "Climate Neutral"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bclimate[\\s-]neutral\\b"],
+    "dhash": []
+  },
+  {
+    "id": "carbon-trust",
+    "kind": "sustainability",
+    "names": ["Carbon Trust Standard", "Carbon Trust Certified", "Carbon Trust"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bcarbon\\s+trust\\b"],
+    "dhash": []
+  },
+  {
+    "id": "red-dot-award",
+    "kind": "award",
+    "names": ["Red Dot Design Award", "Red Dot Award", "Red Dot"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bred\\s+dot\\s+(design\\s+)?award\\b"],
+    "dhash": []
+  },
+  {
+    "id": "if-design-award",
+    "kind": "award",
+    "names": ["iF Design Award", "iF Design Award Winner"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bi[Ff]\\s+design\\s+award\\b"],
+    "dhash": []
+  },
+  {
+    "id": "webby-awards",
+    "kind": "award",
+    "names": ["Webby Award", "Webby Awards", "Webby Winner", "Webby Honoree"],
+    "imageHosts": [],
+    "fileNamePatterns": [],
+    "altPatterns": ["(?i)\\bwebby\\s+(awards?|winner|honoree|nominee)\\b"],
+    "dhash": []
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "getty-images",
+    "hosts": ["media.gettyimages.com"],
+    "pathPatterns": ["/id/**"]
+  },
+  {
+    "id": "shutterstock",
+    "hosts": ["*.shutterstock.com", "ak.picdn.net"],
+    "pathPatterns": [
+      "/display_pic_with_logo/**",
+      "/image-photo/**",
+      "/z/**",
+      "/thumb_large/**",
+      "/thumb_small/**",
+      "/shutterstock/photos/**",
+      "/shutterstock/videos/*/preview/**",
+      "/shutterstock/videos/*/thumb/**"
+    ]
+  },
+  {
+    "id": "istock",
+    "hosts": ["media.istockphoto.com"],
+    "pathPatterns": ["/id/**"]
+  },
+  {
+    "id": "alamy",
+    "hosts": ["*.alamy.com"],
+    "pathPatterns": ["/zooms/**"]
+  },
+  {
+    "id": "adobe-stock",
+    "hosts": ["*.ftcdn.net"],
+    "pathPatterns": ["/jpg/**"]
+  },
+  {
+    "id": "depositphotos",
+    "hosts": ["*.depositphotos.com"],
+    "pathPatterns": ["/*/*/i/*/depositphotos_*", "/thumbs/**"]
+  }
+]

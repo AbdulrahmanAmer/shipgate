@@ -1,0 +1,16 @@
+[
+  ".trustpilot-widget",
+  ".yotpo-widget-instance",
+  ".yotpo-main-widget",
+  ".jdgm-widget",
+  ".jdgm-preview-badge",
+  "#stamped-main-widget",
+  ".stamped-product-reviews-badge",
+  "[data-oke-widget]",
+  "[data-oke-star-rating]",
+  "[data-bv-show=\"rating_summary\"]",
+  "[data-bv-show=\"reviews\"]",
+  "[data-bv-show=\"inline_rating\"]",
+  ".feefo-review-widget-product",
+  ".woocommerce-product-rating"
+]

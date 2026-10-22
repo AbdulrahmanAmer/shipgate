@@ -1,0 +1,36 @@
+[
+  {
+    "id": "nudgify",
+    "hosts": [
+      "pixel.nudgify.com"
+    ],
+    "selectors": []
+  },
+  {
+    "id": "trustpulse",
+    "hosts": [
+      "a.trstplse.com"
+    ],
+    "selectors": []
+  },
+  {
+    "id": "generic-live-viewers",
+    "hosts": [],
+    "selectors": [],
+    "textRegex": "(?i)\\b[0-9][0-9,.]*\\s+(?:people|persons|customers|users|visitors|shoppers|members)\\s+(?:are\\s+)?(?:currently\\s+|now\\s+|right\\s+now\\s+)?(?:viewing|watching|looking\\s+at|browsing)\\b",
+    "numberRegex": "(?i)(?<n>[0-9]{1,3}(?:[,.][0-9]{3})*|[0-9]+)\\s+(?:people|persons|customers|users|visitors|shoppers|members)\\s+(?:are\\s+)?(?:currently\\s+|now\\s+|right\\s+now\\s+)?(?:viewing|watching|looking\\s+at|browsing)\\b"
+  },
+  {
+    "id": "generic-recent-purchase",
+    "hosts": [],
+    "selectors": [],
+    "textRegex": "(?i)(?:\\b(?:someone|[a-z]+(?:\\s+[a-z]\\.?)?\\s+from\\s+[a-z][a-z .,'-]{1,40})\\s+(?:just\\s+|recently\\s+)?(?:bought|purchased|ordered)\\b|\\b[0-9][0-9,.]*\\s+(?:(?:people|persons|customers|users|visitors|shoppers|members)\\s+)?(?:bought|purchased|ordered)\\s+(?:this\\s+|it\\s+)?(?:in\\s+the\\s+|within\\s+the\\s+)?(?:last|past)\\s+[0-9]*\\s*(?:hours?|days?|weeks?)\\b)",
+    "numberRegex": "(?i)(?<n>[0-9]{1,3}(?:[,.][0-9]{3})*|[0-9]+)\\s+(?:(?:people|persons|customers|users|visitors|shoppers|members)\\s+)?(?:bought|purchased|ordered)\\s+(?:this\\s+|it\\s+)?(?:in\\s+the\\s+|within\\s+the\\s+)?(?:last|past)\\s+[0-9]*\\s*(?:hours?|days?|weeks?)\\b"
+  },
+  {
+    "id": "generic-recent-signup",
+    "hosts": [],
+    "selectors": [],
+    "textRegex": "(?i)\\b(?:someone|[a-z]+(?:\\s+[a-z]\\.?)?\\s+from\\s+[a-z][a-z .,'-]{1,40})\\s+(?:just\\s+|recently\\s+)?(?:signed\\s+up|subscribed|joined|registered)\\b"
+  }
+]
